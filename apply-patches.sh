@@ -11,8 +11,9 @@
 # Idempotent: an already-applied patch is skipped; one that no longer applies aborts loudly
 # (upstream moved the code — regenerate it with the matching tools/regen-*.sh). Re-run after any
 # `git reset`/`git pull` of the core or those modules, and BEFORE building.
-# Patches were cut against azerothcore-wotlk 413bea61 (mod-playerbots fork), mod-playerbots b949b50,
-# mod-individual-progression 977e200, mod-multibot-bridge 759c100.
+# Core: mod-playerbots/azerothcore-wotlk Playerbot @ 8a4e76ea.
+# Modules: mod-playerbots master @ d750b4b3; mod-individual-progression master @ acaa9b3c.
+# Optional mod-multibot-bridge patch remains based on 759c100.
 set -euo pipefail
 HERE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 AC="${1:?usage: $0 <azerothcore-root>}"

@@ -1,5 +1,5 @@
 diff --git a/src/server/game/Entities/Totem/Totem.cpp b/src/server/game/Entities/Totem/Totem.cpp
-index 20253a0c..8804097f 100644
+index ac1eb49..0bfcfea 100644
 --- a/src/server/game/Entities/Totem/Totem.cpp
 +++ b/src/server/game/Entities/Totem/Totem.cpp
 @@ -154,7 +154,16 @@ void Totem::UnSummon(Milliseconds msTime)

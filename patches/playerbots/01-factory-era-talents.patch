@@ -1,5 +1,5 @@
 diff --git a/modules/mod-playerbots/src/Ai/Base/Actions/AutoMaintenanceOnLevelupAction.cpp b/modules/mod-playerbots/src/Ai/Base/Actions/AutoMaintenanceOnLevelupAction.cpp
-index 7588abd..68d44ca 100644
+index 03a4b9b..244ed49 100644
 --- a/modules/mod-playerbots/src/Ai/Base/Actions/AutoMaintenanceOnLevelupAction.cpp
 +++ b/modules/mod-playerbots/src/Ai/Base/Actions/AutoMaintenanceOnLevelupAction.cpp
 @@ -75,12 +75,20 @@ void AutoMaintenanceOnLevelupAction::LearnSpells(std::ostringstream* out)
@@ -24,10 +24,10 @@ index 7588abd..68d44ca 100644
  }
  
 diff --git a/modules/mod-playerbots/src/Bot/Factory/AiFactory.cpp b/modules/mod-playerbots/src/Bot/Factory/AiFactory.cpp
-index d2fafcb..1f6bc26 100644
+index f9718ae..3007514 100644
 --- a/modules/mod-playerbots/src/Bot/Factory/AiFactory.cpp
 +++ b/modules/mod-playerbots/src/Bot/Factory/AiFactory.cpp
-@@ -38,6 +38,12 @@ constexpr uint32 SPELL_CAT_FORM = 768;
+@@ -36,6 +36,12 @@ constexpr uint32 SPELL_CAT_FORM = 768;
  constexpr uint32 SPELL_DRUID_THICK_HIDE = 16931;
  }
  
@@ -40,7 +40,7 @@ index d2fafcb..1f6bc26 100644
  AiObjectContext* AiFactory::createAiObjectContext(Player* player, PlayerbotAI* botAI)
  {
      switch (player->getClass())
-@@ -112,6 +118,24 @@ uint8 AiFactory::GetPlayerSpecTab(Player* bot)
+@@ -110,6 +116,24 @@ uint8 AiFactory::GetPlayerSpecTab(Player* bot)
  std::map<uint8, uint32> AiFactory::GetPlayerSpecTabs(Player* bot)
  {
      std::map<uint8, uint32> tabs = {{0, 0}, {0, 0}, {0, 0}};
@@ -74,7 +74,7 @@ index d2fafcb..1f6bc26 100644
                      engine->addStrategiesNoInit("cat", "aoe", "cc", "dps assist", "feral charge", nullptr);
                  else
                      engine->addStrategiesNoInit("bear", "tank assist", "pull", "pull back", "feral charge", nullptr);
-@@ -559,7 +583,7 @@ void AiFactory::AddDefaultNonCombatStrategies(Player* player, PlayerbotAI* const
+@@ -547,7 +571,7 @@ void AiFactory::AddDefaultNonCombatStrategies(Player* player, PlayerbotAI* const
          case CLASS_DRUID:
              if (tab == DRUID_TAB_FERAL)
              {
@@ -83,7 +83,7 @@ index d2fafcb..1f6bc26 100644
                      nonCombatEngine->addStrategy("dps assist", false);
                  else
                      nonCombatEngine->addStrategiesNoInit("tank assist", "pull", nullptr);
-@@ -574,15 +598,27 @@ void AiFactory::AddDefaultNonCombatStrategies(Player* player, PlayerbotAI* const
+@@ -562,15 +586,27 @@ void AiFactory::AddDefaultNonCombatStrategies(Player* player, PlayerbotAI* const
                  nonCombatEngine->addStrategy("dps assist", false);
              break;
          case CLASS_WARLOCK:
@@ -115,10 +115,10 @@ index d2fafcb..1f6bc26 100644
              if (tab == DEATH_KNIGHT_TAB_BLOOD)
                  nonCombatEngine->addStrategiesNoInit("tank assist", "pull", nullptr);
 diff --git a/modules/mod-playerbots/src/Bot/Factory/PlayerbotFactory.cpp b/modules/mod-playerbots/src/Bot/Factory/PlayerbotFactory.cpp
-index e0005bd..e5b16aa 100644
+index 4d038dc..6120eb5 100644
 --- a/modules/mod-playerbots/src/Bot/Factory/PlayerbotFactory.cpp
 +++ b/modules/mod-playerbots/src/Bot/Factory/PlayerbotFactory.cpp
-@@ -63,6 +63,41 @@ std::vector<uint32> PlayerbotFactory::enchantGemIdCache;
+@@ -106,6 +106,41 @@ std::vector<uint32> PlayerbotFactory::enchantGemIdCache;
  std::unordered_map<uint32, std::vector<uint32>> PlayerbotFactory::trainerIdCache;
  std::vector<uint32> PlayerbotFactory::ccBreakTrinketCache;
  
@@ -137,7 +137,7 @@ index e0005bd..e5b16aa 100644
 +// separates it. Poisons are NOT gated here — RequiredLevel > botLevel already era-caps them.
 +static inline bool IsEraLegalConsumable(uint32 botLevel, uint32 requiredLevel, uint32 itemId)
 +{
-+    if (!sPlayerbotAIConfig.limitGearExpansion)
++    if (!sPlayerbotAIConfig.LimitGearExpansion)
 +        return true;
 +    if (botLevel <= 60)
 +        return requiredLevel <= 49 && itemId < 23728;   // Vanilla band
@@ -160,7 +160,7 @@ index e0005bd..e5b16aa 100644
  namespace
  {
  constexpr uint32 SPELL_DRUID_THICK_HIDE = 16931;
-@@ -710,6 +745,7 @@ void PlayerbotFactory::Randomize(bool incremental)
+@@ -921,6 +956,7 @@ void PlayerbotFactory::Randomize(bool incremental)
      pmo = sPerfMonitor.start(PERF_MON_RNDBOT, "PlayerbotFactory_Spells2");
      LOG_DEBUG("playerbots", "Initializing spells (step 2)...");
      InitAvailableSpells();
@@ -168,7 +168,7 @@ index e0005bd..e5b16aa 100644
      if (pmo)
          pmo->finish();
  
-@@ -896,6 +932,7 @@ void PlayerbotFactory::Refresh()
+@@ -1107,6 +1143,7 @@ void PlayerbotFactory::Refresh()
      InitSkills();
      InitClassSpells();
      InitAvailableSpells();
@@ -176,7 +176,7 @@ index e0005bd..e5b16aa 100644
      InitReputation();
      InitSpecialSpells();
      InitMounts();
-@@ -932,7 +969,7 @@ void PlayerbotFactory::InitConsumables()
+@@ -1143,7 +1180,7 @@ void PlayerbotFactory::InitConsumables()
                  for (uint32 itemId : wizard_oils)
                  {
                      ItemTemplate const* proto = sObjectMgr->GetItemTemplate(itemId);
@@ -185,7 +185,7 @@ index e0005bd..e5b16aa 100644
                          continue;
                      items.push_back({itemId, 2});
                      break;
-@@ -945,7 +982,7 @@ void PlayerbotFactory::InitConsumables()
+@@ -1156,7 +1193,7 @@ void PlayerbotFactory::InitConsumables()
                  for (uint32 itemId : mana_oils)
                  {
                      ItemTemplate const* proto = sObjectMgr->GetItemTemplate(itemId);
@@ -194,7 +194,7 @@ index e0005bd..e5b16aa 100644
                          continue;
                      items.push_back({itemId, 2});
                      break;
-@@ -960,7 +997,7 @@ void PlayerbotFactory::InitConsumables()
+@@ -1171,7 +1208,7 @@ void PlayerbotFactory::InitConsumables()
              for (uint32 itemId : wizard_oils)
              {
                  ItemTemplate const* proto = sObjectMgr->GetItemTemplate(itemId);
@@ -203,7 +203,7 @@ index e0005bd..e5b16aa 100644
                      continue;
                  items.push_back({itemId, 2});
                  break;
-@@ -976,7 +1013,7 @@ void PlayerbotFactory::InitConsumables()
+@@ -1187,7 +1224,7 @@ void PlayerbotFactory::InitConsumables()
                  for (uint32 itemId : wizard_oils)
                  {
                      ItemTemplate const* proto = sObjectMgr->GetItemTemplate(itemId);
@@ -212,7 +212,7 @@ index e0005bd..e5b16aa 100644
                          continue;
                      items.push_back({itemId, 2});
                      break;
-@@ -993,7 +1030,7 @@ void PlayerbotFactory::InitConsumables()
+@@ -1204,7 +1241,7 @@ void PlayerbotFactory::InitConsumables()
                  for (uint32 itemId : sharpening_stones)
                  {
                      ItemTemplate const* proto = sObjectMgr->GetItemTemplate(itemId);
@@ -221,7 +221,7 @@ index e0005bd..e5b16aa 100644
                          continue;
                      items.push_back({itemId, 20});
                      break;
-@@ -1001,7 +1038,7 @@ void PlayerbotFactory::InitConsumables()
+@@ -1212,7 +1249,7 @@ void PlayerbotFactory::InitConsumables()
                  for (uint32 itemId : weightstones)
                  {
                      ItemTemplate const* proto = sObjectMgr->GetItemTemplate(itemId);
@@ -230,7 +230,7 @@ index e0005bd..e5b16aa 100644
                          continue;
                      items.push_back({itemId, 20});
                      break;
-@@ -1014,7 +1051,7 @@ void PlayerbotFactory::InitConsumables()
+@@ -1225,7 +1262,7 @@ void PlayerbotFactory::InitConsumables()
                  for (uint32 itemId : mana_oils)
                  {
                      ItemTemplate const* proto = sObjectMgr->GetItemTemplate(itemId);
@@ -239,7 +239,7 @@ index e0005bd..e5b16aa 100644
                          continue;
                      items.push_back({itemId, 2});
                      break;
-@@ -1031,7 +1068,7 @@ void PlayerbotFactory::InitConsumables()
+@@ -1242,7 +1279,7 @@ void PlayerbotFactory::InitConsumables()
                  for (uint32 itemId : mana_oils)
                  {
                      ItemTemplate const* proto = sObjectMgr->GetItemTemplate(itemId);
@@ -248,7 +248,7 @@ index e0005bd..e5b16aa 100644
                          continue;
                      items.push_back({itemId, 2});
                      break;
-@@ -1048,7 +1085,7 @@ void PlayerbotFactory::InitConsumables()
+@@ -1259,7 +1296,7 @@ void PlayerbotFactory::InitConsumables()
                  for (uint32 itemId : sharpening_stones)
                  {
                      ItemTemplate const* proto = sObjectMgr->GetItemTemplate(itemId);
@@ -257,7 +257,7 @@ index e0005bd..e5b16aa 100644
                          continue;
                      items.push_back({itemId, 20});
                      break;
-@@ -1056,7 +1093,7 @@ void PlayerbotFactory::InitConsumables()
+@@ -1267,7 +1304,7 @@ void PlayerbotFactory::InitConsumables()
                  for (uint32 itemId : weightstones)
                  {
                      ItemTemplate const* proto = sObjectMgr->GetItemTemplate(itemId);
@@ -266,7 +266,7 @@ index e0005bd..e5b16aa 100644
                          continue;
                      items.push_back({itemId, 20});
                      break;
-@@ -1077,7 +1114,7 @@ void PlayerbotFactory::InitConsumables()
+@@ -1288,7 +1325,7 @@ void PlayerbotFactory::InitConsumables()
              for (uint32 itemId : sharpening_stones)
              {
                  ItemTemplate const* proto = sObjectMgr->GetItemTemplate(itemId);
@@ -275,7 +275,7 @@ index e0005bd..e5b16aa 100644
                      continue;
                  items.push_back({itemId, 20});
                  break;
-@@ -1085,7 +1122,7 @@ void PlayerbotFactory::InitConsumables()
+@@ -1296,7 +1333,7 @@ void PlayerbotFactory::InitConsumables()
              for (uint32 itemId : weightstones)
              {
                  ItemTemplate const* proto = sObjectMgr->GetItemTemplate(itemId);
@@ -284,7 +284,7 @@ index e0005bd..e5b16aa 100644
                      continue;
                  items.push_back({itemId, 20});
                  break;
-@@ -1504,7 +1541,7 @@ uint32 PlayerbotFactory::InitTalentsTree(bool increment /*false*/, bool use_temp
+@@ -1718,7 +1755,7 @@ uint32 PlayerbotFactory::InitTalentsTree(bool increment /*false*/, bool use_temp
          /// @todo: fix cat druid hardcode
          if (bot->getClass() == CLASS_DRUID && specTab == DRUID_TAB_FERAL && bot->GetLevel() >= 20)
          {
@@ -292,8 +292,8 @@ index e0005bd..e5b16aa 100644
 +            bool isCat = !bot->HasAura(EraKnown(bot, SPELL_DRUID_THICK_HIDE));
              if (!isCat && bot->GetLevel() == 20)
              {
-                 uint32 bearP = sPlayerbotAIConfig.randomClassSpecProb[cls][1];
-@@ -1543,6 +1580,22 @@ uint32 PlayerbotFactory::InitTalentsTree(bool increment /*false*/, bool use_temp
+                 uint32 bearP = sPlayerbotAIConfig.RandomClassSpecProb[cls][1];
+@@ -1757,6 +1794,22 @@ uint32 PlayerbotFactory::InitTalentsTree(bool increment /*false*/, bool use_temp
              LOG_ERROR("playerbots", "Fail to select spec num for bot {}! Set to 0.", bot->GetName());
          }
      }
@@ -311,19 +311,19 @@ index e0005bd..e5b16aa 100644
 +            bot->SetCanDualWield(true);
 +        }
 +        bot->SendTalentsInfoData(false);
-+        return sPlayerbotAIConfig.randomClassSpecIndex[cls][specTab];
++        return sPlayerbotAIConfig.RandomClassSpecIndex[cls][specTab];
 +    }
      if (reset)
      {
          bot->resetTalents(true);
-@@ -2625,7 +2678,15 @@ void PlayerbotFactory::InitBags(bool destroyOld)
+@@ -2861,7 +2914,15 @@ void PlayerbotFactory::InitBags(bool destroyOld)
  {
      for (uint8 slot = INVENTORY_SLOT_BAG_START; slot < INVENTORY_SLOT_BAG_END; ++slot)
      {
 -        uint32 newItemId = 51809;
 +        // mod-era-talents (patch 0020): 51809 is a WotLK item — band the bag to the era.
 +        uint32 newItemId = 51809;                    // Papa's Brand New Bag (WotLK, 20-slot)
-+        if (sPlayerbotAIConfig.limitGearExpansion)
++        if (sPlayerbotAIConfig.LimitGearExpansion)
 +        {
 +            if (bot->GetLevel() <= 60)
 +                newItemId = 4500;                    // Traveler's Backpack (Vanilla, 16-slot)
@@ -333,28 +333,23 @@ index e0005bd..e5b16aa 100644
          Item* old_bag = bot->GetItemByPos(INVENTORY_SLOT_BAG_0, slot);
          if (old_bag && old_bag->GetTemplate()->ItemId == newItemId)
              continue;
-@@ -3356,11 +3417,16 @@ void PlayerbotFactory::InitClassSpells()
+@@ -3652,11 +3713,11 @@ void PlayerbotFactory::InitClassSpells()
  
  void PlayerbotFactory::InitSpecialSpells()
  {
--    for (std::vector<uint32>::iterator i = sPlayerbotAIConfig.randomBotSpellIds.begin();
--         i != sPlayerbotAIConfig.randomBotSpellIds.end(); ++i)
-+    // mod-era-talents (patch 0020): the config default is Cold Weather Flying 54197
-+    // (WotLK, unusable below 77 anyway) — era-gate the config list to the WotLK band.
-+    if (!sPlayerbotAIConfig.limitGearExpansion || bot->GetLevel() > 70)
+-    for (std::vector<uint32>::iterator i = sPlayerbotAIConfig.RandomBotSpellIds.begin();
+-         i != sPlayerbotAIConfig.RandomBotSpellIds.end(); ++i)
++    // Restrict the configured expansion spells to the WotLK level band.
++    if (!sPlayerbotAIConfig.LimitGearExpansion || bot->GetLevel() > 70)
      {
 -        uint32 spellId = *i;
 -        bot->learnSpell(spellId);
-+        for (std::vector<uint32>::iterator i = sPlayerbotAIConfig.randomBotSpellIds.begin();
-+             i != sPlayerbotAIConfig.randomBotSpellIds.end(); ++i)
-+        {
-+            uint32 spellId = *i;
++        for (uint32 spellId : sPlayerbotAIConfig.RandomBotSpellIds)
 +            bot->learnSpell(spellId);
-+        }
      }
      // to leave DK starting area
      if (bot->getClass() == CLASS_DEATH_KNIGHT)
-@@ -3956,6 +4022,10 @@ void PlayerbotFactory::InitFood()
+@@ -4257,6 +4318,10 @@ void PlayerbotFactory::InitFood()
          if (proto->Area || proto->Map || proto->RequiredCityRank || proto->RequiredHonorRank)
              continue;
  
@@ -365,23 +360,21 @@ index e0005bd..e5b16aa 100644
          items[proto->Spells[0].SpellCategory].push_back(itemId);
      }
  
-@@ -4213,6 +4283,15 @@ void PlayerbotFactory::InitGlyphs(bool increment)
+@@ -4514,6 +4579,13 @@ void PlayerbotFactory::InitGlyphs(bool increment)
          }
      }
  
-+    // mod-era-talents (patch 0020): glyphs are WotLK-era only — the module gate covers
-+    // Vanilla/TBC-band bots (DKs exempt). The wipe above still ran, so a managed bot
-+    // ends glyph-free here.
++    // Era-managed bots cannot receive WotLK glyphs.
 +    if (!EraGlyphGate_BotGlyphsAllowed(bot))
 +    {
 +        bot->SendTalentsInfoData(false);
 +        return;
 +    }
 +
-     if (sPlayerbotAIConfig.limitTalentsExpansion && bot->GetLevel() <= 70)
+     if (sPlayerbotAIConfig.LimitTalentsExpansion && bot->GetLevel() <= 70)
      {
          bot->SendTalentsInfoData(false);
-@@ -4378,7 +4457,7 @@ void PlayerbotFactory::InitGlyphs(bool increment)
+@@ -4679,7 +4751,7 @@ void PlayerbotFactory::InitGlyphs(bool increment)
      if (bot->getClass() == CLASS_DRUID)
      {
          // Cat PvE (spec index 3): If the bot is Feral spec, level 20 or higher, and does NOT have the Thick Hide talent
@@ -391,16 +384,16 @@ index e0005bd..e5b16aa 100644
          // Balance PvP (spec index 4): If the bot has the Owlkin Frenzy talent
          else if (bot->HasAura(SPELL_OWLKIN_FRENZY))
 diff --git a/modules/mod-playerbots/src/Mgr/Item/RandomItemMgr.cpp b/modules/mod-playerbots/src/Mgr/Item/RandomItemMgr.cpp
-index 137ef1e..e81bc25 100644
+index 8ad79c1..569b691 100644
 --- a/modules/mod-playerbots/src/Mgr/Item/RandomItemMgr.cpp
 +++ b/modules/mod-playerbots/src/Mgr/Item/RandomItemMgr.cpp
-@@ -997,7 +997,33 @@ uint32 RandomItemMgr::GetRandomPotion(uint32 level, uint32 effect) const
+@@ -998,7 +998,33 @@ uint32 RandomItemMgr::GetRandomPotion(uint32 level, uint32 effect) const
      if (effectItr == levelItr->second.end() || effectItr->second.empty())
          return 0;
  
 -    return Acore::Containers::SelectRandomContainerElement(effectItr->second);
 +    std::vector<uint32> const& potions = effectItr->second;
-+    if (!sPlayerbotAIConfig.limitGearExpansion)
++    if (!sPlayerbotAIConfig.LimitGearExpansion)
 +        return Acore::Containers::SelectRandomContainerElement(potions);
 +
 +    // mod-era-talents (patch 0020): the potionCache is keyed on RequiredLevel only, so

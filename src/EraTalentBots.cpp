@@ -34,7 +34,10 @@ namespace EraTalentBots
     // WotLK-band bots' glyphs at login via EraFromIP==Vanilla).
     // Public (declared in the header) since 2026-09-07: EraAdvanceGossip.cpp uses it too.
 #ifdef MOD_PLAYERBOTS
-    bool IsBot(Player* p) { return p && (p->GetSession()->IsBot() || GET_PLAYERBOT_AI(p) != nullptr); }
+    bool IsBot(Player* p)
+    {
+        return p && ((p->GetSession() && p->GetSession()->IsHeadless()) || GET_PLAYERBOT_AI(p) != nullptr);
+    }
 #else
     bool IsBot(Player*) { return false; }   // no bot AI exists in this build
 #endif

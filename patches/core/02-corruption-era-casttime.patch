@@ -1,5 +1,5 @@
 diff --git a/src/server/game/Spells/SpellInfo.cpp b/src/server/game/Spells/SpellInfo.cpp
-index 8d30f81e..4b0506aa 100644
+index 84e3900..e30ed93 100644
 --- a/src/server/game/Spells/SpellInfo.cpp
 +++ b/src/server/game/Spells/SpellInfo.cpp
 @@ -27,6 +27,7 @@

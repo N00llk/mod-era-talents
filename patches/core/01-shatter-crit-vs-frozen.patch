@@ -1,8 +1,8 @@
 diff --git a/src/server/game/Entities/Unit/Unit.cpp b/src/server/game/Entities/Unit/Unit.cpp
-index 161d31ec..41586171 100644
+index ce188c5..ed64c94 100644
 --- a/src/server/game/Entities/Unit/Unit.cpp
 +++ b/src/server/game/Entities/Unit/Unit.cpp
-@@ -9280,6 +9280,27 @@ float Unit::SpellTakenCritChance(Unit const* caster, SpellInfo const* spellProto
+@@ -9013,6 +9013,27 @@ float Unit::SpellTakenCritChance(Unit const* caster, SpellInfo const* spellProto
                                  break;
                          }
                      }

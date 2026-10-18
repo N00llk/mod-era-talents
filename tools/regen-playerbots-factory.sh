@@ -142,7 +142,7 @@ git -C "$PB" diff \
 [[ -s "$TMP/out.patch" ]] || { echo "GATE FAIL: generated patch is empty" >&2; exit 1; }
 [[ "$(grep -c '^diff --git' "$TMP/out.patch")" -eq 4 ]] \
   || { echo "GATE FAIL: expected exactly 4 files in the patch, got $(grep -c '^diff --git' "$TMP/out.patch")" >&2; exit 1; }
-for needle in "EraTalentBots_FactoryReconcile" "EraTalentBots_SpecTabs" "EraTalentBots_PostTrainerWalk" "randomClassSpecIndex" "IsEraLegalConsumable" "maxReqLevel" "EraGlyphGate_BotGlyphsAllowed" "Traveler's Backpack"; do
+for needle in "EraTalentBots_FactoryReconcile" "EraTalentBots_SpecTabs" "EraTalentBots_PostTrainerWalk" "RandomClassSpecIndex" "IsEraLegalConsumable" "maxReqLevel" "EraGlyphGate_BotGlyphsAllowed" "Traveler's Backpack"; do
   grep -q -- "$needle" "$TMP/out.patch" \
     || { echo "GATE FAIL: patch missing expected content: $needle" >&2; exit 1; }
 done

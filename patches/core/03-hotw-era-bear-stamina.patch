@@ -1,8 +1,8 @@
 diff --git a/src/server/game/Spells/Auras/SpellAuraEffects.cpp b/src/server/game/Spells/Auras/SpellAuraEffects.cpp
-index 8a4b34da..d5c9f5ee 100644
+index f6ad1b9..62419fe 100644
 --- a/src/server/game/Spells/Auras/SpellAuraEffects.cpp
 +++ b/src/server/game/Spells/Auras/SpellAuraEffects.cpp
-@@ -1518,6 +1518,23 @@ void AuraEffect::HandleShapeshiftBoosts(Unit* target, bool apply) const
+@@ -1510,6 +1510,23 @@ void AuraEffect::HandleShapeshiftBoosts(Unit* target, bool apply) const
                      {
                          int32 HotWMod = (*i)->GetAmount() / 2; // For each 2% Intelligence, you get 1% stamina and 1% attack power.
  

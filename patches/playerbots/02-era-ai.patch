@@ -1,21 +1,19 @@
 diff --git a/modules/mod-playerbots/src/Ai/Base/Actions/LfgActions.cpp b/modules/mod-playerbots/src/Ai/Base/Actions/LfgActions.cpp
-index a43b405..6af5849 100644
+index 0124dee..1376bd9 100644
 --- a/modules/mod-playerbots/src/Ai/Base/Actions/LfgActions.cpp
 +++ b/modules/mod-playerbots/src/Ai/Base/Actions/LfgActions.cpp
-@@ -14,6 +14,12 @@
+@@ -14,6 +14,10 @@
  #include "World.h"
  #include "WorldPacket.h"
  
-+// mod-era-talents (patch 0021): era-transparent spell lookup — returns the id this character
-+// KNOWS for a stock spell (the stock id itself, or its same-name Vanilla-era clone), else 0.
++// Resolve stock spell IDs to the era spell the character knows.
 +extern uint32 EraTalentBots_ResolveSpellId(Player* bot, uint32 stockSpellId);
 +static inline uint32 EraKnown(Player* bot, uint32 spellId) { return EraTalentBots_ResolveSpellId(bot, spellId); }
 +
-+
  using namespace lfg;
  
- bool LfgJoinAction::Execute(Event /*event*/) { return JoinLFG(); }
-@@ -36,7 +42,7 @@ uint32 LfgJoinAction::GetRoles()
+ namespace
+@@ -59,7 +63,7 @@ uint32 LfgJoinAction::GetRoles()
          case CLASS_DRUID:
              if (spec == 2)
                  return PLAYER_ROLE_HEALER;
@@ -25,7 +23,7 @@ index a43b405..6af5849 100644
              else
                  return PLAYER_ROLE_DAMAGE;
 diff --git a/modules/mod-playerbots/src/Ai/Base/Actions/WorldBuffAction.cpp b/modules/mod-playerbots/src/Ai/Base/Actions/WorldBuffAction.cpp
-index 0c9a679..8911398 100644
+index e15f70e..86178be 100644
 --- a/modules/mod-playerbots/src/Ai/Base/Actions/WorldBuffAction.cpp
 +++ b/modules/mod-playerbots/src/Ai/Base/Actions/WorldBuffAction.cpp
 @@ -5,6 +5,11 @@
@@ -51,7 +49,7 @@ index 0c9a679..8911398 100644
          {
              // If not bear, then treat it as "cat" spec = 3
 diff --git a/modules/mod-playerbots/src/Ai/Base/Value/SpellIdValue.cpp b/modules/mod-playerbots/src/Ai/Base/Value/SpellIdValue.cpp
-index 2e2628d..36b1509 100644
+index e632688..b5308a4 100644
 --- a/modules/mod-playerbots/src/Ai/Base/Value/SpellIdValue.cpp
 +++ b/modules/mod-playerbots/src/Ai/Base/Value/SpellIdValue.cpp
 @@ -42,6 +42,14 @@ uint32 SpellIdValue::Calculate()
@@ -70,21 +68,20 @@ index 2e2628d..36b1509 100644
          if (!spellInfo || spellInfo->IsPassive())
              continue;
 diff --git a/modules/mod-playerbots/src/Ai/Class/Druid/DruidTriggers.h b/modules/mod-playerbots/src/Ai/Class/Druid/DruidTriggers.h
-index be28d6a..abfee09 100644
+index 833e38b..3a888b0 100644
 --- a/modules/mod-playerbots/src/Ai/Class/Druid/DruidTriggers.h
 +++ b/modules/mod-playerbots/src/Ai/Class/Druid/DruidTriggers.h
-@@ -19,6 +19,10 @@
+@@ -20,6 +20,9 @@
+ inline constexpr uint32 AURA_OMEN_OF_CLARITY = 16864;
+ inline constexpr uint32 SPELL_TREE_OF_LIFE = 33891;
  
- constexpr uint32 AURA_OMEN_OF_CLARITY = 16864;
- 
-+// mod-era-talents (patch 0021): the Vanilla-era Omen of Clarity is a same-name ACTIVATED
-+// buff clone — resolve to whichever id this druid actually knows (stock passive or clone).
++// Vanilla Omen of Clarity is an activated spell with its own ID.
 +extern uint32 EraTalentBots_ResolveSpellId(Player* bot, uint32 stockSpellId);
 +
  class PlayerbotAI;
  
  class MarkOfTheWildOnPartyTrigger : public BuffOnPartyTrigger
-@@ -139,7 +143,7 @@ public:
+@@ -141,7 +144,7 @@ public:
              return false;
  
          // Cat with Omen of Clarity: spam to fish for Clearcasting procs
@@ -94,10 +91,10 @@ index be28d6a..abfee09 100644
              Unit* target = GetTarget();
              return target && target->IsAlive() && target->IsInWorld();
 diff --git a/modules/mod-playerbots/src/Ai/Class/Druid/Strategy/FeralDruidStrategy.cpp b/modules/mod-playerbots/src/Ai/Class/Druid/Strategy/FeralDruidStrategy.cpp
-index acb7d1e..33f8e76 100644
+index acb7d1e..0832de3 100644
 --- a/modules/mod-playerbots/src/Ai/Class/Druid/Strategy/FeralDruidStrategy.cpp
 +++ b/modules/mod-playerbots/src/Ai/Class/Druid/Strategy/FeralDruidStrategy.cpp
-@@ -7,6 +7,12 @@
+@@ -7,6 +7,11 @@
  #include "FeralDruidStrategy.h"
  #include "Playerbots.h"
  
@@ -106,11 +103,10 @@ index acb7d1e..33f8e76 100644
 +extern uint32 EraTalentBots_ResolveSpellId(Player* bot, uint32 stockSpellId);
 +static inline uint32 EraKnown(Player* bot, uint32 spellId) { return EraTalentBots_ResolveSpellId(bot, spellId); }
 +
-+
  class FeralDruidStrategyActionNodeFactory : public NamedObjectFactory<ActionNode>
  {
  public:
-@@ -95,7 +101,7 @@ void FeralChargeDruidStrategy::InitTriggers(std::vector<TriggerNode*>& triggers)
+@@ -95,7 +100,7 @@ void FeralChargeDruidStrategy::InitTriggers(std::vector<TriggerNode*>& triggers)
  {
      Player* bot = botAI->GetBot();
  
@@ -120,10 +116,10 @@ index acb7d1e..33f8e76 100644
              "enemy out of melee", { NextAction("feral charge - cat", 29.0f) }));
      else
 diff --git a/modules/mod-playerbots/src/Ai/Class/Druid/Strategy/GenericDruidStrategy.cpp b/modules/mod-playerbots/src/Ai/Class/Druid/Strategy/GenericDruidStrategy.cpp
-index 491ac9f..50f6c97 100644
+index f973060..1084e60 100644
 --- a/modules/mod-playerbots/src/Ai/Class/Druid/Strategy/GenericDruidStrategy.cpp
 +++ b/modules/mod-playerbots/src/Ai/Class/Druid/Strategy/GenericDruidStrategy.cpp
-@@ -9,6 +9,12 @@
+@@ -9,6 +9,11 @@
  #include "FeralDruidStrategy.h"
  #include "Playerbots.h"
  
@@ -132,11 +128,10 @@ index 491ac9f..50f6c97 100644
 +extern uint32 EraTalentBots_ResolveSpellId(Player* bot, uint32 stockSpellId);
 +static inline uint32 EraKnown(Player* bot, uint32 spellId) { return EraTalentBots_ResolveSpellId(bot, spellId); }
 +
-+
  class GenericDruidStrategyActionNodeFactory : public NamedObjectFactory<ActionNode>
  {
  public:
-@@ -62,7 +68,7 @@ void GenericDruidStrategy::InitTriggers(std::vector<TriggerNode*>& triggers)
+@@ -62,7 +67,7 @@ void GenericDruidStrategy::InitTriggers(std::vector<TriggerNode*>& triggers)
  
      if (tab == DRUID_TAB_FERAL)
      {
@@ -145,7 +140,7 @@ index 491ac9f..50f6c97 100644
          {
              triggers.push_back(new TriggerNode("predator's swiftness and combat party member dead",
                                                 { NextAction("rebirth", 29.0f) }));
-@@ -125,7 +131,7 @@ void DruidCcStrategy::InitTriggers(std::vector<TriggerNode*>& triggers)
+@@ -125,7 +130,7 @@ void DruidCcStrategy::InitTriggers(std::vector<TriggerNode*>& triggers)
      }
      if (tab == DRUID_TAB_FERAL)
      {
@@ -154,7 +149,7 @@ index 491ac9f..50f6c97 100644
          {
              triggers.push_back(new TriggerNode(
                  "predator's swiftness and cyclone", { NextAction("cyclone on cc", 42.0f) }));
-@@ -181,7 +187,7 @@ void DruidAoeStrategy::InitTriggers(std::vector<TriggerNode*>& triggers)
+@@ -181,7 +186,7 @@ void DruidAoeStrategy::InitTriggers(std::vector<TriggerNode*>& triggers)
          triggers.push_back(new TriggerNode("moonfire on attacker", { NextAction("moonfire on attacker", 5.1f) }));
      }
  
@@ -164,7 +159,7 @@ index 491ac9f..50f6c97 100644
          triggers.push_back(new TriggerNode("clearcasting and medium aoe", { NextAction("swipe (cat)", 25.5f) }));
          triggers.push_back(new TriggerNode("medium aoe", { NextAction("swipe (cat)", 25.0f) }));
 diff --git a/modules/mod-playerbots/src/Ai/Class/Paladin/Actions/PaladinActions.cpp b/modules/mod-playerbots/src/Ai/Class/Paladin/Actions/PaladinActions.cpp
-index 8bf1b45..e67c59b 100644
+index 7fb2f8f..df35608 100644
 --- a/modules/mod-playerbots/src/Ai/Class/Paladin/Actions/PaladinActions.cpp
 +++ b/modules/mod-playerbots/src/Ai/Class/Paladin/Actions/PaladinActions.cpp
 @@ -13,6 +13,11 @@
@@ -179,7 +174,7 @@ index 8bf1b45..e67c59b 100644
  static bool IsBlessingTargetCandidate(Player* bot, Player* player)
  {
      if (!player || !player->IsAlive() || player->GetMapId() != bot->GetMapId())
-@@ -197,7 +202,7 @@ inline std::string const GetActualBlessingOfWisdom(Unit* target)
+@@ -199,7 +204,7 @@ inline std::string const GetActualBlessingOfWisdom(Unit* target)
  
  inline std::string const GetActualBlessingOfSanctuary(Unit* target, Player* bot)
  {
@@ -188,7 +183,7 @@ index 8bf1b45..e67c59b 100644
          return "";
  
      Player* targetPlayer = target->ToPlayer();
-@@ -342,7 +347,7 @@ bool CastBlessingOfSanctuaryOnPartyAction::Execute(Event /*event*/)
+@@ -344,7 +349,7 @@ bool CastBlessingOfSanctuaryOnPartyAction::Execute(Event /*event*/)
      if (IsGreaterBlessingMode(bot))
          return false;
  
@@ -197,7 +192,7 @@ index 8bf1b45..e67c59b 100644
          return false;
  
      Unit* target = GetTarget();
-@@ -428,7 +433,7 @@ Unit* CastBlessingOfSanctuaryOnPartyAction::GetTarget()
+@@ -430,7 +435,7 @@ Unit* CastBlessingOfSanctuaryOnPartyAction::GetTarget()
      if (IsGreaterBlessingMode(bot))
          return nullptr;
  
@@ -206,7 +201,7 @@ index 8bf1b45..e67c59b 100644
          return nullptr;
  
      return FindBlessingTarget(bot, botAI, [&](Player* player)
-@@ -518,7 +523,8 @@ bool CastBlessingOfKingsOnPartyAction::Execute(Event /*event*/)
+@@ -520,7 +525,8 @@ bool CastBlessingOfKingsOnPartyAction::Execute(Event /*event*/)
          const bool isTank = IsTankRole(targetPlayer);
          const bool hasSanctFromMe =
              target->HasAura(ai::paladin::SPELL_BLESSING_OF_SANCTUARY, bot->GetGUID()) ||
@@ -217,7 +212,7 @@ index 8bf1b45..e67c59b 100644
              botAI->HasAura("blessing of sanctuary", target) ||
              botAI->HasAura("greater blessing of sanctuary", target);
 diff --git a/modules/mod-playerbots/src/Ai/Class/Paladin/Actions/PaladinGreaterBlessingAction.cpp b/modules/mod-playerbots/src/Ai/Class/Paladin/Actions/PaladinGreaterBlessingAction.cpp
-index 8c48658..76586ca 100644
+index 54ca6d4..66af850 100644
 --- a/modules/mod-playerbots/src/Ai/Class/Paladin/Actions/PaladinGreaterBlessingAction.cpp
 +++ b/modules/mod-playerbots/src/Ai/Class/Paladin/Actions/PaladinGreaterBlessingAction.cpp
 @@ -12,6 +12,11 @@
@@ -273,7 +268,7 @@ index 8c48658..76586ca 100644
              if (caster->HasAura(SPELL_IMPROVED_WISDOM_R1))
                  return amount * 110 / 100;
 diff --git a/modules/mod-playerbots/src/Ai/Class/Paladin/Strategy/GenericPaladinStrategyActionNodeFactory.h b/modules/mod-playerbots/src/Ai/Class/Paladin/Strategy/GenericPaladinStrategyActionNodeFactory.h
-index 7096a14..cabdecd 100644
+index 1a66f38..5c2628c 100644
 --- a/modules/mod-playerbots/src/Ai/Class/Paladin/Strategy/GenericPaladinStrategyActionNodeFactory.h
 +++ b/modules/mod-playerbots/src/Ai/Class/Paladin/Strategy/GenericPaladinStrategyActionNodeFactory.h
 @@ -28,6 +28,7 @@ public:
@@ -284,28 +279,26 @@ index 7096a14..cabdecd 100644
          creators["divine shield"] = &divine_shield;
          creators["flash of light"] = &flash_of_light;
          creators["flash of light on party"] = &flash_of_light_on_party;
-@@ -144,6 +145,16 @@ private:
+@@ -144,6 +145,14 @@ private:
                                /*A*/ { NextAction("judgement of light") },
                                /*C*/ {});
      }
-+    // mod-era-talents (patch 0021): a Vanilla-era paladin has neither "judgement of wisdom"
-+    // nor "judgement of light" — only the single era "Judgement" (which consumes the active
-+    // seal). Terminate the alt chain there so era paladins still judge.
-+    static ActionNode* judgement_of_light(PlayerbotAI* /* ai */)
++    // Vanilla paladins use a single Judgement spell as the final fallback.
++    static ActionNode* judgement_of_light(PlayerbotAI* /* botAI */)
 +    {
 +        return new ActionNode("judgement of light",
 +                              /*P*/ {},
 +                              /*A*/ { NextAction("judgement") },
 +                              /*C*/ {});
 +    }
-     static ActionNode* divine_shield(PlayerbotAI* /* ai */)
+     static ActionNode* divine_shield(PlayerbotAI* /* botAI */)
      {
          return new ActionNode("divine shield",
 diff --git a/modules/mod-playerbots/src/Ai/Class/Priest/PriestActions.h b/modules/mod-playerbots/src/Ai/Class/Priest/PriestActions.h
-index 6710914..8326c34 100644
+index 9a20a83..ec03f37 100644
 --- a/modules/mod-playerbots/src/Ai/Class/Priest/PriestActions.h
 +++ b/modules/mod-playerbots/src/Ai/Class/Priest/PriestActions.h
-@@ -140,7 +140,19 @@ public:
+@@ -145,7 +145,19 @@ public:
  
  // shadow talents
  SPELL_ACTION(CastMindFlayAction, "mind flay");
@@ -327,7 +320,7 @@ index 6710914..8326c34 100644
  SPELL_ACTION(CastSilenceAction, "silence");
  ENEMY_HEALER_ACTION(CastSilenceOnEnemyHealerAction, "silence");
 diff --git a/modules/mod-playerbots/src/Ai/Class/Priest/PriestTriggers.h b/modules/mod-playerbots/src/Ai/Class/Priest/PriestTriggers.h
-index 13d35e4..cc781f5 100644
+index ced8228..07129a6 100644
 --- a/modules/mod-playerbots/src/Ai/Class/Priest/PriestTriggers.h
 +++ b/modules/mod-playerbots/src/Ai/Class/Priest/PriestTriggers.h
 @@ -19,7 +19,19 @@ DEBUFF_CHECKISOWNER_TRIGGER(ShadowWordPainTrigger, "shadow word: pain");
@@ -647,7 +640,7 @@ index 8066d57..6ce8cc8 100644
      triggers.push_back(new TriggerNode("no air totem", { NextAction("windfury totem", 55.0f) }));
  }
 diff --git a/modules/mod-playerbots/src/Ai/Class/Warrior/WarriorTriggers.cpp b/modules/mod-playerbots/src/Ai/Class/Warrior/WarriorTriggers.cpp
-index 976a66c..2f0724c 100644
+index 052500b..7c84eea 100644
 --- a/modules/mod-playerbots/src/Ai/Class/Warrior/WarriorTriggers.cpp
 +++ b/modules/mod-playerbots/src/Ai/Class/Warrior/WarriorTriggers.cpp
 @@ -7,6 +7,11 @@
@@ -662,7 +655,7 @@ index 976a66c..2f0724c 100644
  namespace
  {
  constexpr uint32 SPELL_VIGILANCE = 50720;
-@@ -129,7 +134,9 @@ bool BattleShoutTrigger::IsActive()
+@@ -103,7 +108,9 @@ bool BattleShoutTrigger::IsActive()
      float cpBonus = 0.0f;
      for (int rank = 4; rank >= 0; --rank)
      {
@@ -674,10 +667,10 @@ index 976a66c..2f0724c 100644
              cpBonus = commandingPresenceBonus[rank];
              break;
 diff --git a/modules/mod-playerbots/src/Bot/PlayerbotAI.cpp b/modules/mod-playerbots/src/Bot/PlayerbotAI.cpp
-index dfe7813..4b9947a 100644
+index 7f51eca..3ec141e 100644
 --- a/modules/mod-playerbots/src/Bot/PlayerbotAI.cpp
 +++ b/modules/mod-playerbots/src/Bot/PlayerbotAI.cpp
-@@ -2327,10 +2327,16 @@ bool PlayerbotAI::IsTank(Player* player, bool bySpec)
+@@ -2389,10 +2389,16 @@ bool PlayerbotAI::IsTank(Player* player, bool bySpec)
              }
              break;
          case CLASS_DRUID:
@@ -698,7 +691,7 @@ index dfe7813..4b9947a 100644
              break;
      }
 diff --git a/modules/mod-playerbots/src/Mgr/Item/StatsWeightCalculator.cpp b/modules/mod-playerbots/src/Mgr/Item/StatsWeightCalculator.cpp
-index 5d81e47..704e7db 100644
+index b940a62..1a82b79 100644
 --- a/modules/mod-playerbots/src/Mgr/Item/StatsWeightCalculator.cpp
 +++ b/modules/mod-playerbots/src/Mgr/Item/StatsWeightCalculator.cpp
 @@ -20,6 +20,11 @@
@@ -713,7 +706,7 @@ index 5d81e47..704e7db 100644
  namespace
  {
  constexpr uint32 SPELL_MOLTEN_ARMOR_RANKS[] = { 30482, 43045, 43046 };
-@@ -702,12 +707,19 @@ void StatsWeightCalculator::CalculateItemTypePenalty(ItemTemplate const* proto)
+@@ -688,12 +693,19 @@ void StatsWeightCalculator::CalculateItemTypePenalty(ItemTemplate const* proto)
              weight_ *= 1.5;
          }
  
