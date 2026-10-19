@@ -5,17 +5,110 @@
 EraTalents = EraTalents or {}
 local ET = EraTalents
 
+local function IsEraCharacter()
+  return ET.state and ET.state.isEraChar
+end
+
+local function GlyphsBlockedByEra()
+  return ET.state and ET.state.era and ET.state.era < 2 and ET._classId ~= 6
+end
+
+-- Stock openers and their OnShow scripts run synchronously. Always restore the bypass,
+-- including when a stock function (or another addon's hook) raises an error.
+local function WithStockAllowed(fn, ...)
+  local previous = ET._allowStock
+  ET._allowStock = true
+  local function Pack(...) return { n = select("#", ...), ... } end
+  local results = Pack(pcall(fn, ...))
+  ET._allowStock = previous
+  if not results[1] then error(results[2], 0) end
+  return unpack(results, 2, results.n)
+end
+
+local function GuardStockTalentRoutes()
+  if ET._stockTalentRoutesWrapped or not PlayerTalentFrame_Toggle then return end
+  ET._stockTalentRoutesWrapped = true
+  local stockToggle = PlayerTalentFrame_Toggle
+  PlayerTalentFrame_Toggle = function(pet, ...)
+    if not ET._allowStock and IsEraCharacter() then
+      if pet then
+        if PlayerTalentFrame:IsShown() and ET._petOnlyMode then
+          HideUIPanel(PlayerTalentFrame)
+        else
+          ET.OpenStockTalents()
+        end
+      else
+        ET.TogglePanel()
+      end
+      return
+    end
+    return stockToggle(pet, ...)
+  end
+
+  local stockOpen = PlayerTalentFrame_Open
+  if stockOpen then
+    PlayerTalentFrame_Open = function(pet, ...)
+      if not ET._allowStock and IsEraCharacter() then
+        if pet then return ET.OpenStockTalents() end
+        return ET.ShowPanel()
+      end
+      return stockOpen(pet, ...)
+    end
+  end
+
+  -- Glyphs share the player's stock talent tabs. Guard refreshes too: switching from
+  -- a pet spec to a player spec can select a talent tree without clicking a talent tab.
+  local stockRefresh = PlayerTalentFrame_Refresh
+  if stockRefresh then
+    PlayerTalentFrame_Refresh = function(...)
+      if not ET._allowStock and IsEraCharacter() and PlayerTalentFrame:IsShown() and not PlayerTalentFrame.pet
+          and PanelTemplates_GetSelectedTab(PlayerTalentFrame) ~= GLYPH_TALENT_TAB then
+        HideUIPanel(PlayerTalentFrame)
+        return ET.ShowPanel()
+      end
+      return stockRefresh(...)
+    end
+  end
+end
+
+local function GlyphUnavailable()
+  local msg = "Glyphs are available in the Wrath of the Lich King era."
+  UIErrorsFrame:AddMessage(msg, 1, 0.2, 0.2, 1, 3)
+end
+
+local function GuardStockGlyphRoutes()
+  ET._stockGlyphRoutesWrapped = ET._stockGlyphRoutesWrapped or {}
+  for _, name in ipairs({ "PlayerTalentFrame_ToggleGlyphFrame", "PlayerTalentFrame_OpenGlyphFrame" }) do
+    local stockGlyph = _G[name]
+    if stockGlyph and not ET._stockGlyphRoutesWrapped[name] then
+      _G[name] = function(...)
+        if GlyphsBlockedByEra() then return GlyphUnavailable() end
+        if ET.state and ET.state.era ~= nil then
+          -- Leaving the pet-only view restores player spec tabs before opening glyphs.
+          if ET._petOnlyMode then HideUIPanel(PlayerTalentFrame) end
+          return WithStockAllowed(stockGlyph, ...)
+        end
+        -- Era has not arrived yet: retain the stock/fallback behavior.
+        return stockGlyph(...)
+      end
+      ET._stockGlyphRoutesWrapped[name] = true
+    end
+  end
+end
+
 local function GuardStockFrame()
-  if not PlayerTalentFrame or PlayerTalentFrame._eraGuarded then return end
+  if not PlayerTalentFrame then return end
+  GuardStockTalentRoutes()
+  GuardStockGlyphRoutes()
+  if PlayerTalentFrame._eraGuarded then return end
   PlayerTalentFrame._eraGuarded = true
   PlayerTalentFrame:HookScript("OnShow", function(self)
-    -- ET.OpenStockTalents sets _allowStock so an era char can still reach the WotLK frame
-    -- ON PURPOSE -- the only route to the hunter PET talent side-tab, which lives inside this
-    -- frame (we era-gate the player's own tree, never the pet's).
+    -- Pet and era-allowed glyph openers temporarily bypass this guard. Both views
+    -- live in the stock frame; only the player's talent tree is replaced by the era panel.
     if ET._allowStock then return end
     if ET.state and ET.state.isEraChar then
       HideUIPanel(self)     -- era chars never see the WotLK tree...
-      ET.TogglePanel()      -- ...they get ours instead (toggles on each open attempt)
+      ET.ShowPanel()        -- ...a direct stock-panel open shows their era tree
     end
   end)
 end
@@ -89,15 +182,33 @@ function ET.OpenStockTalents()
     DEFAULT_CHAT_FRAME:AddMessage("|cffffd000EraTalents:|r summon a pet to view its talent tree.")
     return
   end
-  ET._allowStock = true
   if not IsAddOnLoaded("Blizzard_TalentUI") then LoadAddOn("Blizzard_TalentUI") end
   if PlayerTalentFrame then
-    ET._petOnlyMode = true
-    ShowUIPanel(PlayerTalentFrame)
-    GuardPlayerSpecTabs()   -- attach OnShow guards + hide player tabs now (catches the click cascade)
-    SelectPetSpec()         -- land on the pet's own tree (correct per active pet)
+    WithStockAllowed(function()
+      ET._petOnlyMode = IsEraCharacter() and true or false
+      ShowUIPanel(PlayerTalentFrame)
+      if not PlayerTalentFrame:IsShown() then ET._petOnlyMode = false; return end
+      GuardPlayerSpecTabs()   -- attach OnShow guards + hide player tabs now (catches the click cascade)
+      SelectPetSpec()         -- land on the pet's own tree (correct per active pet)
+    end)
   end
-  ET._allowStock = false
+end
+
+-- SYNC may change eras while a stock window is already visible.
+function ET.RefreshHookState()
+  if not PlayerTalentFrame or not PlayerTalentFrame:IsShown() or ET._allowStock then return end
+  if not IsEraCharacter() then
+    if ET._petOnlyMode then
+      ET._petOnlyMode = false
+      GuardPlayerSpecTabs()
+    end
+    return
+  end
+  if ET._petOnlyMode and PlayerTalentFrame.pet then return end
+  if ET.state.era ~= nil and not GlyphsBlockedByEra() and not PlayerTalentFrame.pet
+      and PanelTemplates_GetSelectedTab(PlayerTalentFrame) == GLYPH_TALENT_TAB then return end
+  HideUIPanel(PlayerTalentFrame)
+  ET.ShowPanel()
 end
 
 function ET.InitHook()

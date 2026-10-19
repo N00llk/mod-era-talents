@@ -16,16 +16,9 @@ local ET = EraTalents
 -- ---------------------------------------------------------------------------
 local FRAME_W, FRAME_H = 384, 512
 
--- Tree background: FIXED (does not scroll). Native quadrant sizes (real: TL 256x256, TR
--- 64x256, BL 256x128, BR 64x128) sum to exactly 320x384. It's a static parchment layer on the
--- main frame; only the buttons/arrows scroll over it. Right edge is at x = BG_X + BG_W = 343.
 local BG_X, BG_Y = 23, -77
-local BG_W, BG_H = 320, 384
 
--- Scroll frame is the REAL 296px-wide talent view (narrower than the 320px background). Its
--- auto-created scrollbar anchors just off the right edge, landing in the ~24px strip on the
--- RIGHT of the background art but still INSIDE the frame border (not out over the chrome). Only
--- buttons + arrows live in the scroll child and scroll over the fixed parchment.
+-- Scroll frame is a 296px-wide talent view. Its scrollbar sits in the strip to the right.
 local SCROLL_X, SCROLL_Y = BG_X, BG_Y
 local SCROLL_W, SCROLL_H = 296, 332
 
@@ -130,20 +123,17 @@ end
 -- ---------------------------------------------------------------------------
 -- Frame construction (once, lazily).
 -- ---------------------------------------------------------------------------
--- Own-panel chrome: the floating 384x512 PaperDoll window, portrait, title, close, Pet Talents.
+-- Own-panel chrome: a 384x512 left-side UI panel with portrait, title, close, Pet Talents.
 local function BuildChrome(v)
   local f = v.frame
-  f:SetFrameStrata("HIGH")
+  f:SetFrameStrata("MEDIUM")
+  f:SetToplevel(true)
   f:SetWidth(FRAME_W)
   f:SetHeight(FRAME_H)
-  f:SetPoint("CENTER")
+  f:SetPoint("TOPLEFT", UIParent, "TOPLEFT", 0, -104)
   f:EnableMouse(true)
-  f:SetMovable(true)
-  f:RegisterForDrag("LeftButton")
-  f:SetScript("OnDragStart", f.StartMoving)
-  f:SetScript("OnDragStop", f.StopMovingOrSizing)
 
-  -- Ornate frame chrome (real PaperDoll talent-frame border pieces).
+  -- Native 3.3.5a PaperDoll and talent frame pieces.
   local chrome = {
     { "Interface\\PaperDollInfoFrame\\UI-Character-General-TopLeft",  256, 256, "TOPLEFT",     2, -1 },
     { "Interface\\PaperDollInfoFrame\\UI-Character-General-TopRight", 128, 256, "TOPRIGHT",    2, -1 },
@@ -172,7 +162,16 @@ local function BuildChrome(v)
   f:SetScript("OnEvent", function(self, event, unit)
     if event == "UNIT_PORTRAIT_UPDATE" and (unit == "player" or unit == nil) then RefreshPortrait() end
   end)
-  f:SetScript("OnShow", RefreshPortrait)
+  f:SetScript("OnShow", function()
+    RefreshPortrait()
+    if TalentMicroButton then SetButtonPulse(TalentMicroButton, 0, 1) end
+    PlaySound("TalentScreenOpen")
+    UpdateMicroButtons()
+  end)
+  f:SetScript("OnHide", function()
+    PlaySound("TalentScreenClose")
+    UpdateMicroButtons()
+  end)
 
   f.title = f:CreateFontString(nil, "OVERLAY", "GameFontNormal")
   f.title:SetPoint("TOP", 0, -18)
@@ -194,17 +193,13 @@ local function BuildChrome(v)
   if ET._classId ~= 3 then f.petTalents:Hide() end
 end
 
--- Tree area shared by every view: fixed parchment, scroll frame + child, arrow overlay, footer bar.
+-- Tree area shared by every view: scrolling parchment, arrows and nodes, footer bar.
 -- Positions are relative to v.frame, which is 384x512 in both uses (own window; InspectTalentFrame).
 local function BuildTreeArea(v)
   local f = v.frame
   local name = f:GetName()
 
-  -- FIXED tree background: 4 real quadrants (native sizes -> 320x384) on the main frame. Drawn on
-  -- ARTWORK (ABOVE the BORDER-layer chrome, whose dark stone center would otherwise bury a
-  -- BACKGROUND-layer parchment) but BELOW the later ARTWORK footer and below the scroll child's
-  -- buttons (child frames always render above the parent's textures). This layer never scrolls;
-  -- the buttons/arrows in the scroll child slide over it. Painted per-tab by SetTreeBackground.
+  -- The native four-quadrant tree art stays fixed while talent nodes scroll over it.
   f.bgTL = f:CreateTexture(nil, "ARTWORK")
   f.bgTL:SetWidth(256); f.bgTL:SetHeight(256)
   f.bgTL:SetPoint("TOPLEFT", BG_X, BG_Y)
@@ -233,48 +228,48 @@ local function BuildTreeArea(v)
     if sb then sb:SetValue(sb:GetValue() - d * ROW_SPACING) end
   end)
 
-  -- Scroll child: grid + arrows only (the background is fixed, above). CHILD_H here is just the
-  -- bootstrap value; ShowTab re-derives the real height per-tree from the active tree's depth.
   f.container = CreateFrame("Frame", name .. "ScrollChild", f.scroll)
   f.container:SetWidth(CHILD_W); f.container:SetHeight(CHILD_H)
   f.scroll:SetScrollChild(f.container)
 
-  -- Arrow overlay frame -- higher level than the talent buttons so arrowheads draw on top.
-  f.arrowFrame = CreateFrame("Frame", nil, f.container)
-  f.arrowFrame:SetAllPoints()
-  f.arrowFrame:SetFrameLevel(f.container:GetFrameLevel() + 10)
+  -- Stock PlayerTalentFramePointsBar artwork and text anchors (3.3.5 FrameXML).
+  local pointsBar = CreateFrame("Frame", nil, f)
+  pointsBar:SetWidth(331); pointsBar:SetHeight(26)
+  pointsBar:SetPoint("BOTTOMLEFT", f, "BOTTOMLEFT", 16, 81)
+  local borderTex = "Interface\\Buttons\\UI-Button-Borders2"
+  local barBG = pointsBar:CreateTexture(nil, "BACKGROUND")
+  barBG:SetAllPoints(pointsBar)
+  barBG:SetTexture(borderTex)
+  barBG:SetTexCoord(0, 0.646484375, 0.2109375, 0.4140625)
 
-  -- Footer bar (real Common-Input-Border 3-slice) with spent/unspent text.
-  local fbLeft = f:CreateTexture(nil, "ARTWORK")
-  fbLeft:SetTexture("Interface\\Common\\Common-Input-Border")
-  fbLeft:SetWidth(8); fbLeft:SetHeight(20)
-  fbLeft:SetPoint("BOTTOMLEFT", 26, 80)
-  fbLeft:SetTexCoord(0, 0.0625, 0, 0.625)
-  local fbMid = f:CreateTexture(nil, "ARTWORK")
-  fbMid:SetTexture("Interface\\Common\\Common-Input-Border")
-  fbMid:SetWidth(300); fbMid:SetHeight(20)
-  fbMid:SetPoint("LEFT", fbLeft, "RIGHT")
-  fbMid:SetTexCoord(0.0625, 0.9375, 0, 0.625)
-  local fbRight = f:CreateTexture(nil, "ARTWORK")
-  fbRight:SetTexture("Interface\\Common\\Common-Input-Border")
-  fbRight:SetWidth(8); fbRight:SetHeight(20)
-  fbRight:SetPoint("LEFT", fbMid, "RIGHT")
-  fbRight:SetTexCoord(0.9375, 1.0, 0, 0.625)
+  local borderLeft = pointsBar:CreateTexture(nil, "BORDER")
+  borderLeft:SetTexture(borderTex)
+  borderLeft:SetWidth(6); borderLeft:SetHeight(18)
+  borderLeft:SetPoint("LEFT", pointsBar, "LEFT", 4, 0)
+  borderLeft:SetTexCoord(0, 0.01171875, 0.421875, 0.5625)
+  local borderRight = pointsBar:CreateTexture(nil, "BORDER")
+  borderRight:SetTexture(borderTex)
+  borderRight:SetWidth(6); borderRight:SetHeight(18)
+  borderRight:SetPoint("RIGHT", pointsBar, "RIGHT", -4, 0)
+  borderRight:SetTexCoord(0.3046875, 0.31640625, 0.421875, 0.5625)
+  local borderMiddle = pointsBar:CreateTexture(nil, "BORDER")
+  borderMiddle:SetTexture(borderTex)
+  borderMiddle:SetPoint("TOPLEFT", borderLeft, "TOPRIGHT")
+  borderMiddle:SetPoint("BOTTOMRIGHT", borderRight, "BOTTOMLEFT")
+  borderMiddle:SetTexCoord(0.01171875, 0.3046875, 0.421875, 0.5625)
 
-  f.footerSpent = f:CreateFontString(nil, "OVERLAY", "GameFontNormalSmall")
-  f.footerSpent:SetPoint("LEFT", fbLeft, "LEFT", 8, 0)
-  f.footerUnspent = f:CreateFontString(nil, "OVERLAY", "GameFontHighlightSmall")
-  f.footerUnspent:SetPoint("RIGHT", fbRight, "RIGHT", -8, 0)
+  f.footerSpent = pointsBar:CreateFontString(nil, "ARTWORK", "GameFontNormalSmall")
+  f.footerSpent:SetPoint("LEFT", pointsBar, "LEFT", 12, 1)
+  f.footerSpent:SetJustifyH("LEFT")
+  f.footerUnspent = pointsBar:CreateFontString(nil, "ARTWORK", "GameFontNormalSmall")
+  f.footerUnspent:SetPoint("RIGHT", pointsBar, "RIGHT", -12, 1)
+  f.footerUnspent:SetJustifyH("RIGHT")
 
   f.pools = {}            -- [tree] = { [nodeId] = button }  (per tree: a view can show many trees)
   f._branches = {}        -- pooled branch line textures
-  f._arrows = {}          -- pooled arrowhead textures
 end
 
--- Three tree tabs. "bottom" = CharacterFrame tabs (own window, as before); "top" = TabButtonTemplate
--- at the stock InspectTalentFrameTab positions (70,-40 then chained) because the Inspect frame's
--- bottom already holds its Character/PvP/Talents tabs. Names MUST be <frame>Tab<i>:
--- PanelTemplates_SetTab resolves tabs by that name.
+-- Stock bottom tabs for the own window; Inspect uses stock top tabs.
 local function BuildTabs(v)
   local f = v.frame
   local name = f:GetName()
@@ -290,7 +285,10 @@ local function BuildTabs(v)
       if i == 1 then tab:SetPoint("BOTTOMLEFT", 15, 46)
       else tab:SetPoint("LEFT", f.tabs[i - 1], "RIGHT", -15, 0) end
     end
-    tab:SetScript("OnClick", function() ET.ShowViewTab(v, i) end)
+    tab:SetScript("OnClick", function()
+      ET.ShowViewTab(v, i)
+      PlaySound("igCharacterInfoTab")
+    end)
     f.tabs[i] = tab
   end
   PanelTemplates_SetNumTabs(f, 3)
@@ -330,6 +328,7 @@ local function NodeTooltip(btn)
   local v, node = btn.view, btn.node
   local rank = v.state.ranks[node.id] or 0
   GameTooltip:SetOwner(btn, "ANCHOR_RIGHT")
+  GameTooltip:ClearLines()
 
   -- A spell-granting talent shows the granted spell's REAL client tooltip via a spell hyperlink:
   -- the client renders the proper header (power cost / range / cast time / cooldown as structured
@@ -349,6 +348,11 @@ local function NodeTooltip(btn)
   if gid and tonumber(gid) and tonumber(gid) >= 920000 then
     GameTooltip:SetHyperlink("spell:" .. gid)
     GameTooltip:AddLine("Rank " .. rank .. "/" .. node.maxRank, 0.8, 0.8, 0.8)
+    if not v.readOnly and rank >= 1 and rank < node.maxRank then
+      GameTooltip:AddLine(" ")
+      GameTooltip:AddLine("Next rank:", 1, 1, 1)
+      GameTooltip:AddLine(node.tooltip[rank + 1] or "", 1, 0.82, 0, true)
+    end
     GameTooltip:Show()
     return
   end
@@ -359,10 +363,10 @@ local function NodeTooltip(btn)
   local shown = (rank > 0) and rank or 1
   GameTooltip:AddLine(node.tooltip[shown] or "", 1, 0.82, 0, true)
   -- Read-only (inspect) views show the current rank only: no "Next rank", nothing to learn.
-  if not v.readOnly and rank < node.maxRank then
+  if not v.readOnly and rank >= 1 and rank < node.maxRank then
     GameTooltip:AddLine(" ")
-    GameTooltip:AddLine("Next rank:", 0.6, 0.6, 0.6)
-    GameTooltip:AddLine(node.tooltip[rank + 1] or "", 0.3, 1, 0.3, true)
+    GameTooltip:AddLine("Next rank:", 1, 1, 1)
+    GameTooltip:AddLine(node.tooltip[rank + 1] or "", 1, 0.82, 0, true)
   end
   GameTooltip:Show()
 end
@@ -389,45 +393,30 @@ local function EnsureButtons(v, tree)
   if not pool then pool = {}; f.pools[tree] = pool end
   for _, node in ipairs(tree.talents) do
     if not pool[node.id] then
-      local b = CreateFrame("Button", nil, f.container)
-      b:SetWidth(BTN); b:SetHeight(BTN)
+      f.nextTalentButtonId = (f.nextTalentButtonId or 0) + 1
+      local buttonName = f:GetName() .. "Talent" .. f.nextTalentButtonId
+      local b = CreateFrame("Button", buttonName, f.container, "TalentButtonTemplate")
+      b:ClearAllPoints()
       b:SetPoint("TOPLEFT", colX(node.col), -rowY(node.tier))
-
-      -- Metallic slot ring behind the icon (real talent slot art).
-      b.slot = b:CreateTexture(nil, "BACKGROUND")
-      b.slot:SetTexture("Interface\\Buttons\\UI-EmptySlot-White")
-      b.slot:SetWidth(BTN + 25); b.slot:SetHeight(BTN + 25)
-      b.slot:SetPoint("CENTER")
+      b.slot = _G[buttonName .. "Slot"]
+      b.icon = _G[buttonName .. "IconTexture"]
+      b.rankBorder = _G[buttonName .. "RankBorder"]
+      b.rank = _G[buttonName .. "Rank"]
 
       -- node.icon is a bare icon name (e.g. "Spell_Fire_FireBolt02"); prepend the standard icon
       -- path. A name that already contains a backslash is treated as a full path and used as-is.
-      -- SetNormalTexture with an icon path the client lacks (or an empty name) can leave the button
-      -- with NO normal texture (GetNormalTexture()==nil) -> guard, and fall back to a
-      -- guaranteed-present icon so a single bad/missing icon degrades to a placeholder instead of a
-      -- blank slot (or crashing the whole panel).
       local iconTex = node.icon or ""
       if iconTex ~= "" and not string.find(iconTex, "\\", 1, true) then
         iconTex = "Interface\\Icons\\" .. iconTex
       end
-      b:SetNormalTexture(iconTex)
-      if iconTex == "" or not b:GetNormalTexture() then
-        b:SetNormalTexture("Interface\\Icons\\INV_Misc_QuestionMark")
-      end
-      local nt = b:GetNormalTexture()
-      if nt then nt:SetTexCoord(0.07, 0.93, 0.07, 0.93) end
-
-      -- Rank plate (real TalentFrame-RankBorder) at bottom-right with the current rank.
-      b.rankBorder = b:CreateTexture(nil, "OVERLAY")
-      b.rankBorder:SetTexture("Interface\\TalentFrame\\TalentFrame-RankBorder")
-      b.rankBorder:SetWidth(28); b.rankBorder:SetHeight(28)
-      b.rankBorder:SetPoint("CENTER", b, "BOTTOMRIGHT", -2, 2)
-      b.rank = b:CreateFontString(nil, "OVERLAY", "GameFontNormalSmall")
-      b.rank:SetPoint("CENTER", b.rankBorder, "CENTER", 0, 0)
+      if iconTex == "" then iconTex = "Interface\\Icons\\INV_Misc_QuestionMark" end
+      b.icon:SetAllPoints(b)
+      b.icon:SetTexture(iconTex)
+      b.icon:SetTexCoord(0.07, 0.93, 0.07, 0.93)
 
       b.node = node
       b.view = v
       b:SetScript("OnEnter", NodeTooltip)
-      b:SetScript("OnLeave", function() GameTooltip:Hide() end)
       b:SetScript("OnClick", OnNodeClick)
       pool[node.id] = b
     end
@@ -447,16 +436,34 @@ local function RenderButtons(v, tree)
     local rank = v.state.ranks[node.id] or 0
     if node.tab == v.activeTab then
       b:Show()
-      b.rank:SetText(rank .. "/" .. node.maxRank)
-      local icon = b:GetNormalTexture()
-      -- Mirror the real tree's state colouring (no glow box): trained/maxed = full colour + green
-      -- rank, reachable-but-empty = full colour + white rank, locked tier/prereq = greyed + dim rank.
-      if rank > 0 then
+      b.rank:SetText(rank)
+      local icon = b.icon
+      local available = NodeAvailable(v, node)
+      local maxed = rank >= node.maxRank
+      local canLearn = not v.readOnly and available and rank < node.maxRank
+          and (v.state.availPts or 0) > 0
+      -- Keep the slot and rank plate in the talent state colour.
+      if maxed then
+        b.slot:SetVertexColor(1, 0.82, 0)
+        b.rankBorder:SetVertexColor(1, 0.78, 0.30)
+      elseif canLearn then
+        b.slot:SetVertexColor(0.1, 1, 0.1)
+        b.rankBorder:SetVertexColor(0.25, 1, 0.25)
+      else
+        b.slot:SetVertexColor(1, 1, 1)
+        b.rankBorder:SetVertexColor(1, 1, 1)
+      end
+      -- Maxed ranks are gold; learnable ranks are green; locked nodes remain grey.
+      if maxed then
         if icon then icon:SetDesaturated(nil) end
-        b.rank:SetTextColor(0.1, 1, 0.1)          -- has points (incl. maxed): green
-      elseif NodeAvailable(v, node) then
+        b.rank:SetTextColor(1, 0.82, 0.20)
+      elseif rank > 0 then
         if icon then icon:SetDesaturated(nil) end
-        b.rank:SetTextColor(1, 1, 1)              -- reachable now: full colour, white rank
+        b.rank:SetTextColor(0.1, 1, 0.1)
+      elseif available then
+        if icon then icon:SetDesaturated(nil) end
+        if canLearn then b.rank:SetTextColor(0.1, 1, 0.1)
+        else b.rank:SetTextColor(1, 1, 1) end
       else
         if icon then icon:SetDesaturated(1) end
         b.rank:SetTextColor(0.5, 0.5, 0.5)        -- locked: greyed out
@@ -474,9 +481,12 @@ function ET.DrawArrows(tree, v)
   v = v or ET.ownView
   local f = v.frame
   for _, t in ipairs(f._branches) do t:Hide() end
-  for _, t in ipairs(f._arrows) do t:Hide() end
+  local pool = f.pools[tree]
+  for _, b in pairs(pool) do
+    if b.arrow then b.arrow:Hide() end
+  end
 
-  local nb, na = 0, 0
+  local nb = 0
   local function branch(x, y, w, h, tc)
     nb = nb + 1
     local t = f._branches[nb]
@@ -491,18 +501,18 @@ function ET.DrawArrows(tree, v)
     t:SetWidth(w); t:SetHeight(h)
     t:Show()
   end
-  local function arrow(cx, cy, tc)
-    na = na + 1
-    local t = f._arrows[na]
+  local function arrow(button, point, x, y, tc)
+    local t = button.arrow
     if not t then
-      t = f.arrowFrame:CreateTexture(nil, "OVERLAY")  -- above the buttons
+      -- The tip belongs to its target button, so its OVERLAY is above that button's icon.
+      t = button:CreateTexture(nil, "OVERLAY")
       t:SetTexture(ARROW_TEX)
       t:SetWidth(32); t:SetHeight(32)
-      f._arrows[na] = t
+      button.arrow = t
     end
     t:SetTexCoord(tc[1], tc[2], tc[3], tc[4])
     t:ClearAllPoints()
-    t:SetPoint("CENTER", f.arrowFrame, "TOPLEFT", cx, -cy)
+    t:SetPoint("CENTER", button, point, x, y)
     t:Show()
   end
 
@@ -538,12 +548,13 @@ function ET.DrawArrows(tree, v)
         end
 
         -- Arrowhead at the node, pointing along the final approach direction.
+        local targetButton = pool[node.id]
         if dCol > 0 then
-          arrow(ncx - BTN / 2 - 3, ncy, aRt)
+          arrow(targetButton, "LEFT", -3, 0, aRt)
         elseif dCol < 0 then
-          arrow(ncx + BTN / 2 + 3, ncy, aLt)
+          arrow(targetButton, "RIGHT", 3, 0, aLt)
         else
-          arrow(ncx, ncy - BTN / 2 - 3, aDown)
+          arrow(targetButton, "TOP", 0, 3, aDown)
         end
       end
     end
@@ -564,6 +575,18 @@ local function UpdateFooter(v, tree)
     f.footerUnspent:SetText(pts[1] .. "/" .. pts[2] .. "/" .. pts[3])
   else
     f.footerUnspent:SetText("Unspent Talents: " .. (v.state.availPts or 0))
+  end
+end
+
+-- SYNC can change a rank while the cursor stays on its button. OnEnter will not fire again,
+-- so rebuild only the tooltip owned by this view after its buttons have been repainted.
+local function RefreshHoveredTooltip(v)
+  local owner = GameTooltip:GetOwner()
+  if not owner or owner.view ~= v or not owner.node then return end
+  if owner:IsShown() and owner:IsMouseOver() then
+    NodeTooltip(owner)
+  else
+    GameTooltip:Hide()
   end
 end
 
@@ -605,6 +628,7 @@ function ET.ShowViewTab(v, i)
   RenderButtons(v, tree)
   ET.DrawArrows(tree, v)
   UpdateFooter(v, tree)
+  RefreshHoveredTooltip(v)
 end
 
 -- Bind a view to a state ({ era, ranks, availPts }) + class and repaint it on its active tab.
@@ -617,10 +641,11 @@ function ET.RenderView(v, state, classId)
 end
 
 -- ---------------------------------------------------------------------------
--- Own panel (public contract -- unchanged behaviour, now one view instance).
+-- Own panel (one view instance, managed by the stock UI panel system).
 -- ---------------------------------------------------------------------------
 local function OwnView()
   if not ET.ownView then
+    UIPanelWindows["EraTalentFrame"] = { area = "left", pushable = 6, whileDead = 1 }
     ET.ownView = ET.NewTreeView({ name = "EraTalentFrame", chrome = true, tabStyle = "bottom",
                                   readOnly = false, defaultTab = 2 })
     ET.frame = ET.ownView.frame
@@ -643,9 +668,15 @@ function ET.Refresh()
   ET.RenderView(ET.ownView, ET.state, ET._classId)   -- default tab 2 = Fire (Improved Fireball)
 end
 
+function ET.ShowPanel()
+  OwnView()
+  ShowUIPanel(ET.frame)
+  if ET.frame:IsShown() then ET.Refresh() end
+end
+
 function ET.TogglePanel()
   OwnView()
-  if ET.frame:IsShown() then ET.frame:Hide() else ET.frame:Show(); ET.Refresh() end
+  if ET.frame:IsShown() then HideUIPanel(ET.frame) else ET.ShowPanel() end
 end
 
 -- WoW 3.3.5a's UnitClass returns only (localizedName, classToken) -- the numeric classID as a THIRD
@@ -663,4 +694,9 @@ function ET.InitUI()
   local _, token = UnitClass("player")
   ET._classId = CLASS_ID_BY_TOKEN[token or ""] or 8
   OwnView()
+  hooksecurefunc("UpdateMicroButtons", function()
+    if ET.frame and ET.frame:IsShown() and TalentMicroButton then
+      TalentMicroButton:SetButtonState("PUSHED", 1)
+    end
+  end)
 end

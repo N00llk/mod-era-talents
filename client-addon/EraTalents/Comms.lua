@@ -104,6 +104,7 @@ function ET.OnAddonMsg(prefix, message)
   end
   if ET.ParseSync(ET.state, message) then
     if ET.Refresh then ET.Refresh() end   -- TalentUI hook (may be absent in tests)
+    if ET.RefreshHookState then ET.RefreshHookState() end
   end
 end
 
