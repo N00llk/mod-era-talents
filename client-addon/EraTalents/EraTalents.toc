@@ -2,7 +2,7 @@
 ## Title: EraTalents
 ## Notes: Era-authentic talent panel for era-wow characters
 ## Author: era-wow
-## Version: 0.2
+## Version: 0.3
 data\generated\MageVanilla.lua
 data\generated\PriestVanilla.lua
 data\generated\WarlockVanilla.lua
