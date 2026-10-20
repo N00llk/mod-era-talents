@@ -4,6 +4,7 @@ import hashlib
 import json
 import io
 import zipfile
+import copy
 
 import pytest
 import yaml
@@ -28,9 +29,7 @@ def project(tmp_path):
     (data / "datasets.txt").write_text("vanilla/warlock.yaml data.sql custom.sql\n")
     toc = addon / "EraTalents.toc"
     toc.write_text('\n'.join(line for line in toc.read_text().splitlines()
-                             if not line.startswith('data\\generated\\') or
-                             line in ('data\\generated\\WarlockVanilla.lua',
-                                      'data\\generated\\Localization.lua')) + '\n')
+                             if not line.startswith('data\\generated\\')) + '\n')
     B.build(root)
     B.build(root, export_locale="ruRU", out=addon / "locales/ruRU")
     return root
@@ -48,11 +47,9 @@ def compiled_outputs():
     return B.build(check=True)
 
 
-def test_all_english_trees_match_generated_data(compiled_outputs):
+def test_generated_files_match_build_inputs(compiled_outputs):
     outputs = compiled_outputs
     for path, content in outputs.items():
-        if path.name == "Localization.lua":
-            continue
         assert content == path.read_text(encoding="utf-8")
 
 
@@ -61,7 +58,7 @@ def test_all_english_trees_match_generated_data(compiled_outputs):
 def test_missing_file_fails_before_writing(project, relative, locale):
     addon = project / B.ADDON
     (addon / "locales" / locale / relative).unlink()
-    generated = addon / "data/generated/Localization.lua"
+    generated = addon / "data/generated/Locales.lua"
     previous = generated.read_bytes()
     with pytest.raises(ValueError, match="missing|No such file"):
         B.build(project)
@@ -145,7 +142,19 @@ def test_invalid_english_rank_rejected(project):
 
 def lua_runtime():
     lupa = pytest.importorskip("lupa.lua51", reason="install lupa to exercise actual Lua 5.1")
-    return lupa.LuaRuntime(unpack_returned_tuples=True)
+    lua = lupa.LuaRuntime(unpack_returned_tuples=True)
+    lua.execute((B.ROOT / "tools/fixtures/era_addon_boot.lua").read_text(encoding="utf-8"))
+    return lua
+
+
+def load_outputs(lua, outputs, root=B.ROOT):
+    addon = root / B.ADDON
+    toc = outputs[addon / "EraTalents.toc"]
+    for entry in toc.splitlines():
+        if entry and not entry.startswith('#'):
+            path = addon / entry.replace('\\', '/')
+            source = outputs[path] if path in outputs else path.read_text(encoding="utf-8")
+            lua.execute(source)
 
 
 @pytest.mark.parametrize("locale", ["enUS", "enGB", "frFR", None])
@@ -196,10 +205,7 @@ def test_english_catalog_is_the_addon_text_source(project):
     for locale in ("enUS", "ruRU"):
         lua = lua_runtime()
         lua.globals().GetLocale = lambda: locale
-        for path, content in sorted(outputs.items(), key=lambda pair: pair[0].name == "Localization.lua"):
-            if path.parent.name != "generated":
-                continue
-            lua.execute(content)
+        load_outputs(lua, outputs, project)
         tree = lua.globals().EraTalentsData[0][9]
         if locale == "enUS":
             assert tree.tabs[1].name == "Catalog tree"
@@ -234,10 +240,7 @@ def test_locale_selection_and_translated_lookup(project):
     for locale in ("enUS", "ruRU", "frFR", "enGB"):
         lua = lua_runtime()
         lua.globals().GetLocale = lambda: locale
-        for path, source in sorted(outputs.items(), key=lambda pair: pair[0].name == "Localization.lua"):
-            if path.parent.name != "generated":
-                continue
-            lua.execute(source)
+        load_outputs(lua, outputs, project)
         et = lua.globals().EraTalents
         tree = lua.globals().EraTalentsData[0][9]
         assert et.locale == ("ruRU" if locale == "ruRU" else "enUS")
@@ -283,21 +286,23 @@ def test_release_archive_login_and_locale_fallback(compiled_outputs, locale):
                 lua.execute(archive.read("EraTalents/" + line.replace('\\', '/')).decode("utf-8"))
         lua.globals().TestEnterWorld()
         et = lua.globals().EraTalents
-        assert et.locale == "enUS"
+        selected = locale if (addon / "locales" / locale).is_dir() else "enUS"
+        labels = B.common(addon / "locales" / selected / "common.yaml", selected)
+        assert et.locale == selected
         assert et.clientLocale == locale
         assert et._classId == 2
-        assert et.frame.title.text == "Talents"
+        assert et.frame.title.text == labels["TALENTS"]
         assert et.frame.shown is False
-        assert et.frame.petTalents.text == "Pet Talents"
+        assert et.frame.petTalents.text == labels["PET_TALENTS"]
         assert et.frame.petTalents.shown is False
         assert lua.globals().testSent[1] == "HELLO"
-        if locale == "enUS":
+        if locale == selected:
             assert len(lua.globals().testChat) == 0
         else:
             assert len(lua.globals().testChat) == 1
             assert f"translations for {locale} are not available; using enUS" in lua.globals().testChat[1]
         lua.globals().TestEnterWorld()
-        assert len(lua.globals().testChat) == (0 if locale == "enUS" else 1)
+        assert len(lua.globals().testChat) == (0 if locale == selected else 1)
 
 
 def test_missing_runtime_file_fails_before_writing(project):
@@ -310,11 +315,14 @@ def test_missing_runtime_file_fails_before_writing(project):
     assert archive.read_bytes() == previous
 
 
-def test_stale_toc_cannot_require_separate_localization(project):
+def test_stale_toc_is_regenerated_from_locales(project):
     toc = project / B.ADDON / "EraTalents.toc"
     toc.write_text(toc.read_text() + 'data\\generated\\Localization.lua\n')
-    with pytest.raises(ValueError, match="generated file list differs"):
-        B.build(project)
+    outputs = B.build(project)
+    generated = outputs[toc]
+    assert "data\\generated\\Localization.lua" not in generated
+    assert "data\\generated\\enUS\\Common.lua" in generated
+    assert "data\\generated\\ruRU\\Common.lua" in generated
 
 
 def test_supported_locale_login_does_not_warn(project):
@@ -333,29 +341,35 @@ def test_supported_locale_login_does_not_warn(project):
     assert len(lua.globals().testChat) == 0
 
 
-def test_login_survives_client_refusing_separate_localization_file(compiled_outputs):
-    """Reproduce FrameXML.log's failed file lookup before loading the bootstrap."""
+def test_generated_folders_select_only_client_locale(compiled_outputs):
     lua = lua_runtime()
     lua.execute((B.ROOT / "tools/fixtures/era_addon_boot.lua").read_text(encoding="utf-8"))
     lua.globals().GetLocale = lambda: "ruRU"
     addon = B.ROOT / B.ADDON
-    entries = [line.replace('\\', '/') for line in (addon / "EraTalents.toc").read_text().splitlines()
-               if line and not line.startswith('#')]
-    failed = []
-    for entry in entries:
-        if entry == "EraTalents.lua":
-            # The client's separate-file load fails; execute none of that file.
-            failed.append("data/generated/Localization.lua")
-            assert lua.globals().EraTalents is None
-        path = addon / entry
-        source = compiled_outputs[path] if path in compiled_outputs else path.read_text(encoding="utf-8")
-        lua.execute(source)
+    load_outputs(lua, compiled_outputs)
     lua.globals().TestEnterWorld()
-    assert failed == ["data/generated/Localization.lua"]
-    assert lua.globals().EraTalents.L.TALENTS == "Talents"
-    assert lua.globals().EraTalents.frame.title.text == "Talents"
+    selected = "ruRU" if (addon / "locales/ruRU").is_dir() else "enUS"
+    labels = B.common(addon / "locales" / selected / "common.yaml", selected)
+    assert lua.globals().EraTalents.L.TALENTS == labels["TALENTS"]
+    assert lua.globals().EraTalents.frame.title.text == labels["TALENTS"]
     assert lua.globals().EraTalents.frame.shown is False
-    assert "using enUS" in lua.globals().testChat[1]
+    if selected == "ruRU":
+        assert len(lua.globals().testChat) == 0
+    else:
+        assert "using enUS" in lua.globals().testChat[1]
+    before = canonical_table(lua.globals().EraTalentsData)
+    labels_before = canonical_table(lua.globals().EraTalents.L)
+    skipped = "enUS" if selected == "ruRU" else "ruRU"
+    for path, source in compiled_outputs.items():
+        if path.parent.name == skipped and path.suffix == ".lua":
+            lua.execute(source)
+    assert canonical_table(lua.globals().EraTalentsData) == before
+    assert canonical_table(lua.globals().EraTalents.L) == labels_before
+
+
+def canonical_table(table):
+    return {str(key): canonical_table(value) if hasattr(value, "items") else value
+            for key, value in table.items()}
 
 
 def test_ui_failure_keeps_new_frame_hidden_and_boot_incomplete(compiled_outputs):
@@ -372,3 +386,71 @@ def test_ui_failure_keeps_new_frame_hidden_and_boot_incomplete(compiled_outputs)
     assert lua.globals().testBootOK is False
     assert lua.globals().EraTalentFrame.shown is False
     assert lua.globals().EraTalents._inited is None
+
+
+def test_every_shipped_locale_preserves_catalog_text_and_talent_mechanics(compiled_outputs):
+    """Execute the actual release for every shipped locale and check every tree field."""
+    addon = B.ROOT / B.ADDON
+    entries = [line.replace('\\', '/') for line in (addon / "EraTalents.toc").read_text().splitlines()
+               if line and not line.startswith('#')]
+    archive_bytes = B.release_archive(addon, entries, compiled_outputs)
+    def canonical(table):
+        return {str(key): canonical(value) if hasattr(value, "items") else value
+                for key, value in table.items()}
+    english = lua_runtime()
+    for entry in entries:
+        if entry.startswith("data/generated/"):
+            english.execute(compiled_outputs[addon / entry])
+    manifest = (B.ROOT / "era-data/datasets.txt").read_text().splitlines()
+    datasets = [(line.split()[0], B.load(B.ROOT / "era-data" / line.split()[0]))
+                for line in manifest if line.strip() and not line.startswith('#')]
+    for locale_dir in sorted((addon / "locales").iterdir()):
+        if not locale_dir.is_dir():
+            continue
+        locale = locale_dir.name
+        lua = lua_runtime()
+        lua.execute((B.ROOT / "tools/fixtures/era_addon_boot.lua").read_text(encoding="utf-8"))
+        lua.globals().GetLocale = lambda: locale
+        with zipfile.ZipFile(io.BytesIO(archive_bytes)) as archive:
+            for entry in entries:
+                lua.execute(archive.read("EraTalents/" + entry).decode("utf-8"))
+        lua.globals().TestEnterWorld()
+        assert lua.globals().EraTalents.locale == locale
+        assert canonical(lua.globals().EraTalents.L) == B.common(locale_dir / "common.yaml", locale)
+        assert len(lua.globals().testChat) == 0
+        for rel, dataset in datasets:
+            era, cls = int(dataset["era"]), int(dataset["class"])
+            expected = copy.deepcopy(canonical(english.globals().EraTalentsData[era][cls]))
+            texts = B.load(locale_dir / rel)["texts"]
+            base_texts = B.load(addon / "locales/enUS" / rel)["texts"]
+            for tab in dataset["tabs"]:
+                expected["tabs"][str(tab["key"])]["name"] = texts[f"tree.{tab['key']}"]["name"]
+            for index, (_, node) in enumerate(B.G._nodes(dataset), 1):
+                translated = texts[f"talent.{node['slug']}"]
+                expected["talents"][str(index)]["name"] = translated["name"]
+                expected["talents"][str(index)]["tooltip"] = {
+                    str(rank): tip for rank, tip in enumerate(translated["tooltip"], 1)}
+            for field, names in (("spellMods", B.G.build_spell_mods(dataset)),
+                                 ("castTimeBase", dataset.get("clientCastTimeBase", {}))):
+                if names:
+                    expected[field] = {texts[f"spell.{name}"]["name"]:
+                                       expected[field][base_texts[f"spell.{name}"]["name"]]
+                                       for name in names}
+            assert canonical(lua.globals().EraTalentsData[era][cls]) == expected, (locale, rel)
+
+
+def test_locale_folders_have_same_files_and_bootstrap_is_not_generated(project, compiled_outputs):
+    addon = B.ROOT / B.ADDON
+    folders = [path for path in (addon / "locales").iterdir() if path.is_dir()]
+    expected = {path.name for path in compiled_outputs if path.parent.name == "enUS"}
+    assert "Common.lua" in expected
+    assert len(expected) == 19
+    for folder in folders:
+        assert {path.name for path in compiled_outputs if path.parent.name == folder.name} == expected
+    bootstrap = project / B.ADDON / "EraTalents.lua"
+    before = bootstrap.read_bytes()
+    B.build(project)
+    assert bootstrap.read_bytes() == before
+    assert bootstrap not in B.build(project, check=True)
+    assert b"EraTalentsData[" not in before
+    assert b"DO NOT EDIT" not in before

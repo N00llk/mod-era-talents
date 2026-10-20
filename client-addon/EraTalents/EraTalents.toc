@@ -2,26 +2,47 @@
 ## Title: EraTalents
 ## Notes: Era-authentic talent panel for era-wow characters
 ## Author: era-wow
-## Version: 0.3
-data\generated\MageVanilla.lua
-data\generated\PriestVanilla.lua
-data\generated\WarlockVanilla.lua
-data\generated\HunterVanilla.lua
-data\generated\RogueVanilla.lua
-data\generated\WarriorVanilla.lua
-data\generated\PaladinVanilla.lua
-data\generated\DruidVanilla.lua
-data\generated\ShamanVanilla.lua
-data\generated\PaladinTBC.lua
-data\generated\DruidTBC.lua
-data\generated\ShamanTBC.lua
-data\generated\WarriorTBC.lua
-data\generated\RogueTBC.lua
-data\generated\PriestTBC.lua
-data\generated\HunterTBC.lua
-data\generated\WarlockTBC.lua
-data\generated\MageTBC.lua
+## Version: 0.4
 EraTalents.lua
+data\generated\Locales.lua
+data\generated\enUS\Common.lua
+data\generated\enUS\MageVanilla.lua
+data\generated\enUS\PriestVanilla.lua
+data\generated\enUS\WarlockVanilla.lua
+data\generated\enUS\HunterVanilla.lua
+data\generated\enUS\RogueVanilla.lua
+data\generated\enUS\WarriorVanilla.lua
+data\generated\enUS\PaladinVanilla.lua
+data\generated\enUS\DruidVanilla.lua
+data\generated\enUS\ShamanVanilla.lua
+data\generated\enUS\PaladinTBC.lua
+data\generated\enUS\DruidTBC.lua
+data\generated\enUS\ShamanTBC.lua
+data\generated\enUS\WarriorTBC.lua
+data\generated\enUS\RogueTBC.lua
+data\generated\enUS\PriestTBC.lua
+data\generated\enUS\HunterTBC.lua
+data\generated\enUS\WarlockTBC.lua
+data\generated\enUS\MageTBC.lua
+data\generated\ruRU\Common.lua
+data\generated\ruRU\MageVanilla.lua
+data\generated\ruRU\PriestVanilla.lua
+data\generated\ruRU\WarlockVanilla.lua
+data\generated\ruRU\HunterVanilla.lua
+data\generated\ruRU\RogueVanilla.lua
+data\generated\ruRU\WarriorVanilla.lua
+data\generated\ruRU\PaladinVanilla.lua
+data\generated\ruRU\DruidVanilla.lua
+data\generated\ruRU\ShamanVanilla.lua
+data\generated\ruRU\PaladinTBC.lua
+data\generated\ruRU\DruidTBC.lua
+data\generated\ruRU\ShamanTBC.lua
+data\generated\ruRU\WarriorTBC.lua
+data\generated\ruRU\RogueTBC.lua
+data\generated\ruRU\PriestTBC.lua
+data\generated\ruRU\HunterTBC.lua
+data\generated\ruRU\WarlockTBC.lua
+data\generated\ruRU\MageTBC.lua
 Comms.lua
 Tooltip.lua
 TalentUI.lua

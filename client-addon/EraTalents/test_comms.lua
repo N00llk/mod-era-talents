@@ -1,5 +1,6 @@
 -- test_comms.lua — headless: Comms.lua must load with no file-scope WoW API calls.
-dofile("client-addon/EraTalents/data/generated/Localization.lua")
+dofile("client-addon/EraTalents/data/generated/Locales.lua")
+dofile("client-addon/EraTalents/data/generated/enUS/Common.lua")
 dofile("client-addon/EraTalents/Comms.lua")
 local ET = EraTalents
 ET.state = { ranks = {} }
