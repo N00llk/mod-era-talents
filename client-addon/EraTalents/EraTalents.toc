@@ -2,7 +2,7 @@
 ## Title: EraTalents
 ## Notes: Era-authentic talent panel for era-wow characters
 ## Author: era-wow
-## Version: 0.4
+## Version: 0.5
 EraTalents.lua
 data\generated\Locales.lua
 data\generated\enUS\Common.lua
