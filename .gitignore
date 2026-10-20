@@ -2,6 +2,7 @@ __pycache__/
 *.pyc
 client-patch/out/
 client-addon/out/
+client-addon/EraTalents/data/generated/Localization.lua
 client-patch/mpqpack
 client-patch/mpqread
 deps/
