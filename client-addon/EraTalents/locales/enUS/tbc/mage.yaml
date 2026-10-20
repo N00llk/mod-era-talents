@@ -1,0 +1,545 @@
+schemaVersion: 1
+locale: enUS
+era: tbc
+class: mage
+texts:
+  tree.1:
+    name: Arcane
+  talent.arcane_subtlety:
+    name: Arcane Subtlety
+    tooltip:
+    - Reduces your target's resistance to all your spells by 5 and reduces the threat
+      caused by your Arcane spells by 20%.
+    - Reduces your target's resistance to all your spells by 10 and reduces the threat
+      caused by your Arcane spells by 40%.
+  talent.arcane_focus:
+    name: Arcane Focus
+    tooltip:
+    - Reduces the chance that the opponent can resist your Arcane spells by 2%.
+    - Reduces the chance that the opponent can resist your Arcane spells by 4%.
+    - Reduces the chance that the opponent can resist your Arcane spells by 6%.
+    - Reduces the chance that the opponent can resist your Arcane spells by 8%.
+    - Reduces the chance that the opponent can resist your Arcane spells by 10%.
+  talent.improved_arcane_missiles:
+    name: Improved Arcane Missiles
+    tooltip:
+    - Gives you a 20% chance to avoid interruption caused by damage while channeling
+      Arcane Missiles.
+    - Gives you a 40% chance to avoid interruption caused by damage while channeling
+      Arcane Missiles.
+    - Gives you a 60% chance to avoid interruption caused by damage while channeling
+      Arcane Missiles.
+    - Gives you a 80% chance to avoid interruption caused by damage while channeling
+      Arcane Missiles.
+    - Gives you a 100% chance to avoid interruption caused by damage while channeling
+      Arcane Missiles.
+  talent.wand_specialization:
+    name: Wand Specialization
+    tooltip:
+    - Increases your damage with Wands by 13%.
+    - Increases your damage with Wands by 25%.
+  talent.magic_absorption:
+    name: Magic Absorption
+    tooltip:
+    - Increases all resistances by 2 and causes all spells you fully resist to restore
+      1% of your total mana. 1 sec. cooldown.
+    - Increases all resistances by 4 and causes all spells you fully resist to restore
+      2% of your total mana. 1 sec. cooldown.
+    - Increases all resistances by 6 and causes all spells you fully resist to restore
+      3% of your total mana. 1 sec. cooldown.
+    - Increases all resistances by 8 and causes all spells you fully resist to restore
+      4% of your total mana. 1 sec. cooldown.
+    - Increases all resistances by 10 and causes all spells you fully resist to restore
+      5% of your total mana. 1 sec. cooldown.
+  talent.arcane_concentration:
+    name: Arcane Concentration
+    tooltip:
+    - Gives you a 2% chance of entering a Clearcasting state after any damage spell
+      hits a target. The Clearcasting state reduces the mana cost of your next damage
+      spell by 100%.
+    - Gives you a 4% chance of entering a Clearcasting state after any damage spell
+      hits a target. The Clearcasting state reduces the mana cost of your next damage
+      spell by 100%.
+    - Gives you a 6% chance of entering a Clearcasting state after any damage spell
+      hits a target. The Clearcasting state reduces the mana cost of your next damage
+      spell by 100%.
+    - Gives you a 8% chance of entering a Clearcasting state after any damage spell
+      hits a target. The Clearcasting state reduces the mana cost of your next damage
+      spell by 100%.
+    - Gives you a 10% chance of entering a Clearcasting state after any damage spell
+      hits a target. The Clearcasting state reduces the mana cost of your next damage
+      spell by 100%.
+  talent.magic_attunement:
+    name: Magic Attunement
+    tooltip:
+    - Increases the effect of your Amplify Magic and Dampen Magic spells by 25%.
+    - Increases the effect of your Amplify Magic and Dampen Magic spells by 50%.
+  talent.arcane_impact:
+    name: Arcane Impact
+    tooltip:
+    - Increases the critical strike chance of your Arcane Explosion and Arcane Blast
+      spells by an additional 2%.
+    - Increases the critical strike chance of your Arcane Explosion and Arcane Blast
+      spells by an additional 4%.
+    - Increases the critical strike chance of your Arcane Explosion and Arcane Blast
+      spells by an additional 6%.
+  talent.arcane_fortitude:
+    name: Arcane Fortitude
+    tooltip:
+    - Increases your armor by an amount equal to 100% of your Intellect.
+  talent.improved_mana_shield:
+    name: Improved Mana Shield
+    tooltip:
+    - Decreases the mana lost per point of damage taken when Mana Shield is active
+      by 10%.
+    - Decreases the mana lost per point of damage taken when Mana Shield is active
+      by 20%.
+  talent.improved_counterspell:
+    name: Improved Counterspell
+    tooltip:
+    - Gives your Counterspell a 50% chance to silence the target for 4 sec.
+    - Gives your Counterspell a 100% chance to silence the target for 4 sec.
+  talent.arcane_meditation:
+    name: Arcane Meditation
+    tooltip:
+    - Allows 10% of your mana regeneration to continue while casting.
+    - Allows 20% of your mana regeneration to continue while casting.
+    - Allows 30% of your mana regeneration to continue while casting.
+  talent.improved_blink:
+    name: Improved Blink
+    tooltip:
+    - For 4 sec after casting Blink, your chance to be hit by all attacks and spells
+      is reduced by 13%.
+    - For 4 sec after casting Blink, your chance to be hit by all attacks and spells
+      is reduced by 25%.
+  talent.presence_of_mind:
+    name: Presence of Mind
+    tooltip:
+    - When activated, your next Mage spell with a casting time less than 10 sec becomes
+      an instant cast spell.
+  talent.arcane_mind:
+    name: Arcane Mind
+    tooltip:
+    - Increases your total Intellect by 3%.
+    - Increases your total Intellect by 6%.
+    - Increases your total Intellect by 9%.
+    - Increases your total Intellect by 12%.
+    - Increases your total Intellect by 15%.
+  talent.prismatic_cloak:
+    name: Prismatic Cloak
+    tooltip:
+    - Reduces all damage taken by 2%.
+    - Reduces all damage taken by 4%.
+  talent.arcane_instability:
+    name: Arcane Instability
+    tooltip:
+    - Increases your spell damage and critical strike chance by 1%.
+    - Increases your spell damage and critical strike chance by 2%.
+    - Increases your spell damage and critical strike chance by 3%.
+  talent.arcane_potency:
+    name: Arcane Potency
+    tooltip:
+    - Increases the critical strike chance of any spell cast while Clearcasting by
+      10%.
+    - Increases the critical strike chance of any spell cast while Clearcasting by
+      20%.
+    - Increases the critical strike chance of any spell cast while Clearcasting by
+      30%.
+  talent.empowered_arcane_missiles:
+    name: Empowered Arcane Missiles
+    tooltip:
+    - Your Arcane Missiles spell gains an additional 15% of your bonus spell damage
+      effects, but mana cost is increased by 2%.
+    - Your Arcane Missiles spell gains an additional 30% of your bonus spell damage
+      effects, but mana cost is increased by 4%.
+    - Your Arcane Missiles spell gains an additional 45% of your bonus spell damage
+      effects, but mana cost is increased by 6%.
+  talent.arcane_power:
+    name: Arcane Power
+    tooltip:
+    - When activated, your spells deal 30% more damage while costing 30% more mana
+      to cast. This effect lasts 15 sec.
+  talent.spell_power:
+    name: Spell Power
+    tooltip:
+    - Increases critical strike damage bonus of all spells by 25%.
+    - Increases critical strike damage bonus of all spells by 50%.
+  talent.mind_mastery:
+    name: Mind Mastery
+    tooltip:
+    - Increases spell damage by up to 5% of your total Intellect.
+    - Increases spell damage by up to 10% of your total Intellect.
+    - Increases spell damage by up to 15% of your total Intellect.
+    - Increases spell damage by up to 20% of your total Intellect.
+    - Increases spell damage by up to 25% of your total Intellect.
+  talent.slow:
+    name: Slow
+    tooltip:
+    - Reduces target's movement speed by 50%, increases the time between ranged attacks
+      by 50% and increases casting time by 50%. Lasts 15 sec. Slow can only affect
+      one target at a time.
+  tree.2:
+    name: Fire
+  talent.improved_fireball:
+    name: Improved Fireball
+    tooltip:
+    - Reduces the casting time of your Fireball spell by 0.1 sec.
+    - Reduces the casting time of your Fireball spell by 0.2 sec.
+    - Reduces the casting time of your Fireball spell by 0.3 sec.
+    - Reduces the casting time of your Fireball spell by 0.4 sec.
+    - Reduces the casting time of your Fireball spell by 0.5 sec.
+  talent.impact:
+    name: Impact
+    tooltip:
+    - Gives your Fire spells a 2% chance to stun the target for 2 sec.
+    - Gives your Fire spells a 4% chance to stun the target for 2 sec.
+    - Gives your Fire spells a 6% chance to stun the target for 2 sec.
+    - Gives your Fire spells a 8% chance to stun the target for 2 sec.
+    - Gives your Fire spells a 10% chance to stun the target for 2 sec.
+  talent.ignite:
+    name: Ignite
+    tooltip:
+    - Your critical strikes from Fire damage spells cause the target to burn for an
+      additional 8% of your spell's damage over 4 sec.
+    - Your critical strikes from Fire damage spells cause the target to burn for an
+      additional 16% of your spell's damage over 4 sec.
+    - Your critical strikes from Fire damage spells cause the target to burn for an
+      additional 24% of your spell's damage over 4 sec.
+    - Your critical strikes from Fire damage spells cause the target to burn for an
+      additional 32% of your spell's damage over 4 sec.
+    - Your critical strikes from Fire damage spells cause the target to burn for an
+      additional 40% of your spell's damage over 4 sec.
+  talent.flame_throwing:
+    name: Flame Throwing
+    tooltip:
+    - Increases the range of your Fire spells by 3 yards.
+    - Increases the range of your Fire spells by 6 yards.
+  talent.improved_fire_blast:
+    name: Improved Fire Blast
+    tooltip:
+    - Reduces the cooldown of your Fire Blast spell by 0.5 sec.
+    - Reduces the cooldown of your Fire Blast spell by 1 sec.
+    - Reduces the cooldown of your Fire Blast spell by 1.5 sec.
+  talent.incineration:
+    name: Incineration
+    tooltip:
+    - Increases the critical strike chance of your Fire Blast and Scorch spells by
+      2%.
+    - Increases the critical strike chance of your Fire Blast and Scorch spells by
+      4%.
+  talent.improved_flamestrike:
+    name: Improved Flamestrike
+    tooltip:
+    - Increases the critical strike chance of your Flamestrike spell by 5%.
+    - Increases the critical strike chance of your Flamestrike spell by 10%.
+    - Increases the critical strike chance of your Flamestrike spell by 15%.
+  talent.pyroblast:
+    name: Pyroblast
+    tooltip:
+    - Hurls an immense fiery boulder that causes 148 to 195 Fire damage and an additional
+      56 Fire damage over 12 sec.
+  talent.burning_soul:
+    name: Burning Soul
+    tooltip:
+    - Gives your Fire spells a 35% chance to not lose casting time when you take damage
+      and reduces the threat caused by your Fire spells by 5%.
+    - Gives your Fire spells a 70% chance to not lose casting time when you take damage
+      and reduces the threat caused by your Fire spells by 10%.
+  talent.improved_scorch:
+    name: Improved Scorch
+    tooltip:
+    - Your Scorch spells have a 33% chance to cause your target to be vulnerable to
+      Fire damage. This vulnerability increases the Fire damage dealt to your target
+      by 3% and lasts 30 sec. Stacks up to 5 times.
+    - Your Scorch spells have a 66% chance to cause your target to be vulnerable to
+      Fire damage. This vulnerability increases the Fire damage dealt to your target
+      by 3% and lasts 30 sec. Stacks up to 5 times.
+    - Your Scorch spells have a 100% chance to cause your target to be vulnerable
+      to Fire damage. This vulnerability increases the Fire damage dealt to your target
+      by 3% and lasts 30 sec. Stacks up to 5 times.
+  talent.molten_shields:
+    name: Molten Shields
+    tooltip:
+    - Causes your Fire Ward to have a 10% chance to reflect Fire spells while active.
+      In addition, your Molten Armor has a 50% chance to affect ranged and spell attacks.
+    - Causes your Fire Ward to have a 20% chance to reflect Fire spells while active.
+      In addition, your Molten Armor has a 100% chance to affect ranged and spell
+      attacks.
+  talent.master_of_elements:
+    name: Master of Elements
+    tooltip:
+    - Your Fire and Frost spell criticals will refund 10% of their base mana cost.
+    - Your Fire and Frost spell criticals will refund 20% of their base mana cost.
+    - Your Fire and Frost spell criticals will refund 30% of their base mana cost.
+  talent.playing_with_fire:
+    name: Playing with Fire
+    tooltip:
+    - Increases all spell damage caused by 1% and all spell damage taken by 1%.
+    - Increases all spell damage caused by 2% and all spell damage taken by 2%.
+    - Increases all spell damage caused by 3% and all spell damage taken by 3%.
+  talent.critical_mass:
+    name: Critical Mass
+    tooltip:
+    - Increases the critical strike chance of your Fire spells by 2%.
+    - Increases the critical strike chance of your Fire spells by 4%.
+    - Increases the critical strike chance of your Fire spells by 6%.
+  talent.blast_wave:
+    name: Blast Wave
+    tooltip:
+    - A wave of flame radiates outward from the caster, damaging all enemies caught
+      within the blast for 160 to 192 Fire damage, and Dazing them for 6 sec.
+  talent.blazing_speed:
+    name: Blazing Speed
+    tooltip:
+    - Gives you a 5% chance when hit by a melee or ranged attack to increase your
+      movement speed by 50% and dispel all movement impairing effects. This effect
+      lasts 8 sec.
+    - Gives you a 10% chance when hit by a melee or ranged attack to increase your
+      movement speed by 50% and dispel all movement impairing effects. This effect
+      lasts 8 sec.
+  talent.fire_power:
+    name: Fire Power
+    tooltip:
+    - Increases the damage done by your Fire spells by 2%.
+    - Increases the damage done by your Fire spells by 4%.
+    - Increases the damage done by your Fire spells by 6%.
+    - Increases the damage done by your Fire spells by 8%.
+    - Increases the damage done by your Fire spells by 10%.
+  talent.pyromaniac:
+    name: Pyromaniac
+    tooltip:
+    - Increases chance to critically hit and reduces the mana cost of all Fire spells
+      by an additional 1%.
+    - Increases chance to critically hit and reduces the mana cost of all Fire spells
+      by an additional 2%.
+    - Increases chance to critically hit and reduces the mana cost of all Fire spells
+      by an additional 3%.
+  talent.combustion:
+    name: Combustion
+    tooltip:
+    - When activated, this spell causes each of your Fire damage spell hits to increase
+      your critical strike chance with Fire damage spells by 10%. This effect lasts
+      until you have caused 3 critical strikes with Fire spells.
+  talent.molten_fury:
+    name: Molten Fury
+    tooltip:
+    - Increases damage of all spells against targets with less than 20% health by
+      10%.
+    - Increases damage of all spells against targets with less than 20% health by
+      20%.
+  talent.empowered_fireball:
+    name: Empowered Fireball
+    tooltip:
+    - Your Fireball spell gains an additional 3% of your bonus spell damage effects.
+    - Your Fireball spell gains an additional 6% of your bonus spell damage effects.
+    - Your Fireball spell gains an additional 9% of your bonus spell damage effects.
+    - Your Fireball spell gains an additional 12% of your bonus spell damage effects.
+    - Your Fireball spell gains an additional 15% of your bonus spell damage effects.
+  talent.dragon_s_breath:
+    name: Dragon's Breath
+    tooltip:
+    - Targets in a cone in front of the caster take 382 to 442 Fire damage and are
+      Disoriented for 3 sec. Any direct damaging attack will revive targets. Turns
+      off your attack when used.
+  tree.3:
+    name: Frost
+  talent.frost_warding:
+    name: Frost Warding
+    tooltip:
+    - Increases the armor and resistances given by your Frost Armor and Ice Armor
+      spells by 15%. In addition, gives your Frost Ward a 10% chance to reflect Frost
+      spells and effects while active.
+    - Increases the armor and resistances given by your Frost Armor and Ice Armor
+      spells by 30%. In addition, gives your Frost Ward a 20% chance to reflect Frost
+      spells and effects while active.
+  talent.improved_frostbolt:
+    name: Improved Frostbolt
+    tooltip:
+    - Reduces the casting time of your Frostbolt spell by 0.1 sec.
+    - Reduces the casting time of your Frostbolt spell by 0.2 sec.
+    - Reduces the casting time of your Frostbolt spell by 0.3 sec.
+    - Reduces the casting time of your Frostbolt spell by 0.4 sec.
+    - Reduces the casting time of your Frostbolt spell by 0.5 sec.
+  talent.elemental_precision:
+    name: Elemental Precision
+    tooltip:
+    - Reduces the mana cost and chance targets resist your Frost and Fire spells by
+      1%.
+    - Reduces the mana cost and chance targets resist your Frost and Fire spells by
+      2%.
+    - Reduces the mana cost and chance targets resist your Frost and Fire spells by
+      3%.
+  talent.ice_shards:
+    name: Ice Shards
+    tooltip:
+    - Increases the critical strike damage bonus of your Frost spells by 20%.
+    - Increases the critical strike damage bonus of your Frost spells by 40%.
+    - Increases the critical strike damage bonus of your Frost spells by 60%.
+    - Increases the critical strike damage bonus of your Frost spells by 80%.
+    - Increases the critical strike damage bonus of your Frost spells by 100%.
+  talent.frostbite:
+    name: Frostbite
+    tooltip:
+    - Gives your Chill effects a 5% chance to freeze the target for 5 sec.
+    - Gives your Chill effects a 10% chance to freeze the target for 5 sec.
+    - Gives your Chill effects a 15% chance to freeze the target for 5 sec.
+  talent.improved_frost_nova:
+    name: Improved Frost Nova
+    tooltip:
+    - Reduces the cooldown of your Frost Nova spell by 2 sec.
+    - Reduces the cooldown of your Frost Nova spell by 4 sec.
+  talent.permafrost:
+    name: Permafrost
+    tooltip:
+    - Increases the duration of your Chill effects by 1 sec and reduces the target's
+      speed by an additional 4%.
+    - Increases the duration of your Chill effects by 2 secs and reduces the target's
+      speed by an additional 7%.
+    - Increases the duration of your Chill effects by 3 secs and reduces the target's
+      speed by an additional 10%.
+  talent.piercing_ice:
+    name: Piercing Ice
+    tooltip:
+    - Increases the damage done by your Frost spells by 2%.
+    - Increases the damage done by your Frost spells by 4%.
+    - Increases the damage done by your Frost spells by 6%.
+  talent.icy_veins:
+    name: Icy Veins
+    tooltip:
+    - Hastens your spellcasting, increasing spell casting speed by 20% and gives you
+      100% chance to avoid interruption caused by damage while casting. Lasts 20 sec.
+  talent.improved_blizzard:
+    name: Improved Blizzard
+    tooltip:
+    - Adds a chill effect to your Blizzard spell. This effect lowers the target's
+      movement speed by 30%. Lasts 1.50 sec.
+    - Adds a chill effect to your Blizzard spell. This effect lowers the target's
+      movement speed by 50%. Lasts 1.50 sec.
+    - Adds a chill effect to your Blizzard spell. This effect lowers the target's
+      movement speed by 65%. Lasts 1.50 sec.
+  talent.arctic_reach:
+    name: Arctic Reach
+    tooltip:
+    - Increases the range of your Frostbolt, Ice Lance and Blizzard spells and the
+      radius of your Frost Nova and Cone of Cold spells by 10%.
+    - Increases the range of your Frostbolt, Ice Lance and Blizzard spells and the
+      radius of your Frost Nova and Cone of Cold spells by 20%.
+  talent.frost_channeling:
+    name: Frost Channeling
+    tooltip:
+    - Reduces the mana cost of your Frost spells by 5% and reduces the threat caused
+      by your Frost spells by 4%.
+    - Reduces the mana cost of your Frost spells by 10% and reduces the threat caused
+      by your Frost spells by 7%.
+    - Reduces the mana cost of your Frost spells by 15% and reduces the threat caused
+      by your Frost spells by 10%.
+  talent.shatter:
+    name: Shatter
+    tooltip:
+    - Increases the critical strike chance of all your spells against frozen targets
+      by 10%.
+    - Increases the critical strike chance of all your spells against frozen targets
+      by 20%.
+    - Increases the critical strike chance of all your spells against frozen targets
+      by 30%.
+    - Increases the critical strike chance of all your spells against frozen targets
+      by 40%.
+    - Increases the critical strike chance of all your spells against frozen targets
+      by 50%.
+  talent.frozen_core:
+    name: Frozen Core
+    tooltip:
+    - Reduces the damage taken by Frost and Fire effects by 2%.
+    - Reduces the damage taken by Frost and Fire effects by 4%.
+    - Reduces the damage taken by Frost and Fire effects by 6%.
+  talent.cold_snap:
+    name: Cold Snap
+    tooltip:
+    - When activated, this spell finishes the cooldown on all Frost spells you recently
+      cast.
+  talent.improved_cone_of_cold:
+    name: Improved Cone of Cold
+    tooltip:
+    - Increases the damage dealt by your Cone of Cold spell by 15%.
+    - Increases the damage dealt by your Cone of Cold spell by 25%.
+    - Increases the damage dealt by your Cone of Cold spell by 35%.
+  talent.ice_floes:
+    name: Ice Floes
+    tooltip:
+    - Reduces the cooldown of your Cone of Cold, Cold Snap, Ice Barrier and Ice Block
+      spells by 10%.
+    - Reduces the cooldown of your Cone of Cold, Cold Snap, Ice Barrier and Ice Block
+      spells by 20%.
+  talent.winter_s_chill:
+    name: Winter's Chill
+    tooltip:
+    - Gives your Frost damage spells a 20% chance to apply the Winter's Chill effect,
+      which increases the chance a Frost spell will critically hit the target by 2%
+      for 15 sec. Stacks up to 5 times.
+    - Gives your Frost damage spells a 40% chance to apply the Winter's Chill effect,
+      which increases the chance a Frost spell will critically hit the target by 2%
+      for 15 sec. Stacks up to 5 times.
+    - Gives your Frost damage spells a 60% chance to apply the Winter's Chill effect,
+      which increases the chance a Frost spell will critically hit the target by 2%
+      for 15 sec. Stacks up to 5 times.
+    - Gives your Frost damage spells a 80% chance to apply the Winter's Chill effect,
+      which increases the chance a Frost spell will critically hit the target by 2%
+      for 15 sec. Stacks up to 5 times.
+    - Gives your Frost damage spells a 100% chance to apply the Winter's Chill effect,
+      which increases the chance a Frost spell will critically hit the target by 2%
+      for 15 sec. Stacks up to 5 times.
+  talent.ice_barrier:
+    name: Ice Barrier
+    tooltip:
+    - Instantly shields you, absorbing 455 damage. Lasts 1 min. While the shield holds,
+      spells will not be interrupted.
+  talent.arctic_winds:
+    name: Arctic Winds
+    tooltip:
+    - Increases all Frost damage you cause by 1% and reduces the chance melee and
+      ranged attacks will hit you by 1%.
+    - Increases all Frost damage you cause by 2% and reduces the chance melee and
+      ranged attacks will hit you by 2%.
+    - Increases all Frost damage you cause by 3% and reduces the chance melee and
+      ranged attacks will hit you by 3%.
+    - Increases all Frost damage you cause by 4% and reduces the chance melee and
+      ranged attacks will hit you by 4%.
+    - Increases all Frost damage you cause by 5% and reduces the chance melee and
+      ranged attacks will hit you by 5%.
+  talent.empowered_frostbolt:
+    name: Empowered Frostbolt
+    tooltip:
+    - Your Frostbolt spell gains an additional 2% of your bonus spell damage effects
+      and an additional 1% chance to critically strike.
+    - Your Frostbolt spell gains an additional 4% of your bonus spell damage effects
+      and an additional 2% chance to critically strike.
+    - Your Frostbolt spell gains an additional 6% of your bonus spell damage effects
+      and an additional 3% chance to critically strike.
+    - Your Frostbolt spell gains an additional 8% of your bonus spell damage effects
+      and an additional 4% chance to critically strike.
+    - Your Frostbolt spell gains an additional 10% of your bonus spell damage effects
+      and an additional 5% chance to critically strike.
+  talent.summon_water_elemental:
+    name: Summon Water Elemental
+    tooltip:
+    - Summon a Water Elemental to fight for the caster for 45 sec.
+  spell.Arcane Missiles:
+    name: Arcane Missiles
+  spell.Blizzard:
+    name: Blizzard
+  spell.Cold Snap:
+    name: Cold Snap
+  spell.Cone of Cold:
+    name: Cone of Cold
+  spell.Fire Blast:
+    name: Fire Blast
+  spell.Frost Nova:
+    name: Frost Nova
+  spell.Frostbolt:
+    name: Frostbolt
+  spell.Ice Barrier:
+    name: Ice Barrier
+  spell.Ice Block:
+    name: Ice Block
+  spell.Icy Veins:
+    name: Icy Veins

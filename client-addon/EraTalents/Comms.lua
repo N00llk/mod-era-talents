@@ -77,9 +77,8 @@ function ET.CheckGeneration(serverStamp)
   ET.state.clientGen = clientStamp
   if clientStamp ~= serverStamp then
     local msg = string.format(
-      "|cffff2020EraTalents: your client patch is generation %s but the server is %s. " ..
-      "Replace Data/patch-V.mpq with the current one and restart the game.|r",
-      clientStamp or "MISSING", serverStamp)
+      ET.L.GENERATION_MISMATCH,
+      clientStamp or ET.L.MISSING, serverStamp)
     if DEFAULT_CHAT_FRAME then DEFAULT_CHAT_FRAME:AddMessage(msg) end
   end
 end

@@ -57,18 +57,28 @@ function ET.FormatSecs(secs)
   local whole = math.floor(tenths / 10)
   local frac = tenths - whole * 10
   if frac == 0 then return tostring(whole) end
-  return whole .. "." .. frac
+  return whole .. ET.L.DECIMAL_SEPARATOR .. frac
 end
 
 -- Era base-cast override (generated castTimeBase). It does NOT read the base out of the line — the
 -- line is WRONG by definition — it recomputes from baseMs + the learned castTime mods, matching
 -- both an "Instant..." line and a "X sec cast" line (idempotent re-fires).
+local function EscapePattern(text)
+  return (string.gsub(text, "(%W)", "%%%1"))
+end
+
 function ET.RewriteCastBase(text, baseMs, flat, pct)
   if not text then return nil end
-  if not (string.match(text, "^([%d%.]+)%s+sec cast$") or string.match(text, "^Instant")) then return nil end
+  -- Match the selected locale's cast line; escape translated punctuation as literals.
+  local before, after = string.match(ET.L.CAST_TIME, "^(.-)%%s(.-)$")
+  local number = "[%d" .. EscapePattern(ET.L.DECIMAL_SEPARATOR) .. "]+"
+  local pattern = "^" .. EscapePattern(before) .. "(" .. number .. ")" .. EscapePattern(after) .. "$"
+  -- Preserve the original English matcher, including its permissive whitespace.
+  if ET.locale == "enUS" then pattern = "^([%d%.]+)%s+sec cast$" end
+  if not (string.match(text, pattern) or string.match(text, "^" .. EscapePattern(ET.L.INSTANT))) then return nil end
   local newSecs = (baseMs / 1000) * (pct or 1) + (flat or 0) / 1000
-  if newSecs <= 0 then return "Instant" end
-  return ET.FormatSecs(newSecs) .. " sec cast"
+  if newSecs <= 0 then return ET.L.INSTANT end
+  return string.format(ET.L.CAST_TIME, ET.FormatSecs(newSecs))
 end
 
 -- ---------------------------------------------------------------------------

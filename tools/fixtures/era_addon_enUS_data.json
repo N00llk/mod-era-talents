@@ -1,0 +1,20 @@
+{
+  "vanilla/mage.yaml": "0a9f05a37e214f7aab3cfc99510e4d1a29f56636f41967eb5ff607e3ef5d8288",
+  "vanilla/priest.yaml": "8d9f5c34fc8987212f5c4595129c433c82d71496fe9140b392882f07b7147835",
+  "vanilla/warlock.yaml": "f05c53baa7df719c20dc659b7ffb2aa816407d555da89df228d47965784c0874",
+  "vanilla/hunter.yaml": "9e035a86a3ffb8987810fb828833969c92ffe4da687083fec759774f9a535dce",
+  "vanilla/rogue.yaml": "d69089609f37dd8040a166abf57b4adf341d366a41f080f65c5b24d502686f1e",
+  "vanilla/warrior.yaml": "3bf7d954d79169a67818fa245dba7878da599875fe2ad545619978d157987607",
+  "vanilla/paladin.yaml": "f9609bf85604780481f709f2604c975484e098f46a4b6fc6938449798ac16fc4",
+  "vanilla/druid.yaml": "c0e81bc39db4ff2008d753c4832faab6424fc6e0090807db35f6c4f32e823b2f",
+  "vanilla/shaman.yaml": "9ae07af532767bea8543eabe7f29747ea8aa125f514b80309823a9755f7f6975",
+  "tbc/paladin.yaml": "ee9bc1f1dacc70201ceeb6fd2085e8c6e2cd7dcf07fd93533d0519737ff1384d",
+  "tbc/druid.yaml": "da2aa3a13d6f24d2cb62428da25cb49edac0d7542ced896bf72fade147ffb6cc",
+  "tbc/shaman.yaml": "e3eaa8bfe8442352a75479e6344d82cdcd6e6df995d1bc69df2935061fc13a26",
+  "tbc/warrior.yaml": "2d9bc207a2d5935e47d73d8fd405287c22b8e8292f1c12f9fee86eba5d4a00df",
+  "tbc/rogue.yaml": "7d3d0163a2a53df5eac83d5d3f331e4d2f091ec45c616a127ffb0ceb37fd8efb",
+  "tbc/priest.yaml": "8598bee9f685fea2129cedb9eaf9856c94fbca972f2f20b1305e04583fead899",
+  "tbc/hunter.yaml": "e16b03dbc7c65f6dbb9228ba0f45f7dd22ba93ee06a31ac345ebb6033bcf2ffe",
+  "tbc/warlock.yaml": "f9728b54c80896629e89bd873818dc9309642c72a7d7cf3e1535c86cc4bab61e",
+  "tbc/mage.yaml": "4b6338cbcbf136e7b65a987ff00f689d1932f3adbc27ddbb6bac7d4532fc5bdd"
+}

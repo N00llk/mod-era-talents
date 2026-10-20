@@ -1,6 +1,7 @@
 -- Headless routing regressions. Run from the repository root with Lua 5.1.
 local function Setup(loaded)
   EraTalents = { state = { isEraChar = true, era = 0 }, _classId = 8 }
+  dofile("client-addon/EraTalents/data/generated/Localization.lua")
   local ET = EraTalents
   local calls = { stockToggle = 0, stockOpen = 0, glyphToggle = 0, glyphOpen = 0,
                   eraToggle = 0, eraShow = 0, errors = 0, hints = 0, tab = 0, pet = 0 }

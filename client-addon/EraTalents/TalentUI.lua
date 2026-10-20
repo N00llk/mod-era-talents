@@ -175,7 +175,7 @@ local function BuildChrome(v)
 
   f.title = f:CreateFontString(nil, "OVERLAY", "GameFontNormal")
   f.title:SetPoint("TOP", 0, -18)
-  f.title:SetText("Talents")
+  f.title:SetText(ET.L.TALENTS)
 
   -- Close button: real anchor (CENTER relative to TOPRIGHT, offset -44,-25).
   local close = CreateFrame("Button", nil, f, "UIPanelCloseButton")
@@ -188,7 +188,7 @@ local function BuildChrome(v)
   f.petTalents = CreateFrame("Button", nil, f, "UIPanelButtonTemplate")
   f.petTalents:SetWidth(82); f.petTalents:SetHeight(20)
   f.petTalents:SetPoint("TOPRIGHT", f, "TOPRIGHT", -34, -44)   -- top-right slot (was the dev Reset button's)
-  f.petTalents:SetText("Pet Talents")
+  f.petTalents:SetText(ET.L.PET_TALENTS)
   f.petTalents:SetScript("OnClick", function() if ET.OpenStockTalents then ET.OpenStockTalents() end end)
   if ET._classId ~= 3 then f.petTalents:Hide() end
 end
@@ -309,13 +309,13 @@ function ET.NewTreeView(opts)
   }
   local parent = opts.parent or UIParent
   v.frame = CreateFrame("Frame", opts.name, parent)
+  v.frame:Hide()
   if opts.chrome then
     BuildChrome(v)
   else
     v.frame:SetAllPoints(parent)
     v.frame:SetFrameLevel(parent:GetFrameLevel() + 20)
   end
-  v.frame:Hide()
   BuildTreeArea(v)
   BuildTabs(v)
   return v
@@ -347,10 +347,10 @@ local function NodeTooltip(btn)
   local gid = node.grant and (node.grant[(rank > 0) and rank or 1] or node.grant[1])
   if gid and tonumber(gid) and tonumber(gid) >= 920000 then
     GameTooltip:SetHyperlink("spell:" .. gid)
-    GameTooltip:AddLine("Rank " .. rank .. "/" .. node.maxRank, 0.8, 0.8, 0.8)
+    GameTooltip:AddLine(string.format(ET.L.RANK, rank, node.maxRank), 0.8, 0.8, 0.8)
     if not v.readOnly and rank >= 1 and rank < node.maxRank then
       GameTooltip:AddLine(" ")
-      GameTooltip:AddLine("Next rank:", 1, 1, 1)
+      GameTooltip:AddLine(ET.L.NEXT_RANK, 1, 1, 1)
       GameTooltip:AddLine(node.tooltip[rank + 1] or "", 1, 0.82, 0, true)
     end
     GameTooltip:Show()
@@ -359,13 +359,13 @@ local function NodeTooltip(btn)
 
   -- Passive/modifier talents (spellmods, stats, procs) keep the authored per-rank effect prose.
   GameTooltip:SetText(node.name, 1, 1, 1)
-  GameTooltip:AddLine("Rank " .. rank .. "/" .. node.maxRank, 0.8, 0.8, 0.8)
+  GameTooltip:AddLine(string.format(ET.L.RANK, rank, node.maxRank), 0.8, 0.8, 0.8)
   local shown = (rank > 0) and rank or 1
   GameTooltip:AddLine(node.tooltip[shown] or "", 1, 0.82, 0, true)
   -- Read-only (inspect) views show the current rank only: no "Next rank", nothing to learn.
   if not v.readOnly and rank >= 1 and rank < node.maxRank then
     GameTooltip:AddLine(" ")
-    GameTooltip:AddLine("Next rank:", 1, 1, 1)
+    GameTooltip:AddLine(ET.L.NEXT_RANK, 1, 1, 1)
     GameTooltip:AddLine(node.tooltip[rank + 1] or "", 1, 0.82, 0, true)
   end
   GameTooltip:Show()
@@ -569,12 +569,12 @@ end
 local function UpdateFooter(v, tree)
   local f = v.frame
   local pts = ET.SpecPoints(tree, v.state.ranks)
-  local tabName = (tree.tabs[v.activeTab] and tree.tabs[v.activeTab].name) or "Talents"
-  f.footerSpent:SetText(tabName .. " Talents: " .. (pts[v.activeTab] or 0))
+  local tabName = (tree.tabs[v.activeTab] and tree.tabs[v.activeTab].name) or ET.L.TALENTS
+  f.footerSpent:SetText(string.format(ET.L.SPENT_TALENTS, tabName, pts[v.activeTab] or 0))
   if v.readOnly then
     f.footerUnspent:SetText(pts[1] .. "/" .. pts[2] .. "/" .. pts[3])
   else
-    f.footerUnspent:SetText("Unspent Talents: " .. (v.state.availPts or 0))
+    f.footerUnspent:SetText(string.format(ET.L.UNSPENT_TALENTS, v.state.availPts or 0))
   end
 end
 

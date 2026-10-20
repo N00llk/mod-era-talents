@@ -1,0 +1,432 @@
+schemaVersion: 1
+locale: enUS
+era: vanilla
+class: druid
+texts:
+  tree.1:
+    name: Balance
+  talent.improved_wrath:
+    name: Improved Wrath
+    tooltip:
+    - Reduces the cast time of your Wrath spell by 0.1 sec.
+    - Reduces the cast time of your Wrath spell by 0.2 sec.
+    - Reduces the cast time of your Wrath spell by 0.3 sec.
+    - Reduces the cast time of your Wrath spell by 0.4 sec.
+    - Reduces the cast time of your Wrath spell by 0.5 sec.
+  talent.nature_s_grasp:
+    name: Nature's Grasp
+    tooltip:
+    - While active, any time an enemy strikes the caster they have a 35% chance to
+      become afflicted by Entangling Roots (Rank 1). Only useable outdoors. 1 charge.
+      Lasts 45 sec.
+  talent.improved_nature_s_grasp:
+    name: Improved Nature's Grasp
+    tooltip:
+    - Increases the chance for your Nature's Grasp to entangle an enemy by 15%.
+    - Increases the chance for your Nature's Grasp to entangle an enemy by 30%.
+    - Increases the chance for your Nature's Grasp to entangle an enemy by 45%.
+    - Increases the chance for your Nature's Grasp to entangle an enemy by 65%.
+  talent.improved_entangling_roots:
+    name: Improved Entangling Roots
+    tooltip:
+    - Gives you a 40% chance to avoid interruption caused by damage while casting
+      Entangling Roots.
+    - Gives you a 70% chance to avoid interruption caused by damage while casting
+      Entangling Roots.
+    - Gives you a 100% chance to avoid interruption caused by damage while casting
+      Entangling Roots.
+  talent.improved_moonfire:
+    name: Improved Moonfire
+    tooltip:
+    - Increases the damage and critical strike chance of your Moonfire spell by 2%.
+    - Increases the damage and critical strike chance of your Moonfire spell by 4%.
+    - Increases the damage and critical strike chance of your Moonfire spell by 6%.
+    - Increases the damage and critical strike chance of your Moonfire spell by 8%.
+    - Increases the damage and critical strike chance of your Moonfire spell by 10%.
+  talent.natural_weapons:
+    name: Natural Weapons
+    tooltip:
+    - Increases the damage you deal with physical attacks in all forms by 2%.
+    - Increases the damage you deal with physical attacks in all forms by 4%.
+    - Increases the damage you deal with physical attacks in all forms by 6%.
+    - Increases the damage you deal with physical attacks in all forms by 8%.
+    - Increases the damage you deal with physical attacks in all forms by 10%.
+  talent.natural_shapeshifter:
+    name: Natural Shapeshifter
+    tooltip:
+    - Reduces the mana cost of shapeshifting by 10%
+    - Reduces the mana cost of shapeshifting by 20%
+    - Reduces the mana cost of shapeshifting by 30%
+  talent.improved_thorns:
+    name: Improved Thorns
+    tooltip:
+    - Increases damage caused by your Thorns spell by 25%
+    - Increases damage caused by your Thorns spell by 50%
+    - Increases damage caused by your Thorns spell by 75%
+  talent.omen_of_clarity:
+    name: Omen of Clarity
+    tooltip:
+    - Imbues the Druid with natural energy. Each of the druid's melee attacks has
+      a chance of causing the caster to enter a Clearcasting state. The Clearcasting
+      state reduces the Mana, Rage or Energy cost of your next damage or healing spell
+      or offensive ability by 100%. Lasts 10 min.
+  talent.nature_s_reach:
+    name: Nature's Reach
+    tooltip:
+    - Increases the range of your Wrath, Entangling Roots, Faerie Fire, Moonfire,
+      Starfire, and Hurricane spells by 10%.
+    - Increases the range of your Wrath, Entangling Roots, Faerie Fire, Moonfire,
+      Starfire, and Hurricane spells by 20%.
+  talent.vengeance:
+    name: Vengeance
+    tooltip:
+    - Increases the critical strike damage bonus of your Starfire, Moonfire, and Wrath
+      spells by 20%.
+    - Increases the critical strike damage bonus of your Starfire, Moonfire, and Wrath
+      spells by 40%.
+    - Increases the critical strike damage bonus of your Starfire, Moonfire, and Wrath
+      spells by 60%.
+    - Increases the critical strike damage bonus of your Starfire, Moonfire, and Wrath
+      spells by 80%.
+    - Increases the critical strike damage bonus of your Starfire, Moonfire, and Wrath
+      spells by 100%.
+  talent.improved_starfire:
+    name: Improved Starfire
+    tooltip:
+    - Reduces the cast time of Starfire by .1 sec and has a 3% chance to stun the
+      target for 3 sec.
+    - Reduces the cast time of Starfire by .2 sec and has a 6% chance to stun the
+      target for 3 sec.
+    - Reduces the cast time of Starfire by .3 sec and has a 9% chance to stun the
+      target for 3 sec.
+    - Reduces the cast time of Starfire by .4 sec and has a 12% chance to stun the
+      target for 3 sec.
+    - Reduces the cast time of Starfire by .5 sec and has a 15% chance to stun the
+      target for 3 sec.
+  talent.nature_s_grace:
+    name: Nature's Grace
+    tooltip:
+    - All spell criticals grace you with a blessing of nature, reducing the casting
+      time of your next spell by 0.5 sec.
+  talent.moonglow:
+    name: Moonglow
+    tooltip:
+    - Reduces the Mana cost of your Moonfire, Starfire, Wrath, Healing Touch, Regrowth
+      and Rejuvenation spells by 3%.
+    - Reduces the Mana cost of your Moonfire, Starfire, Wrath, Healing Touch, Regrowth
+      and Rejuvenation spells by 6%.
+    - Reduces the Mana cost of your Moonfire, Starfire, Wrath, Healing Touch, Regrowth
+      and Rejuvenation spells by 9%.
+  talent.moonfury:
+    name: Moonfury
+    tooltip:
+    - Increases the damage done by your Starfire, Moonfire and Wrath spells by 2%.
+    - Increases the damage done by your Starfire, Moonfire and Wrath spells by 4%.
+    - Increases the damage done by your Starfire, Moonfire and Wrath spells by 6%.
+    - Increases the damage done by your Starfire, Moonfire and Wrath spells by 8%.
+    - Increases the damage done by your Starfire, Moonfire and Wrath spells by 10%.
+  talent.moonkin_form:
+    name: Moonkin Form
+    tooltip:
+    - Transforms the druid into Moonkin Form. While in this form armor is increased
+      by 360% and all party members within 30 yards have their spell critical chance
+      increased by 3%. The Moonkin can only cast Balance spells while shapeshifted.
+      The act of shapeshifting frees the caster of Polymorph and Movement Impairing
+      effects.
+  tree.2:
+    name: Feral Combat
+  talent.ferocity:
+    name: Ferocity
+    tooltip:
+    - Reduces the cost of your Maul, Swipe, Claw, and Rake abilities by 1 Rage or
+      Energy.
+    - Reduces the cost of your Maul, Swipe, Claw, and Rake abilities by 2 Rage or
+      Energy.
+    - Reduces the cost of your Maul, Swipe, Claw, and Rake abilities by 3 Rage or
+      Energy.
+    - Reduces the cost of your Maul, Swipe, Claw, and Rake abilities by 4 Rage or
+      Energy.
+    - Reduces the cost of your Maul, Swipe, Claw, and Rake abilities by 5 Rage or
+      Energy.
+  talent.feral_aggression:
+    name: Feral Aggression
+    tooltip:
+    - Increases the Attack Power reduction of your Demoralizing Roar by 8% and the
+      damage caused by your Ferocious Bite by 3%.
+    - Increases the Attack Power reduction of your Demoralizing Roar by 16% and the
+      damage caused by your Ferocious Bite by 6%.
+    - Increases the Attack Power reduction of your Demoralizing Roar by 24% and the
+      damage caused by your Ferocious Bite by 9%.
+    - Increases the Attack Power reduction of your Demoralizing Roar by 32% and the
+      damage caused by your Ferocious Bite by 12%.
+    - Increases the Attack Power reduction of your Demoralizing Roar by 40% and the
+      damage caused by your Ferocious Bite by 15%.
+  talent.feral_instinct:
+    name: Feral Instinct
+    tooltip:
+    - Increases threat caused in Bear and Dire Bear Form by 3% and reduces the chance
+      enemies have to detect you while Prowling.
+    - Increases threat caused in Bear and Dire Bear Form by 6% and reduces the chance
+      enemies have to detect you while Prowling.
+    - Increases threat caused in Bear and Dire Bear Form by 9% and reduces the chance
+      enemies have to detect you while Prowling.
+    - Increases threat caused in Bear and Dire Bear Form by 12% and reduces the chance
+      enemies have to detect you while Prowling.
+    - Increases threat caused in Bear and Dire Bear Form by 15% and reduces the chance
+      enemies have to detect you while Prowling.
+  talent.brutal_impact:
+    name: Brutal Impact
+    tooltip:
+    - Increases the stun duration of your Bash and Pounce abilities by 0.5 sec.
+    - Increases the stun duration of your Bash and Pounce abilities by 1 sec.
+  talent.thick_hide:
+    name: Thick Hide
+    tooltip:
+    - Increases your Armor contribution from items by 2%.
+    - Increases your Armor contribution from items by 4%.
+    - Increases your Armor contribution from items by 6%.
+    - Increases your Armor contribution from items by 8%.
+    - Increases your Armor contribution from items by 10%.
+  talent.feline_swiftness:
+    name: Feline Swiftness
+    tooltip:
+    - Increases your movement speed by 15% while outdoors in Cat Form and increases
+      your chance to dodge while in Cat Form by 2%.
+    - Increases your movement speed by 30% while outdoors in Cat Form and increases
+      your chance to dodge while in Cat Form by 4%.
+  talent.feral_charge:
+    name: Feral Charge
+    tooltip:
+    - Causes you to charge an enemy, immobilizing and interrupting any spell being
+      cast for 4 sec.
+  talent.sharpened_claws:
+    name: Sharpened Claws
+    tooltip:
+    - Increases your critical strike chance while in Bear, Dire Bear or Cat Form by
+      2%.
+    - Increases your critical strike chance while in Bear, Dire Bear or Cat Form by
+      4%.
+    - Increases your critical strike chance while in Bear, Dire Bear or Cat Form by
+      6%.
+  talent.improved_shred:
+    name: Improved Shred
+    tooltip:
+    - Reduces the Energy cost of your Shred ability by 6.
+    - Reduces the Energy cost of your Shred ability by 12.
+  talent.predatory_strikes:
+    name: Predatory Strikes
+    tooltip:
+    - Increases your Attack Power in Cat, Bear and Dire Bear Forms by 50% of your
+      level.
+    - Increases your Attack Power in Cat, Bear and Dire Bear Forms by 100% of your
+      level.
+    - Increases your Attack Power in Cat, Bear and Dire Bear Forms by 150% of your
+      level.
+  talent.blood_frenzy:
+    name: Blood Frenzy
+    tooltip:
+    - Your critical strikes from Cat Form abilities that add combo points have a 50%
+      chance to add an additional combo point.
+    - Your critical strikes from Cat Form abilities that add combo points have a 100%
+      chance to add an additional combo point.
+  talent.primal_fury:
+    name: Primal Fury
+    tooltip:
+    - Gives you a 50% chance to gain an additional 5 Rage anytime you get a critical
+      strike while in Bear and Dire Bear Form.
+    - Gives you a 100% chance to gain an additional 5 Rage anytime you get a critical
+      strike while in Bear and Dire Bear Form.
+  talent.savage_fury:
+    name: Savage Fury
+    tooltip:
+    - Increases the damage caused by your Claw, Rake, Maul and Swipe abilities by
+      10%.
+    - Increases the damage caused by your Claw, Rake, Maul and Swipe abilities by
+      20%.
+  talent.faerie_fire_feral:
+    name: Faerie Fire (Feral)
+    tooltip:
+    - Decrease the armor of the target by 175 for 40 sec. While affected, the target
+      cannot stealth or turn invisible.
+  talent.heart_of_the_wild:
+    name: Heart of the Wild
+    tooltip:
+    - Increases your Intellect by 4%. In addition, while in Bear or Dire Bear Form
+      your Stamina is increased by 2% and while in Cat Form your Attack Power is increased
+      by 2%.
+    - Increases your Intellect by 8%. In addition, while in Bear or Dire Bear Form
+      your Stamina is increased by 4% and while in Cat Form your Attack Power is increased
+      by 4%.
+    - Increases your Intellect by 12%. In addition, while in Bear or Dire Bear Form
+      your Stamina is increased by 6% and while in Cat Form your Attack Power is increased
+      by 6%.
+    - Increases your Intellect by 16%. In addition, while in Bear or Dire Bear Form
+      your Stamina is increased by 8% and while in Cat Form your Attack Power is increased
+      by 8%.
+    - Increases your Intellect by 20%. In addition, while in Bear or Dire Bear Form
+      your Stamina is increased by 10% and while in Cat Form your Attack Power is
+      increased by 10%.
+  talent.leader_of_the_pack:
+    name: Leader of the Pack
+    tooltip:
+    - While in Cat, Bear or Dire Bear Form, the Leader of the Pack increases ranged
+      and melee critical chance of all party members within 45 yards by 3%.
+  tree.3:
+    name: Restoration
+  talent.improved_mark_of_the_wild:
+    name: Improved Mark of the Wild
+    tooltip:
+    - Increases the effects of your Mark of the Wild and Gift of the Wild spells by
+      7%.
+    - Increases the effects of your Mark of the Wild and Gift of the Wild spells by
+      14%.
+    - Increases the effects of your Mark of the Wild and Gift of the Wild spells by
+      21%.
+    - Increases the effects of your Mark of the Wild and Gift of the Wild spells by
+      28%.
+    - Increases the effects of your Mark of the Wild and Gift of the Wild spells by
+      35%.
+  talent.furor:
+    name: Furor
+    tooltip:
+    - Gives you a 20% chance to gain 10 Rage when you shapeshift into Bear and Dire
+      Bear Form or 40 Energy when you shapeshift into Cat Form.
+    - Gives you a 40% chance to gain 10 Rage when you shapeshift into Bear and Dire
+      Bear Form or 40 Energy when you shapeshift into Cat Form.
+    - Gives you a 60% chance to gain 10 Rage when you shapeshift into Bear and Dire
+      Bear Form or 40 Energy when you shapeshift into Cat Form.
+    - Gives you a 80% chance to gain 10 Rage when you shapeshift into Bear and Dire
+      Bear Form or 40 Energy when you shapeshift into Cat Form.
+    - Gives you a 100% chance to gain 10 Rage when you shapeshift into Bear and Dire
+      Bear Form or 40 Energy when you shapeshift into Cat Form.
+  talent.improved_healing_touch:
+    name: Improved Healing Touch
+    tooltip:
+    - Reduces the cast time of your Healing Touch spell by 0.1 sec.
+    - Reduces the cast time of your Healing Touch spell by 0.2 sec.
+    - Reduces the cast time of your Healing Touch spell by 0.3 sec.
+    - Reduces the cast time of your Healing Touch spell by 0.4 sec.
+    - Reduces the cast time of your Healing Touch spell by 0.5 sec.
+  talent.nature_s_focus:
+    name: Nature's Focus
+    tooltip:
+    - Gives you a 14% chance to avoid interruption caused by damage while casting
+      the Healing Touch, Regrowth and Tranquility spells.
+    - Gives you a 28% chance to avoid interruption caused by damage while casting
+      the Healing Touch, Regrowth and Tranquility spells.
+    - Gives you a 42% chance to avoid interruption caused by damage while casting
+      the Healing Touch, Regrowth and Tranquility spells.
+    - Gives you a 56% chance to avoid interruption caused by damage while casting
+      the Healing Touch, Regrowth and Tranquility spells.
+    - Gives you a 70% chance to avoid interruption caused by damage while casting
+      the Healing Touch, Regrowth and Tranquility spells.
+  talent.improved_enrage:
+    name: Improved Enrage
+    tooltip:
+    - The Enrage ability now instantly generates 5 Rage
+    - The Enrage ability now instantly generates 10 Rage
+  talent.reflection:
+    name: Reflection
+    tooltip:
+    - Allows 5% of your Mana regeneration to continue while casting
+    - Allows 10% of your Mana regeneration to continue while casting
+    - Allows 15% of your Mana regeneration to continue while casting
+  talent.insect_swarm:
+    name: Insect Swarm
+    tooltip:
+    - The enemy target is swarmed by insects, decreasing their chance to hit by 2%
+      and causing 66 Nature damage over 12 sec.
+  talent.subtlety:
+    name: Subtlety
+    tooltip:
+    - Reduces the threat generated by your Healing spells by 4%.
+    - Reduces the threat generated by your Healing spells by 8%.
+    - Reduces the threat generated by your Healing spells by 12%.
+    - Reduces the threat generated by your Healing spells by 16%.
+    - Reduces the threat generated by your Healing spells by 20%.
+  talent.tranquil_spirit:
+    name: Tranquil Spirit
+    tooltip:
+    - Reduces the mana cost of your Healing Touch and Tranquility spells by 2%.
+    - Reduces the mana cost of your Healing Touch and Tranquility spells by 4%.
+    - Reduces the mana cost of your Healing Touch and Tranquility spells by 6%.
+    - Reduces the mana cost of your Healing Touch and Tranquility spells by 8%.
+    - Reduces the mana cost of your Healing Touch and Tranquility spells by 10%.
+  talent.improved_rejuvenation:
+    name: Improved Rejuvenation
+    tooltip:
+    - Increases the effect of your Rejuvenation spell by 5%.
+    - Increases the effect of your Rejuvenation spell by 10%.
+    - Increases the effect of your Rejuvenation spell by 15%.
+  talent.nature_s_swiftness:
+    name: Nature's Swiftness
+    tooltip:
+    - When activated, your next Nature spell becomes an instant cast spell.
+  talent.gift_of_nature:
+    name: Gift of Nature
+    tooltip:
+    - Increases the effect of all healing spells by 2%
+    - Increases the effect of all healing spells by 4%
+    - Increases the effect of all healing spells by 6%
+    - Increases the effect of all healing spells by 8%
+    - Increases the effect of all healing spells by 10%
+  talent.improved_tranquility:
+    name: Improved Tranquility
+    tooltip:
+    - Reduces threat caused by Tranquility by 50%
+    - Reduces threat caused by Tranquility by 100%
+  talent.improved_regrowth:
+    name: Improved Regrowth
+    tooltip:
+    - Increases the critical effect chance of your Regrowth spell by 10%.
+    - Increases the critical effect chance of your Regrowth spell by 20%.
+    - Increases the critical effect chance of your Regrowth spell by 30%.
+    - Increases the critical effect chance of your Regrowth spell by 40%.
+    - Increases the critical effect chance of your Regrowth spell by 50%.
+  talent.swiftmend:
+    name: Swiftmend
+    tooltip:
+    - Consumes a Rejuvenation or Regrowth effect on the target to instantly heal them
+      for the amount that effect would otherwise have healed over its remaining duration.
+  spell.Aquatic Form:
+    name: Aquatic Form
+  spell.Bear Form:
+    name: Bear Form
+  spell.Cat Form:
+    name: Cat Form
+  spell.Claw:
+    name: Claw
+  spell.Dire Bear Form:
+    name: Dire Bear Form
+  spell.Entangling Roots:
+    name: Entangling Roots
+  spell.Faerie Fire:
+    name: Faerie Fire
+  spell.Healing Touch:
+    name: Healing Touch
+  spell.Hurricane:
+    name: Hurricane
+  spell.Maul:
+    name: Maul
+  spell.Moonfire:
+    name: Moonfire
+  spell.Moonkin Form:
+    name: Moonkin Form
+  spell.Rake:
+    name: Rake
+  spell.Regrowth:
+    name: Regrowth
+  spell.Rejuvenation:
+    name: Rejuvenation
+  spell.Shred:
+    name: Shred
+  spell.Starfire:
+    name: Starfire
+  spell.Swipe (Bear):
+    name: Swipe (Bear)
+  spell.Tranquility:
+    name: Tranquility
+  spell.Travel Form:
+    name: Travel Form
+  spell.Wrath:
+    name: Wrath

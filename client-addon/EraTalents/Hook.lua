@@ -72,7 +72,7 @@ local function GuardStockTalentRoutes()
 end
 
 local function GlyphUnavailable()
-  local msg = "Glyphs are available in the Wrath of the Lich King era."
+  local msg = ET.L.GLYPHS_UNAVAILABLE
   UIErrorsFrame:AddMessage(msg, 1, 0.2, 0.2, 1, 3)
 end
 
@@ -179,7 +179,7 @@ end
 -- before we Show; ShowUIPanel fires OnShow synchronously too, so the spec tabs are populated.
 function ET.OpenStockTalents()
   if not UnitExists("pet") then
-    DEFAULT_CHAT_FRAME:AddMessage("|cffffd000EraTalents:|r summon a pet to view its talent tree.")
+    DEFAULT_CHAT_FRAME:AddMessage(ET.L.SUMMON_PET)
     return
   end
   if not IsAddOnLoaded("Blizzard_TalentUI") then LoadAddOn("Blizzard_TalentUI") end

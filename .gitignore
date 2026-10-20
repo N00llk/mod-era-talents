@@ -1,6 +1,7 @@
 __pycache__/
 *.pyc
 client-patch/out/
+client-addon/out/
 client-patch/mpqpack
 client-patch/mpqread
 deps/

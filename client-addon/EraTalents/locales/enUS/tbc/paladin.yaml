@@ -1,0 +1,552 @@
+schemaVersion: 1
+locale: enUS
+era: tbc
+class: paladin
+texts:
+  tree.1:
+    name: Holy
+  talent.divine_strength:
+    name: Divine Strength
+    tooltip:
+    - Increases your total Strength by 2%.
+    - Increases your total Strength by 4%.
+    - Increases your total Strength by 6%.
+    - Increases your total Strength by 8%.
+    - Increases your total Strength by 10%.
+  talent.divine_intellect:
+    name: Divine Intellect
+    tooltip:
+    - Increases your total Intellect by 2%.
+    - Increases your total Intellect by 4%.
+    - Increases your total Intellect by 6%.
+    - Increases your total Intellect by 8%.
+    - Increases your total Intellect by 10%.
+  talent.spiritual_focus:
+    name: Spiritual Focus
+    tooltip:
+    - Gives your Flash of Light and Holy Light spells a 14% chance to not lose casting
+      time when you take damage.
+    - Gives your Flash of Light and Holy Light spells a 28% chance to not lose casting
+      time when you take damage.
+    - Gives your Flash of Light and Holy Light spells a 42% chance to not lose casting
+      time when you take damage.
+    - Gives your Flash of Light and Holy Light spells a 56% chance to not lose casting
+      time when you take damage.
+    - Gives your Flash of Light and Holy Light spells a 70% chance to not lose casting
+      time when you take damage.
+  talent.improved_seal_of_righteousness:
+    name: Improved Seal of Righteousness
+    tooltip:
+    - Increases the damage done by your Seal of Righteousness and Judgement of Righteousness
+      by 3%.
+    - Increases the damage done by your Seal of Righteousness and Judgement of Righteousness
+      by 6%.
+    - Increases the damage done by your Seal of Righteousness and Judgement of Righteousness
+      by 9%.
+    - Increases the damage done by your Seal of Righteousness and Judgement of Righteousness
+      by 12%.
+    - Increases the damage done by your Seal of Righteousness and Judgement of Righteousness
+      by 15%.
+  talent.healing_light:
+    name: Healing Light
+    tooltip:
+    - Increases the amount healed by your Holy Light and Flash of Light spells by
+      4%.
+    - Increases the amount healed by your Holy Light and Flash of Light spells by
+      8%.
+    - Increases the amount healed by your Holy Light and Flash of Light spells by
+      12%.
+  talent.aura_mastery:
+    name: Aura Mastery
+    tooltip:
+    - Increases the radius of your Auras by 10 yards.
+  talent.improved_lay_on_hands:
+    name: Improved Lay on Hands
+    tooltip:
+    - Gives the target of your Lay on Hands spell a 15% bonus to their armor value
+      from items for 2 min. In addition, the cooldown for your Lay on Hands spell
+      is reduced by 10 min.
+    - Gives the target of your Lay on Hands spell a 30% bonus to their armor value
+      from items for 2 min. In addition, the cooldown for your Lay on Hands spell
+      is reduced by 20 min.
+  talent.unyielding_faith:
+    name: Unyielding Faith
+    tooltip:
+    - Increases your chance to resist Fear and Disorient effects by an additional
+      5%.
+    - Increases your chance to resist Fear and Disorient effects by an additional
+      10%.
+  talent.illumination:
+    name: Illumination
+    tooltip:
+    - After getting a critical effect from your Flash of Light, Holy Light, or Holy
+      Shock heal spell, gives you a 20% chance to gain mana equal to 60% of the base
+      cost of the spell.
+    - After getting a critical effect from your Flash of Light, Holy Light, or Holy
+      Shock heal spell, gives you a 40% chance to gain mana equal to 60% of the base
+      cost of the spell.
+    - After getting a critical effect from your Flash of Light, Holy Light, or Holy
+      Shock heal spell, gives you a 60% chance to gain mana equal to 60% of the base
+      cost of the spell.
+    - After getting a critical effect from your Flash of Light, Holy Light, or Holy
+      Shock heal spell, gives you a 80% chance to gain mana equal to 60% of the base
+      cost of the spell.
+    - After getting a critical effect from your Flash of Light, Holy Light, or Holy
+      Shock heal spell, gives you a 100% chance to gain mana equal to 60% of the base
+      cost of the spell.
+  talent.improved_blessing_of_wisdom:
+    name: Improved Blessing of Wisdom
+    tooltip:
+    - Increases the effect of your Blessing of Wisdom spell by 10%.
+    - Increases the effect of your Blessing of Wisdom spell by 20%.
+  talent.pure_of_heart:
+    name: Pure of Heart
+    tooltip:
+    - Increases your resistance to Curse and Disease effects by 5%.
+    - Increases your resistance to Curse and Disease effects by 10%.
+    - Increases your resistance to Curse and Disease effects by 15%.
+  talent.divine_favor:
+    name: Divine Favor
+    tooltip:
+    - When activated, gives your next Flash of Light, Holy Light, or Holy Shock spell
+      a 100% critical effect chance.
+  talent.sanctified_light:
+    name: Sanctified Light
+    tooltip:
+    - Increases the critical effect chance of your Holy Light spell by 2%.
+    - Increases the critical effect chance of your Holy Light spell by 4%.
+    - Increases the critical effect chance of your Holy Light spell by 6%.
+  talent.purifying_power:
+    name: Purifying Power
+    tooltip:
+    - Reduces the mana cost of your Cleanse, Purify and Consecration spells by 5%
+      and increases the critical strike chance of your Exorcism and Holy Wrath spells
+      by 10%.
+    - Reduces the mana cost of your Cleanse, Purify and Consecration spells by 10%
+      and increases the critical strike chance of your Exorcism and Holy Wrath spells
+      by 20%.
+  talent.holy_power:
+    name: Holy Power
+    tooltip:
+    - Increases the critical effect chance of your Holy spells by 1%.
+    - Increases the critical effect chance of your Holy spells by 2%.
+    - Increases the critical effect chance of your Holy spells by 3%.
+    - Increases the critical effect chance of your Holy spells by 4%.
+    - Increases the critical effect chance of your Holy spells by 5%.
+  talent.light_s_grace:
+    name: Light's Grace
+    tooltip:
+    - Gives your Holy Light spell a 33% chance to reduce the cast time of your next
+      Holy Light spell by 0.5 sec. This effect lasts 15 sec.
+    - Gives your Holy Light spell a 66% chance to reduce the cast time of your next
+      Holy Light spell by 0.5 sec. This effect lasts 15 sec.
+    - Gives your Holy Light spell a 100% chance to reduce the cast time of your next
+      Holy Light spell by 0.5 sec. This effect lasts 15 sec.
+  talent.holy_shock:
+    name: Holy Shock
+    tooltip:
+    - Blasts the target with Holy energy, causing 277 to 299 Holy damage to an enemy,
+      or 351 to 379 healing to an ally.
+  talent.blessed_life:
+    name: Blessed Life
+    tooltip:
+    - All attacks against you have a 4% chance to cause half damage.
+    - All attacks against you have a 7% chance to cause half damage.
+    - All attacks against you have a 10% chance to cause half damage.
+  talent.holy_guidance:
+    name: Holy Guidance
+    tooltip:
+    - Increases your spell damage and healing by 7% of your total Intellect.
+    - Increases your spell damage and healing by 14% of your total Intellect.
+    - Increases your spell damage and healing by 21% of your total Intellect.
+    - Increases your spell damage and healing by 28% of your total Intellect.
+    - Increases your spell damage and healing by 35% of your total Intellect.
+  talent.divine_illumination:
+    name: Divine Illumination
+    tooltip:
+    - Reduces the mana cost of all spells by 50% for 15 sec.
+  tree.2:
+    name: Protection
+  talent.improved_devotion_aura:
+    name: Improved Devotion Aura
+    tooltip:
+    - Increases the armor bonus of your Devotion Aura by 8%.
+    - Increases the armor bonus of your Devotion Aura by 16%.
+    - Increases the armor bonus of your Devotion Aura by 24%.
+    - Increases the armor bonus of your Devotion Aura by 32%.
+    - Increases the armor bonus of your Devotion Aura by 40%.
+  talent.redoubt:
+    name: Redoubt
+    tooltip:
+    - Damaging melee and ranged attacks against you have a 10% chance to increase
+      your chance to block by 6%. Lasts 10 sec or 5 blocks.
+    - Damaging melee and ranged attacks against you have a 10% chance to increase
+      your chance to block by 12%. Lasts 10 sec or 5 blocks.
+    - Damaging melee and ranged attacks against you have a 10% chance to increase
+      your chance to block by 18%. Lasts 10 sec or 5 blocks.
+    - Damaging melee and ranged attacks against you have a 10% chance to increase
+      your chance to block by 24%. Lasts 10 sec or 5 blocks.
+    - Damaging melee and ranged attacks against you have a 10% chance to increase
+      your chance to block by 30%. Lasts 10 sec or 5 blocks.
+  talent.precision:
+    name: Precision
+    tooltip:
+    - Increases your chance to hit with melee weapons and spells by 1%.
+    - Increases your chance to hit with melee weapons and spells by 2%.
+    - Increases your chance to hit with melee weapons and spells by 3%.
+  talent.guardian_s_favor:
+    name: Guardian's Favor
+    tooltip:
+    - Reduces the cooldown of your Blessing of Protection by 60 sec and increases
+      the duration of your Blessing of Freedom by 2 sec.
+    - Reduces the cooldown of your Blessing of Protection by 120 sec and increases
+      the duration of your Blessing of Freedom by 4 sec.
+  talent.toughness:
+    name: Toughness
+    tooltip:
+    - Increases your armor value from items by 2%.
+    - Increases your armor value from items by 4%.
+    - Increases your armor value from items by 6%.
+    - Increases your armor value from items by 8%.
+    - Increases your armor value from items by 10%.
+  talent.blessing_of_kings:
+    name: Blessing of Kings
+    tooltip:
+    - Places a Blessing on the friendly target, increasing total stats by 10% for
+      10 min. Players may only have one Blessing on them per Paladin at any one time.
+  talent.improved_righteous_fury:
+    name: Improved Righteous Fury
+    tooltip:
+    - While Righteous Fury is active, all damage taken is reduced by 2% and increases
+      the amount of threat generated by your Righteous Fury spell by 16%.
+    - While Righteous Fury is active, all damage taken is reduced by 4% and increases
+      the amount of threat generated by your Righteous Fury spell by 33%.
+    - While Righteous Fury is active, all damage taken is reduced by 6% and increases
+      the amount of threat generated by your Righteous Fury spell by 50%.
+  talent.shield_specialization:
+    name: Shield Specialization
+    tooltip:
+    - Increases the amount of damage absorbed by your shield by 10%.
+    - Increases the amount of damage absorbed by your shield by 20%.
+    - Increases the amount of damage absorbed by your shield by 30%.
+  talent.anticipation:
+    name: Anticipation
+    tooltip:
+    - Increases your Defense skill by 4.
+    - Increases your Defense skill by 8.
+    - Increases your Defense skill by 12.
+    - Increases your Defense skill by 16.
+    - Increases your Defense skill by 20.
+  talent.stoicism:
+    name: Stoicism
+    tooltip:
+    - Increases your resistance to Stun effects by an additional 5% and reduces the
+      chance your spells will be dispelled by an additional 15%.
+    - Increases your resistance to Stun effects by an additional 10% and reduces the
+      chance your spells will be dispelled by an additional 30%.
+  talent.improved_hammer_of_justice:
+    name: Improved Hammer of Justice
+    tooltip:
+    - Decreases the cooldown of your Hammer of Justice spell by 5 sec.
+    - Decreases the cooldown of your Hammer of Justice spell by 10 sec.
+    - Decreases the cooldown of your Hammer of Justice spell by 15 sec.
+  talent.improved_concentration_aura:
+    name: Improved Concentration Aura
+    tooltip:
+    - Increases the effect of your Concentration Aura by an additional 5% and reduces
+      the duration of any Silence or Interrupt effect used against an affected group
+      member by 10%. The duration reduction does not stack with any other effects.
+    - Increases the effect of your Concentration Aura by an additional 10% and reduces
+      the duration of any Silence or Interrupt effect used against an affected group
+      member by 20%. The duration reduction does not stack with any other effects.
+    - Increases the effect of your Concentration Aura by an additional 15% and reduces
+      the duration of any Silence or Interrupt effect used against an affected group
+      member by 30%. The duration reduction does not stack with any other effects.
+  talent.spell_warding:
+    name: Spell Warding
+    tooltip:
+    - All spell damage taken is reduced by 2%.
+    - All spell damage taken is reduced by 4%.
+  talent.blessing_of_sanctuary:
+    name: Blessing of Sanctuary
+    tooltip:
+    - Places a Blessing on the friendly target, reducing damage dealt from all sources
+      by up to 10 for 10 min. In addition, when the target blocks a melee attack the
+      attacker will take 14 Holy damage. Players may only have one Blessing on them
+      per Paladin at any one time.
+  talent.reckoning:
+    name: Reckoning
+    tooltip:
+    - Gives you a 2% chance after being hit by any damaging attack that the next 4
+      weapon swings within 8 sec will generate an additional attack.
+    - Gives you a 4% chance after being hit by any damaging attack that the next 4
+      weapon swings within 8 sec will generate an additional attack.
+    - Gives you a 6% chance after being hit by any damaging attack that the next 4
+      weapon swings within 8 sec will generate an additional attack.
+    - Gives you a 8% chance after being hit by any damaging attack that the next 4
+      weapon swings within 8 sec will generate an additional attack.
+    - Gives you a 10% chance after being hit by any damaging attack that the next
+      4 weapon swings within 8 sec will generate an additional attack.
+  talent.sacred_duty:
+    name: Sacred Duty
+    tooltip:
+    - Increases your total Stamina by 3%, reduces the cooldown of your Divine Shield
+      spell by 30 sec and reduces the attack speed penalty by 50%.
+    - Increases your total Stamina by 6%, reduces the cooldown of your Divine Shield
+      spell by 60 sec and reduces the attack speed penalty by 100%.
+  talent.one_handed_weapon_specialization:
+    name: One-Handed Weapon Specialization
+    tooltip:
+    - Increases all damage you deal when a one-handed melee weapon is equipped by
+      1%.
+    - Increases all damage you deal when a one-handed melee weapon is equipped by
+      2%.
+    - Increases all damage you deal when a one-handed melee weapon is equipped by
+      3%.
+    - Increases all damage you deal when a one-handed melee weapon is equipped by
+      4%.
+    - Increases all damage you deal when a one-handed melee weapon is equipped by
+      5%.
+  talent.improved_holy_shield:
+    name: Improved Holy Shield
+    tooltip:
+    - Increases damage caused by your Holy Shield by 10% and increases the number
+      of charges of your Holy Shield by 2.
+    - Increases damage caused by your Holy Shield by 20% and increases the number
+      of charges of your Holy Shield by 4.
+  talent.holy_shield:
+    name: Holy Shield
+    tooltip:
+    - Increases chance to block by 30% for 10 sec and deals 59 Holy damage for each
+      attack blocked while active. Damage caused by Holy Shield causes 35% additional
+      threat. Each block expends a charge. 4 charges.
+  talent.ardent_defender:
+    name: Ardent Defender
+    tooltip:
+    - When you have less than 35% health, all damage taken is reduced by 6%.
+    - When you have less than 35% health, all damage taken is reduced by 12%.
+    - When you have less than 35% health, all damage taken is reduced by 18%.
+    - When you have less than 35% health, all damage taken is reduced by 24%.
+    - When you have less than 35% health, all damage taken is reduced by 30%.
+  talent.combat_expertise:
+    name: Combat Expertise
+    tooltip:
+    - Increases your expertise by 1 and your total Stamina by 2%.
+    - Increases your expertise by 2 and your total Stamina by 4%.
+    - Increases your expertise by 3 and your total Stamina by 6%.
+    - Increases your expertise by 4 and your total Stamina by 8%.
+    - Increases your expertise by 5 and your total Stamina by 10%.
+  talent.avenger_s_shield:
+    name: Avenger's Shield
+    tooltip:
+    - Hurls a holy shield at the enemy, dealing 270 to 330 Holy damage, Dazing them
+      and then jumping to additional nearby enemies. Affects 3 total targets. Lasts
+      6 sec.
+  tree.3:
+    name: Retribution
+  talent.improved_blessing_of_might:
+    name: Improved Blessing of Might
+    tooltip:
+    - Increases the attack power bonus of your Blessing of Might by 4%.
+    - Increases the attack power bonus of your Blessing of Might by 8%.
+    - Increases the attack power bonus of your Blessing of Might by 12%.
+    - Increases the attack power bonus of your Blessing of Might by 16%.
+    - Increases the attack power bonus of your Blessing of Might by 20%.
+  talent.benediction:
+    name: Benediction
+    tooltip:
+    - Reduces the mana cost of your Judgement and Seal spells by 3%.
+    - Reduces the mana cost of your Judgement and Seal spells by 6%.
+    - Reduces the mana cost of your Judgement and Seal spells by 9%.
+    - Reduces the mana cost of your Judgement and Seal spells by 12%.
+    - Reduces the mana cost of your Judgement and Seal spells by 15%.
+  talent.improved_judgement:
+    name: Improved Judgement
+    tooltip:
+    - Decreases the cooldown of your Judgement spell by 1 sec.
+    - Decreases the cooldown of your Judgement spell by 2 sec.
+  talent.improved_seal_of_the_crusader:
+    name: Improved Seal of the Crusader
+    tooltip:
+    - In addition to the normal effect, your Judgement of the Crusader spell will
+      also increase the critical strike chance of all attacks made against that target
+      by an additional 1%.
+    - In addition to the normal effect, your Judgement of the Crusader spell will
+      also increase the critical strike chance of all attacks made against that target
+      by an additional 2%.
+    - In addition to the normal effect, your Judgement of the Crusader spell will
+      also increase the critical strike chance of all attacks made against that target
+      by an additional 3%.
+  talent.deflection:
+    name: Deflection
+    tooltip:
+    - Increases your Parry chance by 1%.
+    - Increases your Parry chance by 2%.
+    - Increases your Parry chance by 3%.
+    - Increases your Parry chance by 4%.
+    - Increases your Parry chance by 5%.
+  talent.vindication:
+    name: Vindication
+    tooltip:
+    - Gives the Paladin's damaging melee attacks a chance to reduce the target's attributes
+      by 5% for 15 sec.
+    - Gives the Paladin's damaging melee attacks a chance to reduce the target's attributes
+      by 10% for 15 sec.
+    - Gives the Paladin's damaging melee attacks a chance to reduce the target's attributes
+      by 15% for 15 sec.
+  talent.conviction:
+    name: Conviction
+    tooltip:
+    - Increases your chance to get a critical strike with melee weapons by 1%.
+    - Increases your chance to get a critical strike with melee weapons by 2%.
+    - Increases your chance to get a critical strike with melee weapons by 3%.
+    - Increases your chance to get a critical strike with melee weapons by 4%.
+    - Increases your chance to get a critical strike with melee weapons by 5%.
+  talent.seal_of_command:
+    name: Seal of Command
+    tooltip:
+    - Gives the Paladin a chance to deal additional Holy damage equal to 70% of normal
+      weapon damage. Only one Seal can be active on the Paladin at any one time. Lasts
+      30 sec. Unleashing this Seal's energy will judge an enemy, instantly causing
+      68 to 73 Holy damage, 137 to 146 if the target is stunned or incapacitated.
+  talent.pursuit_of_justice:
+    name: Pursuit of Justice
+    tooltip:
+    - Reduces the chance you'll be hit by spells by 1% and increases movement and
+      mounted movement speed by 5%. This does not stack with other movement speed
+      increasing effects.
+    - Reduces the chance you'll be hit by spells by 2% and increases movement and
+      mounted movement speed by 10%. This does not stack with other movement speed
+      increasing effects.
+    - Reduces the chance you'll be hit by spells by 3% and increases movement and
+      mounted movement speed by 15%. This does not stack with other movement speed
+      increasing effects.
+  talent.eye_for_an_eye:
+    name: Eye for an Eye
+    tooltip:
+    - All spell criticals against you cause 15% of the damage taken to the caster
+      as well. The damage caused by Eye for an Eye will not exceed 50% of the Paladin's
+      total health.
+    - All spell criticals against you cause 30% of the damage taken to the caster
+      as well. The damage caused by Eye for an Eye will not exceed 50% of the Paladin's
+      total health.
+  talent.improved_retribution_aura:
+    name: Improved Retribution Aura
+    tooltip:
+    - Increases the damage done by your Retribution Aura by 25%.
+    - Increases the damage done by your Retribution Aura by 50%.
+  talent.crusade:
+    name: Crusade
+    tooltip:
+    - Increases all damage caused against Humanoids, Demons, Undead and Elementals
+      by 1%.
+    - Increases all damage caused against Humanoids, Demons, Undead and Elementals
+      by 2%.
+    - Increases all damage caused against Humanoids, Demons, Undead and Elementals
+      by 3%.
+  talent.two_handed_weapon_specialization:
+    name: Two-Handed Weapon Specialization
+    tooltip:
+    - Increases the damage you deal with two-handed melee weapons by 2%.
+    - Increases the damage you deal with two-handed melee weapons by 4%.
+    - Increases the damage you deal with two-handed melee weapons by 6%.
+  talent.sanctity_aura:
+    name: Sanctity Aura
+    tooltip:
+    - Increases Holy damage done by party members within 30 yards by 10%. Players
+      may only have one Aura on them per Paladin at any one time.
+  talent.improved_sanctity_aura:
+    name: Improved Sanctity Aura
+    tooltip:
+    - The amount of damage caused by targets affected by Sanctity Aura is increased
+      by 1%.
+    - The amount of damage caused by targets affected by Sanctity Aura is increased
+      by 2%.
+  talent.vengeance:
+    name: Vengeance
+    tooltip:
+    - Gives you a 1% bonus to Physical and Holy damage you deal for 30 sec after dealing
+      a critical strike from a weapon swing, spell, or ability. This effect stacks
+      up to 3 times.
+    - Gives you a 2% bonus to Physical and Holy damage you deal for 30 sec after dealing
+      a critical strike from a weapon swing, spell, or ability. This effect stacks
+      up to 3 times.
+    - Gives you a 3% bonus to Physical and Holy damage you deal for 30 sec after dealing
+      a critical strike from a weapon swing, spell, or ability. This effect stacks
+      up to 3 times.
+    - Gives you a 4% bonus to Physical and Holy damage you deal for 30 sec after dealing
+      a critical strike from a weapon swing, spell, or ability. This effect stacks
+      up to 3 times.
+    - Gives you a 5% bonus to Physical and Holy damage you deal for 30 sec after dealing
+      a critical strike from a weapon swing, spell, or ability. This effect stacks
+      up to 3 times.
+  talent.sanctified_judgement:
+    name: Sanctified Judgement
+    tooltip:
+    - Gives your Judgement spell a 33% chance to return 80% of the mana cost of the
+      judged seal.
+    - Gives your Judgement spell a 66% chance to return 80% of the mana cost of the
+      judged seal.
+    - Gives your Judgement spell a 100% chance to return 80% of the mana cost of the
+      judged seal.
+  talent.sanctified_seals:
+    name: Sanctified Seals
+    tooltip:
+    - Increases your chance to critically hit with all spells and melee attacks by
+      1% and reduces the chance your Seals will be dispelled by 33%.
+    - Increases your chance to critically hit with all spells and melee attacks by
+      2% and reduces the chance your Seals will be dispelled by 66%.
+    - Increases your chance to critically hit with all spells and melee attacks by
+      3% and reduces the chance your Seals will be dispelled by 100%.
+  talent.repentance:
+    name: Repentance
+    tooltip:
+    - Puts the enemy target in a state of meditation, incapacitating them for up to
+      6 sec. Any damage caused will awaken the target. Only works against Humanoids.
+  talent.divine_purpose:
+    name: Divine Purpose
+    tooltip:
+    - Melee and ranged critical strikes against you cause 4% less damage.
+    - Melee and ranged critical strikes against you cause 7% less damage.
+    - Melee and ranged critical strikes against you cause 10% less damage.
+  talent.fanaticism:
+    name: Fanaticism
+    tooltip:
+    - Increases the critical strike chance of all Judgements capable of a critical
+      hit by 3% and reduces threat caused by all actions by 6% except when under the
+      effects of Righteous Fury.
+    - Increases the critical strike chance of all Judgements capable of a critical
+      hit by 6% and reduces threat caused by all actions by 12% except when under
+      the effects of Righteous Fury.
+    - Increases the critical strike chance of all Judgements capable of a critical
+      hit by 9% and reduces threat caused by all actions by 18% except when under
+      the effects of Righteous Fury.
+    - Increases the critical strike chance of all Judgements capable of a critical
+      hit by 12% and reduces threat caused by all actions by 24% except when under
+      the effects of Righteous Fury.
+    - Increases the critical strike chance of all Judgements capable of a critical
+      hit by 15% and reduces threat caused by all actions by 30% except when under
+      the effects of Righteous Fury.
+  talent.crusader_strike:
+    name: Crusader Strike
+    tooltip:
+    - An instant strike that causes 110% weapon damage and refreshes all Judgements
+      on the target.
+  spell.Cleanse:
+    name: Cleanse
+  spell.Consecration:
+    name: Consecration
+  spell.Divine Shield:
+    name: Divine Shield
+  spell.Hammer of Justice:
+    name: Hammer of Justice
+  spell.Hand of Protection:
+    name: Hand of Protection
+  spell.Judgement:
+    name: Judgement
+  spell.Lay on Hands:
+    name: Lay on Hands
+  spell.Purify:
+    name: Purify
+  spell.Seal of Command:
+    name: Seal of Command

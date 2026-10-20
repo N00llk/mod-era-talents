@@ -1,5 +1,6 @@
 -- test_inspect.lua — headless: the ISYNC protocol (Comms.lua) and the pure view helpers (TalentUI.lua).
 -- Run: lua5.1 client-addon/EraTalents/test_inspect.lua   (cwd = repo root)
+dofile("client-addon/EraTalents/data/generated/Localization.lua")
 dofile("client-addon/EraTalents/Comms.lua")
 local ET = EraTalents
 

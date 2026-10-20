@@ -1,0 +1,541 @@
+schemaVersion: 1
+locale: enUS
+era: tbc
+class: rogue
+texts:
+  tree.1:
+    name: Assassination
+  talent.improved_eviscerate:
+    name: Improved Eviscerate
+    tooltip:
+    - Increases the damage done by your Eviscerate ability by 5%.
+    - Increases the damage done by your Eviscerate ability by 10%.
+    - Increases the damage done by your Eviscerate ability by 15%.
+  talent.remorseless_attacks:
+    name: Remorseless Attacks
+    tooltip:
+    - After killing an opponent that yields experience or honor, gives you a 20% increased
+      critical strike chance on your next Sinister Strike, Hemorrhage, Backstab, Mutilate,
+      Ambush, or Ghostly Strike. Lasts 20 sec.
+    - After killing an opponent that yields experience or honor, gives you a 40% increased
+      critical strike chance on your next Sinister Strike, Hemorrhage, Backstab, Mutilate,
+      Ambush, or Ghostly Strike. Lasts 20 sec.
+  talent.malice:
+    name: Malice
+    tooltip:
+    - Increases your critical strike chance by 1%.
+    - Increases your critical strike chance by 2%.
+    - Increases your critical strike chance by 3%.
+    - Increases your critical strike chance by 4%.
+    - Increases your critical strike chance by 5%.
+  talent.ruthlessness:
+    name: Ruthlessness
+    tooltip:
+    - Gives your melee finishing moves a 20% chance to add a combo point to your target.
+    - Gives your melee finishing moves a 40% chance to add a combo point to your target.
+    - Gives your melee finishing moves a 60% chance to add a combo point to your target.
+  talent.murder:
+    name: Murder
+    tooltip:
+    - Increases all damage caused against Humanoid, Giant, Beast and Dragonkin targets
+      by 1%.
+    - Increases all damage caused against Humanoid, Giant, Beast and Dragonkin targets
+      by 2%.
+  talent.puncturing_wounds:
+    name: Puncturing Wounds
+    tooltip:
+    - Increases the critical strike chance of your Backstab ability by 10%, and the
+      critical strike chance of your Mutilate ability by 5%.
+    - Increases the critical strike chance of your Backstab ability by 20%, and the
+      critical strike chance of your Mutilate ability by 10%.
+    - Increases the critical strike chance of your Backstab ability by 30%, and the
+      critical strike chance of your Mutilate ability by 15%.
+  talent.relentless_strikes:
+    name: Relentless Strikes
+    tooltip:
+    - Your finishing moves have a 20% chance per combo point to restore 25 energy.
+  talent.improved_expose_armor:
+    name: Improved Expose Armor
+    tooltip:
+    - Increases the armor reduced by your Expose Armor ability by 25%.
+    - Increases the armor reduced by your Expose Armor ability by 50%.
+  talent.lethality:
+    name: Lethality
+    tooltip:
+    - Increases the critical strike damage bonus of your Sinister Strike, Gouge, Backstab,
+      Ghostly Strike, Mutilate, Shiv, and Hemorrhage abilities by 6%.
+    - Increases the critical strike damage bonus of your Sinister Strike, Gouge, Backstab,
+      Ghostly Strike, Mutilate, Shiv, and Hemorrhage abilities by 12%.
+    - Increases the critical strike damage bonus of your Sinister Strike, Gouge, Backstab,
+      Ghostly Strike, Mutilate, Shiv, and Hemorrhage abilities by 18%.
+    - Increases the critical strike damage bonus of your Sinister Strike, Gouge, Backstab,
+      Ghostly Strike, Mutilate, Shiv, and Hemorrhage abilities by 24%.
+    - Increases the critical strike damage bonus of your Sinister Strike, Gouge, Backstab,
+      Ghostly Strike, Mutilate, Shiv, and Hemorrhage abilities by 30%.
+  talent.vile_poisons:
+    name: Vile Poisons
+    tooltip:
+    - Increases the damage dealt by your poisons and Envenom ability by 4% and gives
+      your poisons an additional 8% chance to resist dispel effects.
+    - Increases the damage dealt by your poisons and Envenom ability by 8% and gives
+      your poisons an additional 16% chance to resist dispel effects.
+    - Increases the damage dealt by your poisons and Envenom ability by 12% and gives
+      your poisons an additional 24% chance to resist dispel effects.
+    - Increases the damage dealt by your poisons and Envenom ability by 16% and gives
+      your poisons an additional 32% chance to resist dispel effects.
+    - Increases the damage dealt by your poisons and Envenom ability by 20% and gives
+      your poisons an additional 40% chance to resist dispel effects.
+  talent.improved_poisons:
+    name: Improved Poisons
+    tooltip:
+    - Increases the chance to apply poisons to your target by 2%.
+    - Increases the chance to apply poisons to your target by 4%.
+    - Increases the chance to apply poisons to your target by 6%.
+    - Increases the chance to apply poisons to your target by 8%.
+    - Increases the chance to apply poisons to your target by 10%.
+  talent.fleet_footed:
+    name: Fleet Footed
+    tooltip:
+    - Increases your chance to resist movement impairing effects by 5% and increases
+      your movement speed by 8%. This does not stack with other movement speed increasing
+      effects.
+    - Increases your chance to resist movement impairing effects by 10% and increases
+      your movement speed by 15%. This does not stack with other movement speed increasing
+      effects.
+  talent.cold_blood:
+    name: Cold Blood
+    tooltip:
+    - When activated, increases the critical strike chance of your next offensive
+      ability by 100%.
+  talent.improved_kidney_shot:
+    name: Improved Kidney Shot
+    tooltip:
+    - While affected by your Kidney Shot ability, the target receives an additional
+      3% damage from all sources.
+    - While affected by your Kidney Shot ability, the target receives an additional
+      6% damage from all sources.
+    - While affected by your Kidney Shot ability, the target receives an additional
+      9% damage from all sources.
+  talent.quick_recovery:
+    name: Quick Recovery
+    tooltip:
+    - All healing effects on you are increased by 10%. In addition, your finishing
+      moves cost 40% less Energy when they fail to hit.
+    - All healing effects on you are increased by 20%. In addition, your finishing
+      moves cost 80% less Energy when they fail to hit.
+  talent.seal_fate:
+    name: Seal Fate
+    tooltip:
+    - Your critical strikes from abilities that add combo points have a 20% chance
+      to add an additional combo point.
+    - Your critical strikes from abilities that add combo points have a 40% chance
+      to add an additional combo point.
+    - Your critical strikes from abilities that add combo points have a 60% chance
+      to add an additional combo point.
+    - Your critical strikes from abilities that add combo points have a 80% chance
+      to add an additional combo point.
+    - Your critical strikes from abilities that add combo points have a 100% chance
+      to add an additional combo point.
+  talent.master_poisoner:
+    name: Master Poisoner
+    tooltip:
+    - Reduces the chance your poisons will be resisted by 5% and increases your chance
+      to resist Poison effects by an additional 15%.
+    - Reduces the chance your poisons will be resisted by 10% and increases your chance
+      to resist Poison effects by an additional 30%.
+  talent.vigor:
+    name: Vigor
+    tooltip:
+    - Increases your maximum Energy by 10.
+  talent.deadened_nerves:
+    name: Deadened Nerves
+    tooltip:
+    - Decreases all physical damage taken by 1%.
+    - Decreases all physical damage taken by 2%.
+    - Decreases all physical damage taken by 3%.
+    - Decreases all physical damage taken by 4%.
+    - Decreases all physical damage taken by 5%.
+  talent.find_weakness:
+    name: Find Weakness
+    tooltip:
+    - Your finishing moves increase the damage of all your offensive abilities by
+      2% for 10 sec.
+    - Your finishing moves increase the damage of all your offensive abilities by
+      4% for 10 sec.
+    - Your finishing moves increase the damage of all your offensive abilities by
+      6% for 10 sec.
+    - Your finishing moves increase the damage of all your offensive abilities by
+      8% for 10 sec.
+    - Your finishing moves increase the damage of all your offensive abilities by
+      10% for 10 sec.
+  talent.mutilate:
+    name: Mutilate
+    tooltip:
+    - Instantly attacks with both weapons for an additional 44 with each weapon. Damage
+      is increased by 50% against Poisoned targets. Must be behind the target. Awards
+      2 combo points.
+  tree.2:
+    name: Combat
+  talent.improved_gouge:
+    name: Improved Gouge
+    tooltip:
+    - Increases the effect duration of your Gouge ability by 0.5 sec.
+    - Increases the effect duration of your Gouge ability by 1 sec.
+    - Increases the effect duration of your Gouge ability by 1.5 sec.
+  talent.improved_sinister_strike:
+    name: Improved Sinister Strike
+    tooltip:
+    - Reduces the Energy cost of your Sinister Strike ability by 3.
+    - Reduces the Energy cost of your Sinister Strike ability by 5.
+  talent.lightning_reflexes:
+    name: Lightning Reflexes
+    tooltip:
+    - Increases your Dodge chance by 1%.
+    - Increases your Dodge chance by 2%.
+    - Increases your Dodge chance by 3%.
+    - Increases your Dodge chance by 4%.
+    - Increases your Dodge chance by 5%.
+  talent.improved_slice_and_dice:
+    name: Improved Slice and Dice
+    tooltip:
+    - Increases the duration of your Slice and Dice ability by 15%.
+    - Increases the duration of your Slice and Dice ability by 30%.
+    - Increases the duration of your Slice and Dice ability by 45%.
+  talent.deflection:
+    name: Deflection
+    tooltip:
+    - Increases your Parry chance by 1%.
+    - Increases your Parry chance by 2%.
+    - Increases your Parry chance by 3%.
+    - Increases your Parry chance by 4%.
+    - Increases your Parry chance by 5%.
+  talent.precision:
+    name: Precision
+    tooltip:
+    - Increases your chance to hit with weapons by 1%.
+    - Increases your chance to hit with weapons by 2%.
+    - Increases your chance to hit with weapons by 3%.
+    - Increases your chance to hit with weapons by 4%.
+    - Increases your chance to hit with weapons by 5%.
+  talent.endurance:
+    name: Endurance
+    tooltip:
+    - Reduces the cooldown of your Sprint and Evasion abilities by 45 sec.
+    - Reduces the cooldown of your Sprint and Evasion abilities by 1.5 min.
+  talent.riposte:
+    name: Riposte
+    tooltip:
+    - A strike that becomes active after parrying an opponent's attack. This attack
+      deals 150% weapon damage and disarms the target for 6 sec.
+  talent.improved_sprint:
+    name: Improved Sprint
+    tooltip:
+    - Gives a 50% chance to remove all Movement Impairing effects when you activate
+      your Sprint ability.
+    - Gives a 100% chance to remove all Movement Impairing effects when you activate
+      your Sprint ability.
+  talent.improved_kick:
+    name: Improved Kick
+    tooltip:
+    - Gives your Kick ability a 50% chance to silence the target for 2 sec.
+    - Gives your Kick ability a 100% chance to silence the target for 2 sec.
+  talent.dagger_specialization:
+    name: Dagger Specialization
+    tooltip:
+    - Increases your chance to get a critical strike with Daggers by 1%.
+    - Increases your chance to get a critical strike with Daggers by 2%.
+    - Increases your chance to get a critical strike with Daggers by 3%.
+    - Increases your chance to get a critical strike with Daggers by 4%.
+    - Increases your chance to get a critical strike with Daggers by 5%.
+  talent.dual_wield_specialization:
+    name: Dual Wield Specialization
+    tooltip:
+    - Increases the damage done by your offhand weapon by 10%.
+    - Increases the damage done by your offhand weapon by 20%.
+    - Increases the damage done by your offhand weapon by 30%.
+    - Increases the damage done by your offhand weapon by 40%.
+    - Increases the damage done by your offhand weapon by 50%.
+  talent.mace_specialization:
+    name: Mace Specialization
+    tooltip:
+    - Increases the damage dealt by your critical strikes with maces by 1%, and gives
+      you a 1% chance to stun your target for 3 sec with a mace.
+    - Increases the damage dealt by your critical strikes with maces by 2%, and gives
+      you a 2% chance to stun your target for 3 sec with a mace.
+    - Increases the damage dealt by your critical strikes with maces by 3%, and gives
+      you a 3% chance to stun your target for 3 sec with a mace.
+    - Increases the damage dealt by your critical strikes with maces by 4%, and gives
+      you a 4% chance to stun your target for 3 sec with a mace.
+    - Increases the damage dealt by your critical strikes with maces by 5%, and gives
+      you a 6% chance to stun your target for 3 sec with a mace.
+  talent.blade_flurry:
+    name: Blade Flurry
+    tooltip:
+    - Increases your attack speed by 20%. In addition, attacks strike an additional
+      nearby opponent. Lasts 15 sec.
+  talent.sword_specialization:
+    name: Sword Specialization
+    tooltip:
+    - Gives you a 1% chance to get an extra attack on the same target after hitting
+      your target with your Sword.
+    - Gives you a 2% chance to get an extra attack on the same target after hitting
+      your target with your Sword.
+    - Gives you a 3% chance to get an extra attack on the same target after hitting
+      your target with your Sword.
+    - Gives you a 4% chance to get an extra attack on the same target after hitting
+      your target with your Sword.
+    - Gives you a 5% chance to get an extra attack on the same target after hitting
+      your target with your Sword.
+  talent.fist_weapon_specialization:
+    name: Fist Weapon Specialization
+    tooltip:
+    - Increases your chance to get a critical strike with Fist Weapons by 1%.
+    - Increases your chance to get a critical strike with Fist Weapons by 2%.
+    - Increases your chance to get a critical strike with Fist Weapons by 3%.
+    - Increases your chance to get a critical strike with Fist Weapons by 4%.
+    - Increases your chance to get a critical strike with Fist Weapons by 5%.
+  talent.blade_twisting:
+    name: Blade Twisting
+    tooltip:
+    - Gives your Sinister Strike, Backstab, Gouge and Shiv abilities a 10% chance
+      to Daze the target for 8 sec.
+    - Gives your Sinister Strike, Backstab, Gouge and Shiv abilities a 20% chance
+      to Daze the target for 8 sec.
+  talent.weapon_expertise:
+    name: Weapon Expertise
+    tooltip:
+    - Increases your expertise by 5.
+    - Increases your expertise by 10.
+  talent.aggression:
+    name: Aggression
+    tooltip:
+    - Increases the damage of your Sinister Strike, Backstab, and Eviscerate abilities
+      by 2%.
+    - Increases the damage of your Sinister Strike, Backstab, and Eviscerate abilities
+      by 4%.
+    - Increases the damage of your Sinister Strike, Backstab, and Eviscerate abilities
+      by 6%.
+  talent.vitality:
+    name: Vitality
+    tooltip:
+    - Increases your total Stamina by 2% and your total Agility by 1%.
+    - Increases your total Stamina by 4% and your total Agility by 2%.
+  talent.adrenaline_rush:
+    name: Adrenaline Rush
+    tooltip:
+    - Increases your Energy regeneration rate by 100% for 15 sec.
+  talent.nerves_of_steel:
+    name: Nerves of Steel
+    tooltip:
+    - Increases your chance to resist Stun and Fear effects by an additional 5%.
+    - Increases your chance to resist Stun and Fear effects by an additional 10%.
+  talent.combat_potency:
+    name: Combat Potency
+    tooltip:
+    - Gives your successful off-hand melee attacks a 20% chance to generate 3 Energy.
+    - Gives your successful off-hand melee attacks a 20% chance to generate 6 Energy.
+    - Gives your successful off-hand melee attacks a 20% chance to generate 9 Energy.
+    - Gives your successful off-hand melee attacks a 20% chance to generate 12 Energy.
+    - Gives your successful off-hand melee attacks a 20% chance to generate 15 Energy.
+  talent.surprise_attacks:
+    name: Surprise Attacks
+    tooltip:
+    - Your finishing moves can no longer be dodged, and the damage dealt by your Sinister
+      Strike, Backstab, Shiv and Gouge abilities is increased by 10%.
+  tree.3:
+    name: Subtlety
+  talent.master_of_deception:
+    name: Master of Deception
+    tooltip:
+    - Reduces the chance enemies have to detect you while in Stealth mode.
+    - Reduces the chance enemies have to detect you while in Stealth mode. More effective
+      than Master of Deception (Rank 1).
+    - Reduces the chance enemies have to detect you while in Stealth mode. More effective
+      than Master of Deception (Rank 2).
+    - Reduces the chance enemies have to detect you while in Stealth mode. More effective
+      than Master of Deception (Rank 3).
+    - Reduces the chance enemies have to detect you while in Stealth mode. More effective
+      than Master of Deception (Rank 4).
+  talent.opportunity:
+    name: Opportunity
+    tooltip:
+    - Increases the damage dealt when striking from behind with your Backstab, Mutilate,
+      Garrote and Ambush abilities by 4%.
+    - Increases the damage dealt when striking from behind with your Backstab, Mutilate,
+      Garrote and Ambush abilities by 8%.
+    - Increases the damage dealt when striking from behind with your Backstab, Mutilate,
+      Garrote and Ambush abilities by 12%.
+    - Increases the damage dealt when striking from behind with your Backstab, Mutilate,
+      Garrote and Ambush abilities by 16%.
+    - Increases the damage dealt when striking from behind with your Backstab, Mutilate,
+      Garrote and Ambush abilities by 20%.
+  talent.sleight_of_hand:
+    name: Sleight of Hand
+    tooltip:
+    - Reduces the chance you are critically hit by melee and ranged attacks by 1%
+      and increases the threat reduction of your Feint ability by 10%.
+    - Reduces the chance you are critically hit by melee and ranged attacks by 2%
+      and increases the threat reduction of your Feint ability by 20%.
+  talent.dirty_tricks:
+    name: Dirty Tricks
+    tooltip:
+    - Increases the range of your Blind and Sap abilities by 2 yards and reduces the
+      energy cost of your Blind and Sap abilities by 25%.
+    - Increases the range of your Blind and Sap abilities by 5 yards and reduces the
+      energy cost of your Blind and Sap abilities by 50%.
+  talent.camouflage:
+    name: Camouflage
+    tooltip:
+    - Increases your speed while stealthed by 3% and reduces the cooldown of your
+      Stealth ability by 1 sec.
+    - Increases your speed while stealthed by 6% and reduces the cooldown of your
+      Stealth ability by 2 sec.
+    - Increases your speed while stealthed by 9% and reduces the cooldown of your
+      Stealth ability by 3 sec.
+    - Increases your speed while stealthed by 12% and reduces the cooldown of your
+      Stealth ability by 4 sec.
+    - Increases your speed while stealthed by 15% and reduces the cooldown of your
+      Stealth ability by 5 sec.
+  talent.initiative:
+    name: Initiative
+    tooltip:
+    - Gives you a 25% chance to add an additional combo point to your target when
+      using your Ambush, Garrote, or Cheap Shot ability.
+    - Gives you a 50% chance to add an additional combo point to your target when
+      using your Ambush, Garrote, or Cheap Shot ability.
+    - Gives you a 75% chance to add an additional combo point to your target when
+      using your Ambush, Garrote, or Cheap Shot ability.
+  talent.ghostly_strike:
+    name: Ghostly Strike
+    tooltip:
+    - A strike that deals 125% weapon damage and increases your chance to dodge by
+      15% for 7 sec. Awards 1 combo point.
+  talent.improved_ambush:
+    name: Improved Ambush
+    tooltip:
+    - Increases the critical strike chance of your Ambush ability by 15%.
+    - Increases the critical strike chance of your Ambush ability by 30%.
+    - Increases the critical strike chance of your Ambush ability by 45%.
+  talent.setup:
+    name: Setup
+    tooltip:
+    - Gives you a 15% chance to add a combo point to your target after dodging their
+      attack or fully resisting one of their spells.
+    - Gives you a 30% chance to add a combo point to your target after dodging their
+      attack or fully resisting one of their spells.
+    - Gives you a 45% chance to add a combo point to your target after dodging their
+      attack or fully resisting one of their spells.
+  talent.elusiveness:
+    name: Elusiveness
+    tooltip:
+    - Reduces the cooldown of your Vanish and Blind abilities by 45 sec.
+    - Reduces the cooldown of your Vanish and Blind abilities by 90 sec.
+  talent.serrated_blades:
+    name: Serrated Blades
+    tooltip:
+    - Causes your attacks to ignore 186 of your target's Armor and increases the damage
+      dealt by your Rupture ability by 10%. The amount of Armor reduced increases
+      with your level.
+    - Causes your attacks to ignore 373 of your target's Armor and increases the damage
+      dealt by your Rupture ability by 20%. The amount of Armor reduced increases
+      with your level.
+    - Causes your attacks to ignore 560 of your target's Armor and increases the damage
+      dealt by your Rupture ability by 30%. The amount of Armor reduced increases
+      with your level.
+  talent.heightened_senses:
+    name: Heightened Senses
+    tooltip:
+    - Increases your Stealth detection and reduces the chance you are hit by spells
+      and ranged attacks by 2%.
+    - Increases your Stealth detection and reduces the chance you are hit by spells
+      and ranged attacks by 4%. More effective than Heightened Senses (Rank 1).
+  talent.preparation:
+    name: Preparation
+    tooltip:
+    - When activated, this ability immediately finishes the cooldown on your Evasion,
+      Sprint, Vanish, Cold Blood, Shadowstep and Premeditation abilities.
+  talent.dirty_deeds:
+    name: Dirty Deeds
+    tooltip:
+    - Reduces the Energy cost of your Cheap Shot and Garrote abilities by 10. Additionally,
+      your special abilities cause 10% more damage against targets below 35% health.
+    - Reduces the Energy cost of your Cheap Shot and Garrote abilities by 20. Additionally,
+      your special abilities cause 20% more damage against targets below 35% health.
+  talent.hemorrhage:
+    name: Hemorrhage
+    tooltip:
+    - An instant strike that deals 110% weapon damage and causes the target to hemorrhage,
+      increasing any Physical damage dealt to the target by up to 13. Lasts 10 charges
+      or 15 sec. Awards 1 combo point.
+  talent.master_of_subtlety:
+    name: Master of Subtlety
+    tooltip:
+    - Attacks made while stealthed and for 6 seconds after breaking stealth cause
+      an additional 4% damage.
+    - Attacks made while stealthed and for 6 seconds after breaking stealth cause
+      an additional 7% damage.
+    - Attacks made while stealthed and for 6 seconds after breaking stealth cause
+      an additional 10% damage.
+  talent.deadliness:
+    name: Deadliness
+    tooltip:
+    - Increases your attack power by 2%.
+    - Increases your attack power by 4%.
+    - Increases your attack power by 6%.
+    - Increases your attack power by 8%.
+    - Increases your attack power by 10%.
+  talent.enveloping_shadows:
+    name: Enveloping Shadows
+    tooltip:
+    - Increases your chance to avoid area of effect attacks by an additional 5%.
+    - Increases your chance to avoid area of effect attacks by an additional 10%.
+    - Increases your chance to avoid area of effect attacks by an additional 15%.
+  talent.premeditation:
+    name: Premeditation
+    tooltip:
+    - When used, adds 2 combo points to your target. You must add to or use those
+      combo points within 10 sec or the combo points are lost.
+  talent.cheat_death:
+    name: Cheat Death
+    tooltip:
+    - You have a 33% chance that an attack which would otherwise kill you will instead
+      reduce you to 10% of your maximum health. In addition, all damage taken will
+      be reduced by up to 90% for 3 sec (modified by resilience). This effect cannot
+      occur more than once per minute.
+    - You have a 66% chance that an attack which would otherwise kill you will instead
+      reduce you to 10% of your maximum health. In addition, all damage taken will
+      be reduced by up to 90% for 3 sec (modified by resilience). This effect cannot
+      occur more than once per minute.
+    - You have a 100% chance that an attack which would otherwise kill you will instead
+      reduce you to 10% of your maximum health. In addition, all damage taken will
+      be reduced by up to 90% for 3 sec (modified by resilience). This effect cannot
+      occur more than once per minute.
+  talent.sinister_calling:
+    name: Sinister Calling
+    tooltip:
+    - Increases your total Agility by 3% and increases the percentage damage bonus
+      of Backstab and Hemorrhage by an additional 1%.
+    - Increases your total Agility by 6% and increases the percentage damage bonus
+      of Backstab and Hemorrhage by an additional 2%.
+    - Increases your total Agility by 9% and increases the percentage damage bonus
+      of Backstab and Hemorrhage by an additional 3%.
+    - Increases your total Agility by 12% and increases the percentage damage bonus
+      of Backstab and Hemorrhage by an additional 4%.
+    - Increases your total Agility by 15% and increases the percentage damage bonus
+      of Backstab and Hemorrhage by an additional 5%.
+  talent.shadowstep:
+    name: Shadowstep
+    tooltip:
+    - Attempts to step through the shadows and reappear behind your enemy and increases
+      movement speed by 70% for 3 sec. The damage of your next ability is increased
+      by 20% and the threat caused is reduced by 50%. Lasts 10 sec.
+  spell.Blind:
+    name: Blind
+  spell.Evasion:
+    name: Evasion
+  spell.Sprint:
+    name: Sprint
+  spell.Stealth:
+    name: Stealth
+  spell.Vanish:
+    name: Vanish
