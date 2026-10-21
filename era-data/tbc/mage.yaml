@@ -163,11 +163,9 @@ helpers:
   - { effect: 6, aura: 108, basePoints: 30, misc: 14, targetA: 1, maskA: 549591799, maskB: 167936, maskC: 0 }   # +30% mana cost
   - { effect: 6, aura: 108, basePoints: 30, misc: 22, targetA: 1, maskA: 4194437,   maskB: 4096,   maskC: 0 }   # +30% periodic/DoT damage
   client:
-    name: Arcane Power
+    textKey: spell.948760
     icon: 62             # stock 12042 SpellIconID
     skillLine: 237       # Arcane — else the granted active lands in the client's General tab
-    description: "When activated, your spells deal 30% more damage while costing 30% more mana to cast. This effect lasts 15 sec."
-    auraDescription: "Spell damage increased by 30%. Mana cost increased by 30%."
 # --- Presence of Mind clone 948761 (node 20813 grants it) ----------------------------------------
 # FRESH clone of stock 12043 by the same standing rule (reuse_ledger.932761_presence_of_mind: wago
 # TBC 12043 cooldown 180000 == what the Vanilla clone 932761 authors — identical, still not reused).
@@ -215,11 +213,9 @@ helpers:
     chance: 0            # stock row; core seeds from the DBC ProcChance (100)
     affectsMask: { a: 1631584309, b: 4096, c: 0 }   # verbatim from the live 12043 spell_proc row
   client:
-    name: Presence of Mind
+    textKey: spell.948761
     icon: 139            # stock 12043 SpellIconID
     skillLine: 237       # Arcane
-    description: "When activated, your next Mage spell with a casting time less than 10 sec becomes an instant cast spell."
-    auraDescription: "Your next Mage spell with a casting time less than 10 sec becomes an instant cast spell."
 # --- Magic Absorption clones 948762-948766 (node 20804 grants one per rank) -----------------------
 # CLONE chain, per disposition_table[20804] + Amendment A.1 item 7. TBC carries the mana-on-full-
 # resist rider IN DATA — `e1 aura 4 DUMMY val 1..5` (the mana %) beside `e2 aura 22 MOD_RESISTANCE
@@ -271,9 +267,8 @@ helpers:
     chance: 0            # stock row; core seeds from the DBC ProcChance (100)
     cooldown: 1000
   client:
-    name: Magic Absorption
+    textKey: spell.948762
     icon: 459            # stock 29441 SpellIconID
-    description: "Increases all resistances by 2 and causes all spells you fully resist to restore 1% of your total mana. 1 sec. cooldown."
 - id: 948763
   name: Magic Absorption
   template: 29441
@@ -288,9 +283,8 @@ helpers:
   - { effect: 6, aura: 22, basePoints: 4, misc: 124, targetA: 1, perLevel: 0 }
   proc: { flags: 131072, typeMask: 7, phaseMask: 0, hitMask: 8, chance: 0, cooldown: 1000 }
   client:
-    name: Magic Absorption
+    textKey: spell.948763
     icon: 459
-    description: "Increases all resistances by 4 and causes all spells you fully resist to restore 2% of your total mana. 1 sec. cooldown."
 - id: 948764
   name: Magic Absorption
   template: 29441
@@ -305,9 +299,8 @@ helpers:
   - { effect: 6, aura: 22, basePoints: 6, misc: 124, targetA: 1, perLevel: 0 }
   proc: { flags: 131072, typeMask: 7, phaseMask: 0, hitMask: 8, chance: 0, cooldown: 1000 }
   client:
-    name: Magic Absorption
+    textKey: spell.948764
     icon: 459
-    description: "Increases all resistances by 6 and causes all spells you fully resist to restore 3% of your total mana. 1 sec. cooldown."
 - id: 948765
   name: Magic Absorption
   template: 29441
@@ -322,9 +315,8 @@ helpers:
   - { effect: 6, aura: 22, basePoints: 8, misc: 124, targetA: 1, perLevel: 0 }
   proc: { flags: 131072, typeMask: 7, phaseMask: 0, hitMask: 8, chance: 0, cooldown: 1000 }
   client:
-    name: Magic Absorption
+    textKey: spell.948765
     icon: 459
-    description: "Increases all resistances by 8 and causes all spells you fully resist to restore 4% of your total mana. 1 sec. cooldown."
 - id: 948766
   name: Magic Absorption
   template: 29441
@@ -339,9 +331,8 @@ helpers:
   - { effect: 6, aura: 22, basePoints: 10, misc: 124, targetA: 1, perLevel: 0 }
   proc: { flags: 131072, typeMask: 7, phaseMask: 0, hitMask: 8, chance: 0, cooldown: 1000 }
   client:
-    name: Magic Absorption
+    textKey: spell.948766
     icon: 459
-    description: "Increases all resistances by 10 and causes all spells you fully resist to restore 5% of your total mana. 1 sec. cooldown."
 # --- Arcane Potency crit buffs 948767-948769 (node 20817 triggers one per rank) -------------------
 # THREE FRESH BUFFS BUILT ON THE **LIVE 57529 SHAPE**, not on TBC's own encoding (spec A.3 (e),
 # `_ref.core_hardcodes.arcane_potency`). TBC 31571-31573 encode the talent as `aura 107 misc 12
@@ -394,10 +385,8 @@ helpers:
     affectsMask: { a: 549591799, b: 168000, c: 0 }   # 0x20c21af7 / 0x29040 — Clearcasting's own
                                                      # consumption mask, census row 12536 verbatim
   client:
-    name: Arcane Potency
+    textKey: spell.948767
     icon: 2120           # stock 31571/57529 SpellIconID
-    description: "Increases the critical strike chance of your next damaging spell by 10%."
-    auraDescription: "Critical strike chance of your next damaging spell increased by 10%."
 - id: 948768
   name: Arcane Potency
   template: 57529
@@ -415,10 +404,8 @@ helpers:
     affectsMask: { a: 549591799, b: 168000, c: 0 }   # 0x20c21af7 / 0x29040 — Clearcasting's own
                                                      # consumption mask, census row 12536 verbatim
   client:
-    name: Arcane Potency
+    textKey: spell.948768
     icon: 2120
-    description: "Increases the critical strike chance of your next damaging spell by 20%."
-    auraDescription: "Critical strike chance of your next damaging spell increased by 20%."
 - id: 948769
   name: Arcane Potency
   template: 57529
@@ -436,10 +423,8 @@ helpers:
     affectsMask: { a: 549591799, b: 168000, c: 0 }   # 0x20c21af7 / 0x29040 — Clearcasting's own
                                                      # consumption mask, census row 12536 verbatim
   client:
-    name: Arcane Potency
+    textKey: spell.948769
     icon: 2120
-    description: "Increases the critical strike chance of your next damaging spell by 30%."
-    auraDescription: "Critical strike chance of your next damaging spell increased by 30%."
 # --- Improved Counterspell silence 948770 (node 20810 triggers it) -------------------------------
 # TBC's Counterspell silence is **4 s**; live 18469 is 2 s (`survival_map[18469]`:
 # `C:DurationIndex TBC35->LIVE39`, and index 39 = 2000 ms live against index 35 = 4000 ms). The
@@ -460,10 +445,8 @@ helpers:
                          # DispelType 1 / SchoolMask 64 / RangeIndex 13 still inherit.
   - { effect: 6, aura: 27, basePoints: 1, targetA: 6 }   # SPELL_AURA_MOD_SILENCE on the target
   client:
-    name: Silenced - Improved Counterspell
+    textKey: spell.948770
     icon: 17             # stock 18469 SpellIconID
-    description: "Silenced."
-    auraDescription: "Silenced."
 # --- Improved Blink buffs 948771/948772 (node 20812 triggers one per rank) ------------------------
 # Amendment A.1 item 3: TBC's Improved Blink is a **proc** — "for 4 sec after casting Blink, your
 # chance to be hit is reduced by 13%/25%" — and the live talent's Blink mana-cost half is the
@@ -483,10 +466,8 @@ helpers:
   - { effect: 6, aura: 185, basePoints: -13, targetA: 1 }
   - { effect: 6, aura: 186, basePoints: -13, misc: 126, targetA: 1 }
   client:
-    name: Improved Blink
+    textKey: spell.948771
     icon: 1499           # stock 47000 SpellIconID
-    description: "Your chance to be hit by all attacks and spells is reduced by 13%."
-    auraDescription: "Chance to be hit by all attacks and spells reduced by 13%."
 - id: 948772
   name: Improved Blink
   template: 46989
@@ -495,10 +476,8 @@ helpers:
   - { effect: 6, aura: 185, basePoints: -25, targetA: 1 }
   - { effect: 6, aura: 186, basePoints: -25, misc: 126, targetA: 1 }
   client:
-    name: Improved Blink
+    textKey: spell.948772
     icon: 1499
-    description: "Your chance to be hit by all attacks and spells is reduced by 25%."
-    auraDescription: "Chance to be hit by all attacks and spells reduced by 25%."
 # --- Slow clone 948773 (node 20822 grants it) ----------------------------------------------------
 # The Arcane capstone. CLONE per disposition_table[20822]: TBC is **-50% / -50% / -50%** at
 # ManaCostPct 20, live is -60 / -60 / -30 at ManaCostPct 12. A castable active whose numbers differ
@@ -528,11 +507,9 @@ helpers:
   - { effect: 6, aura: 218, basePoints: -50, targetA: 6 }   # time between ranged attacks
   - { effect: 6, aura: 216, basePoints: -50, targetA: 6 }   # casting speed
   client:
-    name: Slow
+    textKey: spell.948773
     icon: 27             # stock 31589 SpellIconID
     skillLine: 237       # Arcane
-    description: "Reduces target's movement speed by 50%, increases the time between ranged attacks by 50% and increases casting time by 50%. Lasts 15 sec. Slow can only affect one target at a time."
-    auraDescription: "Movement slowed by 50%, time between ranged attacks increased by 50% and casting time increased by 50%."
 # =================================================================================================
 # FIRE HAND HELPERS — 948860-948893 (partition 948860-948959).
 # Allocated on the ref's `helper_usage_forecast.fire_948860_948959` layout, which puts each chain on
@@ -590,10 +567,8 @@ helpers:
   effects:
   - { effect: 6, aura: 87, basePoints: 3, misc: 4, targetA: 6 }   # MOD_DAMAGE_PERCENT_TAKEN, fire, +3%
   client:
-    name: Fire Vulnerability
+    textKey: spell.948860
     icon: 816            # stock 22959 SpellIconID
-    description: "Fire damage taken increased by 3%."
-    auraDescription: "Fire damage taken increased by 3%."
 # --- Pyroblast r1-r10, 948870-948879 (node 20830 grants r1; r2-r10 trainer-taught at Task 5) -----
 # CLONE per disposition_table[20830] + spec A.2. The ONLY era divergence across all ten ranks is the
 # CAST TIME — wago 2.5.4 `CastingTimeIndex 171` = **6000 ms** against live's index 6 = 5000 ms (WotLK
@@ -614,6 +589,8 @@ helpers:
 # `client.description`). Node 20830 is a GRANT node, so this description IS the talent-panel tooltip
 # (lesson 17d) as well as the spellbook one.
 - id: 948870
+  powerCost: 125
+  manaCostPct: 0
   name: Pyroblast
   template: 11366
   castTimeIndex: 171     # 6000 ms (live index 6 = 5000 ms)
@@ -622,13 +599,13 @@ helpers:
   - { effect: 2, basePoints: 140, dieSides: 47, targetA: 6 }
   - { effect: 6, aura: 3, basePoints: 13, dieSides: 1, targetA: 6 }
   client:
-    name: Pyroblast
+    textKey: spell.948870
     icon: 184            # stock Pyroblast SpellIconID
     rank: 1
     skillLine: 8         # Fire tab (else a granted active lands in the client's General tab)
-    description: "Hurls an immense fiery boulder that causes $s1 Fire damage and an additional $o2 Fire damage over $d."
-    auraDescription: "$s2 Fire damage every $t2 seconds."
 - id: 948871
+  powerCost: 150
+  manaCostPct: 0
   name: Pyroblast
   template: 12505
   castTimeIndex: 171     # 6000 ms (live index 6 = 5000 ms)
@@ -637,13 +614,13 @@ helpers:
   - { effect: 2, basePoints: 179, dieSides: 57, targetA: 6 }
   - { effect: 6, aura: 3, basePoints: 17, dieSides: 1, targetA: 6 }
   client:
-    name: Pyroblast
+    textKey: spell.948871
     icon: 184            # stock Pyroblast SpellIconID
     rank: 2
     skillLine: 8         # Fire tab (else a granted active lands in the client's General tab)
-    description: "Hurls an immense fiery boulder that causes $s1 Fire damage and an additional $o2 Fire damage over $d."
-    auraDescription: "$s2 Fire damage every $t2 seconds."
 - id: 948872
+  powerCost: 195
+  manaCostPct: 0
   name: Pyroblast
   template: 12522
   castTimeIndex: 171     # 6000 ms (live index 6 = 5000 ms)
@@ -652,13 +629,13 @@ helpers:
   - { effect: 2, basePoints: 254, dieSides: 73, targetA: 6 }
   - { effect: 6, aura: 3, basePoints: 23, dieSides: 1, targetA: 6 }
   client:
-    name: Pyroblast
+    textKey: spell.948872
     icon: 184            # stock Pyroblast SpellIconID
     rank: 3
     skillLine: 8         # Fire tab (else a granted active lands in the client's General tab)
-    description: "Hurls an immense fiery boulder that causes $s1 Fire damage and an additional $o2 Fire damage over $d."
-    auraDescription: "$s2 Fire damage every $t2 seconds."
 - id: 948873
+  powerCost: 240
+  manaCostPct: 0
   name: Pyroblast
   template: 12523
   castTimeIndex: 171     # 6000 ms (live index 6 = 5000 ms)
@@ -667,13 +644,13 @@ helpers:
   - { effect: 2, basePoints: 328, dieSides: 91, targetA: 6 }
   - { effect: 6, aura: 3, basePoints: 30, dieSides: 1, targetA: 6 }
   client:
-    name: Pyroblast
+    textKey: spell.948873
     icon: 184            # stock Pyroblast SpellIconID
     rank: 4
     skillLine: 8         # Fire tab (else a granted active lands in the client's General tab)
-    description: "Hurls an immense fiery boulder that causes $s1 Fire damage and an additional $o2 Fire damage over $d."
-    auraDescription: "$s2 Fire damage every $t2 seconds."
 - id: 948874
+  powerCost: 285
+  manaCostPct: 0
   name: Pyroblast
   template: 12524
   castTimeIndex: 171     # 6000 ms (live index 6 = 5000 ms)
@@ -682,13 +659,13 @@ helpers:
   - { effect: 2, basePoints: 406, dieSides: 109, targetA: 6 }
   - { effect: 6, aura: 3, basePoints: 38, dieSides: 1, targetA: 6 }
   client:
-    name: Pyroblast
+    textKey: spell.948874
     icon: 184            # stock Pyroblast SpellIconID
     rank: 5
     skillLine: 8         # Fire tab (else a granted active lands in the client's General tab)
-    description: "Hurls an immense fiery boulder that causes $s1 Fire damage and an additional $o2 Fire damage over $d."
-    auraDescription: "$s2 Fire damage every $t2 seconds."
 - id: 948875
+  powerCost: 335
+  manaCostPct: 0
   name: Pyroblast
   template: 12525
   castTimeIndex: 171     # 6000 ms (live index 6 = 5000 ms)
@@ -697,13 +674,13 @@ helpers:
   - { effect: 2, basePoints: 502, dieSides: 129, targetA: 6 }
   - { effect: 6, aura: 3, basePoints: 46, dieSides: 1, targetA: 6 }
   client:
-    name: Pyroblast
+    textKey: spell.948875
     icon: 184            # stock Pyroblast SpellIconID
     rank: 6
     skillLine: 8         # Fire tab (else a granted active lands in the client's General tab)
-    description: "Hurls an immense fiery boulder that causes $s1 Fire damage and an additional $o2 Fire damage over $d."
-    auraDescription: "$s2 Fire damage every $t2 seconds."
 - id: 948876
+  powerCost: 385
+  manaCostPct: 0
   name: Pyroblast
   template: 12526
   castTimeIndex: 171     # 6000 ms (live index 6 = 5000 ms)
@@ -712,13 +689,13 @@ helpers:
   - { effect: 2, basePoints: 599, dieSides: 151, targetA: 6 }
   - { effect: 6, aura: 3, basePoints: 56, dieSides: 1, targetA: 6 }
   client:
-    name: Pyroblast
+    textKey: spell.948876
     icon: 184            # stock Pyroblast SpellIconID
     rank: 7
     skillLine: 8         # Fire tab (else a granted active lands in the client's General tab)
-    description: "Hurls an immense fiery boulder that causes $s1 Fire damage and an additional $o2 Fire damage over $d."
-    auraDescription: "$s2 Fire damage every $t2 seconds."
 - id: 948877
+  powerCost: 440
+  manaCostPct: 0
   name: Pyroblast
   template: 18809
   castTimeIndex: 171     # 6000 ms (live index 6 = 5000 ms)
@@ -727,13 +704,13 @@ helpers:
   - { effect: 2, basePoints: 707, dieSides: 191, targetA: 6 }
   - { effect: 6, aura: 3, basePoints: 66, dieSides: 1, targetA: 6 }
   client:
-    name: Pyroblast
+    textKey: spell.948877
     icon: 184            # stock Pyroblast SpellIconID
     rank: 8
     skillLine: 8         # Fire tab (else a granted active lands in the client's General tab)
-    description: "Hurls an immense fiery boulder that causes $s1 Fire damage and an additional $o2 Fire damage over $d."
-    auraDescription: "$s2 Fire damage every $t2 seconds."
 - id: 948878
+  powerCost: 460
+  manaCostPct: 0
   name: Pyroblast
   template: 27132
   castTimeIndex: 171     # 6000 ms (live index 6 = 5000 ms)
@@ -742,12 +719,10 @@ helpers:
   - { effect: 2, basePoints: 845, dieSides: 229, targetA: 6 }
   - { effect: 6, aura: 3, basePoints: 77, dieSides: 1, targetA: 6 }
   client:
-    name: Pyroblast
+    textKey: spell.948878
     icon: 184            # stock Pyroblast SpellIconID
     rank: 9
     skillLine: 8         # Fire tab (else a granted active lands in the client's General tab)
-    description: "Hurls an immense fiery boulder that causes $s1 Fire damage and an additional $o2 Fire damage over $d."
-    auraDescription: "$s2 Fire damage every $t2 seconds."
 - id: 948879
   name: Pyroblast
   template: 33938
@@ -759,12 +734,10 @@ helpers:
   - { effect: 2, basePoints: 938, dieSides: 253, targetA: 6 }
   - { effect: 6, aura: 3, basePoints: 88, dieSides: 1, targetA: 6 }
   client:
-    name: Pyroblast
+    textKey: spell.948879
     icon: 184            # stock Pyroblast SpellIconID
     rank: 10
     skillLine: 8         # Fire tab (else a granted active lands in the client's General tab)
-    description: "Hurls an immense fiery boulder that causes $s1 Fire damage and an additional $o2 Fire damage over $d."
-    auraDescription: "$s2 Fire damage every $t2 seconds."
 # --- Blast Wave r1-r7, 948880-948886 (node 20837 grants r1; r2-r7 trainer-taught at Task 5) ------
 # CLONE per disposition_table[20837] + spec A.2. The decisive divergence is an effect LIVE HAS AND
 # TBC DOES NOT: `e3 = eff 98 SPELL_EFFECT_KNOCK_BACK val 80 misc 100` on every rank, a WotLK 3.0
@@ -787,83 +760,83 @@ helpers:
 # EFFECT_2 knockback for it to hook (the core would log "did not match dbc effect data"), and
 # glyphs are blocked for era characters by EraGlyphGate anyway.
 - id: 948880
+  powerCost: 215
+  manaCostPct: 0
   name: Blast Wave
   template: 11113
   effects:               # exactly TWO — the 0-fill drops live's e3 SPELL_EFFECT_KNOCK_BACK
   - { effect: 2, basePoints: 153, dieSides: 33, targetA: 22 }
   - { effect: 6, aura: 33, basePoints: -51, dieSides: 1, targetA: 22 }   # -50% snare (the "daze")
   client:
-    name: Blast Wave
+    textKey: spell.948880
     icon: 292            # stock Blast Wave SpellIconID
     rank: 1
     skillLine: 8         # Fire tab
-    description: "A wave of flame radiates outward from the caster, damaging all enemies caught within the blast for $s1 Fire damage, dazing them for $d."
-    auraDescription: "Dazed."
 - id: 948881
+  powerCost: 270
+  manaCostPct: 0
   name: Blast Wave
   template: 13018
   effects:               # exactly TWO — the 0-fill drops live's e3 SPELL_EFFECT_KNOCK_BACK
   - { effect: 2, basePoints: 200, dieSides: 41, targetA: 22 }
   - { effect: 6, aura: 33, basePoints: -51, dieSides: 1, targetA: 22 }   # -50% snare (the "daze")
   client:
-    name: Blast Wave
+    textKey: spell.948881
     icon: 292            # stock Blast Wave SpellIconID
     rank: 2
     skillLine: 8         # Fire tab
-    description: "A wave of flame radiates outward from the caster, damaging all enemies caught within the blast for $s1 Fire damage, dazing them for $d."
-    auraDescription: "Dazed."
 - id: 948882
+  powerCost: 355
+  manaCostPct: 0
   name: Blast Wave
   template: 13019
   effects:               # exactly TWO — the 0-fill drops live's e3 SPELL_EFFECT_KNOCK_BACK
   - { effect: 2, basePoints: 276, dieSides: 53, targetA: 22 }
   - { effect: 6, aura: 33, basePoints: -51, dieSides: 1, targetA: 22 }   # -50% snare (the "daze")
   client:
-    name: Blast Wave
+    textKey: spell.948882
     icon: 292            # stock Blast Wave SpellIconID
     rank: 3
     skillLine: 8         # Fire tab
-    description: "A wave of flame radiates outward from the caster, damaging all enemies caught within the blast for $s1 Fire damage, dazing them for $d."
-    auraDescription: "Dazed."
 - id: 948883
+  powerCost: 450
+  manaCostPct: 0
   name: Blast Wave
   template: 13020
   effects:               # exactly TWO — the 0-fill drops live's e3 SPELL_EFFECT_KNOCK_BACK
   - { effect: 2, basePoints: 364, dieSides: 69, targetA: 22 }
   - { effect: 6, aura: 33, basePoints: -51, dieSides: 1, targetA: 22 }   # -50% snare (the "daze")
   client:
-    name: Blast Wave
+    textKey: spell.948883
     icon: 292            # stock Blast Wave SpellIconID
     rank: 4
     skillLine: 8         # Fire tab
-    description: "A wave of flame radiates outward from the caster, damaging all enemies caught within the blast for $s1 Fire damage, dazing them for $d."
-    auraDescription: "Dazed."
 - id: 948884
+  powerCost: 545
+  manaCostPct: 0
   name: Blast Wave
   template: 13021
   effects:               # exactly TWO — the 0-fill drops live's e3 SPELL_EFFECT_KNOCK_BACK
   - { effect: 2, basePoints: 461, dieSides: 83, targetA: 22 }
   - { effect: 6, aura: 33, basePoints: -51, dieSides: 1, targetA: 22 }   # -50% snare (the "daze")
   client:
-    name: Blast Wave
+    textKey: spell.948884
     icon: 292            # stock Blast Wave SpellIconID
     rank: 5
     skillLine: 8         # Fire tab
-    description: "A wave of flame radiates outward from the caster, damaging all enemies caught within the blast for $s1 Fire damage, dazing them for $d."
-    auraDescription: "Dazed."
 - id: 948885
+  powerCost: 555
+  manaCostPct: 0
   name: Blast Wave
   template: 27133
   effects:               # exactly TWO — the 0-fill drops live's e3 SPELL_EFFECT_KNOCK_BACK
   - { effect: 2, basePoints: 532, dieSides: 95, targetA: 22 }
   - { effect: 6, aura: 33, basePoints: -51, dieSides: 1, targetA: 22 }   # -50% snare (the "daze")
   client:
-    name: Blast Wave
+    textKey: spell.948885
     icon: 292            # stock Blast Wave SpellIconID
     rank: 6
     skillLine: 8         # Fire tab
-    description: "A wave of flame radiates outward from the caster, damaging all enemies caught within the blast for $s1 Fire damage, dazing them for $d."
-    auraDescription: "Dazed."
 - id: 948886
   name: Blast Wave
   template: 33933
@@ -873,12 +846,10 @@ helpers:
   - { effect: 2, basePoints: 615, dieSides: 109, targetA: 22 }
   - { effect: 6, aura: 33, basePoints: -51, dieSides: 1, targetA: 22 }   # -50% snare (the "daze")
   client:
-    name: Blast Wave
+    textKey: spell.948886
     icon: 292            # stock Blast Wave SpellIconID
     rank: 7
     skillLine: 8         # Fire tab
-    description: "A wave of flame radiates outward from the caster, damaging all enemies caught within the blast for $s1 Fire damage, dazing them for $d."
-    auraDescription: "Dazed."
 # --- Combustion 948887 (node 20841 grants it) ----------------------------------------------------
 # CLONE per disposition_table[20841] + Amendment A.1 item 6. Two era divergences, both authored:
 #   * `RecoveryTime` 180000 (3 min) over live's 120000 (2 min) — the cached TBC tooltip says 3 min.
@@ -943,14 +914,13 @@ helpers:
     # Wave clones 948880-948886, which carry that live bit. Word 0 is the census row verbatim.
     affectsMask: { a: 146800663, b: 200712, c: 0 }   # census row 11129, less Blast Wave's bit 6
   client:
-    name: Combustion
+    textKey: spell.948887
     icon: 33             # stock 11129 SpellIconID
     skillLine: 8         # Fire tab
     # Era tooltip wording — "3 critical strikes", not live's "3 non-periodic critical
     # strikes". Behaviour is unchanged either way: the proc row's ProcTypeMask 65536 is
     # DONE_SPELL_MAGIC_DMG_CLASS_NEG, which periodic damage never raises, so no DoT tick can
     # spend a charge and the qualifier the WotLK text adds is already implied.
-    description: "When activated, this spell causes each of your Fire damage spell hits to increase your critical strike chance with Fire damage spells by $28682s1%.  This effect lasts until you have caused 3 critical strikes with Fire spells."
 # --- Dragon's Breath r1-r4, 948890-948893 (node 20844 grants r1; r2-r4 trainer-taught at Task 5) --
 # CLONE per disposition_table[20844] + spec A.2. The Fire capstone. Divergences authored:
 #   * the disorient's `DurationIndex 27` = **3000 ms** over live's 28 = 5000 ms (index 27 is 3000 in
@@ -984,12 +954,10 @@ helpers:
   - { effect: 6, aura: 5,  basePoints: -1, dieSides: 1, targetA: 104 }   # MOD_CONFUSE (disorient)
   - { effect: 6, aura: 33, basePoints: -51, dieSides: 1, targetA: 104 }  # -50% snare
   client:
-    name: Dragon's Breath
+    textKey: spell.948890
     icon: 1548           # stock 31661 SpellIconID
     rank: 1
     skillLine: 8         # Fire tab
-    description: "Targets in a cone in front of the caster take $s1 Fire damage and are Disoriented for $d.  Any direct damaging attack will revive targets.  Turns off your attack when used."
-    auraDescription: "Disoriented."
 - id: 948891
   name: Dragon's Breath
   template: 33041
@@ -1002,12 +970,10 @@ helpers:
   - { effect: 6, aura: 5,  basePoints: -1, dieSides: 1, targetA: 104 }   # MOD_CONFUSE (disorient)
   - { effect: 6, aura: 33, basePoints: -51, dieSides: 1, targetA: 104 }  # -50% snare
   client:
-    name: Dragon's Breath
+    textKey: spell.948891
     icon: 1548           # stock 31661 SpellIconID
     rank: 2
     skillLine: 8         # Fire tab
-    description: "Targets in a cone in front of the caster take $s1 Fire damage and are Disoriented for $d.  Any direct damaging attack will revive targets.  Turns off your attack when used."
-    auraDescription: "Disoriented."
 - id: 948892
   name: Dragon's Breath
   template: 33042
@@ -1020,12 +986,10 @@ helpers:
   - { effect: 6, aura: 5,  basePoints: -1, dieSides: 1, targetA: 104 }   # MOD_CONFUSE (disorient)
   - { effect: 6, aura: 33, basePoints: -51, dieSides: 1, targetA: 104 }  # -50% snare
   client:
-    name: Dragon's Breath
+    textKey: spell.948892
     icon: 1548           # stock 31661 SpellIconID
     rank: 3
     skillLine: 8         # Fire tab
-    description: "Targets in a cone in front of the caster take $s1 Fire damage and are Disoriented for $d.  Any direct damaging attack will revive targets.  Turns off your attack when used."
-    auraDescription: "Disoriented."
 - id: 948893
   name: Dragon's Breath
   template: 33043
@@ -1038,12 +1002,10 @@ helpers:
   - { effect: 6, aura: 5,  basePoints: -1, dieSides: 1, targetA: 104 }   # MOD_CONFUSE (disorient)
   - { effect: 6, aura: 33, basePoints: -51, dieSides: 1, targetA: 104 }  # -50% snare
   client:
-    name: Dragon's Breath
+    textKey: spell.948893
     icon: 1548           # stock 31661 SpellIconID
     rank: 4
     skillLine: 8         # Fire tab
-    description: "Targets in a cone in front of the caster take $s1 Fire damage and are Disoriented for $d.  Any direct damaging attack will revive targets.  Turns off your attack when used."
-    auraDescription: "Disoriented."
 # =================================================================================================
 # FROST HAND HELPERS — 948960-948969 (partition 948960-949059). Allocated IN ORDER, NO HOLES:
 #   948960          Winter's Chill debuff        (node 20862 triggers it)
@@ -1090,10 +1052,8 @@ helpers:
   effects:
   - { effect: 6, aura: 179, basePoints: 2, misc: 16, targetA: 6 }   # MOD_ATTACKER_SPELL_CRIT_CHANCE, frost, +2%
   client:
-    name: Winter's Chill
+    textKey: spell.948960
     icon: 187            # stock 12579 SpellIconID
-    description: "Increases the chance a Frost spell will critically hit the target by 2% for 15 sec.  Stacks up to 5 times."
-    auraDescription: "Frost spells have a 2% additional chance to critically hit.  Stacks up to 5 times."
 # --- Improved Blizzard chill helpers 948961-948963 (node 20854 triggers one per rank) ------------
 # FRESH per-era helpers at the TBC slow depths **-30 / -50 / -65** (wago 2.5.4 12484/12485/12486;
 # the cached TBC tooltips agree — 11185 "by 30%", 12488 "by 65%"). Live 12484-12486 are the WotLK
@@ -1129,10 +1089,8 @@ helpers:
   family: 3
   maskC: 64              # word-2 bit 6 = the reserved "Blizzard Chill" identity (Permafrost 20851 binds it)
   client:
-    name: Chilled
+    textKey: spell.948961
     icon: 285            # stock 12484 SpellIconID
-    description: "Chills the target for 1.50 sec."
-    auraDescription: "Movement slowed by 30%."
 - id: 948962
   name: "Chill (Improved Blizzard, Rank 2)"
   aura: 33
@@ -1144,10 +1102,8 @@ helpers:
   family: 3
   maskC: 64              # word-2 bit 6 = the reserved "Blizzard Chill" identity
   client:
-    name: Chilled
+    textKey: spell.948962
     icon: 285
-    description: "Chills the target for 1.50 sec."
-    auraDescription: "Movement slowed by 50%."
 - id: 948963
   name: "Chill (Improved Blizzard, Rank 3)"
   aura: 33
@@ -1159,10 +1115,8 @@ helpers:
   family: 3
   maskC: 64              # word-2 bit 6 = the reserved "Blizzard Chill" identity
   client:
-    name: Chilled
+    textKey: spell.948963
     icon: 285
-    description: "Chills the target for 1.50 sec."
-    auraDescription: "Movement slowed by 65%."
 # --- Ice Barrier r1-r6, 948964-948969 (node 20863 grants r1; r2-r6 trainer-taught at Task 5) -----
 # CLONE per disposition_table[20863] + spec A.4 item 1 (user decision 2026-09-05).
 #
@@ -1200,65 +1154,65 @@ helpers:
 # is the talent-panel tooltip as well as the spellbook one (workflow lesson 17d). `skillLine: 6` =
 # the Frost tab, else a granted active lands in the client's General tab.
 - id: 948964
+  powerCost: 305
+  manaCostPct: 0
   name: Ice Barrier
   template: 11426
   effects:
   - { effect: 6, aura: 69, basePoints: 438, misc: 127, targetA: 1, perLevel: 2.8 }   # SCHOOL_ABSORB
   client:
-    name: Ice Barrier
+    textKey: spell.948964
     icon: 32             # stock 11426 SpellIconID
     rank: 1
     skillLine: 6         # Frost tab
-    description: "Instantly shields you, absorbing $s1 damage.  Lasts $d.  While the shield holds, spellcasting will not be delayed by damage."
-    auraDescription: "Absorbs damage."
 - id: 948965
+  powerCost: 360
+  manaCostPct: 0
   name: Ice Barrier
   template: 13031
   effects:
   - { effect: 6, aura: 69, basePoints: 549, misc: 127, targetA: 1, perLevel: 3.2 }
   client:
-    name: Ice Barrier
+    textKey: spell.948965
     icon: 32
     rank: 2
     skillLine: 6
-    description: "Instantly shields you, absorbing $s1 damage.  Lasts $d.  While the shield holds, spellcasting will not be delayed by damage."
-    auraDescription: "Absorbs damage."
 - id: 948966
+  powerCost: 420
+  manaCostPct: 0
   name: Ice Barrier
   template: 13032
   effects:
   - { effect: 6, aura: 69, basePoints: 678, misc: 127, targetA: 1, perLevel: 3.6 }
   client:
-    name: Ice Barrier
+    textKey: spell.948966
     icon: 32
     rank: 3
     skillLine: 6
-    description: "Instantly shields you, absorbing $s1 damage.  Lasts $d.  While the shield holds, spellcasting will not be delayed by damage."
-    auraDescription: "Absorbs damage."
 - id: 948967
+  powerCost: 480
+  manaCostPct: 0
   name: Ice Barrier
   template: 13033
   effects:
   - { effect: 6, aura: 69, basePoints: 818, misc: 127, targetA: 1, perLevel: 4.0 }
   client:
-    name: Ice Barrier
+    textKey: spell.948967
     icon: 32
     rank: 4
     skillLine: 6
-    description: "Instantly shields you, absorbing $s1 damage.  Lasts $d.  While the shield holds, spellcasting will not be delayed by damage."
-    auraDescription: "Absorbs damage."
 - id: 948968
+  powerCost: 495
+  manaCostPct: 0
   name: Ice Barrier
   template: 27134
   effects:
   - { effect: 6, aura: 69, basePoints: 925, misc: 127, targetA: 1, perLevel: 4.4 }
   client:
-    name: Ice Barrier
+    textKey: spell.948968
     icon: 32
     rank: 5
     skillLine: 6
-    description: "Instantly shields you, absorbing $s1 damage.  Lasts $d.  While the shield holds, spellcasting will not be delayed by damage."
-    auraDescription: "Absorbs damage."
 - id: 948969
   name: Ice Barrier
   template: 33405
@@ -1267,12 +1221,10 @@ helpers:
   effects:
   - { effect: 6, aura: 69, basePoints: 1075, misc: 127, targetA: 1, perLevel: 4.8 }
   client:
-    name: Ice Barrier
+    textKey: spell.948969
     icon: 32
     rank: 6
     skillLine: 6
-    description: "Instantly shields you, absorbing $s1 damage.  Lasts $d.  While the shield holds, spellcasting will not be delayed by damage."
-    auraDescription: "Absorbs damage."
 tabs:
 - key: 1
   name: Arcane

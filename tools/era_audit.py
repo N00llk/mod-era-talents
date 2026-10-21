@@ -237,6 +237,11 @@ def check_aura_desc_leaks(path: str, d: dict, templates: dict | None, findings: 
         tid = h.get("template")
         if not c or tid is None:
             continue
+        if "textKey" in c:
+            import client_spell_locales as L
+            rel = pathlib.Path(path)
+            catalog = L.load(L.DEFAULT_ROOT / "enUS" / rel.parent.name / rel.name)
+            c = {**c, **catalog["texts"][c["textKey"]]}
         tmpl = (templates or {}).get(int(tid))
         if tmpl is None:
             findings.append(f"{path}: helper {h['id']}: template spell {tid} not in base Spell.dbc")

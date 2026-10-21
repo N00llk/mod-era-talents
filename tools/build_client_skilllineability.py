@@ -70,9 +70,13 @@ def _rows(dataset_paths: list[str]) -> list[list[int]]:
 
 def build(dataset_paths: list[str], base_dbc: pathlib.Path, out: pathlib.Path) -> int:
     raw = base_dbc.read_bytes()
+    if len(raw) < HEADER_SIZE:
+        raise ValueError("truncated SkillLineAbility.dbc header")
     magic, rec_count, field_count, rec_size, str_size = struct.unpack(HEADER_FMT, raw[:HEADER_SIZE])
     if magic != b"WDBC" or field_count != FIELD_COUNT or rec_size != RECORD_SIZE:
         raise SystemExit(f"unexpected base DBC: magic={magic} fields={field_count} recsize={rec_size}")
+    if rec_count < 0 or str_size < 1 or len(raw) != HEADER_SIZE + rec_count * rec_size + str_size:
+        raise ValueError("truncated or invalid SkillLineAbility.dbc length")
     rec_start = HEADER_SIZE
     str_start = rec_start + rec_count * rec_size
     records = bytearray(raw[rec_start:str_start])
@@ -87,14 +91,27 @@ def build(dataset_paths: list[str], base_dbc: pathlib.Path, out: pathlib.Path) -
         struct.unpack_from("<i", records, i * rec_size + SPELL_FIELD * 4)[0]: i
         for i in range(rec_count)
     }
+    ids = [struct.unpack_from("<i", records, i * rec_size)[0] for i in range(rec_count)]
+    if len(set(ids)) != len(ids):
+        raise ValueError("duplicate IDs in SkillLineAbility.dbc")
+    owners = {sid: struct.unpack_from("<i", records, i * rec_size + SPELL_FIELD * 4)[0]
+              for i, sid in enumerate(ids)}
     appended = 0
     for row in custom:
         encoded = struct.pack("<14i", *row)
         spell = row[SPELL_FIELD]
+        if row[0] in owners and owners[row[0]] != spell:
+            raise ValueError(f"SkillLineAbility row ID collision: {row[0]}")
         if spell in pos_by_spell:
             i = pos_by_spell[spell]
+            # Preserve the original mapping row's unique ID on replacement.
+            row[0] = ids[i]
+            encoded = struct.pack("<14i", *row)
             records[i * rec_size:(i + 1) * rec_size] = encoded
         else:
+            pos_by_spell[spell] = rec_count + appended
+            owners[row[0]] = spell
+            ids.append(row[0])
             records += encoded
             appended += 1
 

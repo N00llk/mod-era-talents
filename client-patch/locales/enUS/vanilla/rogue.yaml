@@ -1,0 +1,41 @@
+schemaVersion: 1
+locale: enUS
+era: vanilla
+class: rogue
+texts:
+  spell.932988:
+    name: Mace Specialization
+    auraDescription: Stunned.
+  spell.932985:
+    name: Hemorrhage
+    description: An instant strike that damages the opponent and causes the target to hemorrhage, increasing any
+      Physical damage dealt to the target by up to 3. Lasts 30 charges or 15 sec. Awards 1 combo point.
+    auraDescription: Physical attacks against the target cause 3 extra damage. 30 charges / 15 sec.
+  spell.932986:
+    name: Hemorrhage
+    description: An instant strike that damages the opponent and causes the target to hemorrhage, increasing any
+      Physical damage dealt to the target by up to 5. Lasts 30 charges or 15 sec. Awards 1 combo point.
+    auraDescription: Physical attacks against the target cause 5 extra damage. 30 charges / 15 sec.
+  spell.932987:
+    name: Hemorrhage
+    description: An instant strike that damages the opponent and causes the target to hemorrhage, increasing any
+      Physical damage dealt to the target by up to 7. Lasts 30 charges or 15 sec. Awards 1 combo point.
+    auraDescription: Physical attacks against the target cause 7 extra damage. 30 charges / 15 sec.
+  spell.932983:
+    name: Preparation
+    description: When activated, this ability immediately finishes the cooldown on your Vanish, Evasion, Sprint,
+      Cold Blood, and Blind abilities.
+  spell.932770:
+    name: Adrenaline Rush
+    description: Increases your Energy regeneration rate by 100% for 15 sec.
+    auraDescription: Energy regeneration increased by 100%.
+  spell.932989:
+    name: Riposte
+    description: A strike that becomes active after parrying an opponent's attack.  This attack deals $s1% weapon
+      damage and disarms the target for $d.
+    auraDescription: Disarmed.
+  spell.932984:
+    name: Premeditation
+    description: When used, adds $s1 combo points to your target.  You must add to or use those combo points within
+      $d or the combo points are lost.
+    auraDescription: Your combo points will not be lost.

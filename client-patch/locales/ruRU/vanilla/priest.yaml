@@ -1,0 +1,41 @@
+schemaVersion: 1
+locale: ruRU
+era: vanilla
+class: priest
+texts:
+  spell.932970:
+    name: null
+    description: null
+    auraDescription: null
+    sourceHash: 23875ec1dfad60f4a3c7ac6836c2257a2cfb5b89fb8dd738a8da1fddd7d939e3
+  spell.920987:
+    name: null
+    description: null
+    auraDescription: null
+    sourceHash: 5e9975f5a141150c4bf9ab6f29f390d6976a6324d47c33bce9a154e73e583a03
+  spell.920988:
+    name: null
+    description: null
+    auraDescription: null
+    sourceHash: 592b864b6be22c729a0bc30d02cce2af04f32fb9cff6c559f12e3417efd79cfc
+  spell.920989:
+    name: null
+    description: null
+    auraDescription: null
+    sourceHash: e298026e898037f9c3e63f3e9d5ea6db7901d76f170242a21c97e70c8d527f63
+  spell.932960:
+    name: null
+    sourceHash: e7ac6ea0ff9904bdc997297eedc048d7234d3e9b2596d57fdd51042ac3a62cf1
+  spell.920920:
+    name: null
+    description: null
+    auraDescription: null
+    sourceHash: 7578ca52f5ea10a5afd2c628a591d460f572c124f87408ae6ae339359098acf8
+  spell.921152:
+    name: null
+    description: null
+    auraDescription: null
+    sourceHash: b137c9d8d6f1bdeea3b6eb45cd0f6f4a1a65bace2c96cffe3b81bf11a01979ac
+  spell.932951:
+    name: null
+    sourceHash: 6252dcecd36dd3f391e920adb4dc0ed8c3c80217e342e94deb1c88b91f41104a

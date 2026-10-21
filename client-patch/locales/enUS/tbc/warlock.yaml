@@ -1,0 +1,227 @@
+schemaVersion: 1
+locale: enUS
+era: tbc
+class: warlock
+texts:
+  spell.948410:
+    name: TBC Warlock
+  spell.948420:
+    name: Create Firestone (Lesser)
+    description: Creates a Lesser Firestone that can be equipped in the off-hand. When equipped, it enchants the
+      main hand weapon with fire and increases Fire spell damage.
+  spell.948421:
+    name: Create Firestone
+    description: Creates a Firestone that can be equipped in the off-hand. When equipped, it enchants the main hand
+      weapon with fire and increases Fire spell damage.
+  spell.948422:
+    name: Create Firestone (Greater)
+    description: Creates a Greater Firestone that can be equipped in the off-hand. When equipped, it enchants the
+      main hand weapon with fire and increases Fire spell damage.
+  spell.948423:
+    name: Create Firestone (Major)
+    description: Creates a Major Firestone that can be equipped in the off-hand. When equipped, it enchants the
+      main hand weapon with fire and increases Fire spell damage.
+  spell.948424:
+    name: Create Firestone (Master)
+    description: Creates a Master Firestone that can be equipped in the off-hand. When equipped, it enchants the
+      main hand weapon with fire and increases Fire spell damage.
+  spell.948425:
+    name: Create Spellstone
+    description: Creates a Spellstone that can be equipped in the off-hand. While equipped, it increases spell critical
+      strike chance, and it can be used to remove harmful magic effects and absorb magic damage.
+  spell.948426:
+    name: Create Spellstone (Greater)
+    description: Creates a Greater Spellstone that can be equipped in the off-hand. While equipped, it increases
+      spell critical strike chance, and it can be used to remove harmful magic effects and absorb magic damage.
+  spell.948427:
+    name: Create Spellstone (Major)
+    description: Creates a Major Spellstone that can be equipped in the off-hand. While equipped, it increases spell
+      critical strike chance, and it can be used to remove harmful magic effects and absorb magic damage.
+  spell.948428:
+    name: Create Spellstone (Master)
+    description: Creates a Master Spellstone that can be equipped in the off-hand. While equipped, it increases
+      spell critical strike rating, and it can be used to remove harmful magic effects.
+  spell.948430:
+    name: Firestone
+    description: Enchants the main hand weapon with fire, granting each attack a chance to deal 116 to 174 additional
+      Fire damage, and increases damage done by Fire spells and effects by up to 30.
+  spell.948431:
+    name: Firestone Attack
+  spell.948432:
+    name: Spellstone
+    description: Dispels all harmful magic effects from the caster.
+  spell.948433:
+    name: Spellstone
+    description: Increases your spell critical strike rating by 20.
+  spell.948450:
+    name: Amplify Curse
+    description: Increases the effect of your next Curse of Doom or Curse of Agony by 50%, or your next Curse of
+      Exhaustion by an additional 20%.  Lasts 30 sec.
+    auraDescription: Your next Curse of Doom or Agony is 50% stronger (Exhaustion 20%).
+  spell.948451:
+    name: Siphon Life
+    description: Transfers 15 health from the target to the caster every 3 sec.  Lasts 30 sec.
+    auraDescription: Transferring 15 health to the caster every 3 sec.
+  spell.948452:
+    name: Siphon Life
+    description: Transfers 22 health from the target to the caster every 3 sec.  Lasts 30 sec.
+    auraDescription: Transferring 22 health to the caster every 3 sec.
+  spell.948453:
+    name: Siphon Life
+    description: Transfers 33 health from the target to the caster every 3 sec.  Lasts 30 sec.
+    auraDescription: Transferring 33 health to the caster every 3 sec.
+  spell.948454:
+    name: Siphon Life
+    description: Transfers 45 health from the target to the caster every 3 sec.  Lasts 30 sec.
+    auraDescription: Transferring 45 health to the caster every 3 sec.
+  spell.948455:
+    name: Siphon Life
+    description: Transfers 52 health from the target to the caster every 3 sec.  Lasts 30 sec.
+    auraDescription: Transferring 52 health to the caster every 3 sec.
+  spell.948456:
+    name: Siphon Life
+    description: Transfers 63 health from the target to the caster every 3 sec.  Lasts 30 sec.
+    auraDescription: Transferring 63 health to the caster every 3 sec.
+  spell.948457:
+    name: Improved Drain Soul
+  spell.948460:
+    name: Shadow Embrace
+    auraDescription: Physical damage caused reduced by 1%.
+  spell.948461:
+    name: Shadow Embrace
+    auraDescription: Physical damage caused reduced by 2%.
+  spell.948462:
+    name: Shadow Embrace
+    auraDescription: Physical damage caused reduced by 3%.
+  spell.948463:
+    name: Shadow Embrace
+    auraDescription: Physical damage caused reduced by 4%.
+  spell.948464:
+    name: Shadow Embrace
+    auraDescription: Physical damage caused reduced by 5%.
+  spell.948470:
+    name: Unstable Affliction
+    description: Shadow energy slowly destroys the target, causing 660 damage over 18 sec.  In addition, if the
+      Unstable Affliction is dispelled it will cause 990 damage to the dispeller and silence them for 5 sec.
+    auraDescription: Shadow energy slowly destroying the target.
+  spell.948471:
+    name: Unstable Affliction
+    description: Shadow energy slowly destroys the target, causing 840 damage over 18 sec.  In addition, if the
+      Unstable Affliction is dispelled it will cause 1260 damage to the dispeller and silence them for 5 sec.
+    auraDescription: Shadow energy slowly destroying the target.
+  spell.948472:
+    name: Unstable Affliction
+    description: Shadow energy slowly destroys the target, causing 1050 damage over 18 sec.  In addition, if the
+      Unstable Affliction is dispelled it will cause 1575 damage to the dispeller and silence them for 5 sec.
+    auraDescription: Shadow energy slowly destroying the target.
+  spell.948550:
+    name: Soul Link
+    description: When active, 20% of all damage taken by the caster is taken by your Imp, Voidwalker, Succubus,
+      Felhunter, Felguard, or enslaved demon instead.  That damage cannot be prevented.  In addition, both the demon
+      and master will inflict 5% more damage.  Lasts as long as the demon is active and controlled.
+    auraDescription: 20% of all damage you take is redirected to your demon, and both of you deal 5% more damage.
+  spell.948552:
+    name: Demonic Sacrifice
+    description: 'When activated, sacrifices your summoned demon to grant you an effect that lasts 30 min.  The
+      effect is canceled if any Demon is summoned.  Imp: Increases your Fire damage by 15%.  Voidwalker: Restores
+      2% of total health every 4 sec.  Succubus: Increases your Shadow damage by 15%.  Felhunter: Restores 3% of
+      total mana every 4 sec.  Felguard: Increases your Shadow damage by 10% and restores 2% of total mana every
+      4 sec.'
+  spell.948553:
+    name: Burning Wish
+    auraDescription: Fire damage increased by 15%.
+  spell.948554:
+    name: Fel Stamina
+    auraDescription: Restoring 2% of total health every 4 sec.
+  spell.948555:
+    name: Touch of Shadow
+    auraDescription: Shadow damage increased by 15%.
+  spell.948556:
+    name: Fel Energy
+    auraDescription: Restoring 3% of total mana every 4 sec.
+  spell.948557:
+    name: Touch of Shadow
+    auraDescription: Shadow damage increased by 10%, restoring 2% of total mana every 4 sec.
+  spell.948560:
+    name: Master Demonologist
+    auraDescription: Reduces the threat you cause while your Imp is active.
+  spell.948561:
+    name: Master Demonologist
+    auraDescription: Reduces the physical damage you take while your Voidwalker is active.
+  spell.948562:
+    name: Master Demonologist
+    auraDescription: Increases all damage you cause while your Succubus is active.
+  spell.948563:
+    name: Master Demonologist
+    auraDescription: Increases all resistances while your Felhunter is active.
+  spell.948564:
+    name: Master Demonologist
+    auraDescription: Increases all damage you cause and all resistances while your Felguard is active.
+  spell.948570:
+    name: Fel Domination
+    description: Your next Imp, Voidwalker, Succubus, Felhunter or Felguard Summon spell has its casting time reduced
+      by 5.5 sec and its Mana cost reduced by 50%.
+    auraDescription: Next demon Summon spell is 5.5 sec faster and costs 50% less Mana.
+  spell.948650:
+    name: Conflagrate
+    description: Ignites a target that is already afflicted by your Immolate, dealing 249 to 316 Fire damage and
+      consuming the Immolate spell.
+  spell.948651:
+    name: Conflagrate
+    description: Ignites a target that is already afflicted by your Immolate, dealing 326 to 407 Fire damage and
+      consuming the Immolate spell.
+  spell.948652:
+    name: Conflagrate
+    description: Ignites a target that is already afflicted by your Immolate, dealing 395 to 491 Fire damage and
+      consuming the Immolate spell.
+  spell.948653:
+    name: Conflagrate
+    description: Ignites a target that is already afflicted by your Immolate, dealing 455 to 566 Fire damage and
+      consuming the Immolate spell.
+  spell.948654:
+    name: Conflagrate
+    description: Ignites a target that is already afflicted by your Immolate, dealing 521 to 648 Fire damage and
+      consuming the Immolate spell.
+  spell.948655:
+    name: Conflagrate
+    description: Ignites a target that is already afflicted by your Immolate, dealing 579 to 721 Fire damage and
+      consuming the Immolate spell.
+  spell.948660:
+    name: Shadow Vulnerability
+    auraDescription: Shadow damage taken increased by 4%.
+  spell.948661:
+    name: Shadow Vulnerability
+    auraDescription: Shadow damage taken increased by 8%.
+  spell.948662:
+    name: Shadow Vulnerability
+    auraDescription: Shadow damage taken increased by 12%.
+  spell.948663:
+    name: Shadow Vulnerability
+    auraDescription: Shadow damage taken increased by 16%.
+  spell.948664:
+    name: Shadow Vulnerability
+    auraDescription: Shadow damage taken increased by 20%.
+  spell.948665:
+    name: Aftermath
+    auraDescription: Dazed.
+  spell.948666:
+    name: Pyroclasm
+    auraDescription: Stunned.
+  spell.948667:
+    name: Nether Protection
+    auraDescription: Immune to Shadow and Fire spells.
+  spell.948670:
+    name: Shadowfury
+    description: Shadowfury is unleashed, causing 357 to 422 Shadow damage and stunning all enemies within 8 yds
+      for 2 sec.
+    auraDescription: Stunned.
+  spell.948671:
+    name: Shadowfury
+    description: Shadowfury is unleashed, causing 476 to 565 Shadow damage and stunning all enemies within 8 yds
+      for 2 sec.
+    auraDescription: Stunned.
+  spell.948672:
+    name: Shadowfury
+    description: Shadowfury is unleashed, causing 612 to 728 Shadow damage and stunning all enemies within 8 yds
+      for 2 sec.
+    auraDescription: Stunned.

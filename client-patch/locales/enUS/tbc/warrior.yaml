@@ -1,0 +1,183 @@
+schemaVersion: 1
+locale: enUS
+era: tbc
+class: warrior
+texts:
+  spell.947548:
+    name: Death Wish
+    description: When activated, increases your physical damage by 20% and makes you immune to Fear effects, but
+      increases all damage taken by 5%.  Lasts 30 sec.
+    auraDescription: Physical damage increased by 20%.  Immune to Fear.  All damage taken increased by 5%.
+  spell.947551:
+    name: Deep Wound
+    auraDescription: Bleeding for physical damage every 3 sec.
+  spell.947552:
+    name: Mace Stun Effect
+    auraDescription: Stunned.
+  spell.947512:
+    name: Bloodthirst
+    description: Instantly attack the target, causing damage equal to 45% of your attack power.  In addition, the
+      next 5 successful melee attacks will restore 10 health.  This effect lasts 8 sec.
+  spell.947513:
+    name: Bloodthirst
+    description: Instantly attack the target, causing damage equal to 45% of your attack power.  In addition, the
+      next 5 successful melee attacks will restore 13 health.  This effect lasts 8 sec.
+  spell.947514:
+    name: Bloodthirst
+    description: Instantly attack the target, causing damage equal to 45% of your attack power.  In addition, the
+      next 5 successful melee attacks will restore 17 health.  This effect lasts 8 sec.
+  spell.947515:
+    name: Bloodthirst
+    description: Instantly attack the target, causing damage equal to 45% of your attack power.  In addition, the
+      next 5 successful melee attacks will restore 20 health.  This effect lasts 8 sec.
+  spell.947516:
+    name: Bloodthirst
+    description: Instantly attack the target, causing damage equal to 45% of your attack power.  In addition, the
+      next 5 successful melee attacks will restore 25 health.  This effect lasts 8 sec.
+  spell.947517:
+    name: Bloodthirst
+    description: Instantly attack the target, causing damage equal to 45% of your attack power.  In addition, the
+      next 5 successful melee attacks will restore 30 health.  This effect lasts 8 sec.
+  spell.947518:
+    name: Bloodthirst
+    auraDescription: The next 5 successful melee attacks restore 10 health.  Lasts 8 sec.
+  spell.947519:
+    name: Bloodthirst
+    auraDescription: The next 5 successful melee attacks restore 13 health.  Lasts 8 sec.
+  spell.947520:
+    name: Bloodthirst
+    auraDescription: The next 5 successful melee attacks restore 17 health.  Lasts 8 sec.
+  spell.947521:
+    name: Bloodthirst
+    auraDescription: The next 5 successful melee attacks restore 20 health.  Lasts 8 sec.
+  spell.947522:
+    name: Bloodthirst
+    auraDescription: The next 5 successful melee attacks restore 25 health.  Lasts 8 sec.
+  spell.947523:
+    name: Bloodthirst
+    auraDescription: The next 5 successful melee attacks restore 30 health.  Lasts 8 sec.
+  spell.947524:
+    name: Bloodthirst
+  spell.947525:
+    name: Bloodthirst
+  spell.947526:
+    name: Bloodthirst
+  spell.947527:
+    name: Bloodthirst
+  spell.947528:
+    name: Bloodthirst
+  spell.947529:
+    name: Bloodthirst
+  spell.947533:
+    name: Rampage
+    description: Warrior goes on a rampage, increasing attack power by 30 and causing most successful melee attacks
+      to increase attack power by an additional 30.  This effect will stack up to 5 times.  Lasts 30 sec.  This
+      ability can only be used after scoring a critical hit.
+    auraDescription: Most melee hits increase the warrior's attack power.
+  spell.947534:
+    name: Rampage
+    description: Warrior goes on a rampage, increasing attack power by 40 and causing most successful melee attacks
+      to increase attack power by an additional 40.  This effect will stack up to 5 times.  Lasts 30 sec.  This
+      ability can only be used after scoring a critical hit.
+    auraDescription: Most melee hits increase the warrior's attack power.
+  spell.947535:
+    name: Rampage
+    description: Warrior goes on a rampage, increasing attack power by 50 and causing most successful melee attacks
+      to increase attack power by an additional 50.  This effect will stack up to 5 times.  Lasts 30 sec.  This
+      ability can only be used after scoring a critical hit.
+    auraDescription: Most melee hits increase the warrior's attack power.
+  spell.947536:
+    name: Rampage
+    auraDescription: Attack power increased by 30 per application.  Stacks up to 5 times.
+  spell.947537:
+    name: Rampage
+    auraDescription: Attack power increased by 40 per application.  Stacks up to 5 times.
+  spell.947538:
+    name: Rampage
+    auraDescription: Attack power increased by 50 per application.  Stacks up to 5 times.
+  spell.947540:
+    name: Rampage Ready
+    auraDescription: Rampage may be used.
+  spell.947549:
+    name: Sweeping Strikes
+    description: Your next 10 melee attacks strike an additional nearby opponent.
+    auraDescription: Your next 10 melee attacks strike an additional nearby opponent.
+  spell.947553:
+    name: Blood Craze
+    auraDescription: Regenerating 1% of total health over 6 sec.
+  spell.947554:
+    name: Blood Craze
+    auraDescription: Regenerating 2% of total health over 6 sec.
+  spell.947555:
+    name: Blood Craze
+    auraDescription: Regenerating 3% of total health over 6 sec.
+  spell.947556:
+    name: Enrage
+    auraDescription: Melee damage increased by 5%.
+  spell.947557:
+    name: Enrage
+    auraDescription: Melee damage increased by 10%.
+  spell.947558:
+    name: Enrage
+    auraDescription: Melee damage increased by 15%.
+  spell.947559:
+    name: Enrage
+    auraDescription: Melee damage increased by 20%.
+  spell.947560:
+    name: Enrage
+    auraDescription: Melee damage increased by 25%.
+  spell.947566:
+    name: Shield Specialization
+  spell.947547:
+    name: Last Stand
+    description: When activated, this ability temporarily grants you 30% of your maximum health for 20 sec.  After
+      the effect expires, the health is lost.
+  spell.947550:
+    name: Concussion Blow
+    description: Stuns the opponent for 5 sec.
+    auraDescription: Stunned.
+  spell.947567:
+    name: Shield Bash - Silenced
+    auraDescription: Silenced.
+  spell.947541:
+    name: Shield Slam
+    description: Slam the target with your shield, causing 225 to 235 damage, modified by your shield block value,
+      and dispels 1 magic effect on the target.  Also causes a high amount of threat.
+  spell.947542:
+    name: Shield Slam
+    description: Slam the target with your shield, causing 264 to 276 damage, modified by your shield block value,
+      and dispels 1 magic effect on the target.  Also causes a high amount of threat.
+  spell.947543:
+    name: Shield Slam
+    description: Slam the target with your shield, causing 303 to 317 damage, modified by your shield block value,
+      and dispels 1 magic effect on the target.  Also causes a high amount of threat.
+  spell.947544:
+    name: Shield Slam
+    description: Slam the target with your shield, causing 342 to 358 damage, modified by your shield block value,
+      and dispels 1 magic effect on the target.  Also causes a high amount of threat.
+  spell.947545:
+    name: Shield Slam
+    description: Slam the target with your shield, causing 381 to 399 damage, modified by your shield block value,
+      and dispels 1 magic effect on the target.  Also causes a high amount of threat.
+  spell.947546:
+    name: Shield Slam
+    description: Slam the target with your shield, causing 420 to 440 damage, modified by your shield block value,
+      and dispels 1 magic effect on the target.  Also causes a high amount of threat.
+  spell.947530:
+    name: Devastate
+    description: Sunder the target's armor causing the Sunder Armor effect.  In addition, causes 50% of weapon damage
+      plus 15 for each application of Sunder Armor on the target.  The Sunder Armor effect can stack up to 5 times.
+  spell.947531:
+    name: Devastate
+    description: Sunder the target's armor causing the Sunder Armor effect.  In addition, causes 50% of weapon damage
+      plus 25 for each application of Sunder Armor on the target.  The Sunder Armor effect can stack up to 5 times.
+  spell.947532:
+    name: Devastate
+    description: Sunder the target's armor causing the Sunder Armor effect.  In addition, causes 50% of weapon damage
+      plus 35 for each application of Sunder Armor on the target.  The Sunder Armor effect can stack up to 5 times.
+  spell.947568:
+    name: Blood Frenzy
+    auraDescription: Increases physical damage taken by 2%.
+  spell.947569:
+    name: Blood Frenzy
+    auraDescription: Increases physical damage taken by 4%.

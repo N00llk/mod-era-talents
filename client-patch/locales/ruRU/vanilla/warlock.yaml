@@ -1,0 +1,209 @@
+schemaVersion: 1
+locale: ruRU
+era: vanilla
+class: warlock
+texts:
+  spell.932900:
+    name: null
+    description: null
+    auraDescription: null
+    sourceHash: 1de1042e2f4aa3fbd8b4501dd0f02c61cdf1faae23ca3b292ef7536c15212dca
+  spell.932902:
+    name: null
+    description: null
+    auraDescription: null
+    sourceHash: 20663445c87278c016a583aeaa9fef7a93bd6249b27f2601234cbcc67c3fbf0d
+  spell.932919:
+    name: null
+    description: null
+    auraDescription: null
+    sourceHash: c281a114015f666e8483a07a3221af50ffd3a1485bd5051282622a1444c3ff06
+  spell.932920:
+    name: null
+    description: null
+    auraDescription: null
+    sourceHash: 84275ab08b9d63ab847992d81a8d49e443e1f2b8eda0b4ae017472f97b11c5a7
+  spell.932921:
+    name: null
+    description: null
+    auraDescription: null
+    sourceHash: e2ee0cb9c86835a4afa9413a565a516eef9f01d3a088f36b7af969b0aea6bcb5
+  spell.932918:
+    name: null
+    description: null
+    auraDescription: null
+    sourceHash: eb26c90bd7e88f2c1873bc7ee5c18de49e2cc0641621f06c4228a59304442546
+  spell.932930:
+    name: null
+    sourceHash: 865c257803fecc3494b27756d1e896d9737d61006618b106038b0b943d6506f1
+  spell.932994:
+    name: null
+    sourceHash: 8a0bd36bbe9e535b8191549bb2d527e20ed3ca0c96124b67d03d63bf9068d3ed
+  spell.932939:
+    name: null
+    sourceHash: edd3e103d5c5e26c9e4199b0c2969ea09014ba68ef62c6e517bdbf55044ca03d
+  spell.932940:
+    name: null
+    sourceHash: e7ac6ea0ff9904bdc997297eedc048d7234d3e9b2596d57fdd51042ac3a62cf1
+  spell.932941:
+    name: null
+    sourceHash: e7ac6ea0ff9904bdc997297eedc048d7234d3e9b2596d57fdd51042ac3a62cf1
+  spell.932942:
+    name: null
+    sourceHash: e7ac6ea0ff9904bdc997297eedc048d7234d3e9b2596d57fdd51042ac3a62cf1
+  spell.932943:
+    name: null
+    sourceHash: e7ac6ea0ff9904bdc997297eedc048d7234d3e9b2596d57fdd51042ac3a62cf1
+  spell.932944:
+    name: null
+    sourceHash: e7ac6ea0ff9904bdc997297eedc048d7234d3e9b2596d57fdd51042ac3a62cf1
+  spell.932945:
+    name: null
+    sourceHash: 71b85b6ab98dbe2c3c019e5a61b33583bb941b4124ae077fd200a9748b4a06d1
+  spell.932903:
+    name: null
+    auraDescription: null
+    sourceHash: 83e4dd1b5c5d3a64ccfa210c04ce56b692d6ceeb773c81224b27ada6cf7505bc
+  spell.932904:
+    name: null
+    auraDescription: null
+    sourceHash: e54ea4a750561ac317a2891842cf1095c54fc97a266bbe974f36feecdc5c1fc0
+  spell.932905:
+    name: null
+    auraDescription: null
+    sourceHash: 286c7ff1b6a8c956256eb30a21312f803b760b9510ecea8569f7df5dbbfd2860
+  spell.932906:
+    name: null
+    auraDescription: null
+    sourceHash: c51168687f0d256cc52ad424b9e347518c67e07992b291a8e7f4336150eda5a8
+  spell.932914:
+    name: null
+    sourceHash: 8be995772873ba410d49f6eda111523534531e01e26029e8530eecdd4da7b70d
+  spell.932913:
+    name: null
+    description: null
+    auraDescription: null
+    sourceHash: 4c7a9b62503cd4ac63c97fde38264e2c3bd39f68dbe8c2d809121b03afa5264b
+  spell.932907:
+    name: null
+    auraDescription: null
+    sourceHash: 21841bb066026f54903d3cf00588d5a934c1410133c90b8a8a9a7bd02e5dba16
+  spell.932908:
+    name: null
+    auraDescription: null
+    sourceHash: 525b4d8f9877a0494d30503d2cbdd9eed0f723aa78256cca0795a2bbce0aa39a
+  spell.932909:
+    name: null
+    auraDescription: null
+    sourceHash: 5640d5dacfb4dc3a7fca211570cb551a68a684aaa676e504f8d201f78ab38ef2
+  spell.932910:
+    name: null
+    auraDescription: null
+    sourceHash: 25d57819e966095ffaa2d1745c250aee5d29bc55aabd1f82a48b881d13a60535
+  spell.932922:
+    name: null
+    description: null
+    sourceHash: 2b0eec88222a84dc419d4d81fc34e0602d4270e57c5d97c60f9700599f502e02
+  spell.932923:
+    name: null
+    description: null
+    sourceHash: fd072e401632ffbd45712cd9ac97ed4cb9e19a58bafb9e98aa39a5bd3f796af8
+  spell.932924:
+    name: null
+    description: null
+    sourceHash: 170b5b08760c2e1c263afb6e460d9c23764a266b6ca2aa30b6d43cbc07b3a74e
+  spell.932925:
+    name: null
+    description: null
+    sourceHash: 7b385e2fd8d23cd021af9a2f8969b12f034a2b68a4796eeec01518eb5fa2ea8c
+  spell.932926:
+    name: null
+    description: null
+    sourceHash: a1c15ae67de7fa42783810191ca0506978edba564aec1ed777d381f0df0fdce1
+  spell.932927:
+    name: null
+    description: null
+    sourceHash: f77b7854d5d90efcbe3e13617dfa5b83b444e34fda293f23547039baf823e354
+  spell.932928:
+    name: null
+    description: null
+    sourceHash: 4f89d772fd50916339ec1c4914362ddd22c6e38fe135639786aaa0606ab66c30
+  spell.932931:
+    name: null
+    description: null
+    sourceHash: ad32c535a72e7308b635cd295ac81e8697980d78a4e9ca1766c2dbba9ee2557d
+  spell.932932:
+    name: null
+    description: null
+    sourceHash: 28251a207332157967f63512d93c9e011a6efb48c8fbcd41a867a5a7cd341fdc
+  spell.932933:
+    name: null
+    description: null
+    sourceHash: 86af9d505c82961b2efacf827af3df7b26228830eac316bbd8a67e7ac469ea91
+  spell.932934:
+    name: null
+    description: null
+    sourceHash: 7b6c8f7fe9080e087f4bfc822e6acd497672136dd42e3621cb92b818f7348c66
+  spell.932935:
+    name: null
+    sourceHash: d10b362dbe88bc8d42188e79cdc47d3b1f4051309dc13d5d11e8789ca68910b0
+  spell.932936:
+    name: null
+    sourceHash: d10b362dbe88bc8d42188e79cdc47d3b1f4051309dc13d5d11e8789ca68910b0
+  spell.932937:
+    name: null
+    sourceHash: d10b362dbe88bc8d42188e79cdc47d3b1f4051309dc13d5d11e8789ca68910b0
+  spell.932938:
+    name: null
+    sourceHash: d10b362dbe88bc8d42188e79cdc47d3b1f4051309dc13d5d11e8789ca68910b0
+  spell.932946:
+    name: null
+    description: null
+    auraDescription: null
+    sourceHash: f09f0f0b53b83babc4374d21a0ca6ed9ae1d2c24a31d0a26be136ea5c74c4674
+  spell.932947:
+    name: null
+    description: null
+    auraDescription: null
+    sourceHash: dc35eb61f51725c976dfdf07f27f54773f52a94527ac07945a2eaca5ee9eba99
+  spell.932948:
+    name: null
+    description: null
+    auraDescription: null
+    sourceHash: a1d3a6ab49dd4dda73014ccf0411c4eedfc6ac1f85e07232cfbb52dfb56124e7
+  spell.932929:
+    name: null
+    description: null
+    sourceHash: f938b4eabf9754ad904e934dd4f19a8f64bd1cf2250ba571f2e426e39b32bff4
+  spell.932949:
+    name: null
+    description: null
+    sourceHash: 6850f6b52cc6df92588612e7e0e66525c6fd7f691c58bf48c93a703e61e9fcc5
+  spell.932780:
+    name: null
+    description: null
+    sourceHash: a4a7191650543ab624419d2d7ce0a197fc7c75f6c385bd4b7b403ab3b238cd6f
+  spell.932781:
+    name: null
+    description: null
+    sourceHash: c39f99998505ef9473d9a8ade2106ddacb9d67fd43e039c5bebbc8396514ef39
+  spell.932782:
+    name: null
+    description: null
+    sourceHash: 732052d2a7d90c141b436e0aa9f8977bc26c9e46bc08c047c07eb872939a5680
+  spell.932783:
+    name: null
+    description: null
+    sourceHash: 3111b7b9224e5ef594d88055fdc06a10539f821f157ef186a199980aee966017
+  spell.932784:
+    name: null
+    description: null
+    sourceHash: be9296afa370d722c9e5f7662a10f4772a85590367c179d5e45b8468dda28ca3
+  spell.932785:
+    name: null
+    description: null
+    sourceHash: 8f053e9d48335abda9fae9f105e53af18e167908d2bdc866c81ec85fb6323c71
+  spell.932786:
+    name: null
+    description: null
+    sourceHash: bcf7a873dcc2ecaca9ed2819c535b7313f38b1a85d77ba987910823bd2a0695f

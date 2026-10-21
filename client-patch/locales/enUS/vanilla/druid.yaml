@@ -1,0 +1,80 @@
+schemaVersion: 1
+locale: enUS
+era: vanilla
+class: druid
+texts:
+  spell.932503:
+    name: Leader of the Pack
+    auraDescription: Melee and ranged critical strike chance of nearby party members increased by 3%.
+  spell.932506:
+    name: Leader of the Pack
+    auraDescription: Melee and ranged critical strike chance of nearby party members increased by 3%.
+  spell.932504:
+    name: Nature's Grace
+    auraDescription: Reduces the casting time of your next spell by 0.5 sec.
+  spell.932505:
+    name: Nature's Grasp
+    description: While active, any time an enemy strikes the caster they have a chance to become afflicted by Entangling
+      Roots (Rank 1). Only useable outdoors. 1 charge. Lasts 45 sec.
+    auraDescription: Any time an enemy strikes you they have a chance to become afflicted by Entangling Roots.
+  spell.932507:
+    name: Nature's Grasp
+    description: While active, any time an enemy strikes the caster they have a chance to become afflicted by Entangling
+      Roots (Rank 2). Only useable outdoors. 1 charge. Lasts 45 sec.
+    auraDescription: Any time an enemy strikes you they have a chance to become afflicted by Entangling Roots.
+  spell.932508:
+    name: Nature's Grasp
+    description: While active, any time an enemy strikes the caster they have a chance to become afflicted by Entangling
+      Roots (Rank 3). Only useable outdoors. 1 charge. Lasts 45 sec.
+    auraDescription: Any time an enemy strikes you they have a chance to become afflicted by Entangling Roots.
+  spell.932509:
+    name: Nature's Grasp
+    description: While active, any time an enemy strikes the caster they have a chance to become afflicted by Entangling
+      Roots (Rank 4). Only useable outdoors. 1 charge. Lasts 45 sec.
+    auraDescription: Any time an enemy strikes you they have a chance to become afflicted by Entangling Roots.
+  spell.932510:
+    name: Nature's Grasp
+    description: While active, any time an enemy strikes the caster they have a chance to become afflicted by Entangling
+      Roots (Rank 5). Only useable outdoors. 1 charge. Lasts 45 sec.
+    auraDescription: Any time an enemy strikes you they have a chance to become afflicted by Entangling Roots.
+  spell.932511:
+    name: Nature's Grasp
+    description: While active, any time an enemy strikes the caster they have a chance to become afflicted by Entangling
+      Roots (Rank 6). Only useable outdoors. 1 charge. Lasts 45 sec.
+    auraDescription: Any time an enemy strikes you they have a chance to become afflicted by Entangling Roots.
+  spell.932512:
+    name: Omen of Clarity
+    description: Imbues the Druid with natural energy. Each of the Druid's melee attacks has a chance of causing
+      the caster to enter a Clearcasting state. The Clearcasting state reduces the Mana, Rage or Energy cost of
+      your next damage or healing spell or offensive ability by 100%. Lasts 10 min.
+    auraDescription: Each of your melee attacks has a chance to reduce the cost of your next spell or ability by
+      100%.
+  spell.932513:
+    name: Enrage
+    description: Generates 20 Rage over 10 sec. Only usable in Bear Form and Dire Bear Form.
+    auraDescription: Generating Rage.
+  spell.932514:
+    name: Insect Swarm
+    description: The enemy target is swarmed by insects, decreasing their chance to hit by $s2% and causing $o1
+      Nature damage over $d.
+    auraDescription: Chance to hit reduced by $s2%. $s1 Nature damage every $t1 sec.
+  spell.932515:
+    name: Insect Swarm
+    description: The enemy target is swarmed by insects, decreasing their chance to hit by $s2% and causing $o1
+      Nature damage over $d.
+    auraDescription: Chance to hit reduced by $s2%. $s1 Nature damage every $t1 sec.
+  spell.932516:
+    name: Insect Swarm
+    description: The enemy target is swarmed by insects, decreasing their chance to hit by $s2% and causing $o1
+      Nature damage over $d.
+    auraDescription: Chance to hit reduced by $s2%. $s1 Nature damage every $t1 sec.
+  spell.932517:
+    name: Insect Swarm
+    description: The enemy target is swarmed by insects, decreasing their chance to hit by $s2% and causing $o1
+      Nature damage over $d.
+    auraDescription: Chance to hit reduced by $s2%. $s1 Nature damage every $t1 sec.
+  spell.932518:
+    name: Insect Swarm
+    description: The enemy target is swarmed by insects, decreasing their chance to hit by $s2% and causing $o1
+      Nature damage over $d.
+    auraDescription: Chance to hit reduced by $s2%. $s1 Nature damage every $t1 sec.

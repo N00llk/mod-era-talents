@@ -4,9 +4,8 @@
 # regens are how the client and server ended up running different generations of the same spell.
 #
 # Legs: per-dataset era_talent/era_talent_rank SQL + custom spell_dbc/spell_proc SQL, the
-# era_talent_meta stamp SQL, the addon Lua (client-addon/EraTalents/build-addon.sh), and — when
-# the MPQ tools and a built client-patch/out/patch-V.mpq exist — the merged client patch
-# (merge-into-patch.sh embeds the same stamp).
+# era_talent_meta stamp SQL, the addon Lua (client-addon/EraTalents/build-addon.sh), and a
+# single-locale client patch when ERA_CLIENT_LOCALE + ERA_CLIENT_DBC_DIR are configured.
 #
 # Usage: tools/era-regen.sh [--sync-fork <azerothcore-root>]
 #   --sync-fork  also mirror this repo into <azerothcore-root>/modules/mod-era-talents (a build
@@ -16,6 +15,11 @@ ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 MOD="$ROOT"   # this repo IS the module
 SQLDIR="$MOD/data/sql/world/base"
 MANIFEST="$ROOT/era-data/datasets.txt"
+if [[ -n "${ERA_CLIENT_LOCALE:-}" || -n "${ERA_CLIENT_DBC_DIR:-}" ]]; then
+  [[ -n "${ERA_CLIENT_LOCALE:-}" && -n "${ERA_CLIENT_DBC_DIR:-}" ]] || {
+    echo 'Set both ERA_CLIENT_LOCALE and ERA_CLIENT_DBC_DIR.' >&2; exit 2;
+  }
+fi
 # Pre-check field count over the WHOLE manifest before parsing a single line — matches the
 # pytest helper's `assert len(parts) == 3`. Must run before the read loop below, not inside it,
 # so a bad line anywhere aborts before any dataset is processed.
@@ -57,13 +61,13 @@ uv run --with pyyaml python "$ROOT/tools/gen_era_talents.py" \
 echo "==> addon Lua"
 bash "$ROOT/client-addon/EraTalents/build-addon.sh"
 
-TARGET="${ERA_PATCH_V:-$ROOT/client-patch/out/patch-V.mpq}"
-if [[ -x "$ROOT/client-patch/mpqpack" && -x "$ROOT/client-patch/mpqread" && -f "$TARGET" ]]; then
-  echo "==> client patch (merge into $TARGET, in place)"
-  bash "$ROOT/client-patch/merge-into-patch.sh" "$TARGET" "$ROOT/client-patch/out/patch-V.merged.mpq"
-  mv -f "$ROOT/client-patch/out/patch-V.merged.mpq" "$TARGET"
+if [[ -n "${ERA_CLIENT_LOCALE:-}" && -n "${ERA_CLIENT_DBC_DIR:-}" ]]; then
+  echo "==> client patch ($ERA_CLIENT_LOCALE, original client DBCs)"
+  bash "$ROOT/client-patch/build-client-patch.sh" --locale "$ERA_CLIENT_LOCALE" \
+    --source-dbc "$ERA_CLIENT_DBC_DIR" \
+    --out "${ERA_PATCH_OUT:-$ROOT/client-patch/out/$ERA_CLIENT_LOCALE/patch-V.mpq}" --force
 else
-  echo "NOTE: mpq tools or patch-V.mpq missing — client patch NOT rebuilt (see client-patch/README.md)"
+  echo "NOTE: client patch NOT rebuilt — set ERA_CLIENT_LOCALE and ERA_CLIENT_DBC_DIR to build one locale."
 fi
 
 if [[ "${1:-}" == "--sync-fork" ]]; then
@@ -88,4 +92,4 @@ PY
 )"
 echo "==> DONE. Generation stamp: $STAMP"
 echo "    Server: applied on next db-import + worldserver restart."
-echo "    Client: install client-patch/out/patch-V.mpq to each client's Data/ and relaunch."
+echo "    Client: build/install the matching locale's patch, then fully relaunch WoW."

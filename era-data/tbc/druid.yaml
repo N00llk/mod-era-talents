@@ -2078,9 +2078,8 @@ helpers:
   effects:
   - { effect: 6, aura: 107, basePoints: -500, dieSides: 0, misc: 10, targetA: 1 }
   client:
-    name: Nature's Grace
+    textKey: spell.946268
     icon: 10
-    auraDescription: Reduces the casting time of your next spell by 0.5 sec.
 # ---------------------------------------------------------------------------------------------------
 # Nature's Grasp r1-r6 (node 20101). FRESH TBC clones, NOT the Vanilla 932505/932507-511 chain:
 # TBC Nature's Grasp has NO SpellPower row on any of its six ranks in wago 2.5.4.44833 (verified
@@ -2109,10 +2108,8 @@ helpers:
   - { effect: 0, targetA: 0 }
   - { effect: 6, aura: 42, basePoints: 0, dieSides: 0, targetA: 1, trigger: 19975 }
   client:
-    name: Nature's Grasp
+    textKey: spell.946270
     icon: 168
-    description: While active, any time an enemy strikes the caster they have a chance to become afflicted by Entangling Roots (Rank 1). Only useable outdoors. 1 charge. Lasts 45 sec.
-    auraDescription: Melee damage you take has a chance to entangle the enemy.
     skillLine: 574
 - id: 946271
   name: Nature's Grasp
@@ -2127,11 +2124,9 @@ helpers:
   - { effect: 0, targetA: 0 }
   - { effect: 6, aura: 42, basePoints: 0, dieSides: 0, targetA: 1, trigger: 19974 }
   client:
-    name: Nature's Grasp
+    textKey: spell.946271
     icon: 168
     rank: 2
-    description: While active, any time an enemy strikes the caster they have a chance to become afflicted by Entangling Roots (Rank 2). Only useable outdoors. 1 charge. Lasts 45 sec.
-    auraDescription: Melee damage you take has a chance to entangle the enemy.
     skillLine: 574
 - id: 946272
   name: Nature's Grasp
@@ -2146,11 +2141,9 @@ helpers:
   - { effect: 0, targetA: 0 }
   - { effect: 6, aura: 42, basePoints: 0, dieSides: 0, targetA: 1, trigger: 19973 }
   client:
-    name: Nature's Grasp
+    textKey: spell.946272
     icon: 168
     rank: 3
-    description: While active, any time an enemy strikes the caster they have a chance to become afflicted by Entangling Roots (Rank 3). Only useable outdoors. 1 charge. Lasts 45 sec.
-    auraDescription: Melee damage you take has a chance to entangle the enemy.
     skillLine: 574
 - id: 946273
   name: Nature's Grasp
@@ -2165,11 +2158,9 @@ helpers:
   - { effect: 0, targetA: 0 }
   - { effect: 6, aura: 42, basePoints: 0, dieSides: 0, targetA: 1, trigger: 19972 }
   client:
-    name: Nature's Grasp
+    textKey: spell.946273
     icon: 168
     rank: 4
-    description: While active, any time an enemy strikes the caster they have a chance to become afflicted by Entangling Roots (Rank 4). Only useable outdoors. 1 charge. Lasts 45 sec.
-    auraDescription: Melee damage you take has a chance to entangle the enemy.
     skillLine: 574
 - id: 946274
   name: Nature's Grasp
@@ -2184,11 +2175,9 @@ helpers:
   - { effect: 0, targetA: 0 }
   - { effect: 6, aura: 42, basePoints: 0, dieSides: 0, targetA: 1, trigger: 19971 }
   client:
-    name: Nature's Grasp
+    textKey: spell.946274
     icon: 168
     rank: 5
-    description: While active, any time an enemy strikes the caster they have a chance to become afflicted by Entangling Roots (Rank 5). Only useable outdoors. 1 charge. Lasts 45 sec.
-    auraDescription: Melee damage you take has a chance to entangle the enemy.
     skillLine: 574
 - id: 946275
   name: Nature's Grasp
@@ -2203,11 +2192,9 @@ helpers:
   - { effect: 0, targetA: 0 }
   - { effect: 6, aura: 42, basePoints: 0, dieSides: 0, targetA: 1, trigger: 19970 }
   client:
-    name: Nature's Grasp
+    textKey: spell.946275
     icon: 168
     rank: 6
-    description: While active, any time an enemy strikes the caster they have a chance to become afflicted by Entangling Roots (Rank 6). Only useable outdoors. 1 charge. Lasts 45 sec.
-    auraDescription: Melee damage you take has a chance to entangle the enemy.
     skillLine: 574
 # ---------------------------------------------------------------------------------------------------
 # FERAL COMBAT tab (Task 7) claims 946256-946263.
@@ -2228,10 +2215,8 @@ helpers:
   effects:
   - { effect: 64, aura: 0, basePoints: 0, dieSides: 0, targetA: 1, trigger: 946257 }
   client:
-    name: Leader of the Pack
+    textKey: spell.946256
     icon: 312
-    description: While in Cat, Bear or Dire Bear Form, the Leader of the Pack increases ranged and melee critical chance of all party members within 45 yards by 5%.
-    auraDescription: Melee and ranged critical strike chance of nearby party members increased by 5%.
     skillLine: 134            # Feral Combat spellbook tab (the visible party aura is 946257)
 #   946257 = the VISIBLE party aura. Templates STOCK 24932 (not 17007, unlike the Vanilla pair) for
 #            three inherited properties that are all load-bearing:
@@ -2279,9 +2264,8 @@ helpers:
     hitMask: 2               # CRIT ONLY — mirrors stock 24932's spell_proc row
     chance: 100
   client:
-    name: Leader of the Pack
+    textKey: spell.946257
     icon: 312
-    auraDescription: Increases ranged and melee critical chance by $s1%.
     # no skillLine: triggered only (never learnable/trainable) — it must not get its own spellbook entry
 # ---------------------------------------------------------------------------------------------------
 # Mangle (node 20141). SIX clones: Bear r1-r3 = 946258-946260 (templates 33878/33986/33987),
@@ -2312,11 +2296,9 @@ helpers:
   - { effect: 6, aura: 255, basePoints: 29, dieSides: 1, misc: 15, targetA: 6 }  # MOD_MECHANIC_DAMAGE_TAKEN_PERCENT +30% on MECHANIC_BLEED
   - { effect: 31, aura: 0, basePoints: 114, dieSides: 1, misc: 0, targetA: 6 }   # WEAPON_PERCENT_DAMAGE 115% — IDENTICAL in both eras, do not retune
   client:
-    name: Mangle (Bear)
+    textKey: spell.946258
     icon: 2312
     rank: 1
-    description: Mangle the target for $s3% normal damage plus ${$m1*$m3/100} and causes the target to take $s2% additional damage from bleed effects for $d.
-    auraDescription: All bleed effects cause $s2% additional damage.
     skillLine: 134
 - id: 946259
   name: Mangle (Bear)
@@ -2327,11 +2309,9 @@ helpers:
   - { effect: 6, aura: 255, basePoints: 29, dieSides: 1, misc: 15, targetA: 6 }  # MOD_MECHANIC_DAMAGE_TAKEN_PERCENT +30% on MECHANIC_BLEED
   - { effect: 31, aura: 0, basePoints: 114, dieSides: 1, misc: 0, targetA: 6 }   # WEAPON_PERCENT_DAMAGE 115% — IDENTICAL in both eras, do not retune
   client:
-    name: Mangle (Bear)
+    textKey: spell.946259
     icon: 2312
     rank: 2
-    description: Mangle the target for $s3% normal damage plus ${$m1*$m3/100} and causes the target to take $s2% additional damage from bleed effects for $d.
-    auraDescription: All bleed effects cause $s2% additional damage.
     skillLine: 134
 - id: 946260
   name: Mangle (Bear)
@@ -2342,11 +2322,9 @@ helpers:
   - { effect: 6, aura: 255, basePoints: 29, dieSides: 1, misc: 15, targetA: 6 }  # MOD_MECHANIC_DAMAGE_TAKEN_PERCENT +30% on MECHANIC_BLEED
   - { effect: 31, aura: 0, basePoints: 114, dieSides: 1, misc: 0, targetA: 6 }   # WEAPON_PERCENT_DAMAGE 115% — IDENTICAL in both eras, do not retune
   client:
-    name: Mangle (Bear)
+    textKey: spell.946260
     icon: 2312
     rank: 3
-    description: Mangle the target for $s3% normal damage plus ${$m1*$m3/100} and causes the target to take $s2% additional damage from bleed effects for $d.
-    auraDescription: All bleed effects cause $s2% additional damage.
     skillLine: 134
 - id: 946261
   name: Mangle (Cat)
@@ -2357,11 +2335,9 @@ helpers:
   - { effect: 6, aura: 255, basePoints: 29, dieSides: 1, misc: 15, targetA: 6 }  # MOD_MECHANIC_DAMAGE_TAKEN_PERCENT +30% on MECHANIC_BLEED
   - { effect: 31, aura: 0, basePoints: 159, dieSides: 1, misc: 0, targetA: 6 }   # WEAPON_PERCENT_DAMAGE 160% (live is 199 = 200%)
   client:
-    name: Mangle (Cat)
+    textKey: spell.946261
     icon: 2312
     rank: 1
-    description: Mangle the target for $s3% normal damage plus ${$m1*$m3/100} and causes the target to take $s2% additional damage from bleed effects for $d.  Awards $34071s1 combo $lpoint:points;.
-    auraDescription: All bleed effects cause $s2% additional damage.
     skillLine: 134
 - id: 946262
   name: Mangle (Cat)
@@ -2372,11 +2348,9 @@ helpers:
   - { effect: 6, aura: 255, basePoints: 29, dieSides: 1, misc: 15, targetA: 6 }
   - { effect: 31, aura: 0, basePoints: 159, dieSides: 1, misc: 0, targetA: 6 }
   client:
-    name: Mangle (Cat)
+    textKey: spell.946262
     icon: 2312
     rank: 2
-    description: Mangle the target for $s3% normal damage plus ${$m1*$m3/100} and causes the target to take $s2% additional damage from bleed effects for $d.  Awards $34071s1 combo $lpoint:points;.
-    auraDescription: All bleed effects cause $s2% additional damage.
     skillLine: 134
 - id: 946263
   name: Mangle (Cat)
@@ -2387,11 +2361,9 @@ helpers:
   - { effect: 6, aura: 255, basePoints: 29, dieSides: 1, misc: 15, targetA: 6 }
   - { effect: 31, aura: 0, basePoints: 159, dieSides: 1, misc: 0, targetA: 6 }
   client:
-    name: Mangle (Cat)
+    textKey: spell.946263
     icon: 2312
     rank: 3
-    description: Mangle the target for $s3% normal damage plus ${$m1*$m3/100} and causes the target to take $s2% additional damage from bleed effects for $d.  Awards $34071s1 combo $lpoint:points;.
-    auraDescription: All bleed effects cause $s2% additional damage.
     skillLine: 134
 # ---------------------------------------------------------------------------------------------------
 # RESTORATION tab (Task 8) claims 946265 / 946266 (Tree of Life) and 946269 (Omen of Clarity).
@@ -2440,10 +2412,8 @@ helpers:
   effects:
   - { effect: 6, aura: 42, basePoints: 0, dieSides: 0, targetA: 1, trigger: 16870 }  # PROC_TRIGGER -> Clearcasting 16870
   client:
-    name: Omen of Clarity
+    textKey: spell.946269
     icon: 1754
-    description: "Imbues the Druid with natural energy. Each of the Druid's melee attacks has a chance of causing the caster to enter a Clearcasting state. The Clearcasting state reduces the Mana, Rage or Energy cost of your next damage or healing spell or offensive ability by 100%. Lasts 30 min."
-    auraDescription: "Each of your melee attacks has a chance to reduce the cost of your next spell or ability by 100%."
     skillLine: 573           # Restoration spellbook tab (TBC moved Omen from Balance to Restoration)
 # ---------------------------------------------------------------------------------------------------
 # Tree of Life (node 20161) — Route B (spec Amendment A.2, _ref.tree_of_life). TWO helpers, the same
@@ -2489,13 +2459,11 @@ helpers:
   effects:
   - { effect: 35, aura: 115, basePoints: 0, dieSides: 0, misc: 127, targetA: 1, radius: 11 }  # APPLY_AREA_AURA_PARTY, MOD_HEALING all schools, 45 yd
   client:
-    name: Tree of Life
+    textKey: spell.946266
     icon: 2257
     # `description:` is authored too, not just auraDescription: a template clone inherits the stock
     # row's Description, and live 34123's reads "Increases healing received by raid members within
     # $a1 yards by $s1%" — the WotLK raid/percentage text, which is exactly what this aura is not.
-    description: "Increases healing received by party members within 45 yards by an amount equal to 25% of the Tree of Life Druid's Spirit."
-    auraDescription: "Healing received is increased by an amount equal to 25% of the Tree of Life Druid's Spirit."
     # no skillLine: triggered only (never learnable/trainable) — it must not get a spellbook entry
 # ---------------------------------------------------------------------------------------------------
 # Tree of Life FORM spell (node 20161). FIX ROUND 2026-08-31 (real-client defect 3), spec
@@ -2529,18 +2497,17 @@ helpers:
 #   And 33891 appears NOWHERE by id in src/server (grep). The suppression gate is
 #   HasSpell(946265), which the kEraDruidTbcPaired arm still supplies unchanged.
 - id: 946276
+  manaCostPct: 28
   name: Tree of Life
   template: 33891
   effects:
   - { effect: 6, aura: 36, basePoints: -1, dieSides: 1, misc: 2, targetA: 1 }    # MOD_SHAPESHIFT, FORM_TREE — verbatim from 33891
   - { effect: 6, aura: 77, basePoints: -1, dieSides: 1, misc: 17, targetA: 1 }   # MECHANIC_IMMUNITY, Polymorph — verbatim from 33891
   client:
-    name: Tree of Life
+    textKey: spell.946276
     icon: 2257
     # The whole point of the clone: TBC prose with NO cross-spell `$34123...` references, so the
     # client renders the shipped behavior instead of resolving the WotLK 34123 row.
-    description: "Shapeshift into the Tree of Life.  While in this form you increase healing received by all party members within 45 yards by an amount equal to 25% of your total Spirit, and you can only cast Restoration spells in addition to Innervate, Barkskin, Nature's Grasp and Thorns spells.\n\nThe act of shapeshifting frees the caster of Polymorph and Movement Impairing effects."
-    auraDescription: "Immune to Polymorph effects.  Increases healing received by all party members within 45 yards by an amount equal to 25% of your total Spirit."
     skillLine: 573
 # ---------------------------------------------------------------------------------------------------
 # Improved Faerie Fire r1-r3 companion debuffs (node 20118), added 2026-08-31. TBC delivered this
@@ -2587,7 +2554,7 @@ helpers:
   - { effect: 6, aura: 184, basePoints: 1, dieSides: 0, targetA: 6 }   # MOD_ATTACKER_MELEE_HIT_CHANCE +1%
   - { effect: 6, aura: 185, basePoints: 1, dieSides: 0, targetA: 6 }   # MOD_ATTACKER_RANGED_HIT_CHANCE +1%
   client:
-    name: Improved Faerie Fire
+    textKey: spell.946277
     icon: 109
     # description is authored, NOT inherited: templating off 770 otherwise carries stock
     # Faerie Fire's own "Decrease the armor of the target by $s1%" prose, which this clone
@@ -2595,8 +2562,6 @@ helpers:
     # hit % as an armor number). Unreachable in practice — never learned, never in a
     # spellbook, and node 20118 is a non-grant node so the talent panel shows its own
     # prose — but wrong text shipped in the client patch is not worth carrying.
-    description: "Increases the chance the target will be hit by melee and ranged attacks by 1% for $d."
-    auraDescription: "Chance to be hit by melee and ranged attacks increased by 1%."
 - id: 946278
   name: Improved Faerie Fire
   template: 770
@@ -2607,7 +2572,7 @@ helpers:
   - { effect: 6, aura: 184, basePoints: 2, dieSides: 0, targetA: 6 }
   - { effect: 6, aura: 185, basePoints: 2, dieSides: 0, targetA: 6 }
   client:
-    name: Improved Faerie Fire
+    textKey: spell.946278
     icon: 109
     # description is authored, NOT inherited: templating off 770 otherwise carries stock
     # Faerie Fire's own "Decrease the armor of the target by $s1%" prose, which this clone
@@ -2615,8 +2580,6 @@ helpers:
     # hit % as an armor number). Unreachable in practice — never learned, never in a
     # spellbook, and node 20118 is a non-grant node so the talent panel shows its own
     # prose — but wrong text shipped in the client patch is not worth carrying.
-    description: "Increases the chance the target will be hit by melee and ranged attacks by 2% for $d."
-    auraDescription: "Chance to be hit by melee and ranged attacks increased by 2%."
 - id: 946279
   name: Improved Faerie Fire
   template: 770
@@ -2627,7 +2590,7 @@ helpers:
   - { effect: 6, aura: 184, basePoints: 3, dieSides: 0, targetA: 6 }
   - { effect: 6, aura: 185, basePoints: 3, dieSides: 0, targetA: 6 }
   client:
-    name: Improved Faerie Fire
+    textKey: spell.946279
     icon: 109
     # description is authored, NOT inherited: templating off 770 otherwise carries stock
     # Faerie Fire's own "Decrease the armor of the target by $s1%" prose, which this clone
@@ -2635,8 +2598,6 @@ helpers:
     # hit % as an armor number). Unreachable in practice — never learned, never in a
     # spellbook, and node 20118 is a non-grant node so the talent panel shows its own
     # prose — but wrong text shipped in the client patch is not worth carrying.
-    description: "Increases the chance the target will be hit by melee and ranged attacks by 3% for $d."
-    auraDescription: "Chance to be hit by melee and ranged attacks increased by 3%."
 # ---------------------------------------------------------------------------------------------------
 # "Era: TBC Heart of the Wild" marker (node 20135), added 2026-08-31. Arms CORE PATCH 0023.
 #
@@ -2680,11 +2641,9 @@ helpers:
   - { effect: 6, aura: 3,  basePoints: 18, dieSides: 0, targetA: 6, amplitude: 2000 }   # 108 over 12 s
   - { effect: 6, aura: 54, basePoints: -2, dieSides: 0, targetA: 6 }
   client:
-    name: Insect Swarm
+    textKey: spell.946281
     icon: 1771
     rank: 1
-    description: "The enemy target is swarmed by insects, decreasing their chance to hit by $s2% and causing $o1 Nature damage over $d."
-    auraDescription: "Chance to hit reduced by $s2%. $s1 Nature damage every $t1 sec."
     skillLine: 574
 - id: 946282
   name: Insect Swarm
@@ -2695,11 +2654,9 @@ helpers:
   - { effect: 6, aura: 3,  basePoints: 32, dieSides: 0, targetA: 6, amplitude: 2000 }   # 192
   - { effect: 6, aura: 54, basePoints: -2, dieSides: 0, targetA: 6 }
   client:
-    name: Insect Swarm
+    textKey: spell.946282
     icon: 1771
     rank: 2
-    description: "The enemy target is swarmed by insects, decreasing their chance to hit by $s2% and causing $o1 Nature damage over $d."
-    auraDescription: "Chance to hit reduced by $s2%. $s1 Nature damage every $t1 sec."
     skillLine: 574
 - id: 946283
   name: Insect Swarm
@@ -2710,11 +2667,9 @@ helpers:
   - { effect: 6, aura: 3,  basePoints: 50, dieSides: 0, targetA: 6, amplitude: 2000 }   # 300
   - { effect: 6, aura: 54, basePoints: -2, dieSides: 0, targetA: 6 }
   client:
-    name: Insect Swarm
+    textKey: spell.946283
     icon: 1771
     rank: 3
-    description: "The enemy target is swarmed by insects, decreasing their chance to hit by $s2% and causing $o1 Nature damage over $d."
-    auraDescription: "Chance to hit reduced by $s2%. $s1 Nature damage every $t1 sec."
     skillLine: 574
 - id: 946284
   name: Insect Swarm
@@ -2725,11 +2680,9 @@ helpers:
   - { effect: 6, aura: 3,  basePoints: 72, dieSides: 0, targetA: 6, amplitude: 2000 }   # 432
   - { effect: 6, aura: 54, basePoints: -2, dieSides: 0, targetA: 6 }
   client:
-    name: Insect Swarm
+    textKey: spell.946284
     icon: 1771
     rank: 4
-    description: "The enemy target is swarmed by insects, decreasing their chance to hit by $s2% and causing $o1 Nature damage over $d."
-    auraDescription: "Chance to hit reduced by $s2%. $s1 Nature damage every $t1 sec."
     skillLine: 574
 - id: 946285
   name: Insect Swarm
@@ -2740,11 +2693,9 @@ helpers:
   - { effect: 6, aura: 3,  basePoints: 99, dieSides: 0, targetA: 6, amplitude: 2000 }   # 594
   - { effect: 6, aura: 54, basePoints: -2, dieSides: 0, targetA: 6 }
   client:
-    name: Insect Swarm
+    textKey: spell.946285
     icon: 1771
     rank: 5
-    description: "The enemy target is swarmed by insects, decreasing their chance to hit by $s2% and causing $o1 Nature damage over $d."
-    auraDescription: "Chance to hit reduced by $s2%. $s1 Nature damage every $t1 sec."
     skillLine: 574
 - id: 946286
   name: Insect Swarm
@@ -2755,11 +2706,9 @@ helpers:
   - { effect: 6, aura: 3,  basePoints: 132, dieSides: 0, targetA: 6, amplitude: 2000 }  # 792
   - { effect: 6, aura: 54, basePoints: -2, dieSides: 0, targetA: 6 }
   client:
-    name: Insect Swarm
+    textKey: spell.946286
     icon: 1771
     rank: 6
-    description: "The enemy target is swarmed by insects, decreasing their chance to hit by $s2% and causing $o1 Nature damage over $d."
-    auraDescription: "Chance to hit reduced by $s2%. $s1 Nature damage every $t1 sec."
     skillLine: 574
 scriptBindings:
 # Final review deferred-gaps round (2026-09-07, G-6): the CORE script also returns 8% mana on the crit

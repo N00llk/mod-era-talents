@@ -46,9 +46,8 @@ helpers:
   effects:
   - { effect: 6, aura: 3, basePoints: 0, dieSides: 0, targetA: 6 }   # PERIODIC_DAMAGE; per-tick value set at cast by era_deep_wounds
   client:
-    name: Deep Wounds
+    textKey: spell.932800
     icon: 243             # stock Deep Wounds SpellIconID (12721 dump 2026-08-18)
-    auraDescription: "Bleeding for physical damage every 1 sec."
 # --- Mace Specialization stun (node 18514 proc trigger) — Vanilla 3 sec stun. --------------------
 # Identical situation to the rogue Mace Specialization stun (rogue helper 932988): WotLK reworked the
 # warrior Mace Specialization talent into a flat armor-pen/expertise passive with NO stun component,
@@ -66,9 +65,8 @@ helpers:
   basePoints: -1           # stun carries no amount (Blackout/Concussive/rogue-Mace precedent)
   school: 1                # physical
   client:
-    name: Mace Specialization
+    textKey: spell.932801
     icon: 302              # Hammer of Justice 853 SpellIconID (3s-stun analog)
-    auraDescription: "Stunned."
 # --- Improved Hamstring immobilize (node 18517 proc trigger) — Vanilla 5 sec root. ----------------
 # Vanilla Improved Hamstring: X% chance the Hamstring HIT immobilizes the target for 5 sec. There is
 # no stock warrior "Hamstring root" spell (Hamstring 1715 is a slow, aura 33 MOD_DECREASE_SPEED, not a
@@ -92,9 +90,8 @@ helpers:
   effects:
   - { effect: 6, aura: 26, basePoints: 0, dieSides: 0, targetA: 6 }   # MOD_ROOT on the enemy
   client:
-    name: Improved Hamstring
+    textKey: spell.932802
     icon: 20              # stock Entrapment root SpellIconID (19185 dump 2026-08-18)
-    auraDescription: "Immobilized."
 # --- Tactical Mastery clones 932803-807 (node 18505 grants one per rank) — rage retained on stance --
 # The rage-retention-on-stance-change mechanic is HARDCODED in the core (SpellAuraEffects.cpp
 # HandleAuraModShapeshift): it scans the player's spell+talent maps for a spell with SpellFamilyName ==
@@ -112,45 +109,40 @@ helpers:
   effects:
   - { effect: 6, aura: 4, basePoints: 5, dieSides: 0, targetA: 1 }    # DUMMY on self; Effect_0 = 5 rage retained
   client:
-    name: Tactical Mastery
+    textKey: spell.932803
     icon: 139
-    description: "You retain up to 5 of your rage points when you change stances."
 - id: 932804
   name: Tactical Mastery
   template: 12295
   effects:
   - { effect: 6, aura: 4, basePoints: 10, dieSides: 0, targetA: 1 }   # 10 rage retained
   client:
-    name: Tactical Mastery
+    textKey: spell.932804
     icon: 139
-    description: "You retain up to 10 of your rage points when you change stances."
 - id: 932805
   name: Tactical Mastery
   template: 12295
   effects:
   - { effect: 6, aura: 4, basePoints: 15, dieSides: 0, targetA: 1 }   # 15 rage retained
   client:
-    name: Tactical Mastery
+    textKey: spell.932805
     icon: 139
-    description: "You retain up to 15 of your rage points when you change stances."
 - id: 932806
   name: Tactical Mastery
   template: 12295
   effects:
   - { effect: 6, aura: 4, basePoints: 20, dieSides: 0, targetA: 1 }   # 20 rage retained
   client:
-    name: Tactical Mastery
+    textKey: spell.932806
     icon: 139
-    description: "You retain up to 20 of your rage points when you change stances."
 - id: 932807
   name: Tactical Mastery
   template: 12295
   effects:
   - { effect: 6, aura: 4, basePoints: 25, dieSides: 0, targetA: 1 }   # 25 rage retained
   client:
-    name: Tactical Mastery
+    textKey: spell.932807
     icon: 139
-    description: "You retain up to 25 of your rage points when you change stances."
 # --- Death Wish Vanilla clone (node 18531 grants it) — WotLK 12292 DIVERGED. --------------------
 # Vanilla Death Wish (warcraft.wiki.gg, verified 2026-08-18): +20% physical damage, IMMUNE TO FEAR,
 # but -20% armor AND all resistances, 30s, 3min cd, 10 rage. WotLK 12292 (dump 2026-08-18) DROPPED
@@ -170,11 +162,9 @@ helpers:
   - { effect: 6, aura: 77,  misc: 5,   basePoints: 0,   dieSides: 0, targetA: 1 }  # MECHANIC_IMMUNITY, MECHANIC_FEAR (5) = immune to Fear
   - { effect: 6, aura: 101, misc: 127, basePoints: -20, dieSides: 0, targetA: 1 }  # MOD_RESISTANCE_PCT -20%, school mask 127 (armor + all magic resists)
   client:
-    name: Death Wish
+    textKey: spell.932808
     icon: 169             # stock Death Wish SpellIconID (12292 dump 2026-08-18)
     skillLine: 256        # Warrior skill line (SkillLineAbility 12292 -> 256; dump 2026-08-18) — else the granted active lands in the General tab
-    description: "When activated, increases your physical damage by 20% and makes you immune to Fear effects, but lowers your armor and all resistances by 20%. Lasts 30 sec."
-    auraDescription: "Physical damage increased by 20%. Immune to Fear. Armor and all resistances reduced by 20%."
 # --- Flurry Vanilla haste buffs (node 18534 proc applies one per rank) — 10/15/20/25/30%. --------
 # Vanilla Flurry buff = 10/15/20/25/30% melee haste for the next 3 swings after a crit. The stock
 # buff chain 12966-12970 (dump 2026-08-18) is family 4, Effect_1 aura138 MOD_MELEE_HASTE, DurationIndex
@@ -191,9 +181,8 @@ helpers:
   effects:
   - { effect: 6, aura: 138, basePoints: 10, dieSides: 0, targetA: 1 }   # +10% melee haste, self
   client:
-    name: Flurry
+    textKey: spell.932810
     icon: 108             # stock Flurry SpellIconID (12966 dump 2026-08-18)
-    auraDescription: "Increases attack speed by 10%. Consumed on 3 melee swings."
 - id: 932811
   name: Flurry
   template: 12966
@@ -201,9 +190,8 @@ helpers:
   effects:
   - { effect: 6, aura: 138, basePoints: 15, dieSides: 0, targetA: 1 }   # +15% melee haste
   client:
-    name: Flurry
+    textKey: spell.932811
     icon: 108
-    auraDescription: "Increases attack speed by 15%. Consumed on 3 melee swings."
 - id: 932812
   name: Flurry
   template: 12966
@@ -211,9 +199,8 @@ helpers:
   effects:
   - { effect: 6, aura: 138, basePoints: 20, dieSides: 0, targetA: 1 }   # +20% melee haste
   client:
-    name: Flurry
+    textKey: spell.932812
     icon: 108
-    auraDescription: "Increases attack speed by 20%. Consumed on 3 melee swings."
 - id: 932813
   name: Flurry
   template: 12966
@@ -221,9 +208,8 @@ helpers:
   effects:
   - { effect: 6, aura: 138, basePoints: 25, dieSides: 0, targetA: 1 }   # +25% melee haste
   client:
-    name: Flurry
+    textKey: spell.932813
     icon: 108
-    auraDescription: "Increases attack speed by 25%. Consumed on 3 melee swings."
 - id: 932814
   name: Flurry
   template: 12966
@@ -231,9 +217,8 @@ helpers:
   effects:
   - { effect: 6, aura: 138, basePoints: 30, dieSides: 0, targetA: 1 }   # +30% melee haste
   client:
-    name: Flurry
+    textKey: spell.932814
     icon: 108
-    auraDescription: "Increases attack speed by 30%. Consumed on 3 melee swings."
 # --- Enrage Vanilla melee-damage buffs (node 18529 proc applies one per rank) — 5/10/15/20/25%. --
 # Vanilla Enrage = +5/10/15/20/25% melee damage for 12 sec / up to 12 swings, after being crit. Stock
 # Enrage buffs 12880/14201-14204 (dump 2026-08-18) are family 0, Effect_1 aura79 MOD_DAMAGE_PERCENT_
@@ -253,9 +238,8 @@ helpers:
   proc:
     flags: 4              # DONE_MELEE_AUTO_ATTACK — consume 1 charge per melee swing (the 12-swing cap; Flurry's consume-on-swing mechanism)
   client:
-    name: Enrage
+    textKey: spell.932815
     icon: 95              # stock Enrage SpellIconID (12880 dump 2026-08-18)
-    auraDescription: "Melee damage increased by 5%. Lasts 12 sec or up to 12 swings."
 - id: 932816
   name: Enrage
   template: 12880
@@ -266,9 +250,8 @@ helpers:
   proc:
     flags: 4
   client:
-    name: Enrage
+    textKey: spell.932816
     icon: 95
-    auraDescription: "Melee damage increased by 10%. Lasts 12 sec or up to 12 swings."
 - id: 932817
   name: Enrage
   template: 12880
@@ -279,9 +262,8 @@ helpers:
   proc:
     flags: 4
   client:
-    name: Enrage
+    textKey: spell.932817
     icon: 95
-    auraDescription: "Melee damage increased by 15%. Lasts 12 sec or up to 12 swings."
 - id: 932818
   name: Enrage
   template: 12880
@@ -292,9 +274,8 @@ helpers:
   proc:
     flags: 4
   client:
-    name: Enrage
+    textKey: spell.932818
     icon: 95
-    auraDescription: "Melee damage increased by 20%. Lasts 12 sec or up to 12 swings."
 - id: 932819
   name: Enrage
   template: 12880
@@ -305,9 +286,8 @@ helpers:
   proc:
     flags: 4
   client:
-    name: Enrage
+    textKey: spell.932819
     icon: 95
-    auraDescription: "Melee damage increased by 25%. Lasts 12 sec or up to 12 swings."
 # === PROTECTION (Task 8) helpers — sub-band 932820-932829 ==========================================
 # 932820 intentionally LEFT FREE: the Task-8 plan reserved it for a Defiance threat CLONE, but Defiance
 # (node 18544) ships as a plain family-less `stat` MOD_THREAT aura (0 helpers) — see that node's verdict.
@@ -331,9 +311,8 @@ helpers:
   basePoints: -1           # stun carries no amount (Mace-Spec/Blackout precedent)
   school: 1                # physical
   client:
-    name: Improved Revenge
+    textKey: spell.932821
     icon: 302              # Hammer of Justice 853 SpellIconID (3s-stun analog; same as Mace Spec stun)
-    auraDescription: "Stunned."
 # --- Concussion Blow Vanilla clone (node 18549 grants it) — WotLK 12809 DIVERGED. ----------------
 # Vanilla Concussion Blow (wowhead classic, verified 2026-08-18): 15 rage, Instant, 45 sec cooldown,
 # stuns 5 sec, NO damage. WotLK 12809 (dump 2026-08-18) = RecoveryTime 30000 (30s, not 45s) + Effect_2
@@ -353,11 +332,9 @@ helpers:
   effects:
   - { effect: 6, aura: 12, basePoints: -1, dieSides: 0, targetA: 6 }   # MOD_STUN 5s only; stock Effect_2 SCHOOL_DAMAGE 0-filled (Vanilla is stun-only)
   client:
-    name: Concussion Blow
+    textKey: spell.932822
     icon: 25              # stock Concussion Blow SpellIconID (12809 dump 2026-08-18)
     skillLine: 256        # Warrior skill line — else the granted active lands in the General tab
-    description: "Stuns the opponent for 5 sec."
-    auraDescription: "Stunned."
 # --- Shield Specialization 932823-827 (node 18536 grants one per rank) — Vanilla block% + rage-on-block.
 # Vanilla Shield Specialization (warcraft.wiki.gg Classic, verified 2026-08-18): 5 ranks, +1/2/3/4/5%
 # block chance AND a 20/40/60/80/100% chance to generate 1 rage WHEN A BLOCK OCCURS. Both halves live
@@ -483,11 +460,10 @@ helpers:
   - { effect: 2, basePoints: 45, dieSides: 0, targetA: 6 }               # SCHOOL_DAMAGE; era_bloodthirst_vanilla reads 45 as the AP %
   - { effect: 64, basePoints: 0, dieSides: 0, targetA: 1, trigger: 932832 }  # TRIGGER_SPELL -> heal buff R1 on the caster
   client:
-    name: Bloodthirst
+    textKey: spell.932828
     icon: 38              # stock Bloodthirst SpellIconID (23881 dump 2026-08-18)
     rank: 1
     skillLine: 256        # Warrior skill line — else the granted active lands in the General tab
-    description: "Instantly attack the target, causing damage equal to 45% of your attack power. In addition, the next 5 successful melee attacks will restore 10 health. This effect lasts 8 sec."
 - id: 932829
   name: Bloodthirst
   template: 23881
@@ -499,11 +475,10 @@ helpers:
   - { effect: 2, basePoints: 45, dieSides: 0, targetA: 6 }
   - { effect: 64, basePoints: 0, dieSides: 0, targetA: 1, trigger: 932833 }  # -> heal buff R2
   client:
-    name: Bloodthirst
+    textKey: spell.932829
     icon: 38
     rank: 2
     skillLine: 256
-    description: "Instantly attack the target, causing damage equal to 45% of your attack power. In addition, the next 5 successful melee attacks will restore 13 health. This effect lasts 8 sec."
 - id: 932830
   name: Bloodthirst
   template: 23881
@@ -515,11 +490,10 @@ helpers:
   - { effect: 2, basePoints: 45, dieSides: 0, targetA: 6 }
   - { effect: 64, basePoints: 0, dieSides: 0, targetA: 1, trigger: 932834 }  # -> heal buff R3
   client:
-    name: Bloodthirst
+    textKey: spell.932830
     icon: 38
     rank: 3
     skillLine: 256
-    description: "Instantly attack the target, causing damage equal to 45% of your attack power. In addition, the next 5 successful melee attacks will restore 17 health. This effect lasts 8 sec."
 - id: 932831
   name: Bloodthirst
   template: 23881
@@ -531,11 +505,10 @@ helpers:
   - { effect: 2, basePoints: 45, dieSides: 0, targetA: 6 }
   - { effect: 64, basePoints: 0, dieSides: 0, targetA: 1, trigger: 932835 }  # -> heal buff R4
   client:
-    name: Bloodthirst
+    textKey: spell.932831
     icon: 38
     rank: 4
     skillLine: 256
-    description: "Instantly attack the target, causing damage equal to 45% of your attack power. In addition, the next 5 successful melee attacks will restore 20 health. This effect lasts 8 sec."
 # --- Heal buffs 932832-835 (applied by the matching damage clone's TRIGGER_SPELL). ----------------
 # Clone stock 23885 (the Bloodthirst heal buff) to inherit the proven aura-42 PROC_TRIGGER_SPELL
 # mechanism + DurationIndex 31 (8 sec) + SpellIconID 38, then override: family 0 (a buff carries no
@@ -555,9 +528,8 @@ helpers:
   proc:
     flags: 20            # DONE_MELEE_AUTO_ATTACK (4) | DONE_SPELL_MELEE_DMG_CLASS (16) — heal on any successful melee attack
   client:
-    name: Bloodthirst
+    textKey: spell.932832
     icon: 38
-    auraDescription: "The next 5 successful melee attacks restore 10 health. Lasts 8 sec."
 - id: 932833
   name: Bloodthirst
   template: 23885
@@ -568,9 +540,8 @@ helpers:
   proc:
     flags: 20
   client:
-    name: Bloodthirst
+    textKey: spell.932833
     icon: 38
-    auraDescription: "The next 5 successful melee attacks restore 13 health. Lasts 8 sec."
 - id: 932834
   name: Bloodthirst
   template: 23885
@@ -581,9 +552,8 @@ helpers:
   proc:
     flags: 20
   client:
-    name: Bloodthirst
+    textKey: spell.932834
     icon: 38
-    auraDescription: "The next 5 successful melee attacks restore 17 health. Lasts 8 sec."
 - id: 932835
   name: Bloodthirst
   template: 23885
@@ -594,9 +564,8 @@ helpers:
   proc:
     flags: 20
   client:
-    name: Bloodthirst
+    textKey: spell.932835
     icon: 38
-    auraDescription: "The next 5 successful melee attacks restore 20 health. Lasts 8 sec."
 # --- Flat heal spells 932836-839 (triggered by the matching heal buff's aura-42 proc). ------------
 # Clone stock 23880 (the Bloodthirst heal) to inherit its SPELL_EFFECT_HEAL vehicle / instant cast /
 # self range, then override family 0 (escape the sweep) and the heal to a FLAT per-rank amount (10/13/
@@ -611,28 +580,28 @@ helpers:
   family: 0
   effects:
   - { effect: 10, aura: 0, basePoints: 10, dieSides: 0, targetA: 1 }   # SPELL_EFFECT_HEAL flat 10, self
-  client: { name: Bloodthirst, icon: 38 }
+  client: {textKey: spell.932836, icon: 38}
 - id: 932837
   name: Bloodthirst
   template: 23880
   family: 0
   effects:
   - { effect: 10, aura: 0, basePoints: 13, dieSides: 0, targetA: 1 }   # flat 13
-  client: { name: Bloodthirst, icon: 38 }
+  client: {textKey: spell.932837, icon: 38}
 - id: 932838
   name: Bloodthirst
   template: 23880
   family: 0
   effects:
   - { effect: 10, aura: 0, basePoints: 17, dieSides: 0, targetA: 1 }   # flat 17
-  client: { name: Bloodthirst, icon: 38 }
+  client: {textKey: spell.932838, icon: 38}
 - id: 932839
   name: Bloodthirst
   template: 23880
   family: 0
   effects:
   - { effect: 10, aura: 0, basePoints: 20, dieSides: 0, targetA: 1 }   # flat 20
-  client: { name: Bloodthirst, icon: 38 }
+  client: {textKey: spell.932839, icon: 38}
 # === PROTECTION — Last Stand Vanilla clone 932840 (node 18541) — WotLK 12975 cd DIVERGED. ==========
 # Vanilla Last Stand (wowhead classic 12975, verified 2026-08-18): Instant, 10 min cooldown, +30% max
 # HP for 20 sec. The +30%-HP MECHANIC is identical Vanilla->WotLK but is SCRIPT-BOUND to stock id 12975
@@ -656,10 +625,9 @@ helpers:
   effects:               # BYTE-IDENTICAL to stock 12975 Effect_1 (dump 2026-08-18): DUMMY base 29 + d1 -> GetEffectValue() 30
   - { effect: 3, aura: 0, basePoints: 29, dieSides: 1, targetA: 1 }   # SPELL_EFFECT_DUMMY, self; era_last_stand reads value 30 and casts 12976
   client:
-    name: Last Stand
+    textKey: spell.932840
     icon: 177             # stock Last Stand SpellIconID (12975 dump 2026-08-18)
     skillLine: 256        # Warrior skill line — else the granted active lands in the General tab
-    description: "When activated, this ability temporarily grants you 30% of your maximum hit points for 20 sec. After the effect expires, the hit points are lost."
 # === PROTECTION — Shield Slam Vanilla clone chain 932841-932844 (node 18552 grants r1; r2-r4 =========
 # trainer-taught at L48/54/60). FINAL REVIEW R7, item I-7 (2026-09-06). Node 18552 previously
 # BOUND-GRANTED stock 23922, but the stock chain carries the WOTLK damage while the node's own tooltip
@@ -713,11 +681,10 @@ helpers:
   - { effect: 38, aura: 0, basePoints: 1,   dieSides: 0,  misc: 1, targetA: 6 }   # DISPEL 1 magic effect
   - { effect: 2,  aura: 0, basePoints: 224, dieSides: 11,          targetA: 6 }   # SCHOOL_DAMAGE 225-235 (live 294-308)
   client:
-    name: Shield Slam
+    textKey: spell.932841
     icon: 413              # stock Shield Slam SpellIconID (23922, live DBC dump 2026-09-06)
     rank: 1
     skillLine: 256         # Warrior skill line — else the granted active lands in the General tab
-    description: "Slam the target with your shield, causing 225 to 235 damage, modified by your shield block value, and has a 50% chance of dispelling 1 magic effect on the target.  Also causes a high amount of threat."
 - id: 932842
   name: Shield Slam
   template: 23923
@@ -729,11 +696,10 @@ helpers:
   - { effect: 38, aura: 0, basePoints: 1,   dieSides: 0,  misc: 1, targetA: 6 }
   - { effect: 2,  aura: 0, basePoints: 263, dieSides: 13,          targetA: 6 }   # 264-276 (live 346-362)
   client:
-    name: Shield Slam
+    textKey: spell.932842
     icon: 413
     rank: 2
     skillLine: 256
-    description: "Slam the target with your shield, causing 264 to 276 damage, modified by your shield block value, and has a 50% chance of dispelling 1 magic effect on the target.  Also causes a high amount of threat."
 - id: 932843
   name: Shield Slam
   template: 23924
@@ -745,11 +711,10 @@ helpers:
   - { effect: 38, aura: 0, basePoints: 1,   dieSides: 0,  misc: 1, targetA: 6 }
   - { effect: 2,  aura: 0, basePoints: 302, dieSides: 15,          targetA: 6 }   # 303-317 (live 396-416)
   client:
-    name: Shield Slam
+    textKey: spell.932843
     icon: 413
     rank: 3
     skillLine: 256
-    description: "Slam the target with your shield, causing 303 to 317 damage, modified by your shield block value, and has a 50% chance of dispelling 1 magic effect on the target.  Also causes a high amount of threat."
 - id: 932844
   name: Shield Slam
   template: 23925
@@ -761,11 +726,10 @@ helpers:
   - { effect: 38, aura: 0, basePoints: 1,   dieSides: 0,  misc: 1, targetA: 6 }
   - { effect: 2,  aura: 0, basePoints: 341, dieSides: 17,          targetA: 6 }   # 342-358 (live 447-469)
   client:
-    name: Shield Slam
+    textKey: spell.932844
     icon: 413
     rank: 4
     skillLine: 256
-    description: "Slam the target with your shield, causing 342 to 358 damage, modified by your shield block value, and has a 50% chance of dispelling 1 magic effect on the target.  Also causes a high amount of threat."
 # === BOTH MANAGED ERAS — stance-correction passives 932845-932847 ====================================
 # FINAL REVIEW R7, items G-11/G-30 (2026-09-06). WotLK RETUNED all three warrior stances; 1.12.1 and
 # 2.4.3 agree with each other on every number, so ONE set of correction passives serves BOTH managed

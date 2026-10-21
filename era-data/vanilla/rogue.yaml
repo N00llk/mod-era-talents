@@ -22,9 +22,8 @@ helpers:
   basePoints: -1           # stun carries no amount (Blackout/Concussive precedent)
   school: 1                # physical
   client:
-    name: Mace Specialization
+    textKey: spell.932988
     icon: 302              # Hammer of Justice 853 SpellIconID (3s-stun analog, dump 2026-08-17)
-    auraDescription: "Stunned."
 # --- Hemorrhage 3-rank Vanilla trainer chain (node 18449 grants R1; R2/R3 trainer-taught). --------
 # Stock 16511 is WotLK-tuned: 110% weapon (Effect_1=121 NORMALIZED_WEAPON_DMG 100% + Effect_2=31
 # WEAPON_PERCENT_DAMAGE 110), NO combo point, +13/+13/+13 (r1/2/3 basePoints 12/20/28) flat physical
@@ -49,12 +48,10 @@ helpers:
   - { effect: 80, basePoints: 0, dieSides: 1, targetA: 6 }               # ADD_COMBO_POINTS +1 (Sinister/Ghostly Strike encoding: base 0, die 1)
   - { effect: 6, aura: 14, misc: 1, basePoints: 2, dieSides: 1, targetA: 6 }  # APPLY_AURA MOD_DAMAGE_TAKEN +3 physical (misc 1)
   client:
-    name: Hemorrhage
+    textKey: spell.932985
     icon: 153             # stock Hemorrhage SpellIconID (dump 2026-08-17; the node's spell_shadow_lifedrain was addon-only)
     rank: 1
     skillLine: 39         # Subtlety tab (SkillLineAbility: 16511 -> SkillLine 39, ClassMask 8; dump 2026-08-17)
-    description: "An instant strike that damages the opponent and causes the target to hemorrhage, increasing any Physical damage dealt to the target by up to 3. Lasts 30 charges or 15 sec. Awards 1 combo point."
-    auraDescription: "Physical attacks against the target cause 3 extra damage. 30 charges / 15 sec."
 - id: 932986
   name: Hemorrhage
   template: 16511
@@ -65,12 +62,10 @@ helpers:
   - { effect: 80, basePoints: 0, dieSides: 1, targetA: 6 }
   - { effect: 6, aura: 14, misc: 1, basePoints: 4, dieSides: 1, targetA: 6 }  # +5 physical
   client:
-    name: Hemorrhage
+    textKey: spell.932986
     icon: 153
     rank: 2
     skillLine: 39
-    description: "An instant strike that damages the opponent and causes the target to hemorrhage, increasing any Physical damage dealt to the target by up to 5. Lasts 30 charges or 15 sec. Awards 1 combo point."
-    auraDescription: "Physical attacks against the target cause 5 extra damage. 30 charges / 15 sec."
 - id: 932987
   name: Hemorrhage
   template: 16511
@@ -81,12 +76,10 @@ helpers:
   - { effect: 80, basePoints: 0, dieSides: 1, targetA: 6 }
   - { effect: 6, aura: 14, misc: 1, basePoints: 6, dieSides: 1, targetA: 6 }  # +7 physical
   client:
-    name: Hemorrhage
+    textKey: spell.932987
     icon: 153
     rank: 3
     skillLine: 39
-    description: "An instant strike that damages the opponent and causes the target to hemorrhage, increasing any Physical damage dealt to the target by up to 7. Lasts 30 charges or 15 sec. Awards 1 combo point."
-    auraDescription: "Physical attacks against the target cause 7 extra damage. 30 charges / 15 sec."
 # --- Preparation Vanilla clone (node 18447 grants R1) — resets Blind too. -------------------------
 # Stock Preparation 14185's cooldown reset is a HARDCODED C++ SpellScript (spell_rog_preparation,
 # spell_rogue.cpp:455) that resets Cold Blood/Shadowstep/Vanish/Evasion/Sprint but NOT Blind — WotLK
@@ -106,10 +99,9 @@ helpers:
   effects:
   - { effect: 3, basePoints: 0, dieSides: 0, targetA: 1 }   # SPELL_EFFECT_DUMMY on the caster (the script's hook)
   client:
-    name: Preparation
+    textKey: spell.932983
     icon: 207             # stock Preparation SpellIconID (dump 2026-08-17)
     skillLine: 39         # Subtlety tab (SkillLineAbility ClassMask 8; matches the Hemorrhage clones)
-    description: "When activated, this ability immediately finishes the cooldown on your Vanish, Evasion, Sprint, Cold Blood, and Blind abilities."
 # --- Adrenaline Rush Vanilla clone (node 18434 grants it) — WotLK 13750 cd DIVERGED. ---------------
 # Vanilla Adrenaline Rush (Wowhead Classic 13750, verified 2026-08-18): Instant, 5 min cooldown,
 # +100% Energy regeneration for 15 sec. WotLK 13750 (DBC dump 2026-08-18) is IDENTICAL except the
@@ -131,11 +123,9 @@ helpers:
   effects:               # byte-identical to stock 13750 Effect_1 (dump 2026-08-18): +100% energy regen
   - { effect: 6, aura: 110, basePoints: 99, dieSides: 1, misc: 3, targetA: 1 }   # MOD_POWER_REGEN_PERCENT +100% (base 99 + d1 -> 100), POWER_ENERGY (misc 3), self
   client:
-    name: Adrenaline Rush
+    textKey: spell.932770
     icon: 235            # stock Adrenaline Rush SpellIconID (13750 dump 2026-08-18)
     skillLine: 38        # Combat tab (SkillLineAbility 13750 -> SkillLine 38; dump 2026-08-18) — else the granted active lands in the General tab
-    description: "Increases your Energy regeneration rate by 100% for 15 sec."
-    auraDescription: "Energy regeneration increased by 100%."
 # --- Riposte Vanilla clone 932989 (node 18423 grants it) — the SHIPPED-DEFECT FIX, 2026-09-03. ----
 # FIX ROUND. Node 18423 shipped GRANTING stock 14251 behind the comment "Stock Riposte is unchanged
 # Vanilla->WotLK (150% weapon damage, 6s disarm...)". That claim is FALSE and was caught by the TBC
@@ -201,12 +191,10 @@ helpers:
   - { effect: 31, basePoints: 149, dieSides: 1, targetA: 6 }                        # 150% weapon damage (byte-identical to stock)
   - { effect: 6, aura: 67, basePoints: 0, dieSides: 0, mechanic: 3, targetA: 6 }    # MOD_DISARM, EffectMechanic 3 = MECHANIC_DISARM
   client:
-    name: Riposte
+    textKey: spell.932989
     icon: 278               # stock Riposte SpellIconID (14251, live DBC dump 2026-09-03)
     skillLine: 38           # Combat tab (SkillLineAbility row 7816: 14251 -> SkillLine 38, dump
                             # 2026-09-03) — without it the granted active lands in the General tab
-    description: "A strike that becomes active after parrying an opponent's attack.  This attack deals $s1% weapon damage and disarms the target for $d."
-    auraDescription: "Disarmed."
 # --- Premeditation Vanilla clone 932984 (node 18451 grants it) — WotLK 14183 window DIVERGED. ------
 # FIX ROUND 2026-09-06 (G-39; accepted gap CLOSED, owner-approved). The node shipped GRANTING stock
 # 14183 and recording a NAMED MINOR DEVIATION: live's combo-retention window is DurationIndex 18 =
@@ -257,11 +245,9 @@ helpers:
   - { effect: 80, basePoints: 1, dieSides: 1, targetA: 6 }              # ADD_COMBO_POINTS -> 2, on the target
   - { effect: 6, aura: 148, basePoints: 1, dieSides: 1, targetA: 1 }    # RETAIN_COMBO_POINTS, self
   client:
-    name: Premeditation
+    textKey: spell.932984
     icon: 98                # stock Premeditation SpellIconID (14183, live DBC dump 2026-09-03)
     skillLine: 39           # Subtlety (SkillLineAbility row 8077)
-    description: "When used, adds $s1 combo points to your target.  You must add to or use those combo points within $d or the combo points are lost."
-    auraDescription: "Your combo points will not be lost."
 scriptBindings:
 # Preparation clone -> era_rog_preparation (resets the Vanilla 5 incl. Blind; see helper 932983).
 - { spell: 932983, script: era_rog_preparation }

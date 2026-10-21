@@ -1,0 +1,82 @@
+schemaVersion: 1
+locale: ruRU
+era: vanilla
+class: druid
+texts:
+  spell.932503:
+    name: null
+    auraDescription: null
+    sourceHash: c7001e55a0d3ecc14c8114367192ba1270f8b64458fa0ea6045611833fd0d29c
+  spell.932506:
+    name: null
+    auraDescription: null
+    sourceHash: c7001e55a0d3ecc14c8114367192ba1270f8b64458fa0ea6045611833fd0d29c
+  spell.932504:
+    name: null
+    auraDescription: null
+    sourceHash: 4d6d9ea84c6c7d9b17ae10f575892ce9e0aa549a2e5d5288ef896147694e250e
+  spell.932505:
+    name: null
+    description: null
+    auraDescription: null
+    sourceHash: c81051ae29c2d2147897af66e059d094afdf2d783bb96030256efee05c82b353
+  spell.932507:
+    name: null
+    description: null
+    auraDescription: null
+    sourceHash: 0d9e337a189b5c99f9d40d3a8f6f746d404a1dbd92cf1a16b7aa878c84a64400
+  spell.932508:
+    name: null
+    description: null
+    auraDescription: null
+    sourceHash: 92a1965e46dae239fd9cb8510c3fb27a215934ad19a4e1c86b80b9f983bc3577
+  spell.932509:
+    name: null
+    description: null
+    auraDescription: null
+    sourceHash: 895e6e8265a295e2d5e54ec42b3a6a552120255fb1cfdc63d4a142c34aeefcce
+  spell.932510:
+    name: null
+    description: null
+    auraDescription: null
+    sourceHash: 46d16f4fe5c58a5fcea7c517570f162a38b86f06b49c8f761db0074d422be43d
+  spell.932511:
+    name: null
+    description: null
+    auraDescription: null
+    sourceHash: d7806995a5d3ee6e9b957725b46a548adcc0fbdb7cea0c91ae62336635692d61
+  spell.932512:
+    name: null
+    description: null
+    auraDescription: null
+    sourceHash: 5ad15328ac4942cab624e6d7dd10eb53ccf4338bf670e4cbcef3172fe1f84d7e
+  spell.932513:
+    name: null
+    description: null
+    auraDescription: null
+    sourceHash: 12d659404076cf9c210be36232f22b4f924a3763111861bb9484484274dfd17b
+  spell.932514:
+    name: null
+    description: null
+    auraDescription: null
+    sourceHash: 427a33c4fb8d4efbf97b260e49fcb02e419eacd13b1e48d13576b530111b2a5d
+  spell.932515:
+    name: null
+    description: null
+    auraDescription: null
+    sourceHash: 427a33c4fb8d4efbf97b260e49fcb02e419eacd13b1e48d13576b530111b2a5d
+  spell.932516:
+    name: null
+    description: null
+    auraDescription: null
+    sourceHash: 427a33c4fb8d4efbf97b260e49fcb02e419eacd13b1e48d13576b530111b2a5d
+  spell.932517:
+    name: null
+    description: null
+    auraDescription: null
+    sourceHash: 427a33c4fb8d4efbf97b260e49fcb02e419eacd13b1e48d13576b530111b2a5d
+  spell.932518:
+    name: null
+    description: null
+    auraDescription: null
+    sourceHash: 427a33c4fb8d4efbf97b260e49fcb02e419eacd13b1e48d13576b530111b2a5d

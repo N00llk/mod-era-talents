@@ -79,10 +79,8 @@ helpers:
   - { effect: 6, aura: 108, misc: 22, basePoints: 2, dieSides: 0, targetA: 1,
       maskA: 1048832, maskB: 0, maskC: 0 }        # +2% SPELLMOD_DOT, 0x100100 = Garrote | Rupture
   client:
-    name: Find Weakness
+    textKey: spell.947768
     icon: 2112              # stock Find Weakness SpellIconID (31234, live DBC dump 2026-09-03)
-    description: Offensive ability damage increased by 2%.
-    auraDescription: Offensive ability damage increased by 2%.
 - id: 947769
   name: Find Weakness
   attributes: 262160
@@ -98,10 +96,8 @@ helpers:
   - { effect: 6, aura: 108, misc: 22, basePoints: 4, dieSides: 0, targetA: 1,
       maskA: 1048832, maskB: 0, maskC: 0 }
   client:
-    name: Find Weakness
+    textKey: spell.947769
     icon: 2112
-    description: Offensive ability damage increased by 4%.
-    auraDescription: Offensive ability damage increased by 4%.
 - id: 947770
   name: Find Weakness
   attributes: 262160
@@ -117,10 +113,8 @@ helpers:
   - { effect: 6, aura: 108, misc: 22, basePoints: 6, dieSides: 0, targetA: 1,
       maskA: 1048832, maskB: 0, maskC: 0 }
   client:
-    name: Find Weakness
+    textKey: spell.947770
     icon: 2112
-    description: Offensive ability damage increased by 6%.
-    auraDescription: Offensive ability damage increased by 6%.
 - id: 947771
   name: Find Weakness
   attributes: 262160
@@ -136,10 +130,8 @@ helpers:
   - { effect: 6, aura: 108, misc: 22, basePoints: 8, dieSides: 0, targetA: 1,
       maskA: 1048832, maskB: 0, maskC: 0 }
   client:
-    name: Find Weakness
+    textKey: spell.947771
     icon: 2112
-    description: Offensive ability damage increased by 8%.
-    auraDescription: Offensive ability damage increased by 8%.
 - id: 947772
   name: Find Weakness
   attributes: 262160
@@ -155,10 +147,8 @@ helpers:
   - { effect: 6, aura: 108, misc: 22, basePoints: 10, dieSides: 0, targetA: 1,
       maskA: 1048832, maskB: 0, maskC: 0 }
   client:
-    name: Find Weakness
+    textKey: spell.947772
     icon: 2112
-    description: Offensive ability damage increased by 10%.
-    auraDescription: Offensive ability damage increased by 10%.
 # --- Mutilate VISIBLE-cast clone chain 947773-947776 (node 20420) --------------------------------
 # SPEC AMENDMENT A.14 (user-locked, 2026-09-03) — SUPERSEDES A.5's "grant stock 1329, no clone, no
 # trainer SQL". A.5's DBC finding still holds (every field on the 12-spell chain is TBC-identical
@@ -243,11 +233,10 @@ helpers:
   - { effect: 64, basePoints: 0, dieSides: 0, trigger: 5374,  targetA: 6 } # stock off-hand half (word1 bit1)
   - { effect: 64, basePoints: 0, dieSides: 0, trigger: 27576, targetA: 6 } # stock main-hand half (word1 bit2)
   client:
-    name: Mutilate
+    textKey: spell.947773
     icon: 2117              # stock Mutilate SpellIconID (live DBC dump 2026-09-03)
     rank: 1
     skillLine: 253          # Assassination
-    description: "Instantly attacks with both weapons for $<percent>% weapon damage plus an additional $5374s1 with each weapon.  Damage is increased by 50% against Poisoned targets.  Must be behind the target.  Awards 2 combo points."
 - id: 947774
   name: Mutilate
   template: 34411           # visible rank 2 (L50) — trainer-taught behind 947773
@@ -256,11 +245,10 @@ helpers:
   - { effect: 64, basePoints: 0, dieSides: 0, trigger: 34414, targetA: 6 }
   - { effect: 64, basePoints: 0, dieSides: 0, trigger: 34415, targetA: 6 }
   client:
-    name: Mutilate
+    textKey: spell.947774
     icon: 2117
     rank: 2
     skillLine: 253
-    description: "Instantly attacks with both weapons for $<percent>% weapon damage plus an additional $34414s1 with each weapon.  Damage is increased by 50% against Poisoned targets.  Must be behind the target.  Awards 2 combo points."
 - id: 947775
   name: Mutilate
   template: 34412           # visible rank 3 (L60) — trainer-taught behind 947774
@@ -269,11 +257,10 @@ helpers:
   - { effect: 64, basePoints: 0, dieSides: 0, trigger: 34416, targetA: 6 }
   - { effect: 64, basePoints: 0, dieSides: 0, trigger: 34417, targetA: 6 }
   client:
-    name: Mutilate
+    textKey: spell.947775
     icon: 2117
     rank: 3
     skillLine: 253
-    description: "Instantly attacks with both weapons for $<percent>% weapon damage plus an additional $34416s1 with each weapon.  Damage is increased by 50% against Poisoned targets.  Must be behind the target.  Awards 2 combo points."
 - id: 947776
   name: Mutilate
   template: 34413           # visible rank 4 (L70) — trainer-taught behind 947775
@@ -282,11 +269,10 @@ helpers:
   - { effect: 64, basePoints: 0, dieSides: 0, trigger: 34419, targetA: 6 }  # stock order: 34419 in Effect_2
   - { effect: 64, basePoints: 0, dieSides: 0, trigger: 34418, targetA: 6 }  # stock order: 34418 in Effect_3
   client:
-    name: Mutilate
+    textKey: spell.947776
     icon: 2117
     rank: 4
     skillLine: 253
-    description: "Instantly attacks with both weapons for $<percent>% weapon damage plus an additional $34419s1 with each weapon.  Damage is increased by 50% against Poisoned targets.  Must be behind the target.  Awards 2 combo points."
 # =================================================================================================
 # COMBAT (Task 7) helpers 947777-947785 — NINE ids, claimed IN ORDER. Four families: the two
 # single-rank ACTIVE clones (Riposte 947777, Adrenaline Rush 947778), the Mace Specialization
@@ -354,12 +340,10 @@ helpers:
   - { effect: 31, basePoints: 149, dieSides: 1, targetA: 6 }                        # 150% weapon damage
   - { effect: 6, aura: 67, basePoints: 0, dieSides: 0, mechanic: 3, targetA: 6 }    # MOD_DISARM, MECHANIC_DISARM
   client:
-    name: Riposte
+    textKey: spell.947777
     icon: 278               # stock Riposte SpellIconID (14251, live DBC dump 2026-09-03)
     skillLine: 38           # Combat (SkillLineAbility row 7816: 14251 -> SkillLine 38, dump
                             # 2026-09-03) — without it the granted active lands in the General tab
-    description: "A strike that becomes active after parrying an opponent's attack.  This attack deals $s1% weapon damage and disarms the target for $d."
-    auraDescription: "Disarmed."
 # --- Adrenaline Rush 947778 (node 20441 grants it) -----------------------------------------------
 # CLONE of stock 13750 — spec Amendment **A.7** / _ref node_findings[20441]. The ONLY divergence
 # across all fourteen families is `RecoveryTime`: TBC 300000 (5 min, and the cached TBC tooltip says
@@ -388,11 +372,9 @@ helpers:
   effects:
   - { effect: 6, aura: 110, basePoints: 99, dieSides: 1, misc: 3, targetA: 1 }   # +100% energy regen (POWER_ENERGY), self
   client:
-    name: Adrenaline Rush
+    textKey: spell.947778
     icon: 235               # stock Adrenaline Rush SpellIconID (13750, live DBC dump 2026-09-03)
     skillLine: 38           # Combat (SkillLineAbility row 7540: 13750 -> SkillLine 38)
-    description: "Increases your Energy regeneration rate by $s1% for $d."
-    auraDescription: "Energy regeneration increased by $s1%."
 # --- Mace Specialization 947779-947783 (node 20433 grants one per rank) + stun payload 947784 ----
 # _ref node_findings[20433], bucket `authored_plus_helper`. TBC Mace Spec is TWO halves on one
 # passive: e1 aura 42 PROC_TRIGGER_SPELL (ProcChance 1/2/3/4/6, ProcTypeMask 20) firing a 3 s stun,
@@ -512,9 +494,8 @@ helpers:
                                # TBC 5530 (0x40088) and live 5530 (0x88); TBC's extra 0x40000
                                # PREVENTS_ANIM is not copied (see the note above).
   client:
-    name: Mace Stun Effect
+    textKey: spell.947784
     icon: 367                  # TBC/live 5530 SpellIconID (dump 2026-09-03)
-    auraDescription: "Stunned."
 # --- Blade Twisting daze payload 947785 (node 20437's proc fires it) -----------------------------
 # FROM SCRATCH. TBC's payload is 31125 "Dazed" (aura 33 MOD_DECREASE_SPEED **-50** for **8 s**);
 # live REPURPOSED that id into "Blade Twisting" at -70% for 4 s and repointed the WotLK talent's
@@ -546,9 +527,8 @@ helpers:
   attributesEx3: 131072        # 0x20000 SUPPRESS_TARGET_PROCS — live-only, KEPT (see above)
   spellLevel: 1                # TBC == live; inert here (no per-level effect growth) but faithful
   client:
-    name: Dazed
+    textKey: spell.947785
     icon: 15                   # TBC/live 31125 SpellIconID (dump 2026-09-03)
-    auraDescription: "Dazed."
 # =================================================================================================
 # SUBTLETY (Task 8) helpers 947786-947787 — TWO ids, claimed IN ORDER. Both are single-rank ACTIVE
 # clones of talent-granted stock abilities whose TBC and WotLK rows diverge; nothing else in the tab
@@ -605,10 +585,9 @@ helpers:
   effects:
   - { effect: 3, basePoints: 0, dieSides: 0, targetA: 1 }   # SPELL_EFFECT_DUMMY, self — the script hook
   client:
-    name: Preparation
+    textKey: spell.947786
     icon: 207               # stock Preparation SpellIconID (14185, live DBC dump 2026-09-03)
     skillLine: 39           # Subtlety (SkillLineAbility row 7804)
-    description: "When activated, this ability immediately finishes the cooldown on your Evasion, Sprint, Vanish, Cold Blood, Shadowstep and Premeditation abilities."
 # --- Premeditation 947787 (node 20463 grants it) -------------------------------------------------
 # CLONE of stock 14183 — spec Amendment **A.7** / `_ref` node_findings[20463]. BOTH halves of the
 # talent moved in WotLK's rework and each is a real behaviour change:
@@ -655,11 +634,9 @@ helpers:
   - { effect: 80, basePoints: 1, dieSides: 1, targetA: 6 }              # ADD_COMBO_POINTS -> 2, on the target
   - { effect: 6, aura: 148, basePoints: 1, dieSides: 1, targetA: 1 }    # RETAIN_COMBO_POINTS, self
   client:
-    name: Premeditation
+    textKey: spell.947787
     icon: 98                # stock Premeditation SpellIconID (14183, live DBC dump 2026-09-03)
     skillLine: 39           # Subtlety (SkillLineAbility row 8077)
-    description: "When used, adds $s1 combo points to your target.  You must add to or use those combo points within $d or the combo points are lost."
-    auraDescription: "Your combo points will not be lost."
 scriptBindings:
 # NB THE INDENT: this is a TOP-LEVEL dataset key and MUST stay at column 0, a sibling of `helpers:`
 # / `tabs:` / `_ref:`. Indented by mistake into the `_ref:` block below, the generator emits ZERO

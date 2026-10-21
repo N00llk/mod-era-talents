@@ -22,13 +22,13 @@ helpers:
     aura: 75
     misc: 4        # SPELL_SCHOOL_MASK_FIRE
     durationIndex: 9
-    client: { name: "Fire Ward Reflect", icon: 16 }    # stock Fire Ward 543 SpellIconID
+    client: {textKey: spell.932990, icon: 16}    # stock Fire Ward 543 SpellIconID
   - id: 932991
     name: "Frost Ward Reflect"
     aura: 75
     misc: 16       # SPELL_SCHOOL_MASK_FROST
     durationIndex: 9
-    client: { name: "Frost Ward Reflect", icon: 501 }  # stock Frost Ward 6143 SpellIconID
+    client: {textKey: spell.932991, icon: 501}  # stock Frost Ward 6143 SpellIconID
   # Improved Blizzard's chill, at the AUTHENTIC Vanilla slow (30/50/65%) — the stock Chilled
   # 12484/12485/12486 is only 25/40/50%. MOD_DECREASE_SPEED (aura 33) on the enemy (target 6),
   # frost school, Mechanic 11 (snare) so Frostbite/Winter's Chill/Permafrost treat it as a chill,
@@ -54,10 +54,8 @@ helpers:
     family: 3
     maskC: 64          # word-2 bit 6 — the reserved "Blizzard Chill" pseudo-identity (see block comment)
     client:
-      name: "Chilled"
+      textKey: spell.932980
       icon: 285        # stock Chilled 12484 SpellIconID
-      description: "Slows movement speed by 30% for 1.50 sec."
-      auraDescription: "Movement slowed by 30%."
   - id: 932981
     name: "Chill (Improved Blizzard, Rank 2)"
     aura: 33
@@ -69,10 +67,8 @@ helpers:
     family: 3
     maskC: 64          # word-2 bit 6 — the reserved "Blizzard Chill" pseudo-identity (see block comment)
     client:
-      name: "Chilled"
+      textKey: spell.932981
       icon: 285        # stock Chilled 12484 SpellIconID
-      description: "Slows movement speed by 50% for 1.50 sec."
-      auraDescription: "Movement slowed by 50%."
   - id: 932982
     name: "Chill (Improved Blizzard, Rank 3)"
     aura: 33
@@ -84,10 +80,8 @@ helpers:
     family: 3
     maskC: 64          # word-2 bit 6 — the reserved "Blizzard Chill" pseudo-identity (see block comment)
     client:
-      name: "Chilled"
+      textKey: spell.932982
       icon: 285        # stock Chilled 12484 SpellIconID
-      description: "Slows movement speed by 65% for 1.50 sec."
-      auraDescription: "Movement slowed by 65%."
   # --- Arcane Power Vanilla clone 932760 (node 18016 grants it) — WotLK 12042 MAGNITUDE + cd DIVERGED. -
   # Vanilla Arcane Power (warcraft.wiki.gg / Wowhead Classic 12042, verified 2026-08-18): Instant,
   # 3 min cooldown, spells deal +30% damage while costing +30% mana, 15 sec. WotLK 12042 (DBC dump
@@ -122,11 +116,9 @@ helpers:
     - { effect: 6, aura: 108, basePoints: 29, dieSides: 1, misc: 14, targetA: 1 }   # +30% mana cost (SPELLMOD_COST, mask B)
     - { effect: 6, aura: 108, basePoints: 29, dieSides: 1, misc: 22, targetA: 1 }   # +30% periodic/DoT damage (SPELLMOD_DOT, mask C)
     client:
-      name: Arcane Power
+      textKey: spell.932760
       icon: 62           # stock Arcane Power SpellIconID (12042 dump 2026-08-18)
       skillLine: 237     # Arcane skill line (SkillLineAbility 12042 -> 237; dump 2026-08-18) — else the granted active lands in the General tab
-      description: "When activated, your spells deal 30% more damage while costing 30% more mana to cast. This effect lasts 15 sec."
-      auraDescription: "Spell damage increased by 30%. Mana cost increased by 30%."
   # --- Presence of Mind Vanilla clone 932761 (node 18013 grants it) — WotLK 12043 cd DIVERGED. ------
   # Vanilla Presence of Mind (12043, 1.12.1 client Spell.dbc): Instant, 3-min cooldown, your next Mage
   # spell with a cast time < 10s becomes an instant cast. WotLK 12043 (DBC dump 2026-08-24) shortened
@@ -157,11 +149,9 @@ helpers:
     effects:             # byte-identical to stock 12043 Effect_1 (dump 2026-08-24) — mechanic unchanged; the EffectSpellClassMaskA (1631584309/4096/0) + ProcCharges 1 + DurationIndex 21 all INHERIT from the template
     - { effect: 6, aura: 108, basePoints: -101, dieSides: 1, misc: 10, targetA: 1 }   # ADD_PCT_MODIFIER -100% cast time (SPELLMOD_CASTING_TIME, misc 10) on the next mage spell, self
     client:
-      name: Presence of Mind
+      textKey: spell.932761
       icon: 139          # stock PoM SpellIconID (12043 dump 2026-08-24)
       skillLine: 237     # Arcane skill line (matches Arcane Power 932760) — else the granted active lands in the General tab
-      description: "When activated, your next Mage spell with a casting time less than 10 sec becomes an instant cast spell."
-      auraDescription: "Your next Mage spell with a casting time less than 10 sec becomes an instant cast spell."
   # --- Magic Absorption clones 932326-932330 (node 18005 grants one per rank) ---------------------
   # ADDED 2026-09-05 (TBC Phase 9 re-audit, vanilla_fix_rows[18005]). The node shipped the always-on
   # resistance half only, with a comment saying the "restore X% of your total mana on a fully
@@ -212,9 +202,8 @@ helpers:
     - { effect: 6, aura: 22, basePoints: 2, misc: 126, targetA: 1, perLevel: 0 }
     proc: { flags: 131072, typeMask: 7, phaseMask: 0, hitMask: 8, chance: 0, cooldown: 1000 }
     client:
-      name: Magic Absorption
+      textKey: spell.932326
       icon: 459        # stock 29441 SpellIconID
-      description: "Increases all resistances by 2 and causes all spells you resist to restore 1% of your total mana."
   - id: 932327
     name: Magic Absorption
     template: 29441
@@ -230,9 +219,8 @@ helpers:
     - { effect: 6, aura: 22, basePoints: 4, misc: 126, targetA: 1, perLevel: 0 }
     proc: { flags: 131072, typeMask: 7, phaseMask: 0, hitMask: 8, chance: 0, cooldown: 1000 }
     client:
-      name: Magic Absorption
+      textKey: spell.932327
       icon: 459
-      description: "Increases all resistances by 4 and causes all spells you resist to restore 2% of your total mana."
   - id: 932328
     name: Magic Absorption
     template: 29441
@@ -248,9 +236,8 @@ helpers:
     - { effect: 6, aura: 22, basePoints: 6, misc: 126, targetA: 1, perLevel: 0 }
     proc: { flags: 131072, typeMask: 7, phaseMask: 0, hitMask: 8, chance: 0, cooldown: 1000 }
     client:
-      name: Magic Absorption
+      textKey: spell.932328
       icon: 459
-      description: "Increases all resistances by 6 and causes all spells you resist to restore 3% of your total mana."
   - id: 932329
     name: Magic Absorption
     template: 29441
@@ -266,9 +253,8 @@ helpers:
     - { effect: 6, aura: 22, basePoints: 8, misc: 126, targetA: 1, perLevel: 0 }
     proc: { flags: 131072, typeMask: 7, phaseMask: 0, hitMask: 8, chance: 0, cooldown: 1000 }
     client:
-      name: Magic Absorption
+      textKey: spell.932329
       icon: 459
-      description: "Increases all resistances by 8 and causes all spells you resist to restore 4% of your total mana."
   - id: 932330
     name: Magic Absorption
     template: 29441
@@ -284,9 +270,8 @@ helpers:
     - { effect: 6, aura: 22, basePoints: 10, misc: 126, targetA: 1, perLevel: 0 }
     proc: { flags: 131072, typeMask: 7, phaseMask: 0, hitMask: 8, chance: 0, cooldown: 1000 }
     client:
-      name: Magic Absorption
+      textKey: spell.932330
       icon: 459
-      description: "Increases all resistances by 10 and causes all spells you resist to restore 5% of your total mana."
   # --- Improved Counterspell silence 932762 (node 18011 triggers it) ------------------------------
   # ADDED 2026-09-05 (TBC Phase 9 re-audit, vanilla_fix_rows[18011]). The node's tooltip promises a
   # **4 sec** silence and it triggered stock 18469, which on this core is `DurationIndex 39` =
@@ -309,10 +294,8 @@ helpers:
                          # SchoolMask 64 / RangeIndex 13 still inherit.
     - { effect: 6, aura: 27, basePoints: 1, targetA: 6 }   # SPELL_AURA_MOD_SILENCE on the target
     client:
-      name: Silenced - Improved Counterspell
+      textKey: spell.932762
       icon: 17           # stock 18469 SpellIconID
-      description: "Silenced."
-      auraDescription: "Silenced."
   # --- Fire Vulnerability 932763 (node 18026 Improved Scorch triggers it) -------------------------
   # ADDED 2026-09-05 (TBC Phase 9 re-audit, vanilla_fix_rows[18026]). The node triggered STOCK 22959
   # while its tooltip promised "+3% Fire damage ... 30 sec ... Stacks up to 5 times". Live 22959 is
@@ -340,10 +323,8 @@ helpers:
     effects:
     - { effect: 6, aura: 87, basePoints: 3, misc: 4, targetA: 6 }   # MOD_DAMAGE_PERCENT_TAKEN, fire, +3%
     client:
-      name: Fire Vulnerability
+      textKey: spell.932763
       icon: 816          # stock 22959 SpellIconID
-      description: "Fire damage taken increased by 3%."
-      auraDescription: "Fire damage taken increased by 3%."
   # --- Pyroblast r1-r8, 932310-932317 (node 18024 grants r1; r2-r8 trainer-taught at Task 5) ------
   # ADDED 2026-09-05 (TBC Phase 9 re-audit, vanilla_fix_rows[18024]; USER DECISION 2026-09-05 —
   # ships this generation). The node GRANTED stock 11366, whose live `CastingTimeIndex 6` = 5000 ms.
@@ -362,6 +343,8 @@ helpers:
   # the strip arms are Task 5. Nothing is deleted — the stock chain roots at 11366, which a Vanilla
   # mage never holds, so it is already self-gating.
   - id: 932310
+    powerCost: 125
+    manaCostPct: 0
     name: Pyroblast
     template: 11366
     castTimeIndex: 171   # 6000 ms (live index 6 = 5000 ms)
@@ -370,13 +353,13 @@ helpers:
     - { effect: 2, basePoints: 140, dieSides: 47, targetA: 6 }
     - { effect: 6, aura: 3, basePoints: 13, dieSides: 1, targetA: 6 }
     client:
-      name: Pyroblast
+      textKey: spell.932310
       icon: 184          # stock Pyroblast SpellIconID
       rank: 1
       skillLine: 8       # Fire tab (else a granted active lands in the client's General tab)
-      description: "Hurls an immense fiery boulder that causes $s1 Fire damage and an additional $o2 Fire damage over $d."
-      auraDescription: "$s2 Fire damage every $t2 seconds."
   - id: 932311
+    powerCost: 150
+    manaCostPct: 0
     name: Pyroblast
     template: 12505
     castTimeIndex: 171   # 6000 ms (live index 6 = 5000 ms)
@@ -385,13 +368,13 @@ helpers:
     - { effect: 2, basePoints: 179, dieSides: 57, targetA: 6 }
     - { effect: 6, aura: 3, basePoints: 17, dieSides: 1, targetA: 6 }
     client:
-      name: Pyroblast
+      textKey: spell.932311
       icon: 184          # stock Pyroblast SpellIconID
       rank: 2
       skillLine: 8       # Fire tab (else a granted active lands in the client's General tab)
-      description: "Hurls an immense fiery boulder that causes $s1 Fire damage and an additional $o2 Fire damage over $d."
-      auraDescription: "$s2 Fire damage every $t2 seconds."
   - id: 932312
+    powerCost: 195
+    manaCostPct: 0
     name: Pyroblast
     template: 12522
     castTimeIndex: 171   # 6000 ms (live index 6 = 5000 ms)
@@ -400,13 +383,13 @@ helpers:
     - { effect: 2, basePoints: 254, dieSides: 73, targetA: 6 }
     - { effect: 6, aura: 3, basePoints: 23, dieSides: 1, targetA: 6 }
     client:
-      name: Pyroblast
+      textKey: spell.932312
       icon: 184          # stock Pyroblast SpellIconID
       rank: 3
       skillLine: 8       # Fire tab (else a granted active lands in the client's General tab)
-      description: "Hurls an immense fiery boulder that causes $s1 Fire damage and an additional $o2 Fire damage over $d."
-      auraDescription: "$s2 Fire damage every $t2 seconds."
   - id: 932313
+    powerCost: 240
+    manaCostPct: 0
     name: Pyroblast
     template: 12523
     castTimeIndex: 171   # 6000 ms (live index 6 = 5000 ms)
@@ -415,13 +398,13 @@ helpers:
     - { effect: 2, basePoints: 328, dieSides: 91, targetA: 6 }
     - { effect: 6, aura: 3, basePoints: 30, dieSides: 1, targetA: 6 }
     client:
-      name: Pyroblast
+      textKey: spell.932313
       icon: 184          # stock Pyroblast SpellIconID
       rank: 4
       skillLine: 8       # Fire tab (else a granted active lands in the client's General tab)
-      description: "Hurls an immense fiery boulder that causes $s1 Fire damage and an additional $o2 Fire damage over $d."
-      auraDescription: "$s2 Fire damage every $t2 seconds."
   - id: 932314
+    powerCost: 285
+    manaCostPct: 0
     name: Pyroblast
     template: 12524
     castTimeIndex: 171   # 6000 ms (live index 6 = 5000 ms)
@@ -430,13 +413,13 @@ helpers:
     - { effect: 2, basePoints: 406, dieSides: 109, targetA: 6 }
     - { effect: 6, aura: 3, basePoints: 38, dieSides: 1, targetA: 6 }
     client:
-      name: Pyroblast
+      textKey: spell.932314
       icon: 184          # stock Pyroblast SpellIconID
       rank: 5
       skillLine: 8       # Fire tab (else a granted active lands in the client's General tab)
-      description: "Hurls an immense fiery boulder that causes $s1 Fire damage and an additional $o2 Fire damage over $d."
-      auraDescription: "$s2 Fire damage every $t2 seconds."
   - id: 932315
+    powerCost: 335
+    manaCostPct: 0
     name: Pyroblast
     template: 12525
     castTimeIndex: 171   # 6000 ms (live index 6 = 5000 ms)
@@ -445,13 +428,13 @@ helpers:
     - { effect: 2, basePoints: 502, dieSides: 129, targetA: 6 }
     - { effect: 6, aura: 3, basePoints: 46, dieSides: 1, targetA: 6 }
     client:
-      name: Pyroblast
+      textKey: spell.932315
       icon: 184          # stock Pyroblast SpellIconID
       rank: 6
       skillLine: 8       # Fire tab (else a granted active lands in the client's General tab)
-      description: "Hurls an immense fiery boulder that causes $s1 Fire damage and an additional $o2 Fire damage over $d."
-      auraDescription: "$s2 Fire damage every $t2 seconds."
   - id: 932316
+    powerCost: 385
+    manaCostPct: 0
     name: Pyroblast
     template: 12526
     castTimeIndex: 171   # 6000 ms (live index 6 = 5000 ms)
@@ -460,13 +443,13 @@ helpers:
     - { effect: 2, basePoints: 599, dieSides: 151, targetA: 6 }
     - { effect: 6, aura: 3, basePoints: 56, dieSides: 1, targetA: 6 }
     client:
-      name: Pyroblast
+      textKey: spell.932316
       icon: 184          # stock Pyroblast SpellIconID
       rank: 7
       skillLine: 8       # Fire tab (else a granted active lands in the client's General tab)
-      description: "Hurls an immense fiery boulder that causes $s1 Fire damage and an additional $o2 Fire damage over $d."
-      auraDescription: "$s2 Fire damage every $t2 seconds."
   - id: 932317
+    powerCost: 440
+    manaCostPct: 0
     name: Pyroblast
     template: 18809
     castTimeIndex: 171   # 6000 ms (live index 6 = 5000 ms)
@@ -475,12 +458,10 @@ helpers:
     - { effect: 2, basePoints: 707, dieSides: 191, targetA: 6 }
     - { effect: 6, aura: 3, basePoints: 66, dieSides: 1, targetA: 6 }
     client:
-      name: Pyroblast
+      textKey: spell.932317
       icon: 184          # stock Pyroblast SpellIconID
       rank: 8
       skillLine: 8       # Fire tab (else a granted active lands in the client's General tab)
-      description: "Hurls an immense fiery boulder that causes $s1 Fire damage and an additional $o2 Fire damage over $d."
-      auraDescription: "$s2 Fire damage every $t2 seconds."
   # --- Blast Wave r1-r5, 932320-932324 (node 18030 grants r1; r2-r5 trainer-taught at Task 5) -----
   # ADDED 2026-09-05 (TBC Phase 9 re-audit, vanilla_fix_rows[18030]; USER DECISION — ships this
   # generation). The node GRANTED stock 11113, whose live record carries `e3 = eff 98
@@ -493,70 +474,70 @@ helpers:
   # NO `spell_mage_blast_wave` rebind: that SpellScript only prevents EFFECT_2's knockback under
   # Glyph of Blast Wave, and the clone has no such effect for it to hook.
   - id: 932320
+    powerCost: 215
+    manaCostPct: 0
     name: Blast Wave
     template: 11113
     effects:             # exactly TWO — the 0-fill drops live's e3 SPELL_EFFECT_KNOCK_BACK
     - { effect: 2, basePoints: 153, dieSides: 33, targetA: 22 }
     - { effect: 6, aura: 33, basePoints: -51, dieSides: 1, targetA: 22 }   # -50% snare (the "daze")
     client:
-      name: Blast Wave
+      textKey: spell.932320
       icon: 292          # stock Blast Wave SpellIconID
       rank: 1
       skillLine: 8       # Fire tab
-      description: "A wave of flame radiates outward from the caster, damaging all enemies caught within the blast for $s1 Fire damage, dazing them for $d."
-      auraDescription: "Dazed."
   - id: 932321
+    powerCost: 270
+    manaCostPct: 0
     name: Blast Wave
     template: 13018
     effects:             # exactly TWO — the 0-fill drops live's e3 SPELL_EFFECT_KNOCK_BACK
     - { effect: 2, basePoints: 200, dieSides: 41, targetA: 22 }
     - { effect: 6, aura: 33, basePoints: -51, dieSides: 1, targetA: 22 }   # -50% snare (the "daze")
     client:
-      name: Blast Wave
+      textKey: spell.932321
       icon: 292          # stock Blast Wave SpellIconID
       rank: 2
       skillLine: 8       # Fire tab
-      description: "A wave of flame radiates outward from the caster, damaging all enemies caught within the blast for $s1 Fire damage, dazing them for $d."
-      auraDescription: "Dazed."
   - id: 932322
+    powerCost: 355
+    manaCostPct: 0
     name: Blast Wave
     template: 13019
     effects:             # exactly TWO — the 0-fill drops live's e3 SPELL_EFFECT_KNOCK_BACK
     - { effect: 2, basePoints: 276, dieSides: 53, targetA: 22 }
     - { effect: 6, aura: 33, basePoints: -51, dieSides: 1, targetA: 22 }   # -50% snare (the "daze")
     client:
-      name: Blast Wave
+      textKey: spell.932322
       icon: 292          # stock Blast Wave SpellIconID
       rank: 3
       skillLine: 8       # Fire tab
-      description: "A wave of flame radiates outward from the caster, damaging all enemies caught within the blast for $s1 Fire damage, dazing them for $d."
-      auraDescription: "Dazed."
   - id: 932323
+    powerCost: 450
+    manaCostPct: 0
     name: Blast Wave
     template: 13020
     effects:             # exactly TWO — the 0-fill drops live's e3 SPELL_EFFECT_KNOCK_BACK
     - { effect: 2, basePoints: 364, dieSides: 69, targetA: 22 }
     - { effect: 6, aura: 33, basePoints: -51, dieSides: 1, targetA: 22 }   # -50% snare (the "daze")
     client:
-      name: Blast Wave
+      textKey: spell.932323
       icon: 292          # stock Blast Wave SpellIconID
       rank: 4
       skillLine: 8       # Fire tab
-      description: "A wave of flame radiates outward from the caster, damaging all enemies caught within the blast for $s1 Fire damage, dazing them for $d."
-      auraDescription: "Dazed."
   - id: 932324
+    powerCost: 545
+    manaCostPct: 0
     name: Blast Wave
     template: 13021
     effects:             # exactly TWO — the 0-fill drops live's e3 SPELL_EFFECT_KNOCK_BACK
     - { effect: 2, basePoints: 461, dieSides: 83, targetA: 22 }
     - { effect: 6, aura: 33, basePoints: -51, dieSides: 1, targetA: 22 }   # -50% snare (the "daze")
     client:
-      name: Blast Wave
+      textKey: spell.932324
       icon: 292          # stock Blast Wave SpellIconID
       rank: 5
       skillLine: 8       # Fire tab
-      description: "A wave of flame radiates outward from the caster, damaging all enemies caught within the blast for $s1 Fire damage, dazing them for $d."
-      auraDescription: "Dazed."
   # --- Combustion 932325 (node 18032 grants it) ---------------------------------------------------
   # ADDED 2026-09-05 (TBC Phase 9 re-audit, vanilla_fix_rows[18032]; USER DECISION — ships this
   # generation). The node GRANTED stock 11129, which live retuned twice over: `RecoveryTime 120000`
@@ -610,14 +591,13 @@ helpers:
       chance: 0          # stock row; the core seeds from the DBC ProcChance (100)
       affectsMask: { a: 146800663, b: 200776, c: 0 }   # census row 11129 verbatim
     client:
-      name: Combustion
+      textKey: spell.932325
       icon: 33           # stock 11129 SpellIconID
       skillLine: 8       # Fire tab
       # Era tooltip wording — "3 critical strikes", not live's "3 non-periodic critical
       # strikes". Behaviour is unchanged: the proc row's ProcTypeMask 65536 is
       # DONE_SPELL_MAGIC_DMG_CLASS_NEG, which periodic damage never raises, so no DoT tick
       # can spend a charge and the qualifier the WotLK text adds is already implied.
-      description: "When activated, this spell causes each of your Fire damage spell hits to increase your critical strike chance with Fire damage spells by $28682s1%.  This effect lasts until you have caused 3 critical strikes with Fire spells."
   # --- Winter's Chill debuff 932764 (node 18048 triggers it) --------------------------------------
   # ADDED 2026-09-05 (TBC Phase 9 re-audit, vanilla_fix_rows[18048]). The node triggered STOCK 12579
   # while its tooltip promised "+2% ... a Frost spell will critically hit ... Stacks up to 5 times".
@@ -655,10 +635,8 @@ helpers:
     effects:
     - { effect: 6, aura: 179, basePoints: 2, misc: 16, targetA: 6 }   # MOD_ATTACKER_SPELL_CRIT_CHANCE, frost, +2%
     client:
-      name: Winter's Chill
+      textKey: spell.932764
       icon: 187          # stock 12579 SpellIconID
-      description: "Increases the chance a Frost spell will critically hit the target by 2% for 15 sec.  Stacks up to 5 times."
-      auraDescription: "Frost spells have a 2% additional chance to critically hit.  Stacks up to 5 times."
   # --- Ice Barrier r1-r4, 932331-932334 (node 18049 grants r1; r2-r4 trainer-taught at Task 5) ----
   # ADDED 2026-09-05 (TBC Phase 9 re-audit, spec Amendment **A.7** — the fourth Vanilla clone chain,
   # found by the TBC coefficient hunt rather than by the sweep, because the DBC rows are LIVE_MATCH).
@@ -689,53 +667,53 @@ helpers:
   # stock swap and the strip arms are Task 5. Nothing is deleted — the stock chain roots at 11426,
   # which a Vanilla mage never holds, so it is already self-gating.
   - id: 932331
+    powerCost: 305
+    manaCostPct: 0
     name: Ice Barrier
     template: 11426
     effects:
     - { effect: 6, aura: 69, basePoints: 438, misc: 127, targetA: 1, perLevel: 2.8 }   # SCHOOL_ABSORB
     client:
-      name: Ice Barrier
+      textKey: spell.932331
       icon: 32           # stock 11426 SpellIconID
       rank: 1
       skillLine: 6       # Frost tab
-      description: "Instantly shields you, absorbing $s1 damage.  Lasts $d.  While the shield holds, spellcasting will not be delayed by damage."
-      auraDescription: "Absorbs damage."
   - id: 932332
+    powerCost: 360
+    manaCostPct: 0
     name: Ice Barrier
     template: 13031
     effects:
     - { effect: 6, aura: 69, basePoints: 549, misc: 127, targetA: 1, perLevel: 3.2 }
     client:
-      name: Ice Barrier
+      textKey: spell.932332
       icon: 32
       rank: 2
       skillLine: 6
-      description: "Instantly shields you, absorbing $s1 damage.  Lasts $d.  While the shield holds, spellcasting will not be delayed by damage."
-      auraDescription: "Absorbs damage."
   - id: 932333
+    powerCost: 420
+    manaCostPct: 0
     name: Ice Barrier
     template: 13032
     effects:
     - { effect: 6, aura: 69, basePoints: 678, misc: 127, targetA: 1, perLevel: 3.6 }
     client:
-      name: Ice Barrier
+      textKey: spell.932333
       icon: 32
       rank: 3
       skillLine: 6
-      description: "Instantly shields you, absorbing $s1 damage.  Lasts $d.  While the shield holds, spellcasting will not be delayed by damage."
-      auraDescription: "Absorbs damage."
   - id: 932334
+    powerCost: 480
+    manaCostPct: 0
     name: Ice Barrier
     template: 13033
     effects:
     - { effect: 6, aura: 69, basePoints: 818, misc: 127, targetA: 1, perLevel: 4.0 }
     client:
-      name: Ice Barrier
+      textKey: spell.932334
       icon: 32
       rank: 4
       skillLine: 6
-      description: "Instantly shields you, absorbing $s1 damage.  Lasts $d.  While the shield holds, spellcasting will not be delayed by damage."
-      auraDescription: "Absorbs damage."
   # --- Cold Snap 932335 (node 18041 grants it) — the cooldown DIVERGED ---------------------------
   # ADDED 2026-09-06 by the mage FINAL REVIEW (item G-45, owner-approved). Node 18041 used to grant
   # STOCK 11958, whose live `RecoveryTime` is 480000 (8 min); Vanilla's Cold Snap is a **10 min**
@@ -761,10 +739,9 @@ helpers:
     effects:             # byte-identical to stock 11958 Effect_1 — a bare DUMMY; the script is the mechanic
     - { effect: 3, basePoints: 0, dieSides: 0, targetA: 1 }   # SPELL_EFFECT_DUMMY, self
     client:
-      name: Cold Snap
+      textKey: spell.932335
       icon: 133          # stock Cold Snap SpellIconID (11958 dump 2026-09-06)
       skillLine: 6       # Frost tab — else the granted active lands in the client's General tab
-      description: "When activated, this spell finishes the cooldown on all of your Frost spells."
 # Attach the module AuraScript to EVERY rank of Fire Ward (-543) and Frost Ward (-6143) — a
 # negative id binds the whole spell chain. The script grants the matching reflect helper while the
 # ward is up when the mage has the Improved Fire Ward / Frost Warding DUMMY marker.

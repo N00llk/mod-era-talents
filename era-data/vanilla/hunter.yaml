@@ -46,12 +46,10 @@ helpers:
   - { effect: 6, aura: 29, basePoints: -21, misc: 1, targetA: 6 }   # MOD_STAT Agility
   - { effect: 6, aura: 29, basePoints: 0,   misc: 2, targetA: 6 }   # MOD_STAT Stamina (Improved-only; era_hunter_scorpid_sting sets it)
   client:
-    name: Scorpid Sting
+    textKey: spell.932300
     rank: 1
     icon: 256              # stock Scorpid Sting SpellIconID (3043)
     skillLine: 163         # Marksmanship tab (SkillLineAbility 3043 -> 163)
-    description: "Stings the target, reducing its Strength and Agility by 21 for 20 sec.  Only one Sting per Hunter can be active on any one target."
-    auraDescription: "Strength and Agility reduced by 21."
 - id: 932301               # Scorpid Sting Rank 2 (L32, -30)
   name: Scorpid Sting
   template: 3043
@@ -61,12 +59,10 @@ helpers:
   - { effect: 6, aura: 29, basePoints: -30, misc: 1, targetA: 6 }
   - { effect: 6, aura: 29, basePoints: 0,   misc: 2, targetA: 6 }
   client:
-    name: Scorpid Sting
+    textKey: spell.932301
     rank: 2
     icon: 256
     skillLine: 163
-    description: "Stings the target, reducing its Strength and Agility by 30 for 20 sec.  Only one Sting per Hunter can be active on any one target."
-    auraDescription: "Strength and Agility reduced by 30."
 - id: 932302               # Scorpid Sting Rank 3 (L42, -46)
   name: Scorpid Sting
   template: 3043
@@ -76,12 +72,10 @@ helpers:
   - { effect: 6, aura: 29, basePoints: -46, misc: 1, targetA: 6 }
   - { effect: 6, aura: 29, basePoints: 0,   misc: 2, targetA: 6 }
   client:
-    name: Scorpid Sting
+    textKey: spell.932302
     rank: 3
     icon: 256
     skillLine: 163
-    description: "Stings the target, reducing its Strength and Agility by 46 for 20 sec.  Only one Sting per Hunter can be active on any one target."
-    auraDescription: "Strength and Agility reduced by 46."
 - id: 932303               # Scorpid Sting Rank 4 (L52, -69)
   name: Scorpid Sting
   template: 3043
@@ -91,12 +85,10 @@ helpers:
   - { effect: 6, aura: 29, basePoints: -69, misc: 1, targetA: 6 }
   - { effect: 6, aura: 29, basePoints: 0,   misc: 2, targetA: 6 }
   client:
-    name: Scorpid Sting
+    textKey: spell.932303
     rank: 4
     icon: 256
     skillLine: 163
-    description: "Stings the target, reducing its Strength and Agility by 69 for 20 sec.  Only one Sting per Hunter can be active on any one target."
-    auraDescription: "Strength and Agility reduced by 69."
 # Era presence markers — hidden passives with a CLIENT block (name only, no skillLine -> resolvable for
 # the trainer "Requires ..." line but never in the spellbook). 932304 gates the custom Vanilla chain;
 # 932305 re-gates the stock 3043. ReconcileBaselineSpells (CLASS_HUNTER) grants exactly one per era.
@@ -106,7 +98,7 @@ helpers:
   effects:
   - { effect: 6, aura: 4, basePoints: 0, misc: 0, targetA: 1 }
   client:
-    name: "Vanilla Hunter"
+    textKey: spell.932304
     icon: 1
 - id: 932305
   name: "Era: WotLK Hunter"
@@ -114,7 +106,7 @@ helpers:
   effects:
   - { effect: 6, aura: 4, basePoints: 0, misc: 0, targetA: 1 }
   client:
-    name: "WotLK Hunter"
+    textKey: spell.932305
     icon: 1
 # --- Bestial Wrath (node 18316) — Vanilla 18s / 12% base mana clone. ----------------------------
 # Stock WotLK 19574 (dump 2026-08-17): aura 61 MOD_SCALE +50 / aura 79 MOD_DAMAGE_PERCENT_DONE +50
@@ -146,10 +138,8 @@ helpers:
   - { effect: 6, aura: 79, basePoints: 49, dieSides: 1, misc: 127, targetA: 5 }  # MOD_DAMAGE_PERCENT_DONE +50 all schools
   - { effect: 6, aura: 77, basePoints: -1, dieSides: 1, misc: 12, targetA: 5 }   # MECHANIC_IMMUNITY (stun)
   client:
-    name: Bestial Wrath
+    textKey: spell.932967
     icon: 1680             # stock 19574 SpellIconID (dump 2026-08-17)
-    description: "Send your pet into a rage causing 50% additional damage for 18 sec. While enraged, the beast does not feel pity or remorse or fear and it cannot be stopped unless killed."
-    auraDescription: "Enraged: damage increased by 50%. Cannot be stopped unless killed."
     skillLine: 50          # Beast Mastery tab (stock 19574's SkillLine)
 # --- Spirit Bond pet-side carriers (node 18312, petBuffIds). ------------------------------------
 # Stock WotLK pet auras 19579/24529 (dump 2026-08-17): Effect_1 = 119 APPLY_AREA_AURA_PET, aura 20
@@ -171,9 +161,8 @@ helpers:
     targetA: 1             # TARGET_UNIT_CASTER (the pet self-casts; stock encoding)
     radius: 12             # EffectRadiusIndex 12 = 100 yd (stock encoding)
   client:
-    name: Spirit Bond
+    textKey: spell.932968
     icon: 960              # stock Spirit Bond SpellIconID (dump 2026-08-17)
-    auraDescription: "You and your pet will regenerate 1% of total health every 10 sec."
 - id: 932969
   name: Spirit Bond
   template: 19579          # rank 2 clones the SAME template (24529 differs only in basePoints)
@@ -184,9 +173,8 @@ helpers:
     targetA: 1
     radius: 12
   client:
-    name: Spirit Bond
+    textKey: spell.932969
     icon: 960
-    auraDescription: "You and your pet will regenerate 2% of total health every 10 sec."
 # --- Ferocity pet-side carriers (node 18311, petBuffIds). ---------------------------------------
 # The stock crit carrier "Tamed Pet Passive 06" 19591 (dump 2026-08-17) has TWO effects: aura 52
 # MOD_WEAPON_CRIT_PERCENT + aura 57 MOD_SPELL_CRIT_CHANCE (both base 0; the WotLK talent spellmods
@@ -244,10 +232,8 @@ helpers:
   - { effect: 6, aura: 47, basePoints: 24, dieSides: 1, targetA: 1 }   # MOD_PARRY_PERCENT +25
   - { effect: 6, aura: 49, basePoints: 24, dieSides: 1, targetA: 1 }   # MOD_DODGE_PERCENT +25
   client:
-    name: Deterrence
+    textKey: spell.932964
     icon: 83               # stock 19263 SpellIconID (dump 2026-08-17)
-    description: "When activated, increases your Dodge and Parry chance by 25% for 10 sec."
-    auraDescription: "Dodge and Parry chance increased by 25%."
     skillLine: 51          # Survival tab (SkillLineAbility row 10865: 19263 -> 51)
 # --- Wyvern Sting (node 18346) — Vanilla 12s sleep + 300-over-12s wake DoT. ---------------------
 # Stock WotLK 19386 (dump 2026-08-17): aura 12 MOD_STUN / Mechanic 10 (sleep), DurationIndex 9 =
@@ -261,6 +247,8 @@ helpers:
 # never has); the spell's own cooldown is the overridden 120s RecoveryTime.
 # The wake-DoT fires via the era_wyvern_sting module script (scriptBindings above) casting 932966.
 - id: 932965
+  powerCost: 115
+  manaCostPct: 0
   name: Wyvern Sting
   template: 19386          # CLONE stock Wyvern Sting — inherits range/cost/visual/mechanic
   durationIndex: 29        # 12 sec sleep (SpellDuration.dbc idx 29 = 12000; stock idx 9 = 30000)
@@ -269,10 +257,8 @@ helpers:
   effects:
   - { effect: 6, aura: 12, basePoints: -1, dieSides: 1, targetA: 6 }   # MOD_STUN (sleep), stock encoding
   client:
-    name: Wyvern Sting
+    textKey: spell.932965
     icon: 1721             # stock 19386 SpellIconID (dump 2026-08-17)
-    description: "A stinging shot that puts the target to sleep for 12 sec. Any damage will cancel the effect. When the target wakes up, the Sting causes 300 Nature damage over 12 sec. Only usable out of combat. Only one Sting per Hunter can be active on the target at a time."
-    auraDescription: "Asleep. Any damage will cancel the effect. When the target wakes up, the Sting causes 300 Nature damage over 12 sec."
     skillLine: 51          # Survival tab (SkillLineAbility row 10930: 19386 -> 51)
 # Wyvern Sting wake-DoT: stock WotLK 24131 (dump 2026-08-17) = aura 3 PERIODIC_DAMAGE 100 per
 # EffectAuraPeriod 2000, DurationIndex 32 = 6s (300 total over 6s), targetA 25, DispelType poison.
@@ -294,9 +280,8 @@ helpers:
   - { effect: 6, aura: 3, basePoints: 49, dieSides: 1, targetA: 6 }    # PERIODIC_DAMAGE 50/2s;
     # targetA 6 = TARGET_UNIT_TARGET_ENEMY, the post-fix value of ApplySpellFix({24131,24134,24135}).
   client:
-    name: Wyvern Sting
+    textKey: spell.932966
     icon: 1721             # same icon as the sleep (stock 24131 also carries 1721)
-    auraDescription: "50 Nature damage every 2 sec."
 # --- Entrapment root (node 18334 trigger) — Vanilla 5 sec root. ---------------------------------
 # Stock WotLK roots diverge per rank: 19185/64803/64804 = DurationIndex 39/27/35 = 2s/3s/4s
 # (dump 2026-08-17). Classic 19185 (wowhead classic): 5 sec root, mechanic Rooted. Clone the
@@ -323,9 +308,8 @@ helpers:
     # ^ MOD_ROOT with the POST-FIX target pair: TARGET_DEST_TARGET_ENEMY / TARGET_UNIT_DEST_AREA_ENEMY
     #   at EffectRadiusIndex 13 — the area is centred on the trapped victim, not on the hunter.
   client:
-    name: Entrapment
+    textKey: spell.932972
     icon: 20               # stock 19185 SpellIconID (dump 2026-08-17)
-    auraDescription: "Entrapped. Unable to move."
 # --- Improved Wing Clip root (node 18336 trigger) — Vanilla 5 sec root. -------------------------
 # The Classic proc chain (19228=4% .. 19235=20%, wowhead classic) triggers root 19229
 # ("Improved Wing Clip", 5 sec, mechanic Rooted) — an id that does NOT exist in the 3.3.5a DBC
@@ -349,9 +333,8 @@ helpers:
   - { effect: 6, aura: 26, basePoints: 0, dieSides: 0, targetA: 6, targetB: 0, radius: 0 }
     # ^ MOD_ROOT, single target (TARGET_UNIT_TARGET_ENEMY) — same shape as TBC's 948344.
   client:
-    name: Improved Wing Clip
+    textKey: spell.932978
     icon: 517              # Wing Clip 2974's SpellIconID (dump 2026-08-17)
-    auraDescription: "Immobilized."
 # --- Counterattack (node 18344) — Vanilla rank 1: 40 damage. ------------------------------------
 # Stock WotLK 19306 (dump 2026-08-17): Effect_1 SCHOOL_DAMAGE 48 (basePoints 47 + dieSides 1),
 # Effect_2 aura 26 MOD_ROOT for DurationIndex 28 = 5s, ManaCost 45, RangeIndex 2 (5 yd),
@@ -364,17 +347,17 @@ helpers:
 # stock 20909/20910 rows carry 84/132 damage, so Task 8 must chain CLONES off 932979 (the Aimed
 # Shot helper pattern), not the stock ids.
 - id: 932979
+  powerCost: 45
+  manaCostPct: 0
   name: Counterattack
   template: 19306          # CLONE stock rank 1 — inherits parry gate/root/cost/CD/visual
   effects:
   - { effect: 2, basePoints: 39, dieSides: 1, targetA: 6 }             # SCHOOL_DAMAGE 40 (Vanilla)
   - { effect: 6, aura: 26, basePoints: 0, dieSides: 0, targetA: 6 }    # MOD_ROOT 5s (idx 28 inherited)
   client:
-    name: Counterattack
+    textKey: spell.932979
     icon: 278              # stock 19306 SpellIconID (dump 2026-08-17)
     rank: 1
-    description: "A strike that becomes active after parrying an opponent's attack. This attack deals 40 damage and immobilizes the target for 5 sec. Counterattack cannot be blocked, dodged, or parried."
-    auraDescription: "Immobilized."
     skillLine: 51          # Survival tab (SkillLineAbility row 13046: 19306 -> 51)
 # --- Counterattack trainer ranks (node 18344, R2/R3) — Vanilla 70/110 damage clones. ------------
 # Talent-granted R1 is 932979 (40 dmg). Higher ranks are trainer-taught (see the hunter trainer SQL
@@ -385,30 +368,30 @@ helpers:
 # category cooldown (Category 1135), mana, level and range verbatim (all dumped byte-identical
 # across the three ranks). spell_ranks chains R1->R2->R3 off 932979 in the trainer SQL.
 - id: 932958
+  powerCost: 65
+  manaCostPct: 0
   name: Counterattack
   template: 20909          # CLONE stock rank 2 — inherits parry gate/root/cost 65/L42/CD/visual
   effects:
   - { effect: 2, basePoints: 69, dieSides: 1, targetA: 6 }             # SCHOOL_DAMAGE 70 (Vanilla r2)
   - { effect: 6, aura: 26, basePoints: 0, dieSides: 0, targetA: 6 }    # MOD_ROOT 5s (idx 28 inherited)
   client:
-    name: Counterattack
+    textKey: spell.932958
     icon: 278              # stock Counterattack SpellIconID (dump 2026-08-17)
     rank: 2
-    description: "A strike that becomes active after parrying an opponent's attack. This attack deals 70 damage and immobilizes the target for 5 sec. Counterattack cannot be blocked, dodged, or parried."
-    auraDescription: "Immobilized."
     skillLine: 51          # Survival tab
 - id: 932959
+  powerCost: 85
+  manaCostPct: 0
   name: Counterattack
   template: 20910          # CLONE stock rank 3 — inherits parry gate/root/cost 85/L54/CD/visual
   effects:
   - { effect: 2, basePoints: 109, dieSides: 1, targetA: 6 }           # SCHOOL_DAMAGE 110 (Vanilla r3)
   - { effect: 6, aura: 26, basePoints: 0, dieSides: 0, targetA: 6 }   # MOD_ROOT 5s (idx 28 inherited)
   client:
-    name: Counterattack
+    textKey: spell.932959
     icon: 278
     rank: 3
-    description: "A strike that becomes active after parrying an opponent's attack. This attack deals 110 damage and immobilizes the target for 5 sec. Counterattack cannot be blocked, dodged, or parried."
-    auraDescription: "Immobilized."
     skillLine: 51
 # --- Aimed Shot (node 18321) — Vanilla 3s-cast / 6s-cooldown trainer chain R1-R6. ---------------
 # Stock 19434 (dump 2026-08-17) is the WotLK REWORK: instant (CastingTimeIndex 18), a -50% healing
@@ -444,6 +427,7 @@ helpers:
 #   templated clones 0-fill absent effect slots. Bonus value X -> basePoints X-1, dieSides 1.
 #   castTimeIndex 14 = 3000 ms (SpellCastTimes.dbc, parsed 2026-08-17); template's index 18 = instant.
 - id: 932952
+  manaCostPct: 0
   name: Aimed Shot
   template: 19434          # CLONE stock Aimed Shot — inherits ranged shot mechanic/ammo/range/visual
   spellFixAck: >-
@@ -465,12 +449,12 @@ helpers:
   effects:
   - { effect: 121, basePoints: 69, dieSides: 1, targetA: 6 }   # normalized weapon damage +70
   client:
-    name: Aimed Shot
+    textKey: spell.932952
     icon: 1629             # stock 19434 SpellIconID (dump 2026-08-17)
     rank: 1
-    description: "An aimed shot that increases ranged damage by 70."
     skillLine: 163         # Marksmanship tab (SkillLineAbility: 19434 -> 163)
 - id: 932953
+  manaCostPct: 0
   name: Aimed Shot
   template: 19434
   spellFixAck: >-
@@ -488,12 +472,12 @@ helpers:
   effects:
   - { effect: 121, basePoints: 124, dieSides: 1, targetA: 6 }  # +125
   client:
-    name: Aimed Shot
+    textKey: spell.932953
     icon: 1629
     rank: 2
-    description: "An aimed shot that increases ranged damage by 125."
     skillLine: 163
 - id: 932954
+  manaCostPct: 0
   name: Aimed Shot
   template: 19434
   spellFixAck: >-
@@ -511,12 +495,12 @@ helpers:
   effects:
   - { effect: 121, basePoints: 199, dieSides: 1, targetA: 6 }  # +200
   client:
-    name: Aimed Shot
+    textKey: spell.932954
     icon: 1629
     rank: 3
-    description: "An aimed shot that increases ranged damage by 200."
     skillLine: 163
 - id: 932955
+  manaCostPct: 0
   name: Aimed Shot
   template: 19434
   spellFixAck: >-
@@ -534,12 +518,12 @@ helpers:
   effects:
   - { effect: 121, basePoints: 329, dieSides: 1, targetA: 6 }  # +330
   client:
-    name: Aimed Shot
+    textKey: spell.932955
     icon: 1629
     rank: 4
-    description: "An aimed shot that increases ranged damage by 330."
     skillLine: 163
 - id: 932956
+  manaCostPct: 0
   name: Aimed Shot
   template: 19434
   spellFixAck: >-
@@ -557,12 +541,12 @@ helpers:
   effects:
   - { effect: 121, basePoints: 459, dieSides: 1, targetA: 6 }  # +460
   client:
-    name: Aimed Shot
+    textKey: spell.932956
     icon: 1629
     rank: 5
-    description: "An aimed shot that increases ranged damage by 460."
     skillLine: 163
 - id: 932957
+  manaCostPct: 0
   name: Aimed Shot
   template: 19434
   spellFixAck: >-
@@ -580,10 +564,9 @@ helpers:
   effects:
   - { effect: 121, basePoints: 599, dieSides: 1, targetA: 6 }  # +600
   client:
-    name: Aimed Shot
+    textKey: spell.932957
     icon: 1629
     rank: 6
-    description: "An aimed shot that increases ranged damage by 600."
     skillLine: 163
 # --- Trueshot Aura (node 18330) — Vanilla flat +AP party clone R1-R3. ---------------------------
 # Stock 19506 (dump 2026-08-17) is the WotLK REWORK: +10% ranged AP (Effect_1 aura 167) + +10%
@@ -607,11 +590,9 @@ helpers:
   - { effect: 65, aura: 124, basePoints: 49, dieSides: 1, targetA: 1, radius: 11 }  # +50 ranged AP, party 45yd
   - { effect: 65, aura: 99,  basePoints: 49, dieSides: 1, targetA: 1, radius: 11 }  # +50 melee AP, party 45yd
   client:
-    name: Trueshot Aura
+    textKey: spell.932961
     icon: 128              # stock 19506 SpellIconID (dump 2026-08-17)
     rank: 1
-    description: "Increases the Ranged and Melee Attack Power of party members within 45 yards by 50. Lasts 30 min."
-    auraDescription: "Melee and ranged attack power increased by 50."
     skillLine: 163         # Marksmanship tab (SkillLineAbility: 19506 -> 163)
 - id: 932962
   name: Trueshot Aura
@@ -621,11 +602,9 @@ helpers:
   - { effect: 65, aura: 124, basePoints: 74, dieSides: 1, targetA: 1, radius: 11 }  # +75 ranged AP
   - { effect: 65, aura: 99,  basePoints: 74, dieSides: 1, targetA: 1, radius: 11 }  # +75 melee AP
   client:
-    name: Trueshot Aura
+    textKey: spell.932962
     icon: 128
     rank: 2
-    description: "Increases the Ranged and Melee Attack Power of party members within 45 yards by 75. Lasts 30 min."
-    auraDescription: "Melee and ranged attack power increased by 75."
     skillLine: 163
 - id: 932963
   name: Trueshot Aura
@@ -635,11 +614,9 @@ helpers:
   - { effect: 65, aura: 124, basePoints: 99, dieSides: 1, targetA: 1, radius: 11 }  # +100 ranged AP
   - { effect: 65, aura: 99,  basePoints: 99, dieSides: 1, targetA: 1, radius: 11 }  # +100 melee AP
   client:
-    name: Trueshot Aura
+    textKey: spell.932963
     icon: 128
     rank: 3
-    description: "Increases the Ranged and Melee Attack Power of party members within 45 yards by 100. Lasts 30 min."
-    auraDescription: "Melee and ranged attack power increased by 100."
     skillLine: 163
 # --- Improved Concussive Shot stun (node 18317 trigger) — Vanilla 3 sec stun. --------------------
 # Vanilla Improved Concussive Shot procced a 3-sec stun (spell 19410) that does NOT exist in the
@@ -657,9 +634,8 @@ helpers:
   basePoints: -1           # stun carries no amount (Blackout precedent)
   school: 1                # physical
   client:
-    name: Improved Concussive Shot
+    textKey: spell.932971
     icon: 15               # Concussive Shot 5116 SpellIconID (dump 2026-08-17)
-    auraDescription: "Stunned."
 tabs:
 - key: 1
   name: Beast Mastery

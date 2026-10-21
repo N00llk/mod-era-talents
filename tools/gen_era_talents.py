@@ -61,16 +61,24 @@ def _read_dbc_templates_uncached(base_dbc_path) -> dict:
     identically on both the server-SQL and client-DBC paths."""
     import struct
     data = pathlib.Path(base_dbc_path).read_bytes()
+    if len(data) < 20:
+        raise ValueError(f"truncated base DBC header: {base_dbc_path}")
     magic, rc, fc, rs, _ss = struct.unpack_from("<4siiii", data, 0)
-    if magic != b"WDBC" or fc != len(COLS):
+    if magic != b"WDBC" or fc != len(COLS) or rs != 4 * len(COLS):
         raise SystemExit(f"unexpected base DBC {base_dbc_path}: magic={magic} fields={fc}")
+    if rc < 0 or _ss < 1 or len(data) != 20 + rc * rs + _ss:
+        raise ValueError(f"invalid base DBC length: {base_dbc_path}")
     base = 20
     strbase = base + rc * rs
+    if data[strbase] != 0:
+        raise ValueError("DBC string block must start with an empty string")
     def _str(off):
         if off == 0:
             return ""
+        if off >= _ss:
+            raise ValueError(f"string offset outside DBC string block: {off}")
         end = data.index(b"\x00", strbase + off)
-        return data[strbase + off:end].decode("latin1")
+        return data[strbase + off:end].decode("utf-8")
     out: dict = {}
     for i in range(rc):
         rec = data[base + i * rs: base + (i + 1) * rs]
@@ -1743,7 +1751,7 @@ SENTINEL_SPELL_ID = 932999   # reserved top-of-band id for the generation-canary
 
 # Files whose bytes shape every emitted artifact: a change to ANY of them is a new
 # generation even with untouched YAMLs (Tasks 1-2 changed emitted SQL yaml-free).
-_STAMP_TOOL_FILES = ("gen_era_talents.py", "build_client_dbc.py",
+_STAMP_TOOL_FILES = ("gen_era_talents.py", "build_client_dbc.py", "client_spell_locales.py",
                      "spell_dbc_columns.txt", "spell_dbc_coltypes.txt")
 
 
@@ -1784,10 +1792,10 @@ def _load(dataset_path: str) -> dict:
     """Load a dataset YAML and resolve `_ref`: an inline `_ref:` dict wins (used by unit tests);
     otherwise a top-level `ref: <relpath>` string is loaded relative to the dataset file's dir."""
     p = pathlib.Path(dataset_path)
-    d = yaml.safe_load(p.read_text())
+    d = yaml.safe_load(p.read_text(encoding="utf-8"))
     if "_ref" not in d and d.get("ref"):
         ref_path = (p.parent / d["ref"]).resolve()
-        d["_ref"] = yaml.safe_load(ref_path.read_text())
+        d["_ref"] = yaml.safe_load(ref_path.read_text(encoding="utf-8"))
     return d
 
 
@@ -1801,7 +1809,7 @@ def main():
     ap.add_argument("-o", "--out", required=True)
     a = ap.parse_args()
     if a.meta_sql:
-        pathlib.Path(a.out).write_text(emit_meta_sql(a.meta_sql))
+        pathlib.Path(a.out).write_text(emit_meta_sql(a.meta_sql), encoding="utf-8", newline="\n")
         return
     src = a.sql or a.lua or a.custom_sql
     d = _load(src)
@@ -1812,7 +1820,7 @@ def main():
         out = emit_lua(d)
     else:
         out = emit_custom_sql(d)
-    pathlib.Path(a.out).write_text(out)
+    pathlib.Path(a.out).write_text(out, encoding="utf-8", newline="\n")
 
 
 if __name__ == "__main__":

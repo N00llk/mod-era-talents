@@ -182,12 +182,10 @@ helpers:
   - { effect: 6, aura: 174, basePoints: -1, dieSides: 1, misc: 126, miscB: 4, targetA: 21 }     # 0% of Spirit -> spell damage
   - { effect: 6, aura: 175, basePoints: -1, dieSides: 1, misc: 4,   targetA: 21 }               # 0% of Spirit -> healing
   client:
-    name: Divine Spirit
+    textKey: spell.948024
     icon: 1879                   # stock 14752 SpellIconID (base Spell.dbc dump 2026-09-05)
     rank: 1
     skillLine: 613               # Discipline — else the granted active lands in the client General tab
-    description: Holy power infuses the target, increasing their Spirit by 17 for 30 min.
-    auraDescription: Increases Spirit by 17.
 - id: 948025
   name: Divine Spirit
   template: 14818                # r2 (L40) — trainer-taught behind 948024
@@ -200,12 +198,10 @@ helpers:
   - { effect: 6, aura: 174, basePoints: -1, dieSides: 1, misc: 126, miscB: 4, targetA: 21 }
   - { effect: 6, aura: 175, basePoints: -1, dieSides: 1, misc: 4,   targetA: 21 }
   client:
-    name: Divine Spirit
+    textKey: spell.948025
     icon: 1879
     rank: 2
     skillLine: 613
-    description: Holy power infuses the target, increasing their Spirit by 23 for 30 min.
-    auraDescription: Increases Spirit by 23.
 - id: 948026
   name: Divine Spirit
   template: 14819                # r3 (L50)
@@ -218,12 +214,10 @@ helpers:
   - { effect: 6, aura: 174, basePoints: -1, dieSides: 1, misc: 126, miscB: 4, targetA: 21 }
   - { effect: 6, aura: 175, basePoints: -1, dieSides: 1, misc: 4,   targetA: 21 }
   client:
-    name: Divine Spirit
+    textKey: spell.948026
     icon: 1879
     rank: 3
     skillLine: 613
-    description: Holy power infuses the target, increasing their Spirit by 33 for 30 min.
-    auraDescription: Increases Spirit by 33.
 - id: 948027
   name: Divine Spirit
   template: 27841                # r4 (L60)
@@ -236,12 +230,10 @@ helpers:
   - { effect: 6, aura: 174, basePoints: -1, dieSides: 1, misc: 126, miscB: 4, targetA: 21 }
   - { effect: 6, aura: 175, basePoints: -1, dieSides: 1, misc: 4,   targetA: 21 }
   client:
-    name: Divine Spirit
+    textKey: spell.948027
     icon: 1879
     rank: 4
     skillLine: 613
-    description: Holy power infuses the target, increasing their Spirit by 40 for 30 min.
-    auraDescription: Increases Spirit by 40.
 - id: 948028
   name: Divine Spirit
   template: 25312                # r5 (L70) — live 25312 is ManaCostPct 26; `manaCostPct: 0` is
@@ -255,12 +247,10 @@ helpers:
   - { effect: 6, aura: 174, basePoints: -1, dieSides: 1, misc: 126, miscB: 4, targetA: 21 }
   - { effect: 6, aura: 175, basePoints: -1, dieSides: 1, misc: 4,   targetA: 21 }
   client:
-    name: Divine Spirit
+    textKey: spell.948028
     icon: 1879
     rank: 5
     skillLine: 613
-    description: Holy power infuses the target, increasing their Spirit by 50 for 30 min.
-    auraDescription: Increases Spirit by 50.
 # --- Prayer of Spirit r1-r2 (948029-948030) ------------------------------------------------------
 # TARGETING IS THE ERA DIFFERENCE AND IS AUTHORED: TBC is `ImplicitTargetA 21`
 # (TARGET_UNIT_TARGET_ALLY) + `ImplicitTargetB 37` (TARGET_UNIT_LASTTARGET_AREA_PARTY) = "the
@@ -297,12 +287,10 @@ helpers:
   - { effect: 6, aura: 174, basePoints: -1, dieSides: 1, misc: 126, miscB: 4, targetA: 21, targetB: 37, radius: 12 }
   - { effect: 6, aura: 175, basePoints: -1, dieSides: 1, misc: 4,   targetA: 21, targetB: 37, radius: 12 }
   client:
-    name: Prayer of Spirit
+    textKey: spell.948029
     icon: 1870                   # stock 27681 SpellIconID
     rank: 1
     skillLine: 613
-    description: Holy power infuses the target's party members, increasing their Spirit by 40 for 1 hour.
-    auraDescription: Increases Spirit by 40.
 - id: 948030
   name: Prayer of Spirit
   template: 32999                # r2 (L70) — live 32999 is ManaCostPct 69; `manaCostPct: 0` is
@@ -317,12 +305,10 @@ helpers:
   - { effect: 6, aura: 174, basePoints: -1, dieSides: 1, misc: 126, miscB: 4, targetA: 21, targetB: 37, radius: 12 }
   - { effect: 6, aura: 175, basePoints: -1, dieSides: 1, misc: 4,   targetA: 21, targetB: 37, radius: 12 }
   client:
-    name: Prayer of Spirit
+    textKey: spell.948030
     icon: 1870
     rank: 2
     skillLine: 613
-    description: Holy power infuses the target's party members, increasing their Spirit by 50 for 1 hour.
-    auraDescription: Increases Spirit by 50.
 # --- Reflective Shield r1-r5 (948034-948038; node 20519 grants one per rank) ----------------------
 # FROM SCRATCH, not `template:`d — `_ref` node_findings[20519]: only r1/r2 exist live (at WotLK's
 # 22%/45% and carrying EffectMiscValue 5065/5064, WotLK's class-script ids), r3-r5 are WAGO_ONLY.
@@ -354,10 +340,9 @@ helpers:
   effects:
   - { effect: 6, aura: 4, basePoints: 9, dieSides: 1, misc: 0, targetA: 1 }     # 10%
   client:
-    name: Reflective Shield
+    textKey: spell.948034
     icon: 566                    # stock 33201 SpellIconID
     rank: 1
-    description: 'Causes 10% of the damage absorbed by your Power Word: Shield to reflect back at the attacker.  This damage causes no threat.'
 - id: 948035
   name: Reflective Shield
   attributes: 464
@@ -368,10 +353,9 @@ helpers:
   effects:
   - { effect: 6, aura: 4, basePoints: 19, dieSides: 1, misc: 0, targetA: 1 }    # 20%
   client:
-    name: Reflective Shield
+    textKey: spell.948035
     icon: 566
     rank: 2
-    description: 'Causes 20% of the damage absorbed by your Power Word: Shield to reflect back at the attacker.  This damage causes no threat.'
 - id: 948036
   name: Reflective Shield
   attributes: 464
@@ -382,10 +366,9 @@ helpers:
   effects:
   - { effect: 6, aura: 4, basePoints: 29, dieSides: 1, misc: 0, targetA: 1 }    # 30%
   client:
-    name: Reflective Shield
+    textKey: spell.948036
     icon: 566
     rank: 3
-    description: 'Causes 30% of the damage absorbed by your Power Word: Shield to reflect back at the attacker.  This damage causes no threat.'
 - id: 948037
   name: Reflective Shield
   attributes: 464
@@ -396,10 +379,9 @@ helpers:
   effects:
   - { effect: 6, aura: 4, basePoints: 39, dieSides: 1, misc: 0, targetA: 1 }    # 40%
   client:
-    name: Reflective Shield
+    textKey: spell.948037
     icon: 566
     rank: 4
-    description: 'Causes 40% of the damage absorbed by your Power Word: Shield to reflect back at the attacker.  This damage causes no threat.'
 - id: 948038
   name: Reflective Shield
   attributes: 464
@@ -410,10 +392,9 @@ helpers:
   effects:
   - { effect: 6, aura: 4, basePoints: 49, dieSides: 1, misc: 0, targetA: 1 }    # 50%
   client:
-    name: Reflective Shield
+    textKey: spell.948038
     icon: 566
     rank: 5
-    description: 'Causes 50% of the damage absorbed by your Power Word: Shield to reflect back at the attacker.  This damage causes no threat.'
 # --- Power Infusion 948039 (node 20518) ----------------------------------------------------------
 # MINIMAL CLONE (spec Amendment A.2, `_ref` node_findings[20518]). TBC 10060 and live 10060 carry
 # the SAME two effects — aura 65 MOD_CASTING_SPEED_NOT_STACK +20% and aura 72
@@ -439,11 +420,9 @@ helpers:
   - { effect: 6, aura: 65, basePoints: 19,  dieSides: 1, misc: 126, miscB: 0, targetA: 21 }   # +20% casting speed
   - { effect: 6, aura: 72, basePoints: -21, dieSides: 1, misc: 126, miscB: 0, targetA: 21 }   # -20% mana cost
   client:
-    name: Power Infusion
+    textKey: spell.948039
     icon: 1872                   # stock 10060 SpellIconID
     skillLine: 613
-    description: Infuses the target with power, increasing spell casting speed by 20% and reducing the mana cost of all spells by 20%.  Lasts 15 sec.
-    auraDescription: Spell casting speed increased by 20% and mana cost of spells reduced by 20%.
 # --- Pain Suppression 948040 (node 20521, the Discipline capstone) -------------------------------
 # MINIMAL CLONE (`_ref` node_findings[20521]). Effects are IDENTICAL between eras (e1 aura 87
 # MOD_DAMAGE_PERCENT_TAKEN -40% misc 127; e2 aura 235 MOD_DISPEL_RESIST +65), so both are authored
@@ -468,11 +447,9 @@ helpers:
   - { effect: 6, aura: 87,  basePoints: -41, dieSides: 1, misc: 127, targetA: 21 }   # -40% damage taken
   - { effect: 6, aura: 235, basePoints: 64,  dieSides: 1, misc: 0,   targetA: 21 }   # +65 dispel resist
   client:
-    name: Pain Suppression
+    textKey: spell.948040
     icon: 2178                   # stock 33206 SpellIconID
     skillLine: 613
-    description: Instantly reduces a friendly target's threat by 5%, reduces all damage taken by 40% and increases resistance to Dispel mechanics by 65% for 8 sec.
-    auraDescription: All damage taken reduced by 40% and resistance to Dispel mechanics increased by 65%.
 # --- Focused Casting r1-r2 (948041-948042; node 20505 Martyrdom proc-triggers them) ---------------
 # PAYLOAD-ONLY DIVERGENCE (spec Amendment A.6, `_ref` node_findings[20505]). The TALENT rows
 # 14531/14774 are byte-identical between eras; the PAYLOAD is not:
@@ -498,11 +475,9 @@ helpers:
       maskA: 1152794256, maskB: 1156, maskC: 0 }                                     # +100% not-lose-casting-time
   - { effect: 6, aura: 117, basePoints: 9,  dieSides: 1, misc: 26, targetA: 1 }      # +10% resist Interrupt
   client:
-    name: Focused Casting
+    textKey: spell.948041
     icon: 1499                   # stock 14743 SpellIconID
     rank: 1
-    description: When cast, you no longer lose casting time due to taking damage.  Lasts 6 sec.
-    auraDescription: Cannot lose casting time from taking damage while casting Priest spells and increases resistance to Interrupt effects by 10%.
 - id: 948042
   name: Focused Casting
   template: 27828
@@ -511,11 +486,9 @@ helpers:
       maskA: 1152794256, maskB: 1156, maskC: 0 }
   - { effect: 6, aura: 117, basePoints: 19, dieSides: 1, misc: 26, targetA: 1 }      # +20% resist Interrupt
   client:
-    name: Focused Casting
+    textKey: spell.948042
     icon: 1499
     rank: 2
-    description: When cast, you no longer lose casting time due to taking damage.  Lasts 6 sec.
-    auraDescription: Cannot lose casting time from taking damage while casting Priest spells and increases resistance to Interrupt effects by 20%.
 # --- Focused Will r1-r3 (948043-948045; node 20517 proc-triggers them) ---------------------------
 # `_ref` node_findings[20517]: the TALENT rows carry a live-extra e2 (aura 57 +1/2/3% spell crit)
 # that TBC does not have, so the node is authored as a generated `mechanic: proc` (e1 only) — which
@@ -536,11 +509,9 @@ helpers:
   - { effect: 6, aura: 87,  basePoints: -3, dieSides: 1, misc: 127, targetA: 1 }     # -2% damage taken
   - { effect: 6, aura: 118, basePoints: 3,  dieSides: 1, misc: 127, targetA: 1 }     # +4% healing received
   client:
-    name: Focused Will
+    textKey: spell.948043
     icon: 2215                   # stock 45237 SpellIconID
     rank: 1
-    description: After taking a critical hit you gain the Focused Will effect, reducing all damage taken by 2% and increasing healing effects on you by 4%.  Stacks up to 3 times.  Lasts 8 sec.
-    auraDescription: All damage reduced by 2%.  Healing effects increased by 4%.
 - id: 948044
   name: Focused Will
   template: 45241
@@ -548,11 +519,9 @@ helpers:
   - { effect: 6, aura: 87,  basePoints: -4, dieSides: 1, misc: 127, targetA: 1 }     # -3% damage taken
   - { effect: 6, aura: 118, basePoints: 6,  dieSides: 1, misc: 127, targetA: 1 }     # +7% healing received
   client:
-    name: Focused Will
+    textKey: spell.948044
     icon: 2215
     rank: 2
-    description: After taking a critical hit you gain the Focused Will effect, reducing all damage taken by 3% and increasing healing effects on you by 7%.  Stacks up to 3 times.  Lasts 8 sec.
-    auraDescription: All damage reduced by 3%.  Healing effects increased by 7%.
 - id: 948045
   name: Focused Will
   template: 45242
@@ -560,11 +529,9 @@ helpers:
   - { effect: 6, aura: 87,  basePoints: -5, dieSides: 1, misc: 127, targetA: 1 }     # -4% damage taken
   - { effect: 6, aura: 118, basePoints: 9,  dieSides: 1, misc: 127, targetA: 1 }     # +10% healing received
   client:
-    name: Focused Will
+    textKey: spell.948045
     icon: 2215
     rank: 3
-    description: After taking a critical hit you gain the Focused Will effect, reducing all damage taken by 4% and increasing healing effects on you by 10%.  Stacks up to 3 times.  Lasts 8 sec.
-    auraDescription: All damage reduced by 4%.  Healing effects increased by 10%.
 # --- Circle of Healing r1-r5 (948046-948050; node 20542 grants r1) -------------------------------
 # THE HOLY CAPSTONE CLONE CHAIN (spec section 4d, `_ref` capstone_chains.circle_of_healing,
 # node_findings[20542]). DIVERGED on five families, and every one of them is authored here:
@@ -635,13 +602,12 @@ helpers:
   effects:
   - { effect: 10, basePoints: 245, dieSides: 25, targetA: 21, targetB: 37, radius: 18, perLevel: 1.0 }
   client:
-    name: Circle of Healing
+    textKey: spell.948046
     icon: 2214                   # stock 34861 SpellIconID (base Spell.dbc dump 2026-09-05)
     rank: 1
     skillLine: 56                # Holy — verified against the real SkillLineAbility rows for
                                  # 34861/34863 (skill 56), else the granted active lands in the
                                  # client General tab
-    description: Heals friendly target and that target's party members within $a1 yards of the target for $s1.
 - id: 948047
   name: Circle of Healing
   template: 34863                # r2 (L56) — trainer-taught behind 948046
@@ -654,11 +620,10 @@ helpers:
   effects:
   - { effect: 10, basePoints: 287, dieSides: 31, targetA: 21, targetB: 37, radius: 18, perLevel: 1.2 }
   client:
-    name: Circle of Healing
+    textKey: spell.948047
     icon: 2214
     rank: 2
     skillLine: 56
-    description: Heals friendly target and that target's party members within $a1 yards of the target for $s1.
 - id: 948048
   name: Circle of Healing
   template: 34864                # r3 (L60)
@@ -671,11 +636,10 @@ helpers:
   effects:
   - { effect: 10, basePoints: 326, dieSides: 35, targetA: 21, targetB: 37, radius: 18, perLevel: 1.4 }
   client:
-    name: Circle of Healing
+    textKey: spell.948048
     icon: 2214
     rank: 3
     skillLine: 56
-    description: Heals friendly target and that target's party members within $a1 yards of the target for $s1.
 - id: 948049
   name: Circle of Healing
   template: 34865                # r4 (L65)
@@ -688,11 +652,10 @@ helpers:
   effects:
   - { effect: 10, basePoints: 369, dieSides: 39, targetA: 21, targetB: 37, radius: 18, perLevel: 1.6 }
   client:
-    name: Circle of Healing
+    textKey: spell.948049
     icon: 2214
     rank: 4
     skillLine: 56
-    description: Heals friendly target and that target's party members within $a1 yards of the target for $s1.
 - id: 948050
   name: Circle of Healing
   template: 34866                # r5 (L70) — live 34866 is ManaCostPct 21
@@ -705,11 +668,10 @@ helpers:
   effects:
   - { effect: 10, basePoints: 408, dieSides: 43, targetA: 21, targetB: 37, radius: 18, perLevel: 1.8 }
   client:
-    name: Circle of Healing
+    textKey: spell.948050
     icon: 2214
     rank: 5
     skillLine: 56
-    description: Heals friendly target and that target's party members within $a1 yards of the target for $s1.
 # --- Lightwell r1-r4 (948051-948054; node 20539 grants r1) ---------------------------------------
 # MINIMAL CLONE CHAIN OFF THE **LIVE** TEMPLATE (spec Amendment A.3, `_ref` capstone_chains.lightwell
 # + open_questions.lightwell_shape — the orchestrator's decision, taken over the faithful-GameObject
@@ -769,11 +731,10 @@ helpers:
   effects:
   - { effect: 28, basePoints: 0, dieSides: 1, misc: 31897, miscB: 1141, targetA: 87 }   # SUMMON Lightwell creature 31897
   client:
-    name: Lightwell
+    textKey: spell.948051
     icon: 1878                   # stock 724 SpellIconID
     rank: 1
     skillLine: 56                # Holy — matches stock 724's own SkillLineAbility row (skill 56)
-    description: Creates a Holy Lightwell.  Members of your raid or party can click the Lightwell to restore 801 health over 6 sec.  Attacks done to you equal to 30% of your total health will cancel the effect.  Lightwell lasts for 3 min or 10 charges.
 - id: 948052
   name: Lightwell
   template: 27870                # r2 (L50) — trainer-taught behind 948051
@@ -785,11 +746,10 @@ helpers:
   effects:
   - { effect: 28, basePoints: 0, dieSides: 1, misc: 31896, miscB: 1141, targetA: 87 }   # SUMMON Lightwell creature 31896
   client:
-    name: Lightwell
+    textKey: spell.948052
     icon: 1878
     rank: 2
     skillLine: 56
-    description: Creates a Holy Lightwell.  Members of your raid or party can click the Lightwell to restore 1164 health over 6 sec.  Attacks done to you equal to 30% of your total health will cancel the effect.  Lightwell lasts for 3 min or 10 charges.
 - id: 948053
   name: Lightwell
   template: 27871                # r3 (L60)
@@ -801,11 +761,10 @@ helpers:
   effects:
   - { effect: 28, basePoints: 0, dieSides: 0, misc: 31895, miscB: 1141, targetA: 87 }   # SUMMON Lightwell creature 31895
   client:
-    name: Lightwell
+    textKey: spell.948053
     icon: 1878
     rank: 3
     skillLine: 56
-    description: Creates a Holy Lightwell.  Members of your raid or party can click the Lightwell to restore 1599 health over 6 sec.  Attacks done to you equal to 30% of your total health will cancel the effect.  Lightwell lasts for 3 min or 10 charges.
 - id: 948054
   name: Lightwell
   template: 28275                # r4 (L70) — live 28275 is ManaCostPct 17; `manaCostPct: 0` is
@@ -821,11 +780,10 @@ helpers:
   effects:
   - { effect: 28, basePoints: 0, dieSides: 1, misc: 31894, miscB: 1141, targetA: 87 }   # SUMMON Lightwell creature 31894
   client:
-    name: Lightwell
+    textKey: spell.948054
     icon: 1878
     rank: 4
     skillLine: 56
-    description: Creates a Holy Lightwell.  Members of your raid or party can click the Lightwell to restore 2361 health over 6 sec.  Attacks done to you equal to 30% of your total health will cancel the effect.  Lightwell lasts for 3 min or 10 charges.
 # --- Surge of Light buff 948055 (node 20536 proc-triggers it) ------------------------------------
 # `_ref` node_findings[20536] + effect_class_mask_diffs.load_bearing[33151]. The payload's whole era
 # difference is SCOPE: TBC's three effects all carry EffectSpellClassMask (0x80, 0, 0) = **Smite
@@ -855,10 +813,8 @@ helpers:
   - { effect: 6, aura: 108, basePoints: -101,   dieSides: 1, misc: 10, targetA: 1, maskA: 128, maskB: 0, maskC: 0 }
   - { effect: 6, aura: 108, basePoints: -10001, dieSides: 1, misc: 7,  targetA: 1, maskA: 128, maskB: 0, maskC: 0 }
   client:
-    name: Surge of Light
+    textKey: spell.948055
     icon: 2176                   # stock 33151 SpellIconID
-    description: Your next Smite spell is instant cast, costs no mana but is incapable of a critical hit.
-    auraDescription: Your next Smite spell is instant cast, costs no mana but is incapable of a critical hit.
 # --- Clearcasting 948056 (node 20538 Holy Concentration proc-triggers it) ------------------------
 # FROM SCRATCH, not `template:`d — `_ref` id_repurposing + node_findings[20538]: live 34754 is a
 # COMPLETELY DIFFERENT SPELL (WotLK renamed it "Holy Concentration" and replaced its one effect with
@@ -909,10 +865,8 @@ helpers:
   - { effect: 6, aura: 108, basePoints: -101, dieSides: 1, misc: 14, targetA: 1,
       maskA: 6144, maskB: 4, maskC: 0 }        # -100% cost on Greater Heal | Flash Heal | Binding Heal
   client:
-    name: Clearcasting
+    textKey: spell.948056
     icon: 2169
-    description: Reduces the mana cost of your next Flash Heal, Binding Heal or Greater Heal spell by 100%.
-    auraDescription: Mana cost of your next Flash Heal, Binding Heal or Greater Heal spell reduced by 100%.
 # --- Inspiration armor buffs r1-r3 (948057-948059; node 20529 proc-triggers them) ----------------
 # PAYLOAD-ONLY DIVERGENCE (spec Amendment A.6, `_ref` node_findings[20529] + triggers). The TALENT
 # rows 14892/15362/15363 read LIVE_MATCH on all fourteen families; only the payload moved, and it
@@ -935,11 +889,9 @@ helpers:
   effects:
   - { effect: 6, aura: 101, basePoints: 7, dieSides: 1, misc: 1, targetA: 21 }    # +8% armor
   client:
-    name: Inspiration
+    textKey: spell.948057
     icon: 1463                   # stock 14893 SpellIconID
     rank: 1
-    description: Increases the target's armor by 8% for 15 sec.
-    auraDescription: Armor increased by 8%.
 - id: 948058
   name: Inspiration
   template: 15357                # r2
@@ -947,11 +899,9 @@ helpers:
   effects:
   - { effect: 6, aura: 101, basePoints: 15, dieSides: 1, misc: 1, targetA: 21 }   # +16% armor
   client:
-    name: Inspiration
+    textKey: spell.948058
     icon: 1463
     rank: 2
-    description: Increases the target's armor by 16% for 15 sec.
-    auraDescription: Armor increased by 16%.
 - id: 948059
   name: Inspiration
   template: 15359                # r3
@@ -959,11 +909,9 @@ helpers:
   effects:
   - { effect: 6, aura: 101, basePoints: 24, dieSides: 1, misc: 1, targetA: 21 }   # +25% armor
   client:
-    name: Inspiration
+    textKey: spell.948059
     icon: 1463
     rank: 3
-    description: Increases the target's armor by 25% for 15 sec.
-    auraDescription: Armor increased by 25%.
 # --- Vampiric Embrace TRIO: 948031 castable / 948032 hidden proc-passive / 948033 heal ----------
 # USER-LOCKED FRESH (spec section 4b, `_ref` node_findings[20555] + reuse_ledger 921152/932950/
 # 932951). The three ids are FIXED by the Phase-6 plan and were hard-coded into EraTalents.cpp
@@ -1018,11 +966,9 @@ helpers:
   effects:
   - { effect: 6, aura: 4, basePoints: 14, dieSides: 1, targetA: 6 }   # DUMMY 15% anchor on the ENEMY
   client:
-    name: Vampiric Embrace
+    textKey: spell.948031
     icon: 150                # stock 15286 SpellIconID
     skillLine: 78            # Shadow — else the granted active lands in the client General tab
-    description: Afflicts your target with Shadow energy that causes all party members to be healed for 15% of any Shadow spell damage you deal for 1 min.
-    auraDescription: Party members are healed for 15% of any Shadow spell damage the priest deals.
 - id: 948032
   name: Vampiric Embrace     # hidden PERMANENT proc-passive — NO `client:` block, so it ships no
   template: 15286            # client row and is invisible in the spellbook and on the buff bar
@@ -1076,13 +1022,12 @@ helpers:
                                                  # EffectRadiusIndex is INHERITED (12) because the
                                                  # generator writes `radius` only when authored.
   client:                        # no skillLine -> no spellbook row. Without a client row the heal is
-    name: Vampiric Embrace       # INVISIBLE in the combat log (framework "Client visibility"); named
+    textKey: spell.948033
     icon: 150                    # like stock 15290 so log lines read "Vampiric Embrace".
     # `description:` IS AUTHORED even for a payload that is never in a spellbook: a templated helper
     # with no `client.description` INHERITS the template's, and the generator hard-errors only on a
     # leaked AuraDescription, never on a leaked Description. Stock 15290's is WotLK's self-heal prose
     # carrying a `$15286s1%` token that resolves against the STOCK spell's 15% — wrong on both counts.
-    description: Heals a party member for a share of the Shadow spell damage the priest deals.
 # --- Vampiric Touch r1-r3 (948060-948062) + energize payload 948063 -------------------------------
 # THE SHADOW CAPSTONE (node 20563; spec section 4c, `_ref` capstone_chains.vampiric_touch,
 # node_findings[20563]). DIVERGED on families A, B, C, E and J. TBC returns 5% of the Shadow damage
@@ -1137,12 +1082,10 @@ helpers:
                                  # period would otherwise be inherited — but slot 2 of live 34914 IS
                                  # the same 3000 ms periodic, so this is belt-and-braces, not a fix.
   client:
-    name: Vampiric Touch
+    textKey: spell.948060
     icon: 2213                   # stock 34914 SpellIconID
     rank: 1
     skillLine: 78                # Shadow
-    description: Causes 450 Shadow damage over 15 sec to your target and causes all party members to gain mana equal to 5% of any Shadow spell damage you deal.
-    auraDescription: Suffering 450 Shadow damage over 15 sec, and the caster's party gains mana equal to 5% of any Shadow spell damage the caster deals.
   proc:
     flags: 655360                # TAKEN magic-negative | TAKEN periodic — see the banner above
     school: 32                   # SPELL_SCHOOL_MASK_SHADOW
@@ -1163,12 +1106,10 @@ helpers:
   - { effect: 6, aura: 4, basePoints: 4,   dieSides: 1, targetA: 6 }
   - { effect: 6, aura: 3, basePoints: 119, dieSides: 1, targetA: 6, amplitude: 3000 }  # 120 / 3 s x 5 = 600
   client:
-    name: Vampiric Touch
+    textKey: spell.948061
     icon: 2213
     rank: 2
     skillLine: 78
-    description: Causes 600 Shadow damage over 15 sec to your target and causes all party members to gain mana equal to 5% of any Shadow spell damage you deal.
-    auraDescription: Suffering 600 Shadow damage over 15 sec, and the caster's party gains mana equal to 5% of any Shadow spell damage the caster deals.
   proc:
     flags: 655360
     school: 32
@@ -1191,12 +1132,10 @@ helpers:
   - { effect: 6, aura: 4, basePoints: 4,   dieSides: 1, targetA: 6 }
   - { effect: 6, aura: 3, basePoints: 129, dieSides: 1, targetA: 6, amplitude: 3000 }  # 130 / 3 s x 5 = 650
   client:
-    name: Vampiric Touch
+    textKey: spell.948062
     icon: 2213
     rank: 3
     skillLine: 78
-    description: Causes 650 Shadow damage over 15 sec to your target and causes all party members to gain mana equal to 5% of any Shadow spell damage you deal.
-    auraDescription: Suffering 650 Shadow damage over 15 sec, and the caster's party gains mana equal to 5% of any Shadow spell damage the caster deals.
   proc:
     flags: 655360
     school: 32
@@ -1218,11 +1157,10 @@ helpers:
   - { effect: 30, basePoints: 0, misc: 0, targetA: 21 }   # SPELL_EFFECT_ENERGIZE, EffectMiscValue 0
                                                           # = POWER_MANA
   client:                        # no skillLine -> no spellbook row; the client row exists so the mana
-    name: Vampiric Touch         # gain is VISIBLE in the combat log (framework "Client visibility")
+    textKey: spell.948063
     icon: 2213
     # Authored for the same reason as 948033's: stock 34919's inherited Description opens "Causes
     # Shadow damage to your target", which this pure-energize payload does not do.
-    description: Restores mana to a party member equal to a share of the Shadow spell damage the priest deals.
 # --- Mind Flay r1-r7 (948064-948070) -------------------------------------------------------------
 # CLONE CHAIN (node 20550; spec Amendment A.8, `_ref` capstone_chains.mind_flay, node_findings[20550]).
 # DIVERGED on all seven ranks across families A, C, E and F, and the DAMAGE ENCODING ITSELF moved:
@@ -1282,12 +1220,10 @@ helpers:
                                  # broken-dbc guard would default an unset period to 1000 ms only by
                                  # accident. `mechanic: 11` puts the snare in the right DR group.
   client:
-    name: Mind Flay
+    textKey: spell.948064
     icon: 548                    # stock 15407 SpellIconID
     rank: 1
     skillLine: 78
-    description: Assault the target's mind with Shadow energy, causing 75 Shadow damage over 3 sec and slowing their movement speed by 50%.
-    auraDescription: Suffering Shadow damage every 1 sec and movement speed slowed by 50%.
 - id: 948065
   name: Mind Flay
   template: 17311                # r2 (L28)
@@ -1303,12 +1239,10 @@ helpers:
   - { effect: 6, aura: 3,  basePoints: 41,  dieSides: 1, targetA: 6, amplitude: 1000 }
   - { effect: 6, aura: 33, basePoints: -51, dieSides: 1, targetA: 6, mechanic: 11 }
   client:
-    name: Mind Flay
+    textKey: spell.948065
     icon: 548
     rank: 2
     skillLine: 78
-    description: Assault the target's mind with Shadow energy, causing 126 Shadow damage over 3 sec and slowing their movement speed by 50%.
-    auraDescription: Suffering Shadow damage every 1 sec and movement speed slowed by 50%.
 - id: 948066
   name: Mind Flay
   template: 17312                # r3 (L36)
@@ -1324,12 +1258,10 @@ helpers:
   - { effect: 6, aura: 3,  basePoints: 61,  dieSides: 1, targetA: 6, amplitude: 1000 }
   - { effect: 6, aura: 33, basePoints: -51, dieSides: 1, targetA: 6, mechanic: 11 }
   client:
-    name: Mind Flay
+    textKey: spell.948066
     icon: 548
     rank: 3
     skillLine: 78
-    description: Assault the target's mind with Shadow energy, causing 186 Shadow damage over 3 sec and slowing their movement speed by 50%.
-    auraDescription: Suffering Shadow damage every 1 sec and movement speed slowed by 50%.
 - id: 948067
   name: Mind Flay
   template: 17313                # r4 (L44)
@@ -1345,12 +1277,10 @@ helpers:
   - { effect: 6, aura: 3,  basePoints: 86,  dieSides: 1, targetA: 6, amplitude: 1000 }
   - { effect: 6, aura: 33, basePoints: -51, dieSides: 1, targetA: 6, mechanic: 11 }
   client:
-    name: Mind Flay
+    textKey: spell.948067
     icon: 548
     rank: 4
     skillLine: 78
-    description: Assault the target's mind with Shadow energy, causing 261 Shadow damage over 3 sec and slowing their movement speed by 50%.
-    auraDescription: Suffering Shadow damage every 1 sec and movement speed slowed by 50%.
 - id: 948068
   name: Mind Flay
   template: 17314                # r5 (L52)
@@ -1366,12 +1296,10 @@ helpers:
   - { effect: 6, aura: 3,  basePoints: 109, dieSides: 1, targetA: 6, amplitude: 1000 }
   - { effect: 6, aura: 33, basePoints: -51, dieSides: 1, targetA: 6, mechanic: 11 }
   client:
-    name: Mind Flay
+    textKey: spell.948068
     icon: 548
     rank: 5
     skillLine: 78
-    description: Assault the target's mind with Shadow energy, causing 330 Shadow damage over 3 sec and slowing their movement speed by 50%.
-    auraDescription: Suffering Shadow damage every 1 sec and movement speed slowed by 50%.
 - id: 948069
   name: Mind Flay
   template: 18807                # r6 (L60)
@@ -1387,12 +1315,10 @@ helpers:
   - { effect: 6, aura: 3,  basePoints: 141, dieSides: 1, targetA: 6, amplitude: 1000 }
   - { effect: 6, aura: 33, basePoints: -51, dieSides: 1, targetA: 6, mechanic: 11 }
   client:
-    name: Mind Flay
+    textKey: spell.948069
     icon: 548
     rank: 6
     skillLine: 78
-    description: Assault the target's mind with Shadow energy, causing 426 Shadow damage over 3 sec and slowing their movement speed by 50%.
-    auraDescription: Suffering Shadow damage every 1 sec and movement speed slowed by 50%.
 - id: 948070
   name: Mind Flay
   template: 25387                # r7 (L68) — live 25387 is ManaCostPct 9, so `manaCostPct: 0` is
@@ -1411,12 +1337,10 @@ helpers:
   - { effect: 6, aura: 3,  basePoints: 175, dieSides: 1, targetA: 6, amplitude: 1000 }
   - { effect: 6, aura: 33, basePoints: -51, dieSides: 1, targetA: 6, mechanic: 11 }
   client:
-    name: Mind Flay
+    textKey: spell.948070
     icon: 548
     rank: 7
     skillLine: 78
-    description: Assault the target's mind with Shadow energy, causing 528 Shadow damage over 3 sec and slowing their movement speed by 50%.
-    auraDescription: Suffering Shadow damage every 1 sec and movement speed slowed by 50%.
 # --- Silence 948071 (node 20554) -----------------------------------------------------------------
 # CLONE (spec Amendment A.9, `_ref` node_findings[20554]). DIVERGED on families C, D, F and G, and
 # BOTH divergences are real gameplay:
@@ -1461,11 +1385,9 @@ helpers:
   effects:
   - { effect: 6, aura: 27, basePoints: 0, dieSides: 1, targetA: 6 }   # MOD_SILENCE
   client:
-    name: Silence
+    textKey: spell.948071
     icon: 211                    # stock 15487 SpellIconID
     skillLine: 78
-    description: Silences the target, preventing them from casting spells for 5 sec.
-    auraDescription: Silenced.
 # --- Shadowform 948072 (node 20560) --------------------------------------------------------------
 # CLONE (spec Amendment A.9, `_ref` node_findings[20560]). DIVERGED on families A and C:
 #   A  e3 aura 87 MOD_DAMAGE_PERCENT_TAKEN -15 is EffectMiscValue **1** (PHYSICAL ONLY) in TBC and
@@ -1489,6 +1411,7 @@ helpers:
 # `Unit::GetModelForForm` switch on GetMiscValue() == FORM_SHADOW (28), and 15473 appears nowhere by
 # id in src/server.
 - id: 948072
+  manaCostPct: 32
   name: Shadowform
   template: 15473
   attributes: 33882112           # 0x2050000 — TBC's own; drops live's ALLOW_WHILE_MOUNTED (0x1000000)
@@ -1500,11 +1423,9 @@ helpers:
   - { effect: 6, aura: 87, basePoints: -16, dieSides: 1, misc: 1,  targetA: 1 }   # -15% PHYSICAL damage taken
                                                                                   # (live's misc 127 = all schools)
   client:
-    name: Shadowform
+    textKey: spell.948072
     icon: 1552                   # stock 15473 SpellIconID
     skillLine: 78
-    description: 'Assume a Shadowform, increasing your Shadow damage by 15% and reducing Physical damage done to you by 15%.  However, you may not cast Holy spells while in this form.'
-    auraDescription: 'Shadow damage increased by 15%.  Physical damage taken reduced by 15%.  Cannot cast Holy spells.'
 # --- Misery debuffs r1-r5 (948073-948077; node 20562 aura-109 triggers them) ----------------------
 # FIVE FRESH DEBUFFS (spec Amendment A.7, `_ref` node_findings[20562] + triggers 33196-33200).
 # TBC 33196-33198 exist live but are REPURPOSED (aura 186 MOD_ATTACKER_SPELL_HIT_CHANCE misc 127 —
@@ -1538,14 +1459,12 @@ helpers:
   effects:
   - { effect: 6, aura: 87, basePoints: 0, dieSides: 1, misc: 126, targetA: 6 }   # +1% magic damage taken
   client:
-    name: Misery
+    textKey: spell.948073
     icon: 2211                   # stock 33196 SpellIconID
     rank: 1
     # `description:` IS AUTHORED on all five: a templated helper with no `client.description`
     # INHERITS the template's, and stock 33196's is WotLK's REPURPOSED prose ("increase the chance
     # for harmful spells to hit"). The generator hard-errors only on a leaked AuraDescription.
-    description: Causes the target to take an additional 1% spell damage.
-    auraDescription: Spell damage taken increased by 1%.
 - id: 948074
   name: Misery
   template: 33196                # r2 — live 33197 is the same repurposed shape; one template keeps
@@ -1555,14 +1474,12 @@ helpers:
   effects:
   - { effect: 6, aura: 87, basePoints: 1, dieSides: 1, misc: 126, targetA: 6 }   # +2%
   client:
-    name: Misery
+    textKey: spell.948074
     icon: 2211
     rank: 2
     # `description:` IS AUTHORED on all five: a templated helper with no `client.description`
     # INHERITS the template's, and stock 33196's is WotLK's REPURPOSED prose ("increase the chance
     # for harmful spells to hit"). The generator hard-errors only on a leaked AuraDescription.
-    description: Causes the target to take an additional 2% spell damage.
-    auraDescription: Spell damage taken increased by 2%.
 - id: 948075
   name: Misery
   template: 33196                # r3
@@ -1572,14 +1489,12 @@ helpers:
   effects:
   - { effect: 6, aura: 87, basePoints: 2, dieSides: 1, misc: 126, targetA: 6 }   # +3%
   client:
-    name: Misery
+    textKey: spell.948075
     icon: 2211
     rank: 3
     # `description:` IS AUTHORED on all five: a templated helper with no `client.description`
     # INHERITS the template's, and stock 33196's is WotLK's REPURPOSED prose ("increase the chance
     # for harmful spells to hit"). The generator hard-errors only on a leaked AuraDescription.
-    description: Causes the target to take an additional 3% spell damage.
-    auraDescription: Spell damage taken increased by 3%.
 - id: 948076
   name: Misery
   template: 33196                # r4 — wago 33199 is WAGO_ONLY (absent from 3.3.5a), so there is no
@@ -1589,14 +1504,12 @@ helpers:
   effects:
   - { effect: 6, aura: 87, basePoints: 3, dieSides: 1, misc: 126, targetA: 6 }   # +4%
   client:
-    name: Misery
+    textKey: spell.948076
     icon: 2211
     rank: 4
     # `description:` IS AUTHORED on all five: a templated helper with no `client.description`
     # INHERITS the template's, and stock 33196's is WotLK's REPURPOSED prose ("increase the chance
     # for harmful spells to hit"). The generator hard-errors only on a leaked AuraDescription.
-    description: Causes the target to take an additional 4% spell damage.
-    auraDescription: Spell damage taken increased by 4%.
 - id: 948077
   name: Misery
   template: 33196                # r5 — wago 33200, same WAGO_ONLY situation as r4
@@ -1606,14 +1519,12 @@ helpers:
   effects:
   - { effect: 6, aura: 87, basePoints: 4, dieSides: 1, misc: 126, targetA: 6 }   # +5%
   client:
-    name: Misery
+    textKey: spell.948077
     icon: 2211
     rank: 5
     # `description:` IS AUTHORED on all five: a templated helper with no `client.description`
     # INHERITS the template's, and stock 33196's is WotLK's REPURPOSED prose ("increase the chance
     # for harmful spells to hit"). The generator hard-errors only on a leaked AuraDescription.
-    description: Causes the target to take an additional 5% spell damage.
-    auraDescription: Spell damage taken increased by 5%.
 # --- Shadow Vulnerability 948078 (node 20553 Shadow Weaving triggers it) --------------------------
 # ONE FRESH SHARED DEBUFF (`_ref` node_findings[20553] + id_repurposing + reuse_ledger 932960).
 # LIVE 15258 is RENAMED **and INVERTED**: it is the caster-side buff "Shadow Weaving" (aura 79
@@ -1647,12 +1558,10 @@ helpers:
   - { effect: 6, aura: 87, basePoints: 1,  dieSides: 1, misc: 32, targetA: 6 }   # +2% Shadow damage TAKEN per stack
   - { effect: 6, aura: 87, basePoints: -1, dieSides: 1, misc: 94, targetA: 6 }   # TBC's 0-valued carrier (see banner)
   client:
-    name: Shadow Vulnerability
+    textKey: spell.948078
     icon: 9                      # stock 15258 SpellIconID
     # `description:` IS AUTHORED: stock 15258's inherited Description is live's INVERTED prose
     # ("increase the Shadow damage YOU deal"), i.e. the caster-buff rework — see the banner above.
-    description: Increases Shadow damage taken from the priest's party by 2% per application.
-    auraDescription: Shadow damage taken increased by 2% per application.
 # --- Blackout stun 948079 (node 20544 proc-triggers it) -------------------------------------------
 # FULL RECONSTRUCTION, from scratch — no `template:` (`_ref` node_findings[20544] + triggers 15269).
 # wago 15269 is WAGO_ONLY: it is absent from this server's `Spell.dbc` AND from the
@@ -1688,14 +1597,12 @@ helpers:
   effects:
   - { effect: 6, aura: 12, basePoints: 0, dieSides: 0, targetA: 6 }   # MOD_STUN on the target
   client:
-    name: Blackout
+    textKey: spell.948079
     icon: 173                    # Spell_Shadow_GatherShadows — the node's own art (15269 has no
                                  # live row to read a SpellIconID from)
     # A from-scratch helper ships an EMPTY Description/AuraDescription (there is no template to
     # inherit from), so both are authored: without the aura text the stun icon renders with a blank
     # tooltip. The shipped Vanilla clone 932970 has that gap; it is recorded, not retro-fixed.
-    description: Stuns the target for 3 sec.
-    auraDescription: Stunned.
 # --- Spirit Tap buff 948080 (node 20543 proc-triggers it) -----------------------------------------
 # FRESH CLONE (spec Amendment A.10, `_ref` node_findings[20543] + triggers 15271). The TALENT ids
 # 15337/15338 are the repurposed WotLK "Improved Spirit Tap" (their own `-15337` proc row and
@@ -1713,13 +1620,11 @@ helpers:
   - { effect: 6, aura: 137, basePoints: 99, dieSides: 1, misc: 4, targetA: 1 }   # +100% Spirit
   - { effect: 6, aura: 134, basePoints: 49, dieSides: 1, targetA: 1 }            # +50% regen while casting
   client:
-    name: Spirit Tap
+    textKey: spell.948080
     icon: 152                    # stock 15271 SpellIconID
     # Stock 15271's Description is `$s1`/`$s2`-templated and WOULD resolve correctly against this
     # clone's own 100/50 — it is authored anyway so the shipped text is visible in the dataset rather
     # than depending on a token resolution.
-    description: 'Spirit increased by 100%.  Mana regenerates at a 50% rate while casting.'
-    auraDescription: 'Spirit increased by 100%.  Mana regenerates at a 50% rate while casting.'
 scriptBindings:
 # NB THE INDENT: this is a TOP-LEVEL dataset key and MUST stay at column 0, a sibling of `helpers:`
 # / `tabs:` / `_ref:`. Indented by mistake into the `_ref:` block below, the generator emits ZERO

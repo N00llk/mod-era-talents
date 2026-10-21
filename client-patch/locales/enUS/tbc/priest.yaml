@@ -1,0 +1,248 @@
+schemaVersion: 1
+locale: enUS
+era: tbc
+class: priest
+texts:
+  spell.948024:
+    name: Divine Spirit
+    description: Holy power infuses the target, increasing their Spirit by 17 for 30 min.
+    auraDescription: Increases Spirit by 17.
+  spell.948025:
+    name: Divine Spirit
+    description: Holy power infuses the target, increasing their Spirit by 23 for 30 min.
+    auraDescription: Increases Spirit by 23.
+  spell.948026:
+    name: Divine Spirit
+    description: Holy power infuses the target, increasing their Spirit by 33 for 30 min.
+    auraDescription: Increases Spirit by 33.
+  spell.948027:
+    name: Divine Spirit
+    description: Holy power infuses the target, increasing their Spirit by 40 for 30 min.
+    auraDescription: Increases Spirit by 40.
+  spell.948028:
+    name: Divine Spirit
+    description: Holy power infuses the target, increasing their Spirit by 50 for 30 min.
+    auraDescription: Increases Spirit by 50.
+  spell.948029:
+    name: Prayer of Spirit
+    description: Holy power infuses the target's party members, increasing their Spirit by 40 for 1 hour.
+    auraDescription: Increases Spirit by 40.
+  spell.948030:
+    name: Prayer of Spirit
+    description: Holy power infuses the target's party members, increasing their Spirit by 50 for 1 hour.
+    auraDescription: Increases Spirit by 50.
+  spell.948034:
+    name: Reflective Shield
+    description: 'Causes 10% of the damage absorbed by your Power Word: Shield to reflect back at the attacker.  This
+      damage causes no threat.'
+  spell.948035:
+    name: Reflective Shield
+    description: 'Causes 20% of the damage absorbed by your Power Word: Shield to reflect back at the attacker.  This
+      damage causes no threat.'
+  spell.948036:
+    name: Reflective Shield
+    description: 'Causes 30% of the damage absorbed by your Power Word: Shield to reflect back at the attacker.  This
+      damage causes no threat.'
+  spell.948037:
+    name: Reflective Shield
+    description: 'Causes 40% of the damage absorbed by your Power Word: Shield to reflect back at the attacker.  This
+      damage causes no threat.'
+  spell.948038:
+    name: Reflective Shield
+    description: 'Causes 50% of the damage absorbed by your Power Word: Shield to reflect back at the attacker.  This
+      damage causes no threat.'
+  spell.948039:
+    name: Power Infusion
+    description: Infuses the target with power, increasing spell casting speed by 20% and reducing the mana cost
+      of all spells by 20%.  Lasts 15 sec.
+    auraDescription: Spell casting speed increased by 20% and mana cost of spells reduced by 20%.
+  spell.948040:
+    name: Pain Suppression
+    description: Instantly reduces a friendly target's threat by 5%, reduces all damage taken by 40% and increases
+      resistance to Dispel mechanics by 65% for 8 sec.
+    auraDescription: All damage taken reduced by 40% and resistance to Dispel mechanics increased by 65%.
+  spell.948041:
+    name: Focused Casting
+    description: When cast, you no longer lose casting time due to taking damage.  Lasts 6 sec.
+    auraDescription: Cannot lose casting time from taking damage while casting Priest spells and increases resistance
+      to Interrupt effects by 10%.
+  spell.948042:
+    name: Focused Casting
+    description: When cast, you no longer lose casting time due to taking damage.  Lasts 6 sec.
+    auraDescription: Cannot lose casting time from taking damage while casting Priest spells and increases resistance
+      to Interrupt effects by 20%.
+  spell.948043:
+    name: Focused Will
+    description: After taking a critical hit you gain the Focused Will effect, reducing all damage taken by 2% and
+      increasing healing effects on you by 4%.  Stacks up to 3 times.  Lasts 8 sec.
+    auraDescription: All damage reduced by 2%.  Healing effects increased by 4%.
+  spell.948044:
+    name: Focused Will
+    description: After taking a critical hit you gain the Focused Will effect, reducing all damage taken by 3% and
+      increasing healing effects on you by 7%.  Stacks up to 3 times.  Lasts 8 sec.
+    auraDescription: All damage reduced by 3%.  Healing effects increased by 7%.
+  spell.948045:
+    name: Focused Will
+    description: After taking a critical hit you gain the Focused Will effect, reducing all damage taken by 4% and
+      increasing healing effects on you by 10%.  Stacks up to 3 times.  Lasts 8 sec.
+    auraDescription: All damage reduced by 4%.  Healing effects increased by 10%.
+  spell.948046:
+    name: Circle of Healing
+    description: Heals friendly target and that target's party members within $a1 yards of the target for $s1.
+  spell.948047:
+    name: Circle of Healing
+    description: Heals friendly target and that target's party members within $a1 yards of the target for $s1.
+  spell.948048:
+    name: Circle of Healing
+    description: Heals friendly target and that target's party members within $a1 yards of the target for $s1.
+  spell.948049:
+    name: Circle of Healing
+    description: Heals friendly target and that target's party members within $a1 yards of the target for $s1.
+  spell.948050:
+    name: Circle of Healing
+    description: Heals friendly target and that target's party members within $a1 yards of the target for $s1.
+  spell.948051:
+    name: Lightwell
+    description: Creates a Holy Lightwell.  Members of your raid or party can click the Lightwell to restore 801
+      health over 6 sec.  Attacks done to you equal to 30% of your total health will cancel the effect.  Lightwell
+      lasts for 3 min or 10 charges.
+  spell.948052:
+    name: Lightwell
+    description: Creates a Holy Lightwell.  Members of your raid or party can click the Lightwell to restore 1164
+      health over 6 sec.  Attacks done to you equal to 30% of your total health will cancel the effect.  Lightwell
+      lasts for 3 min or 10 charges.
+  spell.948053:
+    name: Lightwell
+    description: Creates a Holy Lightwell.  Members of your raid or party can click the Lightwell to restore 1599
+      health over 6 sec.  Attacks done to you equal to 30% of your total health will cancel the effect.  Lightwell
+      lasts for 3 min or 10 charges.
+  spell.948054:
+    name: Lightwell
+    description: Creates a Holy Lightwell.  Members of your raid or party can click the Lightwell to restore 2361
+      health over 6 sec.  Attacks done to you equal to 30% of your total health will cancel the effect.  Lightwell
+      lasts for 3 min or 10 charges.
+  spell.948055:
+    name: Surge of Light
+    description: Your next Smite spell is instant cast, costs no mana but is incapable of a critical hit.
+    auraDescription: Your next Smite spell is instant cast, costs no mana but is incapable of a critical hit.
+  spell.948056:
+    name: Clearcasting
+    description: Reduces the mana cost of your next Flash Heal, Binding Heal or Greater Heal spell by 100%.
+    auraDescription: Mana cost of your next Flash Heal, Binding Heal or Greater Heal spell reduced by 100%.
+  spell.948057:
+    name: Inspiration
+    description: Increases the target's armor by 8% for 15 sec.
+    auraDescription: Armor increased by 8%.
+  spell.948058:
+    name: Inspiration
+    description: Increases the target's armor by 16% for 15 sec.
+    auraDescription: Armor increased by 16%.
+  spell.948059:
+    name: Inspiration
+    description: Increases the target's armor by 25% for 15 sec.
+    auraDescription: Armor increased by 25%.
+  spell.948031:
+    name: Vampiric Embrace
+    description: Afflicts your target with Shadow energy that causes all party members to be healed for 15% of any
+      Shadow spell damage you deal for 1 min.
+    auraDescription: Party members are healed for 15% of any Shadow spell damage the priest deals.
+  spell.948033:
+    name: Vampiric Embrace
+    description: Heals a party member for a share of the Shadow spell damage the priest deals.
+  spell.948060:
+    name: Vampiric Touch
+    description: Causes 450 Shadow damage over 15 sec to your target and causes all party members to gain mana equal
+      to 5% of any Shadow spell damage you deal.
+    auraDescription: Suffering 450 Shadow damage over 15 sec, and the caster's party gains mana equal to 5% of any
+      Shadow spell damage the caster deals.
+  spell.948061:
+    name: Vampiric Touch
+    description: Causes 600 Shadow damage over 15 sec to your target and causes all party members to gain mana equal
+      to 5% of any Shadow spell damage you deal.
+    auraDescription: Suffering 600 Shadow damage over 15 sec, and the caster's party gains mana equal to 5% of any
+      Shadow spell damage the caster deals.
+  spell.948062:
+    name: Vampiric Touch
+    description: Causes 650 Shadow damage over 15 sec to your target and causes all party members to gain mana equal
+      to 5% of any Shadow spell damage you deal.
+    auraDescription: Suffering 650 Shadow damage over 15 sec, and the caster's party gains mana equal to 5% of any
+      Shadow spell damage the caster deals.
+  spell.948063:
+    name: Vampiric Touch
+    description: Restores mana to a party member equal to a share of the Shadow spell damage the priest deals.
+  spell.948064:
+    name: Mind Flay
+    description: Assault the target's mind with Shadow energy, causing 75 Shadow damage over 3 sec and slowing their
+      movement speed by 50%.
+    auraDescription: Suffering Shadow damage every 1 sec and movement speed slowed by 50%.
+  spell.948065:
+    name: Mind Flay
+    description: Assault the target's mind with Shadow energy, causing 126 Shadow damage over 3 sec and slowing
+      their movement speed by 50%.
+    auraDescription: Suffering Shadow damage every 1 sec and movement speed slowed by 50%.
+  spell.948066:
+    name: Mind Flay
+    description: Assault the target's mind with Shadow energy, causing 186 Shadow damage over 3 sec and slowing
+      their movement speed by 50%.
+    auraDescription: Suffering Shadow damage every 1 sec and movement speed slowed by 50%.
+  spell.948067:
+    name: Mind Flay
+    description: Assault the target's mind with Shadow energy, causing 261 Shadow damage over 3 sec and slowing
+      their movement speed by 50%.
+    auraDescription: Suffering Shadow damage every 1 sec and movement speed slowed by 50%.
+  spell.948068:
+    name: Mind Flay
+    description: Assault the target's mind with Shadow energy, causing 330 Shadow damage over 3 sec and slowing
+      their movement speed by 50%.
+    auraDescription: Suffering Shadow damage every 1 sec and movement speed slowed by 50%.
+  spell.948069:
+    name: Mind Flay
+    description: Assault the target's mind with Shadow energy, causing 426 Shadow damage over 3 sec and slowing
+      their movement speed by 50%.
+    auraDescription: Suffering Shadow damage every 1 sec and movement speed slowed by 50%.
+  spell.948070:
+    name: Mind Flay
+    description: Assault the target's mind with Shadow energy, causing 528 Shadow damage over 3 sec and slowing
+      their movement speed by 50%.
+    auraDescription: Suffering Shadow damage every 1 sec and movement speed slowed by 50%.
+  spell.948071:
+    name: Silence
+    description: Silences the target, preventing them from casting spells for 5 sec.
+    auraDescription: Silenced.
+  spell.948072:
+    name: Shadowform
+    description: Assume a Shadowform, increasing your Shadow damage by 15% and reducing Physical damage done to
+      you by 15%.  However, you may not cast Holy spells while in this form.
+    auraDescription: Shadow damage increased by 15%.  Physical damage taken reduced by 15%.  Cannot cast Holy spells.
+  spell.948073:
+    name: Misery
+    description: Causes the target to take an additional 1% spell damage.
+    auraDescription: Spell damage taken increased by 1%.
+  spell.948074:
+    name: Misery
+    description: Causes the target to take an additional 2% spell damage.
+    auraDescription: Spell damage taken increased by 2%.
+  spell.948075:
+    name: Misery
+    description: Causes the target to take an additional 3% spell damage.
+    auraDescription: Spell damage taken increased by 3%.
+  spell.948076:
+    name: Misery
+    description: Causes the target to take an additional 4% spell damage.
+    auraDescription: Spell damage taken increased by 4%.
+  spell.948077:
+    name: Misery
+    description: Causes the target to take an additional 5% spell damage.
+    auraDescription: Spell damage taken increased by 5%.
+  spell.948078:
+    name: Shadow Vulnerability
+    description: Increases Shadow damage taken from the priest's party by 2% per application.
+    auraDescription: Shadow damage taken increased by 2% per application.
+  spell.948079:
+    name: Blackout
+    description: Stuns the target for 3 sec.
+    auraDescription: Stunned.
+  spell.948080:
+    name: Spirit Tap
+    description: Spirit increased by 100%.  Mana regenerates at a 50% rate while casting.
+    auraDescription: Spirit increased by 100%.  Mana regenerates at a 50% rate while casting.

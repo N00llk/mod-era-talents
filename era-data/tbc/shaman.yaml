@@ -2472,9 +2472,8 @@ helpers:
   effects:
   - { effect: 6, aura: 108, misc: 9, basePoints: 99, dieSides: 1, targetA: 1, maskA: 2499, maskB: 0, maskC: 0 }   # SPELLMOD_NOT_LOSE_CASTING_TIME, EFFECTIVE +100, wago mask = LB|CL|HW|LHW|CH|Ghost Wolf
   client:
-    name: Focused Casting
+    textKey: spell.946512
     icon: 2028             # stock Eye of the Storm SpellIconID (29062 dump 2026-08-31)
-    auraDescription: "Prevents you from losing casting time on Shaman spells when taking damage."
     # no skillLine: triggered only — it must never get a spellbook entry
 # ---------------------------------------------------------------------------------------------------
 # 946513 "Elemental Mastery" — node 20216's granted active.
@@ -2545,11 +2544,9 @@ helpers:
     attrMask: 8            # PROC_ATTR_REQ_SPELLMOD — only a spell this aura actually modifies drops the charge
     chance: 100
   client:
-    name: Elemental Mastery
+    textKey: spell.946513
     icon: 117              # stock Elemental Mastery SpellIconID (16166 dump 2026-08-31)
     skillLine: 375         # Elemental Combat — else the granted active lands in the client General tab
-    description: "When activated, this spell gives your next Fire, Frost, or Nature damage spell a 100% critical strike chance and reduces the mana cost by 100%."
-    auraDescription: "Your next Fire, Frost, or Nature damage spell has its mana cost reduced by 100% and is guaranteed a critical strike."
 # ===================================================================================================
 # ENHANCEMENT tab (Plan 3a Task 7) claims **946514-946526**. 946527-946611 free within the tree-helper
 # sub-range. Layout, in tab order:
@@ -2626,9 +2623,8 @@ helpers:
     flags: 4               # PROC_FLAG_DONE_MELEE_AUTO_ATTACK — one charge per melee swing
     cooldown: 500          # the stock -16257 row's only content
   client:
-    name: Flurry
+    textKey: spell.946514
     icon: 108              # stock Flurry SpellIconID (16257 dump 2026-09-01)
-    auraDescription: "Increases attack speed by 10%. Consumed on 3 melee swings."
 - id: 946515
   name: Flurry
   family: 11
@@ -2645,9 +2641,8 @@ helpers:
     flags: 4
     cooldown: 500
   client:
-    name: Flurry
+    textKey: spell.946515
     icon: 108
-    auraDescription: "Increases attack speed by 15%. Consumed on 3 melee swings."
 - id: 946516
   name: Flurry
   family: 11
@@ -2664,9 +2659,8 @@ helpers:
     flags: 4
     cooldown: 500
   client:
-    name: Flurry
+    textKey: spell.946516
     icon: 108
-    auraDescription: "Increases attack speed by 20%. Consumed on 3 melee swings."
 - id: 946517
   name: Flurry
   family: 11
@@ -2683,9 +2677,8 @@ helpers:
     flags: 4
     cooldown: 500
   client:
-    name: Flurry
+    textKey: spell.946517
     icon: 108
-    auraDescription: "Increases attack speed by 25%. Consumed on 3 melee swings."
 - id: 946518
   name: Flurry
   family: 11
@@ -2702,9 +2695,8 @@ helpers:
     flags: 4
     cooldown: 500
   client:
-    name: Flurry
+    textKey: spell.946518
     icon: 108
-    auraDescription: "Increases attack speed by 30%. Consumed on 3 melee swings."
 # ---------------------------------------------------------------------------------------------------
 # 946519 "Spirit Weapons" — BOTH halves of node 20232, in one hidden passive.
 #   Node 20232's rank spell 16268 is LIVE_MATCH but is a LEARN-WRAPPER: two SPELL_EFFECT_LEARN_SPELL
@@ -2791,11 +2783,9 @@ helpers:
   - { effect: 64, trigger: 32175, basePoints: 0,  dieSides: 0, targetA: 6 }                 # main-hand weapon strike (stock, LIVE_MATCH apart from AttributesEx4)
   - { effect: 64, trigger: 32176, basePoints: -1, dieSides: 1, targetA: 6 }                 # off-hand weapon strike (stock)
   client:
-    name: Stormstrike
+    textKey: spell.946520
     icon: 2562             # stock Stormstrike SpellIconID (17364 dump 2026-09-01)
     skillLine: 373         # Enhancement — else the granted active lands in the client's General tab
-    description: "Instantly attack with both weapons. In addition, the next 2 sources of Nature damage dealt to the target are increased by 20%. Lasts 12 sec."
-    auraDescription: "Increases Nature damage taken by 20%."
 # ---------------------------------------------------------------------------------------------------
 # 946521-946525 "Unleashed Rage" — the party attack-power buff node 20239 procs, r1-r5.
 #   All five TBC triggers 30803/30804/30805/30806/30807 are WAGO_ONLY (absent from the 3.3.5a
@@ -2832,9 +2822,8 @@ helpers:
   effects:
   - { effect: 6, aura: 166, misc: 0, basePoints: 1, dieSides: 1, targetA: 20, radius: 9 }   # MOD_ATTACK_POWER_PCT +2%, TARGET_UNIT_CASTER_AREA_PARTY, radius index 9
   client:
-    name: Unleashed Rage
+    textKey: spell.946521
     icon: 2021             # stock Unleashed Rage SpellIconID (30802 dump 2026-09-01)
-    auraDescription: "Melee attack power increased by 2%."
 - id: 946522
   name: Unleashed Rage
   school: 1
@@ -2844,9 +2833,8 @@ helpers:
   effects:
   - { effect: 6, aura: 166, misc: 0, basePoints: 3, dieSides: 1, targetA: 20, radius: 9 }   # +4%
   client:
-    name: Unleashed Rage
+    textKey: spell.946522
     icon: 2021
-    auraDescription: "Melee attack power increased by 4%."
 - id: 946523
   name: Unleashed Rage
   school: 1
@@ -2856,9 +2844,8 @@ helpers:
   effects:
   - { effect: 6, aura: 166, misc: 0, basePoints: 5, dieSides: 1, targetA: 20, radius: 9 }   # +6%
   client:
-    name: Unleashed Rage
+    textKey: spell.946523
     icon: 2021
-    auraDescription: "Melee attack power increased by 6%."
 - id: 946524
   name: Unleashed Rage
   school: 1
@@ -2868,9 +2855,8 @@ helpers:
   effects:
   - { effect: 6, aura: 166, misc: 0, basePoints: 7, dieSides: 1, targetA: 20, radius: 9 }   # +8%
   client:
-    name: Unleashed Rage
+    textKey: spell.946524
     icon: 2021
-    auraDescription: "Melee attack power increased by 8%."
 - id: 946525
   name: Unleashed Rage
   school: 1
@@ -2880,9 +2866,8 @@ helpers:
   effects:
   - { effect: 6, aura: 166, misc: 0, basePoints: 9, dieSides: 1, targetA: 20, radius: 9 }   # +10%
   client:
-    name: Unleashed Rage
+    textKey: spell.946525
     icon: 2021
-    auraDescription: "Melee attack power increased by 10%."
 # ---------------------------------------------------------------------------------------------------
 # 946526 "Shamanistic Rage" — node 20240's granted active.
 #   _ref survival_map 30823 DIVERGED on EFFECT_1's amount only: TBC EFFECTIVE **30** (= 30% of attack
@@ -2939,11 +2924,9 @@ helpers:
     ppm: 18                # ProcsPerMinute 18 — the stock row's rate; without it the mana return fires on every hit
     chance: 0              # stock Chance 0: PPM governs (LoadSpellProcs only falls back to the DBC chance when BOTH are 0)
   client:
-    name: Shamanistic Rage
+    textKey: spell.946526
     icon: 2024             # stock Shamanistic Rage SpellIconID (30823 dump 2026-09-01)
     skillLine: 373         # Enhancement — else the granted active lands in the client's General tab
-    description: "Reduces all damage taken by 30% and gives your successful melee attacks a chance to regenerate mana equal to 30% of your attack power. Lasts 15 sec."
-    auraDescription: "All damage taken reduced by 30% and successful melee attacks have a chance to regenerate mana equal to 30% of your attack power."
 # ===================================================================================================
 # RESTORATION tab (Plan 3a Task 8) claims **946527-946539**. 946540-946611 free within the
 # tree-helper sub-range. Layout, in tab order:
@@ -2995,9 +2978,8 @@ helpers:
   effects:
   - { effect: 6, aura: 101, misc: 1, basePoints: 7, dieSides: 1, targetA: 21 }    # MOD_RESISTANCE_PCT, physical = armor, EFFECTIVE +8%, on the heal target
   client:
-    name: Ancestral Fortitude
+    textKey: spell.946527
     icon: 200              # stock Ancestral Fortitude SpellIconID (16177 dump 2026-09-01)
-    auraDescription: "Armor increased by 8%."
 - id: 946528
   name: Ancestral Fortitude
   family: 11
@@ -3010,9 +2992,8 @@ helpers:
   effects:
   - { effect: 6, aura: 101, misc: 1, basePoints: 15, dieSides: 1, targetA: 21 }   # EFFECTIVE +16%
   client:
-    name: Ancestral Fortitude
+    textKey: spell.946528
     icon: 200
-    auraDescription: "Armor increased by 16%."
 - id: 946529
   name: Ancestral Fortitude
   family: 11
@@ -3025,9 +3006,8 @@ helpers:
   effects:
   - { effect: 6, aura: 101, misc: 1, basePoints: 24, dieSides: 1, targetA: 21 }   # EFFECTIVE +25%
   client:
-    name: Ancestral Fortitude
+    textKey: spell.946529
     icon: 200
-    auraDescription: "Armor increased by 25%."
 # ---------------------------------------------------------------------------------------------------
 # 946530 "Healing Way" — the stacking +6%-Healing-Wave-received buff node 20252's aura-109 applies to
 #   the heal target.
@@ -3060,9 +3040,8 @@ helpers:
   effects:
   - { effect: 6, aura: 283, basePoints: 5, dieSides: 1, targetA: 21 }   # MOD_HEALING_RECEIVED, EFFECTIVE +6% (mask A 64 inherited from 29206)
   client:
-    name: Healing Way
+    textKey: spell.946530
     icon: 1929             # stock Healing Way SpellIconID (29206 dump 2026-09-01)
-    auraDescription: "The effect of Healing Wave on you is increased by 6%. Stacks up to 3 times."
 # ---------------------------------------------------------------------------------------------------
 # 946531 "Nature's Swiftness" — node 20253's granted active.
 #   _ref survival_map 16188 is LIVE_MATCH on every SWEPT field, but `RecoveryTime`, `Category` and
@@ -3095,11 +3074,9 @@ helpers:
   effects:
   - { effect: 6, aura: 108, misc: 10, basePoints: -101, dieSides: 1, targetA: 1 }   # SPELLMOD_CASTING_TIME, EFFECTIVE -100% (mask A 2499 inherited)
   client:
-    name: Nature's Swiftness
+    textKey: spell.946531
     icon: 112              # stock Nature's Swiftness SpellIconID (16188 dump 2026-09-01)
     skillLine: 374         # Restoration (SHAMAN) — else the granted active lands in the client's General tab
-    description: "When activated, your next Nature spell with a casting time less than 10 sec. becomes an instant cast spell."
-    auraDescription: "Your next Nature spell with a casting time less than 10 secs will be an instant cast spell."
 # ---------------------------------------------------------------------------------------------------
 # 946532-946536 "Nature's Guardian" — node 20257's five granted passives.
 #   Hand clones rather than generator auto-passives because the talent needs TWO effect slots the
@@ -3233,12 +3210,10 @@ helpers:
     cooldown: 3500         # the stock row's ICD (the script enforces the same 3.5 s itself)
     chance: 100
   client:
-    name: Earth Shield
+    textKey: spell.946537
     icon: 2015             # stock Earth Shield SpellIconID (974 dump 2026-09-01)
     skillLine: 374         # Restoration (SHAMAN)
     rank: 1
-    description: "Protects the target with an earthen shield, giving a 30% chance of ignoring spell interruption when damaged and causing attacks to heal the shielded target for 150. This effect can only occur once every few seconds. 6 charges. Lasts 10 min. Earth Shield can only be placed on one target at a time and only one Elemental Shield can be active on a target at a time."
-    auraDescription: "30% chance to ignore spell interruption when damaged and attacks heal the shielded target for 150."
 - id: 946538
   name: Earth Shield
   template: 32593          # inherit the DUMMY heal 205 + SpellLevel 60
@@ -3252,12 +3227,10 @@ helpers:
   - { effect: 6, aura: 149, misc: 126, basePoints: 29,  dieSides: 1, targetA: 21 }   # REDUCE_PUSHBACK, all magic schools, EFFECTIVE 30%
   proc: { flags: 139944, typeMask: 1, attrMask: 2, cooldown: 3500, chance: 100 }
   client:
-    name: Earth Shield
+    textKey: spell.946538
     icon: 2015
     skillLine: 374
     rank: 2
-    description: "Protects the target with an earthen shield, giving a 30% chance of ignoring spell interruption when damaged and causing attacks to heal the shielded target for 205. This effect can only occur once every few seconds. 6 charges. Lasts 10 min. Earth Shield can only be placed on one target at a time and only one Elemental Shield can be active on a target at a time."
-    auraDescription: "30% chance to ignore spell interruption when damaged and attacks heal the shielded target for 205."
 - id: 946539
   name: Earth Shield
   template: 32594          # inherit the DUMMY heal 270 + SpellLevel 70
@@ -3271,12 +3244,10 @@ helpers:
   - { effect: 6, aura: 149, misc: 126, basePoints: 29,  dieSides: 1, targetA: 21 }   # REDUCE_PUSHBACK, all magic schools, EFFECTIVE 30%
   proc: { flags: 139944, typeMask: 1, attrMask: 2, cooldown: 3500, chance: 100 }
   client:
-    name: Earth Shield
+    textKey: spell.946539
     icon: 2015
     skillLine: 374
     rank: 3
-    description: "Protects the target with an earthen shield, giving a 30% chance of ignoring spell interruption when damaged and causing attacks to heal the shielded target for 270. This effect can only occur once every few seconds. 6 charges. Lasts 10 min. Earth Shield can only be placed on one target at a time and only one Elemental Shield can be active on a target at a time."
-    auraDescription: "30% chance to ignore spell interruption when damaged and attacks heal the shielded target for 270."
 # ===================================================================================================
 # PLAN 3b TASK 2, BATCH 1 — the five EARTH totem families (Earthbind, Stoneskin, Strength of Earth,
 # Stoneclaw, Tremor). Ids from `era-data/_ref/tbc/shaman-totems-tbc.yaml` `id_allocation:`; each
@@ -3361,11 +3332,10 @@ helpers:
   effects:
   - { effect: 28, basePoints: 4, dieSides: 1, misc: 920300, miscB: 81, targetA: 41 }   # 5-hp totem (bp4+d1); EARTH slot (miscB 81 / targetA 41), FRESH creature 920300 -> driver 947001 -> stock field 3600
   client:
-    name: Earthbind Totem
+    textKey: spell.947000
     icon: 686
     rank: 1
     skillLine: 375
-    description: "Summons an Earthbind Totem with 5 health at the feet of the caster for 45 sec that reduces the movement speed of all enemies within 10 yards by 50%."
 # DRIVER: **MINTED 947001** -- the periodic re-caster the Vanilla substrate never modelled. Clone of
 #   stock 6474 "Earthbind Totem Passive" (Attributes 320 PASSIVE, aura 23 PERIODIC_TRIGGER_SPELL,
 #   period 3000 ms), which wago 2.5.4 and the live Spell.dbc agree on field-for-field except the
@@ -3393,9 +3363,8 @@ helpers:
   effects:
   - { effect: 6, aura: 23, basePoints: -1, targetA: 1, trigger: 3600 }   # PERIODIC_TRIGGER_SPELL/3s (period inherited) -> stock 3600 Earthbind slow field
   client:
-    name: Earthbind Totem Passive
+    textKey: spell.947001
     icon: 686
-    auraDescription: "Periodically reduces the movement speed of nearby enemies by 50%."
 # --- Stoneskin (family index 1, block 947010-947029) ------------------------------------------------
 # The most expensive family in this batch: RETUNED on BOTH halves at EVERY rank, so nothing is reused.
 # PULSES **947010-947015** (r1-r6). TBC is aura 125 MOD_MELEE_DAMAGE_TAKEN at EFFECTIVE
@@ -3418,72 +3387,64 @@ helpers:
   effects:
   - { effect: 65, aura: 125, basePoints: -4, dieSides: 0, misc: 0, targetA: 1, radius: 10 }   # MOD_MELEE_DAMAGE_TAKEN, negative = reduction; effect 65 + radius 10 kept per Amendment B.8
   client:
-    name: Stoneskin
+    textKey: spell.947010
     icon: 690
-    auraDescription: "Melee damage taken reduced by 4."
 - id: 947011
   name: Stoneskin
   template: 8156
   effects:
   - { effect: 65, aura: 125, basePoints: -7, dieSides: 0, misc: 0, targetA: 1, radius: 10 }
   client:
-    name: Stoneskin
+    textKey: spell.947011
     icon: 690
-    auraDescription: "Melee damage taken reduced by 7."
 - id: 947012
   name: Stoneskin
   template: 8157
   effects:
   - { effect: 65, aura: 125, basePoints: -11, dieSides: 0, misc: 0, targetA: 1, radius: 10 }
   client:
-    name: Stoneskin
+    textKey: spell.947012
     icon: 690
-    auraDescription: "Melee damage taken reduced by 11."
 - id: 947013
   name: Stoneskin
   template: 10403
   effects:
   - { effect: 65, aura: 125, basePoints: -16, dieSides: 0, misc: 0, targetA: 1, radius: 10 }
   client:
-    name: Stoneskin
+    textKey: spell.947013
     icon: 690
-    auraDescription: "Melee damage taken reduced by 16."
 - id: 947014
   name: Stoneskin
   template: 10404
   effects:
   - { effect: 65, aura: 125, basePoints: -22, dieSides: 0, misc: 0, targetA: 1, radius: 10 }
   client:
-    name: Stoneskin
+    textKey: spell.947014
     icon: 690
-    auraDescription: "Melee damage taken reduced by 22."
 - id: 947015
   name: Stoneskin
   template: 10405
   effects:
   - { effect: 65, aura: 125, basePoints: -30, dieSides: 0, misc: 0, targetA: 1, radius: 10 }
   client:
-    name: Stoneskin
+    textKey: spell.947015
     icon: 690
-    auraDescription: "Melee damage taken reduced by 30."
 - id: 947016
   name: Stoneskin
   template: 25506
   effects:
   - { effect: 65, aura: 125, basePoints: -36, dieSides: 0, misc: 0, targetA: 1, radius: 10 }   # TBC r7: wago raw -37 + DieSides 1 = EFFECTIVE -36. Live 25506 is aura 22 ARMOR +750.
   client:
-    name: Stoneskin
+    textKey: spell.947016
     icon: 690
-    auraDescription: "Melee damage taken reduced by 36."
 - id: 947017
   name: Stoneskin
   template: 25507
   effects:
   - { effect: 65, aura: 125, basePoints: -43, dieSides: 0, misc: 0, targetA: 1, radius: 10 }   # TBC r8: wago raw -44 + DieSides 1 = EFFECTIVE -43. Live 25507 is aura 22 ARMOR +860.
   client:
-    name: Stoneskin
+    textKey: spell.947017
     icon: 690
-    auraDescription: "Melee damage taken reduced by 43."
 # SUMMONS **947020-947025** (r1-r6), fresh creatures **920310-920315**. TBC mana is FLAT
 #   30/60/90/115/160/210 where LIVE is 0 flat + 13% of base on every rank (`manaCostPct: 0` is
 #   therefore mandatory -- SpellInfo::CalculatePowerCost ADDS the percentage on top of the flat
@@ -3498,6 +3459,7 @@ helpers:
 #   `summon.schoolMask` for both). Without it the top two ranks would be the only Physical-school
 #   Stoneskin summons in the chain.
 - id: 947020
+  school: 8
   name: Stoneskin Totem
   preventionType: 1   # totem summons are silence-gated in TBC/1.12 (wago PreventionType 1; WotLK made them 0) — fix round 2026-09-02, _ref totems accepted_gaps id 14
   template: 8071
@@ -3507,12 +3469,12 @@ helpers:
   effects:
   - { effect: 28, basePoints: 4, dieSides: 1, misc: 920310, miscB: 81, targetA: 41 }   # 5-hp totem (bp4+d1); EARTH slot
   client:
-    name: Stoneskin Totem
+    textKey: spell.947020
     icon: 690
     rank: 1
     skillLine: 373
-    description: "Summons a Stoneskin Totem with 5 health at the feet of the caster for 2 min that reduces the melee damage taken by party and raid members within 30 yards by 4."
 - id: 947021
+  school: 8
   name: Stoneskin Totem
   preventionType: 1   # totem summons are silence-gated in TBC/1.12 (wago PreventionType 1; WotLK made them 0) — fix round 2026-09-02, _ref totems accepted_gaps id 14
   template: 8154
@@ -3522,12 +3484,12 @@ helpers:
   effects:
   - { effect: 28, basePoints: 4, dieSides: 1, misc: 920311, miscB: 81, targetA: 41 }
   client:
-    name: Stoneskin Totem
+    textKey: spell.947021
     icon: 690
     rank: 2
     skillLine: 373
-    description: "Summons a Stoneskin Totem with 5 health at the feet of the caster for 2 min that reduces the melee damage taken by party and raid members within 30 yards by 7."
 - id: 947022
+  school: 8
   name: Stoneskin Totem
   preventionType: 1   # totem summons are silence-gated in TBC/1.12 (wago PreventionType 1; WotLK made them 0) — fix round 2026-09-02, _ref totems accepted_gaps id 14
   template: 8155
@@ -3537,12 +3499,12 @@ helpers:
   effects:
   - { effect: 28, basePoints: 4, dieSides: 1, misc: 920312, miscB: 81, targetA: 41 }
   client:
-    name: Stoneskin Totem
+    textKey: spell.947022
     icon: 690
     rank: 3
     skillLine: 373
-    description: "Summons a Stoneskin Totem with 5 health at the feet of the caster for 2 min that reduces the melee damage taken by party and raid members within 30 yards by 11."
 - id: 947023
+  school: 8
   name: Stoneskin Totem
   preventionType: 1   # totem summons are silence-gated in TBC/1.12 (wago PreventionType 1; WotLK made them 0) — fix round 2026-09-02, _ref totems accepted_gaps id 14
   template: 10406
@@ -3552,12 +3514,12 @@ helpers:
   effects:
   - { effect: 28, basePoints: 4, dieSides: 1, misc: 920313, miscB: 81, targetA: 41 }
   client:
-    name: Stoneskin Totem
+    textKey: spell.947023
     icon: 690
     rank: 4
     skillLine: 373
-    description: "Summons a Stoneskin Totem with 5 health at the feet of the caster for 2 min that reduces the melee damage taken by party and raid members within 30 yards by 16."
 - id: 947024
+  school: 8
   name: Stoneskin Totem
   preventionType: 1   # totem summons are silence-gated in TBC/1.12 (wago PreventionType 1; WotLK made them 0) — fix round 2026-09-02, _ref totems accepted_gaps id 14
   template: 10407
@@ -3567,12 +3529,12 @@ helpers:
   effects:
   - { effect: 28, basePoints: 4, dieSides: 1, misc: 920314, miscB: 81, targetA: 41 }
   client:
-    name: Stoneskin Totem
+    textKey: spell.947024
     icon: 690
     rank: 5
     skillLine: 373
-    description: "Summons a Stoneskin Totem with 5 health at the feet of the caster for 2 min that reduces the melee damage taken by party and raid members within 30 yards by 22."
 - id: 947025
+  school: 8
   name: Stoneskin Totem
   preventionType: 1   # totem summons are silence-gated in TBC/1.12 (wago PreventionType 1; WotLK made them 0) — fix round 2026-09-02, _ref totems accepted_gaps id 14
   template: 10408
@@ -3582,11 +3544,10 @@ helpers:
   effects:
   - { effect: 28, basePoints: 4, dieSides: 1, misc: 920315, miscB: 81, targetA: 41 }
   client:
-    name: Stoneskin Totem
+    textKey: spell.947025
     icon: 690
     rank: 6
     skillLine: 373
-    description: "Summons a Stoneskin Totem with 5 health at the feet of the caster for 2 min that reduces the melee damage taken by party and raid members within 30 yards by 30."
 - id: 947026
   name: Stoneskin Totem
   preventionType: 1   # totem summons are silence-gated in TBC/1.12 (wago PreventionType 1; WotLK made them 0) — fix round 2026-09-02, _ref totems accepted_gaps id 14
@@ -3598,11 +3559,10 @@ helpers:
   effects:
   - { effect: 28, basePoints: 4, dieSides: 1, misc: 920316, miscB: 81, targetA: 41 }
   client:
-    name: Stoneskin Totem
+    textKey: spell.947026
     icon: 690
     rank: 7
     skillLine: 373
-    description: "Summons a Stoneskin Totem with 5 health at the feet of the caster for 2 min that reduces the melee damage taken by party and raid members within 30 yards by 36."
 - id: 947027
   name: Stoneskin Totem
   preventionType: 1   # totem summons are silence-gated in TBC/1.12 (wago PreventionType 1; WotLK made them 0) — fix round 2026-09-02, _ref totems accepted_gaps id 14
@@ -3614,11 +3574,10 @@ helpers:
   effects:
   - { effect: 28, basePoints: 4, dieSides: 1, misc: 920317, miscB: 81, targetA: 41 }
   client:
-    name: Stoneskin Totem
+    textKey: spell.947027
     icon: 690
     rank: 8
     skillLine: 373
-    description: "Summons a Stoneskin Totem with 5 health at the feet of the caster for 2 min that reduces the melee damage taken by party and raid members within 30 yards by 43."
 # --- Strength of Earth (family index 2, block 947030-947049) ----------------------------------------
 # PULSES: **REUSED, ids 931050-931053** (r1-r4). This is the Amendment B.8.1 case, verified rather
 #   than assumed: the family's ENTIRE `clone_vs_tbc_divergences` pulse entry is
@@ -3648,6 +3607,8 @@ helpers:
 #   LOAD-BEARING reason Stoneskin's do: node 20248 Totemic Mastery's `affectsMask {a: 100917248}`
 #   contains bit16. Values are wago's raw 76/85 + DieSides 1 = EFFECTIVE +77/+86, matching `_ref`.
 - id: 947030
+  manaCostPct: 0
+  school: 8
   name: Strength of Earth Totem
   preventionType: 1   # totem summons are silence-gated in TBC/1.12 (wago PreventionType 1; WotLK made them 0) — fix round 2026-09-02, _ref totems accepted_gaps id 14
   template: 8075
@@ -3656,12 +3617,13 @@ helpers:
   effects:
   - { effect: 28, basePoints: 4, dieSides: 1, misc: 920120, miscB: 81, targetA: 41 }   # REUSED Vanilla creature 920120 -> pulse 931050
   client:
-    name: Strength of Earth Totem
+    textKey: spell.947030
     icon: 691
     rank: 1
     skillLine: 373
-    description: "Summons a Strength of Earth Totem with 5 health at the feet of the caster for 2 min that increases the strength of party and raid members within 30 yards by 10."
 - id: 947031
+  manaCostPct: 0
+  school: 8
   name: Strength of Earth Totem
   preventionType: 1   # totem summons are silence-gated in TBC/1.12 (wago PreventionType 1; WotLK made them 0) — fix round 2026-09-02, _ref totems accepted_gaps id 14
   template: 8160
@@ -3670,12 +3632,13 @@ helpers:
   effects:
   - { effect: 28, basePoints: 4, dieSides: 1, misc: 920121, miscB: 81, targetA: 41 }
   client:
-    name: Strength of Earth Totem
+    textKey: spell.947031
     icon: 691
     rank: 2
     skillLine: 373
-    description: "Summons a Strength of Earth Totem with 5 health at the feet of the caster for 2 min that increases the strength of party and raid members within 30 yards by 20."
 - id: 947032
+  manaCostPct: 0
+  school: 8
   name: Strength of Earth Totem
   preventionType: 1   # totem summons are silence-gated in TBC/1.12 (wago PreventionType 1; WotLK made them 0) — fix round 2026-09-02, _ref totems accepted_gaps id 14
   template: 8161
@@ -3684,12 +3647,13 @@ helpers:
   effects:
   - { effect: 28, basePoints: 4, dieSides: 1, misc: 920122, miscB: 81, targetA: 41 }
   client:
-    name: Strength of Earth Totem
+    textKey: spell.947032
     icon: 691
     rank: 3
     skillLine: 373
-    description: "Summons a Strength of Earth Totem with 5 health at the feet of the caster for 2 min that increases the strength of party and raid members within 30 yards by 36."
 - id: 947033
+  manaCostPct: 0
+  school: 8
   name: Strength of Earth Totem
   preventionType: 1   # totem summons are silence-gated in TBC/1.12 (wago PreventionType 1; WotLK made them 0) — fix round 2026-09-02, _ref totems accepted_gaps id 14
   template: 10442
@@ -3698,12 +3662,13 @@ helpers:
   effects:
   - { effect: 28, basePoints: 4, dieSides: 1, misc: 920123, miscB: 81, targetA: 41 }
   client:
-    name: Strength of Earth Totem
+    textKey: spell.947033
     icon: 691
     rank: 4
     skillLine: 373
-    description: "Summons a Strength of Earth Totem with 5 health at the feet of the caster for 2 min that increases the strength of party and raid members within 30 yards by 61."
 - id: 947034
+  manaCostPct: 0
+  school: 8
   name: Strength of Earth Totem
   preventionType: 1   # totem summons are silence-gated in TBC/1.12 (wago PreventionType 1; WotLK made them 0) — fix round 2026-09-02, _ref totems accepted_gaps id 14
   template: 25361
@@ -3712,11 +3677,10 @@ helpers:
   effects:
   - { effect: 28, basePoints: 4, dieSides: 1, misc: 920324, miscB: 81, targetA: 41 }   # FRESH creature 920324 -> minted pulse 947040
   client:
-    name: Strength of Earth Totem
+    textKey: spell.947034
     icon: 691
     rank: 5
     skillLine: 373
-    description: "Summons a Strength of Earth Totem with 5 health at the feet of the caster for 2 min that increases the strength of party and raid members within 30 yards by 77."
 # r6's summon needs TWO keys r1-r5 do not, and both are live-vs-wago divergences that stop at r6:
 #   * `manaCostPct: 0` -- live 25528 is 0 flat + 10% of base where wago is a FLAT 300 (r1-r5 are flat
 #     on BOTH sides, which is why no lower rank carries the key). CalculatePowerCost ADDS the pct on
@@ -3736,11 +3700,10 @@ helpers:
   effects:
   - { effect: 28, basePoints: 4, dieSides: 1, misc: 920325, miscB: 81, targetA: 41 }   # FRESH creature 920325 -> minted pulse 947041
   client:
-    name: Strength of Earth Totem
+    textKey: spell.947035
     icon: 691
     rank: 6
     skillLine: 373
-    description: "Summons a Strength of Earth Totem with 5 health at the feet of the caster for 2 min that increases the strength of party and raid members within 30 yards by 86."
 # PULSES 947040/947041 (r5/r6 ONLY).
 # **NO `spell_ranks` ROW IS OWED FOR THIS CHAIN, and an earlier version of this comment said one was.**
 # It flagged the pulse chain as a mixed 931xxx/947xxx chain needing a Task 5 root ordering
@@ -3772,9 +3735,8 @@ helpers:
   effects:
   - { effect: 65, aura: 29, basePoints: 77, dieSides: 0, misc: 0, targetA: 1, radius: 10 }   # MOD_STAT misc 0 = STAT_STRENGTH; effect 65 + radius 10 per Amendment B.8, matching the reused r1-r4 clones
   client:
-    name: Strength of Earth
+    textKey: spell.947040
     icon: 691
-    auraDescription: "Strength increased by 77."
 - id: 947041
   name: Strength of Earth
   template: 25527
@@ -3786,9 +3748,8 @@ helpers:
   effects:
   - { effect: 65, aura: 29, basePoints: 86, dieSides: 0, misc: 0, targetA: 1, radius: 10 }
   client:
-    name: Strength of Earth
+    textKey: spell.947041
     icon: 691
-    auraDescription: "Strength increased by 86."
 # --- Stoneclaw (family index 3, block 947050-947069) ------------------------------------------------
 # PASSIVES: **REUSED, ids 931070-931075** (r1-r6). wago 5728/6397/6398/6399/10425/10426 are
 #   byte-identical to LIVE and to the shipped clones once N6 (an inert DieSides delta on a
@@ -3846,6 +3807,8 @@ helpers:
 #       and it has a real behavioural consequence for a TAUNT -- `_ref` open_questions **id 17**,
 #       which is a decision owed to the user, NOT something a later batch may settle on its own.
 - id: 947050
+  manaCostPct: 0
+  school: 8
   name: Stoneclaw Totem
   preventionType: 1   # totem summons are silence-gated in TBC/1.12 (wago PreventionType 1; WotLK made them 0) — fix round 2026-09-02, _ref totems accepted_gaps id 14
   template: 5730
@@ -3853,13 +3816,13 @@ helpers:
   effects:
   - { effect: 28, basePoints: 49, dieSides: 1, misc: 920130, miscB: 81, targetA: 41 }   # 50-hp totem (bp49+d1); REUSED Vanilla creature 920130 -> passive 931070
   client:
-    auraDescription: ""   # donor carries "Taunting creatures."; count + sweep in _ref open_questions 15
-    name: Stoneclaw Totem
+    textKey: spell.947050
     icon: 689
     rank: 1
     skillLine: 375
-    description: "Summons a Stoneclaw Totem with 50 health at the feet of the caster for 15 sec that draws attacks from nearby enemies."
 - id: 947051
+  manaCostPct: 0
+  school: 8
   name: Stoneclaw Totem
   preventionType: 1   # totem summons are silence-gated in TBC/1.12 (wago PreventionType 1; WotLK made them 0) — fix round 2026-09-02, _ref totems accepted_gaps id 14
   template: 6390
@@ -3867,13 +3830,13 @@ helpers:
   effects:
   - { effect: 28, basePoints: 149, dieSides: 1, misc: 920131, miscB: 81, targetA: 41 }
   client:
-    auraDescription: ""   # donor carries "Taunting creatures."; count + sweep in _ref open_questions 15
-    name: Stoneclaw Totem
+    textKey: spell.947051
     icon: 689
     rank: 2
     skillLine: 375
-    description: "Summons a Stoneclaw Totem with 150 health at the feet of the caster for 15 sec that draws attacks from nearby enemies."
 - id: 947052
+  manaCostPct: 0
+  school: 8
   name: Stoneclaw Totem
   preventionType: 1   # totem summons are silence-gated in TBC/1.12 (wago PreventionType 1; WotLK made them 0) — fix round 2026-09-02, _ref totems accepted_gaps id 14
   template: 6391
@@ -3881,13 +3844,13 @@ helpers:
   effects:
   - { effect: 28, basePoints: 219, dieSides: 1, misc: 920132, miscB: 81, targetA: 41 }
   client:
-    auraDescription: ""   # donor carries "Taunting creatures."; count + sweep in _ref open_questions 15
-    name: Stoneclaw Totem
+    textKey: spell.947052
     icon: 689
     rank: 3
     skillLine: 375
-    description: "Summons a Stoneclaw Totem with 220 health at the feet of the caster for 15 sec that draws attacks from nearby enemies."
 - id: 947053
+  manaCostPct: 0
+  school: 8
   name: Stoneclaw Totem
   preventionType: 1   # totem summons are silence-gated in TBC/1.12 (wago PreventionType 1; WotLK made them 0) — fix round 2026-09-02, _ref totems accepted_gaps id 14
   template: 6392
@@ -3895,13 +3858,13 @@ helpers:
   effects:
   - { effect: 28, basePoints: 279, dieSides: 1, misc: 920133, miscB: 81, targetA: 41 }
   client:
-    auraDescription: ""   # donor carries "Taunting creatures."; count + sweep in _ref open_questions 15
-    name: Stoneclaw Totem
+    textKey: spell.947053
     icon: 689
     rank: 4
     skillLine: 375
-    description: "Summons a Stoneclaw Totem with 280 health at the feet of the caster for 15 sec that draws attacks from nearby enemies."
 - id: 947054
+  manaCostPct: 0
+  school: 8
   name: Stoneclaw Totem
   preventionType: 1   # totem summons are silence-gated in TBC/1.12 (wago PreventionType 1; WotLK made them 0) — fix round 2026-09-02, _ref totems accepted_gaps id 14
   template: 10427
@@ -3909,13 +3872,13 @@ helpers:
   effects:
   - { effect: 28, basePoints: 389, dieSides: 1, misc: 920134, miscB: 81, targetA: 41 }
   client:
-    auraDescription: ""   # donor carries "Taunting creatures."; count + sweep in _ref open_questions 15
-    name: Stoneclaw Totem
+    textKey: spell.947054
     icon: 689
     rank: 5
     skillLine: 375
-    description: "Summons a Stoneclaw Totem with 390 health at the feet of the caster for 15 sec that draws attacks from nearby enemies."
 - id: 947055
+  manaCostPct: 0
+  school: 8
   name: Stoneclaw Totem
   preventionType: 1   # totem summons are silence-gated in TBC/1.12 (wago PreventionType 1; WotLK made them 0) — fix round 2026-09-02, _ref totems accepted_gaps id 14
   template: 10428
@@ -3923,12 +3886,10 @@ helpers:
   effects:
   - { effect: 28, basePoints: 479, dieSides: 1, misc: 920135, miscB: 81, targetA: 41 }
   client:
-    auraDescription: ""   # donor carries "Taunting creatures."; count + sweep in _ref open_questions 15
-    name: Stoneclaw Totem
+    textKey: spell.947055
     icon: 689
     rank: 6
     skillLine: 375
-    description: "Summons a Stoneclaw Totem with 480 health at the feet of the caster for 15 sec that draws attacks from nearby enemies."
 - id: 947056
   name: Stoneclaw Totem
   preventionType: 1   # totem summons are silence-gated in TBC/1.12 (wago PreventionType 1; WotLK made them 0) — fix round 2026-09-02, _ref totems accepted_gaps id 14
@@ -3942,12 +3903,10 @@ helpers:
   effects:
   - { effect: 28, basePoints: 1314, dieSides: 1, misc: 920336, miscB: 81, targetA: 41 }   # 1315-hp totem (bp1314+d1), +3/level; FRESH creature 920336 -> minted passive 947060
   client:
-    auraDescription: ""   # donor 25525 carries "Taunting creatures."; count + sweep in _ref open_questions 15
-    name: Stoneclaw Totem
+    textKey: spell.947056
     icon: 689
     rank: 7
     skillLine: 375
-    description: "Summons a Stoneclaw Totem with 1315 health at the feet of the caster for 15 sec that draws attacks from nearby enemies."
 # PASSIVE 947060 + EFFECT 947061 -- r7 ONLY (r1-r6 reuse 931070-931075 and point at stock effects).
 # The passive keeps TBC's two-effect shape verbatim: e1 aura 23 PERIODIC_TRIGGER_SPELL @2000 ms (the
 # period is INHERITED from template 25513, which agrees with wago) -> the effect clone, e2 aura 42
@@ -3971,9 +3930,8 @@ helpers:
   # (N6 covers a 1-vs-0 DieSides delta on a basePoints -1 aura-42 carrier as inert either way.)
   - { effect: 6, aura: 42, basePoints: -1, dieSides: 1, targetA: 1, trigger: 39796 }    # -> stock Stoneclaw Stun, unchanged 1.12 -> TBC -> live
   client:
-    name: Stoneclaw Totem Passive
+    textKey: spell.947060
     icon: 689
-    auraDescription: "Generates high threat against nearby enemies and has a chance to stun attackers."
 - id: 947061
   name: Stoneclaw Totem Effect
   template: 25512
@@ -3993,7 +3951,7 @@ helpers:
   effects:
   - { effect: 63, basePoints: 169, dieSides: 1, targetA: 22, targetB: 15 }   # SPELL_EFFECT_THREAT, EFFECTIVE 170; TARGET_SRC_CASTER + TARGET_UNIT_SRC_AREA_ENEMY
   client:
-    name: Stoneclaw Totem Effect
+    textKey: spell.947061
     icon: 689
 # EFFECT CLONES r1-r6, 947062-947067 — ADDED 2026-09-02 (tooltip-honesty fix round; the DECISION
 # open_questions id 17 was waiting on, option (b)). The stock 5729-chain the passives triggered
@@ -4011,42 +3969,42 @@ helpers:
   attributesEx3: 0
   effects:
   - { effect: 63, basePoints: 21, dieSides: 1, targetA: 22, targetB: 15 }   # SPELL_EFFECT_THREAT, the template's own literal bp/targets (measured; only ex3 changes)
-  client: { name: Stoneclaw Totem Effect, icon: 689 }
+  client: {textKey: spell.947062, icon: 689}
 - id: 947063
   name: Stoneclaw Totem Effect
   template: 6393
   attributesEx3: 0
   effects:
   - { effect: 63, basePoints: 36, dieSides: 1, targetA: 22, targetB: 15 }   # SPELL_EFFECT_THREAT, the template's own literal bp/targets (measured; only ex3 changes)
-  client: { name: Stoneclaw Totem Effect, icon: 689 }
+  client: {textKey: spell.947063, icon: 689}
 - id: 947064
   name: Stoneclaw Totem Effect
   template: 6394
   attributesEx3: 0
   effects:
   - { effect: 63, basePoints: 59, dieSides: 1, targetA: 22, targetB: 15 }   # SPELL_EFFECT_THREAT, the template's own literal bp/targets (measured; only ex3 changes)
-  client: { name: Stoneclaw Totem Effect, icon: 689 }
+  client: {textKey: spell.947064, icon: 689}
 - id: 947065
   name: Stoneclaw Totem Effect
   template: 6395
   attributesEx3: 0
   effects:
   - { effect: 63, basePoints: 74, dieSides: 1, targetA: 22, targetB: 15 }   # SPELL_EFFECT_THREAT, the template's own literal bp/targets (measured; only ex3 changes)
-  client: { name: Stoneclaw Totem Effect, icon: 689 }
+  client: {textKey: spell.947065, icon: 689}
 - id: 947066
   name: Stoneclaw Totem Effect
   template: 10423
   attributesEx3: 0
   effects:
   - { effect: 63, basePoints: 114, dieSides: 1, targetA: 22, targetB: 15 }   # SPELL_EFFECT_THREAT, the template's own literal bp/targets (measured; only ex3 changes)
-  client: { name: Stoneclaw Totem Effect, icon: 689 }
+  client: {textKey: spell.947066, icon: 689}
 - id: 947067
   name: Stoneclaw Totem Effect
   template: 10424
   attributesEx3: 0
   effects:
   - { effect: 63, basePoints: 149, dieSides: 1, targetA: 22, targetB: 15 }   # SPELL_EFFECT_THREAT, the template's own literal bp/targets (measured; only ex3 changes)
-  client: { name: Stoneclaw Totem Effect, icon: 689 }
+  client: {textKey: spell.947067, icon: 689}
 # --- Tremor (family index 4, block 947070-947079) ---------------------------------------------------
 # PASSIVE: **REUSED, id 931090.** wago 8145 == live 8145 == the shipped clone (aura 23
 #   PERIODIC_TRIGGER_SPELL every 3000 ms -> the stock dispel effect 8146, itself TBC == live). The
@@ -4070,11 +4028,10 @@ helpers:
   effects:
   - { effect: 28, basePoints: 4, dieSides: 1, misc: 920140, miscB: 81, targetA: 41 }   # 5-hp totem (bp4+d1); REUSED Vanilla creature 920140 -> passive 931090
   client:
-    name: Tremor Totem
+    textKey: spell.947070
     icon: 1676
     rank: 1
     skillLine: 374
-    description: "Summons a Tremor Totem with 5 health at the feet of the caster for 2 min that periodically removes Fear, Charm, and Sleep effects from party and raid members within 30 yards."
 # ===================================================================================================
 # PLAN 3b TASK 2, BATCH 2 — the five FIRE totem families (Searing, Magma, Flametongue, Frost
 # Resistance, Fire Nova Totem) plus the two TBC-NEW ELEMENTAL guardian summons (Earth Elemental
@@ -4173,11 +4130,10 @@ helpers:
   effects:
   - { effect: 28, basePoints: 7399, dieSides: 1, misc: 15430, miscB: 81, targetA: 22, targetB: 41, radius: 8 }   # 7400-hp totem; STOCK Greater Earth Elemental 15430, EARTH slot (miscB 81)
   client:
-    name: Earth Elemental Totem
+    textKey: spell.947080
     icon: 2289
     rank: 1
     skillLine: 373
-    description: "Summons an Earth Elemental Totem with 7400 health at the feet of the caster for 2 min. The totem summons a Greater Earth Elemental to protect the caster and his allies."
 # --- Searing (family index 6, block 947090-947109) --------------------------------------------------
 # **GRANT STOCK — THIS FAMILY MINTS NOTHING AT RANKS 1-6, AND THAT IS THE FINISHED STATE.** Do not
 # read the absence of helpers as unfinished work. Amendment B.2's FIRST branch fires on both roles:
@@ -4218,18 +4174,17 @@ helpers:
   effects:
   - { effect: 28, basePoints: 4, dieSides: 1, misc: 920360, miscB: 63, targetA: 44 }   # 5-hp totem (bp4+d1); FIRE slot -> fresh creature 920360 -> attack clone 947100
   client:
-    name: Searing Totem
+    textKey: spell.947090
     icon: 680
     rank: 7
     skillLine: 375
-    description: "Summons a Searing Totem with 5 health at the feet of the caster for 1 min that attacks a nearby enemy within 8 yards, dealing 50 to 66 Fire damage."
 - id: 947100
   name: Searing Totem Attack
   template: 25530
   effects:
   - { effect: 2, basePoints: 49, dieSides: 17, targetA: 6 }   # SCHOOL_DAMAGE (fire inherited), TARGET_UNIT_TARGET_ENEMY; TBC 49+d17 = 50..66 (live 25530 is 55+d19)
   client:
-    name: Searing Totem Attack
+    textKey: spell.947100
     icon: 680
 # --- Magma (family index 7, block 947110-947119) ----------------------------------------------------
 # DAMAGE PULSES: **REUSED, ids 931130-931133** (r1-r4). The largest identical block in the roster:
@@ -4266,37 +4221,34 @@ helpers:
   effects:
   - { effect: 6, aura: 23, basePoints: 0, dieSides: 0, targetA: 1, trigger: 931130, amplitude: 2000 }   # PERIODIC_TRIGGER_SPELL every 2s -> the REUSED Vanilla damage clone (TBC 22, not live's 38)
   client:
-    name: Magma Totem Passive
+    textKey: spell.947110
     icon: 37
-    auraDescription: "Causes Fire damage to nearby enemies every 2 sec."
 - id: 947111
   name: Magma Totem Passive
   template: 10582
   effects:
   - { effect: 6, aura: 23, basePoints: 0, dieSides: 0, targetA: 1, trigger: 931131, amplitude: 2000 }
   client:
-    name: Magma Totem Passive
+    textKey: spell.947111
     icon: 37
-    auraDescription: "Causes Fire damage to nearby enemies every 2 sec."
 - id: 947112
   name: Magma Totem Passive
   template: 10583
   effects:
   - { effect: 6, aura: 23, basePoints: 0, dieSides: 0, targetA: 1, trigger: 931132, amplitude: 2000 }
   client:
-    name: Magma Totem Passive
+    textKey: spell.947112
     icon: 37
-    auraDescription: "Causes Fire damage to nearby enemies every 2 sec."
 - id: 947113
   name: Magma Totem Passive
   template: 10584
   effects:
   - { effect: 6, aura: 23, basePoints: 0, dieSides: 0, targetA: 1, trigger: 931133, amplitude: 2000 }
   client:
-    name: Magma Totem Passive
+    textKey: spell.947113
     icon: 37
-    auraDescription: "Causes Fire damage to nearby enemies every 2 sec."
 - id: 947115
+  school: 4
   name: Magma Totem
   preventionType: 1   # totem summons are silence-gated in TBC/1.12 (wago PreventionType 1; WotLK made them 0) — fix round 2026-09-02, _ref totems accepted_gaps id 14
   template: 8190
@@ -4305,12 +4257,12 @@ helpers:
   effects:
   - { effect: 28, basePoints: 4, dieSides: 1, misc: 920370, miscB: 63, targetA: 44 }   # 5-hp totem (bp4+d1); FIRE slot (miscB 63 / targetA 44) -> driver 947110 -> reused damage 931130
   client:
-    name: Magma Totem
+    textKey: spell.947115
     icon: 37
     rank: 1
     skillLine: 375
-    description: "Summons a Magma Totem with 5 health at the feet of the caster for 21 sec that causes 22 Fire damage to enemies within 8 yards every 2 seconds."
 - id: 947116
+  school: 4
   name: Magma Totem
   preventionType: 1   # totem summons are silence-gated in TBC/1.12 (wago PreventionType 1; WotLK made them 0) — fix round 2026-09-02, _ref totems accepted_gaps id 14
   template: 10585
@@ -4319,12 +4271,12 @@ helpers:
   effects:
   - { effect: 28, basePoints: 4, dieSides: 1, misc: 920371, miscB: 63, targetA: 44 }
   client:
-    name: Magma Totem
+    textKey: spell.947116
     icon: 37
     rank: 2
     skillLine: 375
-    description: "Summons a Magma Totem with 5 health at the feet of the caster for 21 sec that causes 37 Fire damage to enemies within 8 yards every 2 seconds."
 - id: 947117
+  school: 4
   name: Magma Totem
   preventionType: 1   # totem summons are silence-gated in TBC/1.12 (wago PreventionType 1; WotLK made them 0) — fix round 2026-09-02, _ref totems accepted_gaps id 14
   template: 10586
@@ -4333,12 +4285,12 @@ helpers:
   effects:
   - { effect: 28, basePoints: 4, dieSides: 1, misc: 920372, miscB: 63, targetA: 44 }
   client:
-    name: Magma Totem
+    textKey: spell.947117
     icon: 37
     rank: 3
     skillLine: 375
-    description: "Summons a Magma Totem with 5 health at the feet of the caster for 21 sec that causes 54 Fire damage to enemies within 8 yards every 2 seconds."
 - id: 947118
+  school: 4
   name: Magma Totem
   preventionType: 1   # totem summons are silence-gated in TBC/1.12 (wago PreventionType 1; WotLK made them 0) — fix round 2026-09-02, _ref totems accepted_gaps id 14
   template: 10587
@@ -4347,18 +4299,17 @@ helpers:
   effects:
   - { effect: 28, basePoints: 4, dieSides: 1, misc: 920373, miscB: 63, targetA: 44 }
   client:
-    name: Magma Totem
+    textKey: spell.947118
     icon: 37
     rank: 4
     skillLine: 375
-    description: "Summons a Magma Totem with 5 health at the feet of the caster for 21 sec that causes 75 Fire damage to enemies within 8 yards every 2 seconds."
 - id: 947109
   name: Magma Totem Pulse
   template: 25550
   effects:
   - { effect: 2, basePoints: 97, dieSides: 0, targetA: 22, targetB: 15, radius: 14 }   # SCHOOL_DAMAGE (fire inherited); TBC bp 96 + DieSides 1 = EFFECTIVE 97 (live 25550 is 180). Id BORROWED from Searing -- see the block note
   client:
-    name: Magma Totem Pulse
+    textKey: spell.947109
     icon: 37
 - id: 947114
   name: Magma Totem Passive
@@ -4366,9 +4317,8 @@ helpers:
   effects:
   - { effect: 6, aura: 23, basePoints: 0, dieSides: 0, targetA: 1, trigger: 947109, amplitude: 2000 }   # PERIODIC_TRIGGER_SPELL every 2s -> the fresh r5 damage clone (TBC 97, not live's 180)
   client:
-    name: Magma Totem Passive
+    textKey: spell.947114
     icon: 37
-    auraDescription: "Causes Fire damage to nearby enemies every 2 sec."
 - id: 947119
   name: Magma Totem
   preventionType: 1   # totem summons are silence-gated in TBC/1.12 (wago PreventionType 1; WotLK made them 0) — fix round 2026-09-02, _ref totems accepted_gaps id 14
@@ -4379,11 +4329,10 @@ helpers:
   effects:
   - { effect: 28, basePoints: 4, dieSides: 1, misc: 920374, miscB: 63, targetA: 44 }   # 5-hp totem (bp4+d1); FIRE slot -> fresh creature 920374 -> driver 947114 -> damage 947109
   client:
-    name: Magma Totem
+    textKey: spell.947119
     icon: 37
     rank: 5
     skillLine: 375
-    description: "Summons a Magma Totem with 5 health at the feet of the caster for 21 sec that causes 97 Fire damage to enemies within 8 yards every 2 seconds."
 # --- Flametongue (family index 8, block 947120-947139) ----------------------------------------------
 # The only family in this batch that is fresh on every role it ships, because TBC's Flametongue Totem
 # is a WEAPON-ENCHANT chain (summon -> PASSIVE aura 23 every 5000 ms -> EFFECT 92 ENCHANT_HELD_ITEM on
@@ -4451,6 +4400,8 @@ helpers:
 #   fresh creature **920384**. 947135-947139: CLAIMED 2026-09-02 by the restored proc role (see the
 #   PROC ROLE comment below 947134).
 - id: 947120
+  manaCostPct: 0
+  school: 4
   name: Flametongue Totem
   preventionType: 1   # totem summons are silence-gated in TBC/1.12 (wago PreventionType 1; WotLK made them 0) — fix round 2026-09-02, _ref totems accepted_gaps id 14
   template: 8227
@@ -4459,12 +4410,13 @@ helpers:
   effects:
   - { effect: 28, basePoints: 4, dieSides: 1, misc: 920380, miscB: 63, targetA: 44 }   # 5-hp totem (bp4+d1); FIRE slot -> passive 947125 -> enchant effect 947130
   client:
-    name: Flametongue Totem
+    textKey: spell.947120
     icon: 72
     rank: 1
     skillLine: 373
-    description: "Summons a Flametongue Totem with 5 health at the feet of the caster for 2 min that imbues the weapons of party and raid members within 30 yards with fire, granting their melee attacks a chance to deal additional Fire damage."
 - id: 947121
+  manaCostPct: 0
+  school: 4
   name: Flametongue Totem
   preventionType: 1   # totem summons are silence-gated in TBC/1.12 (wago PreventionType 1; WotLK made them 0) — fix round 2026-09-02, _ref totems accepted_gaps id 14
   template: 8249
@@ -4473,12 +4425,13 @@ helpers:
   effects:
   - { effect: 28, basePoints: 4, dieSides: 1, misc: 920381, miscB: 63, targetA: 44 }
   client:
-    name: Flametongue Totem
+    textKey: spell.947121
     icon: 72
     rank: 2
     skillLine: 373
-    description: "Summons a Flametongue Totem with 5 health at the feet of the caster for 2 min that imbues the weapons of party and raid members within 30 yards with fire, granting their melee attacks a chance to deal additional Fire damage."
 - id: 947122
+  manaCostPct: 0
+  school: 4
   name: Flametongue Totem
   preventionType: 1   # totem summons are silence-gated in TBC/1.12 (wago PreventionType 1; WotLK made them 0) — fix round 2026-09-02, _ref totems accepted_gaps id 14
   template: 10526
@@ -4487,12 +4440,13 @@ helpers:
   effects:
   - { effect: 28, basePoints: 4, dieSides: 1, misc: 920382, miscB: 63, targetA: 44 }
   client:
-    name: Flametongue Totem
+    textKey: spell.947122
     icon: 72
     rank: 3
     skillLine: 373
-    description: "Summons a Flametongue Totem with 5 health at the feet of the caster for 2 min that imbues the weapons of party and raid members within 30 yards with fire, granting their melee attacks a chance to deal additional Fire damage."
 - id: 947123
+  manaCostPct: 0
+  school: 4
   name: Flametongue Totem
   preventionType: 1   # totem summons are silence-gated in TBC/1.12 (wago PreventionType 1; WotLK made them 0) — fix round 2026-09-02, _ref totems accepted_gaps id 14
   template: 16387
@@ -4501,11 +4455,10 @@ helpers:
   effects:
   - { effect: 28, basePoints: 4, dieSides: 1, misc: 920383, miscB: 63, targetA: 44 }
   client:
-    name: Flametongue Totem
+    textKey: spell.947123
     icon: 72
     rank: 4
     skillLine: 373
-    description: "Summons a Flametongue Totem with 5 health at the feet of the caster for 2 min that imbues the weapons of party and raid members within 30 yards with fire, granting their melee attacks a chance to deal additional Fire damage."
 - id: 947125
   name: Flametongue Totem Passive
   template: 5672      # SHAPE donor only (stock Healing Stream's own totem self-buff) — 8229 is absent from the DBC
@@ -4518,9 +4471,8 @@ helpers:
   effects:
   - { effect: 6, aura: 23, basePoints: 0, dieSides: 0, targetA: 1, trigger: 947130, amplitude: 5000 }   # PERIODIC_TRIGGER_SPELL, self, 5s -> the enchant EFFECT clone
   client:
-    name: Flametongue Totem Passive
+    textKey: spell.947125
     icon: 72
-    auraDescription: "Every 5 sec, imbues the weapons of party and raid members within 30 yards with fire."
 - id: 947126
   name: Flametongue Totem Passive
   template: 5672
@@ -4533,9 +4485,8 @@ helpers:
   effects:
   - { effect: 6, aura: 23, basePoints: 0, dieSides: 0, targetA: 1, trigger: 947131, amplitude: 5000 }
   client:
-    name: Flametongue Totem Passive
+    textKey: spell.947126
     icon: 72
-    auraDescription: "Every 5 sec, imbues the weapons of party and raid members within 30 yards with fire."
 - id: 947127
   name: Flametongue Totem Passive
   template: 5672
@@ -4548,9 +4499,8 @@ helpers:
   effects:
   - { effect: 6, aura: 23, basePoints: 0, dieSides: 0, targetA: 1, trigger: 947132, amplitude: 5000 }
   client:
-    name: Flametongue Totem Passive
+    textKey: spell.947127
     icon: 72
-    auraDescription: "Every 5 sec, imbues the weapons of party and raid members within 30 yards with fire."
 - id: 947128
   name: Flametongue Totem Passive
   template: 5672
@@ -4563,9 +4513,8 @@ helpers:
   effects:
   - { effect: 6, aura: 23, basePoints: 0, dieSides: 0, targetA: 1, trigger: 947133, amplitude: 5000 }
   client:
-    name: Flametongue Totem Passive
+    textKey: spell.947128
     icon: 72
-    auraDescription: "Every 5 sec, imbues the weapons of party and raid members within 30 yards with fire."
 - id: 947130
   name: Flametongue Totem Effect
   template: 52041     # SHAPE donor only (stock Healing Stream's party-area sub-spell) — 8230 is absent from the DBC
@@ -4584,9 +4533,8 @@ helpers:
   effects:
   - { effect: 92, basePoints: -1, dieSides: 1, misc: 124, targetA: 20, radius: 10 }   # ENCHANT_HELD_ITEM, TARGET_UNIT_CASTER_AREA_PARTY, enchant 124 = "Flametongue Totem 1"; radius 10 per Amendment B.8
   client:
-    name: Flametongue Totem Effect
+    textKey: spell.947130
     icon: 72
-    auraDescription: "Weapon imbued with fire."
 - id: 947131
   name: Flametongue Totem Effect
   template: 52041
@@ -4605,9 +4553,8 @@ helpers:
   effects:
   - { effect: 92, basePoints: -1, dieSides: 1, misc: 285, targetA: 20, radius: 10 }   # enchant 285 = "Flametongue Totem 2"
   client:
-    name: Flametongue Totem Effect
+    textKey: spell.947131
     icon: 72
-    auraDescription: "Weapon imbued with fire."
 - id: 947132
   name: Flametongue Totem Effect
   template: 52041
@@ -4626,9 +4573,8 @@ helpers:
   effects:
   - { effect: 92, basePoints: -1, dieSides: 1, misc: 543, targetA: 20, radius: 10 }   # enchant 543 = "Flametongue Totem 3"
   client:
-    name: Flametongue Totem Effect
+    textKey: spell.947132
     icon: 72
-    auraDescription: "Weapon imbued with fire."
 - id: 947133
   name: Flametongue Totem Effect
   template: 52041
@@ -4647,9 +4593,8 @@ helpers:
   effects:
   - { effect: 92, basePoints: -1, dieSides: 1, misc: 1683, targetA: 20, radius: 10 }   # enchant 1683 = "Flametongue Totem 4"
   client:
-    name: Flametongue Totem Effect
+    textKey: spell.947133
     icon: 72
-    auraDescription: "Weapon imbued with fire."
 - id: 947124
   name: Flametongue Totem
   preventionType: 1   # totem summons are silence-gated in TBC/1.12 (wago PreventionType 1; WotLK made them 0) — fix round 2026-09-02, _ref totems accepted_gaps id 14
@@ -4661,11 +4606,10 @@ helpers:
   effects:
   - { effect: 28, basePoints: 4, dieSides: 1, misc: 920384, miscB: 63, targetA: 44 }
   client:
-    name: Flametongue Totem
+    textKey: spell.947124
     icon: 72
     rank: 5
     skillLine: 373
-    description: "Summons a Flametongue Totem with 5 health at the feet of the caster for 2 min that imbues the weapons of party and raid members within 30 yards with fire, granting their melee attacks a chance to deal additional Fire damage."
 - id: 947129
   name: Flametongue Totem Passive
   template: 5672
@@ -4678,9 +4622,8 @@ helpers:
   effects:
   - { effect: 6, aura: 23, basePoints: 0, dieSides: 0, targetA: 1, trigger: 947134, amplitude: 5000 }
   client:
-    name: Flametongue Totem Passive
+    textKey: spell.947129
     icon: 72
-    auraDescription: "Every 5 sec, imbues the weapons of party and raid members within 30 yards with fire."
 - id: 947134
   name: Flametongue Totem Effect
   template: 52041
@@ -4695,9 +4638,8 @@ helpers:
   effects:
   - { effect: 92, basePoints: -1, dieSides: 1, misc: 2637, targetA: 20, radius: 10 }   # enchant 2637 = "Flametongue Totem 5"
   client:
-    name: Flametongue Totem Effect
+    textKey: spell.947134
     icon: 72
-    auraDescription: "Weapon imbued with fire."
 # PROC ROLE 947135-947139 (r1-r5) — RESTORED 2026-09-02 (tooltip-honesty fix round; closes
 # accepted_gaps id 7 / open_questions id 7 in _ref/tbc/shaman-totems-tbc.yaml). The stock
 # 8253-series combat spells the enchants 124/285/543/1683/2637 name are ABSENT from this build's
@@ -4759,6 +4701,8 @@ helpers:
 #   (template 25559 for the inherited word-A bit26; EFFECTIVE +70), fresh creature **920390** (fresh
 #   because there is no Vanilla r4 creature to reuse -- the B.8.1 reuse stops at r3).
 - id: 947140
+  manaCostPct: 0
+  school: 4
   name: Frost Resistance Totem
   preventionType: 1   # totem summons are silence-gated in TBC/1.12 (wago PreventionType 1; WotLK made them 0) — fix round 2026-09-02, _ref totems accepted_gaps id 14
   template: 8181
@@ -4767,12 +4711,13 @@ helpers:
   effects:
   - { effect: 28, basePoints: 4, dieSides: 1, misc: 920180, miscB: 63, targetA: 44 }   # 5-hp totem (bp4+d1); FIRE slot; REUSED Vanilla creature 920180 -> pulse 931170
   client:
-    name: Frost Resistance Totem
+    textKey: spell.947140
     icon: 1713
     rank: 1
     skillLine: 373
-    description: "Summons a Frost Resistance Totem with 5 health at the feet of the caster for 2 min that increases the Frost resistance of party and raid members within 30 yards by 30."
 - id: 947141
+  manaCostPct: 0
+  school: 4
   name: Frost Resistance Totem
   preventionType: 1   # totem summons are silence-gated in TBC/1.12 (wago PreventionType 1; WotLK made them 0) — fix round 2026-09-02, _ref totems accepted_gaps id 14
   template: 10478
@@ -4781,12 +4726,13 @@ helpers:
   effects:
   - { effect: 28, basePoints: 4, dieSides: 1, misc: 920181, miscB: 63, targetA: 44 }
   client:
-    name: Frost Resistance Totem
+    textKey: spell.947141
     icon: 1713
     rank: 2
     skillLine: 373
-    description: "Summons a Frost Resistance Totem with 5 health at the feet of the caster for 2 min that increases the Frost resistance of party and raid members within 30 yards by 45."
 - id: 947142
+  manaCostPct: 0
+  school: 4
   name: Frost Resistance Totem
   preventionType: 1   # totem summons are silence-gated in TBC/1.12 (wago PreventionType 1; WotLK made them 0) — fix round 2026-09-02, _ref totems accepted_gaps id 14
   template: 10479
@@ -4795,11 +4741,10 @@ helpers:
   effects:
   - { effect: 28, basePoints: 4, dieSides: 1, misc: 920182, miscB: 63, targetA: 44 }
   client:
-    name: Frost Resistance Totem
+    textKey: spell.947142
     icon: 1713
     rank: 3
     skillLine: 373
-    description: "Summons a Frost Resistance Totem with 5 health at the feet of the caster for 2 min that increases the Frost resistance of party and raid members within 30 yards by 60."
 - id: 947143
   name: Frost Resistance Totem
   preventionType: 1   # totem summons are silence-gated in TBC/1.12 (wago PreventionType 1; WotLK made them 0) — fix round 2026-09-02, _ref totems accepted_gaps id 14
@@ -4811,20 +4756,18 @@ helpers:
   effects:
   - { effect: 28, basePoints: 4, dieSides: 1, misc: 920390, miscB: 63, targetA: 44 }   # FIRE slot; FRESH creature 920390 -> minted pulse 947144
   client:
-    name: Frost Resistance Totem
+    textKey: spell.947143
     icon: 1713
     rank: 4
     skillLine: 373
-    description: "Summons a Frost Resistance Totem with 5 health at the feet of the caster for 2 min that increases the Frost resistance of party and raid members within 30 yards by 70."
 - id: 947144
   name: Frost Resistance
   template: 25559
   effects:
   - { effect: 65, aura: 143, basePoints: 70, dieSides: 0, misc: 16, targetA: 1, radius: 10 }   # MOD_RESISTANCE_EXCLUSIVE misc 16 = Frost MASK; TBC bp 69 + DieSides 1 = EFFECTIVE 70. effect 65 + radius 10 per Amendment B.8. Name matches the reused lower-rank buff "Frost Resistance" (931170-931172)
   client:
-    name: Frost Resistance
+    textKey: spell.947144
     icon: 1713
-    auraDescription: "Frost resistance increased by 70."
 # --- Fire Elemental (family index 10, block 947150-947159) ------------------------------------------
 # TBC-NEW, same shape and same reasoning as Earth Elemental above: 1.12's id 2894 is the
 # `zzOLDSpell - Reuse` placeholder, so there is no Vanilla counterpart and no `totems:` row — the
@@ -4845,11 +4788,10 @@ helpers:
   effects:
   - { effect: 28, basePoints: 3887, dieSides: 1, misc: 15439, miscB: 63, targetA: 22, targetB: 44, radius: 8 }   # 3888-hp totem; STOCK Greater Fire Elemental 15439, FIRE slot (miscB 63)
   client:
-    name: Fire Elemental Totem
+    textKey: spell.947150
     icon: 2290
     rank: 1
     skillLine: 375
-    description: "Summons a Fire Elemental Totem with 3888 health at the feet of the caster for 2 min. The totem summons a Greater Fire Elemental to rain destruction on the caster's enemies."
 # --- Fire Nova Totem (family index 25, block 947310-947329) -----------------------------------------
 # BLASTS: **REUSED, ids 931358-931362** (r1-r5), and CREATURES **REUSED, entries 920280-920284** —
 #   which already carry `script: npc_era_fire_nova_totem`, so the era CreatureAI comes with them.
@@ -4909,6 +4851,8 @@ helpers:
 #   **920550/920551** carrying `script: npc_era_fire_nova_totem`. 947317-947319 / 947322-947329
 #   stay free.
 - id: 947310
+  manaCostPct: 0
+  school: 4
   name: Fire Nova Totem
   preventionType: 1   # totem summons are silence-gated in TBC/1.12 (wago PreventionType 1; WotLK made them 0) — fix round 2026-09-02, _ref totems accepted_gaps id 14
   template: 3599
@@ -4925,12 +4869,13 @@ helpers:
   effects:
   - { effect: 28, basePoints: 4, dieSides: 1, misc: 920280, miscB: 63, targetA: 44 }   # 5-hp totem (bp4+d1); REUSED Vanilla creature 920280 (script npc_era_fire_nova_totem) -> reused blast 931358
   client:
-    name: Fire Nova Totem
+    textKey: spell.947310
     icon: 33
     rank: 1
     skillLine: 375
-    description: "Summons a Fire Nova Totem with 5 health at the feet of the caster that detonates after 4 sec, dealing 48 to 56 Fire damage to enemies within 10 yards."
 - id: 947311
+  manaCostPct: 0
+  school: 4
   name: Fire Nova Totem
   preventionType: 1   # totem summons are silence-gated in TBC/1.12 (wago PreventionType 1; WotLK made them 0) — fix round 2026-09-02, _ref totems accepted_gaps id 14
   template: 3599
@@ -4947,12 +4892,13 @@ helpers:
   effects:
   - { effect: 28, basePoints: 4, dieSides: 1, misc: 920281, miscB: 63, targetA: 44 }
   client:
-    name: Fire Nova Totem
+    textKey: spell.947311
     icon: 33
     rank: 2
     skillLine: 375
-    description: "Summons a Fire Nova Totem with 5 health at the feet of the caster that detonates after 4 sec, dealing 102 to 116 Fire damage to enemies within 10 yards."
 - id: 947312
+  manaCostPct: 0
+  school: 4
   name: Fire Nova Totem
   preventionType: 1   # totem summons are silence-gated in TBC/1.12 (wago PreventionType 1; WotLK made them 0) — fix round 2026-09-02, _ref totems accepted_gaps id 14
   template: 3599
@@ -4969,12 +4915,13 @@ helpers:
   effects:
   - { effect: 28, basePoints: 4, dieSides: 1, misc: 920282, miscB: 63, targetA: 44 }
   client:
-    name: Fire Nova Totem
+    textKey: spell.947312
     icon: 33
     rank: 3
     skillLine: 375
-    description: "Summons a Fire Nova Totem with 5 health at the feet of the caster that detonates after 4 sec, dealing 184 to 208 Fire damage to enemies within 10 yards."
 - id: 947313
+  manaCostPct: 0
+  school: 4
   name: Fire Nova Totem
   preventionType: 1   # totem summons are silence-gated in TBC/1.12 (wago PreventionType 1; WotLK made them 0) — fix round 2026-09-02, _ref totems accepted_gaps id 14
   template: 3599
@@ -4991,12 +4938,13 @@ helpers:
   effects:
   - { effect: 28, basePoints: 4, dieSides: 1, misc: 920283, miscB: 63, targetA: 44 }
   client:
-    name: Fire Nova Totem
+    textKey: spell.947313
     icon: 33
     rank: 4
     skillLine: 375
-    description: "Summons a Fire Nova Totem with 5 health at the feet of the caster that detonates after 4 sec, dealing 281 to 317 Fire damage to enemies within 10 yards."
 - id: 947314
+  manaCostPct: 0
+  school: 4
   name: Fire Nova Totem
   preventionType: 1   # totem summons are silence-gated in TBC/1.12 (wago PreventionType 1; WotLK made them 0) — fix round 2026-09-02, _ref totems accepted_gaps id 14
   template: 3599
@@ -5013,12 +4961,13 @@ helpers:
   effects:
   - { effect: 28, basePoints: 4, dieSides: 1, misc: 920284, miscB: 63, targetA: 44 }
   client:
-    name: Fire Nova Totem
+    textKey: spell.947314
     icon: 33
     rank: 5
     skillLine: 375
-    description: "Summons a Fire Nova Totem with 5 health at the feet of the caster that detonates after 4 sec, dealing 396 to 442 Fire damage to enemies within 10 yards."
 - id: 947315
+  manaCostPct: 0
+  school: 4
   name: Fire Nova Totem
   preventionType: 1   # totem summons are silence-gated in TBC/1.12 (wago PreventionType 1; WotLK made them 0) — fix round 2026-09-02, _ref totems accepted_gaps id 14
   template: 3599
@@ -5032,12 +4981,13 @@ helpers:
   effects:
   - { effect: 28, basePoints: 4, dieSides: 1, misc: 920550, miscB: 63, targetA: 44 }   # 5-hp totem; FRESH creature 920550 (script npc_era_fire_nova_totem) -> minted blast 947320
   client:
-    name: Fire Nova Totem
+    textKey: spell.947315
     icon: 33
     rank: 6
     skillLine: 375
-    description: "Summons a Fire Nova Totem with 5 health at the feet of the caster that detonates after 4 sec, dealing 518 to 578 Fire damage to enemies within 10 yards."
 - id: 947316
+  manaCostPct: 0
+  school: 4
   name: Fire Nova Totem
   preventionType: 1   # totem summons are silence-gated in TBC/1.12 (wago PreventionType 1; WotLK made them 0) — fix round 2026-09-02, _ref totems accepted_gaps id 14
   template: 3599
@@ -5051,11 +5001,10 @@ helpers:
   effects:
   - { effect: 28, basePoints: 4, dieSides: 1, misc: 920551, miscB: 63, targetA: 44 }
   client:
-    name: Fire Nova Totem
+    textKey: spell.947316
     icon: 33
     rank: 7
     skillLine: 375
-    description: "Summons a Fire Nova Totem with 5 health at the feet of the caster that detonates after 4 sec, dealing 654 to 730 Fire damage to enemies within 10 yards."
 - id: 947320
   name: Fire Nova
   template: 25535
@@ -5064,7 +5013,7 @@ helpers:
   effects:
   - { effect: 2, basePoints: 517, dieSides: 61, targetA: 22, targetB: 15, radius: 13 }   # 518..578; word-B bit18 identity INHERITED from 25535 (verified in the live store) -- never author a mask on a blast
   client:
-    name: Fire Nova
+    textKey: spell.947320
     icon: 33
 - id: 947321
   name: Fire Nova
@@ -5074,7 +5023,7 @@ helpers:
   effects:
   - { effect: 2, basePoints: 653, dieSides: 77, targetA: 22, targetB: 15, radius: 13 }   # 654..730
   client:
-    name: Fire Nova
+    textKey: spell.947321
     icon: 33
 # ===================================================================================================
 # PLAN 3b TASK 2, BATCH 3 — the five WATER totem families (Healing Stream, Mana Spring, Fire
@@ -5147,6 +5096,8 @@ helpers:
 #   (no Vanilla r6 creature exists -- the reuse stops at r5). 947176-947179 / 947181-947189 and
 #   creatures 920421-920429 stay free.
 - id: 947170
+  manaCostPct: 0
+  school: 16
   name: Healing Stream Totem
   preventionType: 1   # totem summons are silence-gated in TBC/1.12 (wago PreventionType 1; WotLK made them 0) — fix round 2026-09-02, _ref totems accepted_gaps id 14
   template: 5394
@@ -5155,12 +5106,13 @@ helpers:
   effects:
   - { effect: 28, basePoints: 4, dieSides: 1, misc: 920190, miscB: 82, targetA: 42 }   # 5-hp totem (bp4+d1); WATER slot (miscB 82 / targetA 42), REUSED Vanilla creature 920190 -> reused pulse 931190
   client:
-    name: Healing Stream Totem
+    textKey: spell.947170
     icon: 1647
     rank: 1
     skillLine: 374
-    description: "Summons a Healing Stream Totem with 5 health at the feet of the caster for 2 min that heals party and raid members within 30 yards for 6 every 2 sec."
 - id: 947171
+  manaCostPct: 0
+  school: 16
   name: Healing Stream Totem
   preventionType: 1   # totem summons are silence-gated in TBC/1.12 (wago PreventionType 1; WotLK made them 0) — fix round 2026-09-02, _ref totems accepted_gaps id 14
   template: 6375
@@ -5169,12 +5121,13 @@ helpers:
   effects:
   - { effect: 28, basePoints: 4, dieSides: 1, misc: 920191, miscB: 82, targetA: 42 }
   client:
-    name: Healing Stream Totem
+    textKey: spell.947171
     icon: 1647
     rank: 2
     skillLine: 374
-    description: "Summons a Healing Stream Totem with 5 health at the feet of the caster for 2 min that heals party and raid members within 30 yards for 8 every 2 sec."
 - id: 947172
+  manaCostPct: 0
+  school: 16
   name: Healing Stream Totem
   preventionType: 1   # totem summons are silence-gated in TBC/1.12 (wago PreventionType 1; WotLK made them 0) — fix round 2026-09-02, _ref totems accepted_gaps id 14
   template: 6377
@@ -5183,12 +5136,12 @@ helpers:
   effects:
   - { effect: 28, basePoints: 4, dieSides: 1, misc: 920192, miscB: 82, targetA: 42 }
   client:
-    name: Healing Stream Totem
+    textKey: spell.947172
     icon: 1647
     rank: 3
     skillLine: 374
-    description: "Summons a Healing Stream Totem with 5 health at the feet of the caster for 2 min that heals party and raid members within 30 yards for 10 every 2 sec."
 - id: 947173
+  manaCostPct: 0
   name: Healing Stream Totem
   preventionType: 1   # totem summons are silence-gated in TBC/1.12 (wago PreventionType 1; WotLK made them 0) — fix round 2026-09-02, _ref totems accepted_gaps id 14
   template: 10462
@@ -5197,12 +5150,12 @@ helpers:
   effects:
   - { effect: 28, basePoints: 4, dieSides: 1, misc: 920193, miscB: 82, targetA: 42 }
   client:
-    name: Healing Stream Totem
+    textKey: spell.947173
     icon: 1647
     rank: 4
     skillLine: 374
-    description: "Summons a Healing Stream Totem with 5 health at the feet of the caster for 2 min that heals party and raid members within 30 yards for 12 every 2 sec."
 - id: 947174
+  manaCostPct: 0
   name: Healing Stream Totem
   preventionType: 1   # totem summons are silence-gated in TBC/1.12 (wago PreventionType 1; WotLK made them 0) — fix round 2026-09-02, _ref totems accepted_gaps id 14
   template: 10463
@@ -5211,11 +5164,10 @@ helpers:
   effects:
   - { effect: 28, basePoints: 4, dieSides: 1, misc: 920194, miscB: 82, targetA: 42 }
   client:
-    name: Healing Stream Totem
+    textKey: spell.947174
     icon: 1647
     rank: 5
     skillLine: 374
-    description: "Summons a Healing Stream Totem with 5 health at the feet of the caster for 2 min that heals party and raid members within 30 yards for 14 every 2 sec."
 - id: 947175
   name: Healing Stream Totem
   preventionType: 1   # totem summons are silence-gated in TBC/1.12 (wago PreventionType 1; WotLK made them 0) — fix round 2026-09-02, _ref totems accepted_gaps id 14
@@ -5226,11 +5178,10 @@ helpers:
   effects:
   - { effect: 28, basePoints: 4, dieSides: 1, misc: 920420, miscB: 82, targetA: 42 }   # WATER slot; FRESH creature 920420 -> minted pulse 947180
   client:
-    name: Healing Stream Totem
+    textKey: spell.947175
     icon: 1647
     rank: 6
     skillLine: 374
-    description: "Summons a Healing Stream Totem with 5 health at the feet of the caster for 2 min that heals party and raid members within 30 yards for 18 every 2 sec."
 - id: 947180
   name: Healing Stream
   template: 25566    # inherits word-A bit13 (node 20250 / node 20248); live 25566 is the WotLK aura-23 rework, so the effect row below re-authors TBC's own shape
@@ -5238,9 +5189,8 @@ helpers:
   effects:
   - { effect: 65, aura: 8, basePoints: 18, dieSides: 0, misc: 0, targetA: 1, radius: 10, amplitude: 2000 }   # PERIODIC_HEAL; TBC bp 17 + DieSides 1 = EFFECTIVE 18. effect 65 + radius 10 per Amendment B.8; amplitude explicit as on the Mana Spring pulses
   client:
-    name: Healing Stream
+    textKey: spell.947180
     icon: 1647
-    auraDescription: "Heals 18 every 2 sec."
 # --- Mana Spring (family index 13, block 947190-947199, creatures 920430-920439) --------------------
 # The one family in this batch that is retuned on BOTH halves, and by the largest factor in the whole
 # roster — nothing is reused.
@@ -5268,9 +5218,8 @@ helpers:
   effects:
   - { effect: 65, aura: 24, basePoints: 6, dieSides: 0, misc: 0, targetA: 1, radius: 10, amplitude: 2000 }   # PERIODIC_ENERGIZE misc 0 = POWER_MANA; TBC bp 5 + DieSides 1 = EFFECTIVE 6. effect 65 + radius 10 kept per Amendment B.8; amplitude authored because the template's own period is 0
   client:
-    name: Mana Spring
+    textKey: spell.947195
     icon: 338
-    auraDescription: "Restores 6 mana every 2 sec."
 - id: 947196
   name: Mana Spring
   template: 10491
@@ -5278,9 +5227,8 @@ helpers:
   effects:
   - { effect: 65, aura: 24, basePoints: 9, dieSides: 0, misc: 0, targetA: 1, radius: 10, amplitude: 2000 }
   client:
-    name: Mana Spring
+    textKey: spell.947196
     icon: 338
-    auraDescription: "Restores 9 mana every 2 sec."
 - id: 947197
   name: Mana Spring
   template: 10493
@@ -5288,9 +5236,8 @@ helpers:
   effects:
   - { effect: 65, aura: 24, basePoints: 13, dieSides: 0, misc: 0, targetA: 1, radius: 10, amplitude: 2000 }
   client:
-    name: Mana Spring
+    textKey: spell.947197
     icon: 338
-    auraDescription: "Restores 13 mana every 2 sec."
 - id: 947198
   name: Mana Spring
   template: 10494
@@ -5298,9 +5245,8 @@ helpers:
   effects:
   - { effect: 65, aura: 24, basePoints: 17, dieSides: 0, misc: 0, targetA: 1, radius: 10, amplitude: 2000 }
   client:
-    name: Mana Spring
+    textKey: spell.947198
     icon: 338
-    auraDescription: "Restores 17 mana every 2 sec."
 - id: 947199
   name: Mana Spring
   template: 25569
@@ -5308,9 +5254,8 @@ helpers:
   effects:
   - { effect: 65, aura: 24, basePoints: 20, dieSides: 0, misc: 0, targetA: 1, radius: 10, amplitude: 2000 }   # TBC bp 19 + DieSides 1 = EFFECTIVE 20; live 25569 is the aura-85 mp5 rework, so the whole row is authored
   client:
-    name: Mana Spring
+    textKey: spell.947199
     icon: 338
-    auraDescription: "Restores 20 mana every 2 sec."
 # SUMMONS **947190-947193** (r1-r4), FRESH creatures **920430-920433**. The creatures must be fresh
 #   because the pulses are: the Vanilla entries 920200-920203 cast 931210-931213, the 1.12-magnitude
 #   clones. TBC mana is FLAT 40/60/80/100 — identical to LIVE (ManaCostPct 0 on both), so the only
@@ -5320,6 +5265,8 @@ helpers:
 #   **school: 16** -- 25570 is on _ref.open_questions id 12's re-school list, wago Frost 16 vs live
 #   Physical 1) and FRESH creature **920434** -- which exactly fills this 10-id block.
 - id: 947190
+  manaCostPct: 0
+  school: 16
   name: Mana Spring Totem
   preventionType: 1   # totem summons are silence-gated in TBC/1.12 (wago PreventionType 1; WotLK made them 0) — fix round 2026-09-02, _ref totems accepted_gaps id 14
   template: 5675
@@ -5328,12 +5275,13 @@ helpers:
   effects:
   - { effect: 28, basePoints: 4, dieSides: 1, misc: 920430, miscB: 82, targetA: 42 }   # 5-hp totem (bp4+d1); WATER slot -> FRESH creature 920430 -> minted pulse 947195
   client:
-    name: Mana Spring Totem
+    textKey: spell.947190
     icon: 338
     rank: 1
     skillLine: 374
-    description: "Summons a Mana Spring Totem with 5 health at the feet of the caster for 2 min that restores 6 mana to party and raid members within 30 yards every 2 sec."
 - id: 947191
+  manaCostPct: 0
+  school: 16
   name: Mana Spring Totem
   preventionType: 1   # totem summons are silence-gated in TBC/1.12 (wago PreventionType 1; WotLK made them 0) — fix round 2026-09-02, _ref totems accepted_gaps id 14
   template: 10495
@@ -5342,12 +5290,13 @@ helpers:
   effects:
   - { effect: 28, basePoints: 4, dieSides: 1, misc: 920431, miscB: 82, targetA: 42 }
   client:
-    name: Mana Spring Totem
+    textKey: spell.947191
     icon: 338
     rank: 2
     skillLine: 374
-    description: "Summons a Mana Spring Totem with 5 health at the feet of the caster for 2 min that restores 9 mana to party and raid members within 30 yards every 2 sec."
 - id: 947192
+  manaCostPct: 0
+  school: 16
   name: Mana Spring Totem
   preventionType: 1   # totem summons are silence-gated in TBC/1.12 (wago PreventionType 1; WotLK made them 0) — fix round 2026-09-02, _ref totems accepted_gaps id 14
   template: 10496
@@ -5356,12 +5305,13 @@ helpers:
   effects:
   - { effect: 28, basePoints: 4, dieSides: 1, misc: 920432, miscB: 82, targetA: 42 }
   client:
-    name: Mana Spring Totem
+    textKey: spell.947192
     icon: 338
     rank: 3
     skillLine: 374
-    description: "Summons a Mana Spring Totem with 5 health at the feet of the caster for 2 min that restores 13 mana to party and raid members within 30 yards every 2 sec."
 - id: 947193
+  manaCostPct: 0
+  school: 16
   name: Mana Spring Totem
   preventionType: 1   # totem summons are silence-gated in TBC/1.12 (wago PreventionType 1; WotLK made them 0) — fix round 2026-09-02, _ref totems accepted_gaps id 14
   template: 10497
@@ -5370,11 +5320,10 @@ helpers:
   effects:
   - { effect: 28, basePoints: 4, dieSides: 1, misc: 920433, miscB: 82, targetA: 42 }
   client:
-    name: Mana Spring Totem
+    textKey: spell.947193
     icon: 338
     rank: 4
     skillLine: 374
-    description: "Summons a Mana Spring Totem with 5 health at the feet of the caster for 2 min that restores 17 mana to party and raid members within 30 yards every 2 sec."
 - id: 947194
   name: Mana Spring Totem
   preventionType: 1   # totem summons are silence-gated in TBC/1.12 (wago PreventionType 1; WotLK made them 0) — fix round 2026-09-02, _ref totems accepted_gaps id 14
@@ -5386,11 +5335,10 @@ helpers:
   effects:
   - { effect: 28, basePoints: 4, dieSides: 1, misc: 920434, miscB: 82, targetA: 42 }   # WATER slot -> FRESH creature 920434 -> minted pulse 947199
   client:
-    name: Mana Spring Totem
+    textKey: spell.947194
     icon: 338
     rank: 5
     skillLine: 374
-    description: "Summons a Mana Spring Totem with 5 health at the feet of the caster for 2 min that restores 20 mana to party and raid members within 30 yards every 2 sec."
 # --- Fire Resistance (family index 14, block 947200-947209, creatures 920440-920449) ----------------
 # A WATER-slot totem despite the name (miscB 82 / targetA 42, verified on all three TBC summons) —
 # the element-vs-name swap the reference's `element_is_the_dbc_slot` convention warns about.
@@ -5417,6 +5365,8 @@ helpers:
 #   (template 25562 for the inherited word-A bit26; EFFECTIVE +70), FRESH creature **920440** (the
 #   B.8.1 creature reuse stops at r3). 947204 / 947206-947209 and creatures 920441-920449 stay free.
 - id: 947200
+  manaCostPct: 0
+  school: 16
   name: Fire Resistance Totem
   preventionType: 1   # totem summons are silence-gated in TBC/1.12 (wago PreventionType 1; WotLK made them 0) — fix round 2026-09-02, _ref totems accepted_gaps id 14
   template: 8184
@@ -5425,12 +5375,12 @@ helpers:
   effects:
   - { effect: 28, basePoints: 4, dieSides: 1, misc: 920210, miscB: 82, targetA: 42 }   # 5-hp totem (bp4+d1); WATER slot -> REUSED Vanilla creature 920210 -> reused pulse 931230
   client:
-    name: Fire Resistance Totem
+    textKey: spell.947200
     icon: 1712
     rank: 1
     skillLine: 373
-    description: "Summons a Fire Resistance Totem with 5 health at the feet of the caster for 2 min that increases the fire resistance of party and raid members within 30 yards by 30."
 - id: 947201
+  manaCostPct: 0
   name: Fire Resistance Totem
   preventionType: 1   # totem summons are silence-gated in TBC/1.12 (wago PreventionType 1; WotLK made them 0) — fix round 2026-09-02, _ref totems accepted_gaps id 14
   template: 10537
@@ -5439,12 +5389,12 @@ helpers:
   effects:
   - { effect: 28, basePoints: 4, dieSides: 1, misc: 920211, miscB: 82, targetA: 42 }
   client:
-    name: Fire Resistance Totem
+    textKey: spell.947201
     icon: 1712
     rank: 2
     skillLine: 373
-    description: "Summons a Fire Resistance Totem with 5 health at the feet of the caster for 2 min that increases the fire resistance of party and raid members within 30 yards by 45."
 - id: 947202
+  manaCostPct: 0
   name: Fire Resistance Totem
   preventionType: 1   # totem summons are silence-gated in TBC/1.12 (wago PreventionType 1; WotLK made them 0) — fix round 2026-09-02, _ref totems accepted_gaps id 14
   template: 10538
@@ -5453,11 +5403,10 @@ helpers:
   effects:
   - { effect: 28, basePoints: 4, dieSides: 1, misc: 920212, miscB: 82, targetA: 42 }
   client:
-    name: Fire Resistance Totem
+    textKey: spell.947202
     icon: 1712
     rank: 3
     skillLine: 373
-    description: "Summons a Fire Resistance Totem with 5 health at the feet of the caster for 2 min that increases the fire resistance of party and raid members within 30 yards by 60."
 - id: 947203
   name: Fire Resistance Totem
   preventionType: 1   # totem summons are silence-gated in TBC/1.12 (wago PreventionType 1; WotLK made them 0) — fix round 2026-09-02, _ref totems accepted_gaps id 14
@@ -5468,20 +5417,18 @@ helpers:
   effects:
   - { effect: 28, basePoints: 4, dieSides: 1, misc: 920440, miscB: 82, targetA: 42 }   # WATER slot; FRESH creature 920440 -> minted pulse 947205
   client:
-    name: Fire Resistance Totem
+    textKey: spell.947203
     icon: 1712
     rank: 4
     skillLine: 373
-    description: "Summons a Fire Resistance Totem with 5 health at the feet of the caster for 2 min that increases the fire resistance of party and raid members within 30 yards by 70."
 - id: 947205
   name: Fire Resistance
   template: 25562
   effects:
   - { effect: 65, aura: 143, basePoints: 70, dieSides: 0, misc: 4, targetA: 1, radius: 10 }   # MOD_RESISTANCE_EXCLUSIVE misc 4 = Fire MASK; TBC bp 69 + DieSides 1 = EFFECTIVE 70. effect 65 + radius 10 per Amendment B.8. Name matches the reused lower-rank buff (931230-931232)
   client:
-    name: Fire Resistance
+    textKey: spell.947205
     icon: 1712
-    auraDescription: "Fire resistance increased by 70."
 # --- Poison Cleansing (family index 15, block 947210-947219, creatures 920450-920459) ---------------
 # --- Disease Cleansing (family index 16, block 947220-947229, creatures 920460-920469) --------------
 # The two halves are one mechanic and are documented together; only DispelType, level and the
@@ -5543,11 +5490,10 @@ helpers:
   effects:
   - { effect: 28, basePoints: 4, dieSides: 1, misc: 920450, miscB: 82, targetA: 42 }   # 5-hp totem (bp4+d1); WATER slot -> FRESH creature 920450 -> minted passive 947211
   client:
-    name: Poison Cleansing Totem
+    textKey: spell.947210
     icon: 1673
     rank: 1
     skillLine: 374
-    description: "Summons a Poison Cleansing Totem with 5 health at the feet of the caster for 2 min that removes 1 Poison effect from party and raid members within 30 yards every 5 sec."
 - id: 947211
   name: Poison Cleansing Totem Passive
   template: 8172
@@ -5556,9 +5502,8 @@ helpers:
   effects:
   - { effect: 6, aura: 23, basePoints: -1, dieSides: 0, targetA: 1, trigger: 947212, amplitude: 5000 }   # PERIODIC_TRIGGER_SPELL -> 947212 DISPEL(POISON). amplitude 5000 = TBC; the template (and the Vanilla clone) tick at 3000. bp/DieSides are the N6-inert pair -- aura 23 never reads the amount.
   client:
-    name: Poison Cleansing Totem Passive
+    textKey: spell.947211
     icon: 1673
-    auraDescription: "Removes 1 Poison effect from nearby party and raid members every 5 sec."
 - id: 947212
   name: Poison Cleansing Totem Effect
   template: 8171
@@ -5572,9 +5517,8 @@ helpers:
   effects:
   - { effect: 38, basePoints: 1, dieSides: 0, misc: 4, targetA: 22, targetB: 33, radius: 10 }   # SPELL_EFFECT_DISPEL, DISPEL_POISON (4), 1 charge; targetA 22 TARGET_SRC_CASTER + targetB 33 TARGET_UNIT_SRC_AREA_PARTY authored because live 8171 carries TargetA 33 / TargetB 0 (the WotLK DUMMY shape). radius 10 per Amendment B.8 (TBC's own index is 9).
   client:
-    name: Poison Cleansing Totem Effect
+    textKey: spell.947212
     icon: 1673
-    auraDescription: "Removes 1 Poison effect."
 - id: 947220
   name: Disease Cleansing Totem
   preventionType: 1   # totem summons are silence-gated in TBC/1.12 (wago PreventionType 1; WotLK made them 0) — fix round 2026-09-02, _ref totems accepted_gaps id 14
@@ -5586,20 +5530,18 @@ helpers:
   effects:
   - { effect: 28, basePoints: 4, dieSides: 1, misc: 920460, miscB: 82, targetA: 42 }   # 5-hp totem (bp4+d1); WATER slot -> FRESH creature 920460 -> minted passive 947221
   client:
-    name: Disease Cleansing Totem
+    textKey: spell.947220
     icon: 1673
     rank: 1
     skillLine: 374
-    description: "Summons a Disease Cleansing Totem with 5 health at the feet of the caster for 2 min that removes 1 Disease effect from party and raid members within 30 yards every 5 sec."
 - id: 947221
   name: Disease Cleansing Totem Passive
   template: 8172
   effects:
   - { effect: 6, aura: 23, basePoints: -1, dieSides: 0, targetA: 1, trigger: 947222, amplitude: 5000 }   # PERIODIC_TRIGGER_SPELL -> 947222 DISPEL(DISEASE). amplitude 5000 = TBC; template ticks at 3000.
   client:
-    name: Disease Cleansing Totem Passive
+    textKey: spell.947221
     icon: 1673
-    auraDescription: "Removes 1 Disease effect from nearby party and raid members every 5 sec."
 - id: 947222
   name: Disease Cleansing Totem Effect
   template: 8171
@@ -5611,9 +5553,8 @@ helpers:
   effects:
   - { effect: 38, basePoints: 1, dieSides: 0, misc: 3, targetA: 22, targetB: 33, radius: 10 }   # SPELL_EFFECT_DISPEL, DISPEL_DISEASE (3), 1 charge; targetA/targetB authored, radius 10 per Amendment B.8
   client:
-    name: Disease Cleansing Totem Effect
+    textKey: spell.947222
     icon: 1673
-    auraDescription: "Removes 1 Disease effect."
 # PLAN 3b TASK 2, BATCH 4a — the seven AIR totem families MINUS Windfury Totem (Grounding, Nature
 # Resistance, Sentry, Grace of Air, Windwall, Tranquil Air, Wrath of Air). Windfury Totem is batch 4b.
 # Ids from `era-data/_ref/tbc/shaman-totems-tbc.yaml` `id_allocation:`; each family's actual per-role
@@ -5749,11 +5690,10 @@ helpers:
   effects:
   - { effect: 28, basePoints: 4, dieSides: 1, misc: 920240, miscB: 83, targetA: 43 }   # 5-hp totem (bp4+d1); AIR slot (miscB 83 / targetA 43), REUSED Vanilla creature 920240 -> reused effect 931290 + passive 931291
   client:
-    name: Grounding Totem
+    textKey: spell.947240
     icon: 1677
     rank: 1
     skillLine: 373
-    description: "Summons a Grounding Totem with 5 health at the feet of the caster for 45 sec that will redirect one harmful spell cast at party members within 30 yards to itself, destroying the totem. Will not redirect area of effect spells."
 # --- Nature Resistance (family index 19, block 947250-947259, creatures 920490-920499) --------------
 # An AIR-slot totem (miscB 83 / targetA 43, verified on all three TBC summons) despite being the
 # NATURE resistance totem — the element-vs-name swap the reference's `element_is_the_dbc_slot`
@@ -5782,6 +5722,8 @@ helpers:
 #   for the inherited word-A bit26; EFFECTIVE +70), FRESH creature **920490** (the B.8.1 creature
 #   reuse stops at r3). 947254 / 947256-947259 and creatures 920491-920499 stay free.
 - id: 947250
+  manaCostPct: 0
+  school: 8
   name: Nature Resistance Totem
   preventionType: 1   # totem summons are silence-gated in TBC/1.12 (wago PreventionType 1; WotLK made them 0) — fix round 2026-09-02, _ref totems accepted_gaps id 14
   template: 10595
@@ -5790,12 +5732,13 @@ helpers:
   effects:
   - { effect: 28, basePoints: 4, dieSides: 1, misc: 920250, miscB: 83, targetA: 43 }   # 5-hp totem (bp4+d1); AIR slot -> REUSED Vanilla creature 920250 -> reused pulse 931310
   client:
-    name: Nature Resistance Totem
+    textKey: spell.947250
     icon: 1675
     rank: 1
     skillLine: 373
-    description: "Summons a Nature Resistance Totem with 5 health at the feet of the caster for 2 min that increases the nature resistance of party and raid members within 30 yards by 30."
 - id: 947251
+  manaCostPct: 0
+  school: 8
   name: Nature Resistance Totem
   preventionType: 1   # totem summons are silence-gated in TBC/1.12 (wago PreventionType 1; WotLK made them 0) — fix round 2026-09-02, _ref totems accepted_gaps id 14
   template: 10600
@@ -5804,12 +5747,13 @@ helpers:
   effects:
   - { effect: 28, basePoints: 4, dieSides: 1, misc: 920251, miscB: 83, targetA: 43 }
   client:
-    name: Nature Resistance Totem
+    textKey: spell.947251
     icon: 1675
     rank: 2
     skillLine: 373
-    description: "Summons a Nature Resistance Totem with 5 health at the feet of the caster for 2 min that increases the nature resistance of party and raid members within 30 yards by 45."
 - id: 947252
+  manaCostPct: 0
+  school: 8
   name: Nature Resistance Totem
   preventionType: 1   # totem summons are silence-gated in TBC/1.12 (wago PreventionType 1; WotLK made them 0) — fix round 2026-09-02, _ref totems accepted_gaps id 14
   template: 10601
@@ -5818,11 +5762,10 @@ helpers:
   effects:
   - { effect: 28, basePoints: 4, dieSides: 1, misc: 920252, miscB: 83, targetA: 43 }
   client:
-    name: Nature Resistance Totem
+    textKey: spell.947252
     icon: 1675
     rank: 3
     skillLine: 373
-    description: "Summons a Nature Resistance Totem with 5 health at the feet of the caster for 2 min that increases the nature resistance of party and raid members within 30 yards by 60."
 - id: 947253
   name: Nature Resistance Totem
   preventionType: 1   # totem summons are silence-gated in TBC/1.12 (wago PreventionType 1; WotLK made them 0) — fix round 2026-09-02, _ref totems accepted_gaps id 14
@@ -5834,20 +5777,18 @@ helpers:
   effects:
   - { effect: 28, basePoints: 4, dieSides: 1, misc: 920490, miscB: 83, targetA: 43 }   # AIR slot; FRESH creature 920490 -> minted pulse 947255
   client:
-    name: Nature Resistance Totem
+    textKey: spell.947253
     icon: 1675
     rank: 4
     skillLine: 373
-    description: "Summons a Nature Resistance Totem with 5 health at the feet of the caster for 2 min that increases the nature resistance of party and raid members within 30 yards by 70."
 - id: 947255
   name: Nature Resistance
   template: 25573
   effects:
   - { effect: 65, aura: 143, basePoints: 70, dieSides: 0, misc: 8, targetA: 1, radius: 10 }   # MOD_RESISTANCE_EXCLUSIVE misc 8 = Nature MASK; TBC bp 69 + DieSides 1 = EFFECTIVE 70. effect 65 + radius 10 per Amendment B.8. Name matches the reused lower-rank buff (931310-931312)
   client:
-    name: Nature Resistance
+    textKey: spell.947255
     icon: 1675
-    auraDescription: "Nature resistance increased by 70."
 # --- Sentry (family index 20, block 947260-947269, creatures 920500-920509) -------------------------
 # **MINTED 947260**, and `_ref.accepted_gaps` id 3 is CORRECTED rather than accepted: it says "the
 # ONLY divergence is cost". There are TWO. Measured three ways this batch:
@@ -5899,12 +5840,10 @@ helpers:
   - { effect: 28, basePoints: 99, dieSides: 1, misc: 3968, miscB: 83, targetA: 43, radius: 0 }   # 100-hp totem (bp99+d1); AIR slot; STOCK creature 3968 (entry-keyed mechanic). radius 0 REPRODUCES SpellInfoCorrections' by-id fix -- targetA 43 uses CalcRadius as the DROP DISTANCE, and stock index 12 = 100 yd
   - { effect: 6, aura: 4, basePoints: 0, dieSides: 0, targetA: 1 }                               # SPELL_AURA_DUMMY on the caster -- the slot spell_sha_sentry_totem's AfterEffectRemove(EFFECT_1) hangs off
   client:
-    name: Sentry Totem
+    textKey: spell.947260
     icon: 195
     rank: 1
     skillLine: 373
-    auraDescription: "Allows vision through Sentry Totem. Right-Click on the buff to switch back and forth between totem sight and shaman sight."   # authored because template 6495 carries a non-empty stock AuraDescription (generator lint); the TBC text is the same mechanic
-    description: "Summons an immobile Sentry Totem with 100 health at your feet for 5 min that allows vision of the nearby area and warns of enemies that attack it. Right-Click on the buff to switch back and forth between totem sight and shaman sight."
 # --- Grace of Air (family index 21, block 947270-947279, creatures 920510-920519) -------------------
 # ABSENT FROM 3.3.5a ENTIRELY (8835/8836/10626/10627/25359/25360 are all missing from
 # `ip-dbc/Spell.dbc`), so "grant stock" is not on the table and the shipped Vanilla clones are the
@@ -5949,9 +5888,8 @@ helpers:
   effects:
   - { effect: 65, aura: 29, misc: 1, basePoints: 43, dieSides: 0, targetA: 1, radius: 10 }   # MOD_STAT misc 1 = STAT_AGILITY; TBC bp 42 + DieSides 1 = EFFECTIVE 43. effect 65 + radius 10 kept per Amendment B.8 (TBC's own is 35 / index 9)
   client:
-    name: Grace of Air
+    textKey: spell.947275
     icon: 337
-    auraDescription: "Agility increased by 43."
 - id: 947276
   name: Grace of Air
   family: 11
@@ -5963,10 +5901,11 @@ helpers:
   effects:
   - { effect: 65, aura: 29, misc: 1, basePoints: 67, dieSides: 0, targetA: 1, radius: 10 }
   client:
-    name: Grace of Air
+    textKey: spell.947276
     icon: 337
-    auraDescription: "Agility increased by 67."
 - id: 947270
+  manaCostPct: 0
+  school: 8
   name: Grace of Air Totem
   preventionType: 1   # totem summons are silence-gated in TBC/1.12 (wago PreventionType 1; WotLK made them 0) — fix round 2026-09-02, _ref totems accepted_gaps id 14
   template: 10595
@@ -5977,12 +5916,13 @@ helpers:
   effects:
   - { effect: 28, basePoints: 4, dieSides: 1, misc: 920510, miscB: 83, targetA: 43 }   # 5-hp totem (bp4+d1); AIR slot -> FRESH creature 920510 -> minted pulse 947275
   client:
-    name: Grace of Air Totem
+    textKey: spell.947270
     icon: 337
     rank: 1
     skillLine: 373
-    description: "Summons a Grace of Air Totem with 5 health at the feet of the caster for 2 min that increases the agility of party and raid members within 30 yards by 43."
 - id: 947271
+  manaCostPct: 0
+  school: 8
   name: Grace of Air Totem
   preventionType: 1   # totem summons are silence-gated in TBC/1.12 (wago PreventionType 1; WotLK made them 0) — fix round 2026-09-02, _ref totems accepted_gaps id 14
   template: 10595
@@ -5993,11 +5933,10 @@ helpers:
   effects:
   - { effect: 28, basePoints: 4, dieSides: 1, misc: 920511, miscB: 83, targetA: 43 }
   client:
-    name: Grace of Air Totem
+    textKey: spell.947271
     icon: 337
     rank: 2
     skillLine: 373
-    description: "Summons a Grace of Air Totem with 5 health at the feet of the caster for 2 min that increases the agility of party and raid members within 30 yards by 67."
 - id: 947277
   name: Grace of Air
   family: 11
@@ -6009,10 +5948,11 @@ helpers:
   effects:
   - { effect: 65, aura: 29, misc: 1, basePoints: 77, dieSides: 0, targetA: 1, radius: 10 }   # TBC bp 76 + DieSides 1 = EFFECTIVE 77
   client:
-    name: Grace of Air
+    textKey: spell.947277
     icon: 337
-    auraDescription: "Agility increased by 77."
 - id: 947272
+  manaCostPct: 0
+  school: 8
   name: Grace of Air Totem
   preventionType: 1   # totem summons are silence-gated in TBC/1.12 (wago PreventionType 1; WotLK made them 0) — fix round 2026-09-02, _ref totems accepted_gaps id 14
   template: 10595
@@ -6023,11 +5963,10 @@ helpers:
   effects:
   - { effect: 28, basePoints: 4, dieSides: 1, misc: 920512, miscB: 83, targetA: 43 }   # AIR slot -> FRESH creature 920512 -> minted pulse 947277
   client:
-    name: Grace of Air Totem
+    textKey: spell.947272
     icon: 337
     rank: 3
     skillLine: 373
-    description: "Summons a Grace of Air Totem with 5 health at the feet of the caster for 2 min that increases the agility of party and raid members within 30 yards by 77."
 # --- Windwall (family index 22, block 947280-947289, creatures 920520-920529) -----------------------
 # ABSENT FROM 3.3.5a ENTIRELY, same as Grace of Air, and minted on both halves for the same reason
 # (SchoolMask + class mask on top of scope/radius).
@@ -6063,9 +6002,8 @@ helpers:
   effects:
   - { effect: 65, aura: 113, misc: 1, basePoints: -32, dieSides: 0, targetA: 1, radius: 10 }   # MOD_RANGED_DAMAGE_TAKEN (negative = reduction); TBC bp -33 + DieSides 1 = EFFECTIVE -32, DOUBLE the shipped Vanilla clone's -16. misc 1 is TBC's (unused by aura 113, but authorable and measured)
   client:
-    name: Windwall
+    textKey: spell.947285
     icon: 174
-    auraDescription: "Ranged damage taken reduced by 32."
 - id: 947286
   name: Windwall
   family: 11
@@ -6077,9 +6015,8 @@ helpers:
   effects:
   - { effect: 65, aura: 113, misc: 1, basePoints: -50, dieSides: 0, targetA: 1, radius: 10 }
   client:
-    name: Windwall
+    textKey: spell.947286
     icon: 174
-    auraDescription: "Ranged damage taken reduced by 50."
 - id: 947287
   name: Windwall
   family: 11
@@ -6091,10 +6028,11 @@ helpers:
   effects:
   - { effect: 65, aura: 113, misc: 1, basePoints: -64, dieSides: 0, targetA: 1, radius: 10 }
   client:
-    name: Windwall
+    textKey: spell.947287
     icon: 174
-    auraDescription: "Ranged damage taken reduced by 64."
 - id: 947280
+  manaCostPct: 0
+  school: 8
   name: Windwall Totem
   preventionType: 1   # totem summons are silence-gated in TBC/1.12 (wago PreventionType 1; WotLK made them 0) — fix round 2026-09-02, _ref totems accepted_gaps id 14
   template: 10595
@@ -6105,12 +6043,13 @@ helpers:
   effects:
   - { effect: 28, basePoints: 4, dieSides: 1, misc: 920520, miscB: 83, targetA: 43 }   # 5-hp totem (bp4+d1); AIR slot -> FRESH creature 920520 -> minted pulse 947285
   client:
-    name: Windwall Totem
+    textKey: spell.947280
     icon: 174
     rank: 1
     skillLine: 373
-    description: "Summons a Windwall Totem with 5 health at the feet of the caster for 2 min that reduces the ranged damage taken of party and raid members within 30 yards by 32."
 - id: 947281
+  manaCostPct: 0
+  school: 8
   name: Windwall Totem
   preventionType: 1   # totem summons are silence-gated in TBC/1.12 (wago PreventionType 1; WotLK made them 0) — fix round 2026-09-02, _ref totems accepted_gaps id 14
   template: 10595
@@ -6121,12 +6060,13 @@ helpers:
   effects:
   - { effect: 28, basePoints: 4, dieSides: 1, misc: 920521, miscB: 83, targetA: 43 }
   client:
-    name: Windwall Totem
+    textKey: spell.947281
     icon: 174
     rank: 2
     skillLine: 373
-    description: "Summons a Windwall Totem with 5 health at the feet of the caster for 2 min that reduces the ranged damage taken of party and raid members within 30 yards by 50."
 - id: 947282
+  manaCostPct: 0
+  school: 8
   name: Windwall Totem
   preventionType: 1   # totem summons are silence-gated in TBC/1.12 (wago PreventionType 1; WotLK made them 0) — fix round 2026-09-02, _ref totems accepted_gaps id 14
   template: 10595
@@ -6137,11 +6077,10 @@ helpers:
   effects:
   - { effect: 28, basePoints: 4, dieSides: 1, misc: 920522, miscB: 83, targetA: 43 }
   client:
-    name: Windwall Totem
+    textKey: spell.947282
     icon: 174
     rank: 3
     skillLine: 373
-    description: "Summons a Windwall Totem with 5 health at the feet of the caster for 2 min that reduces the ranged damage taken of party and raid members within 30 yards by 64."
 - id: 947288
   name: Windwall
   family: 11
@@ -6153,10 +6092,11 @@ helpers:
   effects:
   - { effect: 65, aura: 113, misc: 1, basePoints: -102, dieSides: 0, targetA: 1, radius: 10 }   # TBC bp -103 + DieSides 1 = EFFECTIVE -102
   client:
-    name: Windwall
+    textKey: spell.947288
     icon: 174
-    auraDescription: "Ranged damage taken reduced by 102."
 - id: 947283
+  manaCostPct: 0
+  school: 8
   name: Windwall Totem
   preventionType: 1   # totem summons are silence-gated in TBC/1.12 (wago PreventionType 1; WotLK made them 0) — fix round 2026-09-02, _ref totems accepted_gaps id 14
   template: 10595
@@ -6167,11 +6107,10 @@ helpers:
   effects:
   - { effect: 28, basePoints: 4, dieSides: 1, misc: 920523, miscB: 83, targetA: 43 }   # AIR slot -> FRESH creature 920523 -> minted pulse 947288
   client:
-    name: Windwall Totem
+    textKey: spell.947283
     icon: 174
     rank: 4
     skillLine: 373
-    description: "Summons a Windwall Totem with 5 health at the feet of the caster for 2 min that reduces the ranged damage taken of party and raid members within 30 yards by 102."
 # --- Tranquil Air (family index 23, block 947290-947299, creatures 920530-920539) -------------------
 # The only family in the whole 29-family roster with NO substrate on EITHER side: 25908 (summon) and
 # 25909 (pulse) are absent from the 1.12.1 extract AND from 3.3.5a, and a 1.12 name search for
@@ -6205,10 +6144,10 @@ helpers:
   effects:
   - { effect: 65, aura: 10, misc: 127, basePoints: -20, dieSides: 0, targetA: 1, radius: 10 }   # MOD_THREAT, misc 127 = all schools; TBC bp -21 + DieSides 1 = EFFECTIVE -20 (%)
   client:
-    name: Tranquil Air
+    textKey: spell.947291
     icon: 54
-    auraDescription: "Threat generated reduced by 20%."
 - id: 947290
+  school: 8
   name: Tranquil Air Totem
   preventionType: 1   # totem summons are silence-gated in TBC/1.12 (wago PreventionType 1; WotLK made them 0) — fix round 2026-09-02, _ref totems accepted_gaps id 14
   template: 10595
@@ -6220,11 +6159,10 @@ helpers:
   effects:
   - { effect: 28, basePoints: 4, dieSides: 1, misc: 920530, miscB: 83, targetA: 43 }   # 5-hp totem (bp4+d1); AIR slot -> FRESH creature 920530 -> minted pulse 947291
   client:
-    name: Tranquil Air Totem
+    textKey: spell.947290
     icon: 54
     rank: 1
     skillLine: 374
-    description: "Summons a Tranquil Air Totem with 5 health at the feet of the caster for 2 min that reduces the threat generated by party and raid members within 30 yards by 20%."
 # --- Wrath of Air (family index 24, block 947300-947309, creatures 920540-920549) -------------------
 # TBC-NEW, and the spec's "encoding read owed" premise was a false lead (1.12's 3738 is
 # `zzOLDCure Poison`, an Effect-36 LEARN_SPELL wrapper, and 2895 is `zzOLDSpell - Reuse`). Both ids
@@ -6285,9 +6223,8 @@ helpers:
   - { effect: 65, aura: 13, misc: 126, basePoints: 101, dieSides: 0, targetA: 1, targetB: 0, radius: 10 }    # MOD_DAMAGE_DONE, misc 126 = all magic schools; TBC bp 100 + DieSides 1 = EFFECTIVE 101. targetA/targetB authored to reproduce SpellInfoCorrections.cpp:127 (stock 18/33), which a clone does not inherit
   - { effect: 65, aura: 135, misc: 126, basePoints: 101, dieSides: 0, targetA: 1, targetB: 0, radius: 10 }   # MOD_HEALING_DONE, same school mask and magnitude -- TBC's second effect, which live dropped entirely
   client:
-    name: Wrath of Air
+    textKey: spell.947301
     icon: 340
-    auraDescription: "Spell damage and healing increased by up to 101."
 - id: 947300
   name: Wrath of Air Totem
   preventionType: 1   # totem summons are silence-gated in TBC/1.12 (wago PreventionType 1; WotLK made them 0) — fix round 2026-09-02, _ref totems accepted_gaps id 14
@@ -6298,11 +6235,10 @@ helpers:
   effects:
   - { effect: 28, basePoints: 4, dieSides: 1, misc: 920540, miscB: 83, targetA: 43 }   # 5-hp totem (bp4+d1); AIR slot -> FRESH creature 920540 -> minted pulse 947301
   client:
-    name: Wrath of Air Totem
+    textKey: spell.947300
     icon: 340
     rank: 1
     skillLine: 373
-    description: "Summons a Wrath of Air Totem with 5 health at the feet of the caster for 2 min that increases the spell damage and healing of party and raid members within 30 yards by up to 101."
 # --- Windfury Totem (family index 26, block 947330-947339, creatures 920560-920569) -----------------
 # THE HARDEST FAMILY IN THE ROSTER, and the one place in this batch where the TBC mechanic is
 # reconstructed rather than copied. Read this whole block before changing anything in it.
@@ -6463,9 +6399,8 @@ helpers:
   - { effect: 6,  aura: 4, basePoints: 122, dieSides: 0, targetA: 1 }             # DBC slot 2 = core EFFECT_1: the raw bonus AP the script reads via CalcValue(totemOwner), so node 20231's SPELLMOD_ALL_EFFECTS scales it. TBC 8516 bp 121 + DieSides 1 = EFFECTIVE 122
   proc: { flags: 12582912, chance: 20, typeMask: 0 }   # 0xC00000 = DONE main+off-hand (see the off-hand note above); chance 20 MEASURED from SpellItemEnchantment 1783; typeMask 0 because those ProcFlags fall outside the core's usable SpellTypeMask range
   client:
-    name: Windfury Totem
+    textKey: spell.947335
     icon: 1397
-    auraDescription: "Your melee attacks have a 20% chance to trigger 1 extra attack with 122 attack power."
 - id: 947336
   name: Windfury Totem
   family: 11
@@ -6481,9 +6416,8 @@ helpers:
   - { effect: 6,  aura: 4, basePoints: 229, dieSides: 0, targetA: 1 }             # TBC 10608 bp 228 + DieSides 1 = EFFECTIVE 229
   proc: { flags: 12582912, chance: 20, typeMask: 0 }
   client:
-    name: Windfury Totem
+    textKey: spell.947336
     icon: 1397
-    auraDescription: "Your melee attacks have a 20% chance to trigger 1 extra attack with 229 attack power."
 - id: 947337
   name: Windfury Totem
   family: 11
@@ -6499,9 +6433,8 @@ helpers:
   - { effect: 6,  aura: 4, basePoints: 315, dieSides: 0, targetA: 1 }             # TBC 10610 bp 314 + DieSides 1 = EFFECTIVE 315
   proc: { flags: 12582912, chance: 20, typeMask: 0 }
   client:
-    name: Windfury Totem
+    textKey: spell.947337
     icon: 1397
-    auraDescription: "Your melee attacks have a 20% chance to trigger 1 extra attack with 315 attack power."
 - id: 947330
   name: Windfury Totem
   preventionType: 1   # totem summons are silence-gated in TBC/1.12 (wago PreventionType 1; WotLK made them 0) — fix round 2026-09-02, _ref totems accepted_gaps id 14
@@ -6515,12 +6448,10 @@ helpers:
   effects:
   - { effect: 28, basePoints: 4, dieSides: 1, misc: 920560, miscB: 83, targetA: 43 }   # 5-hp totem (bp4+d1); AIR slot -> FRESH creature 920560 -> minted passive 947335
   client:
-    auraDescription: ""   # donor 8512 carries "Increases melee haste by $8515s1%."; count + sweep in _ref open_questions 15
-    name: Windfury Totem
+    textKey: spell.947330
     icon: 1397
     rank: 1
     skillLine: 373
-    description: "Summons a Windfury Totem with 5 health at the feet of the caster for 2 min that grants party and raid members within 30 yards a 20% chance on each melee hit to gain 1 extra attack with 122 attack power."
 - id: 947331
   name: Windfury Totem
   preventionType: 1   # totem summons are silence-gated in TBC/1.12 (wago PreventionType 1; WotLK made them 0) — fix round 2026-09-02, _ref totems accepted_gaps id 14
@@ -6534,12 +6465,10 @@ helpers:
   effects:
   - { effect: 28, basePoints: 4, dieSides: 1, misc: 920561, miscB: 83, targetA: 43 }
   client:
-    auraDescription: ""   # donor 8512 carries "Increases melee haste by $8515s1%."; count + sweep in _ref open_questions 15
-    name: Windfury Totem
+    textKey: spell.947331
     icon: 1397
     rank: 2
     skillLine: 373
-    description: "Summons a Windfury Totem with 5 health at the feet of the caster for 2 min that grants party and raid members within 30 yards a 20% chance on each melee hit to gain 1 extra attack with 229 attack power."
 - id: 947332
   name: Windfury Totem
   preventionType: 1   # totem summons are silence-gated in TBC/1.12 (wago PreventionType 1; WotLK made them 0) — fix round 2026-09-02, _ref totems accepted_gaps id 14
@@ -6553,12 +6482,10 @@ helpers:
   effects:
   - { effect: 28, basePoints: 4, dieSides: 1, misc: 920562, miscB: 83, targetA: 43 }
   client:
-    auraDescription: ""   # donor 8512 carries "Increases melee haste by $8515s1%."; count + sweep in _ref open_questions 15
-    name: Windfury Totem
+    textKey: spell.947332
     icon: 1397
     rank: 3
     skillLine: 373
-    description: "Summons a Windfury Totem with 5 health at the feet of the caster for 2 min that grants party and raid members within 30 yards a 20% chance on each melee hit to gain 1 extra attack with 315 attack power."
 - id: 947338
   name: Windfury Totem
   family: 11
@@ -6574,9 +6501,8 @@ helpers:
   - { effect: 6,  aura: 4, basePoints: 375, dieSides: 0, targetA: 1 }             # TBC 25583 bp 374 + DieSides 1 = EFFECTIVE 375
   proc: { flags: 12582912, chance: 20, typeMask: 0 }
   client:
-    name: Windfury Totem
+    textKey: spell.947338
     icon: 1397
-    auraDescription: "Your melee attacks have a 20% chance to trigger 1 extra attack with 375 attack power."
 - id: 947339
   name: Windfury Totem
   family: 11
@@ -6592,9 +6518,8 @@ helpers:
   - { effect: 6,  aura: 4, basePoints: 445, dieSides: 0, targetA: 1 }             # TBC 25584 bp 444 + DieSides 1 = EFFECTIVE 445
   proc: { flags: 12582912, chance: 20, typeMask: 0 }
   client:
-    name: Windfury Totem
+    textKey: spell.947339
     icon: 1397
-    auraDescription: "Your melee attacks have a 20% chance to trigger 1 extra attack with 445 attack power."
 - id: 947333
   name: Windfury Totem
   preventionType: 1   # totem summons are silence-gated in TBC/1.12 (wago PreventionType 1; WotLK made them 0) — fix round 2026-09-02, _ref totems accepted_gaps id 14
@@ -6608,12 +6533,10 @@ helpers:
   effects:
   - { effect: 28, basePoints: 4, dieSides: 1, misc: 920563, miscB: 83, targetA: 43 }
   client:
-    auraDescription: ""   # donor 8512 carries "Increases melee haste by $8515s1%."; count + sweep in _ref open_questions 15
-    name: Windfury Totem
+    textKey: spell.947333
     icon: 1397
     rank: 4
     skillLine: 373
-    description: "Summons a Windfury Totem with 5 health at the feet of the caster for 2 min that grants party and raid members within 30 yards a 20% chance on each melee hit to gain 1 extra attack with 375 attack power."
 - id: 947334
   name: Windfury Totem
   preventionType: 1   # totem summons are silence-gated in TBC/1.12 (wago PreventionType 1; WotLK made them 0) — fix round 2026-09-02, _ref totems accepted_gaps id 14
@@ -6627,12 +6550,10 @@ helpers:
   effects:
   - { effect: 28, basePoints: 4, dieSides: 1, misc: 920564, miscB: 83, targetA: 43 }
   client:
-    auraDescription: ""   # donor 8512 carries "Increases melee haste by $8515s1%."; count + sweep in _ref open_questions 15
-    name: Windfury Totem
+    textKey: spell.947334
     icon: 1397
     rank: 5
     skillLine: 373
-    description: "Summons a Windfury Totem with 5 health at the feet of the caster for 2 min that grants party and raid members within 30 yards a 20% chance on each melee hit to gain 1 extra attack with 445 attack power."
 # ===================================================================================================
 # PLAN 3b TASK 4 (2026-09-01) — the two talent-granted totems, nodes 20219 / 20256.
 # --- Totem of Wrath (family index 28, block 947350-947359, creatures 920580-920589) -----------------
@@ -6660,11 +6581,10 @@ helpers:
   effects:
   - { effect: 28, basePoints: 4, dieSides: 1, misc: 920580, miscB: 63, targetA: 44 }   # 5-hp totem (bp4+d1); FIRE slot -> FRESH creature 920580 -> minted pulse 947351
   client:
-    name: Totem of Wrath
+    textKey: spell.947350
     icon: 2019
     rank: 1
     skillLine: 375
-    description: "Summons a Totem of Wrath with 5 health at the feet of the caster for 2 min. The totem increases the chance to hit and critically strike with spells by 3% for all party and raid members within 30 yards."
 - id: 947351
   name: Totem of Wrath
   template: 30708     # inherits Attributes 320, SchoolMask 4 and word-A bit26; both effect rows authored (live is the WotLK aura-197 reshape)
@@ -6672,9 +6592,8 @@ helpers:
   - { effect: 65, aura: 57, basePoints: 3, dieSides: 0, misc: 0, targetA: 1, radius: 10 }   # MOD_SPELL_CRIT_CHANCE +3% (TBC bp 2 + DieSides 1 = EFFECTIVE 3; misc 0 per the ref -- aura 57 reads no school mask)
   - { effect: 65, aura: 55, basePoints: 3, dieSides: 0, misc: 0, targetA: 1, radius: 10 }     # MOD_SPELL_HIT_CHANCE +3%
   client:
-    name: Totem of Wrath
+    textKey: spell.947351
     icon: 2019
-    auraDescription: "Chance to hit and critically strike with spells increased by 3%."
 # --- Mana Tide Totem (family index 27, block 947340-947349) -----------------------------------------
 # ONE TBC rank (17354/17355/17359/17360 are absent from wago -- the Vanilla 3-rank chain is 1.12's).
 # SUMMON 947340 templates 16190 and authors the two survival_map divergences: `school: 16` (live 1
@@ -6703,11 +6622,10 @@ helpers:
   effects:
   - { effect: 28, basePoints: 4, dieSides: 1, misc: 10467, miscB: 82, targetA: 42 }   # 5-hp totem (bp4+d1, and the id!=16190 dodge keeps it 5); WATER slot; STOCK creature 10467 -> stock LIVE_MATCH pulse 16191 -> 39610 (%-max-mana script)
   client:
-    name: Mana Tide Totem
+    textKey: spell.947340
     icon: 94
     rank: 1
     skillLine: 374
-    description: "Summons a Mana Tide Totem with 5 health at the feet of the caster for 12 sec that restores 6% of total mana every 3 seconds to party members within 30 yards."
 # --- "Era: TBC Totems" marker (PLAN 3b TASK 5, 2026-09-01) -------------------------------------------
 # The THIRD totem-era marker, byte-copying the shipped Vanilla 932416 / WotLK 932417 shape (hidden
 # presence-only passive; era-data/vanilla/shaman.yaml documents why). Id 947440 is the first id of
@@ -6721,7 +6639,7 @@ helpers:
   effects:
   - { effect: 6, aura: 4, basePoints: 0, misc: 0, targetA: 1 }
   client:
-    name: "TBC Totems"
+    textKey: spell.947440
     icon: 1
 # --- Windfury Weapon (PLAN 3b TASK 7, 2026-09-01) — GRANT-STOCK r1-r4, ONE clone at r5 -------------
 # The plan expected five clones; the measurement forces one. Ranks 1-4 (8232/8235/10486/16362) are
@@ -6753,11 +6671,10 @@ helpers:
   - { effect: 54, basePoints: 1799, dieSides: 1, misc: 2636, targetA: 0 }   # ENCHANT_ITEM_TEMPORARY, STOCK enchant 2636 ("Windfury 5") -> stock passive 33757; bp 1799+d1 = 1800 s = the 30 min imbue
   - { effect: 0, basePoints: 444, dieSides: 1, targetA: 0 }                 # the HIDDEN AP slot (live's 445; core script reads r1 8232's, so this is carried for fidelity/tooling, not read at runtime)
   client:
-    name: Windfury Weapon
+    textKey: spell.947441
     icon: 220
     rank: 5
     skillLine: 373
-    description: "Imbue the Shaman's weapon with wind. Each hit has a 20% chance of triggering two extra attacks with 445 extra attack power. Lasts 30 minutes."
 # --- Fix-round helpers 947442-947445 (2026-09-02, tooltip-honesty round; ledger id_budget receipt) --
 # 947442 "Flametongue Attack" — the damage vehicle era_sha_flametongue_totem_proc casts with the
 # speed-normalized amount (SPELLVALUE_BASE_POINT0). Template 10444 = live's own Flametongue Attack
@@ -6775,7 +6692,7 @@ helpers:
   effects:
   - { effect: 2, basePoints: 0, dieSides: 0, targetA: 6 }
   client:
-    name: Flametongue Attack
+    textKey: spell.947442
     icon: 679
 # 947443 "Nature's Guardian" — the heal vehicle era_sha_nature_guardian casts (10% of max health via
 # SPELLVALUE_BASE_POINT0). A real SPELL_EFFECT_HEAL, TBC 31616's own delivery shape — closes
@@ -6787,7 +6704,7 @@ helpers:
   effects:
   - { effect: 10, basePoints: 0, dieSides: 0, targetA: 1 }
   client:
-    name: "Nature's Guardian"
+    textKey: spell.947443
     icon: 2013
 # 947444/947445 Elemental Focus / Clearcasting — closes shaman-spells accepted_gaps id 6 (2026-09-02
 # user call, tooltip-honesty round). The stock grant let an earned Clearcasting charge be SPENT on a
@@ -6810,22 +6727,20 @@ helpers:
     hitMask: 2          # crit only
     cooldown: 500
   client:
-    name: Elemental Focus
+    textKey: spell.947444
     icon: 212
     # The talent window renders a GRANT node's tooltip from the granted spell's own client row
     # (TalentUI.lua SetHyperlink), so this description IS the in-client talent tooltip. TBC prose
     # verbatim from the cached wowhead-TBC 16164 tooltip — "damage spells", NOT 3.3.5's "damage or
     # healing spells" (stock 16164's client string, which the pre-fix-round grant displayed).
-    description: "After landing a critical strike with a Fire, Frost, or Nature damage spell, you enter a Clearcasting state.  The Clearcasting state reduces the mana cost of your next 2 damage spells by 40%."
 - id: 947445
   name: Clearcasting
   template: 16246
   effects:
   - { effect: 6, aura: 108, basePoints: -41, dieSides: 1, misc: 14, targetA: 1, maskA: 2416967683 }
   client:
-    name: Clearcasting
+    textKey: spell.947445
     icon: 212
-    auraDescription: "Reduces the mana cost of your next 2 damage spells by 40%."
 scriptBindings:
 # NB THE INDENT: this block is a TOP-LEVEL dataset key and MUST stay at column 0, a sibling of
 # `tabs:` / `helpers:` / `_ref:`. Indented by mistake into the 4,400-line `_ref:` block below it, the

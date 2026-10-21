@@ -67,11 +67,9 @@ helpers:
   - { effect: 6, aura: 77, misc: 5,   basePoints: 100, dieSides: 0, targetA: 1 }  # MECHANIC_IMMUNITY, MECHANIC_FEAR (5)
   - { effect: 6, aura: 87, misc: 127, basePoints: 5,   dieSides: 0, targetA: 1 }  # +5% ALL damage taken (all schools)
   client:
-    name: Death Wish
+    textKey: spell.947548
     icon: 169             # stock Death Wish SpellIconID (12292, live DBC dump 2026-09-02)
     skillLine: 256        # Warrior skill line — else the granted active lands in the General tab
-    description: "When activated, increases your physical damage by 20% and makes you immune to Fear effects, but increases all damage taken by 5%.  Lasts 30 sec."
-    auraDescription: "Physical damage increased by 20%.  Immune to Fear.  All damage taken increased by 5%."
 # --- Deep Wounds TBC bleed carrier 947551 (node 20308; era_deep_wounds casts it). ----------------
 # TBC Deep Wounds = 20/40/60% of average melee weapon damage as a bleed over 12 sec, applied on a
 # crit. The carrier 12721 diverges: TBC `period 3000 ms` over DurationIndex 29 (12 000 ms) = 4
@@ -113,9 +111,8 @@ helpers:
   effects:
   - { effect: 6, aura: 3, basePoints: 0, dieSides: 0, targetA: 6, amplitude: 3000 }  # PERIODIC_DAMAGE, 3 s ticks
   client:
-    name: Deep Wound
+    textKey: spell.947551
     icon: 243               # stock Deep Wounds SpellIconID (12721, live DBC dump 2026-09-02)
-    auraDescription: "Bleeding for physical damage every 3 sec."
 # --- Mace Specialization TBC payload 947552 (node 20313 proc-triggers it). -----------------------
 # TBC 5530 "Mace Stun Effect" = a 3 sec stun (e1 aura12 MOD_STUN, spell-level Mechanic 12,
 # DurationIndex 27 = 3000 ms) PLUS the TBC-added `e2 SPELL_EFFECT_ENERGIZE val70 misc1` = 7 rage on
@@ -141,9 +138,8 @@ helpers:
   - { effect: 6,  aura: 12, basePoints: 0,  dieSides: 0, targetA: 6 }            # MOD_STUN on the enemy, 3 s
   - { effect: 30, aura: 0,  basePoints: 70, dieSides: 0, misc: 1, targetA: 1 }   # ENERGIZE 7 rage (x10), POWER_RAGE, self
   client:
-    name: Mace Stun Effect
+    textKey: spell.947552
     icon: 367               # stock 5530 SpellIconID (live DBC dump 2026-09-02)
-    auraDescription: "Stunned."
 # =================================================================================================
 # FURY (Task 7) helpers. Three families, all from the RESERVED sub-blocks plus two payload runs.
 # =================================================================================================
@@ -203,11 +199,10 @@ helpers:
   - { effect: 2,  basePoints: 45, dieSides: 0, targetA: 6 }                  # SCHOOL_DAMAGE; the script reads 45 as the AP %
   - { effect: 64, basePoints: 0,  dieSides: 0, targetA: 1, trigger: 947518 } # TRIGGER_SPELL -> heal buff r1 on the caster
   client:
-    name: Bloodthirst
+    textKey: spell.947512
     icon: 38               # stock Bloodthirst SpellIconID (23881, live DBC dump 2026-09-03)
     rank: 1
     skillLine: 256         # Warrior skill line — else the granted active lands in the client's General tab
-    description: "Instantly attack the target, causing damage equal to 45% of your attack power.  In addition, the next 5 successful melee attacks will restore 10 health.  This effect lasts 8 sec."
 - id: 947513
   name: Bloodthirst
   template: 23881
@@ -223,11 +218,10 @@ helpers:
   - { effect: 2,  basePoints: 45, dieSides: 0, targetA: 6 }
   - { effect: 64, basePoints: 0,  dieSides: 0, targetA: 1, trigger: 947519 } # -> heal buff r2
   client:
-    name: Bloodthirst
+    textKey: spell.947513
     icon: 38
     rank: 2
     skillLine: 256
-    description: "Instantly attack the target, causing damage equal to 45% of your attack power.  In addition, the next 5 successful melee attacks will restore 13 health.  This effect lasts 8 sec."
 - id: 947514
   name: Bloodthirst
   template: 23881
@@ -243,11 +237,10 @@ helpers:
   - { effect: 2,  basePoints: 45, dieSides: 0, targetA: 6 }
   - { effect: 64, basePoints: 0,  dieSides: 0, targetA: 1, trigger: 947520 } # -> heal buff r3
   client:
-    name: Bloodthirst
+    textKey: spell.947514
     icon: 38
     rank: 3
     skillLine: 256
-    description: "Instantly attack the target, causing damage equal to 45% of your attack power.  In addition, the next 5 successful melee attacks will restore 17 health.  This effect lasts 8 sec."
 - id: 947515
   name: Bloodthirst
   template: 23881
@@ -263,11 +256,10 @@ helpers:
   - { effect: 2,  basePoints: 45, dieSides: 0, targetA: 6 }
   - { effect: 64, basePoints: 0,  dieSides: 0, targetA: 1, trigger: 947521 } # -> heal buff r4
   client:
-    name: Bloodthirst
+    textKey: spell.947515
     icon: 38
     rank: 4
     skillLine: 256
-    description: "Instantly attack the target, causing damage equal to 45% of your attack power.  In addition, the next 5 successful melee attacks will restore 20 health.  This effect lasts 8 sec."
 - id: 947516
   name: Bloodthirst
   template: 23881
@@ -283,11 +275,10 @@ helpers:
   - { effect: 2,  basePoints: 45, dieSides: 0, targetA: 6 }
   - { effect: 64, basePoints: 0,  dieSides: 0, targetA: 1, trigger: 947522 } # -> heal buff r5
   client:
-    name: Bloodthirst
+    textKey: spell.947516
     icon: 38
     rank: 5
     skillLine: 256
-    description: "Instantly attack the target, causing damage equal to 45% of your attack power.  In addition, the next 5 successful melee attacks will restore 25 health.  This effect lasts 8 sec."
 - id: 947517
   name: Bloodthirst
   template: 23881
@@ -303,11 +294,10 @@ helpers:
   - { effect: 2,  basePoints: 45, dieSides: 0, targetA: 6 }
   - { effect: 64, basePoints: 0,  dieSides: 0, targetA: 1, trigger: 947523 } # -> heal buff r6
   client:
-    name: Bloodthirst
+    textKey: spell.947517
     icon: 38
     rank: 6
     skillLine: 256
-    description: "Instantly attack the target, causing damage equal to 45% of your attack power.  In addition, the next 5 successful melee attacks will restore 30 health.  This effect lasts 8 sec."
 # --- Bloodthirst heal BUFFS 947518-947523 (applied by the matching damage clone's TRIGGER_SPELL). -
 # Clone stock 23885 to inherit the proven aura-42 PROC_TRIGGER_SPELL vehicle + DurationIndex 31
 # (8 000 ms) + SpellIconID 38, then override: `family: 0` (a buff carries no identity bit; keeps it
@@ -325,9 +315,8 @@ helpers:
   proc:
     flags: 20              # 0x14 DONE_MELEE_AUTO_ATTACK | DONE_SPELL_MELEE_DMG_CLASS
   client:
-    name: Bloodthirst
+    textKey: spell.947518
     icon: 38
-    auraDescription: "The next 5 successful melee attacks restore 10 health.  Lasts 8 sec."
 - id: 947519
   name: Bloodthirst
   template: 23885
@@ -338,9 +327,8 @@ helpers:
   proc:
     flags: 20
   client:
-    name: Bloodthirst
+    textKey: spell.947519
     icon: 38
-    auraDescription: "The next 5 successful melee attacks restore 13 health.  Lasts 8 sec."
 - id: 947520
   name: Bloodthirst
   template: 23885
@@ -351,9 +339,8 @@ helpers:
   proc:
     flags: 20
   client:
-    name: Bloodthirst
+    textKey: spell.947520
     icon: 38
-    auraDescription: "The next 5 successful melee attacks restore 17 health.  Lasts 8 sec."
 - id: 947521
   name: Bloodthirst
   template: 23885
@@ -364,9 +351,8 @@ helpers:
   proc:
     flags: 20
   client:
-    name: Bloodthirst
+    textKey: spell.947521
     icon: 38
-    auraDescription: "The next 5 successful melee attacks restore 20 health.  Lasts 8 sec."
 - id: 947522
   name: Bloodthirst
   template: 23885
@@ -377,9 +363,8 @@ helpers:
   proc:
     flags: 20
   client:
-    name: Bloodthirst
+    textKey: spell.947522
     icon: 38
-    auraDescription: "The next 5 successful melee attacks restore 25 health.  Lasts 8 sec."
 - id: 947523
   name: Bloodthirst
   template: 23885
@@ -390,9 +375,8 @@ helpers:
   proc:
     flags: 20
   client:
-    name: Bloodthirst
+    textKey: spell.947523
     icon: 38
-    auraDescription: "The next 5 successful melee attacks restore 30 health.  Lasts 8 sec."
 # --- Bloodthirst FLAT heal payloads 947524-947529 (triggered by the matching heal buff's proc). ---
 # Clone stock 23880 for its SPELL_EFFECT_HEAL vehicle / instant cast / self range, then override
 # `family: 0` (sweep escape) and the heal to TBC's FLAT per-rank amount. The stock core script
@@ -411,7 +395,7 @@ helpers:
   attributesEx2: 0         # TBC 23880 attr2 = 0; live adds 0x20000000 SPELL_ATTR2_CANT_CRIT
   effects:
   - { effect: 10, aura: 0, basePoints: 10, dieSides: 0, targetA: 1 }   # SPELL_EFFECT_HEAL flat 10, self
-  client: { name: Bloodthirst, icon: 38 }
+  client: {textKey: spell.947524, icon: 38}
 - id: 947525
   name: Bloodthirst
   template: 23880
@@ -419,7 +403,7 @@ helpers:
   attributesEx2: 0
   effects:
   - { effect: 10, aura: 0, basePoints: 13, dieSides: 0, targetA: 1 }   # flat 13
-  client: { name: Bloodthirst, icon: 38 }
+  client: {textKey: spell.947525, icon: 38}
 - id: 947526
   name: Bloodthirst
   template: 23880
@@ -427,7 +411,7 @@ helpers:
   attributesEx2: 0
   effects:
   - { effect: 10, aura: 0, basePoints: 17, dieSides: 0, targetA: 1 }   # flat 17
-  client: { name: Bloodthirst, icon: 38 }
+  client: {textKey: spell.947526, icon: 38}
 - id: 947527
   name: Bloodthirst
   template: 23880
@@ -435,7 +419,7 @@ helpers:
   attributesEx2: 0
   effects:
   - { effect: 10, aura: 0, basePoints: 20, dieSides: 0, targetA: 1 }   # flat 20
-  client: { name: Bloodthirst, icon: 38 }
+  client: {textKey: spell.947527, icon: 38}
 - id: 947528
   name: Bloodthirst
   template: 23880
@@ -443,7 +427,7 @@ helpers:
   attributesEx2: 0
   effects:
   - { effect: 10, aura: 0, basePoints: 25, dieSides: 0, targetA: 1 }   # flat 25 (TBC-only rank)
-  client: { name: Bloodthirst, icon: 38 }
+  client: {textKey: spell.947528, icon: 38}
 - id: 947529
   name: Bloodthirst
   template: 23880
@@ -451,7 +435,7 @@ helpers:
   attributesEx2: 0
   effects:
   - { effect: 10, aura: 0, basePoints: 30, dieSides: 0, targetA: 1 }   # flat 30 (TBC-only rank)
-  client: { name: Bloodthirst, icon: 38 }
+  client: {textKey: spell.947529, icon: 38}
 # =================================================================================================
 # --- RAMPAGE reconstruction 947533-947540 (node 20343 grants r1; r2/r3 trainer-taught at 60/70). --
 # The phase's flagged reconstruction. WotLK's 29801 is a PASSIVE that grants the party +5% weapon
@@ -517,12 +501,10 @@ helpers:
     flags: 20              # same 0x14 as the DBC column; an explicit row also pins type/phase
     chance: 100
   client:
-    name: Rampage
+    textKey: spell.947533
     icon: 2006             # stock Rampage SpellIconID (29801, live DBC dump 2026-09-03)
     rank: 1
     skillLine: 256         # Warrior skill line — else the granted active lands in the General tab
-    description: "Warrior goes on a rampage, increasing attack power by 30 and causing most successful melee attacks to increase attack power by an additional 30.  This effect will stack up to 5 times.  Lasts 30 sec.  This ability can only be used after scoring a critical hit."
-    auraDescription: "Most melee hits increase the warrior's attack power."
 - id: 947534
   name: Rampage
   template: 12292
@@ -546,12 +528,10 @@ helpers:
     flags: 20
     chance: 100
   client:
-    name: Rampage
+    textKey: spell.947534
     icon: 2006
     rank: 2
     skillLine: 256
-    description: "Warrior goes on a rampage, increasing attack power by 40 and causing most successful melee attacks to increase attack power by an additional 40.  This effect will stack up to 5 times.  Lasts 30 sec.  This ability can only be used after scoring a critical hit."
-    auraDescription: "Most melee hits increase the warrior's attack power."
 - id: 947535
   name: Rampage
   template: 12292
@@ -575,12 +555,10 @@ helpers:
     flags: 20
     chance: 100
   client:
-    name: Rampage
+    textKey: spell.947535
     icon: 2006
     rank: 3
     skillLine: 256
-    description: "Warrior goes on a rampage, increasing attack power by 50 and causing most successful melee attacks to increase attack power by an additional 50.  This effect will stack up to 5 times.  Lasts 30 sec.  This ability can only be used after scoring a critical hit."
-    auraDescription: "Most melee hits increase the warrior's attack power."
 # --- Rampage stacking AP buffs 947536-947538 (TBC 30029/30031/30032, WAGO_ONLY). ------------------
 # FROM SCRATCH: TBC's own ids do not exist in the live store at all, so there is nothing to clone.
 # `stackAmount: 5` -> the DBC CumulativeAura column (`StackAmount` is only the C++ field name and a
@@ -600,9 +578,8 @@ helpers:
   effects:
   - { effect: 6, aura: 99, basePoints: 30, dieSides: 0, targetA: 1 }   # MOD_ATTACK_POWER +30 per stack
   client:
-    name: Rampage
+    textKey: spell.947536
     icon: 2006
-    auraDescription: "Attack power increased by 30 per application.  Stacks up to 5 times."
 - id: 947537
   name: Rampage
   attributesEx3: 196608
@@ -615,9 +592,8 @@ helpers:
   effects:
   - { effect: 6, aura: 99, basePoints: 40, dieSides: 0, targetA: 1 }   # +40 per stack
   client:
-    name: Rampage
+    textKey: spell.947537
     icon: 2006
-    auraDescription: "Attack power increased by 40 per application.  Stacks up to 5 times."
 - id: 947538
   name: Rampage
   attributesEx3: 196608
@@ -630,9 +606,8 @@ helpers:
   effects:
   - { effect: 6, aura: 99, basePoints: 50, dieSides: 0, targetA: 1 }   # +50 per stack
   client:
-    name: Rampage
+    textKey: spell.947538
     icon: 2006
-    auraDescription: "Attack power increased by 50 per application.  Stacks up to 5 times."
 # --- Rampage crit WATCHER 947539 + the "Rampage Ready" window 947540. -----------------------------
 # The pair that reproduces TBC's "can only be used after scoring a critical hit" without the dead
 # CasterAuraState 11. wowsims/tbc (sim/warrior/rampage.go) sets `rampageValidUntil = CurrentTime + 5s`
@@ -671,9 +646,8 @@ helpers:
   effects:
   - { effect: 6, aura: 4, basePoints: 0, dieSides: 0, misc: 0, targetA: 1 }   # inert DUMMY, misc 0 (NOT a registry marker)
   client:
-    name: Rampage Ready
+    textKey: spell.947540
     icon: 2006
-    auraDescription: "Rampage may be used."
 # =================================================================================================
 # --- Sweeping Strikes TBC clone 947549 (node 20335 grants it). ------------------------------------
 # _ref node_buckets.clone[20335] + open_questions.sweeping_strikes_duration. Live 12328 diverges on
@@ -721,11 +695,9 @@ helpers:
     phaseMask: 2           # PROC_SPELL_PHASE_HIT, as the stock row
     attrMask: 2            # PROC_ATTR_TRIGGERED_CAN_PROC — triggered melee casts may consume a charge
   client:
-    name: Sweeping Strikes
+    textKey: spell.947549
     icon: 515              # stock Sweeping Strikes SpellIconID (12328, live DBC dump 2026-09-03)
     skillLine: 256         # Warrior skill line — else the granted active lands in the General tab
-    description: "Your next 10 melee attacks strike an additional nearby opponent."
-    auraDescription: "Your next 10 melee attacks strike an additional nearby opponent."
 # =================================================================================================
 # --- Blood Craze regen payloads 947553-947555 (node 20329 proc-triggers them). ---------------------
 # _ref node_buckets.authored_plus_helper[20329]: the payloads diverge on TICK CADENCE only — TBC
@@ -744,27 +716,24 @@ helpers:
   effects:
   - { effect: 6, aura: 20, basePoints: 1, dieSides: 0, targetA: 1, amplitude: 6000 }  # 1 tick of 1% over 6 s
   client:
-    name: Blood Craze
+    textKey: spell.947553
     icon: 215              # stock Blood Craze SpellIconID (16488, live DBC dump 2026-09-03)
-    auraDescription: "Regenerating 1% of total health over 6 sec."
 - id: 947554
   name: Blood Craze
   template: 16490
   effects:
   - { effect: 6, aura: 20, basePoints: 1, dieSides: 0, targetA: 1, amplitude: 3000 }  # 2 ticks of 1% over 6 s
   client:
-    name: Blood Craze
+    textKey: spell.947554
     icon: 215
-    auraDescription: "Regenerating 2% of total health over 6 sec."
 - id: 947555
   name: Blood Craze
   template: 16491
   effects:
   - { effect: 6, aura: 20, basePoints: 1, dieSides: 0, targetA: 1, amplitude: 2000 }  # 3 ticks of 1% over 6 s
   client:
-    name: Blood Craze
+    textKey: spell.947555
     icon: 215
-    auraDescription: "Regenerating 3% of total health over 6 sec."
 # --- Enrage melee-damage buffs 947556-947560 (node 20333 proc-triggers them). ----------------------
 # _ref reuse_ledger 932815-819 calls this "the closest call in the ledger": the Vanilla clones carry
 # the IDENTICAL magnitudes (+5/10/15/20/25%) and duration/charges/category, and differ only in the
@@ -796,9 +765,8 @@ helpers:
   effects:
   - { effect: 6, aura: 79, basePoints: 5, dieSides: 0, misc: 1, targetA: 1 }   # MOD_DAMAGE_PERCENT_DONE +5% physical
   client:
-    name: Enrage
+    textKey: spell.947556
     icon: 95               # stock Enrage SpellIconID (12880, live DBC dump 2026-09-03)
-    auraDescription: "Melee damage increased by 5%."
 - id: 947557
   name: Enrage
   template: 14201
@@ -810,9 +778,8 @@ helpers:
   effects:
   - { effect: 6, aura: 79, basePoints: 10, dieSides: 0, misc: 1, targetA: 1 }
   client:
-    name: Enrage
+    textKey: spell.947557
     icon: 95
-    auraDescription: "Melee damage increased by 10%."
 - id: 947558
   name: Enrage
   template: 14202
@@ -824,9 +791,8 @@ helpers:
   effects:
   - { effect: 6, aura: 79, basePoints: 15, dieSides: 0, misc: 1, targetA: 1 }
   client:
-    name: Enrage
+    textKey: spell.947558
     icon: 95
-    auraDescription: "Melee damage increased by 15%."
 - id: 947559
   name: Enrage
   template: 14203
@@ -838,9 +804,8 @@ helpers:
   effects:
   - { effect: 6, aura: 79, basePoints: 20, dieSides: 0, misc: 1, targetA: 1 }
   client:
-    name: Enrage
+    textKey: spell.947559
     icon: 95
-    auraDescription: "Melee damage increased by 20%."
 - id: 947560
   name: Enrage
   template: 14204
@@ -852,9 +817,8 @@ helpers:
   effects:
   - { effect: 6, aura: 79, basePoints: 25, dieSides: 0, misc: 1, targetA: 1 }
   client:
-    name: Enrage
+    textKey: spell.947560
     icon: 95
-    auraDescription: "Melee damage increased by 25%."
 # =================================================================================================
 # PROTECTION (Task 8) helpers. Six families: the two reserved capstone/ability CLONE CHAINS
 # (Devastate 947530-947532, Shield Slam 947541-947546), the two reserved single-rank clones
@@ -951,7 +915,7 @@ helpers:
   template: 23602         # inherit the ENERGIZE vehicle / instant / self range / icon 689 / family 0
   effects:
   - { effect: 30, aura: 0, basePoints: 10, dieSides: 0, misc: 1, targetA: 1 }   # ENERGIZE 1 rage (10 = x10), POWER_RAGE
-  client: { name: Shield Specialization, icon: 689 }
+  client: {textKey: spell.947566, icon: 689}
 # --- Last Stand TBC clone 947547 (node 20349 grants it). -------------------------------------------
 # _ref node_buckets.clone[20349] + capstone_chains.last_stand. The +30%-max-HP-for-20s MECHANIC is
 # identical TBC->WotLK, but it is SCRIPT-BOUND: stock 12975's Effect_1 DUMMY (raw 29 / dieSides 1 ->
@@ -991,10 +955,9 @@ helpers:
   effects:
   - { effect: 3, aura: 0, basePoints: 30, dieSides: 0, targetA: 1 }   # DUMMY; era_last_stand reads 30 and casts 12976
   client:
-    name: Last Stand
+    textKey: spell.947547
     icon: 177              # stock Last Stand SpellIconID (12975, live DBC dump 2026-09-03)
     skillLine: 256         # Warrior skill line — else the granted active lands in the client's General tab
-    description: "When activated, this ability temporarily grants you 30% of your maximum health for 20 sec.  After the effect expires, the health is lost."
 # --- Concussion Blow TBC clone 947550 (node 20357 grants it). --------------------------------------
 # _ref node_buckets.clone[20357]. TBC Concussion Blow is STUN-ONLY: the cached Wowhead TBC tooltip
 # for 12809 reads "Stuns the opponent for 5 sec." and nothing else, and wago 2.5.4 has no e2/e3 row.
@@ -1032,11 +995,9 @@ helpers:
   effects:
   - { effect: 6, aura: 12, basePoints: 0, dieSides: 0, targetA: 6 }   # MOD_STUN 5 s; live's e2 damage + e3 %AP DUMMY are 0-filled
   client:
-    name: Concussion Blow
+    textKey: spell.947550
     icon: 25               # stock Concussion Blow SpellIconID (12809, live DBC dump 2026-09-03)
     skillLine: 256         # Warrior skill line — else the granted active lands in the General tab
-    description: "Stuns the opponent for 5 sec."
-    auraDescription: "Stunned."
 # --- Improved Shield Bash silence payload 947567 (node 20358 proc-triggers it). --------------------
 # _ref node_buckets.authored_plus_helper[20358] + id_repurposing. The talent rows 12311/12958 are
 # DIVERGED **and** REPURPOSED (live = "Gag Order", a different talent shape), and so is the payload:
@@ -1081,9 +1042,8 @@ helpers:
   effects:
   - { effect: 6, aura: 27, basePoints: 1, dieSides: 0, targetA: 6 }   # MOD_SILENCE, 3 s, on the target
   client:
-    name: Shield Bash - Silenced
+    textKey: spell.947567
     icon: 280              # stock 18498 SpellIconID (live DBC dump 2026-09-03)
-    auraDescription: "Silenced."
 # --- Shield Slam TBC clone chain 947541-947546 (node 20362 grants r1; r2-r6 trainer-taught). -------
 # _ref capstone_chains.shield_slam: DIVERGED on EVERY TBC-reachable rank. The per-rank damage is the
 # whole divergence, and it is a RANGE, so both the base and the die-sides are authored. BOTH SIDES'
@@ -1128,11 +1088,10 @@ helpers:
   - { effect: 38, aura: 0, basePoints: 1,   dieSides: 0,  misc: 1, targetA: 6 }   # DISPEL 1 magic effect
   - { effect: 2,  aura: 0, basePoints: 224, dieSides: 11,          targetA: 6 }   # SCHOOL_DAMAGE 225-235 (live 294-308)
   client:
-    name: Shield Slam
+    textKey: spell.947541
     icon: 413              # stock Shield Slam SpellIconID (23922, live DBC dump 2026-09-03)
     rank: 1
     skillLine: 256         # Warrior skill line — else the granted active lands in the General tab
-    description: "Slam the target with your shield, causing 225 to 235 damage, modified by your shield block value, and dispels 1 magic effect on the target.  Also causes a high amount of threat."
 - id: 947542
   name: Shield Slam
   template: 23923
@@ -1144,11 +1103,10 @@ helpers:
   - { effect: 38, aura: 0, basePoints: 1,   dieSides: 0,  misc: 1, targetA: 6 }
   - { effect: 2,  aura: 0, basePoints: 263, dieSides: 13,          targetA: 6 }   # 264-276 (live 346-362)
   client:
-    name: Shield Slam
+    textKey: spell.947542
     icon: 413
     rank: 2
     skillLine: 256
-    description: "Slam the target with your shield, causing 264 to 276 damage, modified by your shield block value, and dispels 1 magic effect on the target.  Also causes a high amount of threat."
 - id: 947543
   name: Shield Slam
   template: 23924
@@ -1160,11 +1118,10 @@ helpers:
   - { effect: 38, aura: 0, basePoints: 1,   dieSides: 0,  misc: 1, targetA: 6 }
   - { effect: 2,  aura: 0, basePoints: 302, dieSides: 15,          targetA: 6 }   # 303-317 (live 396-416)
   client:
-    name: Shield Slam
+    textKey: spell.947543
     icon: 413
     rank: 3
     skillLine: 256
-    description: "Slam the target with your shield, causing 303 to 317 damage, modified by your shield block value, and dispels 1 magic effect on the target.  Also causes a high amount of threat."
 - id: 947544
   name: Shield Slam
   template: 23925
@@ -1176,11 +1133,10 @@ helpers:
   - { effect: 38, aura: 0, basePoints: 1,   dieSides: 0,  misc: 1, targetA: 6 }
   - { effect: 2,  aura: 0, basePoints: 341, dieSides: 17,          targetA: 6 }   # 342-358 (live 447-469)
   client:
-    name: Shield Slam
+    textKey: spell.947544
     icon: 413
     rank: 4
     skillLine: 256
-    description: "Slam the target with your shield, causing 342 to 358 damage, modified by your shield block value, and dispels 1 magic effect on the target.  Also causes a high amount of threat."
 - id: 947545
   name: Shield Slam
   template: 25258
@@ -1192,11 +1148,10 @@ helpers:
   - { effect: 38, aura: 0, basePoints: 1,   dieSides: 0,  misc: 1, targetA: 6 }
   - { effect: 2,  aura: 0, basePoints: 380, dieSides: 19,          targetA: 6 }   # 381-399 (live 499-523)
   client:
-    name: Shield Slam
+    textKey: spell.947545
     icon: 413
     rank: 5
     skillLine: 256
-    description: "Slam the target with your shield, causing 381 to 399 damage, modified by your shield block value, and dispels 1 magic effect on the target.  Also causes a high amount of threat."
 - id: 947546
   name: Shield Slam
   template: 30356
@@ -1208,11 +1163,10 @@ helpers:
   - { effect: 38, aura: 0, basePoints: 1,   dieSides: 0,  misc: 1, targetA: 6 }
   - { effect: 2,  aura: 0, basePoints: 419, dieSides: 21,          targetA: 6 }   # 420-440 (live 549-577)
   client:
-    name: Shield Slam
+    textKey: spell.947546
     icon: 413
     rank: 6
     skillLine: 256
-    description: "Slam the target with your shield, causing 420 to 440 damage, modified by your shield block value, and dispels 1 magic effect on the target.  Also causes a high amount of threat."
 # --- Devastate TBC clone chain 947530-947532 (node 20365 grants r1; r2/r3 trainer-taught at 60/70). -
 # _ref capstone_chains.devastate — "the largest single divergence in the tree after Rampage", and the
 # phase's most dangerous node because the mechanism that makes it work is NOT in spell_script_names.
@@ -1269,11 +1223,10 @@ helpers:
   - { effect: 0 }                                                       # slot 2 EMPTY — the per-Sunder bonus must sit in slot 3
   - { effect: 121, aura: 0, basePoints: 15, dieSides: 0, targetA: 6 }   # NORMALIZED_WEAPON_DMG +15 per Sunder; the core reads CalculateSpellDamage(2,...) = THIS slot
   client:
-    name: Devastate
+    textKey: spell.947530
     icon: 1508             # stock Devastate SpellIconID (20243, live DBC dump 2026-09-03)
     rank: 1
     skillLine: 256         # Warrior skill line — else the granted active lands in the General tab
-    description: "Sunder the target's armor causing the Sunder Armor effect.  In addition, causes 50% of weapon damage plus 15 for each application of Sunder Armor on the target.  The Sunder Armor effect can stack up to 5 times."
 - id: 947531
   name: Devastate
   template: 30016
@@ -1286,11 +1239,10 @@ helpers:
   - { effect: 0 }
   - { effect: 121, aura: 0, basePoints: 25, dieSides: 0, targetA: 6 }   # +25 per Sunder (live 96)
   client:
-    name: Devastate
+    textKey: spell.947531
     icon: 1508
     rank: 2
     skillLine: 256
-    description: "Sunder the target's armor causing the Sunder Armor effect.  In addition, causes 50% of weapon damage plus 25 for each application of Sunder Armor on the target.  The Sunder Armor effect can stack up to 5 times."
 - id: 947532
   name: Devastate
   template: 30022
@@ -1303,11 +1255,10 @@ helpers:
   - { effect: 0 }
   - { effect: 121, aura: 0, basePoints: 35, dieSides: 0, targetA: 6 }   # +35 per Sunder (live 134)
   client:
-    name: Devastate
+    textKey: spell.947532
     icon: 1508
     rank: 3
     skillLine: 256
-    description: "Sunder the target's armor causing the Sunder Armor effect.  In addition, causes 50% of weapon damage plus 35 for each application of Sunder Armor on the target.  The Sunder Armor effect can stack up to 5 times."
 # =================================================================================================
 # Module/core scripts bound to band ids this dataset owns. (A node-level `proc-scripted` mechanic
 # emits its own spell_script_names row — node 20308 Deep Wounds — so this list covers only spells
@@ -1379,9 +1330,8 @@ helpers:
   effects:
   - { effect: 6, aura: 87, basePoints: 1, dieSides: 1, misc: 1, targetA: 6 }   # +2% physical damage taken (byte-identical to stock 30069)
   client:
-    name: Blood Frenzy
+    textKey: spell.947568
     icon: 2005             # stock Blood Frenzy SpellIconID (30069, live DBC dump 2026-09-06)
-    auraDescription: "Increases physical damage taken by 2%."
 
 - id: 947569
   name: Blood Frenzy
@@ -1390,9 +1340,8 @@ helpers:
   effects:
   - { effect: 6, aura: 87, basePoints: 3, dieSides: 1, misc: 1, targetA: 6 }   # +4% physical damage taken (byte-identical to stock 30070)
   client:
-    name: Blood Frenzy
+    textKey: spell.947569
     icon: 2005
-    auraDescription: "Increases physical damage taken by 4%."
 
 scriptBindings:
 - { spell: 947512, script: era_bloodthirst_vanilla }       # Bloodthirst r1 (node 20340 grants it)

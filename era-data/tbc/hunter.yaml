@@ -50,7 +50,7 @@ helpers:
   effects:
   - { effect: 6, aura: 4, basePoints: 0, misc: 0, targetA: 1 }
   client:
-    name: "TBC Hunter"
+    textKey: spell.948280
     icon: 1
 # TBC Scorpid Sting (spec §1 + Amendment A.1): stock 3043 is WotLK's -3% hit (base -4, die 1); TBC is -5%
 # (base -6, die 1) at ManaCostPct 9 (live 11). Trainer-taught (TrainerId 7, L22, 6000c = the stock row's
@@ -67,11 +67,9 @@ helpers:
   effects:
   - { effect: 6, aura: 54, basePoints: -6, dieSides: 1, misc: 0, targetA: 6 }   # MOD_HIT_CHANCE -5%
   client:
-    name: Scorpid Sting
+    textKey: spell.948281
     icon: 256              # stock Scorpid Sting SpellIconID (3043)
     skillLine: 163         # Marksmanship tab (SkillLineAbility 3043 -> 163)
-    description: "Stings the target, reducing chance to hit with melee and ranged attacks by 5% for 20 sec.  Only one Sting per Hunter can be active on any one target."
-    auraDescription: "Chance to hit with melee and ranged attacks reduced by 5%."
 # === Beast Mastery (948290-948329) ================================================================
 # Allocated IN ORDER by Task 6. USED: 948290-948303 (14 ids). FREE within the partition: 948304-948329.
 #   948290       Bestial Wrath clone (node 20617)
@@ -128,11 +126,9 @@ helpers:
   - { effect: 6, aura: 79, basePoints: 49, dieSides: 1, misc: 127, targetA: 5 }  # MOD_DAMAGE_PERCENT_DONE +50 all schools
   - { effect: 6, aura: 77, basePoints: -1, dieSides: 1, misc: 12, targetA: 5 }   # MECHANIC_IMMUNITY (stun)
   client:
-    name: Bestial Wrath
+    textKey: spell.948290
     icon: 1680             # stock 19574 SpellIconID
     skillLine: 50          # Beast Mastery tab (stock 19574's SkillLine)
-    description: "Send your pet into a rage causing 50% additional damage for 18 sec. While enraged, the beast does not feel pity or remorse or fear and it cannot be stopped unless killed."
-    auraDescription: "Enraged."
 # --- The Beast Within (node 20620) — TWO clones + a module arm -----------------------------------
 # survival_map 34692 (DIVERGED): LIVE 34692 carries the +10% damage ITSELF (e1 aura 79 misc 127 +10),
 # so granting stock would hand a TBC hunter a PERMANENT +10% damage. TBC 34692 is a bare DUMMY whose
@@ -154,10 +150,9 @@ helpers:
   - { effect: 6, aura: 4, basePoints: -1, dieSides: 1, targetA: 1 }   # APPLY_AURA(DUMMY) on self, value 0
   client:                  # REQUIRED: the node GRANTS this clone in place of stock 34692, and the
                            # talent panel renders the granted spell's own client tooltip (lesson 17d).
-    name: The Beast Within
+    textKey: spell.948291
     icon: 2229             # stock 34692 SpellIconID
     skillLine: 50          # Beast Mastery tab
-    description: "When your pet is under the effects of Bestial Wrath, you also go into a rage causing 10% additional damage and reducing mana costs of all spells by 20% for 18 sec. While enraged, you do not feel pity or remorse or fear and you cannot be stopped unless killed."
 - id: 948292
   name: The Beast Within
   template: 34471          # CLONE the OWNER buff — inherits Attributes 0x10000, AttributesEx 0x28400
@@ -174,14 +169,12 @@ helpers:
   - { effect: 6, aura: 79, basePoints: 9,   dieSides: 1, misc: 127, targetA: 1 }  # MOD_DAMAGE_PERCENT_DONE +10%
   - { effect: 6, aura: 77, basePoints: -1,  dieSides: 1, misc: 12,  targetA: 1 }  # MECHANIC_IMMUNITY (stun)
   client:                  # the player SEES this buff — never node-granted, cast by the module arm
-    name: The Beast Within
+    textKey: spell.948292
     icon: 2229             # stock 34471 SpellIconID
     # `description` is authored only to displace the template's inherited text, which contains
     # `$34471s1%`/`$34471s2%` self-references the client resolves against the LIVE 34471 row (-50%
     # mana cost). Nothing renders it today (no spellbook entry, and a buff tooltip reads
     # AuraDescription), but a stale WotLK number is not worth carrying — lesson 7.
-    description: "When your pet is under the effects of Bestial Wrath, you also go into a rage causing 10% additional damage and reducing mana costs of all spells by 20% for 18 sec. While enraged, you do not feel pity or remorse or fear and you cannot be stopped unless killed."
-    auraDescription: "Damage increased by 10% and mana costs reduced by 20%. Cannot be stopped unless killed."
 # --- Spirit Bond pet-side carriers (node 20611, petBuffIds) --------------------------------------
 # survival_map 19578/20895 + 19579/24529: the TBC talent is a bare DUMMY (the pet-aura registration
 # hook) and the TBC carriers are the regen effect ONLY — effect 119 APPLY_AREA_AURA_PET, aura 20
@@ -204,9 +197,8 @@ helpers:
     radius: 12             # EffectRadiusIndex 12 = 100 yd (stock encoding)
     amplitude: 10000       # 10 s tick (explicit; the template carries the same)
   client:
-    name: Spirit Bond
+    textKey: spell.948293
     icon: 960              # stock Spirit Bond SpellIconID
-    auraDescription: "You and your pet will regenerate 1% of total health every 10 sec."
 - id: 948294
   name: Spirit Bond
   template: 19579          # rank 2 clones the SAME template (24529 differs only in basePoints)
@@ -215,9 +207,8 @@ helpers:
   effects:
   - { effect: 119, aura: 20, basePoints: 2, targetA: 1, radius: 12, amplitude: 10000 }
   client:
-    name: Spirit Bond
+    textKey: spell.948294
     icon: 960
-    auraDescription: "You and your pet will regenerate 2% of total health every 10 sec."
 # --- Ferocious Inspiration (node 20616) — full RECONSTRUCTION (spec Amendment A.11) --------------
 # Both halves of TBC's delivery are WAGO_ONLY (absent from the 3.3.5a Spell.dbc): the pet-side proc
 # carrier 34457 (aura 42 PROC_TRIGGER_SPELL -> 34456, ProcTypeMask 69972 = every "damage done"
@@ -289,9 +280,8 @@ helpers:
     targetA: 20            # TARGET_UNIT_CASTER_AREA_PARTY (the pet's party = its owner's group)
     radius: 12             # EffectRadiusIndex 12 = 100 yd
   client:
-    name: Ferocious Inspiration
+    textKey: spell.948298
     icon: 2232             # stock 34455 SpellIconID (34456 is absent from the 3.3.5a DBC)
-    auraDescription: "All damage caused increased by 1%."
 - id: 948299
   name: Ferocious Inspiration
   attributes: 0
@@ -302,9 +292,8 @@ helpers:
   effects:
   - { effect: 6, aura: 79, basePoints: 2, misc: 127, targetA: 20, radius: 12 }
   client:
-    name: Ferocious Inspiration
+    textKey: spell.948299
     icon: 2232
-    auraDescription: "All damage caused increased by 2%."
 - id: 948300
   name: Ferocious Inspiration
   attributes: 0
@@ -315,9 +304,8 @@ helpers:
   effects:
   - { effect: 6, aura: 79, basePoints: 3, misc: 127, targetA: 20, radius: 12 }
   client:
-    name: Ferocious Inspiration
+    textKey: spell.948300
     icon: 2232
-    auraDescription: "All damage caused increased by 3%."
 # --- Bestial Swiftness (node 20607) — the OWNER-held spellmod (spec Amendment A.2) ---------------
 # survival_map 19596 (DIVERGED, and an id REPURPOSE): TBC 19596 IS "Bestial Swiftness" and is an
 # owner-held SPELLMOD — aura 107 ADD_FLAT_MODIFIER, EffectMiscValue 8 SPELLMOD_ALL_EFFECTS, +30,
@@ -341,10 +329,9 @@ helpers:
                            # ADD_FLAT_MODIFIER +30, SPELLMOD_ALL_EFFECTS, masked to Tamed Pet
                            # Passive 04 (19582). maskA = EffectSpellClassMaskA_1 = family word0.
   client:                  # the node GRANTS this clone, so the talent panel renders ITS description
-    name: Bestial Swiftness
+    textKey: spell.948301
     icon: 1578             # stock 19596 SpellIconID (the id TBC names "Bestial Swiftness")
     skillLine: 50          # Beast Mastery tab
-    description: "Increases the outdoor movement speed of your pets by 30%."
 # --- Focused Fire pet-side carriers (node 20602, petBuffIds) -------------------------------------
 # survival_map 35060/35061: effect 119 APPLY_AREA_AURA_PET aura 79 MOD_DAMAGE_PERCENT_DONE +1/+2%
 # (radius index 12) fills the pet AND its owner, and effect 2 is a plain aura-79 -1/-2% on the PET
@@ -394,6 +381,7 @@ helpers:
 # the CORE `spell_hun_wyvern_sting` resolves its DoT with GetSpellWithRank(24131, GetRank()) and would
 # read rank N of the STOCK chain, so it is deliberately NOT rebound (framework lesson 6's exception).
 - id: 948330
+  manaCostPct: 0
   name: Wyvern Sting
   template: 19386          # CLONE stock rank 1 — inherits range/mechanic/dispel/visual/level 40
   durationIndex: 29        # TBC 12 s sleep (SpellDuration idx 29 = 12000; stock idx 9 = 30000)
@@ -403,13 +391,12 @@ helpers:
   effects:
   - { effect: 6, aura: 12, basePoints: -1, dieSides: 1, targetA: 6 }   # MOD_STUN (sleep), stock encoding
   client:
-    name: Wyvern Sting
+    textKey: spell.948330
     rank: 1
     icon: 1721             # stock 19386 SpellIconID — LOAD-BEARING for DIMINISHING_DISORIENT
     skillLine: 51          # Survival tab (SkillLineAbility 19386 -> 51)
-    description: "A stinging shot that puts the target to sleep for 12 sec.  Any damage will cancel the effect.  When the target wakes up, the Sting causes 300 Nature damage over 12 sec.  Only one Sting per Hunter can be active on the target at a time."
-    auraDescription: "Asleep.  Any damage will cancel the effect."
 - id: 948331
+  manaCostPct: 0
   name: Wyvern Sting
   template: 24132          # CLONE stock rank 2 — inherits level 50
   durationIndex: 29
@@ -418,13 +405,12 @@ helpers:
   effects:
   - { effect: 6, aura: 12, basePoints: -1, dieSides: 1, targetA: 6 }
   client:
-    name: Wyvern Sting
+    textKey: spell.948331
     rank: 2
     icon: 1721
     skillLine: 51
-    description: "A stinging shot that puts the target to sleep for 12 sec.  Any damage will cancel the effect.  When the target wakes up, the Sting causes 420 Nature damage over 12 sec.  Only one Sting per Hunter can be active on the target at a time."
-    auraDescription: "Asleep.  Any damage will cancel the effect."
 - id: 948332
+  manaCostPct: 0
   name: Wyvern Sting
   template: 24133          # CLONE stock rank 3 — inherits level 60
   durationIndex: 29
@@ -433,12 +419,10 @@ helpers:
   effects:
   - { effect: 6, aura: 12, basePoints: -1, dieSides: 1, targetA: 6 }
   client:
-    name: Wyvern Sting
+    textKey: spell.948332
     rank: 3
     icon: 1721
     skillLine: 51
-    description: "A stinging shot that puts the target to sleep for 12 sec.  Any damage will cancel the effect.  When the target wakes up, the Sting causes 600 Nature damage over 12 sec.  Only one Sting per Hunter can be active on the target at a time."
-    auraDescription: "Asleep.  Any damage will cancel the effect."
 - id: 948333
   name: Wyvern Sting
   template: 27068          # CLONE stock rank 4 — inherits level 70
@@ -450,12 +434,10 @@ helpers:
   effects:
   - { effect: 6, aura: 12, basePoints: -1, dieSides: 1, targetA: 6 }
   client:
-    name: Wyvern Sting
+    textKey: spell.948333
     rank: 4
     icon: 1721
     skillLine: 51
-    description: "A stinging shot that puts the target to sleep for 12 sec.  Any damage will cancel the effect.  When the target wakes up, the Sting causes 942 Nature damage over 12 sec.  Only one Sting per Hunter can be active on the target at a time."
-    auraDescription: "Asleep.  Any damage will cancel the effect."
 # --- Wyvern Sting wake-DoT r1-r4 (script-cast by era_wyvern_sting) -------------------------------
 # survival_map 24131/24134/24135/27069: TBC DurationIndex 29 = 12 s at 50/70/100/157 per 2 s tick;
 # live is DurationIndex 32 = 6 s at DOUBLE the tick. The TOTAL is identical in both eras (300/420/
@@ -480,10 +462,9 @@ helpers:
   effects:
   - { effect: 6, aura: 3, basePoints: 49, dieSides: 1, targetA: 6 }   # PERIODIC_DAMAGE 50 / 2 s
   client:
-    name: Wyvern Sting
+    textKey: spell.948334
     rank: 1
     icon: 1721
-    auraDescription: "50 Nature damage every 2 sec."
 - id: 948335
   name: Wyvern Sting
   template: 24134          # CLONE stock rank-2 DoT — inherits level 50
@@ -494,10 +475,9 @@ helpers:
   effects:
   - { effect: 6, aura: 3, basePoints: 69, dieSides: 1, targetA: 6 }   # 70 / 2 s = 420 over 12 s
   client:
-    name: Wyvern Sting
+    textKey: spell.948335
     rank: 2
     icon: 1721
-    auraDescription: "70 Nature damage every 2 sec."
 - id: 948336
   name: Wyvern Sting
   template: 24135          # CLONE stock rank-3 DoT — inherits level 60
@@ -508,10 +488,9 @@ helpers:
   effects:
   - { effect: 6, aura: 3, basePoints: 99, dieSides: 1, targetA: 6 }   # 100 / 2 s = 600 over 12 s
   client:
-    name: Wyvern Sting
+    textKey: spell.948336
     rank: 3
     icon: 1721
-    auraDescription: "100 Nature damage every 2 sec."
 - id: 948337
   name: Wyvern Sting
   template: 27069          # CLONE stock rank-4 DoT — inherits level 70. NOT in the 4240 fix set:
@@ -520,10 +499,9 @@ helpers:
   effects:
   - { effect: 6, aura: 3, basePoints: 156, dieSides: 1, targetA: 6 }  # 157 / 2 s = 942 over 12 s
   client:
-    name: Wyvern Sting
+    textKey: spell.948337
     rank: 4
     icon: 1721
-    auraDescription: "157 Nature damage every 2 sec."
 # --- Counterattack r1-r4 (node 20656) ------------------------------------------------------------
 # survival_map 19306/20909/20910/27067 (all DIVERGED): the ONLY divergence is the damage number
 # (TBC 40/70/110/165 vs live 48/84/132/196) plus the r4 flat-vs-percent mana conversion. Everything
@@ -538,44 +516,44 @@ helpers:
 # `spell_script_names` census: there is NO core script on 19306 or any of its ranks (the full
 # `LIKE 'spell_hun%'` dump in _ref.script_census), so nothing needs rebinding here.
 - id: 948338
+  powerCost: 45
+  manaCostPct: 0
   name: Counterattack
   template: 19306          # CLONE stock rank 1 — inherits parry gate/root/cost 45/L30/CD/visual
   effects:
   - { effect: 2, basePoints: 39, dieSides: 1, targetA: 6 }                          # SCHOOL_DAMAGE 40
   - { effect: 6, aura: 26, basePoints: 0, dieSides: 0, targetA: 6, mechanic: 7 }    # MOD_ROOT 5 s
   client:
-    name: Counterattack
+    textKey: spell.948338
     rank: 1
     icon: 278              # stock 19306 SpellIconID
     skillLine: 51          # Survival tab (SkillLineAbility 19306 -> 51)
-    description: "A strike that becomes active after parrying an opponent's attack.  This attack deals 40 damage and immobilizes the target for 5 sec.  Counterattack cannot be blocked, dodged, or parried."
-    auraDescription: "Immobile."
 - id: 948339
+  powerCost: 65
+  manaCostPct: 0
   name: Counterattack
   template: 20909          # CLONE stock rank 2 — inherits cost 65 / L42
   effects:
   - { effect: 2, basePoints: 69, dieSides: 1, targetA: 6 }
   - { effect: 6, aura: 26, basePoints: 0, dieSides: 0, targetA: 6, mechanic: 7 }
   client:
-    name: Counterattack
+    textKey: spell.948339
     rank: 2
     icon: 278
     skillLine: 51
-    description: "A strike that becomes active after parrying an opponent's attack.  This attack deals 70 damage and immobilizes the target for 5 sec.  Counterattack cannot be blocked, dodged, or parried."
-    auraDescription: "Immobile."
 - id: 948340
+  powerCost: 85
+  manaCostPct: 0
   name: Counterattack
   template: 20910          # CLONE stock rank 3 — inherits cost 85 / L54
   effects:
   - { effect: 2, basePoints: 109, dieSides: 1, targetA: 6 }
   - { effect: 6, aura: 26, basePoints: 0, dieSides: 0, targetA: 6, mechanic: 7 }
   client:
-    name: Counterattack
+    textKey: spell.948340
     rank: 3
     icon: 278
     skillLine: 51
-    description: "A strike that becomes active after parrying an opponent's attack.  This attack deals 110 damage and immobilizes the target for 5 sec.  Counterattack cannot be blocked, dodged, or parried."
-    auraDescription: "Immobile."
 - id: 948341
   name: Counterattack
   template: 27067          # CLONE stock rank 4 — inherits L66
@@ -585,12 +563,10 @@ helpers:
   - { effect: 2, basePoints: 164, dieSides: 1, targetA: 6 }
   - { effect: 6, aura: 26, basePoints: 0, dieSides: 0, targetA: 6, mechanic: 7 }
   client:
-    name: Counterattack
+    textKey: spell.948341
     rank: 4
     icon: 278
     skillLine: 51
-    description: "A strike that becomes active after parrying an opponent's attack.  This attack deals 165 damage and immobilizes the target for 5 sec.  Counterattack cannot be blocked, dodged, or parried."
-    auraDescription: "Immobile."
 # --- Deterrence (node 20650) ---------------------------------------------------------------------
 # survival_map 19263 (DIVERGED on 8 fields): live 19263 is the WotLK DEFLECT rework — 100% parry +
 # aura 287 DEFLECT_SPELLS + aura 25 MOD_PACIFY for 5 s on a 90 s cooldown, gated on a ranged weapon at
@@ -614,11 +590,9 @@ helpers:
   - { effect: 6, aura: 47, basePoints: 24, dieSides: 1, targetA: 1 }   # MOD_PARRY_PERCENT +25
   - { effect: 6, aura: 49, basePoints: 24, dieSides: 1, targetA: 1 }   # MOD_DODGE_PERCENT +25
   client:
-    name: Deterrence
+    textKey: spell.948342
     icon: 83               # stock 19263 SpellIconID
     skillLine: 51          # Survival tab (SkillLineAbility 19263 -> 51)
-    description: "When activated, increases your Dodge and Parry chance by 25% for 10 sec."
-    auraDescription: "Dodge and Parry chance increased by 25%."
 # --- Entrapment root payload (node 20645's proc trigger) -----------------------------------------
 # survival_map 19185 (DIVERGED): TBC DurationIndex 35 = 4 s; live is 39 = 2 s (and the shipped Vanilla
 # clone 932972 is 5 s — three different eras, three different roots, hence a fresh TBC id).
@@ -646,9 +620,8 @@ helpers:
     #   TARGET_UNIT_SRC_AREA_ENEMY), a 10 yd area centred on the HUNTER; the correction rewrites it
     #   at load for 19185 only, and a clone must author the post-fix numbers itself.
   client:
-    name: Entrapment
+    textKey: spell.948343
     icon: 20               # stock 19185 SpellIconID — LOAD-BEARING for DIMINISHING_ENTRAPMENT
-    auraDescription: "Entrapped.  Unable to move."
 # --- Improved Wing Clip root payload (node 20647's proc trigger) ---------------------------------
 # survival_map 19229 is WAGO_ONLY: TBC's root does not exist in the 3.3.5a DBC at all (the root-proc
 # was removed in 3.x), so this is a RECONSTRUCTION on the generic 19185 root shell at TBC's own field
@@ -679,9 +652,8 @@ helpers:
     #   ImplicitTargetB / EffectRadiusIndex when the key is present, so omitting them would inherit
     #   19185's AoE pair (15 / index 13) and turn a single-target root into an area root.
   client:
-    name: Improved Wing Clip
+    textKey: spell.948344
     icon: 517              # Wing Clip 2974's SpellIconID
-    auraDescription: "Immobilized."
 # --- Expose Weakness debuff payload (node 20661's proc trigger) ----------------------------------
 # survival_map 34501 (DIVERGED): TBC 34501 is a DEBUFF ON THE TARGET (aura 127
 # RANGED_ATTACK_POWER_ATTACKER_BONUS + aura 165 MELEE_ATTACK_POWER_ATTACKER_BONUS, ImplicitTarget 6,
@@ -702,9 +674,8 @@ helpers:
   - { effect: 6, aura: 127, basePoints: 0, dieSides: 0, targetA: 6 }   # RANGED_ATTACK_POWER_ATTACKER_BONUS
   - { effect: 6, aura: 165, basePoints: 0, dieSides: 0, targetA: 6 }   # MELEE_ATTACK_POWER_ATTACKER_BONUS
   client:
-    name: Expose Weakness
+    textKey: spell.948345
     icon: 2112             # stock 34501 SpellIconID
-    auraDescription: "Attack power of all attackers increased by 25% of the Hunter's Agility."
 # --- Master Tactician crit buffs r1-r5 (node 20662's proc triggers) ------------------------------
 # survival_map 34833-34837 are LIVE_MATCH on all fourteen families, INCLUDING the per-effect class
 # mask (0x7fa43, 0x81, 0). They are cloned anyway, for ONE reason: that mask names the STOCK Aimed
@@ -724,45 +695,40 @@ helpers:
   effects:
   - { effect: 6, aura: 52, basePoints: 1, dieSides: 1, targetA: 1, maskA: 522819, maskB: 129, maskC: 2097152 }
   client:
-    name: Master Tactician
+    textKey: spell.948346
     icon: 2233             # stock 34833 SpellIconID
-    auraDescription: "Critical strike chance with all attacks increased by 2%."
 - id: 948347
   name: Master Tactician
   template: 34834
   effects:
   - { effect: 6, aura: 52, basePoints: 3, dieSides: 1, targetA: 1, maskA: 522819, maskB: 129, maskC: 2097152 }
   client:
-    name: Master Tactician
+    textKey: spell.948347
     icon: 2233
-    auraDescription: "Critical strike chance with all attacks increased by 4%."
 - id: 948348
   name: Master Tactician
   template: 34835
   effects:
   - { effect: 6, aura: 52, basePoints: 5, dieSides: 1, targetA: 1, maskA: 522819, maskB: 129, maskC: 2097152 }
   client:
-    name: Master Tactician
+    textKey: spell.948348
     icon: 2233
-    auraDescription: "Critical strike chance with all attacks increased by 6%."
 - id: 948349
   name: Master Tactician
   template: 34836
   effects:
   - { effect: 6, aura: 52, basePoints: 7, dieSides: 1, targetA: 1, maskA: 522819, maskB: 129, maskC: 2097152 }
   client:
-    name: Master Tactician
+    textKey: spell.948349
     icon: 2233
-    auraDescription: "Critical strike chance with all attacks increased by 8%."
 - id: 948350
   name: Master Tactician
   template: 34837
   effects:
   - { effect: 6, aura: 52, basePoints: 9, dieSides: 1, targetA: 1, maskA: 522819, maskB: 129, maskC: 2097152 }
   client:
-    name: Master Tactician
+    textKey: spell.948350
     icon: 2233
-    auraDescription: "Critical strike chance with all attacks increased by 10%."
 # --- Readiness (node 20663) ----------------------------------------------------------------------
 # survival_map 23989 differs from live on EXACTLY ONE field: RecoveryTime 300000 (TBC 5 min) vs
 # 180000 (live 3 min) — a grant would ship a 3-minute capstone where TBC is 5.
@@ -781,10 +747,9 @@ helpers:
   effects:
   - { effect: 3, basePoints: 0, dieSides: 0, targetA: 1 }   # SPELL_EFFECT_DUMMY — the script's hook
   client:
-    name: Readiness
+    textKey: spell.948351
     icon: 2238             # stock 23989 SpellIconID
     skillLine: 51          # Survival tab (SkillLineAbility 23989 -> 51)
-    description: "When activated, this ability immediately finishes the cooldown on your other Hunter abilities."
 # === Marksmanship (948370-948409) =================================================================
 # Allocated IN ORDER by Task 8. USED: 948370-948385 (16 ids). FREE within the partition: 948386-948409.
 #   948370-376   Aimed Shot clones r1-r7 (node 20627; r1 node-granted, r2-r7 trainer-taught)
@@ -845,6 +810,7 @@ helpers:
 # the survival map lists an A:e2 hit. The rider is authored below because a templated clone with an
 # `effects:` list writes all three slots, not because live lacks it.
 - id: 948370
+  manaCostPct: 0
   name: Aimed Shot
   template: 19434          # CLONE stock rank 1 — inherits shot mechanic/ammo/range/visual/L20
   spellFixAck: >-
@@ -871,13 +837,12 @@ helpers:
   - { effect: 121, basePoints: 69, dieSides: 1, targetA: 6 }                    # normalized weapon dmg +70
   - { effect: 6, aura: 118, basePoints: -51, dieSides: 1, misc: 127, targetA: 6 }  # MOD_HEALING_PCT -50%
   client:
-    name: Aimed Shot
+    textKey: spell.948370
     rank: 1
     icon: 1629             # stock 19434 SpellIconID
     skillLine: 163         # Marksmanship tab (SkillLineAbility 19434 -> 163)
-    description: "An aimed shot that increases ranged damage by 70 and reduces healing done to that target by 50%.  Lasts 10 sec."
-    auraDescription: "Healing effects reduced by 50%."
 - id: 948371
+  manaCostPct: 0
   name: Aimed Shot
   template: 20900          # CLONE stock rank 2
   spellFixAck: >-
@@ -899,13 +864,12 @@ helpers:
   - { effect: 121, basePoints: 124, dieSides: 1, targetA: 6 }
   - { effect: 6, aura: 118, basePoints: -51, dieSides: 1, misc: 127, targetA: 6 }
   client:
-    name: Aimed Shot
+    textKey: spell.948371
     rank: 2
     icon: 1629
     skillLine: 163
-    description: "An aimed shot that increases ranged damage by 125 and reduces healing done to that target by 50%.  Lasts 10 sec."
-    auraDescription: "Healing effects reduced by 50%."
 - id: 948372
+  manaCostPct: 0
   name: Aimed Shot
   template: 20901          # CLONE stock rank 3
   spellFixAck: >-
@@ -927,13 +891,12 @@ helpers:
   - { effect: 121, basePoints: 199, dieSides: 1, targetA: 6 }
   - { effect: 6, aura: 118, basePoints: -51, dieSides: 1, misc: 127, targetA: 6 }
   client:
-    name: Aimed Shot
+    textKey: spell.948372
     rank: 3
     icon: 1629
     skillLine: 163
-    description: "An aimed shot that increases ranged damage by 200 and reduces healing done to that target by 50%.  Lasts 10 sec."
-    auraDescription: "Healing effects reduced by 50%."
 - id: 948373
+  manaCostPct: 0
   name: Aimed Shot
   template: 20902          # CLONE stock rank 4
   spellFixAck: >-
@@ -955,13 +918,12 @@ helpers:
   - { effect: 121, basePoints: 329, dieSides: 1, targetA: 6 }
   - { effect: 6, aura: 118, basePoints: -51, dieSides: 1, misc: 127, targetA: 6 }
   client:
-    name: Aimed Shot
+    textKey: spell.948373
     rank: 4
     icon: 1629
     skillLine: 163
-    description: "An aimed shot that increases ranged damage by 330 and reduces healing done to that target by 50%.  Lasts 10 sec."
-    auraDescription: "Healing effects reduced by 50%."
 - id: 948374
+  manaCostPct: 0
   name: Aimed Shot
   template: 20903          # CLONE stock rank 5
   spellFixAck: >-
@@ -983,13 +945,12 @@ helpers:
   - { effect: 121, basePoints: 459, dieSides: 1, targetA: 6 }
   - { effect: 6, aura: 118, basePoints: -51, dieSides: 1, misc: 127, targetA: 6 }
   client:
-    name: Aimed Shot
+    textKey: spell.948374
     rank: 5
     icon: 1629
     skillLine: 163
-    description: "An aimed shot that increases ranged damage by 460 and reduces healing done to that target by 50%.  Lasts 10 sec."
-    auraDescription: "Healing effects reduced by 50%."
 - id: 948375
+  manaCostPct: 0
   name: Aimed Shot
   template: 20904          # CLONE stock rank 6
   spellFixAck: >-
@@ -1011,12 +972,10 @@ helpers:
   - { effect: 121, basePoints: 599, dieSides: 1, targetA: 6 }
   - { effect: 6, aura: 118, basePoints: -51, dieSides: 1, misc: 127, targetA: 6 }
   client:
-    name: Aimed Shot
+    textKey: spell.948375
     rank: 6
     icon: 1629
     skillLine: 163
-    description: "An aimed shot that increases ranged damage by 600 and reduces healing done to that target by 50%.  Lasts 10 sec."
-    auraDescription: "Healing effects reduced by 50%."
 - id: 948376
   name: Aimed Shot
   template: 27065          # CLONE stock rank 7
@@ -1041,12 +1000,10 @@ helpers:
   - { effect: 121, basePoints: 869, dieSides: 1, targetA: 6 }
   - { effect: 6, aura: 118, basePoints: -51, dieSides: 1, misc: 127, targetA: 6 }
   client:
-    name: Aimed Shot
+    textKey: spell.948376
     rank: 7
     icon: 1629
     skillLine: 163
-    description: "An aimed shot that increases ranged damage by 870 and reduces healing done to that target by 50%.  Lasts 10 sec."
-    auraDescription: "Healing effects reduced by 50%."
 # --- Trueshot Aura r1-r4 (node 20637) ------------------------------------------------------------
 # survival_map 19506 is DIVERGED and 20905/20906/27066 are WAGO_ONLY — this is the phase's only
 # fully-absent trained chain, and there are ZERO stock Trueshot `trainer_spell` rows anywhere.
@@ -1081,12 +1038,10 @@ helpers:
   - { effect: 35, aura: 124, basePoints: 49, dieSides: 1, targetA: 1, radius: 11 }   # +50 ranged AP, party 45 yd
   - { effect: 35, aura: 99,  basePoints: 49, dieSides: 1, targetA: 1, radius: 11 }   # +50 melee AP, party 45 yd
   client:
-    name: Trueshot Aura
+    textKey: spell.948377
     rank: 1
     icon: 128              # stock 19506 SpellIconID
     skillLine: 163         # Marksmanship tab (SkillLineAbility 19506 -> 163)
-    description: "Increases the attack power of party members within 45 yards by 50.  Lasts until cancelled."
-    auraDescription: "Attack power increased by 50."
 - id: 948378
   name: Trueshot Aura
   template: 19506          # CLONE stock Trueshot Aura — inherits attrs/instant/self-cast/visual (r2 has no live counterpart at all)
@@ -1099,12 +1054,10 @@ helpers:
   - { effect: 35, aura: 124, basePoints: 74, dieSides: 1, targetA: 1, radius: 11 }   # +75 ranged AP, party 45 yd
   - { effect: 35, aura: 99,  basePoints: 74, dieSides: 1, targetA: 1, radius: 11 }   # +75 melee AP, party 45 yd
   client:
-    name: Trueshot Aura
+    textKey: spell.948378
     rank: 2
     icon: 128              # stock 19506 SpellIconID
     skillLine: 163         # Marksmanship tab (SkillLineAbility 19506 -> 163)
-    description: "Increases the attack power of party members within 45 yards by 75.  Lasts until cancelled."
-    auraDescription: "Attack power increased by 75."
 - id: 948379
   name: Trueshot Aura
   template: 19506          # CLONE stock Trueshot Aura — inherits attrs/instant/self-cast/visual (r3 has no live counterpart at all)
@@ -1117,12 +1070,10 @@ helpers:
   - { effect: 35, aura: 124, basePoints: 99, dieSides: 1, targetA: 1, radius: 11 }   # +100 ranged AP, party 45 yd
   - { effect: 35, aura: 99,  basePoints: 99, dieSides: 1, targetA: 1, radius: 11 }   # +100 melee AP, party 45 yd
   client:
-    name: Trueshot Aura
+    textKey: spell.948379
     rank: 3
     icon: 128              # stock 19506 SpellIconID
     skillLine: 163         # Marksmanship tab (SkillLineAbility 19506 -> 163)
-    description: "Increases the attack power of party members within 45 yards by 100.  Lasts until cancelled."
-    auraDescription: "Attack power increased by 100."
 - id: 948380
   name: Trueshot Aura
   template: 19506          # CLONE stock Trueshot Aura — inherits attrs/instant/self-cast/visual (r4 has no live counterpart at all)
@@ -1135,12 +1086,10 @@ helpers:
   - { effect: 35, aura: 124, basePoints: 124, dieSides: 1, targetA: 1, radius: 11 }   # +125 ranged AP, party 45 yd
   - { effect: 35, aura: 99,  basePoints: 124, dieSides: 1, targetA: 1, radius: 11 }   # +125 melee AP, party 45 yd
   client:
-    name: Trueshot Aura
+    textKey: spell.948380
     rank: 4
     icon: 128              # stock 19506 SpellIconID
     skillLine: 163         # Marksmanship tab (SkillLineAbility 19506 -> 163)
-    description: "Increases the attack power of party members within 45 yards by 125.  Lasts until cancelled."
-    auraDescription: "Attack power increased by 125."
 # --- Improved Concussive Shot 3 s stun payload (node 20621's proc trigger) ------------------------
 # survival_map 19410 is WAGO_ONLY: TBC's stun does not exist in the 3.3.5a DBC at all (WotLK
 # reworked the talent into a two-rank Concussive-Shot DURATION spellmod with no stun), so this is a
@@ -1167,9 +1116,8 @@ helpers:
   attributesEx: 136        # TBC 0x88 = NO_REDIRECTION (0x8) | NO_REFLECTION (0x80)
   defenseType: 1           # TBC 1 (MAGIC) — a DmgClass-0 stun cannot be resisted at all
   client:
-    name: Improved Concussive Shot
+    textKey: spell.948381
     icon: 15               # Concussive Shot 5116's SpellIconID
-    auraDescription: "Stunned."
 # --- Scatter Shot (node 20632) -------------------------------------------------------------------
 # Was a GRANT of stock 19503 (spec Amendment A.5); CLONED at the phase-9 final review, which CLOSES
 # the Scatter Shot half of accepted gap 11. survival_map 19503 lists FOUR divergences and two of
@@ -1204,11 +1152,9 @@ helpers:
   - { effect: 6, aura: 5, basePoints: 0, dieSides: 0, targetA: 6, mechanic: 2 }      # MOD_CONFUSE, MECHANIC_DISORIENTED
   - { effect: 64, basePoints: 0, dieSides: 0, targetA: 6, trigger: 37506 }           # TRIGGER_SPELL -> the scripted NPC copy
   client:
-    name: Scatter Shot
+    textKey: spell.948382
     icon: 132              # stock 19503 SpellIconID — LOAD-BEARING for DIMINISHING_SCATTER_SHOT
     skillLine: 163         # Marksmanship tab (SkillLineAbility 19503 -> 163)
-    description: "A short-range shot that deals 50% weapon damage and disorients the target for 4 sec. Any damage caused will remove the effect. Turns off your attack when used."
-    auraDescription: "Disoriented."
 # --- Silencing Shot (node 20640) -----------------------------------------------------------------
 # survival_map 34490 diverges on exactly THREE fields, and only one of them matters: TBC is ON the
 # global cooldown (`StartRecoveryCategory 133` / `StartRecoveryTime 1500`) where live 34490 is
@@ -1253,11 +1199,9 @@ helpers:
   - { effect: 31, basePoints: 49, dieSides: 1, targetA: 6 }                          # 50% weapon damage
   - { effect: 6, aura: 27, basePoints: -1, dieSides: 1, targetA: 6, mechanic: 9 }    # MOD_SILENCE 3 s
   client:
-    name: Silencing Shot
+    textKey: spell.948383
     icon: 127              # stock 34490 SpellIconID
     skillLine: 163         # Marksmanship tab (SkillLineAbility 34490 -> 163)
-    description: "A shot that deals 50% weapon damage and Silences the target for 3 sec."
-    auraDescription: "Silenced."
 # --- Rapid Killing buffs r1/r2 (node 20628's kill-proc triggers) ----------------------------------
 # survival_map 35098/35099 are LIVE_MATCH on all fourteen families. They are cloned for ONE reason:
 # their SPELLMOD_DAMAGE mask is (0x20801, 0, 0) = Auto Shot | Arcane Shot | **Aimed Shot's stock
@@ -1286,20 +1230,16 @@ helpers:
     # ^ SPELLMOD_DAMAGE (misc 0) +10%. maskA 133121 = TBC's 0x20801 verbatim (Auto Shot 0x1 |
     #   Arcane Shot 0x800 | stock Aimed Shot 0x20000); maskC adds the era Aimed Shot identity bit.
   client:
-    name: Rapid Killing
+    textKey: spell.948384
     icon: 2285             # stock 35098 SpellIconID
-    description: "Reduces the cooldown of your Rapid Fire ability by 1 min.  In addition, after killing an opponent that yields experience or honor, your next Aimed Shot, Arcane Shot or Auto Shot causes 10% additional damage.  Lasts 20 sec."
-    auraDescription: "Damage of your next Aimed Shot, Arcane Shot or Auto Shot increased by 10%."
 - id: 948385
   name: Rapid Killing
   template: 35099          # CLONE stock rank-2 buff
   effects:
   - { effect: 6, aura: 108, basePoints: 19, dieSides: 1, misc: 0, targetA: 1, maskA: 133121, maskB: 0, maskC: 2097152 }
   client:
-    name: Rapid Killing
+    textKey: spell.948385
     icon: 2285
-    description: "Reduces the cooldown of your Rapid Fire ability by 2 min.  In addition, after killing an opponent that yields experience or honor, your next Aimed Shot, Arcane Shot or Auto Shot causes 20% additional damage.  Lasts 20 sec."
-    auraDescription: "Damage of your next Aimed Shot, Arcane Shot or Auto Shot increased by 20%."
 tabs:
 - key: 1
   name: Beast Mastery

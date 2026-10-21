@@ -1,0 +1,127 @@
+schemaVersion: 1
+locale: enUS
+era: vanilla
+class: warrior
+texts:
+  spell.932800:
+    name: Deep Wounds
+    auraDescription: Bleeding for physical damage every 1 sec.
+  spell.932801:
+    name: Mace Specialization
+    auraDescription: Stunned.
+  spell.932802:
+    name: Improved Hamstring
+    auraDescription: Immobilized.
+  spell.932803:
+    name: Tactical Mastery
+    description: You retain up to 5 of your rage points when you change stances.
+  spell.932804:
+    name: Tactical Mastery
+    description: You retain up to 10 of your rage points when you change stances.
+  spell.932805:
+    name: Tactical Mastery
+    description: You retain up to 15 of your rage points when you change stances.
+  spell.932806:
+    name: Tactical Mastery
+    description: You retain up to 20 of your rage points when you change stances.
+  spell.932807:
+    name: Tactical Mastery
+    description: You retain up to 25 of your rage points when you change stances.
+  spell.932808:
+    name: Death Wish
+    description: When activated, increases your physical damage by 20% and makes you immune to Fear effects, but
+      lowers your armor and all resistances by 20%. Lasts 30 sec.
+    auraDescription: Physical damage increased by 20%. Immune to Fear. Armor and all resistances reduced by 20%.
+  spell.932810:
+    name: Flurry
+    auraDescription: Increases attack speed by 10%. Consumed on 3 melee swings.
+  spell.932811:
+    name: Flurry
+    auraDescription: Increases attack speed by 15%. Consumed on 3 melee swings.
+  spell.932812:
+    name: Flurry
+    auraDescription: Increases attack speed by 20%. Consumed on 3 melee swings.
+  spell.932813:
+    name: Flurry
+    auraDescription: Increases attack speed by 25%. Consumed on 3 melee swings.
+  spell.932814:
+    name: Flurry
+    auraDescription: Increases attack speed by 30%. Consumed on 3 melee swings.
+  spell.932815:
+    name: Enrage
+    auraDescription: Melee damage increased by 5%. Lasts 12 sec or up to 12 swings.
+  spell.932816:
+    name: Enrage
+    auraDescription: Melee damage increased by 10%. Lasts 12 sec or up to 12 swings.
+  spell.932817:
+    name: Enrage
+    auraDescription: Melee damage increased by 15%. Lasts 12 sec or up to 12 swings.
+  spell.932818:
+    name: Enrage
+    auraDescription: Melee damage increased by 20%. Lasts 12 sec or up to 12 swings.
+  spell.932819:
+    name: Enrage
+    auraDescription: Melee damage increased by 25%. Lasts 12 sec or up to 12 swings.
+  spell.932821:
+    name: Improved Revenge
+    auraDescription: Stunned.
+  spell.932822:
+    name: Concussion Blow
+    description: Stuns the opponent for 5 sec.
+    auraDescription: Stunned.
+  spell.932828:
+    name: Bloodthirst
+    description: Instantly attack the target, causing damage equal to 45% of your attack power. In addition, the
+      next 5 successful melee attacks will restore 10 health. This effect lasts 8 sec.
+  spell.932829:
+    name: Bloodthirst
+    description: Instantly attack the target, causing damage equal to 45% of your attack power. In addition, the
+      next 5 successful melee attacks will restore 13 health. This effect lasts 8 sec.
+  spell.932830:
+    name: Bloodthirst
+    description: Instantly attack the target, causing damage equal to 45% of your attack power. In addition, the
+      next 5 successful melee attacks will restore 17 health. This effect lasts 8 sec.
+  spell.932831:
+    name: Bloodthirst
+    description: Instantly attack the target, causing damage equal to 45% of your attack power. In addition, the
+      next 5 successful melee attacks will restore 20 health. This effect lasts 8 sec.
+  spell.932832:
+    name: Bloodthirst
+    auraDescription: The next 5 successful melee attacks restore 10 health. Lasts 8 sec.
+  spell.932833:
+    name: Bloodthirst
+    auraDescription: The next 5 successful melee attacks restore 13 health. Lasts 8 sec.
+  spell.932834:
+    name: Bloodthirst
+    auraDescription: The next 5 successful melee attacks restore 17 health. Lasts 8 sec.
+  spell.932835:
+    name: Bloodthirst
+    auraDescription: The next 5 successful melee attacks restore 20 health. Lasts 8 sec.
+  spell.932836:
+    name: Bloodthirst
+  spell.932837:
+    name: Bloodthirst
+  spell.932838:
+    name: Bloodthirst
+  spell.932839:
+    name: Bloodthirst
+  spell.932840:
+    name: Last Stand
+    description: When activated, this ability temporarily grants you 30% of your maximum hit points for 20 sec.
+      After the effect expires, the hit points are lost.
+  spell.932841:
+    name: Shield Slam
+    description: Slam the target with your shield, causing 225 to 235 damage, modified by your shield block value,
+      and has a 50% chance of dispelling 1 magic effect on the target.  Also causes a high amount of threat.
+  spell.932842:
+    name: Shield Slam
+    description: Slam the target with your shield, causing 264 to 276 damage, modified by your shield block value,
+      and has a 50% chance of dispelling 1 magic effect on the target.  Also causes a high amount of threat.
+  spell.932843:
+    name: Shield Slam
+    description: Slam the target with your shield, causing 303 to 317 damage, modified by your shield block value,
+      and has a 50% chance of dispelling 1 magic effect on the target.  Also causes a high amount of threat.
+  spell.932844:
+    name: Shield Slam
+    description: Slam the target with your shield, causing 342 to 358 damage, modified by your shield block value,
+      and has a 50% chance of dispelling 1 magic effect on the target.  Also causes a high amount of threat.

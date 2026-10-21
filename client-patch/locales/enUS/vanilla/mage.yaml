@@ -1,0 +1,152 @@
+schemaVersion: 1
+locale: enUS
+era: vanilla
+class: mage
+texts:
+  spell.932990:
+    name: Fire Ward Reflect
+  spell.932991:
+    name: Frost Ward Reflect
+  spell.932980:
+    name: Chilled
+    description: Slows movement speed by 30% for 1.50 sec.
+    auraDescription: Movement slowed by 30%.
+  spell.932981:
+    name: Chilled
+    description: Slows movement speed by 50% for 1.50 sec.
+    auraDescription: Movement slowed by 50%.
+  spell.932982:
+    name: Chilled
+    description: Slows movement speed by 65% for 1.50 sec.
+    auraDescription: Movement slowed by 65%.
+  spell.932760:
+    name: Arcane Power
+    description: When activated, your spells deal 30% more damage while costing 30% more mana to cast. This effect
+      lasts 15 sec.
+    auraDescription: Spell damage increased by 30%. Mana cost increased by 30%.
+  spell.932761:
+    name: Presence of Mind
+    description: When activated, your next Mage spell with a casting time less than 10 sec becomes an instant cast
+      spell.
+    auraDescription: Your next Mage spell with a casting time less than 10 sec becomes an instant cast spell.
+  spell.932326:
+    name: Magic Absorption
+    description: Increases all resistances by 2 and causes all spells you resist to restore 1% of your total mana.
+  spell.932327:
+    name: Magic Absorption
+    description: Increases all resistances by 4 and causes all spells you resist to restore 2% of your total mana.
+  spell.932328:
+    name: Magic Absorption
+    description: Increases all resistances by 6 and causes all spells you resist to restore 3% of your total mana.
+  spell.932329:
+    name: Magic Absorption
+    description: Increases all resistances by 8 and causes all spells you resist to restore 4% of your total mana.
+  spell.932330:
+    name: Magic Absorption
+    description: Increases all resistances by 10 and causes all spells you resist to restore 5% of your total mana.
+  spell.932762:
+    name: Silenced - Improved Counterspell
+    description: Silenced.
+    auraDescription: Silenced.
+  spell.932763:
+    name: Fire Vulnerability
+    description: Fire damage taken increased by 3%.
+    auraDescription: Fire damage taken increased by 3%.
+  spell.932310:
+    name: Pyroblast
+    description: Hurls an immense fiery boulder that causes $s1 Fire damage and an additional $o2 Fire damage over
+      $d.
+    auraDescription: $s2 Fire damage every $t2 seconds.
+  spell.932311:
+    name: Pyroblast
+    description: Hurls an immense fiery boulder that causes $s1 Fire damage and an additional $o2 Fire damage over
+      $d.
+    auraDescription: $s2 Fire damage every $t2 seconds.
+  spell.932312:
+    name: Pyroblast
+    description: Hurls an immense fiery boulder that causes $s1 Fire damage and an additional $o2 Fire damage over
+      $d.
+    auraDescription: $s2 Fire damage every $t2 seconds.
+  spell.932313:
+    name: Pyroblast
+    description: Hurls an immense fiery boulder that causes $s1 Fire damage and an additional $o2 Fire damage over
+      $d.
+    auraDescription: $s2 Fire damage every $t2 seconds.
+  spell.932314:
+    name: Pyroblast
+    description: Hurls an immense fiery boulder that causes $s1 Fire damage and an additional $o2 Fire damage over
+      $d.
+    auraDescription: $s2 Fire damage every $t2 seconds.
+  spell.932315:
+    name: Pyroblast
+    description: Hurls an immense fiery boulder that causes $s1 Fire damage and an additional $o2 Fire damage over
+      $d.
+    auraDescription: $s2 Fire damage every $t2 seconds.
+  spell.932316:
+    name: Pyroblast
+    description: Hurls an immense fiery boulder that causes $s1 Fire damage and an additional $o2 Fire damage over
+      $d.
+    auraDescription: $s2 Fire damage every $t2 seconds.
+  spell.932317:
+    name: Pyroblast
+    description: Hurls an immense fiery boulder that causes $s1 Fire damage and an additional $o2 Fire damage over
+      $d.
+    auraDescription: $s2 Fire damage every $t2 seconds.
+  spell.932320:
+    name: Blast Wave
+    description: A wave of flame radiates outward from the caster, damaging all enemies caught within the blast
+      for $s1 Fire damage, dazing them for $d.
+    auraDescription: Dazed.
+  spell.932321:
+    name: Blast Wave
+    description: A wave of flame radiates outward from the caster, damaging all enemies caught within the blast
+      for $s1 Fire damage, dazing them for $d.
+    auraDescription: Dazed.
+  spell.932322:
+    name: Blast Wave
+    description: A wave of flame radiates outward from the caster, damaging all enemies caught within the blast
+      for $s1 Fire damage, dazing them for $d.
+    auraDescription: Dazed.
+  spell.932323:
+    name: Blast Wave
+    description: A wave of flame radiates outward from the caster, damaging all enemies caught within the blast
+      for $s1 Fire damage, dazing them for $d.
+    auraDescription: Dazed.
+  spell.932324:
+    name: Blast Wave
+    description: A wave of flame radiates outward from the caster, damaging all enemies caught within the blast
+      for $s1 Fire damage, dazing them for $d.
+    auraDescription: Dazed.
+  spell.932325:
+    name: Combustion
+    description: When activated, this spell causes each of your Fire damage spell hits to increase your critical
+      strike chance with Fire damage spells by $28682s1%.  This effect lasts until you have caused 3 critical strikes
+      with Fire spells.
+  spell.932764:
+    name: Winter's Chill
+    description: Increases the chance a Frost spell will critically hit the target by 2% for 15 sec.  Stacks up
+      to 5 times.
+    auraDescription: Frost spells have a 2% additional chance to critically hit.  Stacks up to 5 times.
+  spell.932331:
+    name: Ice Barrier
+    description: Instantly shields you, absorbing $s1 damage.  Lasts $d.  While the shield holds, spellcasting will
+      not be delayed by damage.
+    auraDescription: Absorbs damage.
+  spell.932332:
+    name: Ice Barrier
+    description: Instantly shields you, absorbing $s1 damage.  Lasts $d.  While the shield holds, spellcasting will
+      not be delayed by damage.
+    auraDescription: Absorbs damage.
+  spell.932333:
+    name: Ice Barrier
+    description: Instantly shields you, absorbing $s1 damage.  Lasts $d.  While the shield holds, spellcasting will
+      not be delayed by damage.
+    auraDescription: Absorbs damage.
+  spell.932334:
+    name: Ice Barrier
+    description: Instantly shields you, absorbing $s1 damage.  Lasts $d.  While the shield holds, spellcasting will
+      not be delayed by damage.
+    auraDescription: Absorbs damage.
+  spell.932335:
+    name: Cold Snap
+    description: When activated, this spell finishes the cooldown on all of your Frost spells.

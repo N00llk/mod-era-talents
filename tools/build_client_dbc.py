@@ -6,13 +6,13 @@ appended -- this is NOT the shelved "recreate every player spell" approach, just
 custom auras the client needs to display.
 
 Each custom row is built from tools/gen_era_talents.py's SAME field logic as the server `spell_dbc`
-(helper_overrides + _row_values), then Name_Lang_enUS + SpellIconID are set from the helper's
-`client:` block for display. Building both paths from one source keeps them in lock-step (a
+(helper_overrides + _row_values), then localized text is read from client-patch/locales and
+SpellIconID from the helper's `client:` block. Building both paths from one source keeps them in lock-step (a
 divergence would rubber-band the client on any cast of that spell).
 
 Usage:
     python3 tools/build_client_dbc.py --dataset era-data/vanilla/mage.yaml \
-        --base-dbc client-patch/base/Spell.dbc --out /tmp/Spell.dbc
+        --locale ruRU --base-dbc /original/ruRU/Spell.dbc --out /tmp/Spell.dbc
 """
 from __future__ import annotations
 import argparse
@@ -22,6 +22,7 @@ import sys
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 import gen_era_talents as G   # noqa: E402
+import client_spell_locales as L
 
 HEADER_FMT = "<4siiii"
 HEADER_SIZE = struct.calcsize(HEADER_FMT)
@@ -74,18 +75,26 @@ def _encode_record(values: list, pool: StringPool) -> bytes:
     return bytes(out)
 
 
-def _client_rows(dataset_paths: list[str], templates: dict) -> dict[int, list]:
+def _client_rows(dataset_paths: list[str], templates: dict, locale="enUS", texts=None,
+                 rank_format="Rank %s") -> dict[int, list]:
     """id -> full 234-value row for every helper carrying a `client:` block, across datasets. A
     helper with a `template:` clones that real record (via the SAME clone-and-override path as the
     server SQL) so cast-relevant fields — SpellVisual, cast time, attributes — match the server row
     and the client renders a real cast animation instead of the aura popping in silently."""
     rows: dict[int, list] = {}
+    slot = L.LOCALES[locale]
+    if texts is None and any(h.get("client", {}).get("textKey")
+                             for p in dataset_paths for h in G._load(p).get("helpers", []) or []):
+        common, texts = L.catalogs(dataset_paths, locale)
+        rank_format = common["rank"]
     for p in dataset_paths:
         d = G._load(p)
         for h in d.get("helpers", []) or []:
             c = h.get("client")
             if not c:
                 continue
+            if "textKey" in c:
+                c = {**c, **texts[c["textKey"]]}
             tid = h.get("template")
             over = G.helper_overrides(h, templated=(tid is not None))
             over["Name_Lang_enUS"] = c.get("name", h["name"])
@@ -95,7 +104,7 @@ def _client_rows(dataset_paths: list[str], templates: dict) -> dict[int, list]:
             # same-skill-line ranks to the highest known. Client-only — the server ignores it, so
             # it lives on the `client:` block and never touches the server spell_dbc row.
             if c.get("rank") is not None:
-                over["NameSubtext_Lang_enUS"] = f"Rank {int(c['rank'])}"
+                over["NameSubtext_Lang_enUS"] = rank_format % int(c['rank'])
                 over["NameSubtext_Lang_Mask"] = 16712190
             # A castable's spellbook tooltip is the DBC Description field (blank if unset).
             if c.get("description"):
@@ -111,7 +120,7 @@ def _client_rows(dataset_paths: list[str], templates: dict) -> dict[int, list]:
                 over["AuraDescription_Lang_enUS"] = c["auraDescription"] or ""
                 over["AuraDescription_Lang_Mask"] = 16712190
             elif tmpl is not None:
-                tmpl_aura_desc = tmpl[_IDX["AuraDescription_Lang_enUS"]]
+                tmpl_aura_desc = tmpl[L.STRING_GROUPS["auraDescription"] + slot]
                 # Authored effects overwrite all template slots; with none authored the
                 # template's own effects ship wholesale, so check THOSE (a standalone
                 # client-patch build doesn't run the generator lint that rejects that shape).
@@ -124,28 +133,53 @@ def _client_rows(dataset_paths: list[str], templates: dict) -> dict[int, list]:
                         f"helper {h['id']}: template {tid} has a non-empty AuraDescription "
                         f"(the buff tooltip would show the stock WotLK text) — author "
                         f"client.auraDescription with the era-correct text")
-            rows[int(h["id"])] = G._row_values(over, tmpl)
+            values = G._row_values(over, tmpl)
+            # Clear donor-language strings and write only this build's locale. Optional
+            # unauthored fields inherit the matching localized donor, never English.
+            for field, start in L.STRING_GROUPS.items():
+                if field == "name":
+                    value = c.get("name", h["name"])
+                elif field == "rank" and c.get("rank") is not None:
+                    value = rank_format % int(c["rank"])
+                elif field in c:
+                    value = c[field]
+                else:
+                    value = tmpl[start + slot] if tmpl is not None else 0
+                values[start:start + 16] = [0] * 16
+                values[start + slot] = value
+            sid = int(h["id"])
+            if sid in rows:
+                raise ValueError(f"duplicate client spell ID: {sid}")
+            rows[sid] = values
     return rows
 
 
-def _sentinel_row(stamp: str) -> list:
+def _sentinel_row(stamp: str, locale="enUS") -> list:
     """Hidden generation-canary spell. The addon reads GetSpellInfo(932999) and compares the
     stamp embedded in the NAME against the server-sent one (era_talent_meta). Passive + no
     effects: never castable, never in a spellbook; it exists only to smuggle the stamp into
     the client's Spell.dbc."""
-    return G._row_values({
+    row = G._row_values({
         "ID": G.SENTINEL_SPELL_ID, "Attributes": G.PASSIVE_ATTR,
         "CastingTimeIndex": 1, "RangeIndex": 1, "SpellIconID": 1,
         "Name_Lang_enUS": f"EraTalents Gen {stamp}", "Name_Lang_Mask": 16712190,
     })
+    row[136:152] = [0] * 16
+    row[136 + L.LOCALES[locale]] = f"EraTalents Gen {stamp}"
+    return row
 
 
 def build(dataset_paths: list[str], base_dbc: pathlib.Path, out: pathlib.Path,
-          stamp: str | None = None) -> int:
+          stamp: str | None = None, *, locale="enUS", locale_root=L.DEFAULT_ROOT) -> int:
+    common, texts = L.catalogs(dataset_paths, locale, locale_root)
     raw = base_dbc.read_bytes()
+    if len(raw) < HEADER_SIZE:
+        raise ValueError("truncated Spell.dbc header")
     magic, rec_count, field_count, rec_size, str_size = struct.unpack(HEADER_FMT, raw[:HEADER_SIZE])
     if magic != b"WDBC" or field_count != FIELD_COUNT or rec_size != RECORD_SIZE:
         raise SystemExit(f"unexpected base DBC: magic={magic} fields={field_count} recsize={rec_size}")
+    if rec_count < 0 or str_size < 1 or len(raw) != HEADER_SIZE + rec_count * rec_size + str_size:
+        raise ValueError("truncated or invalid Spell.dbc length")
     rec_start = HEADER_SIZE
     str_start = rec_start + rec_count * rec_size
     base_records = raw[rec_start:str_start]
@@ -154,11 +188,13 @@ def build(dataset_paths: list[str], base_dbc: pathlib.Path, out: pathlib.Path,
     # Templates for clone-and-override come from the SAME base DBC being extended (stock spells like
     # 10060/15286 live in it), so a cloned custom row stays consistent with what the client already has.
     templates = G.read_dbc_templates(base_dbc)
-    custom = _client_rows(dataset_paths, templates)
+    if not any(row[136 + L.LOCALES[locale]] for row in templates.values()):
+        raise ValueError(f"base Spell.dbc has no names in requested {locale} slot")
+    custom = _client_rows(dataset_paths, templates, locale, texts, common["rank"])
     if not custom:
         raise SystemExit("no client-visible helpers (a `client:` block) found in the datasets")
     if stamp:
-        custom[G.SENTINEL_SPELL_ID] = _sentinel_row(stamp)
+        custom[G.SENTINEL_SPELL_ID] = _sentinel_row(stamp, locale)
 
     # Index base records by ID so a custom row REPLACES a same-id base row (idempotent: re-running
     # the merge onto an already-merged DBC updates in place instead of appending a duplicate);
@@ -166,6 +202,8 @@ def build(dataset_paths: list[str], base_dbc: pathlib.Path, out: pathlib.Path,
     id_off = _IDX["ID"] * 4
     recs = [base_records[i * rec_size:(i + 1) * rec_size] for i in range(rec_count)]
     pos_by_id = {struct.unpack_from("<i", rec, id_off)[0]: i for i, rec in enumerate(recs)}
+    if len(pos_by_id) != len(recs):
+        raise ValueError("duplicate IDs in base Spell.dbc")
 
     pool = StringPool(base_block)
     appended = []
@@ -189,8 +227,11 @@ def main():
     ap.add_argument("--base-dbc", required=True)
     ap.add_argument("--out", required=True)
     ap.add_argument("--stamp", help="generation stamp to embed as sentinel spell 932999")
+    ap.add_argument("--locale", required=True, choices=L.LOCALES)
+    ap.add_argument("--locale-root", type=pathlib.Path, default=L.DEFAULT_ROOT)
     a = ap.parse_args()
-    n = build(a.dataset, pathlib.Path(a.base_dbc), pathlib.Path(a.out), a.stamp)
+    n = build(a.dataset, pathlib.Path(a.base_dbc), pathlib.Path(a.out), a.stamp,
+              locale=a.locale, locale_root=a.locale_root)
     print(f"wrote {a.out} (+{n} custom client spell rows)")
 
 

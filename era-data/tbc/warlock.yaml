@@ -139,7 +139,7 @@ helpers:
   effects:
   - { effect: 6, aura: 4, basePoints: 0, misc: 0, targetA: 1 }   # inert DUMMY, misc 0 (no registry slot)
   client:
-    name: "TBC Warlock"
+    textKey: spell.948410
     icon: 1
 # --- The nine Create clones (948420-948428) ------------------------------------------------------
 # Exactly the shipped Vanilla shape (932922-932928): CLONE the stock Create spell so the cast time,
@@ -154,6 +154,8 @@ helpers:
 # load-bearing on those two rows — without it a Master stone costs 1330 mana *plus* 54% of base.
 # The seven shared tiers' templates all carry ManaCostPct 0 already (verified), so they say nothing.
 - id: 948420               # Create Firestone (Lesser) -> item 1254 (TBC trained L28)
+  powerCost: 500
+  manaCostPct: 0
   name: Create Firestone (Lesser)
   template: 6366           # CLONE stock Create Firestone (Lesser): cast time, 500 mana, Soul Shard reagent
   effects:
@@ -163,39 +165,41 @@ helpers:
     dieSides: 1
     targetA: 1
   client:
-    name: Create Firestone (Lesser)
+    textKey: spell.948420
     icon: 1506             # Firestone item art (stock Create Firestone SpellIconID, all ranks)
-    description: "Creates a Lesser Firestone that can be equipped in the off-hand. When equipped, it enchants the main hand weapon with fire and increases Fire spell damage."
     skillLine: 354         # Demonology tab
 - id: 948421               # Create Firestone -> item 13699 (trained L36)
+  powerCost: 700
+  manaCostPct: 0
   name: Create Firestone
   template: 17951
   effects:
   - { effect: 24, itemType: 13699, basePoints: 0, dieSides: 1, targetA: 1 }
   client:
-    name: Create Firestone
+    textKey: spell.948421
     icon: 1506
-    description: "Creates a Firestone that can be equipped in the off-hand. When equipped, it enchants the main hand weapon with fire and increases Fire spell damage."
     skillLine: 354
 - id: 948422               # Create Firestone (Greater) -> item 13700 (trained L46)
+  powerCost: 900
+  manaCostPct: 0
   name: Create Firestone (Greater)
   template: 17952
   effects:
   - { effect: 24, itemType: 13700, basePoints: 0, dieSides: 1, targetA: 1 }
   client:
-    name: Create Firestone (Greater)
+    textKey: spell.948422
     icon: 1506
-    description: "Creates a Greater Firestone that can be equipped in the off-hand. When equipped, it enchants the main hand weapon with fire and increases Fire spell damage."
     skillLine: 354
 - id: 948423               # Create Firestone (Major) -> item 13701 (trained L56)
+  powerCost: 1100
+  manaCostPct: 0
   name: Create Firestone (Major)
   template: 17953
   effects:
   - { effect: 24, itemType: 13701, basePoints: 0, dieSides: 1, targetA: 1 }
   client:
-    name: Create Firestone (Major)
+    textKey: spell.948423
     icon: 1506
-    description: "Creates a Major Firestone that can be equipped in the off-hand. When equipped, it enchants the main hand weapon with fire and increases Fire spell damage."
     skillLine: 354
 - id: 948424               # Create Firestone (Master) -> item 22128 (TBC-only tier, trained L66)
   name: Create Firestone (Master)
@@ -205,39 +209,41 @@ helpers:
   effects:
   - { effect: 24, itemType: 22128, basePoints: 0, dieSides: 1, targetA: 1 }
   client:
-    name: Create Firestone (Master)
+    textKey: spell.948424
     icon: 1506
-    description: "Creates a Master Firestone that can be equipped in the off-hand. When equipped, it enchants the main hand weapon with fire and increases Fire spell damage."
     skillLine: 354
 - id: 948425               # Create Spellstone -> item 5522 (trained L36 — TBC's own level, not Vanilla's 31)
+  powerCost: 500
+  manaCostPct: 0
   name: Create Spellstone
   template: 2362
   effects:
   - { effect: 24, itemType: 5522, basePoints: 0, dieSides: 1, targetA: 1 }
   client:
-    name: Create Spellstone
+    textKey: spell.948425
     icon: 344              # Spellstone item art (stock Create Spellstone SpellIconID, all ranks)
-    description: "Creates a Spellstone that can be equipped in the off-hand. While equipped, it increases spell critical strike chance, and it can be used to remove harmful magic effects and absorb magic damage."
     skillLine: 354
 - id: 948426               # Create Spellstone (Greater) -> item 13602 (trained L48 — not Vanilla's 43)
+  powerCost: 750
+  manaCostPct: 0
   name: Create Spellstone (Greater)
   template: 17727
   effects:
   - { effect: 24, itemType: 13602, basePoints: 0, dieSides: 1, targetA: 1 }
   client:
-    name: Create Spellstone (Greater)
+    textKey: spell.948426
     icon: 344
-    description: "Creates a Greater Spellstone that can be equipped in the off-hand. While equipped, it increases spell critical strike chance, and it can be used to remove harmful magic effects and absorb magic damage."
     skillLine: 354
 - id: 948427               # Create Spellstone (Major) -> item 13603 (trained L60 — not Vanilla's 55)
+  powerCost: 1000
+  manaCostPct: 0
   name: Create Spellstone (Major)
   template: 17728
   effects:
   - { effect: 24, itemType: 13603, basePoints: 0, dieSides: 1, targetA: 1 }
   client:
-    name: Create Spellstone (Major)
+    textKey: spell.948427
     icon: 344
-    description: "Creates a Major Spellstone that can be equipped in the off-hand. While equipped, it increases spell critical strike chance, and it can be used to remove harmful magic effects and absorb magic damage."
     skillLine: 354
 - id: 948428               # Create Spellstone (Master) -> item 22646 (TBC-only tier, trained L66)
   name: Create Spellstone (Master)
@@ -247,9 +253,8 @@ helpers:
   effects:
   - { effect: 24, itemType: 22646, basePoints: 0, dieSides: 1, targetA: 1 }
   client:
-    name: Create Spellstone (Master)
+    textKey: spell.948428
     icon: 344
-    description: "Creates a Master Spellstone that can be equipped in the off-hand. While equipped, it increases spell critical strike rating, and it can be used to remove harmful magic effects."
     skillLine: 354
 # --- Master Firestone 22128 behaviour (948430/948431) --------------------------------------------
 # Same two-part shape as the Vanilla firestones (932931-934 equip + 932935-938 proc damage), at the
@@ -282,15 +287,14 @@ helpers:
     flags: 4               # PROC_FLAG_DONE_MELEE_AUTO_ATTACK (SpellMgr.h)
     chance: 20             # ~6 PPM at a typical caster weapon speed (documented approximation)
   client:
-    name: Firestone
+    textKey: spell.948430
     icon: 1735             # Firestone art (SpellIconID of the WotLK firestone spells)
-    description: "Enchants the main hand weapon with fire, granting each attack a chance to deal 116 to 174 additional Fire damage, and increases damage done by Fire spells and effects by up to 30."
 - id: 948431               # Master Firestone proc — 116-174 fire
   name: Firestone
   school: 4
   effects:
   - { effect: 2, basePoints: 115, dieSides: 59, targetA: 6 }   # SPELL_EFFECT_SCHOOL_DAMAGE, 116-174
-  client: { name: Firestone Attack, icon: 1735 }
+  client: {textKey: spell.948431, icon: 1735}
 # --- Master Spellstone 22646 behaviour (948432/948433) -------------------------------------------
 # TBC spellstones are **dispel-only**: the 2.4.3 Use effect removes all harmful magic from the caster
 # and there is NO absorb shield (WotLK is what added one, and the Vanilla reconstruction's 400/650/900
@@ -311,9 +315,8 @@ helpers:
     misc: 1                # DISPEL_MAGIC
     targetA: 1
   client:
-    name: Spellstone
+    textKey: spell.948432
     icon: 344              # Spellstone art
-    description: "Dispels all harmful magic effects from the caster."
 - id: 948433               # Master Spellstone equip — +20 spell crit RATING
   name: Spellstone
   attributes: 262608       # PASSIVE + hidden (equip aura)
@@ -324,9 +327,8 @@ helpers:
     misc: 1024             # combat-rating bitmask 1<<10 = CR_CRIT_SPELL
     targetA: 1
   client:
-    name: Spellstone
+    textKey: spell.948433
     icon: 344
-    description: "Increases your spell critical strike rating by 20."
 # === Affliction (948450-948549) ==================================================================
 # Allocated IN ORDER by this task. USED: 948450-948458, 948460-948464, 948470-948472 (17 ids).
 # HOLES: 948459 (see above), 948465-948469. FREE within the partition: 948473-948549.
@@ -371,10 +373,8 @@ helpers:
     basePoints: 0
     targetA: 1             # TARGET_UNIT_CASTER (self-buff)
   client:
-    name: Amplify Curse
+    textKey: spell.948450
     icon: 1494             # stock Amplify Curse 18288 SpellIconID (Spell_Shadow_Contagion)
-    description: "Increases the effect of your next Curse of Doom or Curse of Agony by 50%, or your next Curse of Exhaustion by an additional 20%.  Lasts 30 sec."
-    auraDescription: "Your next Curse of Doom or Agony is 50% stronger (Exhaustion 20%)."
     skillLine: 355         # Affliction tab
 # --- Siphon Life r1-r6 (node 20713) --------------------------------------------------------------
 # RECONSTRUCT: all six TBC ranks are WAGO_ONLY (18265/18879/18880/18881/27264/30911 are absent from
@@ -426,11 +426,9 @@ helpers:
     targetA: 6             # TARGET_UNIT_TARGET_ENEMY
     amplitude: 3000        # 3 s tick (explicit: an unset period is defaulted to 1000 ms by the core)
   client:
-    name: Siphon Life
+    textKey: spell.948451
     icon: 152              # 35195's SpellIconID (the Siphon Life icon)
     rank: 1                # spellbook "Rank 1" label (NameSubtext_Lang)
-    description: "Transfers 15 health from the target to the caster every 3 sec.  Lasts 30 sec."
-    auraDescription: "Transferring 15 health to the caster every 3 sec."
     skillLine: 355         # Affliction tab
 - id: 948452
   name: Siphon Life
@@ -461,11 +459,9 @@ helpers:
     targetA: 6             # TARGET_UNIT_TARGET_ENEMY
     amplitude: 3000        # 3 s tick (explicit: an unset period is defaulted to 1000 ms by the core)
   client:
-    name: Siphon Life
+    textKey: spell.948452
     icon: 152              # 35195's SpellIconID (the Siphon Life icon)
     rank: 2                # spellbook "Rank 2" label (NameSubtext_Lang)
-    description: "Transfers 22 health from the target to the caster every 3 sec.  Lasts 30 sec."
-    auraDescription: "Transferring 22 health to the caster every 3 sec."
     skillLine: 355         # Affliction tab
 - id: 948453
   name: Siphon Life
@@ -496,11 +492,9 @@ helpers:
     targetA: 6             # TARGET_UNIT_TARGET_ENEMY
     amplitude: 3000        # 3 s tick (explicit: an unset period is defaulted to 1000 ms by the core)
   client:
-    name: Siphon Life
+    textKey: spell.948453
     icon: 152              # 35195's SpellIconID (the Siphon Life icon)
     rank: 3                # spellbook "Rank 3" label (NameSubtext_Lang)
-    description: "Transfers 33 health from the target to the caster every 3 sec.  Lasts 30 sec."
-    auraDescription: "Transferring 33 health to the caster every 3 sec."
     skillLine: 355         # Affliction tab
 - id: 948454
   name: Siphon Life
@@ -531,11 +525,9 @@ helpers:
     targetA: 6             # TARGET_UNIT_TARGET_ENEMY
     amplitude: 3000        # 3 s tick (explicit: an unset period is defaulted to 1000 ms by the core)
   client:
-    name: Siphon Life
+    textKey: spell.948454
     icon: 152              # 35195's SpellIconID (the Siphon Life icon)
     rank: 4                # spellbook "Rank 4" label (NameSubtext_Lang)
-    description: "Transfers 45 health from the target to the caster every 3 sec.  Lasts 30 sec."
-    auraDescription: "Transferring 45 health to the caster every 3 sec."
     skillLine: 355         # Affliction tab
 - id: 948455
   name: Siphon Life
@@ -566,11 +558,9 @@ helpers:
     targetA: 6             # TARGET_UNIT_TARGET_ENEMY
     amplitude: 3000        # 3 s tick (explicit: an unset period is defaulted to 1000 ms by the core)
   client:
-    name: Siphon Life
+    textKey: spell.948455
     icon: 152              # 35195's SpellIconID (the Siphon Life icon)
     rank: 5                # spellbook "Rank 5" label (NameSubtext_Lang)
-    description: "Transfers 52 health from the target to the caster every 3 sec.  Lasts 30 sec."
-    auraDescription: "Transferring 52 health to the caster every 3 sec."
     skillLine: 355         # Affliction tab
 - id: 948456
   name: Siphon Life
@@ -601,11 +591,9 @@ helpers:
     targetA: 6             # TARGET_UNIT_TARGET_ENEMY
     amplitude: 3000        # 3 s tick (explicit: an unset period is defaulted to 1000 ms by the core)
   client:
-    name: Siphon Life
+    textKey: spell.948456
     icon: 152              # 35195's SpellIconID (the Siphon Life icon)
     rank: 6                # spellbook "Rank 6" label (NameSubtext_Lang)
-    description: "Transfers 63 health from the target to the caster every 3 sec.  Lasts 30 sec."
-    auraDescription: "Transferring 63 health to the caster every 3 sec."
     skillLine: 355         # Affliction tab
 # --- Improved Drain Soul payloads (node 20703) ----------------------------------------------------
 # Both halves of the TBC talent are delivered by `era_improved_drain_soul` (EraTalentProcScripts.cpp),
@@ -632,7 +620,7 @@ helpers:
     misc: 0                # POWER_MANA
     targetA: 1             # TARGET_UNIT_CASTER
   client:
-    name: Improved Drain Soul
+    textKey: spell.948457
     icon: 113              # stock 18371's SpellIconID — without a client row the combat-log line
                            # for the mana gain cannot render (the hidden-payload gotcha, VE 932951)
 # 948458 = the always-on threat half. A PASSIVE+hidden ADD_PCT_MODIFIER on SPELLMOD_THREAT (op 2)
@@ -684,9 +672,8 @@ helpers:
   dispelType: 1            # DISPEL_MAGIC
   attributesEx3: 65536     # SPELL_ATTR3_SUPPRESS_CASTER_PROCS (wago attr3=0x10000)
   client:
-    name: Shadow Embrace
+    textKey: spell.948460
     icon: 2209             # stock 32386's SpellIconID
-    auraDescription: "Physical damage caused reduced by 1%."
 - id: 948461
   name: Shadow Embrace
   aura: 79
@@ -700,7 +687,7 @@ helpers:
   durationIndex: 29
   dispelType: 1
   attributesEx3: 65536
-  client: { name: Shadow Embrace, icon: 2209, auraDescription: "Physical damage caused reduced by 2%." }
+  client: {textKey: spell.948461, icon: 2209}
 - id: 948462
   name: Shadow Embrace
   aura: 79
@@ -714,7 +701,7 @@ helpers:
   durationIndex: 29
   dispelType: 1
   attributesEx3: 65536
-  client: { name: Shadow Embrace, icon: 2209, auraDescription: "Physical damage caused reduced by 3%." }
+  client: {textKey: spell.948462, icon: 2209}
 - id: 948463
   name: Shadow Embrace
   aura: 79
@@ -728,7 +715,7 @@ helpers:
   durationIndex: 29
   dispelType: 1
   attributesEx3: 65536
-  client: { name: Shadow Embrace, icon: 2209, auraDescription: "Physical damage caused reduced by 4%." }
+  client: {textKey: spell.948463, icon: 2209}
 - id: 948464
   name: Shadow Embrace
   aura: 79
@@ -742,7 +729,7 @@ helpers:
   durationIndex: 29
   dispelType: 1
   attributesEx3: 65536
-  client: { name: Shadow Embrace, icon: 2209, auraDescription: "Physical damage caused reduced by 5%." }
+  client: {textKey: spell.948464, icon: 2209}
 # --- Unstable Affliction r1-r3 (node 20720) ------------------------------------------------------
 # CLONE of stock 30108/30404/30405 (all DIVERGED). TBC is **18 s / 660 total** (durIdx 85, 110 per
 # 3 s tick) at a **1.5 s cast** and a **flat** 270 mana; live is 15 s and ManaCostPct 20 — so
@@ -774,11 +761,9 @@ helpers:
     targetA: 6             # TARGET_UNIT_TARGET_ENEMY
     amplitude: 3000        # 3 s tick (explicit: an unset period is defaulted to 1000 ms by the core)
   client:
-    name: Unstable Affliction
+    textKey: spell.948470
     icon: 2039             # stock 30108's SpellIconID
     rank: 1
-    description: "Shadow energy slowly destroys the target, causing 660 damage over 18 sec.  In addition, if the Unstable Affliction is dispelled it will cause 990 damage to the dispeller and silence them for 5 sec."
-    auraDescription: "Shadow energy slowly destroying the target."
     skillLine: 355         # Affliction tab
 - id: 948471
   name: Unstable Affliction
@@ -794,11 +779,9 @@ helpers:
   effects:
   - { effect: 6, aura: 3, basePoints: 140, targetA: 6, amplitude: 3000 }
   client:
-    name: Unstable Affliction
+    textKey: spell.948471
     icon: 2039
     rank: 2
-    description: "Shadow energy slowly destroys the target, causing 840 damage over 18 sec.  In addition, if the Unstable Affliction is dispelled it will cause 1260 damage to the dispeller and silence them for 5 sec."
-    auraDescription: "Shadow energy slowly destroying the target."
     skillLine: 355
 - id: 948472
   name: Unstable Affliction
@@ -814,11 +797,9 @@ helpers:
   effects:
   - { effect: 6, aura: 3, basePoints: 175, targetA: 6, amplitude: 3000 }
   client:
-    name: Unstable Affliction
+    textKey: spell.948472
     icon: 2039
     rank: 3
-    description: "Shadow energy slowly destroys the target, causing 1050 damage over 18 sec.  In addition, if the Unstable Affliction is dispelled it will cause 1575 damage to the dispeller and silence them for 5 sec."
-    auraDescription: "Shadow energy slowly destroying the target."
     skillLine: 355
 # === Demonology (948550-948649) ==================================================================
 # Allocated IN ORDER by Task 3. USED: 948550-948557, 948560-948564, 948570-948573 (17 ids).
@@ -871,10 +852,8 @@ helpers:
     misc: 127              # all schools (matches wago 25228 e1 misc 127)
     targetA: 1
   client:
-    name: Soul Link
+    textKey: spell.948550
     icon: 173              # stock Soul Link SpellIconID (Spell_Shadow_GatherShadows)
-    description: "When active, 20% of all damage taken by the caster is taken by your Imp, Voidwalker, Succubus, Felhunter, Felguard, or enslaved demon instead.  That damage cannot be prevented.  In addition, both the demon and master will inflict 5% more damage.  Lasts as long as the demon is active and controlled."
-    auraDescription: "20% of all damage you take is redirected to your demon, and both of you deal 5% more damage."
     skillLine: 354         # Demonology tab
 - id: 948551               # Soul Link split carrier — HIDDEN (no client:), pet SELF-CAST area aura.
   name: Soul Link
@@ -908,9 +887,8 @@ helpers:
     dieSides: 0
     targetA: 5             # TARGET_UNIT_PET
   client:
-    name: Demonic Sacrifice
+    textKey: spell.948552
     icon: 1488             # stock Demonic Sacrifice SpellIconID
-    description: "When activated, sacrifices your summoned demon to grant you an effect that lasts 30 min.  The effect is canceled if any Demon is summoned.  Imp: Increases your Fire damage by 15%.  Voidwalker: Restores 2% of total health every 4 sec.  Succubus: Increases your Shadow damage by 15%.  Felhunter: Restores 3% of total mana every 4 sec.  Felguard: Increases your Shadow damage by 10% and restores 2% of total mana every 4 sec."
     skillLine: 354         # Demonology tab
 - id: 948553               # Burning Wish (Imp) — TBC +15% Fire (stock 18789 is +10%).
   name: Burning Wish
@@ -928,9 +906,8 @@ helpers:
     misc: 2228
     targetA: 1
   client:
-    name: Burning Wish
+    textKey: spell.948553
     icon: 1488             # shared DS-buff SpellIconID
-    auraDescription: "Fire damage increased by 15%."
 - id: 948554               # Fel Stamina (Voidwalker) — TBC 2% health / 4 s (== live; Vanilla was 3%).
   name: Fel Stamina
   template: 18790          # aura 20 OBS_MOD_HEALTH, 4 s period, DurationIndex 30
@@ -947,9 +924,8 @@ helpers:
     misc: 2228
     targetA: 1
   client:
-    name: Fel Stamina
+    textKey: spell.948554
     icon: 1488
-    auraDescription: "Restoring 2% of total health every 4 sec."
 - id: 948555               # Touch of Shadow (Succubus) — TBC +15% Shadow (stock 18791 is +10%).
   name: Touch of Shadow
   template: 18791          # aura 79 misc 32 (Shadow), DurationIndex 30
@@ -966,9 +942,8 @@ helpers:
     misc: 2228
     targetA: 1
   client:
-    name: Touch of Shadow
+    textKey: spell.948555
     icon: 1488
-    auraDescription: "Shadow damage increased by 15%."
 - id: 948556               # Fel Energy (Felhunter) — TBC 3% mana / 4 s (== live; Vanilla was 2%).
   name: Fel Energy
   template: 18792          # aura 21 OBS_MOD_POWER, 4 s period, DurationIndex 30
@@ -985,9 +960,8 @@ helpers:
     misc: 2228
     targetA: 1
   client:
-    name: Fel Energy
+    textKey: spell.948556
     icon: 1488
-    auraDescription: "Restoring 3% of total mana every 4 sec."
 - id: 948557               # Touch of Shadow (Felguard) — TBC-ONLY branch: +10% Shadow AND 2% mana/4s.
   name: Touch of Shadow    # stock 35701 shares the Succubus buff's name; kept authentic.
   template: 35701          # live 35701 is +7% over misc 36 (Fire|Shadow); TBC is +10% over misc 32
@@ -1009,9 +983,8 @@ helpers:
     targetA: 1
     amplitude: 4000
   client:
-    name: Touch of Shadow
+    textKey: spell.948557
     icon: 1488
-    auraDescription: "Shadow damage increased by 10%, restoring 2% of total mana every 4 sec."
 # --- Master Demonologist (node 20737) ------------------------------------------------------------
 # FRESH carriers, not a grant: the five talent ranks 23785/23822-25 are LIVE_MATCH but ALL TWENTY-FIVE
 # per-demon payloads DIVERGE (pet_aura_census.master_demonologist_payload_divergence), and the stock
@@ -1033,9 +1006,8 @@ helpers:
     radius: 12
   durationIndex: 21        # permanent (-1); lifetime = the aura's own (dies with the pet)
   client:
-    name: Master Demonologist
+    textKey: spell.948560
     icon: 215              # Summon Imp SpellIconID — authentic per-demon flavor
-    auraDescription: "Reduces the threat you cause while your Imp is active."
 - id: 948561               # Voidwalker branch — -2%/rank physical damage taken (23760 et al; LIVE_MATCH shape)
   name: Master Demonologist
   effects:
@@ -1047,9 +1019,8 @@ helpers:
     radius: 12
   durationIndex: 21
   client:
-    name: Master Demonologist
+    textKey: spell.948561
     icon: 217              # Summon Voidwalker SpellIconID
-    auraDescription: "Reduces the physical damage you take while your Voidwalker is active."
 - id: 948562               # Succubus branch — +2%/rank ALL damage (wago misc 127; live is misc 32 shadow-only)
   name: Master Demonologist
   effects:
@@ -1061,9 +1032,8 @@ helpers:
     radius: 12
   durationIndex: 21
   client:
-    name: Master Demonologist
+    textKey: spell.948562
     icon: 216              # Summon Succubus SpellIconID
-    auraDescription: "Increases all damage you cause while your Succubus is active."
 - id: 948563               # Felhunter branch — +0.2*rank per level to all resistances (wago misc 126;
   name: Master Demonologist  # live repurposed this branch to a damage-taken cut entirely)
   effects:
@@ -1075,9 +1045,8 @@ helpers:
     radius: 12
   durationIndex: 21
   client:
-    name: Master Demonologist
+    textKey: spell.948563
     icon: 214              # Summon Felhunter SpellIconID
-    auraDescription: "Increases all resistances while your Felhunter is active."
 - id: 948564               # Felguard branch (TBC-only) — +1%/rank ALL damage AND 0.1*rank per level resist
   name: Master Demonologist
   effects:
@@ -1095,9 +1064,8 @@ helpers:
     radius: 12
   durationIndex: 21
   client:
-    name: Master Demonologist
+    textKey: spell.948564
     icon: 1983             # Summon Felguard SpellIconID (30146)
-    auraDescription: "Increases all damage you cause and all resistances while your Felguard is active."
 # --- Fel Domination (node 20728) -----------------------------------------------------------------
 # CLONE, not a grant: TBC's cooldown is **15 min** (wago RecoveryTime 900000) against live's 3 min,
 # and a cooldown cannot be made per-character on a stock spell id. DispelType 1 (wago) vs live 0.
@@ -1140,10 +1108,8 @@ helpers:
     chance: 0              # stock row; the core seeds it from the DBC ProcChance (100)
     affects: [Summon Demon]
   client:
-    name: Fel Domination
+    textKey: spell.948570
     icon: 195              # stock Fel Domination SpellIconID
-    description: "Your next Imp, Voidwalker, Succubus, Felhunter or Felguard Summon spell has its casting time reduced by 5.5 sec and its Mana cost reduced by 50%."
-    auraDescription: "Next demon Summon spell is 5.5 sec faster and costs 50% less Mana."
     skillLine: 354         # Demonology tab
 # --- Mana Feed r1-r3 (node 20736) ----------------------------------------------------------------
 # AUTHORED AS TEMPLATED HELPERS RATHER THAN A `mechanic: spellmod` NODE, and that is load-bearing.
@@ -1234,11 +1200,10 @@ helpers:
   effects:
   - { effect: 2, basePoints: 239, dieSides: 67, perLevel: 1.6, targetA: 6 }   # SCHOOL_DAMAGE 240-306 at L40
   client:
-    name: Conflagrate
+    textKey: spell.948650
     icon: 12
     rank: 1
     skillLine: 593         # Destruction tab (else the granted active lands in the General tab)
-    description: "Ignites a target that is already afflicted by your Immolate, dealing 249 to 316 Fire damage and consuming the Immolate spell."
 - id: 948651
   name: Conflagrate
   template: 17962
@@ -1251,11 +1216,10 @@ helpers:
   effects:
   - { effect: 2, basePoints: 315, dieSides: 81, perLevel: 1.8, targetA: 6 }
   client:
-    name: Conflagrate
+    textKey: spell.948651
     icon: 12
     rank: 2
     skillLine: 593
-    description: "Ignites a target that is already afflicted by your Immolate, dealing 326 to 407 Fire damage and consuming the Immolate spell."
 - id: 948652
   name: Conflagrate
   template: 17962
@@ -1268,11 +1232,10 @@ helpers:
   effects:
   - { effect: 2, basePoints: 382, dieSides: 97, perLevel: 2.0, targetA: 6 }
   client:
-    name: Conflagrate
+    textKey: spell.948652
     icon: 12
     rank: 3
     skillLine: 593
-    description: "Ignites a target that is already afflicted by your Immolate, dealing 395 to 491 Fire damage and consuming the Immolate spell."
 - id: 948653
   name: Conflagrate
   template: 17962
@@ -1285,11 +1248,10 @@ helpers:
   effects:
   - { effect: 2, basePoints: 446, dieSides: 111, perLevel: 2.2, targetA: 6 }
   client:
-    name: Conflagrate
+    textKey: spell.948653
     icon: 12
     rank: 4
     skillLine: 593
-    description: "Ignites a target that is already afflicted by your Immolate, dealing 455 to 566 Fire damage and consuming the Immolate spell."
 - id: 948654
   name: Conflagrate
   template: 17962
@@ -1302,11 +1264,10 @@ helpers:
   effects:
   - { effect: 2, basePoints: 511, dieSides: 127, perLevel: 2.4, targetA: 6 }
   client:
-    name: Conflagrate
+    textKey: spell.948654
     icon: 12
     rank: 5
     skillLine: 593
-    description: "Ignites a target that is already afflicted by your Immolate, dealing 521 to 648 Fire damage and consuming the Immolate spell."
 - id: 948655
   name: Conflagrate
   template: 17962
@@ -1319,11 +1280,10 @@ helpers:
   effects:
   - { effect: 2, basePoints: 578, dieSides: 143, perLevel: 2.5, targetA: 6 }
   client:
-    name: Conflagrate
+    textKey: spell.948655
     icon: 12
     rank: 6
     skillLine: 593
-    description: "Ignites a target that is already afflicted by your Immolate, dealing 579 to 721 Fire damage and consuming the Immolate spell."
 # --- Improved Shadow Bolt debuffs r1-r5 (node 20743) ---------------------------------------------
 # RECONSTRUCT. TBC's own debuff ids 17794/17798/17797/17799/17800 ARE live's Shadow Mastery ranks 1-5
 # (aura 179 MOD_ATTACKER_SPELL_CRIT_CHANCE, misc 126) — a HARD BLOCK on granting or triggering any of
@@ -1357,9 +1317,8 @@ helpers:
     flags: 139936          # wago's own ProcTypeMask, TAKEN_* only — see the block comment
     chance: 100            # every qualifying source taken spends exactly one charge
   client:
-    name: Shadow Vulnerability
+    textKey: spell.948660
     icon: 213              # stock Improved Shadow Bolt SpellIconID
-    auraDescription: "Shadow damage taken increased by 4%."
 - id: 948661               # ISB debuff rank 2 (+8%)
   name: Shadow Vulnerability
   aura: 87
@@ -1370,7 +1329,7 @@ helpers:
   durationIndex: 29
   procCharges: 4
   proc: { flags: 139936, chance: 100 }
-  client: { name: Shadow Vulnerability, icon: 213, auraDescription: "Shadow damage taken increased by 8%." }
+  client: {textKey: spell.948661, icon: 213}
 - id: 948662               # ISB debuff rank 3 (+12%)
   name: Shadow Vulnerability
   aura: 87
@@ -1381,7 +1340,7 @@ helpers:
   durationIndex: 29
   procCharges: 4
   proc: { flags: 139936, chance: 100 }
-  client: { name: Shadow Vulnerability, icon: 213, auraDescription: "Shadow damage taken increased by 12%." }
+  client: {textKey: spell.948662, icon: 213}
 - id: 948663               # ISB debuff rank 4 (+16%)
   name: Shadow Vulnerability
   aura: 87
@@ -1392,7 +1351,7 @@ helpers:
   durationIndex: 29
   procCharges: 4
   proc: { flags: 139936, chance: 100 }
-  client: { name: Shadow Vulnerability, icon: 213, auraDescription: "Shadow damage taken increased by 16%." }
+  client: {textKey: spell.948663, icon: 213}
 - id: 948664               # ISB debuff rank 5 (+20%)
   name: Shadow Vulnerability
   aura: 87
@@ -1403,7 +1362,7 @@ helpers:
   durationIndex: 29
   procCharges: 4
   proc: { flags: 139936, chance: 100 }
-  client: { name: Shadow Vulnerability, icon: 213, auraDescription: "Shadow damage taken increased by 20%." }
+  client: {textKey: spell.948664, icon: 213}
 # --- Aftermath daze (node 20746) -----------------------------------------------------------------
 # RECONSTRUCT. TBC 18118 is `aura 33 MOD_DECREASE_SPEED -50%, **Mechanic 11**, PreventionType 1,
 # DurationIndex 28 = 5 s`; live 18118 is the WotLK retune (-70%, Mechanic 27) and carries two extra
@@ -1425,9 +1384,8 @@ helpers:
   defenseType: 1           # SPELL_DAMAGE_CLASS_MAGIC — routes the landing through MagicSpellHitResult
   preventionType: 1        # wago preventionType=1 (live 0)
   client:
-    name: Aftermath
+    textKey: spell.948665
     icon: 11               # stock Aftermath payload 18118 SpellIconID
-    auraDescription: "Dazed."
 # --- Pyroclasm stun (node 20754) -----------------------------------------------------------------
 # RECONSTRUCT, identical in shape to the shipped Vanilla stun 932945. TBC 18096/18073 deliver the stun
 # through `aura 112 OVERRIDE_CLASS_SCRIPTS` misc 2188/2189 plus a placeholder trigger 18350, and
@@ -1448,9 +1406,8 @@ helpers:
   defenseType: 1           # SPELL_DAMAGE_CLASS_MAGIC — so the stun can be resisted (wago defenseType=1)
   preventionType: 1        # wago 18093 preventionType=1
   client:
-    name: Pyroclasm
+    textKey: spell.948666
     icon: 1137             # stock Pyroclasm payload 18093 SpellIconID
-    auraDescription: "Stunned."
 # --- Nether Protection immunity (node 20757) -----------------------------------------------------
 # RECONSTRUCT. TBC 30299/30301/30302 trigger **30300**, which is WAGO_ONLY: `aura 39
 # SPELL_AURA_SCHOOL_IMMUNITY, misc 36 (Fire|Shadow), DurationIndex 35 = 4 s`, self. LIVE triggers the
@@ -1468,9 +1425,8 @@ helpers:
   school: 1                # wago 30300 school=1 (the buff's own school; cosmetic on a self-immunity)
   dispelType: 1            # DISPEL_MAGIC (wago dispel=1)
   client:
-    name: Nether Protection
+    textKey: spell.948667
     icon: 1985             # stock Nether Protection talent 30299 SpellIconID (30300 is absent live)
-    auraDescription: "Immune to Shadow and Fire spells."
 # --- Shadowfury clones r1-r3 (node 20763) --------------------------------------------------------
 # CLONE ×3 on template 30283. Live 30283 is castable but WotLK-retuned in four fields TBC cares about:
 # instant cast (TBC castIdx 3 = **0.5 s**), a 3 s stun (TBC durIdx 39 = **2 s**), and ManaCostPct 37
@@ -1503,12 +1459,10 @@ helpers:
   - { effect: 2, basePoints: 342, dieSides: 65, perLevel: 1.6, radius: 14, targetA: 16 }   # SCHOOL_DAMAGE 343-407 at L50, 8 yd
   - { effect: 6, aura: 12, basePoints: 0, mechanic: 12, radius: 14, targetA: 16 }          # MOD_STUN, MECHANIC_STUN, same 8 yd
   client:
-    name: Shadowfury
+    textKey: spell.948670
     icon: 1988
     rank: 1
     skillLine: 593         # Destruction tab
-    description: "Shadowfury is unleashed, causing 357 to 422 Shadow damage and stunning all enemies within 8 yds for 2 sec."
-    auraDescription: "Stunned."
 - id: 948671
   name: Shadowfury
   template: 30283
@@ -1525,12 +1479,10 @@ helpers:
   - { effect: 2, basePoints: 458, dieSides: 89, perLevel: 1.9, radius: 14, targetA: 16 }
   - { effect: 6, aura: 12, basePoints: 0, mechanic: 12, radius: 14, targetA: 16 }
   client:
-    name: Shadowfury
+    textKey: spell.948671
     icon: 1988
     rank: 2
     skillLine: 593
-    description: "Shadowfury is unleashed, causing 476 to 565 Shadow damage and stunning all enemies within 8 yds for 2 sec."
-    auraDescription: "Stunned."
 - id: 948672
   name: Shadowfury
   template: 30283
@@ -1547,12 +1499,10 @@ helpers:
   - { effect: 2, basePoints: 611, dieSides: 117, perLevel: 2.2, radius: 14, targetA: 16 }
   - { effect: 6, aura: 12, basePoints: 0, mechanic: 12, radius: 14, targetA: 16 }
   client:
-    name: Shadowfury
+    textKey: spell.948672
     icon: 1988
     rank: 3
     skillLine: 593
-    description: "Shadowfury is unleashed, causing 612 to 728 Shadow damage and stunning all enemies within 8 yds for 2 sec."
-    auraDescription: "Stunned."
 tabs:
 - key: 1
   name: Affliction

@@ -1,0 +1,176 @@
+schemaVersion: 1
+locale: enUS
+era: vanilla
+class: warlock
+texts:
+  spell.932900:
+    name: Soul Link
+    description: While active and your demon is alive, 30% of all damage taken by you is taken by your demon instead.
+      Lasts as long as the demon is active.
+    auraDescription: 30% of all damage you take is redirected to your demon.
+  spell.932902:
+    name: Siphon Life
+    description: Transfers 15 health from the target to the caster every 3 sec. Lasts 30 sec.
+    auraDescription: Transferring 15 health to the caster every 3 sec.
+  spell.932919:
+    name: Siphon Life
+    description: Transfers 22 health from the target to the caster every 3 sec. Lasts 30 sec.
+    auraDescription: Transferring 22 health to the caster every 3 sec.
+  spell.932920:
+    name: Siphon Life
+    description: Transfers 33 health from the target to the caster every 3 sec. Lasts 30 sec.
+    auraDescription: Transferring 33 health to the caster every 3 sec.
+  spell.932921:
+    name: Siphon Life
+    description: Transfers 45 health from the target to the caster every 3 sec. Lasts 30 sec.
+    auraDescription: Transferring 45 health to the caster every 3 sec.
+  spell.932918:
+    name: Amplify Curse
+    description: Increases the effect of your next Curse of Weakness or Curse of Agony by 50%, or your next Curse
+      of Exhaustion by 20%.
+    auraDescription: Your next Curse of Weakness or Agony is 50% stronger (Exhaustion 20%).
+  spell.932930:
+    name: Pre-Wrath Warlock
+  spell.932994:
+    name: Vanilla Warlock
+  spell.932939:
+    name: WotLK Warlock
+  spell.932940:
+    name: Shadow Vulnerability
+  spell.932941:
+    name: Shadow Vulnerability
+  spell.932942:
+    name: Shadow Vulnerability
+  spell.932943:
+    name: Shadow Vulnerability
+  spell.932944:
+    name: Shadow Vulnerability
+  spell.932945:
+    name: Pyroclasm
+  spell.932903:
+    name: Burning Wish
+    auraDescription: Fire damage increased by 15%.
+  spell.932904:
+    name: Touch of Shadow
+    auraDescription: Shadow damage increased by 15%.
+  spell.932905:
+    name: Fel Stamina
+    auraDescription: Restoring 3% of total health every 4 sec.
+  spell.932906:
+    name: Fel Energy
+    auraDescription: Restoring 2% of total mana every 4 sec.
+  spell.932914:
+    name: Drain Mana
+  spell.932913:
+    name: Improved Drain Soul
+    description: Mana regeneration increased by 100% for 10 sec.
+    auraDescription: Mana regeneration increased by 100% for 10 sec.
+  spell.932907:
+    name: Master Demonologist
+    auraDescription: Reduces the threat you cause while your Imp is active.
+  spell.932908:
+    name: Master Demonologist
+    auraDescription: Reduces the physical damage you take while your Voidwalker is active.
+  spell.932909:
+    name: Master Demonologist
+    auraDescription: Increases all damage you cause while your Succubus is active.
+  spell.932910:
+    name: Master Demonologist
+    auraDescription: Increases all resistances while your Felhunter is active.
+  spell.932922:
+    name: Create Firestone (Lesser)
+    description: Creates a Lesser Firestone that can be equipped in the off-hand. When equipped, it enchants the
+      main hand weapon with fire and increases Fire spell damage.
+  spell.932923:
+    name: Create Firestone
+    description: Creates a Firestone that can be equipped in the off-hand. When equipped, it enchants the main hand
+      weapon with fire and increases Fire spell damage.
+  spell.932924:
+    name: Create Firestone (Greater)
+    description: Creates a Greater Firestone that can be equipped in the off-hand. When equipped, it enchants the
+      main hand weapon with fire and increases Fire spell damage.
+  spell.932925:
+    name: Create Firestone (Major)
+    description: Creates a Major Firestone that can be equipped in the off-hand. When equipped, it enchants the
+      main hand weapon with fire and increases Fire spell damage.
+  spell.932926:
+    name: Create Spellstone
+    description: Creates a Spellstone that can be equipped in the off-hand. While equipped, it increases spell critical
+      strike chance, and it can be used to remove harmful magic effects and absorb magic damage.
+  spell.932927:
+    name: Create Spellstone (Greater)
+    description: Creates a Greater Spellstone that can be equipped in the off-hand. While equipped, it increases
+      spell critical strike chance, and it can be used to remove harmful magic effects and absorb magic damage.
+  spell.932928:
+    name: Create Spellstone (Major)
+    description: Creates a Major Spellstone that can be equipped in the off-hand. While equipped, it increases spell
+      critical strike chance, and it can be used to remove harmful magic effects and absorb magic damage.
+  spell.932931:
+    name: Firestone
+    description: Enchants the main hand weapon with fire, granting each attack a chance to deal 25 to 35 additional
+      Fire damage, and increases damage done by Fire spells and effects by up to 10.
+  spell.932932:
+    name: Firestone
+    description: Enchants the main hand weapon with fire, granting each attack a chance to deal 40 to 60 additional
+      Fire damage, and increases damage done by Fire spells and effects by up to 14.
+  spell.932933:
+    name: Firestone
+    description: Enchants the main hand weapon with fire, granting each attack a chance to deal 60 to 90 additional
+      Fire damage, and increases damage done by Fire spells and effects by up to 17.
+  spell.932934:
+    name: Firestone
+    description: Enchants the main hand weapon with fire, granting each attack a chance to deal 80 to 120 additional
+      Fire damage, and increases damage done by Fire spells and effects by up to 21.
+  spell.932935:
+    name: Firestone Attack
+  spell.932936:
+    name: Firestone Attack
+  spell.932937:
+    name: Firestone Attack
+  spell.932938:
+    name: Firestone Attack
+  spell.932946:
+    name: Spellstone
+    description: Removes all magic effects from the caster and absorbs up to 400 magic damage for 1 min.
+    auraDescription: Absorbing magic damage.
+  spell.932947:
+    name: Spellstone
+    description: Removes all magic effects from the caster and absorbs up to 650 magic damage for 1 min.
+    auraDescription: Absorbing magic damage.
+  spell.932948:
+    name: Spellstone
+    description: Removes all magic effects from the caster and absorbs up to 900 magic damage for 1 min.
+    auraDescription: Absorbing magic damage.
+  spell.932929:
+    name: Demonic Sacrifice
+    description: 'Sacrifices your summoned demon to grant you an effect that lasts 30 min. The effect is canceled
+      if any Demon is summoned. Imp: Increases your Fire damage by 15%. Voidwalker: Restores 3% of total Health
+      every 4 sec. Succubus: Increases your Shadow damage by 15%. Felhunter: Restores 2% of total Mana every 4 sec.'
+  spell.932949:
+    name: Spellstone
+    description: Improves your chance to get a critical strike with spells by 1%.
+  spell.932780:
+    name: Conflagrate
+    description: Ignites a target that is already afflicted by Immolate, dealing 240 to 307 Fire damage and consuming
+      the Immolate spell.
+  spell.932781:
+    name: Conflagrate
+    description: Ignites a target that is already afflicted by Immolate, dealing 316 to 397 Fire damage and consuming
+      the Immolate spell.
+  spell.932782:
+    name: Conflagrate
+    description: Ignites a target that is already afflicted by Immolate, dealing 383 to 480 Fire damage and consuming
+      the Immolate spell.
+  spell.932783:
+    name: Conflagrate
+    description: Ignites a target that is already afflicted by Immolate, dealing 447 to 558 Fire damage and consuming
+      the Immolate spell.
+  spell.932784:
+    name: Dark Pact
+    description: Drains 150 of your pet's Mana, returning 100% to you.
+  spell.932785:
+    name: Dark Pact
+    description: Drains 200 of your pet's Mana, returning 100% to you.
+  spell.932786:
+    name: Dark Pact
+    description: Drains 250 of your pet's Mana, returning 100% to you.

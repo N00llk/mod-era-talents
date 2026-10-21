@@ -1,0 +1,494 @@
+schemaVersion: 1
+locale: enUS
+era: tbc
+class: paladin
+texts:
+  spell.946000:
+    name: Seal of Righteousness
+    description: Fills the Paladin with holy power, causing melee attacks to deal additional Holy damage, for 30
+      sec. Only one Seal can be active at a time. Unleashing this Seal's energy judges an enemy for 15 Holy damage.
+    auraDescription: Melee attacks deal additional Holy damage. Lasts 30 sec.
+  spell.946001:
+    name: Seal of Righteousness
+    description: Fills the Paladin with holy power, causing melee attacks to deal additional Holy damage, for 30
+      sec. Only one Seal can be active at a time. Unleashing this Seal's energy judges an enemy for 25 Holy damage.
+    auraDescription: Melee attacks deal additional Holy damage. Lasts 30 sec.
+  spell.946002:
+    name: Seal of Righteousness
+    description: Fills the Paladin with holy power, causing melee attacks to deal additional Holy damage, for 30
+      sec. Only one Seal can be active at a time. Unleashing this Seal's energy judges an enemy for 39 Holy damage.
+    auraDescription: Melee attacks deal additional Holy damage. Lasts 30 sec.
+  spell.946003:
+    name: Seal of Righteousness
+    description: Fills the Paladin with holy power, causing melee attacks to deal additional Holy damage, for 30
+      sec. Only one Seal can be active at a time. Unleashing this Seal's energy judges an enemy for 57 Holy damage.
+    auraDescription: Melee attacks deal additional Holy damage. Lasts 30 sec.
+  spell.946004:
+    name: Seal of Righteousness
+    description: Fills the Paladin with holy power, causing melee attacks to deal additional Holy damage, for 30
+      sec. Only one Seal can be active at a time. Unleashing this Seal's energy judges an enemy for 78 Holy damage.
+    auraDescription: Melee attacks deal additional Holy damage. Lasts 30 sec.
+  spell.946005:
+    name: Seal of Righteousness
+    description: Fills the Paladin with holy power, causing melee attacks to deal additional Holy damage, for 30
+      sec. Only one Seal can be active at a time. Unleashing this Seal's energy judges an enemy for 102 Holy damage.
+    auraDescription: Melee attacks deal additional Holy damage. Lasts 30 sec.
+  spell.946006:
+    name: Seal of Righteousness
+    description: Fills the Paladin with holy power, causing melee attacks to deal additional Holy damage, for 30
+      sec. Only one Seal can be active at a time. Unleashing this Seal's energy judges an enemy for 131 Holy damage.
+    auraDescription: Melee attacks deal additional Holy damage. Lasts 30 sec.
+  spell.946007:
+    name: Seal of Righteousness
+    description: Fills the Paladin with holy power, causing melee attacks to deal additional Holy damage, for 30
+      sec. Only one Seal can be active at a time. Unleashing this Seal's energy judges an enemy for 162 Holy damage.
+    auraDescription: Melee attacks deal additional Holy damage. Lasts 30 sec.
+  spell.946008:
+    name: Seal of Righteousness
+    description: Fills the Paladin with holy power, causing melee attacks to deal additional Holy damage, for 30
+      sec. Only one Seal can be active at a time. Unleashing this Seal's energy judges an enemy for 208 Holy damage.
+    auraDescription: Melee attacks deal additional Holy damage. Lasts 30 sec.
+  spell.946009:
+    name: Seal of Righteousness
+  spell.946010:
+    name: Seal of Righteousness
+  spell.946011:
+    name: Seal of Righteousness
+  spell.946012:
+    name: Seal of Righteousness
+  spell.946013:
+    name: Seal of Righteousness
+  spell.946014:
+    name: Seal of Righteousness
+  spell.946015:
+    name: Seal of Righteousness
+  spell.946016:
+    name: Seal of Righteousness
+  spell.946017:
+    name: Seal of Righteousness
+  spell.946018:
+    name: Judgement of Righteousness
+  spell.946019:
+    name: Judgement of Righteousness
+  spell.946020:
+    name: Judgement of Righteousness
+  spell.946021:
+    name: Judgement of Righteousness
+  spell.946022:
+    name: Judgement of Righteousness
+  spell.946023:
+    name: Judgement of Righteousness
+  spell.946024:
+    name: Judgement of Righteousness
+  spell.946025:
+    name: Judgement of Righteousness
+  spell.946026:
+    name: Judgement of Righteousness
+  spell.946027:
+    name: Seal of Command
+    description: Gives the Paladin a chance to deal additional Holy damage equal to 70% of the damage of the attack.
+      Only one Seal can be active at a time. Lasts 30 sec. Unleashing this Seal's energy judges an enemy, instantly
+      causing $946103s1 Holy damage, or double that against a stunned target.
+    auraDescription: Melee attacks have a chance to deal Holy damage equal to 70% of the attack. Lasts 30 sec.
+  spell.946028:
+    name: Seal of Command
+    description: Gives the Paladin a chance to deal additional Holy damage equal to 70% of the damage of the attack.
+      Only one Seal can be active at a time. Lasts 30 sec. Unleashing this Seal's energy judges an enemy, instantly
+      causing $946104s1 Holy damage, or double that against a stunned target.
+    auraDescription: Melee attacks have a chance to deal Holy damage equal to 70% of the attack. Lasts 30 sec.
+  spell.946029:
+    name: Seal of Command
+    description: Gives the Paladin a chance to deal additional Holy damage equal to 70% of the damage of the attack.
+      Only one Seal can be active at a time. Lasts 30 sec. Unleashing this Seal's energy judges an enemy, instantly
+      causing $946105s1 Holy damage, or double that against a stunned target.
+    auraDescription: Melee attacks have a chance to deal Holy damage equal to 70% of the attack. Lasts 30 sec.
+  spell.946030:
+    name: Seal of Command
+    description: Gives the Paladin a chance to deal additional Holy damage equal to 70% of the damage of the attack.
+      Only one Seal can be active at a time. Lasts 30 sec. Unleashing this Seal's energy judges an enemy, instantly
+      causing $946106s1 Holy damage, or double that against a stunned target.
+    auraDescription: Melee attacks have a chance to deal Holy damage equal to 70% of the attack. Lasts 30 sec.
+  spell.946031:
+    name: Seal of Command
+    description: Gives the Paladin a chance to deal additional Holy damage equal to 70% of the damage of the attack.
+      Only one Seal can be active at a time. Lasts 30 sec. Unleashing this Seal's energy judges an enemy, instantly
+      causing $946107s1 Holy damage, or double that against a stunned target.
+    auraDescription: Melee attacks have a chance to deal Holy damage equal to 70% of the attack. Lasts 30 sec.
+  spell.946032:
+    name: Seal of Command
+    description: Gives the Paladin a chance to deal additional Holy damage equal to 70% of the damage of the attack.
+      Only one Seal can be active at a time. Lasts 30 sec. Unleashing this Seal's energy judges an enemy, instantly
+      causing $946108s1 Holy damage, or double that against a stunned target.
+    auraDescription: Melee attacks have a chance to deal Holy damage equal to 70% of the attack. Lasts 30 sec.
+  spell.946033:
+    name: Seal of Command
+  spell.946034:
+    name: Seal of Light
+    description: Fills the Paladin with holy light, healing the Paladin for 39 on melee hits, for 30 sec. Only one
+      Seal can be active at a time. Unleashing this Seal's energy judges an enemy, causing attacks against them
+      to heal the attacker for 25.
+    auraDescription: Melee attacks heal the Paladin for 39. Lasts 30 sec.
+  spell.946035:
+    name: Seal of Light
+    description: Fills the Paladin with holy light, healing the Paladin for 53 on melee hits, for 30 sec. Only one
+      Seal can be active at a time. Unleashing this Seal's energy judges an enemy, causing attacks against them
+      to heal the attacker for 34.
+    auraDescription: Melee attacks heal the Paladin for 53. Lasts 30 sec.
+  spell.946036:
+    name: Seal of Light
+    description: Fills the Paladin with holy light, healing the Paladin for 76 on melee hits, for 30 sec. Only one
+      Seal can be active at a time. Unleashing this Seal's energy judges an enemy, causing attacks against them
+      to heal the attacker for 49.
+    auraDescription: Melee attacks heal the Paladin for 76. Lasts 30 sec.
+  spell.946037:
+    name: Seal of Light
+    description: Fills the Paladin with holy light, healing the Paladin for 94 on melee hits, for 30 sec. Only one
+      Seal can be active at a time. Unleashing this Seal's energy judges an enemy, causing attacks against them
+      to heal the attacker for 61.
+    auraDescription: Melee attacks heal the Paladin for 94. Lasts 30 sec.
+  spell.946038:
+    name: Seal of Light
+    description: Fills the Paladin with holy light, healing the Paladin for 133 on melee hits, for 30 sec. Only
+      one Seal can be active at a time. Unleashing this Seal's energy judges an enemy, causing attacks against them
+      to heal the attacker for 95.
+    auraDescription: Melee attacks heal the Paladin for 133. Lasts 30 sec.
+  spell.946039:
+    name: Seal of Light
+  spell.946040:
+    name: Seal of Light
+  spell.946041:
+    name: Seal of Light
+  spell.946042:
+    name: Seal of Light
+  spell.946043:
+    name: Seal of Light
+  spell.946044:
+    name: Judgement of Light
+    auraDescription: Melee attacks against the target heal the attacker for 25. Lasts 10 sec.
+  spell.946045:
+    name: Judgement of Light
+    auraDescription: Melee attacks against the target heal the attacker for 34. Lasts 10 sec.
+  spell.946046:
+    name: Judgement of Light
+    auraDescription: Melee attacks against the target heal the attacker for 49. Lasts 10 sec.
+  spell.946047:
+    name: Judgement of Light
+    auraDescription: Melee attacks against the target heal the attacker for 61. Lasts 10 sec.
+  spell.946048:
+    name: Judgement of Light
+    auraDescription: Melee attacks against the target heal the attacker for 95. Lasts 10 sec.
+  spell.946049:
+    name: Judgement of Light
+  spell.946050:
+    name: Seal of Wisdom
+    description: Fills the Paladin with divine wisdom, restoring mana on melee hits, for 30 sec. Only one Seal can
+      be active at a time. Unleashing this Seal's energy judges an enemy, causing attackers to restore 33 mana.
+    auraDescription: Melee attacks restore the Paladin's mana. Lasts 30 sec.
+  spell.946051:
+    name: Seal of Wisdom
+    description: Fills the Paladin with divine wisdom, restoring mana on melee hits, for 30 sec. Only one Seal can
+      be active at a time. Unleashing this Seal's energy judges an enemy, causing attackers to restore 46 mana.
+    auraDescription: Melee attacks restore the Paladin's mana. Lasts 30 sec.
+  spell.946052:
+    name: Seal of Wisdom
+    description: Fills the Paladin with divine wisdom, restoring mana on melee hits, for 30 sec. Only one Seal can
+      be active at a time. Unleashing this Seal's energy judges an enemy, causing attackers to restore 59 mana.
+    auraDescription: Melee attacks restore the Paladin's mana. Lasts 30 sec.
+  spell.946053:
+    name: Seal of Wisdom
+    description: Fills the Paladin with divine wisdom, restoring mana on melee hits, for 30 sec. Only one Seal can
+      be active at a time. Unleashing this Seal's energy judges an enemy, causing attackers to restore 74 mana.
+    auraDescription: Melee attacks restore the Paladin's mana. Lasts 30 sec.
+  spell.946054:
+    name: Seal of Wisdom
+  spell.946055:
+    name: Seal of Wisdom
+  spell.946056:
+    name: Seal of Wisdom
+  spell.946057:
+    name: Seal of Wisdom
+  spell.946058:
+    name: Judgement of Wisdom
+    auraDescription: Melee attacks against the target restore 33 mana to the attacker. Lasts 10 sec.
+  spell.946059:
+    name: Judgement of Wisdom
+    auraDescription: Melee attacks against the target restore 46 mana to the attacker. Lasts 10 sec.
+  spell.946060:
+    name: Judgement of Wisdom
+    auraDescription: Melee attacks against the target restore 59 mana to the attacker. Lasts 10 sec.
+  spell.946061:
+    name: Judgement of Wisdom
+    auraDescription: Melee attacks against the target restore 74 mana to the attacker. Lasts 10 sec.
+  spell.946062:
+    name: Judgement of Wisdom
+  spell.946078:
+    name: TBC Seal Training
+  spell.946063:
+    name: Seal of Justice
+    description: Fills the Paladin with the spirit of justice for 30 sec, giving melee attacks a chance to stun
+      the target for 2 sec. Only one Seal can be active at a time. Unleashing this Seal's energy judges an enemy,
+      preventing them from fleeing for 20 sec.
+    auraDescription: Melee attacks have a chance to stun the target for 2 sec. Lasts 30 sec.
+  spell.946079:
+    name: Seal of Justice
+    description: Fills the Paladin with the spirit of justice for 30 sec, giving melee attacks a chance to stun
+      the target for 2 sec. Only one Seal can be active at a time. Unleashing this Seal's energy judges an enemy,
+      preventing them from fleeing for 20 sec.
+    auraDescription: Melee attacks have a chance to stun the target for 2 sec. Lasts 30 sec.
+  spell.946064:
+    name: Seal of the Crusader
+    description: Fills the Paladin with the spirit of a crusader for 30 sec, increasing attack power by 36. The
+      Paladin also attacks 40% faster. Only one Seal can be active on the Paladin at any one time. Unleashing this
+      Seal's energy judges an enemy, increasing Holy damage taken by 23 for 10 sec.
+    auraDescription: Attack power increased by 36. Attacks 40% faster. Judgement afflicts the target with Judgement
+      of the Crusader.
+  spell.946065:
+    name: Seal of the Crusader
+    description: Fills the Paladin with the spirit of a crusader for 30 sec, increasing attack power by 59. The
+      Paladin also attacks 40% faster. Only one Seal can be active on the Paladin at any one time. Unleashing this
+      Seal's energy judges an enemy, increasing Holy damage taken by 35 for 10 sec.
+    auraDescription: Attack power increased by 59. Attacks 40% faster. Judgement afflicts the target with Judgement
+      of the Crusader.
+  spell.946066:
+    name: Seal of the Crusader
+    description: Fills the Paladin with the spirit of a crusader for 30 sec, increasing attack power by 108. The
+      Paladin also attacks 40% faster. Only one Seal can be active on the Paladin at any one time. Unleashing this
+      Seal's energy judges an enemy, increasing Holy damage taken by 58 for 10 sec.
+    auraDescription: Attack power increased by 108. Attacks 40% faster. Judgement afflicts the target with Judgement
+      of the Crusader.
+  spell.946067:
+    name: Seal of the Crusader
+    description: Fills the Paladin with the spirit of a crusader for 30 sec, increasing attack power by 167. The
+      Paladin also attacks 40% faster. Only one Seal can be active on the Paladin at any one time. Unleashing this
+      Seal's energy judges an enemy, increasing Holy damage taken by 92 for 10 sec.
+    auraDescription: Attack power increased by 167. Attacks 40% faster. Judgement afflicts the target with Judgement
+      of the Crusader.
+  spell.946068:
+    name: Seal of the Crusader
+    description: Fills the Paladin with the spirit of a crusader for 30 sec, increasing attack power by 254. The
+      Paladin also attacks 40% faster. Only one Seal can be active on the Paladin at any one time. Unleashing this
+      Seal's energy judges an enemy, increasing Holy damage taken by 127 for 10 sec.
+    auraDescription: Attack power increased by 254. Attacks 40% faster. Judgement afflicts the target with Judgement
+      of the Crusader.
+  spell.946069:
+    name: Seal of the Crusader
+    description: Fills the Paladin with the spirit of a crusader for 30 sec, increasing attack power by 352. The
+      Paladin also attacks 40% faster. Only one Seal can be active on the Paladin at any one time. Unleashing this
+      Seal's energy judges an enemy, increasing Holy damage taken by 161 for 10 sec.
+    auraDescription: Attack power increased by 352. Attacks 40% faster. Judgement afflicts the target with Judgement
+      of the Crusader.
+  spell.946070:
+    name: Seal of the Crusader
+    description: Fills the Paladin with the spirit of a crusader for 30 sec, increasing attack power by 474. The
+      Paladin also attacks 40% faster. Only one Seal can be active on the Paladin at any one time. Unleashing this
+      Seal's energy judges an enemy, increasing Holy damage taken by 219 for 10 sec.
+    auraDescription: Attack power increased by 474. Attacks 40% faster. Judgement afflicts the target with Judgement
+      of the Crusader.
+  spell.946071:
+    name: Judgement of the Crusader
+    auraDescription: Holy damage taken increased by 23. Lasts 10 sec.
+  spell.946072:
+    name: Judgement of the Crusader
+    auraDescription: Holy damage taken increased by 35. Lasts 10 sec.
+  spell.946073:
+    name: Judgement of the Crusader
+    auraDescription: Holy damage taken increased by 58. Lasts 10 sec.
+  spell.946074:
+    name: Judgement of the Crusader
+    auraDescription: Holy damage taken increased by 92. Lasts 10 sec.
+  spell.946075:
+    name: Judgement of the Crusader
+    auraDescription: Holy damage taken increased by 127. Lasts 10 sec.
+  spell.946076:
+    name: Judgement of the Crusader
+    auraDescription: Holy damage taken increased by 161. Lasts 10 sec.
+  spell.946077:
+    name: Judgement of the Crusader
+    auraDescription: Holy damage taken increased by 219. Lasts 10 sec.
+  spell.946080:
+    name: Seal of Blood
+    description: Fills the Paladin with holy power, causing each melee attack to deal additional Holy damage equal
+      to 35% of normal weapon damage but also causing the Paladin to take damage equal to 10% of the damage caused.
+      Lasts 30 sec. Only one Seal can be active on the Paladin at any one time. Unleashing this Seal's energy judges
+      an enemy for Holy damage, causing the Paladin to take damage equal to 33% of the damage caused.
+    auraDescription: Melee attacks deal additional Holy damage equal to 35% of weapon damage; the Paladin takes
+      10% of that damage. Lasts 30 sec.
+  spell.946081:
+    name: Judgement of Blood
+  spell.946082:
+    name: Seal of Blood
+  spell.946083:
+    name: Seal of Blood
+  spell.946084:
+    name: Seal of Vengeance
+    description: Fills the Paladin with holy power, causing each melee attack to apply Holy Vengeance to the target.
+      Holy Vengeance deals Holy damage over time and stacks up to 5 times. Lasts 30 sec. Only one Seal can be active
+      on the Paladin at any one time. Unleashing this Seal's energy judges an enemy for Holy damage, increased by
+      10% for each application of Holy Vengeance on the target.
+    auraDescription: Melee attacks apply a stack of Holy Vengeance (a Holy damage-over-time effect, stacks up to
+      5). Lasts 30 sec.
+  spell.946085:
+    name: Holy Vengeance
+    auraDescription: Suffering Holy damage every 3 sec. Stacks up to 5 times.
+  spell.946086:
+    name: Judgement of Vengeance
+  spell.946087:
+    name: Holy Shock
+    description: Blasts the target with Holy energy, causing 277 to 299 Holy damage to an enemy, or 351 to 379 healing
+      to an ally.
+  spell.946088:
+    name: Holy Shock
+  spell.946089:
+    name: Holy Shock
+  spell.946095:
+    name: Holy Shield
+    description: Increases chance to block by 30% for 10 sec and deals 59 Holy damage for each attack blocked while
+      active. Damage caused by Holy Shield causes 35% additional threat. Each block expends a charge. 4 charges.
+    auraDescription: Increases chance to block by 30%. Blocked attackers take 59 Holy damage. Each block expends
+      a charge. 4 charges.
+  spell.946096:
+    name: Holy Shield
+  spell.946102:
+    name: Avenger's Shield
+    description: Hurls a holy shield at the enemy, dealing 270 to 330 Holy damage, Dazing them and then jumping
+      to additional nearby enemies. Affects 3 total targets. Lasts 6 sec.
+    auraDescription: Dazed.
+  spell.946103:
+    name: Judgement of Command
+  spell.946104:
+    name: Judgement of Command
+  spell.946105:
+    name: Judgement of Command
+  spell.946106:
+    name: Judgement of Command
+  spell.946107:
+    name: Judgement of Command
+  spell.946108:
+    name: Judgement of Command
+  spell.946109:
+    name: Vengeance
+    auraDescription: Physical and Holy damage increased by 1% per application. Stacks up to 3 times.
+  spell.946110:
+    name: Vengeance
+    auraDescription: Physical and Holy damage increased by 2% per application. Stacks up to 3 times.
+  spell.946111:
+    name: Vengeance
+    auraDescription: Physical and Holy damage increased by 3% per application. Stacks up to 3 times.
+  spell.946112:
+    name: Vengeance
+    auraDescription: Physical and Holy damage increased by 4% per application. Stacks up to 3 times.
+  spell.946113:
+    name: Vengeance
+    auraDescription: Physical and Holy damage increased by 5% per application. Stacks up to 3 times.
+  spell.946114:
+    name: Crusader Strike
+    description: An instant strike that causes 110% weapon damage and refreshes all Judgements on the target.
+  spell.946116:
+    name: Holy Shock
+    description: Blasts the target with Holy energy, causing 379 to 409 Holy damage to an enemy, or 480 to 518 healing
+      to an ally.
+  spell.946117:
+    name: Holy Shock
+  spell.946118:
+    name: Holy Shock
+  spell.946119:
+    name: Holy Shock
+    description: Blasts the target with Holy energy, causing 496 to 536 Holy damage to an enemy, or 628 to 680 healing
+      to an ally.
+  spell.946120:
+    name: Holy Shock
+  spell.946121:
+    name: Holy Shock
+  spell.946122:
+    name: Holy Shock
+    description: Blasts the target with Holy energy, causing 614 to 664 Holy damage to an enemy, or 777 to 841 healing
+      to an ally.
+  spell.946123:
+    name: Holy Shock
+  spell.946124:
+    name: Holy Shock
+  spell.946125:
+    name: Holy Shock
+    description: Blasts the target with Holy energy, causing 721 to 779 Holy damage to an enemy, or 913 to 987 healing
+      to an ally.
+  spell.946126:
+    name: Holy Shock
+  spell.946127:
+    name: Holy Shock
+  spell.946128:
+    name: Holy Shield
+    description: Increases chance to block by 30% for 10 sec and deals 86 Holy damage for each attack blocked while
+      active. Damage caused by Holy Shield causes 35% additional threat. Each block expends a charge. 4 charges.
+    auraDescription: Increases chance to block by 30%. Blocked attackers take 86 Holy damage. Each block expends
+      a charge. 4 charges.
+  spell.946129:
+    name: Holy Shield
+  spell.946130:
+    name: Holy Shield
+    description: Increases chance to block by 30% for 10 sec and deals 117 Holy damage for each attack blocked while
+      active. Damage caused by Holy Shield causes 35% additional threat. Each block expends a charge. 4 charges.
+    auraDescription: Increases chance to block by 30%. Blocked attackers take 117 Holy damage. Each block expends
+      a charge. 4 charges.
+  spell.946131:
+    name: Holy Shield
+  spell.946132:
+    name: Holy Shield
+    description: Increases chance to block by 30% for 10 sec and deals 155 Holy damage for each attack blocked while
+      active. Damage caused by Holy Shield causes 35% additional threat. Each block expends a charge. 4 charges.
+    auraDescription: Increases chance to block by 30%. Blocked attackers take 155 Holy damage. Each block expends
+      a charge. 4 charges.
+  spell.946133:
+    name: Holy Shield
+  spell.946134:
+    name: Avenger's Shield
+    description: Hurls a holy shield at the enemy, dealing 370 to 452 Holy damage, Dazing them and then jumping
+      to additional nearby enemies. Affects 3 total targets. Lasts 6 sec.
+    auraDescription: Dazed.
+  spell.946135:
+    name: Avenger's Shield
+    description: Hurls a holy shield at the enemy, dealing 494 to 602 Holy damage, Dazing them and then jumping
+      to additional nearby enemies. Affects 3 total targets. Lasts 6 sec.
+    auraDescription: Dazed.
+  spell.946136:
+    name: Blessing of Sanctuary
+    description: Places a Blessing on the friendly target, reducing damage dealt from all sources by up to 80 for
+      10 min. In addition, when the target blocks a melee attack the attacker will take 46 Holy damage. Players
+      may only have one Blessing on them per Paladin at any one time.
+    auraDescription: Damage dealt from all sources reduced by up to 80. Attackers take 46 Holy damage when the target
+      blocks.
+  spell.946137:
+    name: Blessing of Sanctuary
+  spell.946138:
+    name: Vindication
+    auraDescription: All attributes reduced by 5%.
+  spell.946139:
+    name: Vindication
+    auraDescription: All attributes reduced by 10%.
+  spell.946140:
+    name: Vindication
+    auraDescription: All attributes reduced by 15%.
+  spell.946141:
+    name: Illumination
+    description: After getting a critical effect from your Flash of Light, Holy Light, or Holy Shock heal spell,
+      gives you a 20% chance to gain mana equal to 60% of the base cost of the spell.
+  spell.946142:
+    name: Illumination
+    description: After getting a critical effect from your Flash of Light, Holy Light, or Holy Shock heal spell,
+      gives you a 40% chance to gain mana equal to 60% of the base cost of the spell.
+  spell.946143:
+    name: Illumination
+    description: After getting a critical effect from your Flash of Light, Holy Light, or Holy Shock heal spell,
+      gives you a 60% chance to gain mana equal to 60% of the base cost of the spell.
+  spell.946144:
+    name: Illumination
+    description: After getting a critical effect from your Flash of Light, Holy Light, or Holy Shock heal spell,
+      gives you a 80% chance to gain mana equal to 60% of the base cost of the spell.
+  spell.946145:
+    name: Illumination
+    description: After getting a critical effect from your Flash of Light, Holy Light, or Holy Shock heal spell,
+      gives you a 100% chance to gain mana equal to 60% of the base cost of the spell.
+  spell.946146:
+    name: Repentance
+    description: Puts the enemy target in a state of meditation, incapacitating them for up to 6 sec. Any damage
+      caused will awaken the target. Only works against Humanoids.
+    auraDescription: Incapacitated. Any damage caused will awaken the target.

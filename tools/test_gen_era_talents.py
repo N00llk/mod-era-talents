@@ -3866,7 +3866,8 @@ def test_addon_build_script_reads_manifest():
     assert "python3 tools/gen_era_talents.py --sql" not in sh   # no hand-listed SQL legs
 
 
-def test_merge_script_reads_manifest():
-    sh = pathlib.Path("client-patch/merge-into-patch.sh").read_text()
-    assert "era-data/datasets.txt" in sh
-    assert 'DATASETS=("$ROOT/era-data/vanilla/mage.yaml"' not in sh
+def test_client_patch_reads_manifest():
+    import build_client_patch as P
+    assert [p.relative_to(P.ROOT / "era-data").as_posix() for p in P.datasets()] == [
+        line.split()[0] for line in (P.ROOT / "era-data/datasets.txt").read_text().splitlines()
+        if line.strip() and not line.lstrip().startswith("#")]

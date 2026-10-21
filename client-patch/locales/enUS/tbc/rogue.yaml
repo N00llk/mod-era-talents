@@ -1,0 +1,69 @@
+schemaVersion: 1
+locale: enUS
+era: tbc
+class: rogue
+texts:
+  spell.947768:
+    name: Find Weakness
+    description: Offensive ability damage increased by 2%.
+    auraDescription: Offensive ability damage increased by 2%.
+  spell.947769:
+    name: Find Weakness
+    description: Offensive ability damage increased by 4%.
+    auraDescription: Offensive ability damage increased by 4%.
+  spell.947770:
+    name: Find Weakness
+    description: Offensive ability damage increased by 6%.
+    auraDescription: Offensive ability damage increased by 6%.
+  spell.947771:
+    name: Find Weakness
+    description: Offensive ability damage increased by 8%.
+    auraDescription: Offensive ability damage increased by 8%.
+  spell.947772:
+    name: Find Weakness
+    description: Offensive ability damage increased by 10%.
+    auraDescription: Offensive ability damage increased by 10%.
+  spell.947773:
+    name: Mutilate
+    description: Instantly attacks with both weapons for $<percent>% weapon damage plus an additional $5374s1 with
+      each weapon.  Damage is increased by 50% against Poisoned targets.  Must be behind the target.  Awards 2 combo
+      points.
+  spell.947774:
+    name: Mutilate
+    description: Instantly attacks with both weapons for $<percent>% weapon damage plus an additional $34414s1 with
+      each weapon.  Damage is increased by 50% against Poisoned targets.  Must be behind the target.  Awards 2 combo
+      points.
+  spell.947775:
+    name: Mutilate
+    description: Instantly attacks with both weapons for $<percent>% weapon damage plus an additional $34416s1 with
+      each weapon.  Damage is increased by 50% against Poisoned targets.  Must be behind the target.  Awards 2 combo
+      points.
+  spell.947776:
+    name: Mutilate
+    description: Instantly attacks with both weapons for $<percent>% weapon damage plus an additional $34419s1 with
+      each weapon.  Damage is increased by 50% against Poisoned targets.  Must be behind the target.  Awards 2 combo
+      points.
+  spell.947777:
+    name: Riposte
+    description: A strike that becomes active after parrying an opponent's attack.  This attack deals $s1% weapon
+      damage and disarms the target for $d.
+    auraDescription: Disarmed.
+  spell.947778:
+    name: Adrenaline Rush
+    description: Increases your Energy regeneration rate by $s1% for $d.
+    auraDescription: Energy regeneration increased by $s1%.
+  spell.947784:
+    name: Mace Stun Effect
+    auraDescription: Stunned.
+  spell.947785:
+    name: Dazed
+    auraDescription: Dazed.
+  spell.947786:
+    name: Preparation
+    description: When activated, this ability immediately finishes the cooldown on your Evasion, Sprint, Vanish,
+      Cold Blood, Shadowstep and Premeditation abilities.
+  spell.947787:
+    name: Premeditation
+    description: When used, adds $s1 combo points to your target.  You must add to or use those combo points within
+      $d or the combo points are lost.
+    auraDescription: Your combo points will not be lost.

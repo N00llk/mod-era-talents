@@ -1,0 +1,208 @@
+schemaVersion: 1
+locale: enUS
+era: tbc
+class: hunter
+texts:
+  spell.948280:
+    name: TBC Hunter
+  spell.948281:
+    name: Scorpid Sting
+    description: Stings the target, reducing chance to hit with melee and ranged attacks by 5% for 20 sec.  Only
+      one Sting per Hunter can be active on any one target.
+    auraDescription: Chance to hit with melee and ranged attacks reduced by 5%.
+  spell.948290:
+    name: Bestial Wrath
+    description: Send your pet into a rage causing 50% additional damage for 18 sec. While enraged, the beast does
+      not feel pity or remorse or fear and it cannot be stopped unless killed.
+    auraDescription: Enraged.
+  spell.948291:
+    name: The Beast Within
+    description: When your pet is under the effects of Bestial Wrath, you also go into a rage causing 10% additional
+      damage and reducing mana costs of all spells by 20% for 18 sec. While enraged, you do not feel pity or remorse
+      or fear and you cannot be stopped unless killed.
+  spell.948292:
+    name: The Beast Within
+    description: When your pet is under the effects of Bestial Wrath, you also go into a rage causing 10% additional
+      damage and reducing mana costs of all spells by 20% for 18 sec. While enraged, you do not feel pity or remorse
+      or fear and you cannot be stopped unless killed.
+    auraDescription: Damage increased by 10% and mana costs reduced by 20%. Cannot be stopped unless killed.
+  spell.948293:
+    name: Spirit Bond
+    auraDescription: You and your pet will regenerate 1% of total health every 10 sec.
+  spell.948294:
+    name: Spirit Bond
+    auraDescription: You and your pet will regenerate 2% of total health every 10 sec.
+  spell.948298:
+    name: Ferocious Inspiration
+    auraDescription: All damage caused increased by 1%.
+  spell.948299:
+    name: Ferocious Inspiration
+    auraDescription: All damage caused increased by 2%.
+  spell.948300:
+    name: Ferocious Inspiration
+    auraDescription: All damage caused increased by 3%.
+  spell.948301:
+    name: Bestial Swiftness
+    description: Increases the outdoor movement speed of your pets by 30%.
+  spell.948330:
+    name: Wyvern Sting
+    description: A stinging shot that puts the target to sleep for 12 sec.  Any damage will cancel the effect.  When
+      the target wakes up, the Sting causes 300 Nature damage over 12 sec.  Only one Sting per Hunter can be active
+      on the target at a time.
+    auraDescription: Asleep.  Any damage will cancel the effect.
+  spell.948331:
+    name: Wyvern Sting
+    description: A stinging shot that puts the target to sleep for 12 sec.  Any damage will cancel the effect.  When
+      the target wakes up, the Sting causes 420 Nature damage over 12 sec.  Only one Sting per Hunter can be active
+      on the target at a time.
+    auraDescription: Asleep.  Any damage will cancel the effect.
+  spell.948332:
+    name: Wyvern Sting
+    description: A stinging shot that puts the target to sleep for 12 sec.  Any damage will cancel the effect.  When
+      the target wakes up, the Sting causes 600 Nature damage over 12 sec.  Only one Sting per Hunter can be active
+      on the target at a time.
+    auraDescription: Asleep.  Any damage will cancel the effect.
+  spell.948333:
+    name: Wyvern Sting
+    description: A stinging shot that puts the target to sleep for 12 sec.  Any damage will cancel the effect.  When
+      the target wakes up, the Sting causes 942 Nature damage over 12 sec.  Only one Sting per Hunter can be active
+      on the target at a time.
+    auraDescription: Asleep.  Any damage will cancel the effect.
+  spell.948334:
+    name: Wyvern Sting
+    auraDescription: 50 Nature damage every 2 sec.
+  spell.948335:
+    name: Wyvern Sting
+    auraDescription: 70 Nature damage every 2 sec.
+  spell.948336:
+    name: Wyvern Sting
+    auraDescription: 100 Nature damage every 2 sec.
+  spell.948337:
+    name: Wyvern Sting
+    auraDescription: 157 Nature damage every 2 sec.
+  spell.948338:
+    name: Counterattack
+    description: A strike that becomes active after parrying an opponent's attack.  This attack deals 40 damage
+      and immobilizes the target for 5 sec.  Counterattack cannot be blocked, dodged, or parried.
+    auraDescription: Immobile.
+  spell.948339:
+    name: Counterattack
+    description: A strike that becomes active after parrying an opponent's attack.  This attack deals 70 damage
+      and immobilizes the target for 5 sec.  Counterattack cannot be blocked, dodged, or parried.
+    auraDescription: Immobile.
+  spell.948340:
+    name: Counterattack
+    description: A strike that becomes active after parrying an opponent's attack.  This attack deals 110 damage
+      and immobilizes the target for 5 sec.  Counterattack cannot be blocked, dodged, or parried.
+    auraDescription: Immobile.
+  spell.948341:
+    name: Counterattack
+    description: A strike that becomes active after parrying an opponent's attack.  This attack deals 165 damage
+      and immobilizes the target for 5 sec.  Counterattack cannot be blocked, dodged, or parried.
+    auraDescription: Immobile.
+  spell.948342:
+    name: Deterrence
+    description: When activated, increases your Dodge and Parry chance by 25% for 10 sec.
+    auraDescription: Dodge and Parry chance increased by 25%.
+  spell.948343:
+    name: Entrapment
+    auraDescription: Entrapped.  Unable to move.
+  spell.948344:
+    name: Improved Wing Clip
+    auraDescription: Immobilized.
+  spell.948345:
+    name: Expose Weakness
+    auraDescription: Attack power of all attackers increased by 25% of the Hunter's Agility.
+  spell.948346:
+    name: Master Tactician
+    auraDescription: Critical strike chance with all attacks increased by 2%.
+  spell.948347:
+    name: Master Tactician
+    auraDescription: Critical strike chance with all attacks increased by 4%.
+  spell.948348:
+    name: Master Tactician
+    auraDescription: Critical strike chance with all attacks increased by 6%.
+  spell.948349:
+    name: Master Tactician
+    auraDescription: Critical strike chance with all attacks increased by 8%.
+  spell.948350:
+    name: Master Tactician
+    auraDescription: Critical strike chance with all attacks increased by 10%.
+  spell.948351:
+    name: Readiness
+    description: When activated, this ability immediately finishes the cooldown on your other Hunter abilities.
+  spell.948370:
+    name: Aimed Shot
+    description: An aimed shot that increases ranged damage by 70 and reduces healing done to that target by 50%.  Lasts
+      10 sec.
+    auraDescription: Healing effects reduced by 50%.
+  spell.948371:
+    name: Aimed Shot
+    description: An aimed shot that increases ranged damage by 125 and reduces healing done to that target by 50%.  Lasts
+      10 sec.
+    auraDescription: Healing effects reduced by 50%.
+  spell.948372:
+    name: Aimed Shot
+    description: An aimed shot that increases ranged damage by 200 and reduces healing done to that target by 50%.  Lasts
+      10 sec.
+    auraDescription: Healing effects reduced by 50%.
+  spell.948373:
+    name: Aimed Shot
+    description: An aimed shot that increases ranged damage by 330 and reduces healing done to that target by 50%.  Lasts
+      10 sec.
+    auraDescription: Healing effects reduced by 50%.
+  spell.948374:
+    name: Aimed Shot
+    description: An aimed shot that increases ranged damage by 460 and reduces healing done to that target by 50%.  Lasts
+      10 sec.
+    auraDescription: Healing effects reduced by 50%.
+  spell.948375:
+    name: Aimed Shot
+    description: An aimed shot that increases ranged damage by 600 and reduces healing done to that target by 50%.  Lasts
+      10 sec.
+    auraDescription: Healing effects reduced by 50%.
+  spell.948376:
+    name: Aimed Shot
+    description: An aimed shot that increases ranged damage by 870 and reduces healing done to that target by 50%.  Lasts
+      10 sec.
+    auraDescription: Healing effects reduced by 50%.
+  spell.948377:
+    name: Trueshot Aura
+    description: Increases the attack power of party members within 45 yards by 50.  Lasts until cancelled.
+    auraDescription: Attack power increased by 50.
+  spell.948378:
+    name: Trueshot Aura
+    description: Increases the attack power of party members within 45 yards by 75.  Lasts until cancelled.
+    auraDescription: Attack power increased by 75.
+  spell.948379:
+    name: Trueshot Aura
+    description: Increases the attack power of party members within 45 yards by 100.  Lasts until cancelled.
+    auraDescription: Attack power increased by 100.
+  spell.948380:
+    name: Trueshot Aura
+    description: Increases the attack power of party members within 45 yards by 125.  Lasts until cancelled.
+    auraDescription: Attack power increased by 125.
+  spell.948381:
+    name: Improved Concussive Shot
+    auraDescription: Stunned.
+  spell.948382:
+    name: Scatter Shot
+    description: A short-range shot that deals 50% weapon damage and disorients the target for 4 sec. Any damage
+      caused will remove the effect. Turns off your attack when used.
+    auraDescription: Disoriented.
+  spell.948383:
+    name: Silencing Shot
+    description: A shot that deals 50% weapon damage and Silences the target for 3 sec.
+    auraDescription: Silenced.
+  spell.948384:
+    name: Rapid Killing
+    description: Reduces the cooldown of your Rapid Fire ability by 1 min.  In addition, after killing an opponent
+      that yields experience or honor, your next Aimed Shot, Arcane Shot or Auto Shot causes 10% additional damage.  Lasts
+      20 sec.
+    auraDescription: Damage of your next Aimed Shot, Arcane Shot or Auto Shot increased by 10%.
+  spell.948385:
+    name: Rapid Killing
+    description: Reduces the cooldown of your Rapid Fire ability by 2 min.  In addition, after killing an opponent
+      that yields experience or honor, your next Aimed Shot, Arcane Shot or Auto Shot causes 20% additional damage.  Lasts
+      20 sec.
+    auraDescription: Damage of your next Aimed Shot, Arcane Shot or Auto Shot increased by 20%.

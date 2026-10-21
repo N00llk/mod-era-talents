@@ -1,0 +1,565 @@
+schemaVersion: 1
+locale: enUS
+era: vanilla
+class: shaman
+texts:
+  spell.932400:
+    name: Flurry
+    auraDescription: Increases attack speed by 10%. Consumed on 3 melee swings.
+  spell.932401:
+    name: Flurry
+    auraDescription: Increases attack speed by 15%. Consumed on 3 melee swings.
+  spell.932402:
+    name: Flurry
+    auraDescription: Increases attack speed by 20%. Consumed on 3 melee swings.
+  spell.932403:
+    name: Flurry
+    auraDescription: Increases attack speed by 25%. Consumed on 3 melee swings.
+  spell.932404:
+    name: Flurry
+    auraDescription: Increases attack speed by 30%. Consumed on 3 melee swings.
+  spell.932405:
+    name: Stormstrike
+    description: Gives you an extra attack. In addition, the next 2 sources of Nature damage dealt to the target
+      are increased by 20%. Lasts 12 sec.
+    auraDescription: The next 2 sources of Nature damage dealt to you by the caster are increased by 20%.
+  spell.932407:
+    name: Mana Tide Totem
+    description: Summons a Mana Tide Totem with 5 health at the feet of the caster for 12 sec that restores 140
+      mana every 3 sec to group members within 20 yards.
+  spell.931369:
+    name: Mana Tide Totem
+    description: Summons a Mana Tide Totem with 5 health at the feet of the caster for 12 sec that restores 155
+      mana every 3 sec to group members within 20 yards.
+  spell.931370:
+    name: Mana Tide Totem
+    description: Summons a Mana Tide Totem with 5 health at the feet of the caster for 12 sec that restores 240
+      mana every 3 sec to group members within 20 yards.
+  spell.931371:
+    name: Mana Tide
+    auraDescription: Restores 140 mana every 3 sec.
+  spell.931372:
+    name: Mana Tide
+    auraDescription: Restores 155 mana every 3 sec.
+  spell.931373:
+    name: Mana Tide
+    auraDescription: Restores 240 mana every 3 sec.
+  spell.931363:
+    name: Windfury Totem
+    description: Summons a Windfury Totem with 5 health at the feet of the caster for 2 min that gives party and
+      raid members within 20 yards a 20% chance on each melee hit to gain 1 extra attack with 122 attack power.
+  spell.931364:
+    name: Windfury Totem
+    description: Summons a Windfury Totem with 5 health at the feet of the caster for 2 min that gives party and
+      raid members within 20 yards a 20% chance on each melee hit to gain 1 extra attack with 229 attack power.
+  spell.931365:
+    name: Windfury Totem
+    description: Summons a Windfury Totem with 5 health at the feet of the caster for 2 min that gives party and
+      raid members within 20 yards a 20% chance on each melee hit to gain 1 extra attack with 315 attack power.
+  spell.931366:
+    name: Windfury Totem
+    auraDescription: Your melee attacks have a 20% chance to trigger 1 extra attack with 122 attack power.
+  spell.931367:
+    name: Windfury Totem
+    auraDescription: Your melee attacks have a 20% chance to trigger 1 extra attack with 229 attack power.
+  spell.931368:
+    name: Windfury Totem
+    auraDescription: Your melee attacks have a 20% chance to trigger 1 extra attack with 315 attack power.
+  spell.931353:
+    name: Fire Nova Totem
+    description: Summons a Fire Nova Totem with 5 health at the feet of the caster that detonates after a few sec,
+      dealing 48 to 56 Fire damage to enemies within 10 yards.
+  spell.931354:
+    name: Fire Nova Totem
+    description: Summons a Fire Nova Totem with 5 health at the feet of the caster that detonates after a few sec,
+      dealing 102 to 116 Fire damage to enemies within 10 yards.
+  spell.931355:
+    name: Fire Nova Totem
+    description: Summons a Fire Nova Totem with 5 health at the feet of the caster that detonates after a few sec,
+      dealing 184 to 208 Fire damage to enemies within 10 yards.
+  spell.931356:
+    name: Fire Nova Totem
+    description: Summons a Fire Nova Totem with 5 health at the feet of the caster that detonates after a few sec,
+      dealing 281 to 317 Fire damage to enemies within 10 yards.
+  spell.931357:
+    name: Fire Nova Totem
+    description: Summons a Fire Nova Totem with 5 health at the feet of the caster that detonates after a few sec,
+      dealing 396 to 442 Fire damage to enemies within 10 yards.
+  spell.931358:
+    name: Fire Nova
+  spell.931359:
+    name: Fire Nova
+  spell.931360:
+    name: Fire Nova
+  spell.931361:
+    name: Fire Nova
+  spell.931362:
+    name: Fire Nova
+  spell.932408:
+    name: Ancestral Healing
+    auraDescription: Armor value from items increased by 8%.
+  spell.932409:
+    name: Ancestral Healing
+    auraDescription: Armor value from items increased by 16%.
+  spell.932410:
+    name: Ancestral Healing
+    auraDescription: Armor value from items increased by 25%.
+  spell.932411:
+    name: Healing Way
+    auraDescription: The effect of Healing Wave on you is increased by 6%. Stacks up to 3 times.
+  spell.932412:
+    name: Nature's Swiftness
+    description: When activated, your next Nature spell with a casting time less than 10 sec becomes an instant
+      cast spell.
+    auraDescription: Your next Nature spell with a casting time less than 10 sec becomes an instant cast spell.
+  spell.932413:
+    name: Elemental Mastery
+    description: When activated, your next Fire, Frost, or Nature damage spell has a 100% critical strike chance
+      and costs no mana.
+    auraDescription: Your next Fire, Frost, or Nature damage spell will be a critical strike and cost no mana.
+  spell.932415:
+    name: Clearcasting
+    auraDescription: Your next damage spell costs no mana.
+  spell.932416:
+    name: Vanilla Totems
+  spell.932417:
+    name: WotLK Totems
+  spell.931160:
+    name: Frost Resistance Totem
+    description: Summons a Frost Resistance Totem with 5 health at the feet of the caster for 2 min that increases
+      the frost resistance of party and raid members within 20 yards by 30.
+  spell.931161:
+    name: Frost Resistance Totem
+    description: Summons a Frost Resistance Totem with 5 health at the feet of the caster for 2 min that increases
+      the frost resistance of party and raid members within 20 yards by 45.
+  spell.931162:
+    name: Frost Resistance Totem
+    description: Summons a Frost Resistance Totem with 5 health at the feet of the caster for 2 min that increases
+      the frost resistance of party and raid members within 20 yards by 60.
+  spell.931170:
+    name: Frost Resistance
+    auraDescription: Frost Resistance increased by 30.
+  spell.931171:
+    name: Frost Resistance
+    auraDescription: Frost Resistance increased by 45.
+  spell.931172:
+    name: Frost Resistance
+    auraDescription: Frost Resistance increased by 60.
+  spell.931220:
+    name: Fire Resistance Totem
+    description: Summons a Fire Resistance Totem with 5 health at the feet of the caster for 2 min that increases
+      the fire resistance of party and raid members within 20 yards by 30.
+  spell.931221:
+    name: Fire Resistance Totem
+    description: Summons a Fire Resistance Totem with 5 health at the feet of the caster for 2 min that increases
+      the fire resistance of party and raid members within 20 yards by 45.
+  spell.931222:
+    name: Fire Resistance Totem
+    description: Summons a Fire Resistance Totem with 5 health at the feet of the caster for 2 min that increases
+      the fire resistance of party and raid members within 20 yards by 60.
+  spell.931230:
+    name: Fire Resistance
+    auraDescription: Fire Resistance increased by 30.
+  spell.931231:
+    name: Fire Resistance
+    auraDescription: Fire Resistance increased by 45.
+  spell.931232:
+    name: Fire Resistance
+    auraDescription: Fire Resistance increased by 60.
+  spell.931300:
+    name: Nature Resistance Totem
+    description: Summons a Nature Resistance Totem with 5 health at the feet of the caster for 2 min that increases
+      the nature resistance of party and raid members within 20 yards by 30.
+  spell.931301:
+    name: Nature Resistance Totem
+    description: Summons a Nature Resistance Totem with 5 health at the feet of the caster for 2 min that increases
+      the nature resistance of party and raid members within 20 yards by 45.
+  spell.931302:
+    name: Nature Resistance Totem
+    description: Summons a Nature Resistance Totem with 5 health at the feet of the caster for 2 min that increases
+      the nature resistance of party and raid members within 20 yards by 60.
+  spell.931310:
+    name: Nature Resistance
+    auraDescription: Nature Resistance increased by 30.
+  spell.931311:
+    name: Nature Resistance
+    auraDescription: Nature Resistance increased by 45.
+  spell.931312:
+    name: Nature Resistance
+    auraDescription: Nature Resistance increased by 60.
+  spell.931320:
+    name: Grace of Air Totem
+    description: Summons a Grace of Air Totem with 5 health at the feet of the caster for 2 min that increases the
+      agility of party and raid members within 20 yards by 43.
+  spell.931321:
+    name: Grace of Air Totem
+    description: Summons a Grace of Air Totem with 5 health at the feet of the caster for 2 min that increases the
+      agility of party and raid members within 20 yards by 67.
+  spell.931330:
+    name: Grace of Air
+    auraDescription: Agility increased by 43.
+  spell.931331:
+    name: Grace of Air
+    auraDescription: Agility increased by 67.
+  spell.931340:
+    name: Windwall Totem
+    description: Summons a Windwall Totem with 5 health at the feet of the caster for 2 min that reduces the ranged
+      damage taken of party and raid members within 20 yards by 16.
+  spell.931341:
+    name: Windwall Totem
+    description: Summons a Windwall Totem with 5 health at the feet of the caster for 2 min that reduces the ranged
+      damage taken of party and raid members within 20 yards by 25.
+  spell.931342:
+    name: Windwall Totem
+    description: Summons a Windwall Totem with 5 health at the feet of the caster for 2 min that reduces the ranged
+      damage taken of party and raid members within 20 yards by 32.
+  spell.931350:
+    name: Windwall
+    auraDescription: Ranged damage taken reduced by 16.
+  spell.931351:
+    name: Windwall
+    auraDescription: Ranged damage taken reduced by 25.
+  spell.931352:
+    name: Windwall
+    auraDescription: Ranged damage taken reduced by 32.
+  spell.931280:
+    name: Grounding Totem
+    description: Summons a Grounding Totem with 5 health at the feet of the caster for 45 sec. The next harmful
+      spell cast at party members within 10 yards is redirected to the totem.
+  spell.931290:
+    name: Grounding Totem Effect
+    auraDescription: Redirects the next harmful spell cast at you to this totem.
+  spell.931291:
+    name: Grounding Totem Passive
+    auraDescription: Periodically refreshes Grounding Totem's spell-redirect shield.
+  spell.931040:
+    name: Strength of Earth Totem
+    description: Summons a Strength of Earth Totem with 5 health at the feet of the caster for 2 min that increases
+      the strength of party and raid members within 20 yards by 10.
+  spell.931041:
+    name: Strength of Earth Totem
+    description: Summons a Strength of Earth Totem with 5 health at the feet of the caster for 2 min that increases
+      the strength of party and raid members within 20 yards by 20.
+  spell.931042:
+    name: Strength of Earth Totem
+    description: Summons a Strength of Earth Totem with 5 health at the feet of the caster for 2 min that increases
+      the strength of party and raid members within 20 yards by 36.
+  spell.931043:
+    name: Strength of Earth Totem
+    description: Summons a Strength of Earth Totem with 5 health at the feet of the caster for 2 min that increases
+      the strength of party and raid members within 20 yards by 61.
+  spell.931050:
+    name: Strength of Earth
+    auraDescription: Strength increased by 10.
+  spell.931051:
+    name: Strength of Earth
+    auraDescription: Strength increased by 20.
+  spell.931052:
+    name: Strength of Earth
+    auraDescription: Strength increased by 36.
+  spell.931053:
+    name: Strength of Earth
+    auraDescription: Strength increased by 61.
+  spell.931020:
+    name: Stoneskin Totem
+    description: Summons a Stoneskin Totem with 5 health at the feet of the caster for 2 min that reduces the melee
+      damage taken by party and raid members within 20 yards by 3.
+  spell.931021:
+    name: Stoneskin Totem
+    description: Summons a Stoneskin Totem with 5 health at the feet of the caster for 2 min that reduces the melee
+      damage taken by party and raid members within 20 yards by 6.
+  spell.931022:
+    name: Stoneskin Totem
+    description: Summons a Stoneskin Totem with 5 health at the feet of the caster for 2 min that reduces the melee
+      damage taken by party and raid members within 20 yards by 10.
+  spell.931023:
+    name: Stoneskin Totem
+    description: Summons a Stoneskin Totem with 5 health at the feet of the caster for 2 min that reduces the melee
+      damage taken by party and raid members within 20 yards by 14.
+  spell.931024:
+    name: Stoneskin Totem
+    description: Summons a Stoneskin Totem with 5 health at the feet of the caster for 2 min that reduces the melee
+      damage taken by party and raid members within 20 yards by 20.
+  spell.931025:
+    name: Stoneskin Totem
+    description: Summons a Stoneskin Totem with 5 health at the feet of the caster for 2 min that reduces the melee
+      damage taken by party and raid members within 20 yards by 27.
+  spell.931030:
+    name: Stoneskin
+    auraDescription: Melee damage taken reduced by 3.
+  spell.931031:
+    name: Stoneskin
+    auraDescription: Melee damage taken reduced by 6.
+  spell.931032:
+    name: Stoneskin
+    auraDescription: Melee damage taken reduced by 10.
+  spell.931033:
+    name: Stoneskin
+    auraDescription: Melee damage taken reduced by 14.
+  spell.931034:
+    name: Stoneskin
+    auraDescription: Melee damage taken reduced by 20.
+  spell.931035:
+    name: Stoneskin
+    auraDescription: Melee damage taken reduced by 27.
+  spell.931000:
+    name: Earthbind Totem
+    description: Summons an Earthbind Totem with 5 health at the feet of the caster for 45 sec that reduces the
+      movement speed of all enemies within 10 yards by 50%.
+  spell.931010:
+    name: Earthbind
+    auraDescription: Movement speed reduced by 50%.
+  spell.931011:
+    name: Earthbind Totem Passive
+    auraDescription: Periodically reduces the movement speed of nearby enemies by 50%.
+  spell.931060:
+    name: Stoneclaw Totem
+    description: Summons a Stoneclaw Totem with 50 health at the feet of the caster for 15 sec that draws attacks
+      from nearby enemies.
+  spell.931061:
+    name: Stoneclaw Totem
+    description: Summons a Stoneclaw Totem with 150 health at the feet of the caster for 15 sec that draws attacks
+      from nearby enemies.
+  spell.931062:
+    name: Stoneclaw Totem
+    description: Summons a Stoneclaw Totem with 220 health at the feet of the caster for 15 sec that draws attacks
+      from nearby enemies.
+  spell.931063:
+    name: Stoneclaw Totem
+    description: Summons a Stoneclaw Totem with 280 health at the feet of the caster for 15 sec that draws attacks
+      from nearby enemies.
+  spell.931064:
+    name: Stoneclaw Totem
+    description: Summons a Stoneclaw Totem with 390 health at the feet of the caster for 15 sec that draws attacks
+      from nearby enemies.
+  spell.931065:
+    name: Stoneclaw Totem
+    description: Summons a Stoneclaw Totem with 480 health at the feet of the caster for 15 sec that draws attacks
+      from nearby enemies.
+  spell.931070:
+    name: Stoneclaw Totem Passive
+    auraDescription: Generates high threat against nearby enemies and has a chance to stun attackers.
+  spell.931071:
+    name: Stoneclaw Totem Passive
+    auraDescription: Generates high threat against nearby enemies and has a chance to stun attackers.
+  spell.931072:
+    name: Stoneclaw Totem Passive
+    auraDescription: Generates high threat against nearby enemies and has a chance to stun attackers.
+  spell.931073:
+    name: Stoneclaw Totem Passive
+    auraDescription: Generates high threat against nearby enemies and has a chance to stun attackers.
+  spell.931074:
+    name: Stoneclaw Totem Passive
+    auraDescription: Generates high threat against nearby enemies and has a chance to stun attackers.
+  spell.931075:
+    name: Stoneclaw Totem Passive
+    auraDescription: Generates high threat against nearby enemies and has a chance to stun attackers.
+  spell.931080:
+    name: Tremor Totem
+    description: Summons a Tremor Totem with 5 health at the feet of the caster that periodically removes Fear,
+      Charm, and Sleep effects from party and raid members.
+  spell.931090:
+    name: Tremor Totem Passive
+    auraDescription: Periodically removes Fear, Charm, and Sleep effects from nearby party and raid members.
+  spell.931180:
+    name: Healing Stream Totem
+    description: Summons a Healing Stream Totem with 5 health at the feet of the caster for 2 min that heals party
+      and raid members within 20 yards for 6 every 2 sec.
+  spell.931181:
+    name: Healing Stream Totem
+    description: Summons a Healing Stream Totem with 5 health at the feet of the caster for 2 min that heals party
+      and raid members within 20 yards for 8 every 2 sec.
+  spell.931182:
+    name: Healing Stream Totem
+    description: Summons a Healing Stream Totem with 5 health at the feet of the caster for 2 min that heals party
+      and raid members within 20 yards for 10 every 2 sec.
+  spell.931183:
+    name: Healing Stream Totem
+    description: Summons a Healing Stream Totem with 5 health at the feet of the caster for 2 min that heals party
+      and raid members within 20 yards for 12 every 2 sec.
+  spell.931184:
+    name: Healing Stream Totem
+    description: Summons a Healing Stream Totem with 5 health at the feet of the caster for 2 min that heals party
+      and raid members within 20 yards for 14 every 2 sec.
+  spell.931190:
+    name: Healing Stream
+    auraDescription: Heals party and raid members within 20 yards for 6 every 2 sec.
+  spell.931191:
+    name: Healing Stream
+    auraDescription: Heals party and raid members within 20 yards for 8 every 2 sec.
+  spell.931192:
+    name: Healing Stream
+    auraDescription: Heals party and raid members within 20 yards for 10 every 2 sec.
+  spell.931193:
+    name: Healing Stream
+    auraDescription: Heals party and raid members within 20 yards for 12 every 2 sec.
+  spell.931194:
+    name: Healing Stream
+    auraDescription: Heals party and raid members within 20 yards for 14 every 2 sec.
+  spell.931200:
+    name: Mana Spring Totem
+    description: Summons a Mana Spring Totem with 5 health at the feet of the caster for 2 min that restores 4 mana
+      to party and raid members within 20 yards every 2 sec.
+  spell.931201:
+    name: Mana Spring Totem
+    description: Summons a Mana Spring Totem with 5 health at the feet of the caster for 2 min that restores 6 mana
+      to party and raid members within 20 yards every 2 sec.
+  spell.931202:
+    name: Mana Spring Totem
+    description: Summons a Mana Spring Totem with 5 health at the feet of the caster for 2 min that restores 8 mana
+      to party and raid members within 20 yards every 2 sec.
+  spell.931203:
+    name: Mana Spring Totem
+    description: Summons a Mana Spring Totem with 5 health at the feet of the caster for 2 min that restores 10
+      mana to party and raid members within 20 yards every 2 sec.
+  spell.931210:
+    name: Mana Spring
+    auraDescription: Restores 4 mana every 2 sec.
+  spell.931211:
+    name: Mana Spring
+    auraDescription: Restores 6 mana every 2 sec.
+  spell.931212:
+    name: Mana Spring
+    auraDescription: Restores 8 mana every 2 sec.
+  spell.931213:
+    name: Mana Spring
+    auraDescription: Restores 10 mana every 2 sec.
+  spell.931100:
+    name: Searing Totem
+    description: Summons a Searing Totem with 5 health at the feet of the caster for 20 sec that attacks a nearby
+      enemy within 8 yards, dealing 7 to 9 Fire damage.
+  spell.931101:
+    name: Searing Totem
+    description: Summons a Searing Totem with 5 health at the feet of the caster for 20 sec that attacks a nearby
+      enemy within 8 yards, dealing 10 to 14 Fire damage.
+  spell.931102:
+    name: Searing Totem
+    description: Summons a Searing Totem with 5 health at the feet of the caster for 20 sec that attacks a nearby
+      enemy within 8 yards, dealing 14 to 20 Fire damage.
+  spell.931103:
+    name: Searing Totem
+    description: Summons a Searing Totem with 5 health at the feet of the caster for 20 sec that attacks a nearby
+      enemy within 8 yards, dealing 20 to 28 Fire damage.
+  spell.931104:
+    name: Searing Totem
+    description: Summons a Searing Totem with 5 health at the feet of the caster for 20 sec that attacks a nearby
+      enemy within 8 yards, dealing 25 to 37 Fire damage.
+  spell.931105:
+    name: Searing Totem
+    description: Summons a Searing Totem with 5 health at the feet of the caster for 20 sec that attacks a nearby
+      enemy within 8 yards, dealing 32 to 46 Fire damage.
+  spell.931110:
+    name: Searing Totem Attack
+  spell.931111:
+    name: Searing Totem Attack
+  spell.931112:
+    name: Searing Totem Attack
+  spell.931113:
+    name: Searing Totem Attack
+  spell.931114:
+    name: Searing Totem Attack
+  spell.931115:
+    name: Searing Totem Attack
+  spell.931120:
+    name: Magma Totem
+    description: Summons a Magma Totem with 5 health at the feet of the caster for 20 sec that deals 22 Fire damage
+      every 2 sec to enemies within 10 yards.
+  spell.931121:
+    name: Magma Totem
+    description: Summons a Magma Totem with 5 health at the feet of the caster for 20 sec that deals 37 Fire damage
+      every 2 sec to enemies within 10 yards.
+  spell.931122:
+    name: Magma Totem
+    description: Summons a Magma Totem with 5 health at the feet of the caster for 20 sec that deals 54 Fire damage
+      every 2 sec to enemies within 10 yards.
+  spell.931123:
+    name: Magma Totem
+    description: Summons a Magma Totem with 5 health at the feet of the caster for 20 sec that deals 75 Fire damage
+      every 2 sec to enemies within 10 yards.
+  spell.931130:
+    name: Magma Totem Pulse
+  spell.931131:
+    name: Magma Totem Pulse
+  spell.931132:
+    name: Magma Totem Pulse
+  spell.931133:
+    name: Magma Totem Pulse
+  spell.931134:
+    name: Magma Totem Passive
+    auraDescription: Causes Fire damage to nearby enemies every 2 sec.
+  spell.931135:
+    name: Magma Totem Passive
+    auraDescription: Causes Fire damage to nearby enemies every 2 sec.
+  spell.931136:
+    name: Magma Totem Passive
+    auraDescription: Causes Fire damage to nearby enemies every 2 sec.
+  spell.931137:
+    name: Magma Totem Passive
+    auraDescription: Causes Fire damage to nearby enemies every 2 sec.
+  spell.931140:
+    name: Flametongue Totem
+    description: Summons a Flametongue Totem with 5 health at the feet of the caster for 2 min that imbues the weapons
+      of party and raid members within 20 yards with fire, granting their melee attacks a chance to deal additional
+      Fire damage.
+  spell.931141:
+    name: Flametongue Totem
+    description: Summons a Flametongue Totem with 5 health at the feet of the caster for 2 min that imbues the weapons
+      of party and raid members within 20 yards with fire, granting their melee attacks a chance to deal additional
+      Fire damage.
+  spell.931142:
+    name: Flametongue Totem
+    description: Summons a Flametongue Totem with 5 health at the feet of the caster for 2 min that imbues the weapons
+      of party and raid members within 20 yards with fire, granting their melee attacks a chance to deal additional
+      Fire damage.
+  spell.931143:
+    name: Flametongue Totem
+    description: Summons a Flametongue Totem with 5 health at the feet of the caster for 2 min that imbues the weapons
+      of party and raid members within 20 yards with fire, granting their melee attacks a chance to deal additional
+      Fire damage.
+  spell.931144:
+    name: Flametongue Totem Passive
+    auraDescription: Every 5 sec, imbues the weapons of party and raid members within 20 yards with fire.
+  spell.931145:
+    name: Flametongue Totem Passive
+    auraDescription: Every 5 sec, imbues the weapons of party and raid members within 20 yards with fire.
+  spell.931146:
+    name: Flametongue Totem Passive
+    auraDescription: Every 5 sec, imbues the weapons of party and raid members within 20 yards with fire.
+  spell.931147:
+    name: Flametongue Totem Passive
+    auraDescription: Every 5 sec, imbues the weapons of party and raid members within 20 yards with fire.
+  spell.931148:
+    name: Flametongue Totem Effect
+  spell.931149:
+    name: Flametongue Totem Effect
+  spell.931150:
+    name: Flametongue Totem Effect
+  spell.931151:
+    name: Flametongue Totem Effect
+  spell.931240:
+    name: Poison Cleansing Totem
+    description: Summons a Poison Cleansing Totem with 5 health at the feet of the caster that periodically removes
+      1 Poison effect from party and raid members.
+  spell.931250:
+    name: Poison Cleansing Totem Passive
+    auraDescription: Periodically removes 1 Poison effect from nearby party and raid members.
+  spell.931251:
+    name: Poison Cleansing Totem Effect
+    auraDescription: Removes 1 Poison effect.
+  spell.931260:
+    name: Disease Cleansing Totem
+    description: Summons a Disease Cleansing Totem with 5 health at the feet of the caster that periodically removes
+      1 Disease effect from party and raid members.
+  spell.931270:
+    name: Disease Cleansing Totem Passive
+    auraDescription: Periodically removes 1 Disease effect from nearby party and raid members.
+  spell.931271:
+    name: Disease Cleansing Totem Effect
+    auraDescription: Removes 1 Disease effect.
+  spell.931390:
+    name: Sentry Totem
+    auraDescription: Allows vision through Sentry Totem. Right-Click on the buff to switch back and forth between
+      totem sight and shaman sight.
+    description: Summons an immobile Sentry Totem with 100 health at your feet for 5 min that allows vision of the
+      nearby area and warns of enemies that attack it. Right-Click on the buff to switch back and forth between
+      totem sight and shaman sight.

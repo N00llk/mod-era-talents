@@ -1219,10 +1219,8 @@ helpers:
   effects:
   - { effect: 35, aura: 79, misc: 2, basePoints: 10, dieSides: 0, targetA: 1, radius: 23 }  # APPLY_AREA_AURA_PARTY, MOD_DAMAGE_PERCENT_DONE Holy(2) +10%
   client:
-    name: Sanctity Aura
+    textKey: spell.932602
     icon: 502               # spell_holy_mindvision — matches node 18642's icon (was 291 = Devotion Aura)
-    description: "Increases Holy damage done by party members within 30 yards by 10%. Players may only have one Aura on them per Paladin at any one time."
-    auraDescription: "Holy damage done increased by 10%."
     skillLine: 184          # Retribution tab (castable)
 # --- Vindication debuffs (node 18635) — Str+Agi %-reduction, 10s. CLONED (stock 9452/26016 reduce
 #     flat AP in WotLK; Vanilla reduced % Str/Agi). aura 80 MOD_PERCENT_STAT: misc 0 = Str, 1 = Agi. ---
@@ -1232,21 +1230,21 @@ helpers:
   effects:
   - { effect: 6, aura: 80, misc: 0, basePoints: -5, dieSides: 0, targetA: 6 }
   - { effect: 6, aura: 80, misc: 1, basePoints: -5, dieSides: 0, targetA: 6 }
-  client: { name: Vindication, icon: 1822, auraDescription: "Strength and Agility reduced by 5%." }
+  client: {textKey: spell.932603, icon: 1822}
 - id: 932604
   name: Vindication
   durationIndex: 1
   effects:
   - { effect: 6, aura: 80, misc: 0, basePoints: -10, dieSides: 0, targetA: 6 }
   - { effect: 6, aura: 80, misc: 1, basePoints: -10, dieSides: 0, targetA: 6 }
-  client: { name: Vindication, icon: 1822, auraDescription: "Strength and Agility reduced by 10%." }
+  client: {textKey: spell.932604, icon: 1822}
 - id: 932605
   name: Vindication
   durationIndex: 1
   effects:
   - { effect: 6, aura: 80, misc: 0, basePoints: -15, dieSides: 0, targetA: 6 }
   - { effect: 6, aura: 80, misc: 1, basePoints: -15, dieSides: 0, targetA: 6 }
-  client: { name: Vindication, icon: 1822, auraDescription: "Strength and Agility reduced by 15%." }
+  client: {textKey: spell.932605, icon: 1822}
 # --- Seal of Command (node 18637) — CLONE of stock 20375 (inherits family 10 + flagsA bit25 =
 #     SPELL_SPECIFIC_SEAL: mutual exclusion + judgement unleash). Effect_1 = PROC_TRIGGER_SPELL ->
 #     932607 (70% Holy on melee, at the real `ppm: 7` — Chance 0; the old flat ~40% approximation is
@@ -1270,11 +1268,9 @@ helpers:
     hitMask: 0
     ppm: 7                  # 7 PPM (owner anchor, final review G-34) — the real rate, not a flat approximation
   client:
-    name: Seal of Command
+    textKey: spell.932606
     icon: 561               # stock SoC SpellIconID
     rank: 1
-    description: "Gives the Paladin a chance to deal additional Holy damage equal to 70% of the damage of the attack. Only one Seal can be active at a time. Lasts 30 sec. Unleashing this Seal's energy judges an enemy, instantly causing $932673s1 Holy damage, or double that against a stunned target."
-    auraDescription: "Melee attacks have a chance to deal Holy damage equal to 70% of the attack. Lasts 30 sec."
     skillLine: 184          # Retribution tab (castable)
 # --- Seal of Command proc damage (hidden ON-SWING trigger for 932606 + 932750-753).
 #     WEAPON_PERCENT_DAMAGE 70% as Holy; client name-only (no skillLine -> no spellbook row) so the
@@ -1287,7 +1283,7 @@ helpers:
   school: 2                 # Holy
   effects:
   - { effect: 31, basePoints: 70, dieSides: 0, targetA: 6 }  # SPELL_EFFECT_WEAPON_PERCENT_DAMAGE 70%
-  client: { name: Seal of Command, icon: 561 }
+  client: {textKey: spell.932607, icon: 561}
 # --- Seal of Command R2-5 (932750-753) — trainer-taught higher ranks off the talent-granted R1
 #     (932606), mirroring the Holy Shock R2/R3 / Holy Shield R2-4 / Blessing of Sanctuary R2-4
 #     pattern (node grants rank 1 only; the band sweep (EraBandClassifier) strips these for a Vanilla
@@ -1311,11 +1307,9 @@ helpers:
     hitMask: 0
     ppm: 7                  # 7 PPM (owner anchor, final review G-34) — the real rate, not a flat approximation
   client:
-    name: Seal of Command
+    textKey: spell.932750
     icon: 561
     rank: 2
-    description: "Gives the Paladin a chance to deal additional Holy damage equal to 70% of the damage of the attack. Only one Seal can be active at a time. Lasts 30 sec. Unleashing this Seal's energy judges an enemy, instantly causing $932674s1 Holy damage, or double that against a stunned target."
-    auraDescription: "Melee attacks have a chance to deal Holy damage equal to 70% of the attack. Lasts 30 sec."
     skillLine: 184
 - id: 932751
   name: Seal of Command
@@ -1332,11 +1326,9 @@ helpers:
     hitMask: 0
     ppm: 7                  # 7 PPM (owner anchor, final review G-34) — the real rate, not a flat approximation
   client:
-    name: Seal of Command
+    textKey: spell.932751
     icon: 561
     rank: 3
-    description: "Gives the Paladin a chance to deal additional Holy damage equal to 70% of the damage of the attack. Only one Seal can be active at a time. Lasts 30 sec. Unleashing this Seal's energy judges an enemy, instantly causing $932675s1 Holy damage, or double that against a stunned target."
-    auraDescription: "Melee attacks have a chance to deal Holy damage equal to 70% of the attack. Lasts 30 sec."
     skillLine: 184
 - id: 932752
   name: Seal of Command
@@ -1353,11 +1345,9 @@ helpers:
     hitMask: 0
     ppm: 7                  # 7 PPM (owner anchor, final review G-34) — the real rate, not a flat approximation
   client:
-    name: Seal of Command
+    textKey: spell.932752
     icon: 561
     rank: 4
-    description: "Gives the Paladin a chance to deal additional Holy damage equal to 70% of the damage of the attack. Only one Seal can be active at a time. Lasts 30 sec. Unleashing this Seal's energy judges an enemy, instantly causing $932676s1 Holy damage, or double that against a stunned target."
-    auraDescription: "Melee attacks have a chance to deal Holy damage equal to 70% of the attack. Lasts 30 sec."
     skillLine: 184
 - id: 932753
   name: Seal of Command
@@ -1374,11 +1364,9 @@ helpers:
     hitMask: 0
     ppm: 7                  # 7 PPM (owner anchor, final review G-34) — the real rate, not a flat approximation
   client:
-    name: Seal of Command
+    textKey: spell.932753
     icon: 561
     rank: 5
-    description: "Gives the Paladin a chance to deal additional Holy damage equal to 70% of the damage of the attack. Only one Seal can be active at a time. Lasts 30 sec. Unleashing this Seal's energy judges an enemy, instantly causing $932677s1 Holy damage, or double that against a stunned target."
-    auraDescription: "Melee attacks have a chance to deal Holy damage equal to 70% of the attack. Lasts 30 sec."
     skillLine: 184
 # --- Eye for an Eye (node 18639) — CLONES of stock 9799/25988 at Vanilla 15/30% (WotLK retuned in
 #     3.0.2). Template clones inherit the spell-crit-taken proc conditions + reflect payload 25997;
@@ -1403,35 +1391,35 @@ helpers:
   durationIndex: 31         # 8s (index 31 = 8000ms)
   effects:
   - { effect: 6, aura: 79, misc: 3, basePoints: 3, dieSides: 0, targetA: 1 }
-  client: { name: Vengeance, icon: 84, auraDescription: "Physical and Holy damage increased by 3%." }
+  client: {textKey: spell.932610, icon: 84}
 - id: 932611
   name: Vengeance
   template: 20050
   durationIndex: 31
   effects:
   - { effect: 6, aura: 79, misc: 3, basePoints: 6, dieSides: 0, targetA: 1 }
-  client: { name: Vengeance, icon: 84, auraDescription: "Physical and Holy damage increased by 6%." }
+  client: {textKey: spell.932611, icon: 84}
 - id: 932612
   name: Vengeance
   template: 20050
   durationIndex: 31
   effects:
   - { effect: 6, aura: 79, misc: 3, basePoints: 9, dieSides: 0, targetA: 1 }
-  client: { name: Vengeance, icon: 84, auraDescription: "Physical and Holy damage increased by 9%." }
+  client: {textKey: spell.932612, icon: 84}
 - id: 932613
   name: Vengeance
   template: 20050
   durationIndex: 31
   effects:
   - { effect: 6, aura: 79, misc: 3, basePoints: 12, dieSides: 0, targetA: 1 }
-  client: { name: Vengeance, icon: 84, auraDescription: "Physical and Holy damage increased by 12%." }
+  client: {textKey: spell.932613, icon: 84}
 - id: 932614
   name: Vengeance
   template: 20050
   durationIndex: 31
   effects:
   - { effect: 6, aura: 79, misc: 3, basePoints: 15, dieSides: 0, targetA: 1 }
-  client: { name: Vengeance, icon: 84, auraDescription: "Physical and Holy damage increased by 15%." }
+  client: {textKey: spell.932614, icon: 84}
 
 # ---------------------------------------------------------------------------------------------------
 # Seal of the Crusader reconstruction (node 18633 Improved Seal of the Crusader, Task 6b). Band
@@ -1465,11 +1453,9 @@ helpers:
   - { effect: 6, aura: 9,  basePoints: 40, dieSides: 0, targetA: 1 }        # MOD_ATTACKSPEED +40%
   - { effect: 6, aura: 4,  basePoints: 932640, dieSides: 0, targetA: 1 }    # EFFECT_2 DUMMY -> JotC r1 (unleash)
   client:
-    name: Seal of the Crusader
+    textKey: spell.932634
     icon: 237
     rank: 1
-    description: "Fills the Paladin with the spirit of a crusader for 30 sec, increasing attack power by 18. The Paladin also attacks 40% faster. Only one Seal can be active on the Paladin at any one time. Unleashing this Seal's energy judges an enemy, increasing Holy damage taken by 20 for 10 sec."
-    auraDescription: "Attack power increased by 18. Attacks 40% faster. Judgement afflicts the target with Judgement of the Crusader."
     skillLine: 184
 - id: 932635
   name: Seal of the Crusader
@@ -1483,11 +1469,9 @@ helpers:
   - { effect: 6, aura: 9,  basePoints: 40, dieSides: 0, targetA: 1 }
   - { effect: 6, aura: 4,  basePoints: 932641, dieSides: 0, targetA: 1 }
   client:
-    name: Seal of the Crusader
+    textKey: spell.932635
     icon: 237
     rank: 2
-    description: "Fills the Paladin with the spirit of a crusader for 30 sec, increasing attack power by 30. The Paladin also attacks 40% faster. Only one Seal can be active on the Paladin at any one time. Unleashing this Seal's energy judges an enemy, increasing Holy damage taken by 30 for 10 sec."
-    auraDescription: "Attack power increased by 30. Attacks 40% faster. Judgement afflicts the target with Judgement of the Crusader."
     skillLine: 184
 - id: 932636
   name: Seal of the Crusader
@@ -1501,11 +1485,9 @@ helpers:
   - { effect: 6, aura: 9,  basePoints: 40, dieSides: 0, targetA: 1 }
   - { effect: 6, aura: 4,  basePoints: 932642, dieSides: 0, targetA: 1 }
   client:
-    name: Seal of the Crusader
+    textKey: spell.932636
     icon: 237
     rank: 3
-    description: "Fills the Paladin with the spirit of a crusader for 30 sec, increasing attack power by 55. The Paladin also attacks 40% faster. Only one Seal can be active on the Paladin at any one time. Unleashing this Seal's energy judges an enemy, increasing Holy damage taken by 50 for 10 sec."
-    auraDescription: "Attack power increased by 55. Attacks 40% faster. Judgement afflicts the target with Judgement of the Crusader."
     skillLine: 184
 - id: 932637
   name: Seal of the Crusader
@@ -1519,11 +1501,9 @@ helpers:
   - { effect: 6, aura: 9,  basePoints: 40, dieSides: 0, targetA: 1 }
   - { effect: 6, aura: 4,  basePoints: 932643, dieSides: 0, targetA: 1 }
   client:
-    name: Seal of the Crusader
+    textKey: spell.932637
     icon: 237
     rank: 4
-    description: "Fills the Paladin with the spirit of a crusader for 30 sec, increasing attack power by 85. The Paladin also attacks 40% faster. Only one Seal can be active on the Paladin at any one time. Unleashing this Seal's energy judges an enemy, increasing Holy damage taken by 80 for 10 sec."
-    auraDescription: "Attack power increased by 85. Attacks 40% faster. Judgement afflicts the target with Judgement of the Crusader."
     skillLine: 184
 - id: 932638
   name: Seal of the Crusader
@@ -1537,11 +1517,9 @@ helpers:
   - { effect: 6, aura: 9,  basePoints: 40, dieSides: 0, targetA: 1 }
   - { effect: 6, aura: 4,  basePoints: 932644, dieSides: 0, targetA: 1 }
   client:
-    name: Seal of the Crusader
+    textKey: spell.932638
     icon: 237
     rank: 5
-    description: "Fills the Paladin with the spirit of a crusader for 30 sec, increasing attack power by 130. The Paladin also attacks 40% faster. Only one Seal can be active on the Paladin at any one time. Unleashing this Seal's energy judges an enemy, increasing Holy damage taken by 110 for 10 sec."
-    auraDescription: "Attack power increased by 130. Attacks 40% faster. Judgement afflicts the target with Judgement of the Crusader."
     skillLine: 184
 - id: 932639
   name: Seal of the Crusader
@@ -1555,11 +1533,9 @@ helpers:
   - { effect: 6, aura: 9,  basePoints: 40, dieSides: 0, targetA: 1 }
   - { effect: 6, aura: 4,  basePoints: 932645, dieSides: 0, targetA: 1 }
   client:
-    name: Seal of the Crusader
+    textKey: spell.932639
     icon: 237
     rank: 6
-    description: "Fills the Paladin with the spirit of a crusader for 30 sec, increasing attack power by 180. The Paladin also attacks 40% faster. Only one Seal can be active on the Paladin at any one time. Unleashing this Seal's energy judges an enemy, increasing Holy damage taken by 140 for 10 sec."
-    auraDescription: "Attack power increased by 180. Attacks 40% faster. Judgement afflicts the target with Judgement of the Crusader."
     skillLine: 184
 # --- Judgement of the Crusader debuffs (932640-645) — the judge-unleash payload the seal DUMMY points
 #     to. Cast on the enemy by core spell_pal_judgement (triggered), so never a known/spellbook spell:
@@ -1572,7 +1548,7 @@ helpers:
   durationIndex: 1          # 10s (index 1 = 10000ms)
   effects:
   - { effect: 6, aura: 14, misc: 2, basePoints: 20, dieSides: 0, targetA: 6 }   # MOD_DAMAGE_TAKEN Holy +20
-  client: { name: Judgement of the Crusader, icon: 237, rank: 1, auraDescription: "Holy damage taken increased by 20. Lasts 10 sec." }
+  client: {textKey: spell.932640, icon: 237, rank: 1}
 - id: 932641
   name: Judgement of the Crusader
   family: 10
@@ -1580,7 +1556,7 @@ helpers:
   durationIndex: 1
   effects:
   - { effect: 6, aura: 14, misc: 2, basePoints: 30, dieSides: 0, targetA: 6 }
-  client: { name: Judgement of the Crusader, icon: 237, rank: 2, auraDescription: "Holy damage taken increased by 30. Lasts 10 sec." }
+  client: {textKey: spell.932641, icon: 237, rank: 2}
 - id: 932642
   name: Judgement of the Crusader
   family: 10
@@ -1588,7 +1564,7 @@ helpers:
   durationIndex: 1
   effects:
   - { effect: 6, aura: 14, misc: 2, basePoints: 50, dieSides: 0, targetA: 6 }
-  client: { name: Judgement of the Crusader, icon: 237, rank: 3, auraDescription: "Holy damage taken increased by 50. Lasts 10 sec." }
+  client: {textKey: spell.932642, icon: 237, rank: 3}
 - id: 932643
   name: Judgement of the Crusader
   family: 10
@@ -1596,7 +1572,7 @@ helpers:
   durationIndex: 1
   effects:
   - { effect: 6, aura: 14, misc: 2, basePoints: 80, dieSides: 0, targetA: 6 }
-  client: { name: Judgement of the Crusader, icon: 237, rank: 4, auraDescription: "Holy damage taken increased by 80. Lasts 10 sec." }
+  client: {textKey: spell.932643, icon: 237, rank: 4}
 - id: 932644
   name: Judgement of the Crusader
   family: 10
@@ -1604,7 +1580,7 @@ helpers:
   durationIndex: 1
   effects:
   - { effect: 6, aura: 14, misc: 2, basePoints: 110, dieSides: 0, targetA: 6 }
-  client: { name: Judgement of the Crusader, icon: 237, rank: 5, auraDescription: "Holy damage taken increased by 110. Lasts 10 sec." }
+  client: {textKey: spell.932644, icon: 237, rank: 5}
 - id: 932645
   name: Judgement of the Crusader
   family: 10
@@ -1612,7 +1588,7 @@ helpers:
   durationIndex: 1
   effects:
   - { effect: 6, aura: 14, misc: 2, basePoints: 140, dieSides: 0, targetA: 6 }
-  client: { name: Judgement of the Crusader, icon: 237, rank: 6, auraDescription: "Holy damage taken increased by 140. Lasts 10 sec." }
+  client: {textKey: spell.932645, icon: 237, rank: 6}
 
 # ---------------------------------------------------------------------------------------------------
 # Protection-tab reconstruction helpers (Task 8). Band 932615-932633 (paladin; 932600-614 taken by
@@ -1626,6 +1602,7 @@ helpers:
 #     scaffolding; dur idx 1 (10s) inherited; Effect_3 (aura-189 rating) auto-zeroed by the templated
 #     3-slot fill. -------------------------------------------------------------------------------------
 - id: 932615
+  manaCostPct: 0
   name: Holy Shield
   template: 20925
   powerCost: 140            # Vanilla rank 1 (1.12.1 DBC 20169)
@@ -1648,11 +1625,9 @@ helpers:
     hitMask: 64             # PROC_HIT_BLOCK — fires (deals dmg + drops a charge) ONLY on a block
     chance: 100
   client:
-    name: Holy Shield
+    textKey: spell.932615
     icon: 453               # stock Holy Shield SpellIconID
     rank: 1
-    description: "Increases chance to block by 30% for 10 sec and deals 40 Holy damage for each attack blocked while active. Each block expends a charge. 4 charges."
-    auraDescription: "Increases chance to block by 30%. Blocked attackers take 40 Holy damage. Each block expends a charge. 4 charges."
     skillLine: 267          # Protection tab (castable)
 # --- Holy Shield block damage (hidden trigger for 932615). SCHOOL_DAMAGE 40 as Holy to the attacker
 #     (the proc passes the attacker as the explicit target; targetA 6 = TARGET_UNIT_TARGET_ENEMY).
@@ -1663,7 +1638,7 @@ helpers:
   school: 2                 # Holy
   effects:
   - { effect: 2, basePoints: 40, dieSides: 0, targetA: 6 }   # SPELL_EFFECT_SCHOOL_DAMAGE 40 Holy (rank 1)
-  client: { name: Holy Shield, icon: 453 }
+  client: {textKey: spell.932616, icon: 453}
 # --- Blessing of Sanctuary (node 18626) — CLONE of stock 20911 (WotLK: aura-4 DUMMY dmg-reduction via
 #     core script + triggered 57319-57321 mana/stat). Vanilla: flat "reduce damage from all sources by
 #     up to 7" (aura 14 MOD_DAMAGE_TAKEN -7, all schools) + "when the target blocks a melee attack the
@@ -1686,11 +1661,9 @@ helpers:
   - { effect: 6, aura: 42, basePoints: 0, dieSides: 0, trigger: 932618, targetA: 21 }  # -> 14 Holy to attacker on block
   proc: { flags: 680, typeMask: 7, hitMask: 64, chance: 100 }
   client:
-    name: Blessing of Sanctuary
+    textKey: spell.932617
     icon: 19                # stock Blessing of Sanctuary SpellIconID
     rank: 1
-    description: "Places a Blessing on the friendly target, reducing damage dealt from all sources by up to 10 for 5 min. In addition, when the target blocks a melee attack the attacker will take 14 Holy damage. Players may only have one Blessing on them per Paladin at any one time."
-    auraDescription: "Damage dealt from all sources reduced by up to 10. Attackers take 14 Holy damage when the target blocks."
     skillLine: 267          # Protection tab (castable)
 # --- Blessing of Sanctuary block damage (hidden triggers). SCHOOL_DAMAGE Holy to the attacker on
 #     block. client rows (name+icon only, no skillLine): hidden triggered damage is INVISIBLE in the
@@ -1701,7 +1674,7 @@ helpers:
   school: 2                 # Holy
   effects:
   - { effect: 2, basePoints: 14, dieSides: 0, targetA: 6 }   # SPELL_EFFECT_SCHOOL_DAMAGE 14 Holy (rank 1)
-  client: { name: Blessing of Sanctuary, icon: 19 }
+  client: {textKey: spell.932618, icon: 19}
 # --- Redoubt (node 18616) — 5 hidden proc passives (932619-623, clone of stock 20127) + 5 visible
 #     block-chance buffs (932624-628, clone of stock 20128). Each passive: on being CRIT (hitMask 2,
 #     100% — no roll), trigger the rank's block buff. Effects 2/3 auto-zeroed drop stock 20127's aura-
@@ -1743,35 +1716,35 @@ helpers:
   effects:
   - { effect: 6, aura: 51, basePoints: 6, dieSides: 0, targetA: 1 }    # +6% block chance
   proc: { flags: 680, typeMask: 7, hitMask: 64, chance: 100 }          # drop a charge on each block (5 charges inherited)
-  client: { name: Redoubt, icon: 28, auraDescription: "Chance to block increased by 6%. Lasts 10 sec or 5 blocks." }
+  client: {textKey: spell.932624, icon: 28}
 - id: 932625
   name: Redoubt
   template: 20128
   effects:
   - { effect: 6, aura: 51, basePoints: 12, dieSides: 0, targetA: 1 }   # +12% block chance
   proc: { flags: 680, typeMask: 7, hitMask: 64, chance: 100 }
-  client: { name: Redoubt, icon: 28, auraDescription: "Chance to block increased by 12%. Lasts 10 sec or 5 blocks." }
+  client: {textKey: spell.932625, icon: 28}
 - id: 932626
   name: Redoubt
   template: 20128
   effects:
   - { effect: 6, aura: 51, basePoints: 18, dieSides: 0, targetA: 1 }   # +18% block chance
   proc: { flags: 680, typeMask: 7, hitMask: 64, chance: 100 }
-  client: { name: Redoubt, icon: 28, auraDescription: "Chance to block increased by 18%. Lasts 10 sec or 5 blocks." }
+  client: {textKey: spell.932626, icon: 28}
 - id: 932627
   name: Redoubt
   template: 20128
   effects:
   - { effect: 6, aura: 51, basePoints: 24, dieSides: 0, targetA: 1 }   # +24% block chance
   proc: { flags: 680, typeMask: 7, hitMask: 64, chance: 100 }
-  client: { name: Redoubt, icon: 28, auraDescription: "Chance to block increased by 24%. Lasts 10 sec or 5 blocks." }
+  client: {textKey: spell.932627, icon: 28}
 - id: 932628
   name: Redoubt
   template: 20128
   effects:
   - { effect: 6, aura: 51, basePoints: 30, dieSides: 0, targetA: 1 }   # +30% block chance
   proc: { flags: 680, typeMask: 7, hitMask: 64, chance: 100 }
-  client: { name: Redoubt, icon: 28, auraDescription: "Chance to block increased by 30%. Lasts 10 sec or 5 blocks." }
+  client: {textKey: spell.932628, icon: 28}
 # --- Reckoning (node 18627) — 5 hidden proc passives (932629-633, clone of stock 20177) that trigger
 #     STOCK 20178 (the unchanged +extra-attack aura, already client-DBC-present) on being CRIT. Only the
 #     proc CHANCE is retuned to the Vanilla 20/40/60/80/100% series (stock 2/4/6/8/10%). proc flags
@@ -1823,6 +1796,7 @@ helpers:
 # (no client rows, like Ignite). Seal of Command's own proc 932607 DOES carry a name-only client
 # block (no skillLine) so its damage names correctly in the combat log — see 932607 below.
 - id: 932646
+  manaCostPct: 0
   name: Holy Shock
   template: 20473           # inherit 20yd range + instant cast + icon 156
   powerCost: 320
@@ -1841,12 +1815,12 @@ helpers:
   effects:
   - { effect: 3, targetA: 25 }   # SPELL_EFFECT_DUMMY, TARGET_UNIT_TARGET_ANY (era_pal_holy_shock branches)
   client:
-    name: Holy Shock
+    textKey: spell.932646
     icon: 156               # stock Holy Shock SpellIconID
     rank: 1
-    description: "Blasts the target with Holy energy, causing 204 to 220 Holy damage to an enemy, or 204 to 220 healing to an ally."
     skillLine: 594          # Holy tab (castable)
 - id: 932647
+  manaCostPct: 0
   name: Holy Shock
   template: 20473
   powerCost: 410
@@ -1857,12 +1831,12 @@ helpers:
   effects:
   - { effect: 3, targetA: 25 }   # SPELL_EFFECT_DUMMY, TARGET_UNIT_TARGET_ANY
   client:
-    name: Holy Shock
+    textKey: spell.932647
     icon: 156
     rank: 2
-    description: "Blasts the target with Holy energy, causing 279 to 301 Holy damage to an enemy, or 279 to 301 healing to an ally."
     skillLine: 594
 - id: 932648
+  manaCostPct: 0
   name: Holy Shock
   template: 20473
   powerCost: 480
@@ -1873,10 +1847,9 @@ helpers:
   effects:
   - { effect: 3, targetA: 25 }   # SPELL_EFFECT_DUMMY, TARGET_UNIT_TARGET_ANY
   client:
-    name: Holy Shock
+    textKey: spell.932648
     icon: 156
     rank: 3
-    description: "Blasts the target with Holy energy, causing 365 to 395 Holy damage to an enemy, or 365 to 395 healing to an ally."
     skillLine: 594
 # --- Holy Shock damage clones (hidden; SCHOOL_DAMAGE Holy to an enemy). 204-220 / 279-301 / 365-395. --
 # spellVisual 128 = stock Holy Shock damage impact (25912); the client:{} block (no skillLine, so it
@@ -1891,7 +1864,7 @@ helpers:
   spellVisual: 128
   effects:
   - { effect: 2, basePoints: 203, dieSides: 17, targetA: 6 }   # 204-220
-  client: { name: Holy Shock, icon: 156 }
+  client: {textKey: spell.932649, icon: 156}
 - id: 932650
   name: Holy Shock
   school: 2
@@ -1900,7 +1873,7 @@ helpers:
   spellVisual: 128
   effects:
   - { effect: 2, basePoints: 278, dieSides: 23, targetA: 6 }   # 279-301
-  client: { name: Holy Shock, icon: 156 }
+  client: {textKey: spell.932650, icon: 156}
 - id: 932651
   name: Holy Shock
   school: 2
@@ -1909,7 +1882,7 @@ helpers:
   spellVisual: 128
   effects:
   - { effect: 2, basePoints: 364, dieSides: 31, targetA: 6 }   # 365-395
-  client: { name: Holy Shock, icon: 156 }
+  client: {textKey: spell.932651, icon: 156}
 # --- Holy Shock heal clones (hidden; SPELL_EFFECT_HEAL Holy to an ally). SAME per-rank numbers. -------
 #     powerCost = the rank's Holy Shock mana (320/410/480) so ILLUMINATION works: core
 #     spell_pal_illumination refunds mana = base cost * talent% on a crit heal, and for a Holy Shock
@@ -1940,7 +1913,7 @@ helpers:
   spellVisual: 135
   effects:
   - { effect: 10, basePoints: 203, dieSides: 17, targetA: 21 }   # 204-220
-  client: { name: Holy Shock, icon: 156 }
+  client: {textKey: spell.932652, icon: 156}
 - id: 932653
   name: Holy Shock
   school: 2
@@ -1950,7 +1923,7 @@ helpers:
   spellVisual: 135
   effects:
   - { effect: 10, basePoints: 278, dieSides: 23, targetA: 21 }   # 279-301
-  client: { name: Holy Shock, icon: 156 }
+  client: {textKey: spell.932653, icon: 156}
 - id: 932654
   name: Holy Shock
   school: 2
@@ -1960,13 +1933,14 @@ helpers:
   spellVisual: 135
   effects:
   - { effect: 10, basePoints: 364, dieSides: 31, targetA: 21 }   # 365-395
-  client: { name: Holy Shock, icon: 156 }
+  client: {textKey: spell.932654, icon: 156}
 
 # ---------------------------------------------------------------------------------------------------
 # Holy Shield higher ranks (node 18629, Fix 4). Band 932655-932660. R1 is 932615/932616 above. Vanilla
 # = 4 ranks (1.12.1 DBC 20169/20925/20927/20928), L30/40/50/60, +30% block all ranks, block damage
 # 40/65/95/130, mana 140/200/260/320, 4 charges, 10s cd. Same clone shape as R1 (template 20925).
 - id: 932655
+  manaCostPct: 0
   name: Holy Shield
   template: 20925
   powerCost: 200
@@ -1980,19 +1954,18 @@ helpers:
   - { effect: 6, aura: 42, basePoints: 0, dieSides: 0, trigger: 932656, targetA: 1 }  # PROC_TRIGGER_SPELL -> 65 Holy on block
   proc: { flags: 680, typeMask: 7, hitMask: 64, chance: 100 }
   client:
-    name: Holy Shield
+    textKey: spell.932655
     icon: 453
     rank: 2
-    description: "Increases chance to block by 30% for 10 sec and deals 65 Holy damage for each attack blocked while active. Each block expends a charge. 4 charges."
-    auraDescription: "Increases chance to block by 30%. Blocked attackers take 65 Holy damage. Each block expends a charge. 4 charges."
     skillLine: 267
 - id: 932656
   name: Holy Shield
   school: 2
   effects:
   - { effect: 2, basePoints: 65, dieSides: 0, targetA: 6 }   # SCHOOL_DAMAGE 65 Holy (rank 2)
-  client: { name: Holy Shield, icon: 453 }
+  client: {textKey: spell.932656, icon: 453}
 - id: 932657
+  manaCostPct: 0
   name: Holy Shield
   template: 20925
   powerCost: 260
@@ -2006,19 +1979,18 @@ helpers:
   - { effect: 6, aura: 42, basePoints: 0, dieSides: 0, trigger: 932658, targetA: 1 }
   proc: { flags: 680, typeMask: 7, hitMask: 64, chance: 100 }
   client:
-    name: Holy Shield
+    textKey: spell.932657
     icon: 453
     rank: 3
-    description: "Increases chance to block by 30% for 10 sec and deals 95 Holy damage for each attack blocked while active. Each block expends a charge. 4 charges."
-    auraDescription: "Increases chance to block by 30%. Blocked attackers take 95 Holy damage. Each block expends a charge. 4 charges."
     skillLine: 267
 - id: 932658
   name: Holy Shield
   school: 2
   effects:
   - { effect: 2, basePoints: 95, dieSides: 0, targetA: 6 }   # SCHOOL_DAMAGE 95 Holy (rank 3)
-  client: { name: Holy Shield, icon: 453 }
+  client: {textKey: spell.932658, icon: 453}
 - id: 932659
+  manaCostPct: 0
   name: Holy Shield
   template: 20925
   powerCost: 320
@@ -2032,18 +2004,16 @@ helpers:
   - { effect: 6, aura: 42, basePoints: 0, dieSides: 0, trigger: 932660, targetA: 1 }
   proc: { flags: 680, typeMask: 7, hitMask: 64, chance: 100 }
   client:
-    name: Holy Shield
+    textKey: spell.932659
     icon: 453
     rank: 4
-    description: "Increases chance to block by 30% for 10 sec and deals 130 Holy damage for each attack blocked while active. Each block expends a charge. 4 charges."
-    auraDescription: "Increases chance to block by 30%. Blocked attackers take 130 Holy damage. Each block expends a charge. 4 charges."
     skillLine: 267
 - id: 932660
   name: Holy Shield
   school: 2
   effects:
   - { effect: 2, basePoints: 130, dieSides: 0, targetA: 6 }   # SCHOOL_DAMAGE 130 Holy (rank 4)
-  client: { name: Holy Shield, icon: 453 }
+  client: {textKey: spell.932660, icon: 453}
 
 # ---------------------------------------------------------------------------------------------------
 # Blessing of Sanctuary higher ranks (node 18626, Fix 6). Band 932661-932667 (+ R2 block trigger reuses
@@ -2062,11 +2032,9 @@ helpers:
   - { effect: 6, aura: 42, basePoints: 0, dieSides: 0, trigger: 932663, targetA: 21 }  # -> 21 Holy to attacker on block
   proc: { flags: 680, typeMask: 7, hitMask: 64, chance: 100 }
   client:
-    name: Blessing of Sanctuary
+    textKey: spell.932661
     icon: 19
     rank: 2
-    description: "Places a Blessing on the friendly target, reducing damage dealt from all sources by up to 14 for 5 min. In addition, when the target blocks a melee attack the attacker will take 21 Holy damage. Players may only have one Blessing on them per Paladin at any one time."
-    auraDescription: "Damage dealt from all sources reduced by up to 14. Attackers take 21 Holy damage when the target blocks."
     skillLine: 267
 - id: 932662
   name: Blessing of Sanctuary
@@ -2079,18 +2047,16 @@ helpers:
   - { effect: 6, aura: 42, basePoints: 0, dieSides: 0, trigger: 932665, targetA: 21 }
   proc: { flags: 680, typeMask: 7, hitMask: 64, chance: 100 }
   client:
-    name: Blessing of Sanctuary
+    textKey: spell.932662
     icon: 19
     rank: 3
-    description: "Places a Blessing on the friendly target, reducing damage dealt from all sources by up to 19 for 5 min. In addition, when the target blocks a melee attack the attacker will take 28 Holy damage. Players may only have one Blessing on them per Paladin at any one time."
-    auraDescription: "Damage dealt from all sources reduced by up to 19. Attackers take 28 Holy damage when the target blocks."
     skillLine: 267
 - id: 932663
   name: Blessing of Sanctuary
   school: 2
   effects:
   - { effect: 2, basePoints: 21, dieSides: 0, targetA: 6 }   # SCHOOL_DAMAGE 21 Holy (rank 2)
-  client: { name: Blessing of Sanctuary, icon: 19 }
+  client: {textKey: spell.932663, icon: 19}
 - id: 932664
   name: Blessing of Sanctuary
   template: 20911
@@ -2102,24 +2068,22 @@ helpers:
   - { effect: 6, aura: 42, basePoints: 0, dieSides: 0, trigger: 932667, targetA: 21 }
   proc: { flags: 680, typeMask: 7, hitMask: 64, chance: 100 }
   client:
-    name: Blessing of Sanctuary
+    textKey: spell.932664
     icon: 19
     rank: 4
-    description: "Places a Blessing on the friendly target, reducing damage dealt from all sources by up to 24 for 5 min. In addition, when the target blocks a melee attack the attacker will take 35 Holy damage. Players may only have one Blessing on them per Paladin at any one time."
-    auraDescription: "Damage dealt from all sources reduced by up to 24. Attackers take 35 Holy damage when the target blocks."
     skillLine: 267
 - id: 932665
   name: Blessing of Sanctuary
   school: 2
   effects:
   - { effect: 2, basePoints: 28, dieSides: 0, targetA: 6 }   # SCHOOL_DAMAGE 28 Holy (rank 3)
-  client: { name: Blessing of Sanctuary, icon: 19 }
+  client: {textKey: spell.932665, icon: 19}
 - id: 932667
   name: Blessing of Sanctuary
   school: 2
   effects:
   - { effect: 2, basePoints: 35, dieSides: 0, targetA: 6 }   # SCHOOL_DAMAGE 35 Holy (rank 4)
-  client: { name: Blessing of Sanctuary, icon: 19 }
+  client: {textKey: spell.932667, icon: 19}
 
 # ---------------------------------------------------------------------------------------------------
 # Lay on Hands Vanilla clones (node 18607 Improved LoH, Fix 5). Band 932668-932672. Stock LoH 633/2800/
@@ -2140,10 +2104,9 @@ helpers:
   effects:
   - { effect: 67, basePoints: 0, dieSides: 0, targetA: 21 }   # HEAL_MAX_HEALTH on ally
   client:
-    name: Lay on Hands
+    textKey: spell.932668
     icon: 79
     rank: 1
-    description: "Heals a friendly target for an amount equal to the Paladin's maximum health. Drains all of the Paladin's remaining mana when used."
     skillLine: 594
 - id: 932669
   name: Lay on Hands
@@ -2155,10 +2118,9 @@ helpers:
   - { effect: 67, basePoints: 0, dieSides: 0, targetA: 21 }              # HEAL_MAX_HEALTH on ally
   - { effect: 30, basePoints: 250, dieSides: 0, misc: 0, targetA: 21 }   # ENERGIZE 250 mana
   client:
-    name: Lay on Hands
+    textKey: spell.932669
     icon: 79
     rank: 2
-    description: "Heals a friendly target for an amount equal to the Paladin's maximum health and restores 250 of their mana. Drains all of the Paladin's remaining mana when used."
     skillLine: 594
 - id: 932670
   name: Lay on Hands
@@ -2170,10 +2132,9 @@ helpers:
   - { effect: 67, basePoints: 0, dieSides: 0, targetA: 21 }
   - { effect: 30, basePoints: 550, dieSides: 0, misc: 0, targetA: 21 }   # ENERGIZE 550 mana
   client:
-    name: Lay on Hands
+    textKey: spell.932670
     icon: 79
     rank: 3
-    description: "Heals a friendly target for an amount equal to the Paladin's maximum health and restores 550 of their mana. Drains all of the Paladin's remaining mana when used."
     skillLine: 594
 # --- Improved Lay on Hands armor buff (node 18607 procPassive trigger). aura 142 MOD_BASE_RESISTANCE_PCT
 #     +15%/+30% of the TARGET's own item armor (1.12.1 DBC 20233/20236, misc 1 = normal/armor), 2 min
@@ -2184,18 +2145,16 @@ helpers:
   effects:
   - { effect: 6, aura: 142, misc: 1, basePoints: 15, dieSides: 0, targetA: 21 }   # +15% item armor on ally
   client:
-    name: Improved Lay on Hands
+    textKey: spell.932671
     icon: 79
-    auraDescription: "Armor value from items increased by 15%."
 - id: 932672
   name: Improved Lay on Hands
   durationIndex: 4
   effects:
   - { effect: 6, aura: 142, misc: 1, basePoints: 30, dieSides: 0, targetA: 21 }   # +30% item armor on ally
   client:
-    name: Improved Lay on Hands
+    textKey: spell.932672
     icon: 79
-    auraDescription: "Armor value from items increased by 30%."
 
 # ---------------------------------------------------------------------------------------------------
 # Seal & Judgement reconstruction (Task 1 of 2026-08-20 spec) — Seal of Righteousness, 8 ranks.
@@ -2248,11 +2207,9 @@ helpers:
     hitMask: 0
     chance: 100              # SoR procs every swing (weapon-speed scaling lives in the on-hit spell)
   client:
-    name: Seal of Righteousness
+    textKey: spell.932700
     icon: 25                # spell_holy_sealofrighteousness (stock 20154/25742 SpellIconID)
     rank: 1
-    description: "Fills the Paladin with holy power, causing melee attacks to deal additional Holy damage, for 30 sec. Only one Seal can be active at a time. Unleashing this Seal's energy judges an enemy for 11 Holy damage."
-    auraDescription: "Melee attacks deal additional Holy damage. Lasts 30 sec."
     skillLine: 184           # Retribution tab
 - id: 932701
   name: Seal of Righteousness
@@ -2270,11 +2227,9 @@ helpers:
     hitMask: 0
     chance: 100
   client:
-    name: Seal of Righteousness
+    textKey: spell.932701
     icon: 25
     rank: 2
-    description: "Fills the Paladin with holy power, causing melee attacks to deal additional Holy damage, for 30 sec. Only one Seal can be active at a time. Unleashing this Seal's energy judges an enemy for 19 Holy damage."
-    auraDescription: "Melee attacks deal additional Holy damage. Lasts 30 sec."
     skillLine: 184
 - id: 932702
   name: Seal of Righteousness
@@ -2292,11 +2247,9 @@ helpers:
     hitMask: 0
     chance: 100
   client:
-    name: Seal of Righteousness
+    textKey: spell.932702
     icon: 25
     rank: 3
-    description: "Fills the Paladin with holy power, causing melee attacks to deal additional Holy damage, for 30 sec. Only one Seal can be active at a time. Unleashing this Seal's energy judges an enemy for 31 Holy damage."
-    auraDescription: "Melee attacks deal additional Holy damage. Lasts 30 sec."
     skillLine: 184
 - id: 932703
   name: Seal of Righteousness
@@ -2314,11 +2267,9 @@ helpers:
     hitMask: 0
     chance: 100
   client:
-    name: Seal of Righteousness
+    textKey: spell.932703
     icon: 25
     rank: 4
-    description: "Fills the Paladin with holy power, causing melee attacks to deal additional Holy damage, for 30 sec. Only one Seal can be active at a time. Unleashing this Seal's energy judges an enemy for 46 Holy damage."
-    auraDescription: "Melee attacks deal additional Holy damage. Lasts 30 sec."
     skillLine: 184
 - id: 932704
   name: Seal of Righteousness
@@ -2336,11 +2287,9 @@ helpers:
     hitMask: 0
     chance: 100
   client:
-    name: Seal of Righteousness
+    textKey: spell.932704
     icon: 25
     rank: 5
-    description: "Fills the Paladin with holy power, causing melee attacks to deal additional Holy damage, for 30 sec. Only one Seal can be active at a time. Unleashing this Seal's energy judges an enemy for 63 Holy damage."
-    auraDescription: "Melee attacks deal additional Holy damage. Lasts 30 sec."
     skillLine: 184
 - id: 932705
   name: Seal of Righteousness
@@ -2358,11 +2307,9 @@ helpers:
     hitMask: 0
     chance: 100
   client:
-    name: Seal of Righteousness
+    textKey: spell.932705
     icon: 25
     rank: 6
-    description: "Fills the Paladin with holy power, causing melee attacks to deal additional Holy damage, for 30 sec. Only one Seal can be active at a time. Unleashing this Seal's energy judges an enemy for 83 Holy damage."
-    auraDescription: "Melee attacks deal additional Holy damage. Lasts 30 sec."
     skillLine: 184
 - id: 932706
   name: Seal of Righteousness
@@ -2380,11 +2327,9 @@ helpers:
     hitMask: 0
     chance: 100
   client:
-    name: Seal of Righteousness
+    textKey: spell.932706
     icon: 25
     rank: 7
-    description: "Fills the Paladin with holy power, causing melee attacks to deal additional Holy damage, for 30 sec. Only one Seal can be active at a time. Unleashing this Seal's energy judges an enemy for 106 Holy damage."
-    auraDescription: "Melee attacks deal additional Holy damage. Lasts 30 sec."
     skillLine: 184
 - id: 932707
   name: Seal of Righteousness
@@ -2402,11 +2347,9 @@ helpers:
     hitMask: 0
     chance: 100
   client:
-    name: Seal of Righteousness
+    textKey: spell.932707
     icon: 25
     rank: 8
-    description: "Fills the Paladin with holy power, causing melee attacks to deal additional Holy damage, for 30 sec. Only one Seal can be active at a time. Unleashing this Seal's energy judges an enemy for 132 Holy damage."
-    auraDescription: "Melee attacks deal additional Holy damage. Lasts 30 sec."
     skillLine: 184
 # --- Seal of Righteousness on-hit Holy damage (932708-715) — hidden triggered damage; family 10 +
 #     maskC 1024 so a future Improved SoR rebind boosts its Effect_0 base. The weapon-speed math is
@@ -2418,7 +2361,7 @@ helpers:
   school: 2                 # Holy
   effects:
   - { effect: 2, basePoints: 3, dieSides: 0, targetA: 6 }   # SPELL_EFFECT_SCHOOL_DAMAGE base 3
-  client: { name: Seal of Righteousness, icon: 25 }
+  client: {textKey: spell.932708, icon: 25}
 - id: 932709
   name: Seal of Righteousness
   family: 10
@@ -2426,7 +2369,7 @@ helpers:
   school: 2
   effects:
   - { effect: 2, basePoints: 7, dieSides: 0, targetA: 6 }
-  client: { name: Seal of Righteousness, icon: 25 }
+  client: {textKey: spell.932709, icon: 25}
 - id: 932710
   name: Seal of Righteousness
   family: 10
@@ -2434,7 +2377,7 @@ helpers:
   school: 2
   effects:
   - { effect: 2, basePoints: 12, dieSides: 0, targetA: 6 }
-  client: { name: Seal of Righteousness, icon: 25 }
+  client: {textKey: spell.932710, icon: 25}
 - id: 932711
   name: Seal of Righteousness
   family: 10
@@ -2442,7 +2385,7 @@ helpers:
   school: 2
   effects:
   - { effect: 2, basePoints: 19, dieSides: 0, targetA: 6 }
-  client: { name: Seal of Righteousness, icon: 25 }
+  client: {textKey: spell.932711, icon: 25}
 - id: 932712
   name: Seal of Righteousness
   family: 10
@@ -2450,7 +2393,7 @@ helpers:
   school: 2
   effects:
   - { effect: 2, basePoints: 28, dieSides: 0, targetA: 6 }
-  client: { name: Seal of Righteousness, icon: 25 }
+  client: {textKey: spell.932712, icon: 25}
 - id: 932713
   name: Seal of Righteousness
   family: 10
@@ -2458,7 +2401,7 @@ helpers:
   school: 2
   effects:
   - { effect: 2, basePoints: 39, dieSides: 0, targetA: 6 }
-  client: { name: Seal of Righteousness, icon: 25 }
+  client: {textKey: spell.932713, icon: 25}
 - id: 932714
   name: Seal of Righteousness
   family: 10
@@ -2466,7 +2409,7 @@ helpers:
   school: 2
   effects:
   - { effect: 2, basePoints: 51, dieSides: 0, targetA: 6 }
-  client: { name: Seal of Righteousness, icon: 25 }
+  client: {textKey: spell.932714, icon: 25}
 - id: 932715
   name: Seal of Righteousness
   family: 10
@@ -2474,7 +2417,7 @@ helpers:
   school: 2
   effects:
   - { effect: 2, basePoints: 65, dieSides: 0, targetA: 6 }
-  client: { name: Seal of Righteousness, icon: 25 }
+  client: {textKey: spell.932715, icon: 25}
 # --- Judgement of Righteousness (932716-723) — flat instant Holy damage; a TRIGGERED PAYLOAD, not a
 #     spellbook button (NO skillLine); family 10 + maskC 1024 so a future Improved SoR rebind reaches
 #     it alongside the on-hit spell.
@@ -2498,7 +2441,7 @@ helpers:
   school: 2
   effects:
   - { effect: 2, basePoints: 11, dieSides: 0, targetA: 6 }  # SCHOOL_DAMAGE Holy 11 (flat)
-  client: { name: Judgement of Righteousness, icon: 25, rank: 1 }
+  client: {textKey: spell.932716, icon: 25, rank: 1}
 - id: 932717
   name: Judgement of Righteousness
   family: 10
@@ -2507,7 +2450,7 @@ helpers:
   school: 2
   effects:
   - { effect: 2, basePoints: 19, dieSides: 0, targetA: 6 }
-  client: { name: Judgement of Righteousness, icon: 25, rank: 2 }
+  client: {textKey: spell.932717, icon: 25, rank: 2}
 - id: 932718
   name: Judgement of Righteousness
   family: 10
@@ -2516,7 +2459,7 @@ helpers:
   school: 2
   effects:
   - { effect: 2, basePoints: 31, dieSides: 0, targetA: 6 }
-  client: { name: Judgement of Righteousness, icon: 25, rank: 3 }
+  client: {textKey: spell.932718, icon: 25, rank: 3}
 - id: 932719
   name: Judgement of Righteousness
   family: 10
@@ -2525,7 +2468,7 @@ helpers:
   school: 2
   effects:
   - { effect: 2, basePoints: 46, dieSides: 0, targetA: 6 }
-  client: { name: Judgement of Righteousness, icon: 25, rank: 4 }
+  client: {textKey: spell.932719, icon: 25, rank: 4}
 - id: 932720
   name: Judgement of Righteousness
   family: 10
@@ -2534,7 +2477,7 @@ helpers:
   school: 2
   effects:
   - { effect: 2, basePoints: 63, dieSides: 0, targetA: 6 }
-  client: { name: Judgement of Righteousness, icon: 25, rank: 5 }
+  client: {textKey: spell.932720, icon: 25, rank: 5}
 - id: 932721
   name: Judgement of Righteousness
   family: 10
@@ -2543,7 +2486,7 @@ helpers:
   school: 2
   effects:
   - { effect: 2, basePoints: 83, dieSides: 0, targetA: 6 }
-  client: { name: Judgement of Righteousness, icon: 25, rank: 6 }
+  client: {textKey: spell.932721, icon: 25, rank: 6}
 - id: 932722
   name: Judgement of Righteousness
   family: 10
@@ -2552,7 +2495,7 @@ helpers:
   school: 2
   effects:
   - { effect: 2, basePoints: 106, dieSides: 0, targetA: 6 }
-  client: { name: Judgement of Righteousness, icon: 25, rank: 7 }
+  client: {textKey: spell.932722, icon: 25, rank: 7}
 - id: 932723
   name: Judgement of Righteousness
   family: 10
@@ -2561,7 +2504,7 @@ helpers:
   school: 2
   effects:
   - { effect: 2, basePoints: 132, dieSides: 0, targetA: 6 }
-  client: { name: Judgement of Righteousness, icon: 25, rank: 8 }
+  client: {textKey: spell.932723, icon: 25, rank: 8}
 
 # --- Seal of Justice (932724, Task 3 of the 2026-08-20 seal reconstruction). Vanilla SoJ is a
 #     SINGLE rank (L22, free-cast) whose on-hit stun AND judgement flee-prevention debuff are BOTH
@@ -2608,10 +2551,8 @@ helpers:
     hitMask: 0
     ppm: 5                  # 5 PPM (owner anchor, final review G-34) — replaces the placeholder flat 25%
   client:
-    name: Seal of Justice
+    textKey: spell.932724
     icon: 307                # stock 20164 SpellIconID (confirmed via dump_spell_effects.py; NOT the guessed 297)
-    description: "Fills the Paladin with the spirit of justice for 30 sec, giving melee attacks a chance to stun the target for 2 sec. Only one Seal can be active at a time. Unleashing this Seal's energy judges an enemy, preventing them from fleeing for 20 sec."
-    auraDescription: "Melee attacks have a chance to stun the target for 2 sec. Lasts 30 sec."
     skillLine: 184
 
 # --- Seal of Light (932725-932747, Tasks 4+5b of the 2026-08-20 seal reconstruction). Vanilla SoL is
@@ -2684,11 +2625,9 @@ helpers:
     hitMask: 0
     ppm: 10                 # 10 PPM (owner anchor, final review I-12) — replaces the flat every-swing 100%
   client:
-    name: Seal of Light
+    textKey: spell.932725
     icon: 299                # stock 20165 SpellIconID (confirmed via dump_spell_effects.py)
     rank: 1
-    description: "Fills the Paladin with holy light, healing the Paladin for 38 on melee hits, for 30 sec. Only one Seal can be active at a time. Unleashing this Seal's energy judges an enemy, causing attacks against them to heal the attacker for 24."
-    auraDescription: "Melee attacks heal the Paladin for 38. Lasts 30 sec."
     skillLine: 184
 - id: 932726
   name: Seal of Light
@@ -2705,11 +2644,9 @@ helpers:
     hitMask: 0
     ppm: 10                 # 10 PPM (owner anchor, final review I-12) — replaces the flat every-swing 100%
   client:
-    name: Seal of Light
+    textKey: spell.932726
     icon: 299
     rank: 2
-    description: "Fills the Paladin with holy light, healing the Paladin for 52 on melee hits, for 30 sec. Only one Seal can be active at a time. Unleashing this Seal's energy judges an enemy, causing attacks against them to heal the attacker for 33."
-    auraDescription: "Melee attacks heal the Paladin for 52. Lasts 30 sec."
     skillLine: 184
 - id: 932727
   name: Seal of Light
@@ -2726,11 +2663,9 @@ helpers:
     hitMask: 0
     ppm: 10                 # 10 PPM (owner anchor, final review I-12) — replaces the flat every-swing 100%
   client:
-    name: Seal of Light
+    textKey: spell.932727
     icon: 299
     rank: 3
-    description: "Fills the Paladin with holy light, healing the Paladin for 75 on melee hits, for 30 sec. Only one Seal can be active at a time. Unleashing this Seal's energy judges an enemy, causing attacks against them to heal the attacker for 48."
-    auraDescription: "Melee attacks heal the Paladin for 75. Lasts 30 sec."
     skillLine: 184
 - id: 932728
   name: Seal of Light
@@ -2747,11 +2682,9 @@ helpers:
     hitMask: 0
     ppm: 10                 # 10 PPM (owner anchor, final review I-12) — replaces the flat every-swing 100%
   client:
-    name: Seal of Light
+    textKey: spell.932728
     icon: 299
     rank: 4
-    description: "Fills the Paladin with holy light, healing the Paladin for 93 on melee hits, for 30 sec. Only one Seal can be active at a time. Unleashing this Seal's energy judges an enemy, causing attacks against them to heal the attacker for 60."
-    auraDescription: "Melee attacks heal the Paladin for 93. Lasts 30 sec."
     skillLine: 184
 # --- Seal of Light on-hit flat self-heal (932729-732) — hidden triggered payload; NO client row, NO
 #     weapon-speed/AP scaling (a flat tick, unlike SoR's on-hit damage). -----------------------------
@@ -2759,22 +2692,22 @@ helpers:
   name: Seal of Light
   effects:
   - { effect: 10, basePoints: 38, dieSides: 0, targetA: 1 }   # SPELL_EFFECT_HEAL 38 self (flat)
-  client: { name: Seal of Light, icon: 299 }
+  client: {textKey: spell.932729, icon: 299}
 - id: 932730
   name: Seal of Light
   effects:
   - { effect: 10, basePoints: 52, dieSides: 0, targetA: 1 }
-  client: { name: Seal of Light, icon: 299 }
+  client: {textKey: spell.932730, icon: 299}
 - id: 932731
   name: Seal of Light
   effects:
   - { effect: 10, basePoints: 75, dieSides: 0, targetA: 1 }
-  client: { name: Seal of Light, icon: 299 }
+  client: {textKey: spell.932731, icon: 299}
 - id: 932732
   name: Seal of Light
   effects:
   - { effect: 10, basePoints: 93, dieSides: 0, targetA: 1 }
-  client: { name: Seal of Light, icon: 299 }
+  client: {textKey: spell.932732, icon: 299}
 # --- Judgement of Light (932733-736) — CLONE of stock 20185 (inherits word-A bit19 for Lasting
 #     Judgement); a TRIGGERED PAYLOAD, not a spellbook button (NO skillLine). Bound to
 #     era_pal_judgement_of_light via scriptBindings below, which delivers the flat heal through the
@@ -2799,10 +2732,9 @@ helpers:
     hitMask: 0
     chance: 100              # every qualifying hit heals — see banner above (WotLK's 15 PPM is expressible via `ppm:` and deliberately NOT reproduced; the 1.12.1 tooltip carries no % qualifier)
   client:
-    name: Judgement of Light
+    textKey: spell.932733
     icon: 205                # stock 20185 SpellIconID (confirmed via dump_spell_effects.py)
     rank: 1
-    auraDescription: "Melee attacks against the target heal the attacker for 24. Lasts 10 sec."
 - id: 932734
   name: Judgement of Light
   template: 20185
@@ -2823,10 +2755,9 @@ helpers:
     hitMask: 0
     chance: 100
   client:
-    name: Judgement of Light
+    textKey: spell.932734
     icon: 205
     rank: 2
-    auraDescription: "Melee attacks against the target heal the attacker for 33. Lasts 10 sec."
 - id: 932735
   name: Judgement of Light
   template: 20185
@@ -2847,10 +2778,9 @@ helpers:
     hitMask: 0
     chance: 100
   client:
-    name: Judgement of Light
+    textKey: spell.932735
     icon: 205
     rank: 3
-    auraDescription: "Melee attacks against the target heal the attacker for 48. Lasts 10 sec."
 - id: 932736
   name: Judgement of Light
   template: 20185
@@ -2871,10 +2801,9 @@ helpers:
     hitMask: 0
     chance: 100
   client:
-    name: Judgement of Light
+    textKey: spell.932736
     icon: 205
     rank: 4
-    auraDescription: "Melee attacks against the target heal the attacker for 60. Lasts 10 sec."
 # --- Judgement of Light flat-heal carrier (932747) — hidden SPELL_EFFECT_HEAL helper; the amount is
 #     supplied at cast time by era_pal_judgement_of_light via CastCustomSpell, not baked per-rank.
 #     Shared by all 4 JoL ranks (932733-736). client row (name+icon only), NO proc.
@@ -2890,7 +2819,7 @@ helpers:
   maskB: 1
   effects:
   - { effect: 10, basePoints: 0, dieSides: 0, targetA: 1 }   # SPELL_EFFECT_HEAL; amount supplied via CastCustomSpell bp
-  client: { name: Judgement of Light, icon: 299 }   # hidden heal is INVISIBLE in the combat log without a client row
+  client: {textKey: spell.932747, icon: 299}   # hidden heal is INVISIBLE in the combat log without a client row
 
 # --- Seal of Wisdom (932737-932748, Task 6 of the 2026-08-20 seal reconstruction). Vanilla SoW is a
 #     3-rank seal (L38/48/58) whose on-hit effect is a FLAT self mana-restore (not the WotLK on-hit
@@ -2968,11 +2897,9 @@ helpers:
     hitMask: 0
     ppm: 12                 # 12 PPM (owner anchor, final review I-12) — replaces the flat every-swing 100%
   client:
-    name: Seal of Wisdom
+    textKey: spell.932737
     icon: 206                # stock 20166 SpellIconID (confirmed via dump_spell_effects.py)
     rank: 1
-    description: "Fills the Paladin with divine wisdom, restoring mana on melee hits, for 30 sec. Only one Seal can be active at a time. Unleashing this Seal's energy judges an enemy, causing attackers to restore 32 mana."
-    auraDescription: "Melee attacks restore the Paladin's mana. Lasts 30 sec."
     skillLine: 184
 - id: 932738
   name: Seal of Wisdom
@@ -2989,11 +2916,9 @@ helpers:
     hitMask: 0
     ppm: 12                 # 12 PPM (owner anchor, final review I-12) — replaces the flat every-swing 100%
   client:
-    name: Seal of Wisdom
+    textKey: spell.932738
     icon: 206
     rank: 2
-    description: "Fills the Paladin with divine wisdom, restoring mana on melee hits, for 30 sec. Only one Seal can be active at a time. Unleashing this Seal's energy judges an enemy, causing attackers to restore 45 mana."
-    auraDescription: "Melee attacks restore the Paladin's mana. Lasts 30 sec."
     skillLine: 184
 - id: 932739
   name: Seal of Wisdom
@@ -3010,11 +2935,9 @@ helpers:
     hitMask: 0
     ppm: 12                 # 12 PPM (owner anchor, final review I-12) — replaces the flat every-swing 100%
   client:
-    name: Seal of Wisdom
+    textKey: spell.932739
     icon: 206
     rank: 3
-    description: "Fills the Paladin with divine wisdom, restoring mana on melee hits, for 30 sec. Only one Seal can be active at a time. Unleashing this Seal's energy judges an enemy, causing attackers to restore 58 mana."
-    auraDescription: "Melee attacks restore the Paladin's mana. Lasts 30 sec."
     skillLine: 184
 # --- Seal of Wisdom on-hit flat self mana-restore (932740-742) — hidden triggered payload; NO client
 #     row, NO weapon-speed/AP scaling (a flat tick, unlike SoR's on-hit damage). ---------------------
@@ -3022,17 +2945,17 @@ helpers:
   name: Seal of Wisdom
   effects:
   - { effect: 30, aura: 0, misc: 0, basePoints: 49, dieSides: 0, targetA: 1 }   # SPELL_EFFECT_ENERGIZE 49 mana self (flat)
-  client: { name: Seal of Wisdom, icon: 206 }
+  client: {textKey: spell.932740, icon: 206}
 - id: 932741
   name: Seal of Wisdom
   effects:
   - { effect: 30, aura: 0, misc: 0, basePoints: 70, dieSides: 0, targetA: 1 }
-  client: { name: Seal of Wisdom, icon: 206 }
+  client: {textKey: spell.932741, icon: 206}
 - id: 932742
   name: Seal of Wisdom
   effects:
   - { effect: 30, aura: 0, misc: 0, basePoints: 89, dieSides: 0, targetA: 1 }
-  client: { name: Seal of Wisdom, icon: 206 }
+  client: {textKey: spell.932742, icon: 206}
 # --- Judgement of Wisdom (932743-745) — CLONE of stock 20186 (inherits word-A bit19 for Lasting
 #     Judgement); a TRIGGERED PAYLOAD, not a spellbook button (NO skillLine). Bound to
 #     era_pal_judgement_of_wisdom via scriptBindings below, which delivers the flat mana restore
@@ -3057,10 +2980,9 @@ helpers:
     hitMask: 0
     chance: 100              # every qualifying hit from a mana-user restores mana — see banner above
   client:
-    name: Judgement of Wisdom
+    textKey: spell.932743
     icon: 3014                # stock 20186 SpellIconID (confirmed via dump_spell_effects.py)
     rank: 1
-    auraDescription: "Melee attacks against the target restore 32 mana to the attacker. Lasts 10 sec."
 - id: 932744
   name: Judgement of Wisdom
   template: 20186
@@ -3081,10 +3003,9 @@ helpers:
     hitMask: 0
     chance: 100
   client:
-    name: Judgement of Wisdom
+    textKey: spell.932744
     icon: 3014
     rank: 2
-    auraDescription: "Melee attacks against the target restore 45 mana to the attacker. Lasts 10 sec."
 - id: 932745
   name: Judgement of Wisdom
   template: 20186
@@ -3105,10 +3026,9 @@ helpers:
     hitMask: 0
     chance: 100
   client:
-    name: Judgement of Wisdom
+    textKey: spell.932745
     icon: 3014
     rank: 3
-    auraDescription: "Melee attacks against the target restore 58 mana to the attacker. Lasts 10 sec."
 # --- Judgement of Wisdom flat mana-restore carrier (932748) — hidden SPELL_EFFECT_ENERGIZE helper;
 #     the amount is supplied at cast time by era_pal_judgement_of_wisdom via CastCustomSpell, not
 #     baked per-rank. Shared by all 3 JoW ranks (932743-745). client row (name+icon only), NO proc. --
@@ -3116,7 +3036,7 @@ helpers:
   name: Judgement of Wisdom
   effects:
   - { effect: 30, aura: 0, misc: 0, basePoints: 0, dieSides: 0, targetA: 1 }   # SPELL_EFFECT_ENERGIZE; amount supplied via CastCustomSpell bp
-  client: { name: Judgement of Wisdom, icon: 206 }   # hidden energize is INVISIBLE in the combat log without a client row
+  client: {textKey: spell.932748, icon: 206}   # hidden energize is INVISIBLE in the combat log without a client row
 
 # --- Judgement (932746, Task 7 — the keystone) — the SINGLE player-cast Judgement button (Vanilla had
 #     ONE, not WotLK's three: 20271/53407/53408, all stripped for a Vanilla paladin in Task 9). CLONE
@@ -3180,9 +3100,8 @@ helpers:
   effects:
   - { effect: 77, basePoints: 0, dieSides: 0, targetA: 6 }   # SPELL_EFFECT_SCRIPT_EFFECT on enemy; era_pal_judgement hooks EFFECT_0
   client:
-    name: Judgement
+    textKey: spell.932746
     icon: 205                 # stock 20271 SpellIconID (confirmed via dump_spell_effects.py)
-    description: "Unleashes the energy of a Seal to judge an enemy, consuming the Seal. Requires a Seal."
     skillLine: 184            # Retribution tab (castable)
 
 # --- Seal Training marker (932749, seal rework v2, 2026-08-20) --------------------------------------
@@ -3216,7 +3135,7 @@ helpers:
   # masked only when Lua error display is off). PASSIVE_ATTR still keeps it out of the spellbook
   # (the hunter 932304/932305 precedent).
   client:
-    name: "Seal Training"
+    textKey: spell.932749
     icon: 1
 
 # Re-bind the stock CORE Eye-for-an-Eye AuraScript to the era clones so they reflect at 15/30%.
@@ -3252,7 +3171,7 @@ helpers:
   maxLevel: 28
   effects:
   - { effect: 2, basePoints: 46, dieSides: 5, perLevel: 2.8, targetA: 6 }
-  client: { name: Judgement of Command, icon: 561, rank: 1 }   # stock 20467 SpellIconID
+  client: {textKey: spell.932673, icon: 561, rank: 1}   # stock 20467 SpellIconID
 - id: 932674
   name: Judgement of Command
   family: 10
@@ -3263,7 +3182,7 @@ helpers:
   maxLevel: 38
   effects:
   - { effect: 2, basePoints: 72, dieSides: 8, perLevel: 3.05, targetA: 6 }
-  client: { name: Judgement of Command, icon: 561, rank: 2 }   # stock 20467 SpellIconID
+  client: {textKey: spell.932674, icon: 561, rank: 2}   # stock 20467 SpellIconID
 - id: 932675
   name: Judgement of Command
   family: 10
@@ -3274,7 +3193,7 @@ helpers:
   maxLevel: 48
   effects:
   - { effect: 2, basePoints: 101, dieSides: 11, perLevel: 2.8, targetA: 6 }
-  client: { name: Judgement of Command, icon: 561, rank: 3 }   # stock 20467 SpellIconID
+  client: {textKey: spell.932675, icon: 561, rank: 3}   # stock 20467 SpellIconID
 - id: 932676
   name: Judgement of Command
   family: 10
@@ -3285,7 +3204,7 @@ helpers:
   maxLevel: 58
   effects:
   - { effect: 2, basePoints: 130, dieSides: 14, perLevel: 3.05, targetA: 6 }
-  client: { name: Judgement of Command, icon: 561, rank: 4 }   # stock 20467 SpellIconID
+  client: {textKey: spell.932676, icon: 561, rank: 4}   # stock 20467 SpellIconID
 - id: 932677
   name: Judgement of Command
   family: 10
@@ -3296,7 +3215,7 @@ helpers:
   maxLevel: 68
   effects:
   - { effect: 2, basePoints: 169, dieSides: 18, perLevel: 3.05, targetA: 6 }
-  client: { name: Judgement of Command, icon: 561, rank: 5 }   # stock 20467 SpellIconID
+  client: {textKey: spell.932677, icon: 561, rank: 5}   # stock 20467 SpellIconID
 # --- Illumination r1-5 (932678-682, final review I-10) — clones of the stock chain 20210/20212-215.
 #     Vanilla Illumination refunds the FULL base mana cost (100%); live 3.3.5a carries WotLK's 3.0.2
 #     retune (EffectBasePoints_2 29 => 30%), so granting the stock chain shipped a tooltip promising
@@ -3336,10 +3255,9 @@ helpers:
     hitMask: 2              # PROC_HIT_CRITICAL — Illumination only refunds on a CRITICAL heal
     chance: 20
   client:
-    name: Illumination
+    textKey: spell.932678
     icon: 241               # stock 20210 SpellIconID
     rank: 1
-    description: "After getting a critical effect from your Flash of Light, Holy Light or Holy Shock heal spell, gives you a 20% chance to gain Mana equal to the base cost of the spell."
 - id: 932679
   name: Illumination
   template: 20212
@@ -3356,10 +3274,9 @@ helpers:
     hitMask: 2              # PROC_HIT_CRITICAL — Illumination only refunds on a CRITICAL heal
     chance: 40
   client:
-    name: Illumination
+    textKey: spell.932679
     icon: 241               # stock 20210 SpellIconID
     rank: 2
-    description: "After getting a critical effect from your Flash of Light, Holy Light or Holy Shock heal spell, gives you a 40% chance to gain Mana equal to the base cost of the spell."
 - id: 932680
   name: Illumination
   template: 20213
@@ -3376,10 +3293,9 @@ helpers:
     hitMask: 2              # PROC_HIT_CRITICAL — Illumination only refunds on a CRITICAL heal
     chance: 60
   client:
-    name: Illumination
+    textKey: spell.932680
     icon: 241               # stock 20210 SpellIconID
     rank: 3
-    description: "After getting a critical effect from your Flash of Light, Holy Light or Holy Shock heal spell, gives you a 60% chance to gain Mana equal to the base cost of the spell."
 - id: 932681
   name: Illumination
   template: 20214
@@ -3396,10 +3312,9 @@ helpers:
     hitMask: 2              # PROC_HIT_CRITICAL — Illumination only refunds on a CRITICAL heal
     chance: 80
   client:
-    name: Illumination
+    textKey: spell.932681
     icon: 241               # stock 20210 SpellIconID
     rank: 4
-    description: "After getting a critical effect from your Flash of Light, Holy Light or Holy Shock heal spell, gives you a 80% chance to gain Mana equal to the base cost of the spell."
 - id: 932682
   name: Illumination
   template: 20215
@@ -3416,10 +3331,9 @@ helpers:
     hitMask: 2              # PROC_HIT_CRITICAL — Illumination only refunds on a CRITICAL heal
     chance: 100
   client:
-    name: Illumination
+    textKey: spell.932682
     icon: 241               # stock 20210 SpellIconID
     rank: 5
-    description: "After getting a critical effect from your Flash of Light, Holy Light or Holy Shock heal spell, gives you a 100% chance to gain Mana equal to the base cost of the spell."
 # --- Repentance (932683, final review G-33) — clone of stock 20066. Vanilla Repentance incapacitates
 #     for 6 sec and works on HUMANOIDS ONLY; live 20066 is WotLK's widened form (DurationIndex 3 =
 #     60 s, TargetCreatureType 118 = a much broader victim set), so granting stock shipped a tooltip
@@ -3440,10 +3354,8 @@ helpers:
   - {}
   targetCreatureType: 64    # CREATURE_TYPE_HUMANOID only (live 118 = Humanoid+Demon+Giant+Undead+Dragonkin)
   client:
-    name: Repentance
+    textKey: spell.932683
     icon: 316               # stock 20066 SpellIconID
-    description: "Puts the enemy target in a state of meditation for up to 6 sec. Any damage caused will awaken the target. Only works against Humanoids."
-    auraDescription: "Incapacitated. Any damage caused will awaken the target."
     skillLine: 184          # Retribution tab (castable)
 
 scriptBindings:

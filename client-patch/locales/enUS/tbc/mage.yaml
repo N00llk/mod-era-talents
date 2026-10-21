@@ -1,0 +1,226 @@
+schemaVersion: 1
+locale: enUS
+era: tbc
+class: mage
+texts:
+  spell.948760:
+    name: Arcane Power
+    description: When activated, your spells deal 30% more damage while costing 30% more mana to cast. This effect
+      lasts 15 sec.
+    auraDescription: Spell damage increased by 30%. Mana cost increased by 30%.
+  spell.948761:
+    name: Presence of Mind
+    description: When activated, your next Mage spell with a casting time less than 10 sec becomes an instant cast
+      spell.
+    auraDescription: Your next Mage spell with a casting time less than 10 sec becomes an instant cast spell.
+  spell.948762:
+    name: Magic Absorption
+    description: Increases all resistances by 2 and causes all spells you fully resist to restore 1% of your total
+      mana. 1 sec. cooldown.
+  spell.948763:
+    name: Magic Absorption
+    description: Increases all resistances by 4 and causes all spells you fully resist to restore 2% of your total
+      mana. 1 sec. cooldown.
+  spell.948764:
+    name: Magic Absorption
+    description: Increases all resistances by 6 and causes all spells you fully resist to restore 3% of your total
+      mana. 1 sec. cooldown.
+  spell.948765:
+    name: Magic Absorption
+    description: Increases all resistances by 8 and causes all spells you fully resist to restore 4% of your total
+      mana. 1 sec. cooldown.
+  spell.948766:
+    name: Magic Absorption
+    description: Increases all resistances by 10 and causes all spells you fully resist to restore 5% of your total
+      mana. 1 sec. cooldown.
+  spell.948767:
+    name: Arcane Potency
+    description: Increases the critical strike chance of your next damaging spell by 10%.
+    auraDescription: Critical strike chance of your next damaging spell increased by 10%.
+  spell.948768:
+    name: Arcane Potency
+    description: Increases the critical strike chance of your next damaging spell by 20%.
+    auraDescription: Critical strike chance of your next damaging spell increased by 20%.
+  spell.948769:
+    name: Arcane Potency
+    description: Increases the critical strike chance of your next damaging spell by 30%.
+    auraDescription: Critical strike chance of your next damaging spell increased by 30%.
+  spell.948770:
+    name: Silenced - Improved Counterspell
+    description: Silenced.
+    auraDescription: Silenced.
+  spell.948771:
+    name: Improved Blink
+    description: Your chance to be hit by all attacks and spells is reduced by 13%.
+    auraDescription: Chance to be hit by all attacks and spells reduced by 13%.
+  spell.948772:
+    name: Improved Blink
+    description: Your chance to be hit by all attacks and spells is reduced by 25%.
+    auraDescription: Chance to be hit by all attacks and spells reduced by 25%.
+  spell.948773:
+    name: Slow
+    description: Reduces target's movement speed by 50%, increases the time between ranged attacks by 50% and increases
+      casting time by 50%. Lasts 15 sec. Slow can only affect one target at a time.
+    auraDescription: Movement slowed by 50%, time between ranged attacks increased by 50% and casting time increased
+      by 50%.
+  spell.948860:
+    name: Fire Vulnerability
+    description: Fire damage taken increased by 3%.
+    auraDescription: Fire damage taken increased by 3%.
+  spell.948870:
+    name: Pyroblast
+    description: Hurls an immense fiery boulder that causes $s1 Fire damage and an additional $o2 Fire damage over
+      $d.
+    auraDescription: $s2 Fire damage every $t2 seconds.
+  spell.948871:
+    name: Pyroblast
+    description: Hurls an immense fiery boulder that causes $s1 Fire damage and an additional $o2 Fire damage over
+      $d.
+    auraDescription: $s2 Fire damage every $t2 seconds.
+  spell.948872:
+    name: Pyroblast
+    description: Hurls an immense fiery boulder that causes $s1 Fire damage and an additional $o2 Fire damage over
+      $d.
+    auraDescription: $s2 Fire damage every $t2 seconds.
+  spell.948873:
+    name: Pyroblast
+    description: Hurls an immense fiery boulder that causes $s1 Fire damage and an additional $o2 Fire damage over
+      $d.
+    auraDescription: $s2 Fire damage every $t2 seconds.
+  spell.948874:
+    name: Pyroblast
+    description: Hurls an immense fiery boulder that causes $s1 Fire damage and an additional $o2 Fire damage over
+      $d.
+    auraDescription: $s2 Fire damage every $t2 seconds.
+  spell.948875:
+    name: Pyroblast
+    description: Hurls an immense fiery boulder that causes $s1 Fire damage and an additional $o2 Fire damage over
+      $d.
+    auraDescription: $s2 Fire damage every $t2 seconds.
+  spell.948876:
+    name: Pyroblast
+    description: Hurls an immense fiery boulder that causes $s1 Fire damage and an additional $o2 Fire damage over
+      $d.
+    auraDescription: $s2 Fire damage every $t2 seconds.
+  spell.948877:
+    name: Pyroblast
+    description: Hurls an immense fiery boulder that causes $s1 Fire damage and an additional $o2 Fire damage over
+      $d.
+    auraDescription: $s2 Fire damage every $t2 seconds.
+  spell.948878:
+    name: Pyroblast
+    description: Hurls an immense fiery boulder that causes $s1 Fire damage and an additional $o2 Fire damage over
+      $d.
+    auraDescription: $s2 Fire damage every $t2 seconds.
+  spell.948879:
+    name: Pyroblast
+    description: Hurls an immense fiery boulder that causes $s1 Fire damage and an additional $o2 Fire damage over
+      $d.
+    auraDescription: $s2 Fire damage every $t2 seconds.
+  spell.948880:
+    name: Blast Wave
+    description: A wave of flame radiates outward from the caster, damaging all enemies caught within the blast
+      for $s1 Fire damage, dazing them for $d.
+    auraDescription: Dazed.
+  spell.948881:
+    name: Blast Wave
+    description: A wave of flame radiates outward from the caster, damaging all enemies caught within the blast
+      for $s1 Fire damage, dazing them for $d.
+    auraDescription: Dazed.
+  spell.948882:
+    name: Blast Wave
+    description: A wave of flame radiates outward from the caster, damaging all enemies caught within the blast
+      for $s1 Fire damage, dazing them for $d.
+    auraDescription: Dazed.
+  spell.948883:
+    name: Blast Wave
+    description: A wave of flame radiates outward from the caster, damaging all enemies caught within the blast
+      for $s1 Fire damage, dazing them for $d.
+    auraDescription: Dazed.
+  spell.948884:
+    name: Blast Wave
+    description: A wave of flame radiates outward from the caster, damaging all enemies caught within the blast
+      for $s1 Fire damage, dazing them for $d.
+    auraDescription: Dazed.
+  spell.948885:
+    name: Blast Wave
+    description: A wave of flame radiates outward from the caster, damaging all enemies caught within the blast
+      for $s1 Fire damage, dazing them for $d.
+    auraDescription: Dazed.
+  spell.948886:
+    name: Blast Wave
+    description: A wave of flame radiates outward from the caster, damaging all enemies caught within the blast
+      for $s1 Fire damage, dazing them for $d.
+    auraDescription: Dazed.
+  spell.948887:
+    name: Combustion
+    description: When activated, this spell causes each of your Fire damage spell hits to increase your critical
+      strike chance with Fire damage spells by $28682s1%.  This effect lasts until you have caused 3 critical strikes
+      with Fire spells.
+  spell.948890:
+    name: Dragon's Breath
+    description: Targets in a cone in front of the caster take $s1 Fire damage and are Disoriented for $d.  Any
+      direct damaging attack will revive targets.  Turns off your attack when used.
+    auraDescription: Disoriented.
+  spell.948891:
+    name: Dragon's Breath
+    description: Targets in a cone in front of the caster take $s1 Fire damage and are Disoriented for $d.  Any
+      direct damaging attack will revive targets.  Turns off your attack when used.
+    auraDescription: Disoriented.
+  spell.948892:
+    name: Dragon's Breath
+    description: Targets in a cone in front of the caster take $s1 Fire damage and are Disoriented for $d.  Any
+      direct damaging attack will revive targets.  Turns off your attack when used.
+    auraDescription: Disoriented.
+  spell.948893:
+    name: Dragon's Breath
+    description: Targets in a cone in front of the caster take $s1 Fire damage and are Disoriented for $d.  Any
+      direct damaging attack will revive targets.  Turns off your attack when used.
+    auraDescription: Disoriented.
+  spell.948960:
+    name: Winter's Chill
+    description: Increases the chance a Frost spell will critically hit the target by 2% for 15 sec.  Stacks up
+      to 5 times.
+    auraDescription: Frost spells have a 2% additional chance to critically hit.  Stacks up to 5 times.
+  spell.948961:
+    name: Chilled
+    description: Chills the target for 1.50 sec.
+    auraDescription: Movement slowed by 30%.
+  spell.948962:
+    name: Chilled
+    description: Chills the target for 1.50 sec.
+    auraDescription: Movement slowed by 50%.
+  spell.948963:
+    name: Chilled
+    description: Chills the target for 1.50 sec.
+    auraDescription: Movement slowed by 65%.
+  spell.948964:
+    name: Ice Barrier
+    description: Instantly shields you, absorbing $s1 damage.  Lasts $d.  While the shield holds, spellcasting will
+      not be delayed by damage.
+    auraDescription: Absorbs damage.
+  spell.948965:
+    name: Ice Barrier
+    description: Instantly shields you, absorbing $s1 damage.  Lasts $d.  While the shield holds, spellcasting will
+      not be delayed by damage.
+    auraDescription: Absorbs damage.
+  spell.948966:
+    name: Ice Barrier
+    description: Instantly shields you, absorbing $s1 damage.  Lasts $d.  While the shield holds, spellcasting will
+      not be delayed by damage.
+    auraDescription: Absorbs damage.
+  spell.948967:
+    name: Ice Barrier
+    description: Instantly shields you, absorbing $s1 damage.  Lasts $d.  While the shield holds, spellcasting will
+      not be delayed by damage.
+    auraDescription: Absorbs damage.
+  spell.948968:
+    name: Ice Barrier
+    description: Instantly shields you, absorbing $s1 damage.  Lasts $d.  While the shield holds, spellcasting will
+      not be delayed by damage.
+    auraDescription: Absorbs damage.
+  spell.948969:
+    name: Ice Barrier
+    description: Instantly shields you, absorbing $s1 damage.  Lasts $d.  While the shield holds, spellcasting will
+      not be delayed by damage.
+    auraDescription: Absorbs damage.

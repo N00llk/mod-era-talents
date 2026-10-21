@@ -1,0 +1,447 @@
+schemaVersion: 1
+locale: enUS
+era: vanilla
+class: paladin
+texts:
+  spell.932602:
+    name: Sanctity Aura
+    description: Increases Holy damage done by party members within 30 yards by 10%. Players may only have one Aura
+      on them per Paladin at any one time.
+    auraDescription: Holy damage done increased by 10%.
+  spell.932603:
+    name: Vindication
+    auraDescription: Strength and Agility reduced by 5%.
+  spell.932604:
+    name: Vindication
+    auraDescription: Strength and Agility reduced by 10%.
+  spell.932605:
+    name: Vindication
+    auraDescription: Strength and Agility reduced by 15%.
+  spell.932606:
+    name: Seal of Command
+    description: Gives the Paladin a chance to deal additional Holy damage equal to 70% of the damage of the attack.
+      Only one Seal can be active at a time. Lasts 30 sec. Unleashing this Seal's energy judges an enemy, instantly
+      causing $932673s1 Holy damage, or double that against a stunned target.
+    auraDescription: Melee attacks have a chance to deal Holy damage equal to 70% of the attack. Lasts 30 sec.
+  spell.932607:
+    name: Seal of Command
+  spell.932750:
+    name: Seal of Command
+    description: Gives the Paladin a chance to deal additional Holy damage equal to 70% of the damage of the attack.
+      Only one Seal can be active at a time. Lasts 30 sec. Unleashing this Seal's energy judges an enemy, instantly
+      causing $932674s1 Holy damage, or double that against a stunned target.
+    auraDescription: Melee attacks have a chance to deal Holy damage equal to 70% of the attack. Lasts 30 sec.
+  spell.932751:
+    name: Seal of Command
+    description: Gives the Paladin a chance to deal additional Holy damage equal to 70% of the damage of the attack.
+      Only one Seal can be active at a time. Lasts 30 sec. Unleashing this Seal's energy judges an enemy, instantly
+      causing $932675s1 Holy damage, or double that against a stunned target.
+    auraDescription: Melee attacks have a chance to deal Holy damage equal to 70% of the attack. Lasts 30 sec.
+  spell.932752:
+    name: Seal of Command
+    description: Gives the Paladin a chance to deal additional Holy damage equal to 70% of the damage of the attack.
+      Only one Seal can be active at a time. Lasts 30 sec. Unleashing this Seal's energy judges an enemy, instantly
+      causing $932676s1 Holy damage, or double that against a stunned target.
+    auraDescription: Melee attacks have a chance to deal Holy damage equal to 70% of the attack. Lasts 30 sec.
+  spell.932753:
+    name: Seal of Command
+    description: Gives the Paladin a chance to deal additional Holy damage equal to 70% of the damage of the attack.
+      Only one Seal can be active at a time. Lasts 30 sec. Unleashing this Seal's energy judges an enemy, instantly
+      causing $932677s1 Holy damage, or double that against a stunned target.
+    auraDescription: Melee attacks have a chance to deal Holy damage equal to 70% of the attack. Lasts 30 sec.
+  spell.932610:
+    name: Vengeance
+    auraDescription: Physical and Holy damage increased by 3%.
+  spell.932611:
+    name: Vengeance
+    auraDescription: Physical and Holy damage increased by 6%.
+  spell.932612:
+    name: Vengeance
+    auraDescription: Physical and Holy damage increased by 9%.
+  spell.932613:
+    name: Vengeance
+    auraDescription: Physical and Holy damage increased by 12%.
+  spell.932614:
+    name: Vengeance
+    auraDescription: Physical and Holy damage increased by 15%.
+  spell.932634:
+    name: Seal of the Crusader
+    description: Fills the Paladin with the spirit of a crusader for 30 sec, increasing attack power by 18. The
+      Paladin also attacks 40% faster. Only one Seal can be active on the Paladin at any one time. Unleashing this
+      Seal's energy judges an enemy, increasing Holy damage taken by 20 for 10 sec.
+    auraDescription: Attack power increased by 18. Attacks 40% faster. Judgement afflicts the target with Judgement
+      of the Crusader.
+  spell.932635:
+    name: Seal of the Crusader
+    description: Fills the Paladin with the spirit of a crusader for 30 sec, increasing attack power by 30. The
+      Paladin also attacks 40% faster. Only one Seal can be active on the Paladin at any one time. Unleashing this
+      Seal's energy judges an enemy, increasing Holy damage taken by 30 for 10 sec.
+    auraDescription: Attack power increased by 30. Attacks 40% faster. Judgement afflicts the target with Judgement
+      of the Crusader.
+  spell.932636:
+    name: Seal of the Crusader
+    description: Fills the Paladin with the spirit of a crusader for 30 sec, increasing attack power by 55. The
+      Paladin also attacks 40% faster. Only one Seal can be active on the Paladin at any one time. Unleashing this
+      Seal's energy judges an enemy, increasing Holy damage taken by 50 for 10 sec.
+    auraDescription: Attack power increased by 55. Attacks 40% faster. Judgement afflicts the target with Judgement
+      of the Crusader.
+  spell.932637:
+    name: Seal of the Crusader
+    description: Fills the Paladin with the spirit of a crusader for 30 sec, increasing attack power by 85. The
+      Paladin also attacks 40% faster. Only one Seal can be active on the Paladin at any one time. Unleashing this
+      Seal's energy judges an enemy, increasing Holy damage taken by 80 for 10 sec.
+    auraDescription: Attack power increased by 85. Attacks 40% faster. Judgement afflicts the target with Judgement
+      of the Crusader.
+  spell.932638:
+    name: Seal of the Crusader
+    description: Fills the Paladin with the spirit of a crusader for 30 sec, increasing attack power by 130. The
+      Paladin also attacks 40% faster. Only one Seal can be active on the Paladin at any one time. Unleashing this
+      Seal's energy judges an enemy, increasing Holy damage taken by 110 for 10 sec.
+    auraDescription: Attack power increased by 130. Attacks 40% faster. Judgement afflicts the target with Judgement
+      of the Crusader.
+  spell.932639:
+    name: Seal of the Crusader
+    description: Fills the Paladin with the spirit of a crusader for 30 sec, increasing attack power by 180. The
+      Paladin also attacks 40% faster. Only one Seal can be active on the Paladin at any one time. Unleashing this
+      Seal's energy judges an enemy, increasing Holy damage taken by 140 for 10 sec.
+    auraDescription: Attack power increased by 180. Attacks 40% faster. Judgement afflicts the target with Judgement
+      of the Crusader.
+  spell.932640:
+    name: Judgement of the Crusader
+    auraDescription: Holy damage taken increased by 20. Lasts 10 sec.
+  spell.932641:
+    name: Judgement of the Crusader
+    auraDescription: Holy damage taken increased by 30. Lasts 10 sec.
+  spell.932642:
+    name: Judgement of the Crusader
+    auraDescription: Holy damage taken increased by 50. Lasts 10 sec.
+  spell.932643:
+    name: Judgement of the Crusader
+    auraDescription: Holy damage taken increased by 80. Lasts 10 sec.
+  spell.932644:
+    name: Judgement of the Crusader
+    auraDescription: Holy damage taken increased by 110. Lasts 10 sec.
+  spell.932645:
+    name: Judgement of the Crusader
+    auraDescription: Holy damage taken increased by 140. Lasts 10 sec.
+  spell.932615:
+    name: Holy Shield
+    description: Increases chance to block by 30% for 10 sec and deals 40 Holy damage for each attack blocked while
+      active. Each block expends a charge. 4 charges.
+    auraDescription: Increases chance to block by 30%. Blocked attackers take 40 Holy damage. Each block expends
+      a charge. 4 charges.
+  spell.932616:
+    name: Holy Shield
+  spell.932617:
+    name: Blessing of Sanctuary
+    description: Places a Blessing on the friendly target, reducing damage dealt from all sources by up to 10 for
+      5 min. In addition, when the target blocks a melee attack the attacker will take 14 Holy damage. Players may
+      only have one Blessing on them per Paladin at any one time.
+    auraDescription: Damage dealt from all sources reduced by up to 10. Attackers take 14 Holy damage when the target
+      blocks.
+  spell.932618:
+    name: Blessing of Sanctuary
+  spell.932624:
+    name: Redoubt
+    auraDescription: Chance to block increased by 6%. Lasts 10 sec or 5 blocks.
+  spell.932625:
+    name: Redoubt
+    auraDescription: Chance to block increased by 12%. Lasts 10 sec or 5 blocks.
+  spell.932626:
+    name: Redoubt
+    auraDescription: Chance to block increased by 18%. Lasts 10 sec or 5 blocks.
+  spell.932627:
+    name: Redoubt
+    auraDescription: Chance to block increased by 24%. Lasts 10 sec or 5 blocks.
+  spell.932628:
+    name: Redoubt
+    auraDescription: Chance to block increased by 30%. Lasts 10 sec or 5 blocks.
+  spell.932646:
+    name: Holy Shock
+    description: Blasts the target with Holy energy, causing 204 to 220 Holy damage to an enemy, or 204 to 220 healing
+      to an ally.
+  spell.932647:
+    name: Holy Shock
+    description: Blasts the target with Holy energy, causing 279 to 301 Holy damage to an enemy, or 279 to 301 healing
+      to an ally.
+  spell.932648:
+    name: Holy Shock
+    description: Blasts the target with Holy energy, causing 365 to 395 Holy damage to an enemy, or 365 to 395 healing
+      to an ally.
+  spell.932649:
+    name: Holy Shock
+  spell.932650:
+    name: Holy Shock
+  spell.932651:
+    name: Holy Shock
+  spell.932652:
+    name: Holy Shock
+  spell.932653:
+    name: Holy Shock
+  spell.932654:
+    name: Holy Shock
+  spell.932655:
+    name: Holy Shield
+    description: Increases chance to block by 30% for 10 sec and deals 65 Holy damage for each attack blocked while
+      active. Each block expends a charge. 4 charges.
+    auraDescription: Increases chance to block by 30%. Blocked attackers take 65 Holy damage. Each block expends
+      a charge. 4 charges.
+  spell.932656:
+    name: Holy Shield
+  spell.932657:
+    name: Holy Shield
+    description: Increases chance to block by 30% for 10 sec and deals 95 Holy damage for each attack blocked while
+      active. Each block expends a charge. 4 charges.
+    auraDescription: Increases chance to block by 30%. Blocked attackers take 95 Holy damage. Each block expends
+      a charge. 4 charges.
+  spell.932658:
+    name: Holy Shield
+  spell.932659:
+    name: Holy Shield
+    description: Increases chance to block by 30% for 10 sec and deals 130 Holy damage for each attack blocked while
+      active. Each block expends a charge. 4 charges.
+    auraDescription: Increases chance to block by 30%. Blocked attackers take 130 Holy damage. Each block expends
+      a charge. 4 charges.
+  spell.932660:
+    name: Holy Shield
+  spell.932661:
+    name: Blessing of Sanctuary
+    description: Places a Blessing on the friendly target, reducing damage dealt from all sources by up to 14 for
+      5 min. In addition, when the target blocks a melee attack the attacker will take 21 Holy damage. Players may
+      only have one Blessing on them per Paladin at any one time.
+    auraDescription: Damage dealt from all sources reduced by up to 14. Attackers take 21 Holy damage when the target
+      blocks.
+  spell.932662:
+    name: Blessing of Sanctuary
+    description: Places a Blessing on the friendly target, reducing damage dealt from all sources by up to 19 for
+      5 min. In addition, when the target blocks a melee attack the attacker will take 28 Holy damage. Players may
+      only have one Blessing on them per Paladin at any one time.
+    auraDescription: Damage dealt from all sources reduced by up to 19. Attackers take 28 Holy damage when the target
+      blocks.
+  spell.932663:
+    name: Blessing of Sanctuary
+  spell.932664:
+    name: Blessing of Sanctuary
+    description: Places a Blessing on the friendly target, reducing damage dealt from all sources by up to 24 for
+      5 min. In addition, when the target blocks a melee attack the attacker will take 35 Holy damage. Players may
+      only have one Blessing on them per Paladin at any one time.
+    auraDescription: Damage dealt from all sources reduced by up to 24. Attackers take 35 Holy damage when the target
+      blocks.
+  spell.932665:
+    name: Blessing of Sanctuary
+  spell.932667:
+    name: Blessing of Sanctuary
+  spell.932668:
+    name: Lay on Hands
+    description: Heals a friendly target for an amount equal to the Paladin's maximum health. Drains all of the
+      Paladin's remaining mana when used.
+  spell.932669:
+    name: Lay on Hands
+    description: Heals a friendly target for an amount equal to the Paladin's maximum health and restores 250 of
+      their mana. Drains all of the Paladin's remaining mana when used.
+  spell.932670:
+    name: Lay on Hands
+    description: Heals a friendly target for an amount equal to the Paladin's maximum health and restores 550 of
+      their mana. Drains all of the Paladin's remaining mana when used.
+  spell.932671:
+    name: Improved Lay on Hands
+    auraDescription: Armor value from items increased by 15%.
+  spell.932672:
+    name: Improved Lay on Hands
+    auraDescription: Armor value from items increased by 30%.
+  spell.932700:
+    name: Seal of Righteousness
+    description: Fills the Paladin with holy power, causing melee attacks to deal additional Holy damage, for 30
+      sec. Only one Seal can be active at a time. Unleashing this Seal's energy judges an enemy for 11 Holy damage.
+    auraDescription: Melee attacks deal additional Holy damage. Lasts 30 sec.
+  spell.932701:
+    name: Seal of Righteousness
+    description: Fills the Paladin with holy power, causing melee attacks to deal additional Holy damage, for 30
+      sec. Only one Seal can be active at a time. Unleashing this Seal's energy judges an enemy for 19 Holy damage.
+    auraDescription: Melee attacks deal additional Holy damage. Lasts 30 sec.
+  spell.932702:
+    name: Seal of Righteousness
+    description: Fills the Paladin with holy power, causing melee attacks to deal additional Holy damage, for 30
+      sec. Only one Seal can be active at a time. Unleashing this Seal's energy judges an enemy for 31 Holy damage.
+    auraDescription: Melee attacks deal additional Holy damage. Lasts 30 sec.
+  spell.932703:
+    name: Seal of Righteousness
+    description: Fills the Paladin with holy power, causing melee attacks to deal additional Holy damage, for 30
+      sec. Only one Seal can be active at a time. Unleashing this Seal's energy judges an enemy for 46 Holy damage.
+    auraDescription: Melee attacks deal additional Holy damage. Lasts 30 sec.
+  spell.932704:
+    name: Seal of Righteousness
+    description: Fills the Paladin with holy power, causing melee attacks to deal additional Holy damage, for 30
+      sec. Only one Seal can be active at a time. Unleashing this Seal's energy judges an enemy for 63 Holy damage.
+    auraDescription: Melee attacks deal additional Holy damage. Lasts 30 sec.
+  spell.932705:
+    name: Seal of Righteousness
+    description: Fills the Paladin with holy power, causing melee attacks to deal additional Holy damage, for 30
+      sec. Only one Seal can be active at a time. Unleashing this Seal's energy judges an enemy for 83 Holy damage.
+    auraDescription: Melee attacks deal additional Holy damage. Lasts 30 sec.
+  spell.932706:
+    name: Seal of Righteousness
+    description: Fills the Paladin with holy power, causing melee attacks to deal additional Holy damage, for 30
+      sec. Only one Seal can be active at a time. Unleashing this Seal's energy judges an enemy for 106 Holy damage.
+    auraDescription: Melee attacks deal additional Holy damage. Lasts 30 sec.
+  spell.932707:
+    name: Seal of Righteousness
+    description: Fills the Paladin with holy power, causing melee attacks to deal additional Holy damage, for 30
+      sec. Only one Seal can be active at a time. Unleashing this Seal's energy judges an enemy for 132 Holy damage.
+    auraDescription: Melee attacks deal additional Holy damage. Lasts 30 sec.
+  spell.932708:
+    name: Seal of Righteousness
+  spell.932709:
+    name: Seal of Righteousness
+  spell.932710:
+    name: Seal of Righteousness
+  spell.932711:
+    name: Seal of Righteousness
+  spell.932712:
+    name: Seal of Righteousness
+  spell.932713:
+    name: Seal of Righteousness
+  spell.932714:
+    name: Seal of Righteousness
+  spell.932715:
+    name: Seal of Righteousness
+  spell.932716:
+    name: Judgement of Righteousness
+  spell.932717:
+    name: Judgement of Righteousness
+  spell.932718:
+    name: Judgement of Righteousness
+  spell.932719:
+    name: Judgement of Righteousness
+  spell.932720:
+    name: Judgement of Righteousness
+  spell.932721:
+    name: Judgement of Righteousness
+  spell.932722:
+    name: Judgement of Righteousness
+  spell.932723:
+    name: Judgement of Righteousness
+  spell.932724:
+    name: Seal of Justice
+    description: Fills the Paladin with the spirit of justice for 30 sec, giving melee attacks a chance to stun
+      the target for 2 sec. Only one Seal can be active at a time. Unleashing this Seal's energy judges an enemy,
+      preventing them from fleeing for 20 sec.
+    auraDescription: Melee attacks have a chance to stun the target for 2 sec. Lasts 30 sec.
+  spell.932725:
+    name: Seal of Light
+    description: Fills the Paladin with holy light, healing the Paladin for 38 on melee hits, for 30 sec. Only one
+      Seal can be active at a time. Unleashing this Seal's energy judges an enemy, causing attacks against them
+      to heal the attacker for 24.
+    auraDescription: Melee attacks heal the Paladin for 38. Lasts 30 sec.
+  spell.932726:
+    name: Seal of Light
+    description: Fills the Paladin with holy light, healing the Paladin for 52 on melee hits, for 30 sec. Only one
+      Seal can be active at a time. Unleashing this Seal's energy judges an enemy, causing attacks against them
+      to heal the attacker for 33.
+    auraDescription: Melee attacks heal the Paladin for 52. Lasts 30 sec.
+  spell.932727:
+    name: Seal of Light
+    description: Fills the Paladin with holy light, healing the Paladin for 75 on melee hits, for 30 sec. Only one
+      Seal can be active at a time. Unleashing this Seal's energy judges an enemy, causing attacks against them
+      to heal the attacker for 48.
+    auraDescription: Melee attacks heal the Paladin for 75. Lasts 30 sec.
+  spell.932728:
+    name: Seal of Light
+    description: Fills the Paladin with holy light, healing the Paladin for 93 on melee hits, for 30 sec. Only one
+      Seal can be active at a time. Unleashing this Seal's energy judges an enemy, causing attacks against them
+      to heal the attacker for 60.
+    auraDescription: Melee attacks heal the Paladin for 93. Lasts 30 sec.
+  spell.932729:
+    name: Seal of Light
+  spell.932730:
+    name: Seal of Light
+  spell.932731:
+    name: Seal of Light
+  spell.932732:
+    name: Seal of Light
+  spell.932733:
+    name: Judgement of Light
+    auraDescription: Melee attacks against the target heal the attacker for 24. Lasts 10 sec.
+  spell.932734:
+    name: Judgement of Light
+    auraDescription: Melee attacks against the target heal the attacker for 33. Lasts 10 sec.
+  spell.932735:
+    name: Judgement of Light
+    auraDescription: Melee attacks against the target heal the attacker for 48. Lasts 10 sec.
+  spell.932736:
+    name: Judgement of Light
+    auraDescription: Melee attacks against the target heal the attacker for 60. Lasts 10 sec.
+  spell.932747:
+    name: Judgement of Light
+  spell.932737:
+    name: Seal of Wisdom
+    description: Fills the Paladin with divine wisdom, restoring mana on melee hits, for 30 sec. Only one Seal can
+      be active at a time. Unleashing this Seal's energy judges an enemy, causing attackers to restore 32 mana.
+    auraDescription: Melee attacks restore the Paladin's mana. Lasts 30 sec.
+  spell.932738:
+    name: Seal of Wisdom
+    description: Fills the Paladin with divine wisdom, restoring mana on melee hits, for 30 sec. Only one Seal can
+      be active at a time. Unleashing this Seal's energy judges an enemy, causing attackers to restore 45 mana.
+    auraDescription: Melee attacks restore the Paladin's mana. Lasts 30 sec.
+  spell.932739:
+    name: Seal of Wisdom
+    description: Fills the Paladin with divine wisdom, restoring mana on melee hits, for 30 sec. Only one Seal can
+      be active at a time. Unleashing this Seal's energy judges an enemy, causing attackers to restore 58 mana.
+    auraDescription: Melee attacks restore the Paladin's mana. Lasts 30 sec.
+  spell.932740:
+    name: Seal of Wisdom
+  spell.932741:
+    name: Seal of Wisdom
+  spell.932742:
+    name: Seal of Wisdom
+  spell.932743:
+    name: Judgement of Wisdom
+    auraDescription: Melee attacks against the target restore 32 mana to the attacker. Lasts 10 sec.
+  spell.932744:
+    name: Judgement of Wisdom
+    auraDescription: Melee attacks against the target restore 45 mana to the attacker. Lasts 10 sec.
+  spell.932745:
+    name: Judgement of Wisdom
+    auraDescription: Melee attacks against the target restore 58 mana to the attacker. Lasts 10 sec.
+  spell.932748:
+    name: Judgement of Wisdom
+  spell.932746:
+    name: Judgement
+    description: Unleashes the energy of a Seal to judge an enemy, consuming the Seal. Requires a Seal.
+  spell.932749:
+    name: Seal Training
+  spell.932673:
+    name: Judgement of Command
+  spell.932674:
+    name: Judgement of Command
+  spell.932675:
+    name: Judgement of Command
+  spell.932676:
+    name: Judgement of Command
+  spell.932677:
+    name: Judgement of Command
+  spell.932678:
+    name: Illumination
+    description: After getting a critical effect from your Flash of Light, Holy Light or Holy Shock heal spell,
+      gives you a 20% chance to gain Mana equal to the base cost of the spell.
+  spell.932679:
+    name: Illumination
+    description: After getting a critical effect from your Flash of Light, Holy Light or Holy Shock heal spell,
+      gives you a 40% chance to gain Mana equal to the base cost of the spell.
+  spell.932680:
+    name: Illumination
+    description: After getting a critical effect from your Flash of Light, Holy Light or Holy Shock heal spell,
+      gives you a 60% chance to gain Mana equal to the base cost of the spell.
+  spell.932681:
+    name: Illumination
+    description: After getting a critical effect from your Flash of Light, Holy Light or Holy Shock heal spell,
+      gives you a 80% chance to gain Mana equal to the base cost of the spell.
+  spell.932682:
+    name: Illumination
+    description: After getting a critical effect from your Flash of Light, Holy Light or Holy Shock heal spell,
+      gives you a 100% chance to gain Mana equal to the base cost of the spell.
+  spell.932683:
+    name: Repentance
+    description: Puts the enemy target in a state of meditation for up to 6 sec. Any damage caused will awaken the
+      target. Only works against Humanoids.
+    auraDescription: Incapacitated. Any damage caused will awaken the target.

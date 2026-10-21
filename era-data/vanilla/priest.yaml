@@ -18,10 +18,8 @@ helpers:
                           # clone 948079 both carry 1, so the stun rolls against spell resistance
                           # / hit like every other Shadow-school effect.
   client:                 # without this the stun aura is absent from the client Spell.dbc, so the
-    name: Blackout        # 3.3.5a client can't render it — the target still stuns server-side, but
+    textKey: spell.932970
     icon: 173             # invisibly (Spell_Shadow_GatherShadows), reading as "Blackout never procs"
-    description: Stunned. # the client renders BOTH text rows; without them the tooltip is blank
-    auraDescription: Stunned.
 # --- Inspiration armor buffs r1-r3 (920987-920989; node 18123 proc-triggers them) ----------------
 # 2026-09-06 FINAL REVIEW (I-23) — RE-AUTHORED from the shipped "armor PROXY" to TBC/Vanilla's real
 # encoding. These shipped as aura 87 MOD_DAMAGE_PERCENT_TAKEN misc 1 (physical) at -8/-16/-25%, and
@@ -42,11 +40,9 @@ helpers:
   effects:
   - { effect: 6, aura: 101, basePoints: 7, dieSides: 1, misc: 1, targetA: 21 }    # +8% armor
   client:
-    name: Inspiration
+    textKey: spell.920987
     icon: 1463                   # stock 14893 SpellIconID
     rank: 1
-    description: Increases the target's armor by 8% for 15 sec.
-    auraDescription: Armor increased by 8%.
 - id: 920988
   name: Inspiration (Rank 2)
   school: 2
@@ -54,11 +50,9 @@ helpers:
   effects:
   - { effect: 6, aura: 101, basePoints: 15, dieSides: 1, misc: 1, targetA: 21 }   # +16% armor
   client:
-    name: Inspiration
+    textKey: spell.920988
     icon: 1463
     rank: 2
-    description: Increases the target's armor by 16% for 15 sec.
-    auraDescription: Armor increased by 16%.
 - id: 920989
   name: Inspiration (Rank 3)
   school: 2
@@ -66,11 +60,9 @@ helpers:
   effects:
   - { effect: 6, aura: 101, basePoints: 24, dieSides: 1, misc: 1, targetA: 21 }   # +25% armor
   client:
-    name: Inspiration
+    textKey: spell.920989
     icon: 1463
     rank: 3
-    description: Increases the target's armor by 25% for 15 sec.
-    auraDescription: Armor increased by 25%.
 - id: 932960
   name: Shadow Vulnerability
   aura: 87
@@ -85,7 +77,7 @@ helpers:
                           # SPELL_ATTR0_CU_SINGLE_AURA_STACK via spell_custom_attr; without it
                           # a second priest's proc REPLACED the first priest's stack.
   client:
-    name: Shadow Vulnerability
+    textKey: spell.932960
     icon: 9
 - id: 920920                # Power Infusion (node 18115 band slot); era-safe custom Vanilla PI so
   name: Power Infusion      # stock 10060 (WotLK haste PI) stays intact for WotLK-stage priests
@@ -110,10 +102,8 @@ helpers:
     basePoints: 20          # +20% healing
     targetA: 21
   client:
-    name: Power Infusion
+    textKey: spell.920920
     icon: 1872              # stock PI SpellIconID
-    description: "Infuses the target with power, increasing their spell damage and healing by 20%. Lasts 15 sec."
-    auraDescription: "Spell damage and healing increased by 20%."
     skillLine: 613          # Discipline tab (stock PI 10060 lives here) — without a SkillLineAbility
                             # row the client can't categorize a custom spell and dumps it in General
 - id: 921152                # Vampiric Embrace — custom Vanilla castable (cast on an ENEMY): applies
@@ -135,10 +125,8 @@ helpers:
     basePoints: 0
     targetA: 6              # TARGET_UNIT_TARGET_ENEMY
   client:
-    name: Vampiric Embrace
+    textKey: spell.921152
     icon: 150              # stock VE SpellIconID
-    description: "Afflicts your target with Shadow energy that causes all party members to be healed for 20% of any Shadow damage you deal to the target for 1 min."
-    auraDescription: "Party members are healed for 20% of any Shadow damage the priest deals to this target."
     skillLine: 78          # Shadow tab (stock VE 15286 lives here); see PI note re: SkillLineAbility
 - id: 932950                # Vampiric Embrace — hidden PERMANENT proc-passive (no client: -> invisible)
   name: Vampiric Embrace    # PASSIVE, always on the priest; procs on shadow damage -> party heal.
@@ -171,7 +159,7 @@ helpers:
                             # explicit unit target; targetA=1 (CASTER) redirected EVERY heal onto the
                             # priest, so party members were never healed. 21 heals the passed member
                             # (matches Flash/Greater Heal/Renew). Solo still heals the priest (self).
-  client: { name: Vampiric Embrace, icon: 150 }   # hidden triggered heal: without a client row the
+  client: {textKey: spell.932951, icon: 150}   # hidden triggered heal: without a client row the
                             # heal ticks are INVISIBLE in the combat log / floating combat text (the
                             # framework's hidden-payload gotcha — same treatment as SoC 932607). Named
                             # like stock 15290 so log lines read "Vampiric Embrace"; no skillLine, so
