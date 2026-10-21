@@ -95,9 +95,8 @@ int main(int argc, char *argv[])
             return 1;
         }
 
-        /* Create a fresh v1 MPQ (up to 4GB, fine for a handful of DBC/patch
-         * files) with a small hash table - HASH_TABLE_SIZE_MIN is plenty for
-         * a few dozen files and keeps the archive small. */
+        /* Create a fresh v1 MPQ (up to 4GB) with a small hash table.
+         * Grow its file capacity as needed when bundling the addon. */
         if (!SFileCreateArchive(archivePath, MPQ_CREATE_ARCHIVE_V1 | MPQ_CREATE_LISTFILE, HASH_TABLE_SIZE_MIN, &hMpq)) {
             fprintf(stderr, "mpqpack: SFileCreateArchive failed: %s\n", mpq_strerror(SErrGetLastError()));
             return 1;
@@ -107,9 +106,21 @@ int main(int argc, char *argv[])
 
     /* Add the source file under the given internal (backslash) path,
      * ZLIB-compressed, replacing any existing entry at that path. */
-    if (!SFileAddFileEx(hMpq, sourcePath, internalPath,
-                         MPQ_FILE_COMPRESS | MPQ_FILE_REPLACEEXISTING,
-                         MPQ_COMPRESSION_ZLIB, MPQ_COMPRESSION_ZLIB)) {
+    DWORD capacity = SFileGetMaxFileCount(hMpq);
+    int added = SFileAddFileEx(hMpq, sourcePath, internalPath,
+                              MPQ_FILE_COMPRESS | MPQ_FILE_REPLACEEXISTING,
+                              MPQ_COMPRESSION_ZLIB, MPQ_COMPRESSION_ZLIB);
+    if (!added && SErrGetLastError() == ERROR_DISK_FULL &&
+        capacity > 0 && capacity < HASH_TABLE_SIZE_MAX) {
+        /* StormLib also uses ERROR_DISK_FULL when the MPQ file table is
+         * full. Reserve more slots and retry this file. */
+        if (SFileSetMaxFileCount(hMpq, capacity * 2)) {
+            added = SFileAddFileEx(hMpq, sourcePath, internalPath,
+                                  MPQ_FILE_COMPRESS | MPQ_FILE_REPLACEEXISTING,
+                                  MPQ_COMPRESSION_ZLIB, MPQ_COMPRESSION_ZLIB);
+        }
+    }
+    if (!added) {
         DWORD addErr = SErrGetLastError();
         SFileCloseArchive(hMpq);
         /* If we just created this archive and the very first add into it

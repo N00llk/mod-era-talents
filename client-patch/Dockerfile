@@ -7,6 +7,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     && rm -rf /var/lib/apt/lists/*
 # build-mpqpack.sh resolves the repo root as its parent dir, so mirror the layout under /opt/mpq.
 COPY mpqpack.c mpqread.c build-mpqpack.sh /opt/mpq/client-patch/
-RUN bash /opt/mpq/client-patch/build-mpqpack.sh && rm -rf /opt/mpq/deps/StormLib/build/CMakeFiles
+# Normalize Windows working-tree line endings before invoking Bash.
+RUN sed -i 's/\r$//' /opt/mpq/client-patch/build-mpqpack.sh \
+    && bash /opt/mpq/client-patch/build-mpqpack.sh \
+    && rm -rf /opt/mpq/deps/StormLib/build/CMakeFiles
 ENV MPQPACK=/opt/mpq/client-patch/mpqpack MPQREAD=/opt/mpq/client-patch/mpqread HOME=/tmp
 WORKDIR /work
