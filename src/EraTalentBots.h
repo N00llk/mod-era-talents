@@ -51,6 +51,9 @@ namespace EraTalentBots
 }
 
 #ifdef MOD_PLAYERBOTS
+#include <string>
+// Existing `talents` chat action: intercept only enabled, era-managed bots.
+bool EraTalentBots_HandleTalentCommand(Player* bot, std::string const& param, std::string& response);
 // Only the playerbots patches call these; they exist only when mod-playerbots is compiled in.
 // C++-linkage bridges for fork patch 0020. Each is declared extern in the patched fork file
 // with this EXACT signature — keep in sync with the patch or the fork fails to link.

@@ -1,0 +1,22 @@
+diff --git a/modules/mod-playerbots/src/Ai/Base/Actions/ChangeTalentsAction.cpp b/modules/mod-playerbots/src/Ai/Base/Actions/ChangeTalentsAction.cpp
+--- a/modules/mod-playerbots/src/Ai/Base/Actions/ChangeTalentsAction.cpp
++++ b/modules/mod-playerbots/src/Ai/Base/Actions/ChangeTalentsAction.cpp
+@@ -15,4 +15,7 @@
+ #include "RandomPlayerbotMgr.h"
+
++// EraTalents owns builds in managed eras; native commands remain unchanged otherwise.
++extern bool EraTalentBots_HandleTalentCommand(Player* bot, std::string const& param, std::string& response);
++
+ bool ChangeTalentsAction::Execute(Event event)
+ {
+@@ -25,4 +28,10 @@
+     }
+     std::string param = event.getParam();
++    std::string eraResponse;
++    if (EraTalentBots_HandleTalentCommand(bot, param, eraResponse))
++    {
++        botAI->TellMaster(eraResponse);
++        return true;
++    }
+
+     std::ostringstream out;
