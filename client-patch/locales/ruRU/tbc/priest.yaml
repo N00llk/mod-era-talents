@@ -4,266 +4,311 @@ era: tbc
 class: priest
 texts:
   spell.948024:
-    name: null
-    description: null
-    auraDescription: null
+    name: Божественный дух
+    description: Наполняет цель священной силой, повышающей дух на 17 ед. на 30 мин.
+    auraDescription: Дух повышен на 17.
     sourceHash: c374e7a6a126c739a9a5f61af4d4026f3e74b16d325294e4adfdf619e6e4f957
   spell.948025:
-    name: null
-    description: null
-    auraDescription: null
+    name: Божественный дух
+    description: Наполняет цель священной силой, повышающей дух на 23 ед. на 30 мин.
+    auraDescription: Дух повышен на 23.
     sourceHash: 68c3194697d35e2a562e023e99db86eb52b9ec19009751af6d099d5934e9fdbf
   spell.948026:
-    name: null
-    description: null
-    auraDescription: null
+    name: Божественный дух
+    description: Наполняет цель священной силой, повышающей дух на 33 ед. на 30 мин.
+    auraDescription: Дух повышен на 33.
     sourceHash: 6d6c059eca2dc6c8b19bab23f94bf46092cddd01daa80763642ac8490ce6bfb4
   spell.948027:
-    name: null
-    description: null
-    auraDescription: null
+    name: Божественный дух
+    description: Наполняет цель священной силой, повышающей дух на 40 ед. на 30 мин.
+    auraDescription: Дух повышен на 40.
     sourceHash: 4263a9bbe3cadebe8c9bfb4193094eb794e65ef207711eb9e8b160b0fad8468d
   spell.948028:
-    name: null
-    description: null
-    auraDescription: null
+    name: Божественный дух
+    description: Наполняет цель священной силой, повышающей дух на 50 ед. на 30 мин.
+    auraDescription: Дух повышен на 50.
     sourceHash: 0dc5e8d2ebd1b112aebe5df597572c48dd6d718c29cf0f68002feffb6495563b
   spell.948029:
-    name: null
-    description: null
-    auraDescription: null
+    name: Молитва духа
+    description: Наполняет участников группы цели священной силой, повышающей дух на 40 ед. на 1 ч.
+    auraDescription: Дух повышен на 40.
     sourceHash: 3042691ce2453c9aee4775b7f141efd7250a115dc758d7a3bc1949c886de290c
   spell.948030:
-    name: null
-    description: null
-    auraDescription: null
+    name: Молитва духа
+    description: Наполняет участников группы цели священной силой, повышающей дух на 50 ед. на 1 ч.
+    auraDescription: Дух повышен на 50.
     sourceHash: 994dbfe6e97aeecda166ef239110560d06ed13247fd0a0a954223fd96abf6f5a
   spell.948034:
-    name: null
-    description: null
+    name: Отражающий щит
+    description: 'Отражает 10% урона, поглощенного вашим заклинанием «Слово силы: Щит», обратно в атакующего. Отраженный
+      урон не создает угрозы.'
     sourceHash: b0797e269dd47883aaa51da3899d63763c4ba1cea898d0efe2dbf41774f41d88
   spell.948035:
-    name: null
-    description: null
+    name: Отражающий щит
+    description: 'Отражает 20% урона, поглощенного вашим заклинанием «Слово силы: Щит», обратно в атакующего. Отраженный
+      урон не создает угрозы.'
     sourceHash: c49df94f49864cb110938fee1e8eaddfc1a1a702a0a810c7d1727b42ea65a51c
   spell.948036:
-    name: null
-    description: null
+    name: Отражающий щит
+    description: 'Отражает 30% урона, поглощенного вашим заклинанием «Слово силы: Щит», обратно в атакующего. Отраженный
+      урон не создает угрозы.'
     sourceHash: 2512a3d169a18e7d7e7f8229e6ff9ef4d115940d465d051accc22cff96718566
   spell.948037:
-    name: null
-    description: null
+    name: Отражающий щит
+    description: 'Отражает 40% урона, поглощенного вашим заклинанием «Слово силы: Щит», обратно в атакующего. Отраженный
+      урон не создает угрозы.'
     sourceHash: 622fe795fe6aed2849a42eb00769995c31bca6b73b392c919cbba4a9966db224
   spell.948038:
-    name: null
-    description: null
+    name: Отражающий щит
+    description: 'Отражает 50% урона, поглощенного вашим заклинанием «Слово силы: Щит», обратно в атакующего. Отраженный
+      урон не создает угрозы.'
     sourceHash: 5285ce41d9095008cc29cab871b117fb0171ea6e5f2170ddf0458beff4c4af1d
   spell.948039:
-    name: null
-    description: null
-    auraDescription: null
+    name: Придание сил
+    description: Наполняет цель силой, повышающей скорость произнесения заклинаний на 20% и снижающей затраты маны
+      на все заклинания на 20%. Время действия — 15 сек.
+    auraDescription: Скорость произнесения заклинаний повышена на 20%, затраты маны на них снижены на 20%.
     sourceHash: 4bbf93ee24e52f3a432493ddd0997db807590b9f2a15bcfcb36cb4533f71949c
   spell.948040:
-    name: null
-    description: null
-    auraDescription: null
+    name: Подавление боли
+    description: Мгновенно снижает угрозу дружественной цели на 5%, весь получаемый ею урон на 40% и повышает сопротивление
+      рассеиванию на 65% на 8 сек.
+    auraDescription: Весь получаемый урон снижен на 40%, сопротивление рассеиванию повышено на 65%.
     sourceHash: 3b30e484ca461f3841e8245e62cbc2b767bbcf5b1b85508e5643941caf122b25
   spell.948041:
-    name: null
-    description: null
-    auraDescription: null
+    name: Средоточие заклинаний
+    description: После применения получение урона больше не замедляет произнесение заклинаний. Время действия —
+      6 сек.
+    auraDescription: Получение урона не задерживает произнесение заклинаний жреца. Сопротивление прерыванию заклинаний
+      повышено на 10%.
     sourceHash: f453f8538dacbb0afa6700dba0ee524716e457a9d186e9e04437bf74d2cbde76
   spell.948042:
-    name: null
-    description: null
-    auraDescription: null
+    name: Средоточие заклинаний
+    description: После применения получение урона больше не замедляет произнесение заклинаний. Время действия —
+      6 сек.
+    auraDescription: Получение урона не задерживает произнесение заклинаний жреца. Сопротивление прерыванию заклинаний
+      повышено на 20%.
     sourceHash: 0f80ef8467d1941510451d090d26eb9f8d68ffd9f9f5646ab60c62a097e1f11a
   spell.948043:
-    name: null
-    description: null
-    auraDescription: null
+    name: Средоточие воли
+    description: Полученный критический удар вызывает эффект «Средоточие воли», снижающий весь получаемый урон на
+      2% и повышающий получаемое исцеление на 4%. Эффект суммируется до 3 раз. Время действия — 8 сек.
+    auraDescription: Весь получаемый урон снижен на 2%. Эффективность исцеления повышена на 4%.
     sourceHash: dd940e89ec48675a56aa6a967ae2a33f185e82f1890768dffda881a56f4442be
   spell.948044:
-    name: null
-    description: null
-    auraDescription: null
+    name: Средоточие воли
+    description: Полученный критический удар вызывает эффект «Средоточие воли», снижающий весь получаемый урон на
+      3% и повышающий получаемое исцеление на 7%. Эффект суммируется до 3 раз. Время действия — 8 сек.
+    auraDescription: Весь получаемый урон снижен на 3%. Эффективность исцеления повышена на 7%.
     sourceHash: 2032403ce747167a2e6f4b1be7a7e87d2fa03d8a64745b1e8ef10cd247170142
   spell.948045:
-    name: null
-    description: null
-    auraDescription: null
+    name: Средоточие воли
+    description: Полученный критический удар вызывает эффект «Средоточие воли», снижающий весь получаемый урон на
+      4% и повышающий получаемое исцеление на 10%. Эффект суммируется до 3 раз. Время действия — 8 сек.
+    auraDescription: Весь получаемый урон снижен на 4%. Эффективность исцеления повышена на 10%.
     sourceHash: 6441054579958db95a0757dc1d9687f9c7050abb64ad8d57fc0ec273a91c096b
   spell.948046:
-    name: null
-    description: null
+    name: Круг исцеления
+    description: Восстанавливает дружественной цели и участникам ее группы в радиусе $a1 м от нее по $s1 ед. здоровья.
     sourceHash: 4e9db4f4f63eb5d2d7a35fe5cefa98b547adb703242548e339c4ae96a302eef7
   spell.948047:
-    name: null
-    description: null
+    name: Круг исцеления
+    description: Восстанавливает дружественной цели и участникам ее группы в радиусе $a1 м от нее по $s1 ед. здоровья.
     sourceHash: 4e9db4f4f63eb5d2d7a35fe5cefa98b547adb703242548e339c4ae96a302eef7
   spell.948048:
-    name: null
-    description: null
+    name: Круг исцеления
+    description: Восстанавливает дружественной цели и участникам ее группы в радиусе $a1 м от нее по $s1 ед. здоровья.
     sourceHash: 4e9db4f4f63eb5d2d7a35fe5cefa98b547adb703242548e339c4ae96a302eef7
   spell.948049:
-    name: null
-    description: null
+    name: Круг исцеления
+    description: Восстанавливает дружественной цели и участникам ее группы в радиусе $a1 м от нее по $s1 ед. здоровья.
     sourceHash: 4e9db4f4f63eb5d2d7a35fe5cefa98b547adb703242548e339c4ae96a302eef7
   spell.948050:
-    name: null
-    description: null
+    name: Круг исцеления
+    description: Восстанавливает дружественной цели и участникам ее группы в радиусе $a1 м от нее по $s1 ед. здоровья.
     sourceHash: 4e9db4f4f63eb5d2d7a35fe5cefa98b547adb703242548e339c4ae96a302eef7
   spell.948051:
-    name: null
-    description: null
+    name: Колодец света
+    description: Создает колодец света. Участники вашей группы или рейда могут воспользоваться им, чтобы восстановить
+      801 ед. здоровья в течение 6 сек. Полученный урон в объеме 30% максимального запаса здоровья отменяет эффект.
+      Колодец существует 3 мин. или до расходования 10 зарядов.
     sourceHash: 9beb771b9f10fd3a1644a13dd9a97e925cf0365fad4812ed5dea78a621243661
   spell.948052:
-    name: null
-    description: null
+    name: Колодец света
+    description: Создает колодец света. Участники вашей группы или рейда могут воспользоваться им, чтобы восстановить
+      1164 ед. здоровья в течение 6 сек. Полученный урон в объеме 30% максимального запаса здоровья отменяет эффект.
+      Колодец существует 3 мин. или до расходования 10 зарядов.
     sourceHash: b9d36ee6190b0eea2402661bb63489d36e2aee9a28e82e9a7690c2c289995bd4
   spell.948053:
-    name: null
-    description: null
+    name: Колодец света
+    description: Создает колодец света. Участники вашей группы или рейда могут воспользоваться им, чтобы восстановить
+      1599 ед. здоровья в течение 6 сек. Полученный урон в объеме 30% максимального запаса здоровья отменяет эффект.
+      Колодец существует 3 мин. или до расходования 10 зарядов.
     sourceHash: ed2899eac0fad14df50d2fc0a97271bf62069e01142fc8881d1480b3394b4957
   spell.948054:
-    name: null
-    description: null
+    name: Колодец света
+    description: Создает колодец света. Участники вашей группы или рейда могут воспользоваться им, чтобы восстановить
+      2361 ед. здоровья в течение 6 сек. Полученный урон в объеме 30% максимального запаса здоровья отменяет эффект.
+      Колодец существует 3 мин. или до расходования 10 зарядов.
     sourceHash: 695c2288c5b0c288d192ec6ea34d890e5f2df4ebfc6d401b29cb31071f46675c
   spell.948055:
-    name: null
-    description: null
-    auraDescription: null
+    name: Пробуждение Света
+    description: Следующее заклинание «Кара» применяется мгновенно и не требует маны, но не может нанести критический
+      урон.
+    auraDescription: Следующая «Кара» применяется мгновенно и не требует маны, но не может нанести критический удар.
     sourceHash: 436269d5ff576deefafbb15cb314bb7bd15e188fc91830bf40bfa99ea7179677
   spell.948056:
-    name: null
-    description: null
-    auraDescription: null
+    name: Ясность мысли
+    description: Снижает затраты маны на следующее заклинание «Быстрое исцеление», «Связующее исцеление» или «Великое
+      исцеление» на 100%.
+    auraDescription: Затраты маны на следующее «Быстрое исцеление», «Связующее исцеление» или «Великое исцеление»
+      снижены на 100%.
     sourceHash: d8014fc07e2a1d46d40d3c90a0cd472cbb0946cb10e218566c6e82f79579c1b6
   spell.948057:
-    name: null
-    description: null
-    auraDescription: null
+    name: Вдохновение
+    description: Повышает броню цели на 8% на 15 сек.
+    auraDescription: Броня повышена на 8%.
     sourceHash: 5e9975f5a141150c4bf9ab6f29f390d6976a6324d47c33bce9a154e73e583a03
   spell.948058:
-    name: null
-    description: null
-    auraDescription: null
+    name: Вдохновение
+    description: Повышает броню цели на 16% на 15 сек.
+    auraDescription: Броня повышена на 16%.
     sourceHash: 592b864b6be22c729a0bc30d02cce2af04f32fb9cff6c559f12e3417efd79cfc
   spell.948059:
-    name: null
-    description: null
-    auraDescription: null
+    name: Вдохновение
+    description: Повышает броню цели на 25% на 15 сек.
+    auraDescription: Броня повышена на 25%.
     sourceHash: e298026e898037f9c3e63f3e9d5ea6db7901d76f170242a21c97e70c8d527f63
   spell.948031:
-    name: null
-    description: null
-    auraDescription: null
+    name: Объятия вампира
+    description: 'Поражает цель энергией Тьмы: участники группы восполняют здоровье в объеме 15% от наносимого вами
+      урона заклинаний темной магии. Время действия — 1 мин.'
+    auraDescription: Участники группы исцеляются на 15% от урона, наносимого заклинаниями темной магии жреца.
     sourceHash: 404a473c1ac7b937518ded9a1a33be3442ff5287493eb947e4f24b5d8c3e95d9
   spell.948033:
-    name: null
-    description: null
+    name: Объятия вампира
+    description: Восстанавливает участнику группы здоровье в объеме части урона, наносимого жрецом заклинаниями
+      темной магии.
     sourceHash: bd332a2e991cd581af80472b5809afe7e90926580bb03810dc7b0945e567247f
   spell.948060:
-    name: null
-    description: null
-    auraDescription: null
+    name: Прикосновение вампира
+    description: Наносит цели 450 ед. урона от темной магии в течение 15 сек. Все участники группы получают ману
+      в объеме 5% от наносимого вами урона заклинаний темной магии.
+    auraDescription: Получает 450 ед. урона от темной магии за 15 сек. Группа заклинателя восстанавливает ману в
+      размере 5% урона от его заклинаний темной магии.
     sourceHash: 9a86273209bde4b6a707085277375b06d3e83b981c91e1be88549b623f7de156
   spell.948061:
-    name: null
-    description: null
-    auraDescription: null
+    name: Прикосновение вампира
+    description: Наносит цели 600 ед. урона от темной магии в течение 15 сек. Все участники группы получают ману
+      в объеме 5% от наносимого вами урона заклинаний темной магии.
+    auraDescription: Получает 600 ед. урона от темной магии за 15 сек. Группа заклинателя восстанавливает ману в
+      размере 5% урона от его заклинаний темной магии.
     sourceHash: 124d8bef41a2a0681b40af23d0b2c2081e8737cabc0d42b6853ce843e3ddad19
   spell.948062:
-    name: null
-    description: null
-    auraDescription: null
+    name: Прикосновение вампира
+    description: Наносит цели 650 ед. урона от темной магии в течение 15 сек. Все участники группы получают ману
+      в объеме 5% от наносимого вами урона заклинаний темной магии.
+    auraDescription: Получает 650 ед. урона от темной магии за 15 сек. Группа заклинателя восстанавливает ману в
+      размере 5% урона от его заклинаний темной магии.
     sourceHash: f70c5257898b3449671be926645730fae1fdd510591b476dd3601054766b79f8
   spell.948063:
-    name: null
-    description: null
+    name: Прикосновение вампира
+    description: Восстанавливает участнику группы ману в объеме части урона, наносимого жрецом заклинаниями темной
+      магии.
     sourceHash: 36751ad0aea67d015f5146b83ae4bd7ccf20718757c4a43e36aad6c116433a4f
   spell.948064:
-    name: null
-    description: null
-    auraDescription: null
+    name: Пытка разума
+    description: Поражает разум цели энергией Тьмы, нанося 75 ед. урона от темной магии в течение 3 сек. и снижая
+      скорость передвижения на 50%.
+    auraDescription: Получает урон от темной магии раз в 1 сек.; скорость передвижения снижена на 50%.
     sourceHash: f81faeba46c961d859e4793fe654f715decca566e5f74a9d69d101d9119665f4
   spell.948065:
-    name: null
-    description: null
-    auraDescription: null
+    name: Пытка разума
+    description: Поражает разум цели энергией Тьмы, нанося 126 ед. урона от темной магии в течение 3 сек. и снижая
+      скорость передвижения на 50%.
+    auraDescription: Получает урон от темной магии раз в 1 сек.; скорость передвижения снижена на 50%.
     sourceHash: 48276564b169b36a1f5c210e86b9a2ece690e141c122b3f32ef449c0f5d4d236
   spell.948066:
-    name: null
-    description: null
-    auraDescription: null
+    name: Пытка разума
+    description: Поражает разум цели энергией Тьмы, нанося 186 ед. урона от темной магии в течение 3 сек. и снижая
+      скорость передвижения на 50%.
+    auraDescription: Получает урон от темной магии раз в 1 сек.; скорость передвижения снижена на 50%.
     sourceHash: 8e80091c6ba4e4c83b931e9a671f1a5ef500c91c9c1a18e89b8d8dd27e568347
   spell.948067:
-    name: null
-    description: null
-    auraDescription: null
+    name: Пытка разума
+    description: Поражает разум цели энергией Тьмы, нанося 261 ед. урона от темной магии в течение 3 сек. и снижая
+      скорость передвижения на 50%.
+    auraDescription: Получает урон от темной магии раз в 1 сек.; скорость передвижения снижена на 50%.
     sourceHash: 01515c5b8f8303a9cf3f7dc17986f0a0b3e6b6172406879b331e0783f34fd026
   spell.948068:
-    name: null
-    description: null
-    auraDescription: null
+    name: Пытка разума
+    description: Поражает разум цели энергией Тьмы, нанося 330 ед. урона от темной магии в течение 3 сек. и снижая
+      скорость передвижения на 50%.
+    auraDescription: Получает урон от темной магии раз в 1 сек.; скорость передвижения снижена на 50%.
     sourceHash: e19e2ace9253471980dcbe59d6a3fabfbfedcaa489f6d554560990c4f7a2f591
   spell.948069:
-    name: null
-    description: null
-    auraDescription: null
+    name: Пытка разума
+    description: Поражает разум цели энергией Тьмы, нанося 426 ед. урона от темной магии в течение 3 сек. и снижая
+      скорость передвижения на 50%.
+    auraDescription: Получает урон от темной магии раз в 1 сек.; скорость передвижения снижена на 50%.
     sourceHash: 8dd52d63d1843dccdf4477f97a63b8c1bda1f17306dab4c8feebf18ad0607ebd
   spell.948070:
-    name: null
-    description: null
-    auraDescription: null
+    name: Пытка разума
+    description: Поражает разум цели энергией Тьмы, нанося 528 ед. урона от темной магии в течение 3 сек. и снижая
+      скорость передвижения на 50%.
+    auraDescription: Получает урон от темной магии раз в 1 сек.; скорость передвижения снижена на 50%.
     sourceHash: 1dc2f2e5093bd930c2bef5e247c776b15f336afcb277acecfe83c344baeb60a8
   spell.948071:
-    name: null
-    description: null
-    auraDescription: null
+    name: Молчание
+    description: Накладывает на цель немоту, не позволяя ей произносить заклинания в течение 5 сек.
+    auraDescription: Не может произносить заклинания.
     sourceHash: 28cf5695f332f24f73b3aaf91642eacc3b8f1b3b3e16e29d428f0d3f6fb8776c
   spell.948072:
-    name: null
-    description: null
-    auraDescription: null
+    name: Облик Тьмы
+    description: Принимает облик Тьмы, повышающий ваш урон от темной магии на 15% и снижающий получаемый физический
+      урон на 15%. В этом облике нельзя применять заклинания светлой магии.
+    auraDescription: Урон от темной магии повышен на 15%. Получаемый физический урон снижен на 15%. Нельзя произносить
+      заклинания светлой магии.
     sourceHash: 8d3f3f420e9638638e23a6ed08bc8ed3a65c86d760b1e5964e2a4f97c625ac54
   spell.948073:
-    name: null
-    description: null
-    auraDescription: null
+    name: Страдания
+    description: Повышает получаемый целью урон от заклинаний на 1%.
+    auraDescription: Получаемый урон от заклинаний повышен на 1%.
     sourceHash: b59397b958a15979ddda8d458618aee2ad05613e500586b67a7f428549f8c692
   spell.948074:
-    name: null
-    description: null
-    auraDescription: null
+    name: Страдания
+    description: Повышает получаемый целью урон от заклинаний на 2%.
+    auraDescription: Получаемый урон от заклинаний повышен на 2%.
     sourceHash: 63a229639ac1d3d57d8a79c62da0a3f5f383c55d8d000b9b08e8fb3c65165d4c
   spell.948075:
-    name: null
-    description: null
-    auraDescription: null
+    name: Страдания
+    description: Повышает получаемый целью урон от заклинаний на 3%.
+    auraDescription: Получаемый урон от заклинаний повышен на 3%.
     sourceHash: c3abc9e8ded8a4497ab64c341ca98c24a32111030f7c9afd57d5f5a557234d59
   spell.948076:
-    name: null
-    description: null
-    auraDescription: null
+    name: Страдания
+    description: Повышает получаемый целью урон от заклинаний на 4%.
+    auraDescription: Получаемый урон от заклинаний повышен на 4%.
     sourceHash: a897f08eac9c66ace352dd33bec420ca7b8f7de64e429d59df3c25e40c74fbe7
   spell.948077:
-    name: null
-    description: null
-    auraDescription: null
+    name: Страдания
+    description: Повышает получаемый целью урон от заклинаний на 5%.
+    auraDescription: Получаемый урон от заклинаний повышен на 5%.
     sourceHash: 4f24ba8bca5fdebc8100f9f84c05219ea20d3aa624771806936f3bfbcde05094
   spell.948078:
-    name: null
-    description: null
-    auraDescription: null
+    name: Уязвимость к темной магии
+    description: Повышает получаемый целью урон от темной магии участников группы жреца на 2% за каждый наложенный
+      эффект.
+    auraDescription: Получаемый урон от темной магии повышен на 2% за каждый эффект.
     sourceHash: def697419d194382203c134177e2ba1ed691d89a348018d89044a52490aec0ef
   spell.948079:
-    name: null
-    description: null
-    auraDescription: null
+    name: Затмение
+    description: Оглушает цель на 3 сек.
+    auraDescription: Оглушение.
     sourceHash: 05ba7065a96ad8c4beb287a53c5c4298c5eedd75e9135588bce1f169a853cb37
   spell.948080:
-    name: null
-    description: null
-    auraDescription: null
+    name: Захват духа
+    description: Дух повышен на 100%. Во время произнесения заклинаний сохраняется 50% обычного восстановления маны.
+    auraDescription: Дух повышен на 100%. Во время произнесения заклинаний мана восстанавливается со скоростью 50%
+      от обычной.
     sourceHash: 4c98513846acdb96a61bd01d03474f6de88737bf0a165d36c1c81128599d77f4

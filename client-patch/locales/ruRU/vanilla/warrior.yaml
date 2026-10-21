@@ -4,152 +4,167 @@ era: vanilla
 class: warrior
 texts:
   spell.932800:
-    name: null
-    auraDescription: null
+    name: Глубокие раны
+    auraDescription: Получает физический урон от кровотечения раз в 1 сек.
     sourceHash: 7a6ceaa401c61613ffc6f7bbb6e8c51aa9b08fc6446a377ec58834bda733bffc
   spell.932801:
-    name: null
-    auraDescription: null
+    name: Специализация на ударном оружии
+    auraDescription: Оглушение.
     sourceHash: bb634a1f0f5868b484e99613347fc4b7903f5ec2f921199e6ae2d53fc5cc73a7
   spell.932802:
-    name: null
-    auraDescription: null
+    name: Улучшенное подрезание сухожилий
+    auraDescription: Обездвижен.
     sourceHash: 16c26f661cccd62c02a739c9326952b95efa3de4b86bc67680d0cc8e04a1fd9c
   spell.932803:
-    name: null
-    description: null
+    name: Тактическое превосходство
+    description: При смене стойки вы сохраняете до 5 ед. ярости.
     sourceHash: 3ceb5308fcaefbd4fe943ca1a33817325474b40fc96f423677e7a8c922c33742
   spell.932804:
-    name: null
-    description: null
+    name: Тактическое превосходство
+    description: При смене стойки вы сохраняете до 10 ед. ярости.
     sourceHash: d979ccad7008275b1062f56802341d0c1a16aa09001a2eb32452d8ea3a24a23a
   spell.932805:
-    name: null
-    description: null
+    name: Тактическое превосходство
+    description: При смене стойки вы сохраняете до 15 ед. ярости.
     sourceHash: 768249c0c1e470caa247d4505ed4ccb1e502bfc6e5147f7f0fc22c28b4a0b7ed
   spell.932806:
-    name: null
-    description: null
+    name: Тактическое превосходство
+    description: При смене стойки вы сохраняете до 20 ед. ярости.
     sourceHash: eb193a8eafd515cb4f6989a001a7132d2a8c0e1856563793aa05c10867848e1d
   spell.932807:
-    name: null
-    description: null
+    name: Тактическое превосходство
+    description: При смене стойки вы сохраняете до 25 ед. ярости.
     sourceHash: 90b8d88dea0bcd0b5aa0b3ab256b0d4987685328caffe9b3ef04d950adf817a2
   spell.932808:
-    name: null
-    description: null
-    auraDescription: null
+    name: Инстинкт смерти
+    description: После активации повышает наносимый физический урон на 20% и дает невосприимчивость к страху, но
+      снижает броню и все виды сопротивления на 20%. Время действия — 30 сек.
+    auraDescription: Физический урон повышен на 20%. Невосприимчивость к страху. Броня и все виды сопротивления
+      снижены на 20%.
     sourceHash: 94443a5eba8a44a6256eb4ab3963e6a5b784f1bbf7860eeccb1dd37c6a26b852
   spell.932810:
-    name: null
-    auraDescription: null
+    name: Шквал
+    auraDescription: Скорость атаки повышена на 10%. Эффект расходуется после 3 атак ближнего боя.
     sourceHash: cdc4b848fe97df97cf3b82344b63ddce6ff32f4a094327ecaada99c418071995
   spell.932811:
-    name: null
-    auraDescription: null
+    name: Шквал
+    auraDescription: Скорость атаки повышена на 15%. Эффект расходуется после 3 атак ближнего боя.
     sourceHash: f621189f676a42b5e65c49e1ed82e1bceaca192e8249c15d7142bb2cc092a946
   spell.932812:
-    name: null
-    auraDescription: null
+    name: Шквал
+    auraDescription: Скорость атаки повышена на 20%. Эффект расходуется после 3 атак ближнего боя.
     sourceHash: d41ac05d7a14412b9c17c447db7611dd63344ee93d61efaddacf1bc426be5c21
   spell.932813:
-    name: null
-    auraDescription: null
+    name: Шквал
+    auraDescription: Скорость атаки повышена на 25%. Эффект расходуется после 3 атак ближнего боя.
     sourceHash: fb566363878398a56d52e113d48a136fef03cd64ea3f87739d860fdbc9806b23
   spell.932814:
-    name: null
-    auraDescription: null
+    name: Шквал
+    auraDescription: Скорость атаки повышена на 30%. Эффект расходуется после 3 атак ближнего боя.
     sourceHash: b4dbfb1d86b0b948cfa3721a6268fd61e71139824c846b6cdff8100eed30ab74
   spell.932815:
-    name: null
-    auraDescription: null
+    name: Исступление
+    auraDescription: Урон от атак ближнего боя повышен на 5%. Время действия — 12 сек. или 12 атак.
     sourceHash: 9e4dbb2f7f32ee6a4434cfaa147c33c8a60b51c4448796a04f546a6da5f1cc9b
   spell.932816:
-    name: null
-    auraDescription: null
+    name: Исступление
+    auraDescription: Урон от атак ближнего боя повышен на 10%. Время действия — 12 сек. или 12 атак.
     sourceHash: 036c8105774c4b2e61f7794092f633c83e2db23f7397fe1bb8f834f838aff5eb
   spell.932817:
-    name: null
-    auraDescription: null
+    name: Исступление
+    auraDescription: Урон от атак ближнего боя повышен на 15%. Время действия — 12 сек. или 12 атак.
     sourceHash: 76cc9eb4a439196b7f8b1653ab75c482991e3cf3360eee85c098a2bff972a837
   spell.932818:
-    name: null
-    auraDescription: null
+    name: Исступление
+    auraDescription: Урон от атак ближнего боя повышен на 20%. Время действия — 12 сек. или 12 атак.
     sourceHash: 2c49c7c1b17903e36a4bf7c60063369335d8d3f77e2de213a5ddee067bb09f81
   spell.932819:
-    name: null
-    auraDescription: null
+    name: Исступление
+    auraDescription: Урон от атак ближнего боя повышен на 25%. Время действия — 12 сек. или 12 атак.
     sourceHash: 1c12cb32462ae79d9984dae41a93e4bc9d9b1912df7dc9f7064b42f428d296ed
   spell.932821:
-    name: null
-    auraDescription: null
+    name: Улучшенный реванш
+    auraDescription: Оглушение.
     sourceHash: fdd6d68e291ed6730a799819db75c960255dbbac73e7ca03e18742da957690bf
   spell.932822:
-    name: null
-    description: null
-    auraDescription: null
+    name: Оглушающий удар
+    description: Оглушает противника на 5 сек.
+    auraDescription: Оглушение.
     sourceHash: 25bab7c00f9bda98dbacea946c4954ef242f7300acd27df20a6677eea8e0d233
   spell.932828:
-    name: null
-    description: null
+    name: Кровожадность
+    description: Мгновенная атака, наносящая урон в объеме 45% вашей силы атаки. Следующие 5 успешных атак ближнего
+      боя восстанавливают по 10 ед. здоровья. Время действия — 8 сек.
     sourceHash: ecf830b93437e96e2362f66182944fdf6c8383a62df37a8a8fb6d987386c5b11
   spell.932829:
-    name: null
-    description: null
+    name: Кровожадность
+    description: Мгновенная атака, наносящая урон в объеме 45% вашей силы атаки. Следующие 5 успешных атак ближнего
+      боя восстанавливают по 13 ед. здоровья. Время действия — 8 сек.
     sourceHash: 65997668d044a864f63bea4151376445a899aa9a06b640fbbd870f9a210a5d6e
   spell.932830:
-    name: null
-    description: null
+    name: Кровожадность
+    description: Мгновенная атака, наносящая урон в объеме 45% вашей силы атаки. Следующие 5 успешных атак ближнего
+      боя восстанавливают по 17 ед. здоровья. Время действия — 8 сек.
     sourceHash: 393c8ff7e8f235d7107bec43ceed7ad492c19c55ba5700952d006dee75e6829a
   spell.932831:
-    name: null
-    description: null
+    name: Кровожадность
+    description: Мгновенная атака, наносящая урон в объеме 45% вашей силы атаки. Следующие 5 успешных атак ближнего
+      боя восстанавливают по 20 ед. здоровья. Время действия — 8 сек.
     sourceHash: 259943377dc821e82bc4fbb86a95c898ce44904951bbc8ce5463ab93024fb50d
   spell.932832:
-    name: null
-    auraDescription: null
+    name: Кровожадность
+    auraDescription: Следующие 5 успешных атак ближнего боя восстанавливают 10 ед. здоровья. Время действия — 8
+      сек.
     sourceHash: 9bb26b02c0a8cf50e45c114c29d5b1c1edd32793d588d92a68ad065a9ae4f0b8
   spell.932833:
-    name: null
-    auraDescription: null
+    name: Кровожадность
+    auraDescription: Следующие 5 успешных атак ближнего боя восстанавливают 13 ед. здоровья. Время действия — 8
+      сек.
     sourceHash: 2d6f2d5fa134bc0f9aeeded711d07b50ec4b0dd2328f586d68c45efc7ac184a6
   spell.932834:
-    name: null
-    auraDescription: null
+    name: Кровожадность
+    auraDescription: Следующие 5 успешных атак ближнего боя восстанавливают 17 ед. здоровья. Время действия — 8
+      сек.
     sourceHash: 1e5814783515998768c6ee1c9b07c5546e92c1063243a77603e882ee2910270d
   spell.932835:
-    name: null
-    auraDescription: null
+    name: Кровожадность
+    auraDescription: Следующие 5 успешных атак ближнего боя восстанавливают 20 ед. здоровья. Время действия — 8
+      сек.
     sourceHash: c51632456986c4c89105786ce62ad7e45daf062958ba6e4d0c9a7cc93c90d1e1
   spell.932836:
-    name: null
+    name: Кровожадность
     sourceHash: b162e0af210fde71e6eb4081217cc99e7f0a04713628e1790542021451c90627
   spell.932837:
-    name: null
+    name: Кровожадность
     sourceHash: b162e0af210fde71e6eb4081217cc99e7f0a04713628e1790542021451c90627
   spell.932838:
-    name: null
+    name: Кровожадность
     sourceHash: b162e0af210fde71e6eb4081217cc99e7f0a04713628e1790542021451c90627
   spell.932839:
-    name: null
+    name: Кровожадность
     sourceHash: b162e0af210fde71e6eb4081217cc99e7f0a04713628e1790542021451c90627
   spell.932840:
-    name: null
-    description: null
+    name: Ни шагу назад
+    description: После активации временно дает вам здоровье в объеме 30% от максимального запаса на 20 сек. После
+      окончания эффекта это здоровье теряется.
     sourceHash: 5e22c9e04a832a255e0def06de6d9bacecf280c923537577233b16bf36f9f92b
   spell.932841:
-    name: null
-    description: null
+    name: Сокрушение щитом
+    description: Удар щитом, наносящий от 225 до 235 ед. урона с учетом показателя блока щита. С вероятностью 50%
+      снимает с цели 1 магический эффект. Создает высокий уровень угрозы.
     sourceHash: 8e7fbd3825936f458ad70791bd6bce03db411e2781c24e911169dbb3da97e2bf
   spell.932842:
-    name: null
-    description: null
+    name: Сокрушение щитом
+    description: Удар щитом, наносящий от 264 до 276 ед. урона с учетом показателя блока щита. С вероятностью 50%
+      снимает с цели 1 магический эффект. Создает высокий уровень угрозы.
     sourceHash: c97a26103a4da1f163f4aaf0d00d5a8de62e1c7cf5f78344702cf0a9b2e3812e
   spell.932843:
-    name: null
-    description: null
+    name: Сокрушение щитом
+    description: Удар щитом, наносящий от 303 до 317 ед. урона с учетом показателя блока щита. С вероятностью 50%
+      снимает с цели 1 магический эффект. Создает высокий уровень угрозы.
     sourceHash: 21218ea03f6365fe557738524e863fa73b55e4b8f9e01e493e32fa0dee52bb07
   spell.932844:
-    name: null
-    description: null
+    name: Сокрушение щитом
+    description: Удар щитом, наносящий от 342 до 358 ед. урона с учетом показателя блока щита. С вероятностью 50%
+      снимает с цели 1 магический эффект. Создает высокий уровень угрозы.
     sourceHash: 2d9f76a105c59174bc2df27917b61709258bcabfaab621b1990b9faa38a1fc9e

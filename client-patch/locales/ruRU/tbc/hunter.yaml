@@ -4,224 +4,256 @@ era: tbc
 class: hunter
 texts:
   spell.948280:
-    name: null
+    name: Охотник (Пылающий поход)
     sourceHash: 5f9826b1ff37adcd6dc05fbfaa5759aa380e8990c39be2cbf42982561ebeb636
   spell.948281:
-    name: null
-    description: null
-    auraDescription: null
+    name: Жало скорпида
+    description: Жалит цель, снижая вероятность попадания ее атак ближнего и дальнего боя на 5% на 20 сек. На каждую
+      цель может действовать только одно жало от каждого охотника.
+    auraDescription: Вероятность попадания атаками ближнего и дальнего боя снижена на 5%.
     sourceHash: 06bca452c7c457537e7574d4bcef247b8ab3f53b30ed178f3c98a1d657153370
   spell.948290:
-    name: null
-    description: null
-    auraDescription: null
+    name: Звериный гнев
+    description: Приводит питомца в ярость, повышающую наносимый им урон на 50% на 18 сек. В состоянии ярости зверь
+      не знает ни страха, ни жалости, и только смерть может остановить его.
+    auraDescription: В состоянии ярости.
     sourceHash: 6ffb99b56685d054b1581ecd9a12a1e6b2e834c2b0c780fa4d9ccf94fdd9078f
   spell.948291:
-    name: null
-    description: null
+    name: Звериная сущность
+    description: 'Пока питомец находится под действием «Звериного гнева», вы тоже впадаете в ярость: наносимый урон
+      повышается на 10%, а затраты маны на все заклинания снижаются на 20% на 18 сек. В состоянии ярости вы не знаете
+      ни страха, ни жалости, и только смерть может остановить вас.'
     sourceHash: 70ffa11fa32aa767d0479086804699826dcb8d899a16133d074b3efd460cc841
   spell.948292:
-    name: null
-    description: null
-    auraDescription: null
+    name: Звериная сущность
+    description: 'Пока питомец находится под действием «Звериного гнева», вы тоже впадаете в ярость: наносимый урон
+      повышается на 10%, а затраты маны на все заклинания снижаются на 20% на 18 сек. В состоянии ярости вы не знаете
+      ни страха, ни жалости, и только смерть может остановить вас.'
+    auraDescription: Наносимый урон повышен на 10%, затраты маны снижены на 20%. Остановить можно только убийством.
     sourceHash: 3237a66fb20f394b61a715f41148f4de044ae60baf5546b55c889d6e2ab80941
   spell.948293:
-    name: null
-    auraDescription: null
+    name: Узы духа
+    auraDescription: Вы и ваш питомец восстанавливаете 1% от максимального здоровья раз в 10 сек.
     sourceHash: e3789a38d6a0e2f68d7852b8a529ed5f74b2abdda817b136b40e443853b34014
   spell.948294:
-    name: null
-    auraDescription: null
+    name: Узы духа
+    auraDescription: Вы и ваш питомец восстанавливаете 2% от максимального здоровья раз в 10 сек.
     sourceHash: ce9899ed7d2c82ce7a04a528c9b5915a6d203405cbaf8e82205c94ee6d203e41
   spell.948298:
-    name: null
-    auraDescription: null
+    name: Свирепое воодушевление
+    auraDescription: Весь наносимый урон повышен на 1%.
     sourceHash: 860199415002f115e11fa894765d1a74b815f1d042ab883ca4116a9d0546d0fb
   spell.948299:
-    name: null
-    auraDescription: null
+    name: Свирепое воодушевление
+    auraDescription: Весь наносимый урон повышен на 2%.
     sourceHash: b45f92cb4ef01bc5f75de255b44d170c9f8efc9f3b782dfd15b0b799393b6aa7
   spell.948300:
-    name: null
-    auraDescription: null
+    name: Свирепое воодушевление
+    auraDescription: Весь наносимый урон повышен на 3%.
     sourceHash: 2ea90d422e376a97aaf52551d117749e5a5d480b6c75d600c6331f3be6a13ea6
   spell.948301:
-    name: null
-    description: null
+    name: Звериная стремительность
+    description: Повышает скорость передвижения питомцев под открытым небом на 30%.
     sourceHash: 952f64284d6bdde9fc2e72d2df9a37f3f5eb09de7ac5866e54ca86701790e1ce
   spell.948330:
-    name: null
-    description: null
-    auraDescription: null
+    name: Жало виверны
+    description: Жалящий выстрел, усыпляющий цель на 12 сек. Любой урон отменяет эффект. После пробуждения жало
+      наносит цели 300 ед. урона от сил природы в течение 12 сек. На каждую цель может действовать только одно жало
+      от каждого охотника.
+    auraDescription: Усыплен. Любой урон снимает эффект.
     sourceHash: bc7183970acf0013f88c2021af48fbe2a8e8b1b65c070dcbb79f8fab5964d3fc
   spell.948331:
-    name: null
-    description: null
-    auraDescription: null
+    name: Жало виверны
+    description: Жалящий выстрел, усыпляющий цель на 12 сек. Любой урон отменяет эффект. После пробуждения жало
+      наносит цели 420 ед. урона от сил природы в течение 12 сек. На каждую цель может действовать только одно жало
+      от каждого охотника.
+    auraDescription: Усыплен. Любой урон снимает эффект.
     sourceHash: 3689f3e1d205efdbbbdcc8f509c54977a1d9a083ac49152aaf4dc04ad394a6f7
   spell.948332:
-    name: null
-    description: null
-    auraDescription: null
+    name: Жало виверны
+    description: Жалящий выстрел, усыпляющий цель на 12 сек. Любой урон отменяет эффект. После пробуждения жало
+      наносит цели 600 ед. урона от сил природы в течение 12 сек. На каждую цель может действовать только одно жало
+      от каждого охотника.
+    auraDescription: Усыплен. Любой урон снимает эффект.
     sourceHash: baf48b7fc7aca1b122e0255d15537cd8ab0eed260ad331005e6627751187c474
   spell.948333:
-    name: null
-    description: null
-    auraDescription: null
+    name: Жало виверны
+    description: Жалящий выстрел, усыпляющий цель на 12 сек. Любой урон отменяет эффект. После пробуждения жало
+      наносит цели 942 ед. урона от сил природы в течение 12 сек. На каждую цель может действовать только одно жало
+      от каждого охотника.
+    auraDescription: Усыплен. Любой урон снимает эффект.
     sourceHash: cf3c5497c26732bac0312019b7814a6a3b3f9f0b94dba02bd4004c5c82ce701c
   spell.948334:
-    name: null
-    auraDescription: null
+    name: Жало виверны
+    auraDescription: Наносит 50 ед. урона от сил природы раз в 2 сек.
     sourceHash: 81464678639766f4a8c948735a31ce95b4feb93ad331c72992028c7fc80e1c6b
   spell.948335:
-    name: null
-    auraDescription: null
+    name: Жало виверны
+    auraDescription: Наносит 70 ед. урона от сил природы раз в 2 сек.
     sourceHash: 2c62b7ca620bb80f3a682cacddad5529677dd24af0308d6b59f57e9c4a33fe40
   spell.948336:
-    name: null
-    auraDescription: null
+    name: Жало виверны
+    auraDescription: Наносит 100 ед. урона от сил природы раз в 2 сек.
     sourceHash: 43f4accc24061b8e94109a847a47f3eeb65b3314b04dd4f3ca4370d0cabfa76c
   spell.948337:
-    name: null
-    auraDescription: null
+    name: Жало виверны
+    auraDescription: Наносит 157 ед. урона от сил природы раз в 2 сек.
     sourceHash: 64d8f4b1ee6c8e599a81b2b6262cec39d73fc3ffefe92252415a6f158d966e8d
   spell.948338:
-    name: null
-    description: null
-    auraDescription: null
+    name: Контратака
+    description: Удар, доступный после парирования атаки противника. Наносит 40 ед. урона и обездвиживает цель на
+      5 сек. Контратаку нельзя блокировать или парировать, от нее нельзя уклониться.
+    auraDescription: Обездвижен.
     sourceHash: 1f9523a4ae22c06065dae2da2925394a4cd870228bf9648525d7189c2b8bf6b8
   spell.948339:
-    name: null
-    description: null
-    auraDescription: null
+    name: Контратака
+    description: Удар, доступный после парирования атаки противника. Наносит 70 ед. урона и обездвиживает цель на
+      5 сек. Контратаку нельзя блокировать или парировать, от нее нельзя уклониться.
+    auraDescription: Обездвижен.
     sourceHash: 4fe266a5ae7c87318ec46748ff84823dd08255e28baeebebc8542ea3cfb194d7
   spell.948340:
-    name: null
-    description: null
-    auraDescription: null
+    name: Контратака
+    description: Удар, доступный после парирования атаки противника. Наносит 110 ед. урона и обездвиживает цель
+      на 5 сек. Контратаку нельзя блокировать или парировать, от нее нельзя уклониться.
+    auraDescription: Обездвижен.
     sourceHash: 53f58098c170edccd7faf1bb41a4958ee5d7fefaa27cf79ecef28a20a703950f
   spell.948341:
-    name: null
-    description: null
-    auraDescription: null
+    name: Контратака
+    description: Удар, доступный после парирования атаки противника. Наносит 165 ед. урона и обездвиживает цель
+      на 5 сек. Контратаку нельзя блокировать или парировать, от нее нельзя уклониться.
+    auraDescription: Обездвижен.
     sourceHash: 10544149f8864c3cccf1f2212adfa7e75c70a38438a3a076e04079c310e6550f
   spell.948342:
-    name: null
-    description: null
-    auraDescription: null
+    name: Сдерживание
+    description: После активации повышает вероятность уклонения и парирования на 25% на 10 сек.
+    auraDescription: Вероятность уклонения и парирования повышена на 25%.
     sourceHash: cb8a31c9fa4cab01a01c41e4d5b6a19382cf044c473b43398045e2e2b7cf2421
   spell.948343:
-    name: null
-    auraDescription: null
+    name: Удержание
+    auraDescription: Попал в ловушку и не может двигаться.
     sourceHash: d479a655ff08075954f12d3e38cb1e1529dbf2d4f5384b928e9840a859f5c3f6
   spell.948344:
-    name: null
-    auraDescription: null
+    name: Улучшенная подрезка крыльев
+    auraDescription: Обездвижен.
     sourceHash: 6e0b7b7993214250cca6dcfd8e1e164eae1d0747fc6fc0bb53c6af74921c134b
   spell.948345:
-    name: null
-    auraDescription: null
+    name: Выявление слабости
+    auraDescription: Сила атаки всех атакующих повышена на величину, равную 25% ловкости охотника.
     sourceHash: 67c4d0b320f2e8dcd64fe760c41dd16ce43ae6a0f341c571c8457fb535f3e5b3
   spell.948346:
-    name: null
-    auraDescription: null
+    name: Мастер тактики
+    auraDescription: Вероятность критического удара всеми атаками повышена на 2%.
     sourceHash: 3678bd78fc907c0a118adffe436d623da65c5dd6614907ec56bcff5e0afa86cb
   spell.948347:
-    name: null
-    auraDescription: null
+    name: Мастер тактики
+    auraDescription: Вероятность критического удара всеми атаками повышена на 4%.
     sourceHash: 8a1360460f34ac7ed64d257b5c8cd6bec6ccb3205fc8d4d7acfed5e2cd0c0b4f
   spell.948348:
-    name: null
-    auraDescription: null
+    name: Мастер тактики
+    auraDescription: Вероятность критического удара всеми атаками повышена на 6%.
     sourceHash: 6b2da87c019fb8108e63dd7610bbaca7d4a98988101cd8b9067479c1b9b5cad9
   spell.948349:
-    name: null
-    auraDescription: null
+    name: Мастер тактики
+    auraDescription: Вероятность критического удара всеми атаками повышена на 8%.
     sourceHash: a8afefc61fd679b8738209b0039caa044c38f3e1452cf091fbb49f62842e4ea7
   spell.948350:
-    name: null
-    auraDescription: null
+    name: Мастер тактики
+    auraDescription: Вероятность критического удара всеми атаками повышена на 10%.
     sourceHash: ceeee99695c323a0e4ea7dc50f3b10adf02bba07933b4e54d6f95c624f6fd96f
   spell.948351:
-    name: null
-    description: null
+    name: Готовность
+    description: После активации немедленно завершает восстановление остальных способностей охотника.
     sourceHash: c61b8c97debfab10e1a36c8e2d4b19426fe8a604fee8773edde90340c2f71c8e
   spell.948370:
-    name: null
-    description: null
-    auraDescription: null
+    name: Прицельный выстрел
+    description: Прицельный выстрел, повышающий урон в дальнем бою на 70 ед. и снижающий получаемое целью исцеление
+      на 50%. Время действия — 10 сек.
+    auraDescription: Эффективность получаемого исцеления снижена на 50%.
     sourceHash: 580dae1bb66229760eb86db2b2529ae69f6d6737313d1dc1909b96081f5646c7
   spell.948371:
-    name: null
-    description: null
-    auraDescription: null
+    name: Прицельный выстрел
+    description: Прицельный выстрел, повышающий урон в дальнем бою на 125 ед. и снижающий получаемое целью исцеление
+      на 50%. Время действия — 10 сек.
+    auraDescription: Эффективность получаемого исцеления снижена на 50%.
     sourceHash: 76e1a8722c11c76abb10a3165aee90cb26e4f85b1d9b4bfce05b72d64f130d5d
   spell.948372:
-    name: null
-    description: null
-    auraDescription: null
+    name: Прицельный выстрел
+    description: Прицельный выстрел, повышающий урон в дальнем бою на 200 ед. и снижающий получаемое целью исцеление
+      на 50%. Время действия — 10 сек.
+    auraDescription: Эффективность получаемого исцеления снижена на 50%.
     sourceHash: 67b710f523509898731103622fb77871c0dce04997f264f00ec682ed79dec7f6
   spell.948373:
-    name: null
-    description: null
-    auraDescription: null
+    name: Прицельный выстрел
+    description: Прицельный выстрел, повышающий урон в дальнем бою на 330 ед. и снижающий получаемое целью исцеление
+      на 50%. Время действия — 10 сек.
+    auraDescription: Эффективность получаемого исцеления снижена на 50%.
     sourceHash: e77a11c71f1919e9ef8ccb1bc95bf59ce737a9a48edcf2482d80db5b213b9a83
   spell.948374:
-    name: null
-    description: null
-    auraDescription: null
+    name: Прицельный выстрел
+    description: Прицельный выстрел, повышающий урон в дальнем бою на 460 ед. и снижающий получаемое целью исцеление
+      на 50%. Время действия — 10 сек.
+    auraDescription: Эффективность получаемого исцеления снижена на 50%.
     sourceHash: f3f203ef8616dca974fa293ddbd50fe482de939025d694625ce8224a70389ca0
   spell.948375:
-    name: null
-    description: null
-    auraDescription: null
+    name: Прицельный выстрел
+    description: Прицельный выстрел, повышающий урон в дальнем бою на 600 ед. и снижающий получаемое целью исцеление
+      на 50%. Время действия — 10 сек.
+    auraDescription: Эффективность получаемого исцеления снижена на 50%.
     sourceHash: 0a51d51963962778892b7d381ab30272f44fab2ddfcdf2b12766c654a884cd9d
   spell.948376:
-    name: null
-    description: null
-    auraDescription: null
+    name: Прицельный выстрел
+    description: Прицельный выстрел, повышающий урон в дальнем бою на 870 ед. и снижающий получаемое целью исцеление
+      на 50%. Время действия — 10 сек.
+    auraDescription: Эффективность получаемого исцеления снижена на 50%.
     sourceHash: c3e1f0d90495e33818ae55a4242fa1626f844b9db5f87e56c3918e20cfeeab21
   spell.948377:
-    name: null
-    description: null
-    auraDescription: null
+    name: Аура меткого выстрела
+    description: Повышает силу атаки участников группы в радиусе 45 м на 50 ед. Действует до отмены.
+    auraDescription: Сила атаки повышена на 50.
     sourceHash: 779c470657a78700d8d5080afe5bfc0a68aa01e1dec92949b477487b6d9ff433
   spell.948378:
-    name: null
-    description: null
-    auraDescription: null
+    name: Аура меткого выстрела
+    description: Повышает силу атаки участников группы в радиусе 45 м на 75 ед. Действует до отмены.
+    auraDescription: Сила атаки повышена на 75.
     sourceHash: d21341c8e6d2c33382cc651ac4163a855977863db5684978c40c484cc1a591a0
   spell.948379:
-    name: null
-    description: null
-    auraDescription: null
+    name: Аура меткого выстрела
+    description: Повышает силу атаки участников группы в радиусе 45 м на 100 ед. Действует до отмены.
+    auraDescription: Сила атаки повышена на 100.
     sourceHash: 8dd11de445ec7fd9a2cd9a6a16c5651ddbe053e457e20d18ecea8e6aa752892d
   spell.948380:
-    name: null
-    description: null
-    auraDescription: null
+    name: Аура меткого выстрела
+    description: Повышает силу атаки участников группы в радиусе 45 м на 125 ед. Действует до отмены.
+    auraDescription: Сила атаки повышена на 125.
     sourceHash: 83ef22398c2c5df98f69d0fb37502ef6fc0913037a70302203b0d2ca3d235e84
   spell.948381:
-    name: null
-    auraDescription: null
+    name: Улучшенный контузящий выстрел
+    auraDescription: Оглушение.
     sourceHash: 024154df4a8f3c30c38a301f1c760db9718d1814aa3d94f78e3c077986bcd727
   spell.948382:
-    name: null
-    description: null
-    auraDescription: null
+    name: Дезориентирующий выстрел
+    description: Выстрел с близкого расстояния, наносящий 50% урона от оружия и дезориентирующий цель на 4 сек.
+      Любой урон отменяет эффект. Применение прекращает вашу атаку.
+    auraDescription: Дезориентирован.
     sourceHash: 93e0e85c11bbd0e9d6f92102c617e1b4e93baa69d6f0a365b9335d17f49d33a7
   spell.948383:
-    name: null
-    description: null
-    auraDescription: null
+    name: Глушащий выстрел
+    description: Выстрел, наносящий 50% урона от оружия и накладывающий на цель немоту на 3 сек.
+    auraDescription: Не может произносить заклинания.
     sourceHash: 6c24048408b8562ea561954b91cc573fa128d3992bb22678faf1e594b38365f6
   spell.948384:
-    name: null
-    description: null
-    auraDescription: null
+    name: Быстрые убийства
+    description: Снижает время восстановления способности «Быстрая стрельба» на 1 мин. После убийства противника,
+      приносящего опыт или честь, следующий «Прицельный выстрел», «Чародейский выстрел» или автоматический выстрел
+      наносит на 10% больше урона. Время действия — 20 сек.
+    auraDescription: Урон следующего «Прицельного выстрела», «Чародейского выстрела» или автоматического выстрела
+      повышен на 10%.
     sourceHash: a731de243378f8557b5267e696cc621070716d150f80e88adecae9b6b5bf89ca
   spell.948385:
-    name: null
-    description: null
-    auraDescription: null
+    name: Быстрые убийства
+    description: Снижает время восстановления способности «Быстрая стрельба» на 2 мин. После убийства противника,
+      приносящего опыт или честь, следующий «Прицельный выстрел», «Чародейский выстрел» или автоматический выстрел
+      наносит на 20% больше урона. Время действия — 20 сек.
+    auraDescription: Урон следующего «Прицельного выстрела», «Чародейского выстрела» или автоматического выстрела
+      повышен на 20%.
     sourceHash: a421da00041f128c875f1da7a696f254b995f1929cb0a397b9d91b7e5a54fc54

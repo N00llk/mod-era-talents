@@ -4,70 +4,81 @@ era: tbc
 class: rogue
 texts:
   spell.947768:
-    name: null
-    description: null
-    auraDescription: null
+    name: Выявление слабости
+    description: Урон атакующих способностей повышен на 2%.
+    auraDescription: Урон атакующих способностей повышен на 2%.
     sourceHash: f149d90691b22a386384fa9542361ce66b020d756fe760dd6eda8701e28bc37a
   spell.947769:
-    name: null
-    description: null
-    auraDescription: null
+    name: Выявление слабости
+    description: Урон атакующих способностей повышен на 4%.
+    auraDescription: Урон атакующих способностей повышен на 4%.
     sourceHash: 287860e1b6368f3d9cb87f1d4bb0a27f99bd45484d0dbf6ebb993af0110d30af
   spell.947770:
-    name: null
-    description: null
-    auraDescription: null
+    name: Выявление слабости
+    description: Урон атакующих способностей повышен на 6%.
+    auraDescription: Урон атакующих способностей повышен на 6%.
     sourceHash: 2f01f1dc1540da1a5f011dca5d9ca6ea910704a64ab8ea6e1bcfeedb823e4221
   spell.947771:
-    name: null
-    description: null
-    auraDescription: null
+    name: Выявление слабости
+    description: Урон атакующих способностей повышен на 8%.
+    auraDescription: Урон атакующих способностей повышен на 8%.
     sourceHash: 4804cfba499a2d5e8a3aa23720bd926ba3397d698bbaac5fd6c94734ec522245
   spell.947772:
-    name: null
-    description: null
-    auraDescription: null
+    name: Выявление слабости
+    description: Урон атакующих способностей повышен на 10%.
+    auraDescription: Урон атакующих способностей повышен на 10%.
     sourceHash: 5a8c6f2d5b64f18d3494db6efaa943f4208dd33a07698211343a62218e806fae
   spell.947773:
-    name: null
-    description: null
+    name: Расправа
+    description: Мгновенно атакует обоими оружиями, нанося каждым $<percent>% урона от оружия и дополнительно $5374s1
+      ед. урона. Урон по отравленным целям повышен на 50%. Требуется находиться за спиной цели. Длина серии приемов
+      увеличивается на 2.
     sourceHash: 232b798bdfe851ce0c0e0ce10b44b80a88890a6be45d21075031e58e4d87a008
   spell.947774:
-    name: null
-    description: null
+    name: Расправа
+    description: Мгновенно атакует обоими оружиями, нанося каждым $<percent>% урона от оружия и дополнительно $34414s1
+      ед. урона. Урон по отравленным целям повышен на 50%. Требуется находиться за спиной цели. Длина серии приемов
+      увеличивается на 2.
     sourceHash: ce3e6fd1b33c56ef7b72789848d251792de61475e93ddbd2b0e7312d02ef7bb5
   spell.947775:
-    name: null
-    description: null
+    name: Расправа
+    description: Мгновенно атакует обоими оружиями, нанося каждым $<percent>% урона от оружия и дополнительно $34416s1
+      ед. урона. Урон по отравленным целям повышен на 50%. Требуется находиться за спиной цели. Длина серии приемов
+      увеличивается на 2.
     sourceHash: 089809f06e682f1281f6f5cd901c43fe3f05226b029d27a68815203d64cc92ac
   spell.947776:
-    name: null
-    description: null
+    name: Расправа
+    description: Мгновенно атакует обоими оружиями, нанося каждым $<percent>% урона от оружия и дополнительно $34419s1
+      ед. урона. Урон по отравленным целям повышен на 50%. Требуется находиться за спиной цели. Длина серии приемов
+      увеличивается на 2.
     sourceHash: 04479552493c3b5f36f831819c8c4e6f117153917abe17c29abddb8f1b337a6a
   spell.947777:
-    name: null
-    description: null
-    auraDescription: null
+    name: Ответный удар
+    description: Удар, доступный после парирования атаки противника. Наносит $s1% урона от оружия и обезоруживает
+      цель на $d.
+    auraDescription: Обезоружен.
     sourceHash: 01fe7455233a0b39fc6e71ed19ea74081d6af6d5d94c1f1982704ce85f06fe72
   spell.947778:
-    name: null
-    description: null
-    auraDescription: null
+    name: Выброс адреналина
+    description: Повышает скорость восстановления энергии на $s1% на $d.
+    auraDescription: Восстановление энергии повышено на $s1%.
     sourceHash: fcd56ec4a5338bd96a35f9bb924f6caed621be2f913be22e3885103e8b83ff54
   spell.947784:
-    name: null
-    auraDescription: null
+    name: Оглушение дробящим оружием
+    auraDescription: Оглушение.
     sourceHash: b56eeb18640b8df4aed6b0e6e6b11bf7307f4274004b81c2d306beadbc5f8baf
   spell.947785:
-    name: null
-    auraDescription: null
+    name: Замедление
+    auraDescription: Скорость передвижения снижена.
     sourceHash: b7afd3a80da9df0934145f79b2c9f273ad82dc6863fb6acd99bbac5af1bf4c61
   spell.947786:
-    name: null
-    description: null
+    name: Подготовка
+    description: После активации немедленно завершает восстановление способностей «Ускользание», «Спринт», «Исчезновение»,
+      «Хладнокровие», «Шаг сквозь тень» и «Умысел».
     sourceHash: 1a01fed948f1f2f6bd180108d14561494e154325b221dcac07c4aab2317b91f5
   spell.947787:
-    name: null
-    description: null
-    auraDescription: null
+    name: Умысел
+    description: Добавляет $s1 приемов к серии против текущей цели. Необходимо продолжить или завершить серию в
+      течение $d, иначе добавленные приемы будут потеряны.
+    auraDescription: Серия приемов не прервется.
     sourceHash: 1708a04092c3efd9aa16ed942e1c5e2a3004002d17870d2ee8090e957db96f31

@@ -4,254 +4,289 @@ era: tbc
 class: warlock
 texts:
   spell.948410:
-    name: null
+    name: Чернокнижник (Пылающий поход)
     sourceHash: 154c6b850ce42a271b4e8ce07a7fe80b6092be115f1a8fa3f0c7e7c3421ad751
   spell.948420:
-    name: null
-    description: null
+    name: Создание малого камня огня
+    description: Создает малый камень огня, который можно взять в левую руку. Пока камень экипирован, он наделяет
+      оружие в правой руке огненными свойствами и повышает урон заклинаний огня.
     sourceHash: 2b0eec88222a84dc419d4d81fc34e0602d4270e57c5d97c60f9700599f502e02
   spell.948421:
-    name: null
-    description: null
+    name: Создание камня огня
+    description: Создает камень огня, который можно взять в левую руку. Пока камень экипирован, он наделяет оружие
+      в правой руке огненными свойствами и повышает урон заклинаний огня.
     sourceHash: fd072e401632ffbd45712cd9ac97ed4cb9e19a58bafb9e98aa39a5bd3f796af8
   spell.948422:
-    name: null
-    description: null
+    name: Создание большого камня огня
+    description: Создает большой камень огня, который можно взять в левую руку. Пока камень экипирован, он наделяет
+      оружие в правой руке огненными свойствами и повышает урон заклинаний огня.
     sourceHash: 170b5b08760c2e1c263afb6e460d9c23764a266b6ca2aa30b6d43cbc07b3a74e
   spell.948423:
-    name: null
-    description: null
+    name: Создание мощного камня огня
+    description: Создает мощный камень огня, который можно взять в левую руку. Пока камень экипирован, он наделяет
+      оружие в правой руке огненными свойствами и повышает урон заклинаний огня.
     sourceHash: 7b385e2fd8d23cd021af9a2f8969b12f034a2b68a4796eeec01518eb5fa2ea8c
   spell.948424:
-    name: null
-    description: null
+    name: Создание камня огня искусника
+    description: Создает камень огня искусника, который можно взять в левую руку. Пока камень экипирован, он наделяет
+      оружие в правой руке огненными свойствами и повышает урон заклинаний огня.
     sourceHash: cb0ed3d8157a3c53eece1aea2787d70157dec316d16c0223c553f42cbcadd533
   spell.948425:
-    name: null
-    description: null
+    name: Создание камня чар
+    description: Создает камень чар, который можно взять в левую руку. Пока камень экипирован, он повышает вероятность
+      критического удара заклинаниями. При использовании снимает вредоносные магические эффекты и поглощает магический
+      урон.
     sourceHash: a1c15ae67de7fa42783810191ca0506978edba564aec1ed777d381f0df0fdce1
   spell.948426:
-    name: null
-    description: null
+    name: Создание большого камня чар
+    description: Создает большой камень чар, который можно взять в левую руку. Пока камень экипирован, он повышает
+      вероятность критического удара заклинаниями. При использовании снимает вредоносные магические эффекты и поглощает
+      магический урон.
     sourceHash: f77b7854d5d90efcbe3e13617dfa5b83b444e34fda293f23547039baf823e354
   spell.948427:
-    name: null
-    description: null
+    name: Создание мощного камня чар
+    description: Создает мощный камень чар, который можно взять в левую руку. Пока камень экипирован, он повышает
+      вероятность критического удара заклинаниями. При использовании снимает вредоносные магические эффекты и поглощает
+      магический урон.
     sourceHash: 4f89d772fd50916339ec1c4914362ddd22c6e38fe135639786aaa0606ab66c30
   spell.948428:
-    name: null
-    description: null
+    name: Создание камня чар искусника
+    description: Создает камень чар искусника, который можно взять в левую руку. Пока камень экипирован, он повышает
+      рейтинг критического удара заклинаниями. При использовании снимает вредоносные магические эффекты.
     sourceHash: 0e94b20e9da44226ed698bf674733c1fbf9591c900de24d6f79bd8347c8fe100
   spell.948430:
-    name: null
-    description: null
+    name: Камень огня
+    description: 'Наделяет оружие в правой руке огненными свойствами: каждая атака может нанести от 116 до 174 ед.
+      дополнительного урона от огня. Также повышает урон заклинаний и эффектов огня на величину до 30 ед.'
     sourceHash: e97113654f907ce1afc33a75ba0e2c31cb3277a2bcb5a0c5630a70fc288deff5
   spell.948431:
-    name: null
+    name: Атака камня огня
     sourceHash: d10b362dbe88bc8d42188e79cdc47d3b1f4051309dc13d5d11e8789ca68910b0
   spell.948432:
-    name: null
-    description: null
+    name: Камень чар
+    description: Снимает с заклинателя все вредоносные магические эффекты.
     sourceHash: a1b4be188a480ea073b1cd09db0c595adec0467f1c35c93bb031f248d6c28f8e
   spell.948433:
-    name: null
-    description: null
+    name: Камень чар
+    description: Повышает рейтинг критического удара заклинаниями на 20 ед.
     sourceHash: 3388cf96898d689264fecfff851487982082d5386ab7357943e4d4d84bbd45d3
   spell.948450:
-    name: null
-    description: null
-    auraDescription: null
+    name: Усиление проклятия
+    description: Усиливает эффект следующего вашего заклинания «Проклятие рока» или «Проклятие агонии» на 50% либо
+      следующего «Проклятия изнеможения» дополнительно на 20%. Время действия — 30 сек.
+    auraDescription: Следующее «Проклятие рока» или «Проклятие агонии» усилено на 50% («Проклятие изнеможения» —
+      на 20%).
     sourceHash: b0faeca3b808ea47cac60f2c1a66ffc1be0293a1ac21d2991d9cc92a89d3d78e
   spell.948451:
-    name: null
-    description: null
-    auraDescription: null
+    name: Вытягивание жизни
+    description: Передает заклинателю 15 ед. здоровья цели раз в 3 сек. Время действия — 30 сек.
+    auraDescription: Передает заклинателю 15 ед. здоровья раз в 3 сек.
     sourceHash: eab3cf0486513bcd6a9d4629989ccca7fd646d0f7924a5c0206025c8e4db7b55
   spell.948452:
-    name: null
-    description: null
-    auraDescription: null
+    name: Вытягивание жизни
+    description: Передает заклинателю 22 ед. здоровья цели раз в 3 сек. Время действия — 30 сек.
+    auraDescription: Передает заклинателю 22 ед. здоровья раз в 3 сек.
     sourceHash: 7e6326eccf5c26d22ca1ea8ad99b41f213ea98c168ca5fd5241c925bfb70b712
   spell.948453:
-    name: null
-    description: null
-    auraDescription: null
+    name: Вытягивание жизни
+    description: Передает заклинателю 33 ед. здоровья цели раз в 3 сек. Время действия — 30 сек.
+    auraDescription: Передает заклинателю 33 ед. здоровья раз в 3 сек.
     sourceHash: efdcb7356291b40d7aa9d73506b3cb8f60a4146dae8852e580c1855ef2eb2d7f
   spell.948454:
-    name: null
-    description: null
-    auraDescription: null
+    name: Вытягивание жизни
+    description: Передает заклинателю 45 ед. здоровья цели раз в 3 сек. Время действия — 30 сек.
+    auraDescription: Передает заклинателю 45 ед. здоровья раз в 3 сек.
     sourceHash: bba1aad29e604a032ba52d361cc1b5182f89bc9d474587d638de5887883e69a7
   spell.948455:
-    name: null
-    description: null
-    auraDescription: null
+    name: Вытягивание жизни
+    description: Передает заклинателю 52 ед. здоровья цели раз в 3 сек. Время действия — 30 сек.
+    auraDescription: Передает заклинателю 52 ед. здоровья раз в 3 сек.
     sourceHash: d8643842323f6ec55c03c30b740d4e1de5a4245ad91ae4df98b71023c58853df
   spell.948456:
-    name: null
-    description: null
-    auraDescription: null
+    name: Вытягивание жизни
+    description: Передает заклинателю 63 ед. здоровья цели раз в 3 сек. Время действия — 30 сек.
+    auraDescription: Передает заклинателю 63 ед. здоровья раз в 3 сек.
     sourceHash: 3f00c676a8d3c7a5430973f82a735fbf598641e643794bc56e50f995bda40b03
   spell.948457:
-    name: null
+    name: Улучшенное похищение души
     sourceHash: ae3f1658f6587409065fc1c159b3f3a130d72e24868af81c532b4223eaa6cc95
   spell.948460:
-    name: null
-    auraDescription: null
+    name: Объятия Тьмы
+    auraDescription: Наносимый физический урон снижен на 1%.
     sourceHash: 7bc156cf1846bf642568e6e294f145d29c069fdfae265cd59d8855dbef20e2fa
   spell.948461:
-    name: null
-    auraDescription: null
+    name: Объятия Тьмы
+    auraDescription: Наносимый физический урон снижен на 2%.
     sourceHash: a6789c28592d3e2f5bc8c2b743b9f5411e7f97111d32707671084c2508b9c7db
   spell.948462:
-    name: null
-    auraDescription: null
+    name: Объятия Тьмы
+    auraDescription: Наносимый физический урон снижен на 3%.
     sourceHash: 079783091754426d752e77fe08f6c7fd48768e989acf19eda8ff583ee6875d4a
   spell.948463:
-    name: null
-    auraDescription: null
+    name: Объятия Тьмы
+    auraDescription: Наносимый физический урон снижен на 4%.
     sourceHash: 7940b5e8980c9f13127ef4b6309278711996c4ccad9157a5ea7c257fa3301823
   spell.948464:
-    name: null
-    auraDescription: null
+    name: Объятия Тьмы
+    auraDescription: Наносимый физический урон снижен на 5%.
     sourceHash: 90f18b36f76661d13143bcb729ac865a2727d9d217943a75f251ff9cb479461a
   spell.948470:
-    name: null
-    description: null
-    auraDescription: null
+    name: Нестабильное колдовство
+    description: Энергия Тьмы постепенно разрушает цель, нанося 660 ед. урона в течение 18 сек. При рассеивании
+      «Нестабильного колдовства» рассеивающий получает 990 ед. урона и немоту на 5 сек.
+    auraDescription: Темная энергия постепенно разрушает цель.
     sourceHash: c090753fe1af37ecc59afd3542f5778f3e149b151b9d3286098758185a8cb492
   spell.948471:
-    name: null
-    description: null
-    auraDescription: null
+    name: Нестабильное колдовство
+    description: Энергия Тьмы постепенно разрушает цель, нанося 840 ед. урона в течение 18 сек. При рассеивании
+      «Нестабильного колдовства» рассеивающий получает 1260 ед. урона и немоту на 5 сек.
+    auraDescription: Темная энергия постепенно разрушает цель.
     sourceHash: d4b4398238350ba883acadc8c0c984c65a09ec7cdf96f5876547c9bd5d8cfafc
   spell.948472:
-    name: null
-    description: null
-    auraDescription: null
+    name: Нестабильное колдовство
+    description: Энергия Тьмы постепенно разрушает цель, нанося 1050 ед. урона в течение 18 сек. При рассеивании
+      «Нестабильного колдовства» рассеивающий получает 1575 ед. урона и немоту на 5 сек.
+    auraDescription: Темная энергия постепенно разрушает цель.
     sourceHash: 4e5d1ec8e29bd0afcd7223f5cb7612155856beea432ebbdfefbc7aeb7dccd4eb
   spell.948550:
-    name: null
-    description: null
-    auraDescription: null
+    name: Связка души
+    description: Пока эффект активен, ваш бес, демон Бездны, суккуб, охотник Скверны, страж Скверны или порабощенный
+      демон получает вместо вас 20% всего получаемого вами урона. Этот урон нельзя предотвратить. Кроме того, урон
+      демона и хозяина повышается на 5%. Действует, пока демон активен и находится под вашим контролем.
+    auraDescription: 20% получаемого вами урона перенаправляется вашему демону, а урон вас обоих повышен на 5%.
     sourceHash: 787b8ee8482c79927dff5f3999a36142fdd11b8e142f37c5f4184765eed30650
   spell.948552:
-    name: null
-    description: null
+    name: Демоническое жертвоприношение
+    description: 'Приносит призванного демона в жертву и дает эффект на 30 мин. Призыв любого демона отменяет эффект.
+      Бес: повышает урон от огня на 15%. Демон Бездны: восстанавливает 2% максимального запаса здоровья раз в 4
+      сек. Суккуб: повышает урон от темной магии на 15%. Охотник Скверны: восстанавливает 3% максимального запаса
+      маны раз в 4 сек. Страж Скверны: повышает урон от темной магии на 10% и восстанавливает 2% максимального запаса
+      маны раз в 4 сек.'
     sourceHash: 6ac5ae93523199c3c90a3d77bfc7268354724a2c6d1a9b31ff65461593909d68
   spell.948553:
-    name: null
-    auraDescription: null
+    name: Горящее желание
+    auraDescription: Урон от огня повышен на 15%.
     sourceHash: 83e4dd1b5c5d3a64ccfa210c04ce56b692d6ceeb773c81224b27ada6cf7505bc
   spell.948554:
-    name: null
-    auraDescription: null
+    name: Выносливость скверны
+    auraDescription: Восстанавливает 2% от максимального здоровья раз в 4 сек.
     sourceHash: a8349e6a369ec45cbabc840a9a63a62222669e9a32aa333e359fda677970674f
   spell.948555:
-    name: null
-    auraDescription: null
+    name: Прикосновение Тени
+    auraDescription: Урон от темной магии повышен на 15%.
     sourceHash: e54ea4a750561ac317a2891842cf1095c54fc97a266bbe974f36feecdc5c1fc0
   spell.948556:
-    name: null
-    auraDescription: null
+    name: Энергия Скверны
+    auraDescription: Восстанавливает 3% от максимального запаса маны раз в 4 сек.
     sourceHash: 9397d06404f807cb7de0dc55986be989fa05845ee6c63446ab0de5de2da1c00e
   spell.948557:
-    name: null
-    auraDescription: null
+    name: Прикосновение Тени
+    auraDescription: Урон от темной магии повышен на 10%; восстанавливает 2% от максимального запаса маны раз в
+      4 сек.
     sourceHash: 49bd3971ead7f673a532c8e7c45dd953c52cfd3c329735dd4bee79948b699bf9
   spell.948560:
-    name: null
-    auraDescription: null
+    name: Мастер-демонолог
+    auraDescription: Снижает создаваемую угрозу, пока действует бес.
     sourceHash: 21841bb066026f54903d3cf00588d5a934c1410133c90b8a8a9a7bd02e5dba16
   spell.948561:
-    name: null
-    auraDescription: null
+    name: Мастер-демонолог
+    auraDescription: Снижает получаемый физический урон, пока действует демон Бездны.
     sourceHash: 525b4d8f9877a0494d30503d2cbdd9eed0f723aa78256cca0795a2bbce0aa39a
   spell.948562:
-    name: null
-    auraDescription: null
+    name: Мастер-демонолог
+    auraDescription: Повышает весь наносимый урон, пока действует суккуб.
     sourceHash: 5640d5dacfb4dc3a7fca211570cb551a68a684aaa676e504f8d201f78ab38ef2
   spell.948563:
-    name: null
-    auraDescription: null
+    name: Мастер-демонолог
+    auraDescription: Повышает все виды сопротивления, пока действует охотник Скверны.
     sourceHash: 25d57819e966095ffaa2d1745c250aee5d29bc55aabd1f82a48b881d13a60535
   spell.948564:
-    name: null
-    auraDescription: null
+    name: Мастер-демонолог
+    auraDescription: Повышает весь наносимый урон и все виды сопротивления, пока действует страж Скверны.
     sourceHash: 269e73e237fe8ce4c05cf5b1f66887d4937ad57cfcca3e1815a84818f362e854
   spell.948570:
-    name: null
-    description: null
-    auraDescription: null
+    name: Господство Скверны
+    description: Время произнесения следующего заклинания призыва беса, демона Бездны, суккуба, охотника Скверны
+      или стража Скверны сокращается на 5.5 сек., а затраты маны — на 50%.
+    auraDescription: Следующее призывание демона происходит на 5.5 сек. быстрее и требует на 50% меньше маны.
     sourceHash: 3f3033ea7dcaab579184bc1d41ef232d5941f516f7776de2da45286150b653f9
   spell.948650:
-    name: null
-    description: null
+    name: Поджигание
+    description: Поджигает цель, пораженную «Жертвенным огнем», нанося от 249 до 316 ед. урона от огня и снимая
+      с нее «Жертвенный огонь».
     sourceHash: e9cd9a247a6741b0da45cdff4773203473909a6cf638a3d4ee0657700ba379c1
   spell.948651:
-    name: null
-    description: null
+    name: Поджигание
+    description: Поджигает цель, пораженную «Жертвенным огнем», нанося от 326 до 407 ед. урона от огня и снимая
+      с нее «Жертвенный огонь».
     sourceHash: 22f19b4b9d3be05cf05e0ad7134299560686a6336e94dd81725406aa87da8c20
   spell.948652:
-    name: null
-    description: null
+    name: Поджигание
+    description: Поджигает цель, пораженную «Жертвенным огнем», нанося от 395 до 491 ед. урона от огня и снимая
+      с нее «Жертвенный огонь».
     sourceHash: 999600d38e9b80a6cbf632db84160719dab6b8985e4f3e65040959726e7c9e43
   spell.948653:
-    name: null
-    description: null
+    name: Поджигание
+    description: Поджигает цель, пораженную «Жертвенным огнем», нанося от 455 до 566 ед. урона от огня и снимая
+      с нее «Жертвенный огонь».
     sourceHash: b2dd445cd6041dd7c596b0dc2dd05701b791b26ed059c8fd7b725c94b25f652f
   spell.948654:
-    name: null
-    description: null
+    name: Поджигание
+    description: Поджигает цель, пораженную «Жертвенным огнем», нанося от 521 до 648 ед. урона от огня и снимая
+      с нее «Жертвенный огонь».
     sourceHash: 775f4579da6d63b6ea4dade09bb8a779792e31f611ca8b4bcdd3e4f673578016
   spell.948655:
-    name: null
-    description: null
+    name: Поджигание
+    description: Поджигает цель, пораженную «Жертвенным огнем», нанося от 579 до 721 ед. урона от огня и снимая
+      с нее «Жертвенный огонь».
     sourceHash: 9c490d01e275e9baf5a920e254f2bd722d6691b058f3ec6e3f254c91740a6cbf
   spell.948660:
-    name: null
-    auraDescription: null
+    name: Уязвимость к темной магии
+    auraDescription: Получаемый урон от темной магии повышен на 4%.
     sourceHash: 949b7750079f9b4bad338d2968de8f31bdf20a8b243b928748686822fbc4f13d
   spell.948661:
-    name: null
-    auraDescription: null
+    name: Уязвимость к темной магии
+    auraDescription: Получаемый урон от темной магии повышен на 8%.
     sourceHash: 393abbc7328d83aba59a18be0c2ec78c08e5170ae7e196bf869d8c74b9f112a9
   spell.948662:
-    name: null
-    auraDescription: null
+    name: Уязвимость к темной магии
+    auraDescription: Получаемый урон от темной магии повышен на 12%.
     sourceHash: d5e747563f2d2591b0aed07bc2cff7f005f885593a1f8d7836b7c793a9867ec6
   spell.948663:
-    name: null
-    auraDescription: null
+    name: Уязвимость к темной магии
+    auraDescription: Получаемый урон от темной магии повышен на 16%.
     sourceHash: e4181723e9831fbde648aef541b6435f917e4c31e68d142e198342b4900f28e6
   spell.948664:
-    name: null
-    auraDescription: null
+    name: Уязвимость к темной магии
+    auraDescription: Получаемый урон от темной магии повышен на 20%.
     sourceHash: cb2df195394b9fb3abb70a6f503d1610616f5153af685f24cb62a1b83fe87ffd
   spell.948665:
-    name: null
-    auraDescription: null
+    name: Последствия
+    auraDescription: Скорость передвижения снижена.
     sourceHash: b90cff7b0efb092fa243993aef80a9f83a724e5c58d7859a2e7458264e045652
   spell.948666:
-    name: null
-    auraDescription: null
+    name: Огнесдвиг
+    auraDescription: Оглушение.
     sourceHash: 07f311f9a36b0540f2b376fa09ea8de1762da963a6338b3c653b688e91be71dd
   spell.948667:
-    name: null
-    auraDescription: null
+    name: Защита Пустоты
+    auraDescription: Невосприимчивость к заклинаниям темной магии и огня.
     sourceHash: d8bffcf75ac5d36a4753e8d6b9225785ed8558e7f5830f59b3859e76bc0b58af
   spell.948670:
-    name: null
-    description: null
-    auraDescription: null
+    name: Неистовство Тьмы
+    description: Высвобождает неистовство Тьмы, нанося от 357 до 422 ед. урона от темной магии и оглушая всех противников
+      в радиусе 8 м на 2 сек.
+    auraDescription: Оглушение.
     sourceHash: f1b855d5fbba77c0bba8e1f77842b18db73283dbeceb28dcbdecc8827c9f1743
   spell.948671:
-    name: null
-    description: null
-    auraDescription: null
+    name: Неистовство Тьмы
+    description: Высвобождает неистовство Тьмы, нанося от 476 до 565 ед. урона от темной магии и оглушая всех противников
+      в радиусе 8 м на 2 сек.
+    auraDescription: Оглушение.
     sourceHash: c937c3f7ac41b59e050173564efd36e630e5a3859871367f4edf5e3d63ad196c
   spell.948672:
-    name: null
-    description: null
-    auraDescription: null
+    name: Неистовство Тьмы
+    description: Высвобождает неистовство Тьмы, нанося от 612 до 728 ед. урона от темной магии и оглушая всех противников
+      в радиусе 8 м на 2 сек.
+    auraDescription: Оглушение.
     sourceHash: f66375e5b67a3cbfbc723adc211e520a709ddbd1294d179ba65701e6bec9ed06

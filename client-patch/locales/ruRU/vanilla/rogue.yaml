@@ -4,40 +4,52 @@ era: vanilla
 class: rogue
 texts:
   spell.932988:
-    name: null
-    auraDescription: null
+    name: Специализация на ударном оружии
+    auraDescription: Оглушение.
     sourceHash: bb634a1f0f5868b484e99613347fc4b7903f5ec2f921199e6ae2d53fc5cc73a7
   spell.932985:
-    name: null
-    description: null
-    auraDescription: null
+    name: Кровоизлияние
+    description: Мгновенный удар, наносящий урон противнику и вызывающий кровоизлияние, которое повышает получаемый
+      им физический урон на величину до 3 ед. Действует в течение 30 срабатываний или 15 сек. Длина серии приемов
+      увеличивается на 1.
+    auraDescription: 'Физические атаки по цели наносят 3 ед. дополнительного урона. Зарядов: 30; время действия
+      — 15 сек.'
     sourceHash: f547c0f95889fdb3d61cae63302522fb902bdada1dff68843e953f76d554d3e7
   spell.932986:
-    name: null
-    description: null
-    auraDescription: null
+    name: Кровоизлияние
+    description: Мгновенный удар, наносящий урон противнику и вызывающий кровоизлияние, которое повышает получаемый
+      им физический урон на величину до 5 ед. Действует в течение 30 срабатываний или 15 сек. Длина серии приемов
+      увеличивается на 1.
+    auraDescription: 'Физические атаки по цели наносят 5 ед. дополнительного урона. Зарядов: 30; время действия
+      — 15 сек.'
     sourceHash: c59ceb44dd507db5a1eb2473c753f06a4e12df585fd4b39a80805fb7ae8c58ad
   spell.932987:
-    name: null
-    description: null
-    auraDescription: null
+    name: Кровоизлияние
+    description: Мгновенный удар, наносящий урон противнику и вызывающий кровоизлияние, которое повышает получаемый
+      им физический урон на величину до 7 ед. Действует в течение 30 срабатываний или 15 сек. Длина серии приемов
+      увеличивается на 1.
+    auraDescription: 'Физические атаки по цели наносят 7 ед. дополнительного урона. Зарядов: 30; время действия
+      — 15 сек.'
     sourceHash: 4ea5ba1f79a8209e22c4bca33ae860b9f29b3a6338d7f58a154d5eb6c9eae594
   spell.932983:
-    name: null
-    description: null
+    name: Подготовка
+    description: После активации немедленно завершает восстановление способностей «Исчезновение», «Ускользание»,
+      «Спринт», «Хладнокровие» и «Ослепление».
     sourceHash: 92ac2855c7a00d1f0db59b512f01602958501a9df3ebd1e0124581396e50dc76
   spell.932770:
-    name: null
-    description: null
-    auraDescription: null
+    name: Выброс адреналина
+    description: Повышает скорость восстановления энергии на 100% на 15 сек.
+    auraDescription: Восстановление энергии повышено на 100%.
     sourceHash: 1444eefd629d05b29c212149ebe7bafce215f54dd89ac3213275da3c1645c98c
   spell.932989:
-    name: null
-    description: null
-    auraDescription: null
+    name: Ответный удар
+    description: Удар, доступный после парирования атаки противника. Наносит $s1% урона от оружия и обезоруживает
+      цель на $d.
+    auraDescription: Обезоружен.
     sourceHash: 01fe7455233a0b39fc6e71ed19ea74081d6af6d5d94c1f1982704ce85f06fe72
   spell.932984:
-    name: null
-    description: null
-    auraDescription: null
+    name: Умысел
+    description: Добавляет $s1 приемов к серии против текущей цели. Необходимо продолжить или завершить серию в
+      течение $d, иначе добавленные приемы будут потеряны.
+    auraDescription: Серия приемов не прервется.
     sourceHash: 1708a04092c3efd9aa16ed942e1c5e2a3004002d17870d2ee8090e957db96f31

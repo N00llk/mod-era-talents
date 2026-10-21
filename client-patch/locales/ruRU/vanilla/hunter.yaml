@@ -4,121 +4,135 @@ era: vanilla
 class: hunter
 texts:
   spell.932300:
-    name: null
-    description: null
-    auraDescription: null
+    name: Жало скорпида
+    description: Жалит цель, снижая ее силу и ловкость на 21 ед. на 20 сек. На каждую цель может действовать только
+      одно жало от каждого охотника.
+    auraDescription: Сила и ловкость снижены на 21.
     sourceHash: 2d2943893c13f6197aaf9529bbe12c5375cd0edd6a514e854d0b9152c5e83046
   spell.932301:
-    name: null
-    description: null
-    auraDescription: null
+    name: Жало скорпида
+    description: Жалит цель, снижая ее силу и ловкость на 30 ед. на 20 сек. На каждую цель может действовать только
+      одно жало от каждого охотника.
+    auraDescription: Сила и ловкость снижены на 30.
     sourceHash: e15a244892990eab2b2194bfc0a21aa1b9a3e8e53ae1d115557a831608535400
   spell.932302:
-    name: null
-    description: null
-    auraDescription: null
+    name: Жало скорпида
+    description: Жалит цель, снижая ее силу и ловкость на 46 ед. на 20 сек. На каждую цель может действовать только
+      одно жало от каждого охотника.
+    auraDescription: Сила и ловкость снижены на 46.
     sourceHash: 388c0d2cb8a666704653ffe859a3876a17f829dd5e647b0dee7b14daa6f8e594
   spell.932303:
-    name: null
-    description: null
-    auraDescription: null
+    name: Жало скорпида
+    description: Жалит цель, снижая ее силу и ловкость на 69 ед. на 20 сек. На каждую цель может действовать только
+      одно жало от каждого охотника.
+    auraDescription: Сила и ловкость снижены на 69.
     sourceHash: 22f3935ed792d17133b5c764b7d453767ed0bb9c7a9facd18e57203e224c7228
   spell.932304:
-    name: null
+    name: Охотник (классическая эпоха)
     sourceHash: ee752e32b2aa041b9f91a23aac4f511a00ea9aa9a8db60dbf44792ecf850b7ce
   spell.932305:
-    name: null
+    name: Охотник (Гнев Короля-лича)
     sourceHash: 09d54fff005eb47ff671dab6dfd44882062c5400d2aa4912f4da1df3df7add76
   spell.932967:
-    name: null
-    description: null
-    auraDescription: null
+    name: Звериный гнев
+    description: Приводит питомца в ярость, повышающую наносимый им урон на 50% на 18 сек. В состоянии ярости зверь
+      не знает ни страха, ни жалости, и только смерть может остановить его.
+    auraDescription: В состоянии ярости наносимый урон повышен на 50%. Остановить можно только убийством.
     sourceHash: 60778febd339dc48805ceb3430024b3b00731dff73cd2301267986920e2bc621
   spell.932968:
-    name: null
-    auraDescription: null
+    name: Узы духа
+    auraDescription: Вы и ваш питомец восстанавливаете 1% от максимального здоровья раз в 10 сек.
     sourceHash: e3789a38d6a0e2f68d7852b8a529ed5f74b2abdda817b136b40e443853b34014
   spell.932969:
-    name: null
-    auraDescription: null
+    name: Узы духа
+    auraDescription: Вы и ваш питомец восстанавливаете 2% от максимального здоровья раз в 10 сек.
     sourceHash: ce9899ed7d2c82ce7a04a528c9b5915a6d203405cbaf8e82205c94ee6d203e41
   spell.932964:
-    name: null
-    description: null
-    auraDescription: null
+    name: Сдерживание
+    description: После активации повышает вероятность уклонения и парирования на 25% на 10 сек.
+    auraDescription: Вероятность уклонения и парирования повышена на 25%.
     sourceHash: cb8a31c9fa4cab01a01c41e4d5b6a19382cf044c473b43398045e2e2b7cf2421
   spell.932965:
-    name: null
-    description: null
-    auraDescription: null
+    name: Жало виверны
+    description: Жалящий выстрел, усыпляющий цель на 12 сек. Любой урон отменяет эффект. После пробуждения жало
+      наносит цели 300 ед. урона от сил природы в течение 12 сек. Можно применять только вне боя. На каждую цель
+      может действовать только одно жало от каждого охотника.
+    auraDescription: Усыплен. Любой урон снимает эффект. После пробуждения цель получает 300 ед. урона от сил природы
+      за 12 сек.
     sourceHash: 0bba4280280cecaeb6e02dd1e33ecedada5fa253e642c7252095cafc50c66cf8
   spell.932966:
-    name: null
-    auraDescription: null
+    name: Жало виверны
+    auraDescription: Наносит 50 ед. урона от сил природы раз в 2 сек.
     sourceHash: 81464678639766f4a8c948735a31ce95b4feb93ad331c72992028c7fc80e1c6b
   spell.932972:
-    name: null
-    auraDescription: null
+    name: Удержание
+    auraDescription: Попал в ловушку и не может двигаться.
     sourceHash: 5fb9fa0f67f7339eb690f67e335fb311ce3e4ab1b7bb15507d665dec1e548daf
   spell.932978:
-    name: null
-    auraDescription: null
+    name: Улучшенная подрезка крыльев
+    auraDescription: Обездвижен.
     sourceHash: 6e0b7b7993214250cca6dcfd8e1e164eae1d0747fc6fc0bb53c6af74921c134b
   spell.932979:
-    name: null
-    description: null
-    auraDescription: null
+    name: Контратака
+    description: Удар, доступный после парирования атаки противника. Наносит 40 ед. урона и обездвиживает цель на
+      5 сек. Контратаку нельзя блокировать или парировать, от нее нельзя уклониться.
+    auraDescription: Обездвижен.
     sourceHash: 00cd3199c24c91925a9defa8bc3e193bd6231a8f29f2a4093ed4f15c72dd6302
   spell.932958:
-    name: null
-    description: null
-    auraDescription: null
+    name: Контратака
+    description: Удар, доступный после парирования атаки противника. Наносит 70 ед. урона и обездвиживает цель на
+      5 сек. Контратаку нельзя блокировать или парировать, от нее нельзя уклониться.
+    auraDescription: Обездвижен.
     sourceHash: 2ed61837edda0c4ca2977471b96af9a897cca7e1d49f006ba7f66c6a8fae4f76
   spell.932959:
-    name: null
-    description: null
-    auraDescription: null
+    name: Контратака
+    description: Удар, доступный после парирования атаки противника. Наносит 110 ед. урона и обездвиживает цель
+      на 5 сек. Контратаку нельзя блокировать или парировать, от нее нельзя уклониться.
+    auraDescription: Обездвижен.
     sourceHash: bed86b736a6351328d89661a114ce77b9774bd8e969c140ff545d882ed99763d
   spell.932952:
-    name: null
-    description: null
+    name: Прицельный выстрел
+    description: Прицельный выстрел, повышающий урон в дальнем бою на 70 ед.
     sourceHash: 49228003eaa3b9b73dadb696e4d6e311825f3ba68b98c1fe6a428816a15a7dbc
   spell.932953:
-    name: null
-    description: null
+    name: Прицельный выстрел
+    description: Прицельный выстрел, повышающий урон в дальнем бою на 125 ед.
     sourceHash: 954fb1ba84bd834eb9bb1bdfea6cf63e32b44b02c829d6dd2af46a4e26c4a5f8
   spell.932954:
-    name: null
-    description: null
+    name: Прицельный выстрел
+    description: Прицельный выстрел, повышающий урон в дальнем бою на 200 ед.
     sourceHash: 3132dbd747b89d66b8251b6a3a476e77fcc8ff0606c8423742572084801dffe1
   spell.932955:
-    name: null
-    description: null
+    name: Прицельный выстрел
+    description: Прицельный выстрел, повышающий урон в дальнем бою на 330 ед.
     sourceHash: 49037316476091303cb519d1704c54ea5c6300034f48851f637ab4531425d8d0
   spell.932956:
-    name: null
-    description: null
+    name: Прицельный выстрел
+    description: Прицельный выстрел, повышающий урон в дальнем бою на 460 ед.
     sourceHash: 4b81006aa75fa64d6ed981f330f7ec9f9790aedadd5d5c7bd929132b6d8c76e8
   spell.932957:
-    name: null
-    description: null
+    name: Прицельный выстрел
+    description: Прицельный выстрел, повышающий урон в дальнем бою на 600 ед.
     sourceHash: 9c082543805351a412b92295da2c7c2c4acddfff686f28357345f4c8208749ad
   spell.932961:
-    name: null
-    description: null
-    auraDescription: null
+    name: Аура меткого выстрела
+    description: Повышает силу атаки ближнего и дальнего боя участников группы в радиусе 45 м на 50 ед. Время действия
+      — 30 мин.
+    auraDescription: Сила атаки ближнего и дальнего боя повышена на 50.
     sourceHash: 13275998cb3b09b9a6d4c684cdf0a440cbb7048857e75ea4f9c24ed94bb37f52
   spell.932962:
-    name: null
-    description: null
-    auraDescription: null
+    name: Аура меткого выстрела
+    description: Повышает силу атаки ближнего и дальнего боя участников группы в радиусе 45 м на 75 ед. Время действия
+      — 30 мин.
+    auraDescription: Сила атаки ближнего и дальнего боя повышена на 75.
     sourceHash: 864a6f24c8a7636b2b5d70e8dc5c29527d5e2e3cd843c438e27cd2e40d19428f
   spell.932963:
-    name: null
-    description: null
-    auraDescription: null
+    name: Аура меткого выстрела
+    description: Повышает силу атаки ближнего и дальнего боя участников группы в радиусе 45 м на 100 ед. Время действия
+      — 30 мин.
+    auraDescription: Сила атаки ближнего и дальнего боя повышена на 100.
     sourceHash: 56a491b4f5f3c593cfdf59e79750d21d6453df3eef238b11703026d608db6800
   spell.932971:
-    name: null
-    auraDescription: null
+    name: Улучшенный контузящий выстрел
+    auraDescription: Оглушение.
     sourceHash: 024154df4a8f3c30c38a301f1c760db9718d1814aa3d94f78e3c077986bcd727
