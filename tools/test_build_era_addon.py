@@ -266,6 +266,32 @@ def test_existing_lua_regressions(name):
     lua.execute(f'dofile("client-addon/EraTalents/{name}")')
 
 
+@pytest.mark.parametrize("locale", ["enUS", "ruRU", "enGB"])
+@pytest.mark.parametrize("existing", [False, True])
+def test_missing_lfg_notice_uses_selected_locale_before_login(compiled_outputs, locale, existing):
+    lua = lua_runtime()
+    lua.globals().GetLocale = lambda: locale
+    addon = B.ROOT / B.ADDON
+    lua.execute("EraTalents = {}")
+    lua.execute(compiled_outputs[addon / "data/generated/Locales.lua"])
+    for language in ("enUS", "ruRU"):
+        lua.execute(compiled_outputs[addon / f"data/generated/{language}/Common.lua"])
+    if existing:
+        lua.execute('CHAT_NOT_IN_LFG_NOTICE = "existing %s %s"')
+    # Reproduce the stock chat handler failure without requiring the whole FrameXML.
+    if not existing:
+        lua.execute('local ok = pcall(string.format, CHAT_NOT_IN_LFG_NOTICE, 4, "4. Поиск спутников"); assert(not ok)')
+    lua.execute((addon / "ChatCompat.lua").read_text(encoding="utf-8"))
+    expected = lua.globals().EraTalents.L.CHANNEL_NOT_IN_LFG
+    assert lua.globals().CHAT_NOT_IN_LFG_NOTICE == ("existing %s %s" if existing else expected)
+    assert lua.globals().CHAT_NOT_IN_LFG_NOTICE_BN == expected
+    lua.execute('local message = string.format(CHAT_NOT_IN_LFG_NOTICE, 4, "4. Поиск спутников"); assert(string.find(message, "Поиск спутников", 1, true))')
+    # Reloading must preserve valid values in both slots.
+    lua.execute('CHAT_NOT_IN_LFG_NOTICE_BN = "custom BN %s %s"')
+    lua.execute((addon / "ChatCompat.lua").read_text(encoding="utf-8"))
+    assert lua.globals().CHAT_NOT_IN_LFG_NOTICE_BN == "custom BN %s %s"
+
+
 @pytest.mark.parametrize("locale", ["ruRU", "enUS", "enGB"])
 def test_release_archive_login_and_locale_fallback(compiled_outputs, locale):
     addon = B.ROOT / B.ADDON

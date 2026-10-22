@@ -43,6 +43,7 @@ data\generated\ruRU\PriestTBC.lua
 data\generated\ruRU\HunterTBC.lua
 data\generated\ruRU\WarlockTBC.lua
 data\generated\ruRU\MageTBC.lua
+ChatCompat.lua
 Comms.lua
 Tooltip.lua
 TalentUI.lua

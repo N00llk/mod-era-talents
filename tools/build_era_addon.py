@@ -35,7 +35,8 @@ LOCALES = {"enUS", "enGB", "deDE", "esES", "esMX", "frFR", "itIT",
 FORMATS = {"TALENTS": 0, "PET_TALENTS": 0, "RANK": 2, "NEXT_RANK": 0,
            "SPENT_TALENTS": 2, "UNSPENT_TALENTS": 1, "GLYPHS_UNAVAILABLE": 0,
            "SUMMON_PET": 0, "GENERATION_MISMATCH": 2, "MISSING": 0,
-           "INSTANT": 0, "CAST_TIME": 1, "DECIMAL_SEPARATOR": 0, "LOCALE_FALLBACK": 2}
+           "INSTANT": 0, "CAST_TIME": 1, "DECIMAL_SEPARATOR": 0, "LOCALE_FALLBACK": 2,
+           "CHANNEL_NOT_IN_LFG": 2}
 
 
 class UniqueLoader(yaml.SafeLoader):

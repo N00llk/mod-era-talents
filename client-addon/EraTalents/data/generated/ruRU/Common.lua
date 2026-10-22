@@ -15,4 +15,5 @@ EraTalents.L = {
   CAST_TIME = "Применение: %s сек.",
   DECIMAL_SEPARATOR = ",",
   LOCALE_FALLBACK = "|cffffd000EraTalents:|r перевод для %s недоступен; используется %s.",
+  CHANNEL_NOT_IN_LFG = "|Hchannel:channel:%s|h[%s]|h Чтобы присоединиться к этому каналу, необходимо встать в очередь поиска группы.",
 }
