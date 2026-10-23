@@ -324,6 +324,24 @@ end
 -- ---------------------------------------------------------------------------
 -- Talent buttons.
 -- ---------------------------------------------------------------------------
+local function AddTalentRequirements(v, node, rank)
+  if v.readOnly or rank >= node.maxRank then return end
+  local needsPoints = (v.spentActive or 0) < (node.prereqPoints or 0)
+  local pre = v.byId and v.byId[node.prereqTalent]
+  local needsTalent = pre and (v.state.ranks[pre.id] or 0) < pre.maxRank
+  if not needsPoints and not needsTalent then return end
+  GameTooltip:AddLine(" ")
+  if needsPoints then
+    local tree = TreeFor(v.state.era, v.classId)
+    local tab = tree and tree.tabs[node.tab]
+    GameTooltip:AddLine(string.format(ET.L.REQUIRES_TREE_POINTS, node.prereqPoints,
+        tab and tab.name or ET.L.TALENTS, node.prereqPoints - (v.spentActive or 0)), 1, 0.2, 0.2, true)
+  end
+  if needsTalent then
+    GameTooltip:AddLine(string.format(ET.L.REQUIRES_TALENT, pre.maxRank, pre.name), 1, 0.2, 0.2, true)
+  end
+end
+
 local function NodeTooltip(btn)
   local v, node = btn.view, btn.node
   local rank = v.state.ranks[node.id] or 0
@@ -353,6 +371,7 @@ local function NodeTooltip(btn)
       GameTooltip:AddLine(ET.L.NEXT_RANK, 1, 1, 1)
       GameTooltip:AddLine(node.tooltip[rank + 1] or "", 1, 0.82, 0, true)
     end
+    AddTalentRequirements(v, node, rank)
     GameTooltip:Show()
     return
   end
@@ -368,6 +387,7 @@ local function NodeTooltip(btn)
     GameTooltip:AddLine(ET.L.NEXT_RANK, 1, 1, 1)
     GameTooltip:AddLine(node.tooltip[rank + 1] or "", 1, 0.82, 0, true)
   end
+  AddTalentRequirements(v, node, rank)
   GameTooltip:Show()
 end
 
@@ -452,6 +472,14 @@ local function RenderButtons(v, tree)
       else
         b.slot:SetVertexColor(1, 1, 1)
         b.rankBorder:SetVertexColor(1, 1, 1)
+      end
+      -- ItemButtonTemplate draws a separate Quickslot border above the background Slot.
+      -- Tint that visible border too; colouring only Slot leaves a neutral rim over it.
+      local normal = b:GetNormalTexture()
+      if normal then
+        if maxed then normal:SetVertexColor(1, 0.82, 0)
+        elseif canLearn then normal:SetVertexColor(0.1, 1, 0.1)
+        else normal:SetVertexColor(1, 1, 1) end
       end
       -- Maxed ranks are gold; learnable ranks are green; locked nodes remain grey.
       if maxed then

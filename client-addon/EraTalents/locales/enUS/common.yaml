@@ -5,6 +5,8 @@ texts:
   PET_TALENTS: Pet Talents
   RANK: 'Rank %s/%s'
   NEXT_RANK: 'Next rank:'
+  REQUIRES_TREE_POINTS: 'Requires %s points in %s talents (%s more).'
+  REQUIRES_TALENT: 'Requires %s points in %s.'
   SPENT_TALENTS: '%s Talents: %s'
   UNSPENT_TALENTS: 'Unspent Talents: %s'
   GLYPHS_UNAVAILABLE: Glyphs are available in the Wrath of the Lich King era.

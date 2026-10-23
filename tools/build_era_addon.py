@@ -33,6 +33,7 @@ LOCALES = {"enUS", "enGB", "deDE", "esES", "esMX", "frFR", "itIT",
            "koKR", "ptBR", "ruRU", "zhCN", "zhTW"}
 # Exact string.format signatures; prose percentages in talent tooltips are literal.
 FORMATS = {"TALENTS": 0, "PET_TALENTS": 0, "RANK": 2, "NEXT_RANK": 0,
+           "REQUIRES_TREE_POINTS": 3, "REQUIRES_TALENT": 2,
            "SPENT_TALENTS": 2, "UNSPENT_TALENTS": 1, "GLYPHS_UNAVAILABLE": 0,
            "SUMMON_PET": 0, "GENERATION_MISMATCH": 2, "MISSING": 0,
            "INSTANT": 0, "CAST_TIME": 1, "DECIMAL_SEPARATOR": 0, "LOCALE_FALLBACK": 2,
